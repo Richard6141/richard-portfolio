@@ -27,7 +27,10 @@ $dossier = __DIR__ . '/digitalisation';
 
 // Ordre d'affichage sur la page index. Les villes beninoises d'abord :
 // c'est la ou une presence locale reelle rend le contenu le plus credible.
-$ordre = ['cotonou', 'abomey-calavi', 'parakou'];
+$ordre = [
+    'cotonou', 'abomey-calavi', 'porto-novo', 'parakou', 'bohicon', 'ouidah',
+    'abidjan', 'lome', 'dakar',
+];
 
 $pages = [];
 
