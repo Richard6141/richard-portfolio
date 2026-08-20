@@ -226,6 +226,7 @@ $serviceSchema = [
         ['@type' => 'Country', 'name' => 'Burkina Faso'],
         ['@type' => 'Country', 'name' => 'Nigeria'],
         ['@type' => 'Country', 'name' => 'France'],
+        ['@type' => 'Country', 'name' => 'Belgique'],
         ['@type' => 'Country', 'name' => 'Suisse'],
         ['@type' => 'Country', 'name' => 'Canada'],
     ],

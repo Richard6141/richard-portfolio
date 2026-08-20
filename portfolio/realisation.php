@@ -132,6 +132,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <section class="sect"><div class="wrap">
     <div class="rea-facts rv">
       <?php if (!empty($p['client_name'])): ?><div><h3>Client</h3><p><?php if (!empty($p['client_url'])): ?><a href="<?= sanitize($p['client_url']) ?>" target="_blank" rel="noopener"><?= sanitize($p['client_name']) ?></a><?php else: ?><?= sanitize($p['client_name']) ?><?php endif; ?></p></div><?php endif; ?>
+      <?php if (!empty($p['case_lieu'])): ?><div><h3>Lieu</h3><p><?= sanitize($p['case_lieu']) ?></p></div><?php endif; ?>
       <?php if (!empty($p['category'])): ?><div><h3>Type de projet</h3><p><?= sanitize($p['category']) ?></p></div><?php endif; ?>
       <?php if (!empty($p['year'])): ?><div><h3>Année</h3><p><?= sanitize((string) $p['year']) ?></p></div><?php endif; ?>
       <?php if (!empty($p['duration'])): ?><div><h3>Durée</h3><p><?= sanitize($p['duration']) ?></p></div><?php endif; ?>
