@@ -1,0 +1,154 @@
+/* ============================================================
+   Template: Developer — Sidebar left + content right
+   Inspired by modern CV/portfolio with fixed sidebar
+   ============================================================ */
+
+/* Layout: 2 columns */
+.tpl-developer { display: flex; min-height: 100vh; overflow-x: hidden; }
+body:has(.tpl-developer) { overflow-x: hidden; }
+
+/* --- SIDEBAR (left panel) --- */
+.tpl-sidebar {
+    width: 320px; min-height: 100vh; position: fixed; top: 0; left: 0; bottom: 0;
+    background: var(--color-primary); color: #fff; overflow-y: auto;
+    display: flex; flex-direction: column; z-index: 50;
+    scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+.tpl-sidebar-inner { padding: 2.5rem 2rem; flex: 1; display: flex; flex-direction: column; }
+
+/* Sidebar: Avatar */
+.tpl-sidebar-avatar {
+    width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
+    border: 5px solid rgba(255,255,255,0.3); margin: 0 auto 1.25rem; display: block;
+}
+.tpl-sidebar-name { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; text-align: center; margin-bottom: 0.25rem; }
+.tpl-sidebar-title { text-align: center; font-size: 0.85rem; opacity: 0.8; margin-bottom: 2rem; }
+
+/* Sidebar: Info blocks */
+.tpl-sidebar-section { margin-bottom: 1.75rem; }
+.tpl-sidebar-section-title {
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;
+    opacity: 0.5; margin-bottom: 0.75rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.tpl-sidebar-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; margin-bottom: 0.5rem; opacity: 0.9; }
+.tpl-sidebar-item svg { width: 14px; height: 14px; opacity: 0.6; flex-shrink: 0; }
+
+/* Sidebar: Skills bars */
+.tpl-skill-row { margin-bottom: 0.75rem; }
+.tpl-skill-name { font-size: 0.78rem; font-weight: 600; margin-bottom: 0.25rem; display: flex; justify-content: space-between; }
+.tpl-skill-bar { height: 6px; background: rgba(255,255,255,0.15); border-radius: 3px; overflow: hidden; }
+.tpl-skill-fill { height: 100%; background: #fff; border-radius: 3px; transition: width 1s ease-out; }
+
+/* Sidebar: Languages */
+.tpl-lang-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.8rem; }
+.tpl-lang-dots { display: flex; gap: 3px; }
+.tpl-lang-dot { width: 8px; height: 8px; border-radius: 50%; }
+.tpl-lang-dot.filled { background: #fff; }
+.tpl-lang-dot.empty { background: rgba(255,255,255,0.2); }
+
+/* Sidebar: Social */
+.tpl-sidebar-social { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: auto; padding-top: 1.5rem; }
+.tpl-sidebar-social a {
+    width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 0.65rem; font-weight: 700; text-decoration: none; transition: background 0.2s;
+}
+.tpl-sidebar-social a:hover { background: rgba(255,255,255,0.3); }
+
+/* Sidebar: CTA */
+.tpl-sidebar-cta {
+    display: block; width: 100%; padding: 0.75rem; border-radius: 8px; margin-top: 1rem;
+    background: #fff; color: var(--color-primary); text-align: center;
+    font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: opacity 0.2s;
+}
+.tpl-sidebar-cta:hover { opacity: 0.9; color: var(--color-primary); }
+
+/* --- MAIN CONTENT (right panel) --- */
+.tpl-main { margin-left: 320px; flex: 1; background: var(--color-bg); min-height: 100vh; }
+.tpl-main-inner { max-width: 900px; margin: 0 auto; padding: 3rem 2.5rem; }
+
+/* Content sections */
+.tpl-section { margin-bottom: 3.5rem; }
+.tpl-section-title {
+    font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800;
+    color: var(--color-text); margin-bottom: 0.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+}
+.tpl-section-title::after {
+    content: ''; flex: 1; height: 2px; background: var(--color-border);
+}
+.tpl-section-subtitle { font-size: 0.875rem; color: var(--color-text); opacity: 0.5; margin-bottom: 2rem; }
+
+/* Services grid */
+.tpl-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.tpl-service-card {
+    background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px;
+    padding: 1.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s;
+}
+.tpl-service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+.tpl-service-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.tpl-service-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem; }
+.tpl-service-desc { font-size: 0.8rem; opacity: 0.6; line-height: 1.5; }
+
+/* Experience / Education: 2 column grid */
+.tpl-exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.tpl-exp-card {
+    background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem;
+}
+.tpl-exp-title { font-weight: 700; font-size: 0.95rem; color: var(--color-text); }
+.tpl-exp-company { font-size: 0.8rem; color: var(--color-primary); font-weight: 600; margin-bottom: 0.25rem; }
+.tpl-exp-meta { font-size: 0.75rem; opacity: 0.5; margin-bottom: 0.5rem; }
+.tpl-exp-desc { font-size: 0.8rem; opacity: 0.7; line-height: 1.5; }
+.tpl-exp-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.65rem; font-weight: 700; background: var(--color-primary); color: #fff; }
+
+/* Projects grid */
+.tpl-projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.tpl-project-card { border-radius: 12px; overflow: hidden; background: var(--color-card-bg); border: 1px solid var(--color-border); transition: transform 0.2s; }
+.tpl-project-card:hover { transform: translateY(-4px); }
+.tpl-project-thumb { aspect-ratio: 4/3; background: var(--color-border); overflow: hidden; }
+.tpl-project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.tpl-project-card:hover .tpl-project-thumb img { transform: scale(1.05); }
+.tpl-project-info { padding: 1rem; }
+.tpl-project-title { font-weight: 700; font-size: 0.9rem; }
+.tpl-project-meta { font-size: 0.75rem; opacity: 0.5; }
+
+/* Testimonials */
+.tpl-testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
+.tpl-testimonial-card {
+    background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px;
+    padding: 1.5rem; text-align: center;
+}
+.tpl-testimonial-text { font-size: 0.85rem; font-style: italic; opacity: 0.75; line-height: 1.7; margin-bottom: 1rem; }
+.tpl-testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; margin: 0 auto 0.5rem; background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.1rem; }
+.tpl-testimonial-name { font-weight: 700; font-size: 0.85rem; }
+.tpl-testimonial-role { font-size: 0.75rem; opacity: 0.5; }
+.tpl-testimonial-stars { display: flex; gap: 2px; justify-content: center; margin-bottom: 0.75rem; }
+
+/* Blog */
+.tpl-blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
+/* Contact */
+.tpl-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+/* Footer */
+.tpl-footer { background: var(--color-primary); color: #fff; padding: 1.5rem 2.5rem; margin-left: 320px; text-align: center; }
+.tpl-footer a { color: #fff; opacity: 0.7; }
+.tpl-footer-copy { font-size: 0.75rem; opacity: 0.5; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .tpl-developer { flex-direction: column; }
+    .tpl-sidebar { position: relative; width: 100%; min-height: auto; }
+    .tpl-sidebar-inner { padding: 2rem 1.5rem; }
+    .tpl-sidebar-avatar { width: 100px; height: 100px; }
+    .tpl-main { margin-left: 0; }
+    .tpl-main-inner { padding: 2rem 1.25rem; }
+    .tpl-services-grid, .tpl-projects-grid, .tpl-blog-grid { grid-template-columns: 1fr; }
+    .tpl-exp-grid { grid-template-columns: 1fr; }
+    .tpl-contact-grid { grid-template-columns: 1fr; }
+    .tpl-footer { margin-left: 0; }
+}
+@media (max-width: 600px) {
+    .tpl-services-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,133 @@
+# ============================================================
+# PortfolioSaaS — Routing, securite et performance
+# ============================================================
+
+RewriteEngine On
+
+# ----------------------------------------------------------
+# Forcer HTTPS
+# ----------------------------------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ----------------------------------------------------------
+# Bloquer l'acces direct aux dossiers sensibles
+# ----------------------------------------------------------
+RewriteRule ^config/ - [F,L]
+RewriteRule ^helpers/ - [F,L]
+RewriteRule ^includes/ - [F,L]
+RewriteRule ^uploads/.*\.php$ - [F,L]
+
+# ----------------------------------------------------------
+# NE PAS rediriger ces dossiers (laisser Apache les servir)
+# ----------------------------------------------------------
+RewriteRule ^api/ - [L]
+RewriteRule ^auth/ - [L]
+RewriteRule ^dashboard/ - [L]
+RewriteRule ^assets/ - [L]
+RewriteRule ^uploads/ - [L]
+RewriteRule ^portfolio/ - [L]
+RewriteRule ^vendor/ - [L]
+
+# Ne pas rediriger les fichiers PHP a la racine (404.php, etc.)
+RewriteRule ^[a-z0-9-]+\.php$ - [L]
+
+# ----------------------------------------------------------
+# Fichiers SEO — servis par PHP dynamiquement
+# ----------------------------------------------------------
+RewriteRule ^robots\.txt$  /robots.php  [L]
+# sitemap.xml : on sert le fichier STATIQUE s'il existe (rapide, fiable),
+# sinon on bascule sur la generation dynamique sitemap.php (secours).
+RewriteCond %{DOCUMENT_ROOT}/sitemap.xml !-f
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+RewriteRule ^favicon\.ico$ - [L]
+
+# ----------------------------------------------------------
+# Pages articles de blog — URLs propres pour le SEO
+# ----------------------------------------------------------
+RewriteRule ^blog/?$ /portfolio/blog-index.php [QSA,L]
+RewriteRule ^blog/([a-z0-9_-]+)/?$ /portfolio/article.php?slug=$1 [QSA,L]
+
+# ----------------------------------------------------------
+# Pages services — URLs propres pour le SEO
+# ----------------------------------------------------------
+RewriteRule ^services/?$ /portfolio/services-index.php [QSA,L]
+RewriteRule ^services/([a-z0-9-]+)/?$ /portfolio/service.php?slug=$1 [QSA,L]
+
+# ----------------------------------------------------------
+# Page À propos
+# ----------------------------------------------------------
+RewriteRule ^a-propos/?$ /portfolio/a-propos.php [QSA,L]
+
+# ----------------------------------------------------------
+# Servir directement les fichiers statiques qui existent
+# (cle IndexNow, txt, images, pdf...) sans passer par le portfolio
+# ----------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule \.(txt|xml|ico|png|jpe?g|gif|svg|webp|avif|pdf|woff2?|css|js)$ - [L]
+
+# ----------------------------------------------------------
+# Tout le reste → portfolio public (mono-utilisateur)
+# ----------------------------------------------------------
+RewriteRule ^(.*)$ /portfolio/index.php [QSA,L]
+
+# ----------------------------------------------------------
+# Bloquer les fichiers caches et sensibles
+# ----------------------------------------------------------
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "(^\.env|\.env\..*)$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(sql|log|md|example\.php)$">
+    Require all denied
+</FilesMatch>
+
+# ----------------------------------------------------------
+# Headers de securite
+# ----------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    Header unset X-Powered-By
+</IfModule>
+
+# ----------------------------------------------------------
+# Compression GZIP
+# ----------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ----------------------------------------------------------
+# Cache navigateur
+# ----------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 month"
+</IfModule>
+
+# ----------------------------------------------------------
+# Empecher le listing de repertoires
+# ----------------------------------------------------------
+Options -Indexes

@@ -1,0 +1,49 @@
+# ============================================================
+# .gitignore — richard.salanon.info
+# Revu le 20/08/2026 : la version precedente laissait passer
+# .env (DB_PASS, APP_SECRET, SMTP) et prudence/config/constants.php
+# (identifiants en dur). Les motifs contenant un slash sont ancres
+# a la racine : "config/constants.php" ne couvrait donc PAS
+# "prudence/config/constants.php". D'ou les motifs "**/" ci-dessous.
+# ============================================================
+
+# --- Secrets : jamais dans le depot ---
+.env
+.env.*
+!.env.example
+**/.env
+**/config/constants.php
+*.pem
+*.key
+
+# --- Site du sous-domaine prudence.salanon.info ---
+# Projet distinct (autre sous-domaine, autre base, identifiants en dur).
+# Il merite son propre depot ; le garder ici exposerait ses secrets et
+# risquerait de le deployer par erreur dans le dossier de Richard.
+prudence/
+
+# --- Contenu televerse : vit sur le serveur, jamais ecrase ---
+uploads/*
+!uploads/.gitkeep
+
+# --- Genere sur le serveur par generate-sitemap.php ---
+/sitemap.xml
+
+# --- Etat de synchronisation du deploiement FTP ---
+.ftp-deploy-sync-state.json
+
+# --- Logs ---
+*.log
+error_log
+
+# --- Outils, IDE, OS ---
+.claude/
+.vscode/
+.idea/
+node_modules/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini

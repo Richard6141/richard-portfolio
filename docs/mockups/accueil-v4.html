@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquette v4 — Richard Salanon · Flat navy + or · Roboto · bento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f2460;--navy-2:#16336f;--gold:#f5c518;--gold-2:#e0a800;
+  --ink:#16203c;--muted:#5b6580;--bg:#ffffff;--soft:#f4f6fb;--cream:#faf6ee;
+  --line:#e5e9f2;--radius:14px;--maxw:1180px;
+  --body:"Roboto",sans-serif;--mono:"Roboto Mono",monospace;
+  --shadow:0 14px 40px -20px rgba(15,36,96,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.tag-num{color:var(--gold-2)}
+h1,h2,h3,h4{font-weight:900;letter-spacing:-.02em;color:var(--navy);line-height:1.12}
+
+/* HEADER */
+header{position:fixed;inset:0 0 auto;z-index:100;transition:.3s}
+header.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:900;font-size:1.18rem;display:flex;align-items:center;gap:.5rem;color:var(--navy)}
+.logo .dot{width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.nav-links{display:flex;gap:1.8rem;align-items:center}
+.nav-links a{font-size:.9rem;color:var(--muted);font-weight:500;transition:.2s}
+.nav-links a:hover{color:var(--navy)}
+.btn{font-weight:700;font-size:.88rem;padding:.7rem 1.3rem;border-radius:8px;background:var(--gold);color:var(--navy);border:none;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap}
+.btn:hover{background:var(--gold-2)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--navy-2)}
+.btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}.btn-ghost:hover{border-color:var(--navy)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer}
+.burger span{width:24px;height:2px;background:var(--navy);border-radius:2px}
+
+/* HERO */
+.hero{padding:140px 0 72px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.3fr .85fr;gap:3rem;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1.4rem;border:1px solid var(--line);border-radius:6px;padding:.4rem .85rem;background:var(--soft)}
+.eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:#22c55e}
+h1{font-size:clamp(2.1rem,4.4vw,3.6rem);margin-bottom:1.2rem}
+h1 .hl{color:var(--navy);box-shadow:inset 0 -.32em 0 var(--gold)}
+.rotator{color:var(--gold-2)}
+.lead{font-size:1.1rem;color:var(--muted);max-width:520px;margin-bottom:2rem}
+.lead b{color:var(--ink);font-weight:700}
+.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.stats{display:flex;gap:2.2rem;flex-wrap:wrap}
+.stat .n{font-weight:900;font-size:1.9rem;color:var(--navy)}
+.stat .n span{color:var(--gold-2)}
+.stat .l{font-size:.8rem;color:var(--muted)}
+/* hero bento right */
+.hero-bento{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.hb{border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem;background:#fff}
+.hb.card-id{grid-column:1/3;display:flex;align-items:center;gap:1rem;background:var(--navy);color:#fff;border-color:var(--navy)}
+.hb.card-id .av{width:50px;height:50px;border-radius:10px;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;flex-shrink:0}
+.hb.card-id b{font-size:1rem;display:block}
+.hb.card-id small{color:#aebbd8;font-size:.8rem}
+.hb .k{font-weight:900;font-size:1.7rem;color:var(--navy)}
+.hb .kv{font-size:.78rem;color:var(--muted);margin-top:.15rem}
+.hb.gold{background:var(--gold);border-color:var(--gold)}
+.hb.gold .k{color:var(--navy)}.hb.gold .kv{color:rgba(22,32,60,.7)}
+
+/* MARQUEE */
+.marquee{padding:.85rem 0;overflow:hidden;white-space:nowrap;background:var(--navy)}
+.marquee-track{display:inline-flex;animation:scroll 30s linear infinite;font-family:var(--mono);font-size:.82rem;color:#aebbd8}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* SECTION */
+.sect{padding:76px 0}
+.sect.soft{background:var(--soft)}
+.sect.cream{background:var(--cream)}
+.sect-head{margin-bottom:2.6rem;max-width:640px}
+.sect-head .mono{margin-bottom:.8rem;display:block}
+.sect-head h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.7rem}
+.sect-head p{color:var(--muted);font-size:1rem}
+
+/* SERVICES — BENTO */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(150px,auto);gap:1rem}
+.svc{border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;background:#fff;display:flex;flex-direction:column;transition:.22s;cursor:pointer;position:relative}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold)}
+.svc .ico{width:42px;height:42px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:.9rem}
+.svc h3{font-size:1.1rem;margin-bottom:.4rem}
+.svc p{font-size:.88rem;color:var(--muted);flex:1}
+.svc .arrow{margin-top:.8rem;color:var(--gold-2);font-weight:700;font-size:.85rem;opacity:0;transition:.22s}
+.svc:hover .arrow{opacity:1}
+.c-sites{grid-column:span 4}
+.c-web{grid-column:span 4}
+.c-auto{grid-column:span 4;grid-row:span 2;background:var(--navy);border-color:var(--navy)}
+.c-auto h3,.c-auto .k{color:#fff}.c-auto p{color:#aebbd8}
+.c-auto .ico{background:rgba(255,255,255,.1)}
+.c-auto .big{margin-top:auto;font-weight:900;font-size:2.6rem;color:var(--gold);line-height:1}
+.c-auto .big small{display:block;font-size:.8rem;color:#aebbd8;font-weight:400;margin-top:.3rem}
+.c-mobile{grid-column:span 4}
+.c-form{grid-column:span 4}
+.c-etude{grid-column:span 4}
+.c-audit{grid-column:span 4}
+.c-digital{grid-column:span 4}
+
+/* PROCESS */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.step{padding:1.5rem;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+.step .sn{display:inline-flex;width:38px;height:38px;border-radius:9px;background:var(--navy);color:var(--gold);align-items:center;justify-content:center;font-weight:900;margin-bottom:.8rem}
+.step h4{font-size:1.05rem;margin-bottom:.4rem}
+.step p{font-size:.86rem;color:var(--muted)}
+
+/* CASE — flat navy */
+.case{background:var(--navy);border-radius:18px;padding:2.6rem;display:grid;grid-template-columns:1.3fr 1fr;gap:2.6rem;align-items:center;color:#fff}
+.case-tag{display:inline-block;font-family:var(--mono);font-size:.7rem;color:var(--gold);border:1px solid rgba(245,197,24,.4);padding:.28rem .75rem;border-radius:6px;margin-bottom:1.1rem}
+.case h3{color:#fff;font-size:1.7rem;margin-bottom:.9rem;line-height:1.18}
+.case p{color:#c3cee6;margin-bottom:1.4rem;font-size:.95rem}
+.case-stat{text-align:center;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:2rem;background:rgba(255,255,255,.05)}
+.case-stat .big{font-weight:900;font-size:clamp(2.8rem,6vw,4.2rem);color:var(--gold);line-height:1}
+.case-stat .cap{color:#c3cee6;font-size:.86rem;margin-top:.4rem}
+
+/* WHY — bento mix */
+.why-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+.why{padding:1.5rem;border-radius:var(--radius);background:#fff;border:1px solid var(--line);transition:.22s;grid-column:span 4}
+.why:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.why.wide{grid-column:span 6}
+.why .ico{width:40px;height:40px;border-radius:10px;background:rgba(245,197,24,.18);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:.8rem}
+.why h4{font-size:1rem;margin-bottom:.4rem}
+.why p{font-size:.88rem;color:var(--muted)}
+
+/* TESTIMONIALS */
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.tst{padding:1.7rem;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+.tst .stars{color:var(--gold);margin-bottom:.7rem;font-size:.85rem}
+.tst .q{font-size:.95rem;margin-bottom:1.3rem;color:var(--ink)}
+.tst .who{display:flex;align-items:center;gap:.7rem}
+.tst .av{width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--gold);font-size:.85rem}
+.tst .who b{display:block;font-size:.9rem;color:var(--navy)}
+.tst .who small{color:var(--muted);font-size:.78rem}
+
+/* FAQ */
+.faq{max-width:780px}
+.qa{border:1px solid var(--line);border-radius:var(--radius);margin-bottom:.7rem;background:#fff;overflow:hidden}
+.qa button{width:100%;background:none;border:none;color:var(--navy);font-weight:700;font-size:1.02rem;text-align:left;padding:1.2rem 1.3rem;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.qa .plus{color:var(--gold-2);font-size:1.4rem;transition:.3s;flex-shrink:0}
+.qa.open .plus{transform:rotate(45deg)}
+.qa .a{max-height:0;overflow:hidden;transition:.35s;color:var(--muted);padding:0 1.3rem}
+.qa.open .a{max-height:260px;padding-bottom:1.2rem}
+
+/* CTA */
+.cta-band{padding:76px 0}
+.cta-inner{background:var(--navy);border-radius:20px;padding:3.2rem 2.6rem;text-align:center;color:#fff}
+.cta-inner h2{color:#fff;font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:.8rem}
+.cta-inner p{color:#c3cee6;font-size:1rem;margin:0 auto 1.8rem;max-width:500px}
+
+/* FOOTER */
+footer{background:var(--navy);color:#fff;padding:56px 0 32px;border-top:4px solid var(--gold)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:2.4rem}
+.foot-grid h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.foot-grid a{display:block;color:#aebbd8;font-size:.9rem;padding:.28rem 0;transition:.2s}
+.foot-grid a:hover{color:#fff}
+.foot-brand .logo{color:#fff;margin-bottom:.9rem}
+.foot-brand p{color:#aebbd8;max-width:300px;font-size:.9rem}
+.foot-bot{border-top:1px solid rgba(255,255,255,.12);padding-top:1.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:#8595bd;font-size:.82rem}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(22px);transition:.6s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:2.2rem}
+  .bento,.why-grid{grid-template-columns:repeat(6,1fr)}
+  .c-sites,.c-web,.c-mobile,.c-form,.c-etude,.c-audit,.c-digital{grid-column:span 3}
+  .c-auto{grid-column:span 6;grid-row:span 1}
+  .why,.why.wide{grid-column:span 3}
+  .proc,.tst-grid{grid-template-columns:1fr 1fr}
+  .case{grid-template-columns:1fr;padding:2rem}
+}
+@media(max-width:600px){
+  .nav-links{display:none}.burger{display:flex}
+  .bento,.why-grid,.proc,.tst-grid,.foot-grid{grid-template-columns:1fr}
+  .c-sites,.c-web,.c-mobile,.c-form,.c-etude,.c-audit,.c-digital,.c-auto,.why,.why.wide{grid-column:span 1}
+  .hero{padding:110px 0 56px}.stats{gap:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr"><div class="wrap nav">
+  <a href="#" class="logo"><span class="dot"></span>Richard&nbsp;Salanon</a>
+  <nav class="nav-links">
+    <a href="#services">Services</a><a href="#process">Méthode</a><a href="#case">Réalisations</a><a href="#faq">FAQ</a>
+    <a href="#contact" class="btn">Devis gratuit →</a>
+  </nav>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<!-- HERO -->
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow"><span class="pulse"></span><span class="mono">Richard Salanon · Disponible</span></span>
+    <h1>Développeur web, mobile & <span class="hl">automatisation</span> au <span class="rotator" id="rot">Bénin</span></h1>
+    <p class="lead">Je conçois des <b>sites, applications et automatisations</b> qui font gagner du temps et des clients aux entreprises — du cadrage à la mise en ligne.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn">Demander un devis gratuit →</a>
+      <a href="#case" class="btn btn-ghost">Voir mes réalisations</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">8<span>+</span></div><div class="l">domaines d'expertise</div></div>
+      <div class="stat"><div class="n">500<span>/mois</span></div><div class="l">prospects automatisés</div></div>
+      <div class="stat"><div class="n">100<span>%</span></div><div class="l">code propre & SEO</div></div>
+    </div>
+  </div>
+  <div class="hero-bento">
+    <div class="hb card-id"><div class="av">RS</div><div><b>Richard Salanon</b><small>Développeur freelance · Cotonou 🇧🇯</small></div></div>
+    <div class="hb gold"><div class="k">+8 ans</div><div class="kv">d'expérience dev</div></div>
+    <div class="hb"><div class="k">24h</div><div class="kv">délai de réponse</div></div>
+  </div>
+</div></section>
+
+<div class="marquee"><div class="marquee-track">
+  <span>&nbsp;PHP / Laravel&nbsp;&nbsp;◆&nbsp;&nbsp;Node.js&nbsp;&nbsp;◆&nbsp;&nbsp;React&nbsp;&nbsp;◆&nbsp;&nbsp;Flutter&nbsp;&nbsp;◆&nbsp;&nbsp;n8n&nbsp;&nbsp;◆&nbsp;&nbsp;Make&nbsp;&nbsp;◆&nbsp;&nbsp;WordPress&nbsp;&nbsp;◆&nbsp;&nbsp;MySQL&nbsp;&nbsp;◆&nbsp;&nbsp;API REST&nbsp;&nbsp;◆&nbsp;&nbsp;IA / Chatbots&nbsp;&nbsp;◆&nbsp;&nbsp;</span>
+  <span>&nbsp;PHP / Laravel&nbsp;&nbsp;◆&nbsp;&nbsp;Node.js&nbsp;&nbsp;◆&nbsp;&nbsp;React&nbsp;&nbsp;◆&nbsp;&nbsp;Flutter&nbsp;&nbsp;◆&nbsp;&nbsp;n8n&nbsp;&nbsp;◆&nbsp;&nbsp;Make&nbsp;&nbsp;◆&nbsp;&nbsp;WordPress&nbsp;&nbsp;◆&nbsp;&nbsp;MySQL&nbsp;&nbsp;◆&nbsp;&nbsp;API REST&nbsp;&nbsp;◆&nbsp;&nbsp;IA / Chatbots&nbsp;&nbsp;◆&nbsp;&nbsp;</span>
+</div></div>
+
+<!-- SERVICES BENTO -->
+<section class="sect" id="services"><div class="wrap">
+  <div class="sect-head rv">
+    <span class="mono"><span class="tag-num">01</span> — Services</span>
+    <h2>Tout votre numérique, un seul interlocuteur.</h2>
+    <p>De la vitrine à l'automatisation : des solutions sur-mesure pensées pour des résultats concrets.</p>
+  </div>
+  <div class="bento rv">
+    <div class="svc c-sites"><div class="ico">🌐</div><h3>Sites web</h3><p>Vitrine, entreprise & e-commerce rapides et optimisés SEO.</p><div class="arrow">En savoir plus →</div></div>
+    <div class="svc c-web"><div class="ico">⚙️</div><h3>Applications web</h3><p>Dashboards, SaaS, back-office et outils métier sur-mesure.</p><div class="arrow">En savoir plus →</div></div>
+    <div class="svc c-auto"><div class="ico">🤖</div><h3>Automatisation & IA</h3><p>n8n, Make, bots et chatbots qui font le travail répétitif à votre place.</p><div class="big">500/mois<small>prospects contactés automatiquement</small></div></div>
+    <div class="svc c-mobile"><div class="ico">📱</div><h3>Applications mobiles</h3><p>Apps Android & iOS, de l'idée au lancement.</p><div class="arrow">En savoir plus →</div></div>
+    <div class="svc c-form"><div class="ico">🎓</div><h3>Formation</h3><p>Apprenez à coder par la pratique.</p><div class="arrow">En savoir plus →</div></div>
+    <div class="svc c-etude"><div class="ico">🧭</div><h3>Étude de projet</h3><p>Conseil & cadrage : de l'idée au cahier des charges.</p><div class="arrow">En savoir plus →</div></div>
+    <div class="svc c-audit"><div class="ico">🔍</div><h3>Audit système</h3><p>Sécurité, performance, site : diagnostic + plan d'action.</p><div class="arrow">En savoir plus →</div></div>
+    <div class="svc c-digital"><div class="ico">🚀</div><h3>Digitalisation</h3><p>Transformez vos process, étape par étape.</p><div class="arrow">En savoir plus →</div></div>
+  </div>
+</div></section>
+
+<!-- PROCESS -->
+<section class="sect cream" id="process"><div class="wrap">
+  <div class="sect-head rv">
+    <span class="mono"><span class="tag-num">02</span> — Méthode</span>
+    <h2>De l'idée à la mise en ligne, en 4 étapes.</h2>
+  </div>
+  <div class="proc rv">
+    <div class="step"><div class="sn">1</div><h4>Cadrage</h4><p>On clarifie le besoin, les objectifs et le budget. Devis transparent.</p></div>
+    <div class="step"><div class="sn">2</div><h4>Design</h4><p>Maquettes et architecture validées avant le code.</p></div>
+    <div class="step"><div class="sn">3</div><h4>Développement</h4><p>Code propre, testé, avec points réguliers.</p></div>
+    <div class="step"><div class="sn">4</div><h4>Lancement & suivi</h4><p>Mise en ligne, formation et maintenance.</p></div>
+  </div>
+</div></section>
+
+<!-- CASE -->
+<section class="sect" id="case"><div class="wrap">
+  <div class="sect-head rv">
+    <span class="mono"><span class="tag-num">03</span> — Réalisation phare</span>
+    <h2>Quand l'automatisation devient une machine à clients.</h2>
+  </div>
+  <div class="case rv">
+    <div>
+      <span class="case-tag">Automatisation · Prospection</span>
+      <h3>Un robot qui prospecte 500 artisans par mois</h3>
+      <p>Un système complet : collecte de prospects, qualification, contact personnalisé et relances — entièrement autonome. Le commercial se concentre sur les rendez-vous chauds, la machine fait le reste.</p>
+      <a href="#" class="btn">Lire l'étude de cas →</a>
+    </div>
+    <div class="case-stat"><div class="big">500</div><div class="cap">artisans contactés / mois,<br>sans intervention humaine</div></div>
+  </div>
+</div></section>
+
+<!-- WHY -->
+<section class="sect soft"><div class="wrap">
+  <div class="sect-head rv">
+    <span class="mono"><span class="tag-num">04</span> — Pourquoi moi</span>
+    <h2>Un développeur, pas une boîte noire.</h2>
+  </div>
+  <div class="why-grid rv">
+    <div class="why wide"><div class="ico">⚡</div><h4>Réactivité & interlocuteur unique</h4><p>Je réponds vite, en français, sans intermédiaire — vous parlez directement à celui qui code.</p></div>
+    <div class="why"><div class="ico">🔎</div><h4>SEO inclus</h4><p>Pensé pour Google dès le départ.</p></div>
+    <div class="why"><div class="ico">💳</div><h4>Mobile Money</h4><p>MTN / Moov, en plusieurs fois.</p></div>
+    <div class="why"><div class="ico">🧩</div><h4>Code évolutif</h4><p>Des bases saines pour grandir.</p></div>
+    <div class="why wide"><div class="ico">🤝</div><h4>Suivi après livraison & international</h4><p>Maintenance, formation et améliorations continues. Basé à Cotonou, je travaille aussi à distance pour l'étranger.</p></div>
+  </div>
+</div></section>
+
+<!-- TESTIMONIALS -->
+<section class="sect"><div class="wrap">
+  <div class="sect-head rv">
+    <span class="mono"><span class="tag-num">05</span> — Témoignages</span>
+    <h2>Ils m'ont fait confiance.</h2>
+  </div>
+  <div class="tst-grid rv">
+    <div class="tst"><div class="stars">★★★★★</div><p class="q">Site livré dans les délais et très bien référencé. On nous trouve enfin sur Google.</p><div class="who"><div class="av">KA</div><div><b>Koffi A.</b><small>Gérant, PME Cotonou</small></div></div></div>
+    <div class="tst"><div class="stars">★★★★★</div><p class="q">L'automatisation de notre prospection nous a fait gagner un temps fou. Bluffant.</p><div class="who"><div class="av">MD</div><div><b>Marie D.</b><small>Commerciale</small></div></div></div>
+    <div class="tst"><div class="stars">★★★★★</div><p class="q">Réactif, pédagogue et transparent sur les coûts. Je recommande sans hésiter.</p><div class="who"><div class="av">ST</div><div><b>Sylvain T.</b><small>Entrepreneur</small></div></div></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="sect cream" id="faq"><div class="wrap">
+  <div class="sect-head rv">
+    <span class="mono"><span class="tag-num">06</span> — Questions fréquentes</span>
+    <h2>Ce qu'on me demande souvent.</h2>
+  </div>
+  <div class="faq rv">
+    <div class="qa"><button>Combien coûte un site web au Bénin ?<span class="plus">+</span></button><div class="a">Une vitrine démarre autour de 300 000 FCFA ; un e-commerce ou une application sur-mesure davantage. Devis clair après le cadrage — gratuit et sans engagement.</div></div>
+    <div class="qa"><button>Quels sont les délais ?<span class="plus">+</span></button><div class="a">Site vitrine : 1 à 3 semaines. Application sur-mesure : 1 à 3 mois selon la complexité. Planning fixé ensemble dès le cadrage.</div></div>
+    <div class="qa"><button>Comment se passe le paiement ?<span class="plus">+</span></button><div class="a">Mobile Money (MTN / Moov), virement ou espèces, en plusieurs tranches liées aux étapes du projet.</div></div>
+    <div class="qa"><button>Assurez-vous la maintenance ?<span class="plus">+</span></button><div class="a">Oui : mises à jour, corrections, sauvegardes et améliorations en forfait ou à la demande.</div></div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<div class="cta-band"><div class="wrap"><div class="cta-inner" id="contact">
+  <h2>Parlons de votre projet.</h2>
+  <p>Un site, une application, une automatisation, une idée à cadrer ? Décrivez votre besoin, je reviens vite avec un devis gratuit.</p>
+  <a href="#" class="btn">Demander mon devis gratuit →</a>
+</div></div></div>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a href="#" class="logo"><span class="dot"></span>Richard Salanon</a>
+      <p>Développeur web, mobile & automatisation à Cotonou, Bénin. Solutions numériques sur-mesure pour les entreprises d'ici et d'ailleurs.</p>
+    </div>
+    <div><h5>Services</h5><a href="#">Création de site web</a><a href="#">Application web</a><a href="#">Application mobile</a><a href="#">Automatisation & IA</a></div>
+    <div><h5>Liens</h5><a href="#">Réalisations</a><a href="#">Blog</a><a href="#">À propos</a><a href="#">Contact</a></div>
+  </div>
+  <div class="foot-bot"><span>© 2026 Richard Salanon — Tous droits réservés.</span><span class="mono" style="color:#8595bd">Cotonou · Bénin 🇧🇯</span></div>
+</div></footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('open')));
+const words=['Bénin','Cotonou','et ailleurs'];let i=0;const rot=document.getElementById('rot');rot.style.transition='opacity .25s';
+setInterval(()=>{i=(i+1)%words.length;rot.style.opacity=0;setTimeout(()=>{rot.textContent=words[i];rot.style.opacity=1},250)},2600);
+</script>
+</body>
+</html>

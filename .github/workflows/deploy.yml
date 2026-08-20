@@ -1,0 +1,72 @@
+name: Deploiement production
+
+# Chaque push sur main met richard.salanon.info a jour.
+# "workflow_dispatch" permet aussi de relancer un deploiement a la main
+# depuis l'onglet Actions, sans avoir a faire un commit.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Un seul deploiement a la fois. Sans cela, deux pushes rapproches
+# pourraient televerser en parallele et laisser le serveur dans un
+# etat incoherent. cancel-in-progress reste a false : on ne coupe
+# jamais un transfert deja commence.
+concurrency:
+  group: deploiement-production
+  cancel-in-progress: false
+
+jobs:
+  deployer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+
+      - name: Televerser via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+
+          # JAMAIS true : cela effacerait tout le dossier distant avant
+          # de televerser, donc uploads/, config/constants.php et vendor/.
+          dangerous-clean-slate: false
+
+          # Le transfert est incremental : l'action compare l'etat local
+          # a .ftp-deploy-sync-state.json stocke sur le serveur et
+          # n'envoie que les fichiers reellement modifies.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .env
+            .env.*
+            config/constants.php
+            uploads/**
+            prudence/**
+            docs/**
+            .claude/**
+            sitemap.xml
+            *.md
+            *.bak-*
+            .ftp-deploy-sync-state.json
+
+      # Le sitemap est un fichier STATIQUE genere depuis la base. Sans cette
+      # etape il reste fige : le 20/08/2026, 4 URL du sitemap pointaient
+      # encore vers d'anciens slugs et repondaient en 301 au lieu de 200.
+      - name: Regenerer le sitemap
+        run: |
+          curl --fail --silent --show-error --max-time 60 \
+            "https://richard.salanon.info/generate-sitemap.php?key=${{ secrets.SITEMAP_KEY }}"
+
+      # Verification minimale : si la page d'accueil ne repond pas 200
+      # apres le deploiement, le job echoue et vous etes notifie.
+      - name: Verifier que le site repond
+        run: |
+          code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 https://richard.salanon.info/)
+          echo "Page d'accueil : HTTP $code"
+          test "$code" = "200"
