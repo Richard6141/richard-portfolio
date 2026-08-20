@@ -14,6 +14,35 @@ try {
 
 $citiesBJ   = ['Cotonou', 'Porto-Novo', 'Abomey-Calavi', 'Parakou', 'Bohicon', 'Ouidah', 'Natitingou', 'Djougou', 'Lokossa', 'Abomey'];
 $citiesIntl = ['Abidjan', 'Lomé', 'Dakar', 'Douala', 'Paris', 'Lyon', 'Marseille', 'Bruxelles', 'Genève', 'Montréal', 'Québec'];
+
+// Villes disposant d'une page dediee (20/08/2026). Les 21 villes ci-dessus
+// etaient affichees en <span> inertes : le site revendiquait une couverture
+// que rien ne portait. Celles qui ont une page deviennent des liens, les
+// autres restent en texte — mieux vaut un texte qu'un lien vers une 404.
+$villesAvecPage = [];
+$fichierVilles  = __DIR__ . '/../data/villes.php';
+if (is_file($fichierVilles)) {
+    foreach ((array) require $fichierVilles as $vv) {
+        if (!empty($vv['nom']) && !empty($vv['slug'])) {
+            $villesAvecPage[$vv['nom']] = $vv['slug'];
+        }
+    }
+}
+
+if (!function_exists('zoneLien')) {
+    /**
+     * Rend une ville du pied de page : lien si elle a une page, texte sinon.
+     *
+     * @param array<string,string> $avecPage nom de ville => slug
+     */
+    function zoneLien(string $ville, array $avecPage): string
+    {
+        $nom = sanitize($ville);
+        return isset($avecPage[$ville])
+            ? '<a href="/developpeur-web-' . sanitize($avecPage[$ville]) . '">' . $nom . '</a>'
+            : '<span>' . $nom . '</span>';
+    }
+}
 ?>
 <footer><div class="wrap">
   <div class="foot-grid">
@@ -66,18 +95,19 @@ $citiesIntl = ['Abidjan', 'Lomé', 'Dakar', 'Douala', 'Paris', 'Lyon', 'Marseill
   <div class="foot-zones">
     <div class="zone-head">
       <span class="zic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
-      <div><b>Zones d'intervention</b><small>Votre développeur au Bénin et à distance partout.</small></div>
+      <div><b><a href="/zones/">Zones d'intervention</a></b><small>Votre développeur au Bénin et à distance partout.</small></div>
     </div>
     <div class="zone-cols">
       <div>
         <h3>Bénin</h3>
-        <div class="zone-grid"><?php foreach ($citiesBJ as $c): ?><span><?= $c ?></span><?php endforeach; ?></div>
+        <div class="zone-grid"><?php foreach ($citiesBJ as $c): ?><?= zoneLien($c, $villesAvecPage) ?><?php endforeach; ?></div>
       </div>
       <div>
         <h3>Afrique &amp; international</h3>
-        <div class="zone-grid"><?php foreach ($citiesIntl as $c): ?><span><?= $c ?></span><?php endforeach; ?></div>
+        <div class="zone-grid"><?php foreach ($citiesIntl as $c): ?><?= zoneLien($c, $villesAvecPage) ?><?php endforeach; ?></div>
       </div>
     </div>
+    <p class="zone-all"><a href="/zones/">Voir toutes les zones desservies</a></p>
   </div>
 
   <div class="foot-bot">

@@ -73,6 +73,18 @@ RewriteRule ^a-propos/?$ /portfolio/a-propos.php [QSA,L]
 RewriteRule ^contact/$ /contact [R=301,L]
 RewriteRule ^contact$ /portfolio/contact.php [QSA,L]
 
+# Realisations et pages locales — ajoutees le 20/08/2026.
+# Les projets n'avaient aucune URL (simple ancre #portfolio) et les 21 villes
+# annoncees en pied de page ne pointaient nulle part.
+RewriteRule ^realisations$ /realisations/ [R=301,L]
+RewriteRule ^realisations/$ /portfolio/realisations-index.php [QSA,L]
+RewriteRule ^realisations/([a-z0-9_-]+)/$ /realisations/$1 [R=301,L]
+RewriteRule ^realisations/([a-z0-9_-]+)$ /portfolio/realisation.php?slug=$1 [QSA,L]
+RewriteRule ^zones$ /zones/ [R=301,L]
+RewriteRule ^zones/$ /portfolio/zones-index.php [QSA,L]
+RewriteRule ^developpeur-web-([a-z0-9-]+)/$ /developpeur-web-$1 [R=301,L]
+RewriteRule ^developpeur-web-([a-z0-9-]+)$ /portfolio/ville.php?ville=$1 [QSA,L]
+
 # ----------------------------------------------------------
 # Servir directement les fichiers statiques qui existent
 # (cle IndexNow, txt, images, pdf...) sans passer par le portfolio

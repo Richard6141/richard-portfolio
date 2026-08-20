@@ -51,7 +51,7 @@ $hasMega = array_filter($hdrCols);
       </div>
       <?php endif; ?>
     </div>
-    <a href="<?= $navHome ?>#portfolio">Réalisations</a>
+    <a href="/realisations/">Réalisations</a>
     <a href="/blog/">Blog</a>
   </nav>
 
@@ -68,7 +68,7 @@ $hasMega = array_filter($hdrCols);
   <a class="m-link" href="/">Accueil</a>
   <a class="m-link" href="/a-propos/">À propos</a>
   <a class="m-link" href="/services/">Services</a>
-  <a class="m-link" href="<?= $navHome ?>#portfolio">Réalisations</a>
+  <a class="m-link" href="/realisations/">Réalisations</a>
   <a class="m-link" href="/blog/">Blog</a>
   <div class="m-contact">
     <?php if ($h_wa): ?><a class="m-contact-line" href="https://wa.me/<?= $h_wa ?>" target="_blank" rel="noopener"><span class="mci" style="color:#25d366"><svg class="ic" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 19.5l1.1-4A8 8 0 1 1 20 11.5Z"/></svg></span><?= sanitize($h_phone) ?></a><?php endif; ?>

@@ -550,6 +550,39 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
         }
     }
 
+    // Realisations — ajoutees au sitemap le 20/08/2026 avec les pages projet.
+    try {
+        $stmtRea = $pdo->prepare("SELECT slug, updated_at FROM projects WHERE user_id = ? ORDER BY is_featured DESC, sort_order ASC");
+        $stmtRea->execute([$userId]);
+        $reaRows = $stmtRea->fetchAll(PDO::FETCH_ASSOC);
+    } catch (\Exception $e) {
+        $reaRows = [];
+    }
+    if ($reaRows) {
+        $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/realisations/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+        foreach ($reaRows as $rea) {
+            if (empty($rea['slug'])) continue;
+            $rLoc     = htmlspecialchars($baseUrl . '/realisations/' . $rea['slug'], ENT_XML1);
+            $rLastmod = !empty($rea['updated_at']) ? date('Y-m-d', strtotime((string) $rea['updated_at'])) : $lastmod;
+            $xml .= "  <url>\n    <loc>{$rLoc}</loc>\n    <lastmod>{$rLastmod}</lastmod>\n    <changefreq>yearly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
+        }
+    }
+
+    // Pages locales — le contenu vient de portfolio/data/villes.php, pas de la
+    // base : le sitemap le lit directement pour rester la seule source de verite.
+    $fichierVilles = __DIR__ . '/../portfolio/data/villes.php';
+    if (is_file($fichierVilles)) {
+        $villes = require $fichierVilles;
+        if (is_array($villes) && $villes) {
+            $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/zones/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+            foreach ($villes as $ville) {
+                if (empty($ville['slug'])) continue;
+                $vLoc = htmlspecialchars($baseUrl . '/developpeur-web-' . $ville['slug'], ENT_XML1);
+                $xml .= "  <url>\n    <loc>{$vLoc}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+            }
+        }
+    }
+
     foreach ($blogPosts as $bp) {
         $bLastmod = $bp['published_at'] ? date('Y-m-d', strtotime($bp['published_at'])) : date('Y-m-d');
         $bLoc     = htmlspecialchars($baseUrl . '/blog/' . $bp['slug'], ENT_XML1);

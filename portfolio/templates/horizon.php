@@ -66,7 +66,7 @@ $h_logo = siteLogoUrl();
     <p class="lead"><?= sanitize($h_lead) ?></p>
     <div class="hero-cta">
       <a href="<?= sanitize($h_mailto) ?>" class="btn">Demander un devis gratuit</a>
-      <a href="#portfolio" class="btn btn-ghost">Voir mes réalisations</a>
+      <a href="/realisations/" class="btn btn-ghost">Voir mes réalisations</a>
     </div>
     <div class="stats">
       <div class="stat"><div class="n"><span class="ct" data-to="<?= (int)$h_svcCount ?>">0</span></div><div class="l">domaines d'expertise</div></div>
@@ -150,7 +150,14 @@ $h_logo = siteLogoUrl();
       $cat = $proj['category'] ?? ($proj['badge_text'] ?? 'Projet');
       $pdesc = $proj['description_short'] ?? '';
     ?>
-      <article class="pf">
+      <?php
+      // 20/08/2026 : les cartes etaient des <article> inertes. Chaque projet a
+      // desormais sa page /realisations/{slug} ; la carte y mene quand le slug
+      // existe, et reste un <article> sinon (jamais de lien vers une 404).
+      $pSlug = trim((string) ($proj['slug'] ?? ''));
+      $balise = $pSlug !== '' ? 'a' : 'article';
+      ?>
+      <<?= $balise ?> class="pf"<?= $pSlug !== '' ? ' href="/realisations/' . sanitize($pSlug) . '"' : '' ?>>
         <div class="pf-thumb">
           <?php if ($img): ?><img src="<?= $img ?>" alt="<?= sanitize($proj['title']) ?>" loading="lazy">
           <?php endif; ?>
@@ -160,8 +167,9 @@ $h_logo = siteLogoUrl();
           <h3><?= sanitize($proj['title']) ?></h3>
           <p><?= sanitize($pdesc) ?></p>
           <?php if ($proj['badge_text'] ?? ''): ?><div class="res"><?= sanitize($proj['badge_text']) ?></div><?php endif; ?>
+          <?php if ($pSlug !== ''): ?><div class="arrow">Voir le projet</div><?php endif; ?>
         </div>
-      </article>
+      </<?= $balise ?>>
     <?php endforeach; ?>
     <?php for ($i = count($h_projects); $i < 3; $i++): ?>
       <article class="pf soon">

@@ -237,8 +237,8 @@ if ($contactInfo['google_maps_url'] ?? '') $serviceSchema['hasMap'] = $contactIn
 $serviceSchema['openingHoursSpecification'] = [[
     '@type'     => 'OpeningHoursSpecification',
     'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    'opens'     => '08:00',
-    'closes'    => '19:00',
+    'opens'     => '07:00',
+    'closes'    => '20:00',
 ]];
 // Note agregee — calculee depuis les avis REELS de la table testimonials
 // (20/08/2026). Ces avis sont deja affiches plus bas dans la page par le
