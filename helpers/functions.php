@@ -583,6 +583,22 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
         }
     }
 
+    // Pages "digitalisation d'entreprise" — deux par ville (pilier + secteur).
+    // Meme principe que les villes : la donnee fait autorite, pas la base.
+    $fichierDigit = __DIR__ . '/../portfolio/data/digitalisation.php';
+    if (is_file($fichierDigit)) {
+        $pagesDigit = require $fichierDigit;
+        if (is_array($pagesDigit)) {
+            foreach ($pagesDigit as $d) {
+                foreach (['pilier', 'secteur'] as $type) {
+                    if (empty($d[$type]['slug'])) continue;
+                    $dLoc = htmlspecialchars($baseUrl . '/' . $d[$type]['slug'], ENT_XML1);
+                    $xml .= "  <url>\n    <loc>{$dLoc}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+                }
+            }
+        }
+    }
+
     foreach ($blogPosts as $bp) {
         $bLastmod = $bp['published_at'] ? date('Y-m-d', strtotime($bp['published_at'])) : date('Y-m-d');
         $bLoc     = htmlspecialchars($baseUrl . '/blog/' . $bp['slug'], ENT_XML1);
