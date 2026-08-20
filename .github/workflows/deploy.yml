@@ -74,6 +74,22 @@ jobs:
             -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=accept-new" \
             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}"
 
+      # Migrations de base — AVANT la regeneration du sitemap et le controle
+      # HTTP, car le code qui vient d'etre envoye peut dependre de colonnes
+      # que ces migrations creent. Jusqu'ici elles se collaient a la main dans
+      # phpMyAdmin : une etape oubliee et le site reference des colonnes
+      # inexistantes.
+      #
+      # migrate.php n'applique que les fichiers absents de schema_migrations
+      # et les enregistre : rejouer un deploiement ne touche a rien. Si une
+      # migration echoue, elle n'est PAS enregistree, le job s'arrete ici et
+      # le controle HTTP qui suit ne masquera pas le probleme.
+      - name: Appliquer les migrations de base
+        run: |
+          ssh -p "${{ secrets.SSH_PORT }}" -o StrictHostKeyChecking=accept-new \
+            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
+            "cd '${{ secrets.SSH_PATH }}' && php migrate.php"
+
       # Le sitemap est un fichier STATIQUE genere depuis la base. Sans cette
       # etape il reste fige : le 20/08/2026, 4 URL du sitemap pointaient
       # encore vers d'anciens slugs et repondaient 301 au lieu de 200.

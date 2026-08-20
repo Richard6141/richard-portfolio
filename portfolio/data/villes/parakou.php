@@ -1,0 +1,73 @@
+<?php
+// Parakou — grande ville du nord. Corridor logistique vers le Niger et le Burkina.
+return [
+'nom' => 'Parakou', 'slug' => 'parakou', 'pays' => 'Bénin', 'pays_slug' => 'benin',
+'region' => 'Borgou', 'distance_km' => 410, 'sur_place' => false,
+
+'accroche' => 'Le numérique pour les entreprises du nord, à distance et sans surcoût',
+
+'intro' => "Parakou est la grande ville du nord du Bénin et le carrefour commercial de la région : c'est le point de passage du corridor qui monte vers le Niger et le Burkina Faso. L'économie y est portée par l'agro-industrie, le coton, le transport et le négoce. En ligne, la concurrence y est bien plus faible qu'au sud — c'est un avantage réel pour qui s'y prend tôt.",
+
+'contexte' => "Le tissu économique de Parakou tourne autour de la logistique, du transport de marchandises, du commerce de gros et de la transformation agricole. Ce sont des activités où le site web ne sert pas à vendre en ligne mais à être trouvé, à rassurer un partenaire et à recevoir des demandes de devis. Beaucoup d'entreprises de la région n'ont aucune présence numérique : sur des requêtes comme « transporteur Parakou » ou « fournisseur agroalimentaire Borgou », les résultats sont souvent vides ou obsolètes. La marge de progression est donc plus grande qu'ailleurs, pour un effort moindre. Autre réalité à intégrer : les connexions sont plus inégales qu'au sud, et une part importante des échanges professionnels passe par WhatsApp plutôt que par e-mail.",
+
+'quartiers' => [
+    ['Le centre et Albarika', "Le grand marché et le commerce de gros. Des entreprises qui traitent des volumes considérables avec une gestion entièrement manuelle : cahiers, reçus papier, comptes tenus de tête. Le besoin y est l'outil avant la vitrine."],
+    ['La zone de la gare et des transporteurs', "Sociétés de transport, transitaires et messageries qui desservent le corridor vers Malanville, Niamey et Ouagadougou. Le site sert de référence auprès de donneurs d'ordre extérieurs à la région, qui vérifient avant de confier un chargement."],
+    ['Zongo', "Quartier commerçant dense, tourné vers le négoce et l'import. Une clientèle qui décide par téléphone : le numéro cliquable et le WhatsApp comptent davantage que la profondeur du site."],
+    ['Titirou et Banikanni', "Zones résidentielles en extension, avec écoles privées, cliniques et commerces de proximité. Des recherches locales encore très peu servies : la plupart de ces établissements n'ont même pas de fiche Google."],
+    ['La périphérie agro-industrielle', "Égrenage du coton, stockage, transformation des produits agricoles. Des structures qui traitent avec des acheteurs nationaux et régionaux, pour lesquelles une présentation en ligne sérieuse pèse dans la négociation."],
+],
+
+'concurrence' => "C'est, avec Bohicon, le marché le moins disputé de ce site. La quasi-totalité des entreprises du Borgou est absente d'Internet, et les rares qui y figurent le doivent souvent à un annuaire tiers dont les coordonnées ne sont plus à jour. Concrètement : une recherche sur « transport marchandises Parakou » ou « grossiste alimentaire Borgou » renvoie des pages sans rapport, des annuaires vides ou des résultats situés à Cotonou. Une entreprise qui publie un site correct et une fiche Google renseignée peut occuper la première position en quelques semaines et la conserver longtemps, faute de challenger. C'est une fenêtre qui se referme progressivement, mais qui reste largement ouverte aujourd'hui.",
+
+'secteurs' => ['Transport et logistique du corridor nord', 'Négoce agricole et coton', 'Agro-transformation', 'Commerce de gros', 'Établissements scolaires', 'Hôtellerie et restauration'],
+
+'besoins' => [
+    ['Être visible sur des requêtes encore libres', "Peu d'entreprises du Borgou sont référencées correctement. Prendre la première place sur les requêtes de son métier y demande beaucoup moins d'efforts qu'à Cotonou, et la position se défend ensuite facilement.", 'referencement-naturel-seo'],
+    ['Un site qui génère des demandes de devis', "Pour le transport et le négoce, l'objectif n'est pas la vente en ligne mais le contact qualifié : présentation claire, références, formulaire qui fonctionne et numéro cliquable.", 'site-vitrine-professionnel'],
+    ['Suivre son activité sans papier', "Un outil de gestion simple pour les commandes, les livraisons et la facturation, accessible depuis un téléphone, remplace des cahiers qui se perdent et des comptes tenus de mémoire.", 'application-web-sur-mesure'],
+    ['Automatiser les relances et le suivi', "Relances de factures, confirmations de livraison, rappels aux clients : autant de tâches répétitives qui peuvent tourner seules, y compris par WhatsApp.", 'automatisation-ia'],
+],
+
+'comparatif' => [
+    ['Transporteur ou transitaire', 'Vitrine avec références, zones desservies et demande de devis', 'à partir de 300 000 FCFA', '2 à 4 semaines'],
+    ['Négociant agricole', 'Vitrine avec catalogue produits et fiche Google', 'à partir de 300 000 FCFA', '2 à 3 semaines'],
+    ['Grossiste ou commerce de gros', 'Outil de gestion stocks et facturation sur téléphone', 'à partir de 450 000 FCFA', '5 à 8 semaines'],
+    ['Unité de transformation', 'Vitrine crédible orientée acheteurs et partenaires', 'à partir de 350 000 FCFA', '3 à 4 semaines'],
+    ['Hôtel ou restaurant', 'Vitrine avec galerie, tarifs et réservation simple', 'à partir de 300 000 FCFA', '2 à 3 semaines'],
+],
+
+'erreurs' => [
+    ['Croire qu\'un site est inutile au nord', "L'argument revient souvent : « ici, tout se fait par relations ». C'est vrai pour la clientèle historique, faux pour la croissance. Les donneurs d'ordre extérieurs à la région — importateurs de Cotonou, acheteurs nigériens, partenaires institutionnels — cherchent en ligne avant de contacter, et une entreprise introuvable n'est simplement jamais consultée."],
+    ['Un numéro WhatsApp comme seule adresse', "WhatsApp est efficace pour échanger, inutile pour être découvert : rien n'y est référencé par Google. Une entreprise dont c'est le seul point de contact dépend entièrement du bouche-à-oreille, et perd tout prospect qui ne connaît pas déjà quelqu'un chez elle."],
+    ['Un site conçu pour la fibre', "Les connexions du Borgou sont plus inégales qu'au sud. Un site chargé d'images non compressées met dix secondes à s'afficher et fait fuir le visiteur. Ici plus qu'ailleurs, la légèreté des pages n'est pas un détail technique, c'est une condition pour être lu."],
+    ['Attendre que la concurrence s\'y mette', "La faible concurrence actuelle est un avantage temporaire. Les premières positions se prennent une fois : celui qui publie aujourd'hui les occupe pour des années, celui qui attend devra ensuite déloger quelqu'un d'installé, ce qui coûte bien plus cher."],
+],
+
+'apres_livraison' => "Sur un projet mené à plus de 400 kilomètres, la question du suivi se pose légitimement. Voici comment elle est traitée. La formation de livraison se fait en visioconférence et elle est enregistrée : vous gardez la vidéo, et n'importe qui dans l'équipe peut la revoir six mois plus tard sans me solliciter. Le mode d'emploi écrit qui l'accompagne est illustré de captures d'écran, en français simple. Pour les corrections courantes, l'accès à distance suffit : je n'ai jamais besoin d'être physiquement devant votre machine pour modifier une page ou corriger un bug. Le canal de support est WhatsApp, parce que c'est ce que vous utilisez déjà et parce qu'il fonctionne même quand la connexion est faible. Et si un déplacement s'avère vraiment nécessaire, il se convient au cas par cas — mais en pratique, sur ce type de projet, cela n'arrive presque jamais.",
+
+'budget' => "Une inquiétude revient systématiquement dans les échanges avec le nord : « ça va coûter plus cher parce qu'on est loin ». Non. Le tarif dépend du projet, pas de votre localisation, et aucun frais de déplacement n'est facturé sur un projet mené à distance. Ce qui fait varier le prix ici, c'est la nature du besoin : une vitrine destinée à recevoir des demandes de devis reste dans le bas de la fourchette, autour de 300 000 FCFA, parce qu'elle demande peu de fonctions. Un outil de gestion pour un grossiste change de catégorie, non pas à cause de la technique mais du temps de compréhension : il faut d'abord démêler une organisation qui n'a jamais été écrite nulle part, ce qui prend plusieurs séances d'entretien avant la moindre ligne de code. C'est ce travail de cadrage, et lui seul, qui explique l'écart de budget.",
+
+'delais' => "Une vitrine se livre en deux à quatre semaines, un outil de gestion en cinq à huit. Le facteur qui pèse le plus sur le calendrier à Parakou n'est ni la distance ni la technique : c'est la disponibilité de votre interlocuteur. Dans les entreprises de transport et de négoce, le dirigeant est souvent sur la route, en déplacement vers Malanville ou Niamey, et les créneaux d'échange sont courts. J'adapte le format en conséquence : des points de trente minutes calés à l'avance plutôt que de longues réunions, des validations par messages avec captures d'écran, et une version en ligne consultable à tout moment pour que vous puissiez voir l'avancement quand cela vous arrange. Prévoir dès le départ qui décide et qui valide évite les semaines perdues à attendre un retour.",
+
+'rythme' => "L'activité du Borgou est rythmée par l'agriculture. La campagne cotonnière, de novembre à mars, mobilise le transport, le négoce et l'égrenage : c'est la période où les entreprises du secteur travaillent le plus et ont le moins de temps à consacrer à un projet. La fenêtre favorable se situe donc entre avril et septembre, hors campagne, quand les équipes sont disponibles pour le cadrage et la formation. Pour être visible au moment où les acheteurs cherchent, il faut d'ailleurs anticiper : un site mis en ligne en juillet aura eu le temps de se référencer pour la campagne suivante. Les commerces de détail et les écoles suivent, eux, un calendrier plus classique.",
+
+'cas_type' => "Le profil type ici : une société de transport d'une quinzaine de camions, connue de tous les commerçants de la ville, sans la moindre présence en ligne. Toute l'activité vient du bouche-à-oreille local. Le dirigeant ne cherche pas un site — il cherche à travailler avec des donneurs d'ordre de Cotonou et du Niger, qui aujourd'hui ne le connaissent pas. Le problème n'est donc pas la qualité du service, c'est qu'il est invisible pour quiconque ne fréquente pas déjà le marché de Parakou. La réponse est une vitrine sobre mais crédible : zones desservies, capacité de la flotte, références, un formulaire de demande de devis et un numéro cliquable. Rien de spectaculaire, mais qui existe enfin quand un acheteur cherche un transporteur dans le Borgou.",
+
+'pourquoi_moi' => "La distance ne change ni le prix ni le suivi : aucun frais de déplacement n'est facturé, et une grande partie de mes projets se mène déjà entièrement à distance, y compris hors du Bénin. Ce que vous obtenez est un interlocuteur unique, joignable par WhatsApp, qui parle français et connaît le contexte béninois — pas un prestataire étranger qui découvrira que le Mobile Money existe. Et le nord reste un terrain où quelques semaines de travail suffisent encore à prendre des positions durables.",
+
+'travailler' => "Parakou est à plus de 400 kilomètres d'Abomey-Calavi : les projets s'y mènent à distance, par téléphone, WhatsApp et visioconférence. C'est la façon dont travaille déjà une grande partie de mes clients, y compris hors du Bénin — la distance ne change ni le prix ni le suivi.",
+
+'paiement' => "MTN Mobile Money, Moov Money, virement bancaire, carte ou PayPal.",
+
+'demarrer' => "Depuis Parakou, tout commence par un appel — souvent WhatsApp, parce que c'est ce que vous utilisez déjà et que la connexion y passe mieux qu'une visioconférence. Une demi-heure suffit pour un premier tour d'horizon : votre activité, vos clients actuels, ceux que vous aimeriez atteindre, et ce qui vous empêche de les atteindre aujourd'hui. Dans le transport et le négoce, la réponse tient presque toujours en une phrase : les donneurs d'ordre extérieurs à la région ne savent pas que vous existez. Le devis qui suit est détaillé poste par poste et vous parvient par écrit, en français, sans jargon technique. Aucun frais de déplacement n'y figure. Si le projet se confirme, je vous demande une seule chose difficile : une heure d'entretien enregistré pour recueillir ce que vous faites, vos références et vos zones desservies. C'est à partir de ce matériau que le site est rédigé, plutôt que de vous demander d'écrire des textes que vous n'aurez jamais le temps de produire entre deux rotations.",
+
+'faq' => [
+    ["Travailler à distance depuis Parakou, est-ce que ça marche vraiment ?", "Oui, c'est le mode de fonctionnement d'une grande partie des projets, y compris hors du Bénin. Les échanges se font par téléphone, WhatsApp et visioconférence, avec des points d'avancement réguliers et des versions en ligne que vous consultez au fur et à mesure."],
+    ["Le prix est-il plus élevé à cause de la distance ?", "Non. Le tarif ne dépend pas de votre ville mais du projet lui-même. Aucun frais de déplacement n'est facturé pour les projets menés à distance, et la formation à la livraison se fait en visioconférence, enregistrée pour que vous puissiez la revoir."],
+    ["Est-il plus facile d'être visible sur Google à Parakou ?", "Nettement, oui. Beaucoup d'entreprises du Borgou n'ont aucune présence en ligne et de nombreuses requêtes locales renvoient des résultats vides ou obsolètes. Une fiche Google Business soignée et un site bien structuré suffisent souvent à occuper la première place durablement."],
+    ["Nos clients passent tous par WhatsApp, à quoi bon un site ?", "WhatsApp sert à échanger avec ceux qui vous connaissent déjà, pas à être découvert : rien n'y est référencé par Google. Un site vous rend visible auprès des donneurs d'ordre extérieurs à la région, qui cherchent en ligne avant de confier un marché."],
+    ["La connexion est mauvaise chez nous, est-ce un problème ?", "Non, c'est même pris en compte dès la conception. Les pages sont allégées et les images compressées pour rester utilisables sur une connexion lente. C'est une contrainte que je traite systématiquement pour le nord, où elle conditionne le fait même d'être lu."],
+    ["Quand faut-il lancer le projet ?", "Idéalement entre avril et septembre, hors campagne cotonnière : vos équipes sont disponibles pour le cadrage et la formation, et le site a le temps de se référencer avant la période où les acheteurs cherchent. Un lancement en pleine campagne s'enlise faute de disponibilité."],
+],
+];

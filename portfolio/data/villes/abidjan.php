@@ -1,0 +1,73 @@
+<?php
+// Abidjan — plus grande metropole francophone d'Afrique de l'Ouest. Marche mature.
+return [
+'nom' => 'Abidjan', 'slug' => 'abidjan', 'pays' => 'Côte d\'Ivoire', 'pays_slug' => 'cote-d-ivoire',
+'region' => 'Lagunes', 'distance_km' => null, 'sur_place' => false,
+
+'accroche' => 'Développement web et automatisation à distance pour les entreprises ivoiriennes',
+
+'intro' => "Abidjan est la plus grande métropole francophone d'Afrique de l'Ouest et son marché numérique est le plus mature de la sous-région : le Plateau, Cocody et la Zone 4 concentrent sièges d'entreprises, fintechs et agences. La contrepartie, c'est un niveau d'exigence élevé — et des tarifs d'agence qui le sont tout autant.",
+
+'contexte' => "L'écosystème abidjanais est nettement plus avancé que celui de la plupart des capitales voisines : pénétration forte du mobile money avec Orange Money, MTN, Moov et Wave, e-commerce installé, entreprises habituées à travailler avec des prestataires numériques. Ce qui manque souvent, ce n'est pas l'offre mais le rapport entre le prix et le suivi. Beaucoup de structures moyennes se retrouvent face à un choix binaire : une agence dont le budget dépasse largement leurs moyens, ou un prestataire bon marché qui disparaît après la livraison. Travailler avec un développeur indépendant joignable directement répond précisément à cet écart — c'est d'ailleurs la raison la plus fréquente pour laquelle des clients ivoiriens me contactent.",
+
+'quartiers' => [
+    ['Le Plateau', "Le quartier des affaires : sièges sociaux, banques, cabinets d'avocats et d'audit, administrations. Des exigences de sobriété et de sécurité, avec souvent un besoin d'espace client sécurisé plutôt que de vitrine spectaculaire."],
+    ['Cocody', "Résidentiel haut de gamme, cliniques privées, écoles internationales, professions libérales. Une clientèle qui compare en ligne et attend une présentation soignée, avec prise de rendez-vous et informations tarifaires claires."],
+    ['Zone 4 et Marcory', "Concentration de PME de services, agences, sociétés de distribution et restauration. C'est le tissu qui correspond le mieux à ce que je fais : des structures de dix à cinquante personnes, trop petites pour une grande agence, trop sérieuses pour un prestataire occasionnel."],
+    ['Yopougon et Abobo', "Les communes les plus peuplées, avec un commerce de proximité très dense et une adoption massive du mobile money. Un potentiel e-commerce considérable, encore largement inexploité par les commerçants eux-mêmes."],
+    ['Treichville et le port', "Import-export, transit, logistique. Des entreprises tournées vers l'international, pour lesquelles le site sert de référence auprès de partenaires étrangers et gagne à être bilingue."],
+],
+
+'concurrence' => "C'est le marché le plus concurrentiel couvert par ces pages, et il faut être lucide : sur les requêtes génériques comme « agence web Abidjan » ou « création site internet Côte d'Ivoire », les positions sont tenues par des agences locales avec des moyens marketing réels. Je ne prétends pas les déloger. En revanche, deux angles restent accessibles. Le premier est sectoriel et local : « logiciel de gestion cabinet Abidjan », « site e-commerce Wave Côte d'Ivoire », « automatisation n8n Abidjan » sont des requêtes précises, à faible volume mais à forte intention, largement moins disputées. Le second est la recommandation : sur ce marché mature, la majorité des projets se décident sur avis d'un pair, et le site sert alors à confirmer une crédibilité plutôt qu'à générer un premier contact.",
+
+'secteurs' => ['Commerce et distribution', 'Services aux entreprises et cabinets', 'Fintech et services financiers', 'Santé privée', 'Immobilier', 'Formation et écoles privées'],
+
+'besoins' => [
+    ['Une boutique reliée à Wave et Orange Money', "Le mobile money est très installé en Côte d'Ivoire : la boutique doit intégrer les moyens réellement utilisés localement, pas seulement la carte bancaire.", 'site-e-commerce'],
+    ['Automatiser sans licence hors de prix', "n8n auto-hébergé remplace des abonnements Zapier ou Make qui deviennent coûteux dès que les volumes montent, pour un résultat équivalent.", 'automatisation-ia'],
+    ['Un interlocuteur qui reste après la livraison', "Maintenance, corrections et évolutions assurées par la personne qui a écrit le code, sans passer par un service commercial intermédiaire.", 'maintenance-support'],
+    ['Un espace client ou une plateforme métier', "Portail sécurisé, tableau de bord, suivi de dossiers : les outils que les structures de services réclament le plus souvent.", 'saas-espace-client'],
+],
+
+'comparatif' => [
+    ['Cabinet ou société de services', 'Espace client sécurisé avec suivi de dossiers', 'à partir de 700 000 FCFA', '6 à 10 semaines'],
+    ['Distributeur ou commerce', 'Boutique avec Wave, Orange Money et carte bancaire', 'à partir de 600 000 FCFA', '5 à 8 semaines'],
+    ['Clinique ou cabinet médical', 'Vitrine avec prise de rendez-vous et rappels automatiques', 'à partir de 450 000 FCFA', '4 à 6 semaines'],
+    ['PME avec process manuels', 'Automatisation n8n auto-hébergée et intégrations', 'à partir de 400 000 FCFA', '3 à 6 semaines'],
+    ['Startup ou éditeur', 'MVP fonctionnel pour valider le marché', 'à partir de 900 000 FCFA', '8 à 12 semaines'],
+],
+
+'erreurs' => [
+    ['Payer un prix d\'agence pour un suivi de freelance', "Le scénario est fréquent à Abidjan : un budget conséquent engagé auprès d'une structure, un site livré correctement, puis plus personne pour la moindre modification. Avant de signer, la question à poser n'est pas le prix mais qui interviendra six mois plus tard, et sous quel délai. Faites-la écrire dans le devis."],
+    ['Une boutique sans Wave ni Orange Money', "Proposer uniquement la carte bancaire en Côte d'Ivoire revient à refuser une grande partie des paiements. Les moyens réellement utilisés localement doivent être intégrés dès la conception, pas ajoutés après coup — leur intégration tardive coûte plus cher et fragilise le tunnel d'achat."],
+    ['Empiler les abonnements d\'automatisation', "Zapier et Make sont pratiques pour démarrer, puis leur coût grimpe avec les volumes et finit par dépasser celui d'une solution auto-hébergée. Beaucoup d'entreprises abidjanaises paient plusieurs centaines de milliers de francs par an pour des tâches qu'un n8n installé sur leur propre serveur exécuterait pour le prix de l'hébergement."],
+    ['Négliger la vitesse sur mobile', "Sur un marché où la comparaison est immédiate, un site lent perd la visite avant d'être lu. C'est particulièrement vrai à Abidjan, où la concurrence est à un clic et où les visiteurs ont l'habitude de sites bien optimisés."],
+],
+
+'apres_livraison' => "C'est le point sur lequel je me distingue le plus des agences locales, et c'est souvent la raison du choix. Il n'y a pas de service commercial, pas de ticket, pas de délai de prise en charge : vous écrivez directement à la personne qui a écrit le code, par WhatsApp, et la réponse vient dans la journée ouvrée. Concrètement, une correction urgente — un formulaire cassé, un paiement qui ne passe plus — est traitée dans les heures qui suivent, pas dans la semaine. Le code source vous appartient et vous est remis : si vous décidez un jour de travailler avec quelqu'un d'autre, rien ne vous retient techniquement, et je considère que c'est une condition de départ saine. La maintenance se prend en forfait mensuel ou à la demande, sans engagement de durée. Les accès à l'hébergement et au nom de domaine sont à votre nom dès le premier jour.",
+
+'budget' => "Les tarifs indiqués ici sont sensiblement inférieurs à ceux d'une agence abidjanaise pour un périmètre comparable, et il n'y a pas de mystère à cela : il n'y a ni bureaux au Plateau, ni équipe commerciale, ni chef de projet intermédiaire à financer. Ce que vous payez est du temps de développement, pas une structure. Cela implique aussi une limite qu'il faut connaître : je ne prends pas de projets qui exigent une équipe de plusieurs personnes en parallèle ou des délais très courts sur un gros périmètre. Pour un site, une boutique, une plateforme métier ou une automatisation menés par une seule personne compétente, le rapport est excellent. Pour un chantier qui demande cinq intervenants simultanés, une agence reste le bon choix, et je vous le dirai franchement au cadrage plutôt que d'accepter un projet que je tiendrais mal.",
+
+'delais' => "Une vitrine se livre en trois à quatre semaines, une boutique avec Wave et Orange Money en cinq à huit, un espace client sécurisé en six à dix. Ces délais tiennent compte d'un facteur propre aux structures abidjanaises : les circuits de validation y sont plus formels qu'au Bénin. Une maquette doit souvent passer devant une direction, parfois un comité, ce qui ajoute une à deux semaines par étape de validation. J'en tiens compte dans le planning en réduisant le nombre de points de validation formels et en travaillant sur une version en ligne consultable en continu, plutôt que par livraisons successives. Sur les intégrations de paiement, prévoyez aussi le délai propre au prestataire : l'ouverture d'un compte marchand et la validation technique côté opérateur prennent leur temps, indépendamment du développement.",
+
+'rythme' => "L'année abidjanaise a une structure budgétaire marquée. Les projets se décident majoritairement en début d'exercice, de janvier à mars, quand les budgets annuels sont arbitrés : c'est la période où les demandes de devis affluent. Un second pic, plus court, intervient en fin d'année pour consommer des budgets non utilisés, avec des délais souvent tendus. Le commerce et la distribution connaissent leur pic d'activité de novembre à janvier, ce qui impose d'avoir une boutique opérationnelle dès octobre. La période de juillet à septembre est plus calme sur le plan décisionnel, mais c'est précisément une bonne fenêtre pour développer sans pression et être prêt pour la saison suivante.",
+
+'cas_type' => "Le profil le plus fréquent parmi mes clients ivoiriens : une PME de services de vingt à quarante personnes, en Zone 4 ou à Marcory, qui a déjà un site. Il a été fait il y a quelques années par une agence, il n'a pas été touché depuis, et personne dans l'entreprise ne sait comment le modifier. Le déclencheur n'est presque jamais esthétique : c'est un besoin fonctionnel — permettre aux clients de suivre leurs dossiers en ligne, arrêter de ressaisir les mêmes données dans trois outils, ou encaisser autrement que par virement. Le projet ne consiste donc pas à refaire un site, mais à ajouter ce qui manque : un espace client, une automatisation entre les outils existants, un paiement en ligne. Et cette fois, avec une formation pour que l'équipe soit autonome.",
+
+'pourquoi_moi' => "Même fuseau horaire, même langue de travail, même monnaie régionale, et une connaissance concrète des contraintes ouest-africaines : mobile money, connexions inégales, habitudes de paiement. Vous parlez directement au développeur, sans commercial ni chef de projet à financer, et le code source vous est remis. Le tarif est sensiblement inférieur à celui d'une agence abidjanaise, sans que le suivi le soit — c'est précisément l'inverse du compromis habituel.",
+
+'travailler' => "Les projets abidjanais se mènent entièrement à distance : visioconférence, WhatsApp, points d'avancement réguliers et versions en ligne consultables au fur et à mesure. Même fuseau horaire que le Bénin, donc aucun décalage à gérer.",
+
+'paiement' => "Orange Money, MTN Money, Moov Money, Wave, virement, carte ou PayPal.",
+
+'demarrer' => "Un projet abidjanais commence par une visioconférence d'une heure, sans engagement. J'y pose systématiquement trois questions que peu de prestataires posent avant de chiffrer : qui utilisera l'outil au quotidien, quels logiciels devront continuer à fonctionner ensemble, et qui interviendra si quelque chose casse dans six mois. Cette dernière question est souvent celle qui a manqué lors du projet précédent, et c'est fréquemment ce qui vous amène à me consulter. Vous recevez ensuite un devis détaillé poste par poste, valable trois mois pour tenir compte de vos circuits de validation internes, avec les conditions de maintenance écrites noir sur blanc plutôt que renvoyées à plus tard. Si le périmètre dépasse ce qu'une seule personne peut tenir correctement, je vous le dis à ce moment-là et vous oriente vers une agence : mieux vaut un refus honnête qu'un projet mal dimensionné. Sinon, le travail démarre par un inventaire technique de l'existant, souvent révélateur — beaucoup d'entreprises découvrent à cette occasion qu'elles paient des abonnements pour des outils que plus personne n'utilise.",
+
+'faq' => [
+    ["Pourquoi travailler avec un développeur basé au Bénin ?", "Pour le rapport entre le tarif et le suivi. Vous parlez directement à la personne qui écrit le code, sans intermédiaire commercial, avec des coûts sensiblement inférieurs à ceux d'une agence abidjanaise, à qualité équivalente. Aucun décalage horaire : Cotonou et Abidjan sont sur le même fuseau."],
+    ["Intégrez-vous Wave et Orange Money ?", "Oui. Les moyens de paiement réellement utilisés en Côte d'Ivoire sont intégrés à la boutique ou à la plateforme : Wave, Orange Money, MTN Money et Moov Money, en plus de la carte bancaire et de PayPal pour les clients de la diaspora."],
+    ["Comment se passe le suivi après la livraison ?", "La maintenance est assurée par la même personne que le développement, en forfait mensuel ou à la demande. Cela couvre les mises à jour, les sauvegardes, les corrections et les petites évolutions. Vous gardez un contact direct, joignable par WhatsApp, sans ticket ni délai de prise en charge."],
+    ["Puis-je être premier sur « agence web Abidjan » ?", "Non, et je préfère le dire d'emblée. Ces positions sont tenues par des agences avec de vrais moyens marketing. Ce qui reste accessible, ce sont les requêtes sectorielles et précises, à plus faible volume mais à forte intention d'achat, où la concurrence est bien moindre."],
+    ["Le code source m'appartient-il ?", "Oui, il vous est remis à la livraison, comme les accès à l'hébergement et au nom de domaine, enregistrés à votre nom dès le départ. Si vous décidez un jour de confier la suite à quelqu'un d'autre, rien ne vous retient techniquement — c'est une condition de départ saine."],
+    ["Prenez-vous des projets de grande envergure ?", "Cela dépend du périmètre. Un site, une boutique, une plateforme métier ou une automatisation menés par une seule personne compétente : oui, et le rapport qualité-prix est excellent. Un chantier qui exige cinq intervenants en parallèle sur des délais courts : non, et je vous orienterai vers une agence."],
+],
+];

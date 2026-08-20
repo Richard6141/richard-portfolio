@@ -136,7 +136,9 @@ ErrorDocument 500 /500.php
 #   test-api.php   : etat de session et chemin de connexion
 # A supprimer du serveur de production ; ce blocage est la ceinture de securite.
 # ----------------------------------------------------------
-<FilesMatch "^(debug|diagnostic|test500|test-[a-z0-9-]+)\.php$">
+# migrate.php refuse deja toute execution hors ligne de commande (PHP_SAPI),
+# mais il modifie le schema : on le rend aussi inatteignable par le web.
+<FilesMatch "^(debug|diagnostic|test500|migrate|test-[a-z0-9-]+)\.php$">
     Require all denied
 </FilesMatch>
 

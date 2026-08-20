@@ -8,8 +8,8 @@
 -- fallbacks (corrects) calcules par portfolio/index.php.
 --
 --   1. og_title       : "Richard SALANON - Developpement web/mobile et
---                        Automatisation" — ne correspond plus ni au <title>
---                        ni a la meta description actuels.
+--                        Automatisation" — ne correspondait plus ni au
+--                        <title> ni a la meta description actuels.
 --   2. og_description : "Portfolio professionnel de Somasse Richard SALANON.
 --                        Decouvrez mes projets et competences en
 --                        developpement informatiques et automatisations."
@@ -17,40 +17,34 @@
 --                        faute d'accord ("developpement informatiques").
 --   3. meta_title     : se terminait par "| Richard" au lieu de
 --                        "| Richard SALANON". La troncature tenait a la
---                        limite de 60 caracteres : "Developpeur Web, Mobile &
---                        Automatisation au Benin | Richard SALANON" fait 67
---                        caracteres. La formulation ci-dessous fait 59
---                        caracteres ET porte le nom complet.
+--                        limite de 60 caracteres : la formulation d'origine
+--                        en faisait 67. Celle retenue en fait 59 ET porte le
+--                        nom complet.
 --
--- CHOIX : og_title et og_description sont REMIS A VIDE plutot que reecrits.
--- portfolio/index.php retombe alors automatiquement sur meta_title et
--- meta_description (lignes 146-147) : une seule source de verite, et le
--- partage social ne pourra plus diverger du referencement. Pour un texte
--- social distinct, il suffira de les resaisir dans le dashboard.
+-- CHOIX : og_title et og_description sont remis a NULL plutot que reecrits.
+-- portfolio/index.php retombe alors sur meta_title et meta_description :
+-- une seule source de verite, et le partage social ne peut plus diverger du
+-- referencement. Pour un texte social distinct, il suffit de les resaisir
+-- dans le dashboard — cette migration ne les ecrasera plus (voir le WHERE).
 --
--- A EXECUTER UNE SEULE FOIS (phpMyAdmin > SQL, ou console MySQL).
+-- Applique automatiquement par migrate.php apres chaque deploiement.
+-- REJOUABLE : le WHERE ne cible que les valeurs obsoletes connues. Une fois
+-- corrigees, la migration ne modifie plus rien, et une resaisie ulterieure
+-- dans le dashboard est preservee.
 -- ============================================================
 
--- --- Avant / apres : a lancer pour constater l'etat actuel -------------
--- SELECT meta_title, og_title, og_description FROM seo_config;
-
-START TRANSACTION;
+UPDATE seo_config
+   SET og_title = NULL
+ WHERE og_title LIKE '%Développement web/mobile et Automatisation%'
+    OR og_title LIKE '%Developpement web/mobile et Automatisation%';
 
 UPDATE seo_config
-   SET meta_title     = 'Développeur web & automatisation au Bénin | Richard SALANON',
-       og_title       = NULL,
-       og_description = NULL
- WHERE user_id = (SELECT id FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1);
+   SET og_description = NULL
+ WHERE og_description LIKE '%Portfolio professionnel de%'
+    OR og_description LIKE '%développement informatiques%'
+    OR og_description LIKE '%developpement informatiques%';
 
--- Verification : doit renvoyer 1 ligne, og_title et og_description a NULL,
--- et un meta_title de 59 caracteres.
-SELECT meta_title,
-       CHAR_LENGTH(meta_title) AS longueur_titre,
-       og_title,
-       og_description
-  FROM seo_config
- WHERE user_id = (SELECT id FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1);
-
--- Relire le resultat ci-dessus AVANT de valider.
-COMMIT;
--- En cas de doute : ROLLBACK;
+UPDATE seo_config
+   SET meta_title = 'Développeur web & automatisation au Bénin | Richard SALANON'
+ WHERE meta_title LIKE '%| Richard'
+    AND meta_title NOT LIKE '%| Richard SALANON';

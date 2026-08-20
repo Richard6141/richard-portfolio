@@ -609,3 +609,18 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
    style de lien herite, .pf portant deja display:flex et son propre survol. */
 .pv2 a.pf{text-decoration:none;color:inherit}
 .pv2 a.pf .arrow{margin-top:.8rem;color:var(--acc-2);font-weight:700;font-size:.82rem}
+
+/* Tableau comparatif des pages ville (20/08/2026).
+   Le site ne comptait qu'un seul tableau sur 21 pages, alors que c'est le
+   format que Google privilegie pour l'extrait optimise (prix, delais).
+   overflow-x sur le conteneur : un tableau a 4 colonnes doit defiler
+   dans sa boite sur mobile, jamais faire defiler la page entiere. */
+.pv2 .vil-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.pv2 .vil-table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:640px}
+.pv2 .vil-table th,.pv2 .vil-table td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.pv2 .vil-table thead th{background:var(--soft);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;white-space:nowrap}
+.pv2 .vil-table tbody th{font-weight:700;color:var(--navy);width:26%}
+.pv2 .vil-table tbody td:nth-child(3){color:var(--acc-2);font-weight:700;white-space:nowrap}
+.pv2 .vil-table tbody td:nth-child(4){color:var(--muted);white-space:nowrap}
+.pv2 .vil-table tbody tr:last-child th,.pv2 .vil-table tbody tr:last-child td{border-bottom:none}
+.pv2 .vil-table-note{margin-top:.8rem;font-size:.84rem;color:var(--muted);text-align:center}

@@ -113,6 +113,20 @@ include __DIR__ . '/partials/pv2-header.php';
       <ul>
         <?php foreach ($v['secteurs'] as $sect): ?><li><?= sanitize($sect) ?></li><?php endforeach; ?>
       </ul>
+
+      <?php if (!empty($v['quartiers'])): ?>
+      <h2>Quartier par quartier</h2>
+      <p>Les besoins ne sont pas les mêmes d'un bout à l'autre de la ville. Voici ce que j'observe selon les zones.</p>
+      <?php foreach ($v['quartiers'] as $q): ?>
+        <h3><?= sanitize($q[0]) ?></h3>
+        <p><?= sanitize($q[1]) ?></p>
+      <?php endforeach; ?>
+      <?php endif; ?>
+
+      <?php if (!empty($v['concurrence'])): ?>
+      <h2>L'état de la concurrence en ligne</h2>
+      <p><?= sanitize($v['concurrence']) ?></p>
+      <?php endif; ?>
     </div>
   </div></section>
 
@@ -136,17 +150,85 @@ include __DIR__ . '/partials/pv2-header.php';
     </div>
   </div></section>
 
+  <?php if (!empty($v['comparatif'])): ?>
+  <!-- Tableau comparatif : format que Google privilegie pour l'extrait optimise,
+       et que le site n'exploitait quasiment pas (un seul tableau sur 21 pages). -->
+  <section class="sect"><div class="wrap" style="max-width:900px">
+    <div class="sect-head rv">
+      <span class="mono"><span class="tag-num">03</span> / Repères</span>
+      <h2>Quelle solution pour quel profil à <?= sanitize($v['nom']) ?> ?</h2>
+    </div>
+    <div class="vil-table-wrap rv">
+      <table class="vil-table">
+        <thead>
+          <tr><th scope="col">Votre activité</th><th scope="col">Ce que je recommande</th><th scope="col">Budget</th><th scope="col">Délai</th></tr>
+        </thead>
+        <tbody>
+          <?php foreach ($v['comparatif'] as $ligne): ?>
+          <tr>
+            <th scope="row"><?= sanitize($ligne[0]) ?></th>
+            <td><?= sanitize($ligne[1]) ?></td>
+            <td><?= sanitize($ligne[2]) ?></td>
+            <td><?= sanitize($ligne[3]) ?></td>
+          </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+    <p class="vil-table-note rv">Budgets indicatifs, établis après un cadrage gratuit. Le devis final est détaillé poste par poste et sans engagement.</p>
+  </div></section>
+  <?php endif; ?>
+
+  <?php if (!empty($v['erreurs'])): ?>
+  <section class="sect soft"><div class="wrap" style="max-width:820px">
+    <div class="prose rv">
+      <h2>Les erreurs que je vois le plus souvent à <?= sanitize($v['nom']) ?></h2>
+      <?php foreach ($v['erreurs'] as $e): ?>
+        <h3><?= sanitize($e[0]) ?></h3>
+        <p><?= sanitize($e[1]) ?></p>
+      <?php endforeach; ?>
+    </div>
+  </div></section>
+  <?php endif; ?>
+
   <section class="sect"><div class="wrap" style="max-width:820px">
     <div class="prose rv">
+      <?php if (!empty($v['cas_type'])): ?>
+      <h2>Un cas typique à <?= sanitize($v['nom']) ?></h2>
+      <p><?= sanitize($v['cas_type']) ?></p>
+      <?php endif; ?>
+
+      <h2>Combien coûte un site web à <?= sanitize($v['nom']) ?> ?</h2>
+      <p>Les tarifs ne dépendent pas de votre ville mais de ce que le projet demande réellement. Une landing page démarre à partir de 150 000 FCFA, un site vitrine professionnel à partir de 300 000 FCFA, une prestation de référencement naturel à partir de 75 000 FCFA. Une boutique en ligne ou une application sur mesure se chiffrent après cadrage.</p>
+      <?php if (!empty($v['budget'])): ?><p><?= sanitize($v['budget']) ?></p><?php endif; ?>
+      <p><a href="/blog/combien-coute-un-site-web-au-benin">Voir le détail des prix d'un site web</a> ou <a href="/contact">demander un devis pour votre projet</a>.</p>
+
+      <?php if (!empty($v['delais'])): ?>
+      <h2>Quels délais prévoir ?</h2>
+      <p><?= sanitize($v['delais']) ?></p>
+      <?php endif; ?>
+
+      <?php if (!empty($v['rythme'])): ?>
+      <h2>Le bon moment pour lancer votre projet</h2>
+      <p><?= sanitize($v['rythme']) ?></p>
+      <?php endif; ?>
+
       <h2>Travailler ensemble depuis <?= sanitize($v['nom']) ?></h2>
       <p><?= sanitize($v['travailler']) ?></p>
+      <?php if (!empty($v['pourquoi_moi'])): ?><p><?= sanitize($v['pourquoi_moi']) ?></p><?php endif; ?>
+
+      <?php if (!empty($v['apres_livraison'])): ?>
+      <h3>Ce qui se passe après la livraison</h3>
+      <p><?= sanitize($v['apres_livraison']) ?></p>
+      <?php endif; ?>
 
       <h3>Moyens de paiement acceptés</h3>
       <p><?= sanitize($v['paiement']) ?> Le règlement se fait en plusieurs tranches liées à l'avancement du projet : une avance au démarrage, des versements à la validation de chaque étape, le solde à la mise en ligne.</p>
 
-      <h2>Combien coûte un site web à <?= sanitize($v['nom']) ?> ?</h2>
-      <p>Les tarifs ne dépendent pas de votre ville mais de ce que le projet demande réellement. Une landing page démarre à partir de 150 000 FCFA, un site vitrine professionnel à partir de 300 000 FCFA, une prestation de référencement naturel à partir de 75 000 FCFA. Une boutique en ligne ou une application sur mesure se chiffrent après cadrage, selon le catalogue, les paiements à intégrer et les fonctions attendues. Dans tous les cas, le devis est détaillé poste par poste, gratuit et sans engagement.</p>
-      <p><a href="/blog/combien-coute-un-site-web-au-benin">Voir le détail des prix d'un site web</a> ou <a href="/contact">demander un devis pour votre projet</a>.</p>
+      <?php if (!empty($v['demarrer'])): ?>
+      <h2>Comment démarrer concrètement</h2>
+      <p><?= sanitize($v['demarrer']) ?></p>
+      <?php endif; ?>
     </div>
   </div></section>
 
@@ -162,6 +244,13 @@ include __DIR__ . '/partials/pv2-header.php';
           <div class="a"><?= sanitize($qa[1]) ?></div>
         </div>
       <?php endforeach; ?>
+    </div>
+  </div></section>
+
+  <section class="sect"><div class="wrap" style="max-width:820px">
+    <div class="prose rv">
+      <h2>Ce qui est inclus dans tous les cas</h2>
+      <p>Quel que soit le projet et quelle que soit la ville, six choses ne se négocient pas et n'apparaissent jamais en option sur le devis. Le cadrage initial et le devis sont gratuits, détaillés poste par poste, et ne vous engagent à rien. Les accès à l'hébergement et au nom de domaine sont enregistrés à votre nom dès le premier jour, jamais au mien. Le code source vous est remis à la livraison : si vous confiez un jour la suite à quelqu'un d'autre, rien ne vous retient techniquement. Une formation est comprise, pour que vous puissiez modifier vos textes, vos prix et vos images sans dépendre de personne. Le site est conçu pour le téléphone d'abord, parce que c'est là que vos visiteurs vous liront. Enfin, vous parlez directement à la personne qui écrit le code, sans commercial ni chef de projet intermédiaire.</p>
     </div>
   </div></section>
 
