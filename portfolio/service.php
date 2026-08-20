@@ -127,7 +127,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <?php endif; ?>
 
   <div class="cta-band"><div class="wrap"><div class="cta-inner rv" id="contact">
-    <h2>Un projet de <?= sanitize(mb_strtolower($svc['title'])) ?> ?</h2>
+    <h2>Un projet <?= sanitize(frenchDePhrase($svc['title'])) ?> ?</h2>
     <p>Décrivez votre besoin, je reviens vite avec un devis gratuit et sans engagement.</p>
     <a href="<?= sanitize($h_mailto) ?>" class="btn">Demander mon devis gratuit</a>
   </div></div></div>

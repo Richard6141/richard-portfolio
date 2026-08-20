@@ -531,3 +531,36 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
   .pv2 .svc,.pv2 .svc.featured,.pv2 .why,.pv2 .why.wide,.pv2 .tst,.pv2 .tst.feat{grid-column:span 1}
   .pv2 .hero{padding:108px 0 56px}.pv2 .stats{gap:1.4rem}
 }
+
+/* ===== Page contact (20/08/2026) =====================================
+   /contact repondait 404 : la page est nouvelle, ces regles aussi.
+   Elles reprennent les jetons existants (--line, --soft, --acc) pour
+   rester coherentes avec le reste du site, sans nouvelle couleur. */
+.pv2 .ct-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.pv2 .ct-card{border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;background:#fff}
+.pv2 .ct-card h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 .6rem}
+.pv2 .ct-card p{margin:0 0 .5rem;font-weight:700;color:var(--navy);font-size:1.02rem;line-height:1.45}
+.pv2 .ct-card a{color:var(--acc-2);text-decoration:none}
+.pv2 .ct-card a:hover{text-decoration:underline}
+.pv2 .ct-card small{color:var(--muted);font-size:.86rem;line-height:1.5;display:block}
+
+.pv2 .ct-form{display:flex;flex-direction:column;gap:1.1rem}
+.pv2 .ct-row{display:flex;flex-direction:column;gap:.4rem}
+.pv2 .ct-row label{font-weight:700;color:var(--navy);font-size:.94rem}
+.pv2 .ct-row input,.pv2 .ct-row textarea{
+  width:100%;padding:.85rem 1rem;border:1px solid var(--line);border-radius:10px;
+  font-family:var(--body);font-size:1rem;color:var(--ink);background:#fff;transition:border-color .2s}
+.pv2 .ct-row input:focus,.pv2 .ct-row textarea:focus{outline:none;border-color:var(--acc)}
+.pv2 .ct-row textarea{resize:vertical;min-height:150px}
+.pv2 .ct-form button[type=submit]{align-self:flex-start}
+.pv2 .ct-form button[disabled]{opacity:.6;cursor:progress}
+
+/* Piege a robots : hors ecran plutot que display:none, que certains bots detectent. */
+.pv2 .ct-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.pv2 .ct-msg{margin:0;font-size:.94rem;min-height:1.2em;color:var(--muted)}
+.pv2 .ct-msg.is-ok{color:#15803d;font-weight:700}
+.pv2 .ct-msg.is-err{color:#b91c1c;font-weight:700}
+
+@media(max-width:960px){ .pv2 .ct-grid{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:600px){ .pv2 .ct-grid{grid-template-columns:1fr} }

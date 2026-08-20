@@ -68,6 +68,10 @@ RewriteRule ^services/([a-z0-9-]+)/?$ /portfolio/service.php?slug=$1 [QSA,L]
 # Page À propos
 # ----------------------------------------------------------
 RewriteRule ^a-propos/?$ /portfolio/a-propos.php [QSA,L]
+# /contact — ajoutee le 20/08/2026. L'URL etait referencee par llms.txt mais
+# repondait 404. La forme sans barre finale est la canonique ; /contact/ redirige.
+RewriteRule ^contact/$ /contact [R=301,L]
+RewriteRule ^contact$ /portfolio/contact.php [QSA,L]
 
 # ----------------------------------------------------------
 # Servir directement les fichiers statiques qui existent

@@ -124,10 +124,39 @@ function seoDescription(string $text, int $max = 160): string
         return $text;
     }
     $cut = mb_substr($text, 0, $max - 1);
-    $sp  = mb_strrpos($cut, ' ');
+
+    // Coupe d'abord sur une fin de PHRASE (20/08/2026). La version precedente
+    // coupait toujours sur un mot, ce qui produisait des descriptions
+    // suspendues du type "...pour developper votre…" ou "...vos volumes et vos…".
+    // Une description qui se termine sur un point se lit comme une promesse
+    // complete dans la SERP ; l'ellipse ne sert plus que de dernier recours.
+    if (preg_match('/^(.*[.!?])(?=\s|$)/us', $cut, $m)) {
+        $phrase = rtrim($m[1]);
+        if (mb_strlen($phrase) >= ($max * 0.6)) {
+            return $phrase;
+        }
+    }
+
+    $sp = mb_strrpos($cut, ' ');
     if ($sp !== false && $sp > ($max * 0.5)) {
         $cut = mb_substr($cut, 0, $sp);
     }
+    $cut = rtrim($cut, " ,;:.\u{2013}-");
+
+    // Quand l'ellipse est inevitable (phrase unique trop longue), au moins ne
+    // pas la faire tomber sur un mot-outil : "...pour developper votre…" laisse
+    // le lecteur en suspens, "...pour developper…" se lit comme une coupe nette.
+    $motsOutils = 'le|la|les|l\'|un|une|des|du|de|d\'|au|aux|à|et|ou|en|par|pour|sur|dans|avec|sans|chez|vers'
+                . '|votre|vos|notre|nos|son|sa|ses|leur|leurs|mon|ma|mes|ton|ta|tes|ce|cet|cette|ces'
+                . '|qui|que|dont|plus|très|aussi|selon|entre|depuis';
+    // Boucle : "vos volumes et vos" doit perdre "vos" PUIS "et", pas seulement
+    // le dernier mot. Bornee a 4 tours, une coupe nette n'en demandant jamais plus.
+    for ($i = 0; $i < 4; $i++) {
+        $reduit = (string) preg_replace('/[\s]+(?:' . $motsOutils . ')$/iu', '', $cut);
+        if ($reduit === $cut) break;
+        $cut = $reduit;
+    }
+
     return rtrim($cut, " ,;:.\u{2013}-") . "\u{2026}";
 }
 
@@ -247,6 +276,41 @@ function validateColor(?string $value, string $default): string
     if (preg_match('/^var\(--[a-zA-Z0-9_-]+\)$/', $v)) return $v;
     if (preg_match('/^rgba?\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}(\s*,\s*[\d.]+)?\s*\)$/', $v)) return $v;
     return $default;
+}
+
+/**
+ * Accorde un titre de service après la préposition "de" : gère l'élision et
+ * la casse. Ajouté le 20/08/2026 — les pages services affichaient sept H2
+ * fautifs du type "Un projet de audit seo complet ?" : la préposition n'était
+ * pas élidée et mb_strtolower() écrasait les sigles (SEO -> seo, IA -> ia).
+ *
+ * Deux règles :
+ *  - la minuscule initiale n'est appliquée que si le premier mot n'a pas
+ *    d'autre majuscule ("Site" -> "site", mais "SEO", "SaaS" et "API" intacts) ;
+ *  - l'élision suit la voyelle initiale, accentuée ou non ("Audit" -> "d'audit",
+ *    "API" -> "d'API", "Référencement" -> "de référencement").
+ *
+ * @return string Le groupe complet, préposition incluse : "d'audit SEO complet".
+ */
+function frenchDePhrase(string $title): string
+{
+    $title = trim($title);
+    if ($title === '') return 'de projet';
+
+    $space     = mb_strpos($title, ' ');
+    $firstWord = $space === false ? $title : mb_substr($title, 0, $space);
+
+    // Un sigle ou un mot à casse interne (SEO, API, SaaS, iOS) garde sa casse.
+    $rest = mb_substr($firstWord, 1);
+    if ($rest === mb_strtolower($rest)) {
+        $title = mb_strtolower(mb_substr($title, 0, 1)) . mb_substr($title, 1);
+    }
+
+    $initial = mb_strtolower(mb_substr($title, 0, 1));
+
+    return in_array($initial, ['a', 'e', 'i', 'o', 'u', 'y', 'à', 'â', 'ä', 'é', 'è', 'ê', 'ë', 'î', 'ï', 'ô', 'ö', 'û', 'ù', 'ü'], true)
+        ? "d'" . $title
+        : 'de ' . $title;
 }
 
 /**
@@ -466,6 +530,8 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
     $xml .= "  </url>\n";
 
     $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/a-propos/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
+    // /contact — ajoutee au sitemap le 20/08/2026, en meme temps que la page.
+    $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/contact', ENT_XML1) . "</loc>\n    <changefreq>yearly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
     $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/blog/', ENT_XML1) . "</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
 
     // Pages services

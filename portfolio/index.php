@@ -134,6 +134,13 @@ $metaTitleFallback = "Développeur Web, Mobile & Automatisation au {$seoCountry}
 $metaDescFallback  = ($profile['bio_short'] ?? '')
     ?: "{$fullName}, développeur freelance à {$seoCity} ({$seoCountry}) : sites web, applications web & mobiles, automatisation et digitalisation pour entreprises. Devis gratuit.";
 
+// URL canonique de l'accueil — AVEC barre finale (20/08/2026).
+// Le sitemap declare "https://richard.salanon.info/" tandis que la canonical
+// declarait "https://richard.salanon.info" : deux formes pour une meme page,
+// que Google devait arbitrer seul. $portfolioUrl reste sans barre finale car
+// il sert de prefixe a toutes les autres URL (/blog/x, /services/x).
+$homeUrl = $portfolioUrl . '/';
+
 $metaTitle = ($seo['meta_title'] ?? '') ?: $metaTitleFallback;
 $metaDesc  = ($seo['meta_description'] ?? '') ?: $metaDescFallback;
 $ogTitle   = ($seo['og_title'] ?? '') ?: $metaTitle;
@@ -233,6 +240,43 @@ $serviceSchema['openingHoursSpecification'] = [[
     'opens'     => '08:00',
     'closes'    => '19:00',
 ]];
+// Note agregee — calculee depuis les avis REELS de la table testimonials
+// (20/08/2026). Ces avis sont deja affiches plus bas dans la page par le
+// template : la regle Google "le balisage doit refleter un contenu visible"
+// est donc respectee.
+//
+// A SAVOIR : Google n'affiche PAS d'etoiles pour un avis qu'une entreprise
+// heberge sur son propre site ("self-serving review") quand le type est
+// LocalBusiness ou Organization. Les etoiles du Local Pack viennent de la
+// fiche Google Business, pas d'ici. Ce balisage sert la coherence de
+// l'entite et les moteurs generatifs, qui eux le lisent et le citent.
+try {
+    $stmtRating = $pdo->prepare(
+        "SELECT COUNT(*) AS n, AVG(rating) AS moyenne
+           FROM testimonials
+          WHERE user_id = ? AND rating IS NOT NULL AND rating BETWEEN 1 AND 5"
+    );
+    $stmtRating->execute([$userId]);
+    $ratingRow = $stmtRating->fetch(PDO::FETCH_ASSOC) ?: [];
+} catch (\Throwable $e) {
+    $ratingRow = [];
+}
+$ratingCount = (int) ($ratingRow['n'] ?? 0);
+// Seuil de 5 avis (20/08/2026). Au 20/08 la table n'en contient qu'UN :
+// publier "5,0 sur 1 avis" est un signal faible, invariablement parfait, et
+// typique de ce que les moteurs traitent comme auto-promotionnel. Le balisage
+// n'apparait qu'a partir de 5 avis, ou une moyenne commence a vouloir dire
+// quelque chose. Le seuil se leve tout seul des que les avis rentrent.
+if ($ratingCount >= 5) {
+    $serviceSchema['aggregateRating'] = [
+        '@type'       => 'AggregateRating',
+        'ratingValue' => (string) round((float) $ratingRow['moyenne'], 1),
+        'reviewCount' => (string) $ratingCount,
+        'bestRating'  => '5',
+        'worstRating' => '1',
+    ];
+}
+
 $serviceSchema['@id']                = $portfolioUrl . '/#service';
 $serviceSchema['provider']           = ['@id' => $idPerson];
 $serviceSchema['parentOrganization'] = ['@id' => $idOrg];
@@ -304,19 +348,20 @@ $websiteSchema = [
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?= sanitize($ogTitle) ?>">
     <meta property="og:description" content="<?= sanitize($ogDesc) ?>">
-    <meta property="og:url" content="<?= sanitize($portfolioUrl) ?>">
+    <meta property="og:url" content="<?= sanitize($homeUrl) ?>">
     <?php if ($ogImage): ?>
     <meta property="og:image" content="<?= sanitize($ogImage) ?>">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="<?= sanitize($fullName) ?>">
     <?php endif; ?>
 
     <!-- Canonical -->
-    <link rel="canonical" href="<?= sanitize($portfolioUrl) ?>">
+    <link rel="canonical" href="<?= sanitize($homeUrl) ?>">
 
     <!-- hreflang (fr aujourd'hui ; en prévu en Phase 4) -->
-    <link rel="alternate" hreflang="fr" href="<?= sanitize($portfolioUrl) ?>">
-    <link rel="alternate" hreflang="x-default" href="<?= sanitize($portfolioUrl) ?>">
+    <link rel="alternate" hreflang="fr" href="<?= sanitize($homeUrl) ?>">
+    <link rel="alternate" hreflang="x-default" href="<?= sanitize($homeUrl) ?>">
 
     <!-- Open Graph étendu -->
     <meta property="og:locale" content="fr_FR">
