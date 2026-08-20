@@ -1,17 +1,16 @@
 name: Deploiement production
 
 # Chaque push sur main met richard.salanon.info a jour.
-# "workflow_dispatch" permet aussi de relancer un deploiement a la main
-# depuis l'onglet Actions, sans avoir a faire un commit.
+# "workflow_dispatch" permet de relancer un deploiement a la main depuis
+# l'onglet Actions, sans avoir a faire un commit.
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-# Un seul deploiement a la fois. Sans cela, deux pushes rapproches
-# pourraient televerser en parallele et laisser le serveur dans un
-# etat incoherent. cancel-in-progress reste a false : on ne coupe
-# jamais un transfert deja commence.
+# Un seul deploiement a la fois : deux rsync simultanes laisseraient le
+# serveur dans un etat incoherent. cancel-in-progress reste a false,
+# on ne coupe jamais un transfert deja commence.
 concurrency:
   group: deploiement-production
   cancel-in-progress: false
@@ -23,48 +22,47 @@ jobs:
       - name: Recuperer le depot
         uses: actions/checkout@v4
 
-      - name: Televerser via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Charger la cle SSH
+        uses: webfactory/ssh-agent@v0.9.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-          # JAMAIS true : cela effacerait tout le dossier distant avant
-          # de televerser, donc uploads/, config/constants.php et vendor/.
-          dangerous-clean-slate: false
+      - name: Enregistrer l'empreinte du serveur
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "${{ secrets.SSH_PORT }}" -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+          chmod 600 ~/.ssh/known_hosts
 
-          # Le transfert est incremental : l'action compare l'etat local
-          # a .ftp-deploy-sync-state.json stocke sur le serveur et
-          # n'envoie que les fichiers reellement modifies.
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            .env
-            .env.*
-            config/constants.php
-            uploads/**
-            prudence/**
-            docs/**
-            .claude/**
-            sitemap.xml
-            *.md
-            *.bak-*
-            .ftp-deploy-sync-state.json
+      # Simulation d'abord : le journal montre exactement ce qui sera
+      # envoye ET supprime, avant que quoi que ce soit ne bouge.
+      # A relire au moindre doute apres un changement du .deployignore.
+      - name: Simulation (aucune modification)
+        run: |
+          rsync -rlz --delete --dry-run --itemize-changes \
+            --exclude-from=.deployignore \
+            -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=yes" \
+            ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}" \
+            | tee simulation.txt
+          echo "--- Suppressions prevues ---"
+          grep '^\*deleting' simulation.txt || echo "aucune"
+
+      - name: Deploiement
+        run: |
+          rsync -rlz --delete --itemize-changes \
+            --exclude-from=.deployignore \
+            -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=yes" \
+            ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}"
 
       # Le sitemap est un fichier STATIQUE genere depuis la base. Sans cette
       # etape il reste fige : le 20/08/2026, 4 URL du sitemap pointaient
-      # encore vers d'anciens slugs et repondaient en 301 au lieu de 200.
+      # encore vers d'anciens slugs et repondaient 301 au lieu de 200.
       - name: Regenerer le sitemap
         run: |
           curl --fail --silent --show-error --max-time 60 \
             "https://richard.salanon.info/generate-sitemap.php?key=${{ secrets.SITEMAP_KEY }}"
 
-      # Verification minimale : si la page d'accueil ne repond pas 200
-      # apres le deploiement, le job echoue et vous etes notifie.
+      # Filet de securite : si l'accueil ne repond plus 200 apres le
+      # deploiement, le job echoue et vous etes notifie.
       - name: Verifier que le site repond
         run: |
           code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 https://richard.salanon.info/)

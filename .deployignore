@@ -1,0 +1,41 @@
+# ============================================================
+# .deployignore — chemins que rsync ne doit ni envoyer ni supprimer.
+#
+# CRITIQUE : le deploiement utilise --delete, qui efface sur le serveur
+# tout ce qui n'existe pas dans le depot. Or ces chemins existent
+# UNIQUEMENT sur le serveur. Sans cette liste, un deploiement detruirait
+# la configuration, les images et le sitemap.
+#
+# rsync protege de la suppression tout ce qui est exclu ici.
+# ============================================================
+
+# --- Configuration propre au serveur (absente du depot) ---
+.env
+.env.*
+config/constants.php
+
+# --- Images televersees depuis le dashboard (absentes du depot) ---
+uploads/
+
+# --- Genere sur le serveur par generate-sitemap.php ---
+sitemap.xml
+
+# --- Mecanique git et CI, inutile en production ---
+.git/
+.github/
+.gitignore
+.deployignore
+
+# --- Documentation interne : ne doit pas etre publiee ---
+docs/
+*.md
+
+# --- Projet distinct (prudence.salanon.info) ---
+prudence/
+
+# --- Outils locaux et sauvegardes ---
+.claude/
+node_modules/
+*.bak-*
+*.log
+error_log
