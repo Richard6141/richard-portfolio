@@ -61,7 +61,14 @@ $stmtAutres = $pdo->prepare("SELECT title, slug, description_short, image_url, c
 $stmtAutres->execute([$userId, $slug]);
 $autres = $stmtAutres->fetchAll();
 
-$pageTitle     = seoTitle($p['title'] . ($p['category'] ? ' — ' . $p['category'] : ''), $fullName);
+// La categorie n'est ajoutee que si le titre ne porte pas deja son propre
+// tiret cadratin : "Toure Distribution — Logiciel de gestion" + " — Application"
+// donnait un titre a deux tirets, trop long pour garder la marque en suffixe.
+$titreCourt = trim((string) $p['title']);
+$pageTitle  = seoTitle(
+    (str_contains($titreCourt, '—') || !$p['category']) ? $titreCourt : $titreCourt . ' — ' . $p['category'],
+    $fullName
+);
 $pageDesc      = seoDescription($descShort ?: strip_tags($descLong) ?: ('Étude de cas : ' . $p['title'] . ' par ' . $fullName . '.'));
 $pageCanonical = $projUrl;
 $ogImage       = $img ?: (($profile['avatar_url'] ?? '') ? $portfolioUrl . '/uploads/' . preg_replace('/\.\.[\\/]/', '', $profile['avatar_url']) : '');

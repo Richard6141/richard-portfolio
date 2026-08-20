@@ -19,7 +19,10 @@ uksort($parPays, static fn($a, $b) => $a === 'Bénin' ? -1 : ($b === 'Bénin' ? 
 $nbVilles = count($villes);
 $nbPays   = count($parPays);
 
-$pageTitle     = seoTitle('Zones desservies : ' . $nbVilles . ' villes au Bénin et en Afrique de l\'Ouest', $fullName);
+// Titre volontairement court : la formulation longue ("... au Bénin et en
+// Afrique de l'Ouest") depassait 60 caracteres, ce qui faisait sauter la
+// marque en suffixe. Celle-ci tient en 57 caracteres, marque comprise.
+$pageTitle     = seoTitle('Zones desservies : ' . $nbVilles . ' villes', $fullName);
 $pageDesc      = seoDescription('Création de sites web, applications et automatisation dans ' . $nbVilles . ' villes de ' . $nbPays . ' pays : Cotonou, Abomey-Calavi, Porto-Novo, Parakou, Abidjan, Lomé, Dakar. Devis gratuit.');
 $pageCanonical = $zonesUrl;
 $ogImage = ($profile['avatar_url'] ?? '') ? $portfolioUrl . '/uploads/' . preg_replace('/\.\.[\\/]/', '', $profile['avatar_url']) : '';
