@@ -79,7 +79,12 @@ $h_logo = siteLogoUrl();
       <div class="av"><?php if ($profile['avatar_url'] ?? ''): ?><img src="/api/thumb.php?src=<?= urlencode(preg_replace('/\.\.[\\/]/','',$profile['avatar_url'])) ?>&s=100" alt="<?= sanitize($fullName) ?>"><?php else: ?><?= sanitize($h_initials) ?><?php endif; ?></div>
       <div><b><?= sanitize($fullName) ?></b><small>Développeur freelance · <?= sanitize($h_city) ?></small></div>
     </div>
-    <div class="hb acc float"><div class="k">+8 ans</div><div class="kv">d'expérience dev</div></div>
+    <?php /* 20/08/2026 : affichait "+8 ans" alors que /a-propos annonce "plus de
+       six ans". Deux faits contradictoires sur le meme domaine, ce qui abime la
+       resolution d'entite pour Google comme pour les moteurs generatifs.
+       Valeur confirmee par Richard : plus de six ans. Le bio_short en base a ete
+       aligne par la migration 2026-08-20-anciennete-et-etudes-de-cas.sql. */ ?>
+    <div class="hb acc float"><div class="k">+6 ans</div><div class="kv">d'expérience dev</div></div>
     <div class="hb float d"><div class="k">24h</div><div class="kv">délai de réponse</div></div>
   </div>
 </div></section>
