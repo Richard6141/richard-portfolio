@@ -215,6 +215,19 @@ $serviceSchema = [
         ['@type' => 'Country', 'name' => 'Bénin',          'sameAs' => 'https://www.wikidata.org/wiki/Q962'],
         ['@type' => 'Country', 'name' => 'Togo',           'sameAs' => 'https://www.wikidata.org/wiki/Q945'],
         ['@type' => 'Country', 'name' => 'Côte d\'Ivoire', 'sameAs' => 'https://www.wikidata.org/wiki/Q1008'],
+        // Couverture reelle confirmee le 20/08/2026. Les projets hors Benin
+        // sont menes a distance, ce que les pages villes annoncent explicitement.
+        // Pas de sameAs ici : ces identifiants Wikidata n'ont pas ete verifies,
+        // et un identifiant faux relie l'entite au mauvais pays.
+        ['@type' => 'Country', 'name' => 'Sénégal'],
+        ['@type' => 'Country', 'name' => 'Gabon'],
+        ['@type' => 'Country', 'name' => 'Congo'],
+        ['@type' => 'Country', 'name' => 'Niger'],
+        ['@type' => 'Country', 'name' => 'Burkina Faso'],
+        ['@type' => 'Country', 'name' => 'Nigeria'],
+        ['@type' => 'Country', 'name' => 'France'],
+        ['@type' => 'Country', 'name' => 'Suisse'],
+        ['@type' => 'Country', 'name' => 'Canada'],
     ],
     'provider'   => ['@type' => 'Person', 'name' => $fullName, 'url' => $portfolioUrl],
     'priceRange' => '$$',
