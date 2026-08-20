@@ -27,11 +27,32 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      # Diagnostic : Hostinger filtre parfois les connexions SSH entrantes.
+      # Le port doit repondre depuis le runner GitHub, pas seulement depuis
+      # votre machine. On le verifie explicitement avant d'aller plus loin.
+      - name: Verifier que le port SSH repond
+        run: |
+          if timeout 15 bash -c "cat < /dev/null > /dev/tcp/${{ secrets.SSH_HOST }}/${{ secrets.SSH_PORT }}" 2>/dev/null; then
+            echo "Port SSH joignable depuis GitHub Actions."
+          else
+            echo "ECHEC : le port SSH ne repond pas depuis ce runner."
+            echo "Cause la plus probable : le pare-feu Hostinger n'autorise pas"
+            echo "les adresses IP de GitHub Actions. Voir hPanel > Avance >"
+            echo "Acces SSH, ou la section pare-feu / IP autorisees."
+            exit 1
+          fi
+
       - name: Enregistrer l'empreinte du serveur
         run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -p "${{ secrets.SSH_PORT }}" -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
-          chmod 600 ~/.ssh/known_hosts
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          if ssh-keyscan -T 20 -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts 2>keyscan.err; then
+            echo "Empreinte du serveur enregistree."
+          else
+            echo "ssh-keyscan a echoue :"
+            cat keyscan.err
+            echo "Repli sur accept-new : l'empreinte sera acceptee a la premiere connexion."
+          fi
+          chmod 600 ~/.ssh/known_hosts 2>/dev/null || true
 
       # Simulation d'abord : le journal montre exactement ce qui sera
       # envoye ET supprime, avant que quoi que ce soit ne bouge.
@@ -40,7 +61,7 @@ jobs:
         run: |
           rsync -rlz --delete --dry-run --itemize-changes \
             --exclude-from=.deployignore \
-            -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=yes" \
+            -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=accept-new" \
             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}" \
             | tee simulation.txt
           echo "--- Suppressions prevues ---"
@@ -50,7 +71,7 @@ jobs:
         run: |
           rsync -rlz --delete --itemize-changes \
             --exclude-from=.deployignore \
-            -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=yes" \
+            -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=accept-new" \
             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}"
 
       # Le sitemap est un fichier STATIQUE genere depuis la base. Sans cette
