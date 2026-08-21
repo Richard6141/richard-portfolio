@@ -13,18 +13,35 @@ try {
 } catch (\Throwable $e) {}
 
 $citiesBJ   = ['Cotonou', 'Porto-Novo', 'Abomey-Calavi', 'Parakou', 'Bohicon', 'Ouidah', 'Natitingou', 'Djougou', 'Lokossa', 'Abomey'];
-$citiesIntl = ['Abidjan', 'Lomé', 'Dakar', 'Douala', 'Paris', 'Lyon', 'Marseille', 'Bruxelles', 'Genève', 'Montréal', 'Québec'];
+$citiesIntl = ['Abidjan', 'Lomé', 'Dakar', 'Paris', 'Lyon', 'Marseille', 'Bruxelles', 'Genève', 'Montréal', 'Québec'];
 
 // Villes disposant d'une page dediee (20/08/2026). Les 21 villes ci-dessus
 // etaient affichees en <span> inertes : le site revendiquait une couverture
 // que rien ne portait. Celles qui ont une page deviennent des liens, les
 // autres restent en texte, mieux vaut un texte qu'un lien vers une 404.
+// Deux sources: les pages /developpeur-web-* (data/villes) et le registre
+// des sujets (data/sujets). Sans la seconde, Paris, Bruxelles, Geneve,
+// Montreal, Quebec, Lyon et Marseille restaient grisees alors qu'elles ont
+// une page depuis le 21/08/2026: le pied de page annoncait une couverture
+// qu'il refusait lui-meme de lier.
 $villesAvecPage = [];
 $fichierVilles  = __DIR__ . '/../data/villes.php';
 if (is_file($fichierVilles)) {
     foreach ((array) require $fichierVilles as $vv) {
         if (!empty($vv['nom']) && !empty($vv['slug'])) {
-            $villesAvecPage[$vv['nom']] = $vv['slug'];
+            $villesAvecPage[$vv['nom']] = '/developpeur-web-' . $vv['slug'];
+        }
+    }
+}
+$fichierSujets = __DIR__ . '/../data/sujets.php';
+if (is_file($fichierSujets)) {
+    foreach ((array) require $fichierSujets as $sj) {
+        foreach (($sj['pages'] ?? []) as $pg) {
+            // On ne remplace pas une page ville deja trouvee: elle reste
+            // l'entree naturelle, la page sujet n'est qu'un repli.
+            if (!empty($pg['ville']) && !empty($pg['slug']) && !isset($villesAvecPage[$pg['ville']])) {
+                $villesAvecPage[$pg['ville']] = '/' . $pg['slug'];
+            }
         }
     }
 }
@@ -39,7 +56,7 @@ if (!function_exists('zoneLien')) {
     {
         $nom = sanitize($ville);
         return isset($avecPage[$ville])
-            ? '<a href="/developpeur-web-' . sanitize($avecPage[$ville]) . '">' . $nom . '</a>'
+            ? '<a href="' . sanitize($avecPage[$ville]) . '">' . $nom . '</a>'
             : '<span>' . $nom . '</span>';
     }
 }
