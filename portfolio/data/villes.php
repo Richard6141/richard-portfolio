@@ -34,6 +34,7 @@ $dossier = __DIR__ . '/villes';
 // Ordre d'affichage : marche principal d'abord, puis rayonnement regional.
 $ordre = [
     'cotonou', 'abomey-calavi', 'porto-novo', 'parakou', 'bohicon', 'ouidah',
+    'lokossa', 'abomey', 'djougou', 'natitingou',
     'abidjan', 'lome', 'dakar',
 ];
 
