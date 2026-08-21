@@ -274,6 +274,36 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
   <?php endif; ?>
 
+  <?php
+  // Sujets publies pour cette ville (registre data/sujets.php). Sans ce bloc,
+  // les pages sujet etaient orphelines : atteignables en direct et presentes
+  // au sitemap, mais liees depuis aucune page du site. Un moteur les explore
+  // alors en dernier et ne leur transmet aucune autorite interne.
+  $sujetsVille = [];
+  $registre = @require __DIR__ . '/data/sujets.php';
+  if (is_array($registre)) {
+      foreach ($registre as $sj) {
+          if (isset($sj['pages'][$slug])) {
+              $sujetsVille[] = ['sujet' => $sj, 'page' => $sj['pages'][$slug]];
+          }
+      }
+  }
+  ?>
+  <?php if ($sujetsVille): ?>
+  <section class="sect soft"><div class="wrap">
+    <div class="sect-head rv"><span class="mono"><span class="tag-num">06</span> / Aller plus loin</span><h2>Mes expertises à <?= sanitize($v['nom']) ?></h2></div>
+    <div class="bento stg">
+      <?php foreach ($sujetsVille as $sv): ?>
+      <a class="svc" href="/<?= sanitize($sv['page']['slug']) ?>">
+        <h3><?= sanitize($sv['page']['titre']) ?></h3>
+        <p><?= sanitize($sv['page']['accroche']) ?></p>
+        <div class="arrow">Lire la page</div>
+      </a>
+      <?php endforeach; ?>
+    </div>
+  </div></section>
+  <?php endif; ?>
+
   <div class="cta-band"><div class="wrap"><div class="cta-inner rv">
     <h2>Un projet à <?= sanitize($v['nom']) ?> ?</h2>
     <p>Décrivez votre besoin, je reviens vers vous avec un devis clair et sans engagement.</p>

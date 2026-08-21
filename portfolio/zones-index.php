@@ -9,6 +9,9 @@
 require __DIR__ . '/partials/pv2-bootstrap.php';
 
 $villes   = require __DIR__ . '/data/villes.php';
+// Registre des sujets, pour lister sous chaque ville les pages publiees.
+$registre = @require __DIR__ . '/data/sujets.php';
+if (!is_array($registre)) { $registre = []; }
 $zonesUrl = $portfolioUrl . '/zones/';
 
 // Regroupement par pays, en gardant le Benin en tete (marche principal).
@@ -89,6 +92,21 @@ include __DIR__ . '/partials/pv2-header.php';
           </div>
           <div class="arrow">Voir la page</div>
         </a>
+        <?php
+        // Sujets publies pour cette ville : liens directs depuis l'index des
+        // zones, pour qu'aucune page du registre ne reste orpheline.
+        $sjVille = [];
+        foreach ($registre as $sj) {
+            if (isset($sj['pages'][$v['slug']])) { $sjVille[] = $sj['pages'][$v['slug']]; }
+        }
+        ?>
+        <?php if ($sjVille): ?>
+        <div class="zone-grid" style="margin:-.4rem 0 1.4rem">
+          <?php foreach ($sjVille as $pg): ?>
+            <a href="/<?= sanitize($pg['slug']) ?>"><?= sanitize($pg['titre']) ?></a>
+          <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
       <?php endforeach; ?>
     </div>
   </div></section>
