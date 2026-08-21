@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Cotonou. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Cotonou. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Cotonou',
+      'paragraphes' => 
+      array (
+        0 => 'Le premier frein n\'est pas technique, il est organisationnel. Les entreprises cotonoises tournent a un rythme soutenu, avec des marges serrees et des equipes deja sous tension. Degager deux jours de formation est un arbitrage reel, pas une formalite. C\'est pourquoi je propose des formats courts et pourquoi je travaille sur vos documents: une session qui ne produit rien d\'utilisable le jour meme n\'est pas rentable ici.',
+        1 => 'Le second frein est la confidentialite, et il est parfaitement fonde. Beaucoup d\'entreprises d\'import-export manipulent des informations commerciales sensibles: prix d\'achat fournisseurs, marges, encours clients. La question n\'est pas de savoir si l\'on peut utiliser l\'IA, mais quoi lui confier. Une part importante de la formation consiste a tracer cette frontiere avec vous, service par service.',
+        2 => 'Le troisieme est plus discret: beaucoup d\'equipes utilisent deja ces outils, sans le dire et sans regle. Des commerciaux redigent leurs messages avec un assistant, parfois en y collant des donnees clients. Ignorer cet usage informel ne le fait pas disparaitre, il le rend seulement incontrolable. Une formation sert autant a encadrer ce qui se fait deja qu\'a introduire du nouveau.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

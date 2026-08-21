@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Québec. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Québec. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Québec',
+      'paragraphes' => 
+      array (
+        0 => 'Dans un tissu de PME et d\'organismes, le frein principal est la taille des equipes: personne n\'a de temps dedie a explorer un nouvel outil. La formation doit donc produire un resultat utilisable immediatement, faute de quoi rien ne survivra a la session.',
+        1 => 'Le deuxieme frein est le meme qu\'a Montreal sur la langue: obtenir un francais qui sonne juste ici demande des consignes explicites, sinon le rendu trahit son origine.',
+        2 => 'Le troisieme est la conformite, avec les memes obligations quebecoises. Pour une petite structure sans juriste, la formation sert aussi a savoir ou se situe la limite, ce qui evite aussi bien l\'imprudence que la paralysie.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

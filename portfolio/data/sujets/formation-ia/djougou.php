@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Djougou. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Djougou. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Djougou',
+      'paragraphes' => 
+      array (
+        0 => 'La saisonnalite du negoce concentre l\'activite sur quelques mois, et l\'apprentissage doit se faire en dehors. C\'est une contrainte de calendrier, pas de principe: hors campagne, la disponibilite est bien meilleure qu\'ailleurs.',
+        1 => 'Le deuxieme frein est la nature orale des echanges commerciaux. Beaucoup de transactions se negocient de vive voix et se notent sommairement. L\'IA aide a structurer ces notes en un etat exploitable, ce qui est souvent le premier gain visible et le plus convaincant.',
+        2 => 'Le troisieme est la connexion, moins bonne que dans le sud. On identifie les usages realistes au bureau et on n\'impose rien sur le terrain, ou l\'outil ne repondrait pas de facon fiable.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

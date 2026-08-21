@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Parakou. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Parakou. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Parakou',
+      'paragraphes' => 
+      array (
+        0 => 'La connexion est le premier obstacle, et il est concret. Les assistants IA sont des services en ligne: sans reseau stable, l\'usage devient frustrant. On identifie donc les moments et les lieux ou l\'usage est realiste, generalement au bureau, et on n\'essaie pas d\'imposer l\'outil sur les points de collecte ou il ne fonctionnera pas.',
+        1 => 'Le deuxieme frein est la saisonnalite. En pleine campagne, personne n\'a le temps d\'apprendre quoi que ce soit. La formation se cale hors saison, et le suivi arrive au moment ou l\'activite reprend, quand les besoins deviennent concrets.',
+        2 => 'Le troisieme est le niveau d\'ecrit. Une partie des equipes de terrain travaille davantage a l\'oral qu\'a l\'ecrit. L\'IA aide justement la: dicter une note et obtenir un texte structure est souvent le premier usage qui convainc, bien avant les fonctions plus sophistiquees.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

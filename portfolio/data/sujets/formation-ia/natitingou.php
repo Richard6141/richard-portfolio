@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Natitingou. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Natitingou. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Natitingou',
+      'paragraphes' => 
+      array (
+        0 => 'L\'eloignement est le premier facteur. Une formation en presentiel suppose un deplacement de 620 kilometres, ce qui pese sur le budget. Les sessions se donnent donc en visioconference, ce qui fonctionne bien pour ce sujet: on partage des ecrans et on travaille sur des documents, pas sur du materiel.',
+        1 => 'Le deuxieme frein est la stabilite de la connexion, qui conditionne autant la formation que l\'usage quotidien. On prevoit des sessions plus courtes et fractionnees plutot qu\'une journee continue, pour qu\'une coupure ne fasse pas perdre le fil.',
+        2 => 'Le troisieme est l\'absence d\'ecosysteme local: peu d\'entreprises voisines utilisent ces outils, donc peu d\'exemples auxquels se referer. C\'est pourquoi j\'insiste sur des cas d\'usage tres concrets tires de votre propre activite, plutot que sur des references qui parleraient a Cotonou mais pas ici.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

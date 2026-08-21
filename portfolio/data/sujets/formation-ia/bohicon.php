@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Bohicon. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Bohicon. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Bohicon',
+      'paragraphes' => 
+      array (
+        0 => 'Le rythme du carrefour laisse peu de place a l\'apprentissage. Entre l\'arrivage du matin et les expeditions de l\'apres-midi, une formation de deux jours consecutifs est difficile a tenir. Les demi-journees espacees fonctionnent mieux ici qu\'ailleurs.',
+        1 => 'Le deuxieme frein est la perception: beaucoup de commercants considerent que l\'IA concerne les bureaux, pas le negoce. Cette reserve tombe des qu\'on montre un cas concret, comme extraire les donnees d\'un bon de livraison photographie. Le passage par l\'exemple est indispensable, l\'explication theorique ne convainc personne.',
+        2 => 'Le troisieme est la crainte de perdre la relation client. Dans un commerce ou la confiance personnelle fait la vente, automatiser une relance inquiete. Je le dis simplement: on automatise le rappel factuel d\'une echeance, jamais la relation. La nuance est comprise immediatement quand elle est posee ainsi.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

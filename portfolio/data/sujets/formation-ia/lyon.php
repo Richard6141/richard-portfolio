@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Lyon. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Lyon. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Lyon',
+      'paragraphes' => 
+      array (
+        0 => 'Dans un tissu industriel et de sante, la precision prime sur la vitesse. Un resume approximatif d\'un document technique ou d\'un protocole est pire qu\'aucun resume. La formation insiste donc sur la verification et sur les cas ou l\'IA ne doit pas etre utilisee.',
+        1 => 'Le deuxieme frein est la confidentialite industrielle: specifications, plans, donnees de production. La frontiere de ce qui peut sortir se definit service par service, avec la direction technique autant qu\'avec la direction generale.',
+        2 => 'Le troisieme est l\'existant. Beaucoup d\'entreprises lyonnaises ont deja des outils metier structurants, et l\'IA doit s\'y inserer plutot que de creer un canal parallele. C\'est un point de cadrage plus qu\'un point de formation.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

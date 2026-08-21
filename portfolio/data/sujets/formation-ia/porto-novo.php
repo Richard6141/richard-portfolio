@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Porto-Novo. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Porto-Novo. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Porto-Novo',
+      'paragraphes' => 
+      array (
+        0 => 'Dans un environnement administratif, la question qui revient en premier n\'est pas l\'efficacite mais la responsabilite: qui signe un document qu\'une machine a redige. La reponse est simple et je la pose d\'emblee: la personne qui signe, comme avant. L\'IA prepare, elle n\'engage jamais.',
+        1 => 'Le deuxieme frein est le formalisme. Les courriers, rapports et comptes rendus suivent des formes attendues, parfois imposees. Un assistant qui produit un texte elegant mais hors format fait perdre du temps au lieu d\'en gagner. On travaille donc sur vos modeles reels, en apprenant a les faire respecter.',
+        2 => 'Le troisieme est la duree de conservation. Ce qui est produit aujourd\'hui devra parfois etre justifie dans cinq ans. Cela impose de garder une trace de ce qui a ete genere et valide, sujet rarement aborde dans les formations commerciales et pourtant central ici.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Abidjan. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Abidjan. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Abidjan',
+      'paragraphes' => 
+      array (
+        0 => 'Sur ce marche, le frein n\'est pas la meconnaissance mais la dispersion. Beaucoup d\'equipes ont deja teste plusieurs outils, souvent chacune dans son coin, sans regle commune ni resultat mesure. Le premier travail consiste a faire l\'inventaire de ce qui est deja utilise avant d\'ajouter quoi que ce soit.',
+        1 => 'Le deuxieme frein est l\'attente de resultats rapides. Un marche mature attend des gains chiffres, pas des promesses. Je cadre donc la formation sur deux ou trois taches mesurables, avec un avant et un apres, plutot que sur un panorama general.',
+        2 => 'Le troisieme est la question des donnees clients, particulierement pour les acteurs du e-commerce et de la distribution qui manipulent des fichiers volumineux. La regle posee en formation est nette: aucune base client ne part dans un assistant grand public.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Ouidah. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Ouidah. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Ouidah',
+      'paragraphes' => 
+      array (
+        0 => 'La saisonnalite structure tout. En haute saison, personne ne se forme; en basse saison, le budget est serre. Les sessions se calent donc en debut de creux, quand il reste de la tresorerie et du temps, et que ce qui est appris servira des la saison suivante.',
+        1 => 'Le deuxieme frein est la taille des structures. Beaucoup d\'hebergements comptent deux ou trois personnes: former une equipe n\'a pas de sens, c\'est le dirigeant lui-meme qu\'il faut outiller. Les formats individuels ou en tres petit groupe sont la regle plutot que l\'exception.',
+        2 => 'Le troisieme est la langue. L\'IA est particulierement utile pour repondre en anglais a une clientele etrangere, et c\'est souvent l\'argument qui declenche l\'interet. Mais elle produit parfois un anglais impeccable et un contenu faux: la relecture reste indispensable, surtout sur un tarif ou une disponibilite.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Abomey-Calavi. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Abomey-Calavi. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Abomey-Calavi',
+      'paragraphes' => 
+      array (
+        0 => 'Dans les ecoles et les structures de sante, la sensibilite des donnees domine tout le reste. Un dossier d\'eleve, un dossier patient: ce sont des informations qu\'aucune consigne ne doit faire sortir vers un service externe. La formation commence donc par cette limite, avant meme de montrer le moindre outil.',
+        1 => 'Le deuxieme frein est la disponibilite. Une equipe pedagogique ou soignante ne se libere pas facilement, et surement pas deux jours consecutifs en periode scolaire ou en forte affluence. Les sessions se calent hors periode de pointe, quitte a fractionner en demi-journees.',
+        2 => 'Le troisieme tient a la croissance rapide de la commune: beaucoup de structures ont double de volume sans changer de methode, et l\'IA arrive parfois comme une solution miracle a un probleme d\'organisation. Je le dis clairement en formation: si votre fichier eleves existe en trois versions divergentes, aucun assistant ne reglera cela. C\'est un chantier de structuration, pas d\'IA.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

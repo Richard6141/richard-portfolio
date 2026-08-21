@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Genève. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Genève. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Genève',
+      'paragraphes' => 
+      array (
+        0 => 'La confidentialite est ici plus stricte qu\'ailleurs, souvent par obligation contractuelle autant que legale. Dans le negoce comme dans les organisations internationales, certaines informations ne peuvent sortir sous aucune forme. La formation commence par cartographier ces categories avec vous.',
+        1 => 'Le deuxieme frein est le niveau d\'exigence sur le rendu. Un document produit dans cet environnement doit etre irreprochable de forme comme de fond. L\'IA fait gagner du temps sur la premiere version, jamais sur la derniere.',
+        2 => 'Le troisieme est la multiplicite des langues de travail, qui rend l\'outil utile mais accroit le risque d\'erreur subtile: un terme juridique mal traduit passe inapercu et engage. La relecture par un locuteur competent reste obligatoire.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

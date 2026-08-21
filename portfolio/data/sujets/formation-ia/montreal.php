@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Montréal. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Montréal. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Montréal',
+      'paragraphes' => 
+      array (
+        0 => 'La Loi 25 impose une evaluation avant de communiquer des renseignements personnels hors du Quebec, ce qui inclut la plupart des assistants IA. C\'est le point de depart de toute formation ici, pas une remarque de fin de session.',
+        1 => 'Le deuxieme frein est linguistique, mais dans un sens particulier: produire du francais quebecois naturel plutot qu\'un francais generique. Les assistants ont tendance a produire des tournures hexagonales qu\'un lecteur d\'ici remarque immediatement. Cela se corrige par la consigne, et c\'est un point que je traite explicitement.',
+        2 => 'Le troisieme est la maturite du marche: beaucoup d\'equipes montrealaises ont deja teste, parfois abandonne. Reprendre apres un echec demande de comprendre pourquoi la premiere tentative n\'a pas tenu, avant d\'en lancer une seconde.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',

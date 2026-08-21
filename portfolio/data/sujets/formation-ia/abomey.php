@@ -1,6 +1,7 @@
 <?php
-// Formation IA x Abomey. Cas d'usage tires du tissu economique reel de la
-// ville; les programmes et tarifs sont communs, ils le sont dans les faits.
+// Formation IA x Abomey. Bloc local ajoute le 21/08/2026: le premier
+// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
+// ecrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -26,6 +27,18 @@ return array (
       ),
     ),
     1 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qui freine l\'adoption à Abomey',
+      'paragraphes' => 
+      array (
+        0 => 'Le secteur artisanal a un rapport particulier a l\'outil numerique: le savoir-faire est manuel, transmis, et l\'idee d\'y meler une machine suscite une reserve legitime. Je la prends au serieux. L\'IA n\'intervient jamais sur la piece, seulement sur ce qui l\'entoure: la description, la reponse au client, la traduction.',
+        1 => 'Le deuxieme frein est le niveau d\'equipement. Beaucoup d\'artisans travaillent avec un telephone et rien d\'autre. Tout ce que je montre doit fonctionner depuis un telephone, sans ordinateur, sinon la formation reste theorique.',
+        2 => 'Le troisieme est la langue, encore une fois. Repondre a un acheteur etranger en anglais correct ouvre un marche reel. C\'est presque toujours l\'usage qui convainc en premier a Abomey, avant meme la redaction commerciale en francais.',
+      ),
+    ),
+    2 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Programmes',
@@ -54,7 +67,7 @@ return array (
         ),
       ),
     ),
-    2 => 
+    3 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Tarifs',
@@ -67,7 +80,7 @@ return array (
         3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
       ),
     ),
-    3 => 
+    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
@@ -79,7 +92,7 @@ return array (
         2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
       ),
     ),
-    4 => 
+    5 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Prudence',
