@@ -661,6 +661,28 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
         }
     }
 
+    // Registre generique « sujet x ville » (21/08/2026). Un seul bloc pour
+    // TOUS les sujets presents et futurs : deposer data/sujets/{sujet}/{ville}.php
+    // suffit a faire apparaitre la page ici, sans revenir editer ce fichier.
+    $fichierSujets = __DIR__ . '/../portfolio/data/sujets.php';
+    if (is_file($fichierSujets)) {
+        $sujets = require $fichierSujets;
+        if (is_array($sujets)) {
+            foreach ($sujets as $sujet) {
+                foreach (($sujet['pages'] ?? []) as $pg) {
+                    if (empty($pg['slug'])) continue;
+                    $sLoc = htmlspecialchars($baseUrl . '/' . $pg['slug'], ENT_XML1);
+                    $xml .= "  <url>
+    <loc>{$sLoc}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+";
+                }
+            }
+        }
+    }
+
     foreach ($blogPosts as $bp) {
         $bLastmod = $bp['published_at'] ? date('Y-m-d', strtotime($bp['published_at'])) : date('Y-m-d');
         $bLoc     = htmlspecialchars($baseUrl . '/blog/' . $bp['slug'], ENT_XML1);

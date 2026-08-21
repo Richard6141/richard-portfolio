@@ -115,6 +115,13 @@ RewriteRule ^$ /portfolio/index.php [QSA,L]
 # donc aucune URL legitime ne dependait de ce catch-all (verifie sur les 43 pages).
 # 404.php envoie bien http_response_code(404) et porte <meta name="robots" content="noindex">.
 # ----------------------------------------------------------
+# Resolveur generique (21/08/2026). Toute URL non reconnue plus haut passe
+# par route.php, qui consulte le registre data/sujets.php : si le slug y
+# correspond, la page est rendue ; sinon route.php renvoie un vrai 404.
+# C'est ce qui permet de publier "odoo-cotonou" ou "dolibarr-lome" en
+# deposant un simple fichier, sans jamais revenir editer ce fichier.
+RewriteRule ^([a-z0-9-]+)/$ /$1 [R=301,L]
+RewriteRule ^([a-z0-9-]+)$ /portfolio/route.php?p=$1 [QSA,L]
 RewriteRule ^(.*)$ /404.php [L]
 
 ErrorDocument 403 /403.php
