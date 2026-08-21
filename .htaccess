@@ -85,12 +85,8 @@ RewriteRule ^zones/$ /portfolio/zones-index.php [QSA,L]
 RewriteRule ^developpeur-web-([a-z0-9-]+)/$ /developpeur-web-$1 [R=301,L]
 RewriteRule ^developpeur-web-([a-z0-9-]+)$ /portfolio/ville.php?ville=$1 [QSA,L]
 
-# Digitalisation d'entreprise — deux pages par ville, ajoutees le 20/08/2026.
-# Un seul point d'entree : digitalisation.php resout le slug via l'index
-# construit depuis data/digitalisation/. Ajouter un fichier de ville suffit
-# a publier ses deux pages, sans toucher a ce fichier.
-RewriteRule ^(digitalisation-entreprise-[a-z0-9-]+)/$ /$1 [R=301,L]
-RewriteRule ^(digitalisation-entreprise-[a-z0-9-]+)$ /portfolio/digitalisation.php?p=$1 [QSA,L]
+# Les pages digitalisation sont desormais servies par le registre generique
+# (data/sujets/) via route.php : leurs regles dediees sont devenues inutiles.
 RewriteRule ^(digitaliser-[a-z0-9-]+)/$ /$1 [R=301,L]
 RewriteRule ^(digitaliser-[a-z0-9-]+)$ /portfolio/digitalisation.php?p=$1 [QSA,L]
 
