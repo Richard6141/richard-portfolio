@@ -1,7 +1,6 @@
 <?php
-// Intégration Dolibarr à Porto-Novo — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Dolibarr à Porto-Novo — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'Un ERP y réussit s\'il répond à deux questions : où est le dossier, et qui a validé quoi. Tout le reste — tableaux de bord, automatisations sophistiquées — vient après, et souvent ne vient jamais parce que le besoin réel était celui-là.',
         2 => 'Le paramétrage doit donc épouser le circuit obligatoire plutôt que de proposer un circuit idéal. Quand une procédure est imposée par une tutelle, l\'ERP la trace ; il ne la réforme pas.',
         3 => 'La production des états annuels est le second gain attendu. Les statistiques que vous reconstituez chaque fin d\'exercice deviennent consultables en continu, sans travail supplémentaire — c\'est souvent ce qui justifie le projet à lui seul.',
+        4 => 'Dolibarr trace les documents et leurs statuts, mais ses circuits de validation restent plus rudimentaires que ceux d\'Odoo. Si votre tutelle impose des approbations en plusieurs niveaux, c\'est le point a verifier avant de choisir.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Porto-Novo',
       'items' => 
       array (
-        0 => 'Choisir un outil dont on ne peut pas exporter les données. Dans une structure qui doit justifier sur plusieurs années, c\'est disqualifiant.',
-        1 => 'Vouloir dématérialiser la signature avant d\'avoir tracé le circuit. On commence par savoir qui valide, ensuite seulement comment.',
-        2 => 'Sous-estimer le temps de validation interne : dans ce type de structure, il pèse plus lourd que le développement.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        1 => 'Choisir un outil dont on ne peut pas exporter les données. Dans une structure qui doit justifier sur plusieurs années, c\'est disqualifiant.',
+        2 => 'Vouloir dématérialiser la signature avant d\'avoir tracé le circuit. On commence par savoir qui valide, ensuite seulement comment.',
+        3 => 'Sous-estimer le temps de validation interne : dans ce type de structure, il pèse plus lourd que le développement.',
       ),
     ),
   ),

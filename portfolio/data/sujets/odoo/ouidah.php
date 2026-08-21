@@ -1,7 +1,6 @@
 <?php
-// Intégration Odoo à Ouidah — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Odoo à Ouidah — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'Un ERP arrive donc en second, une fois que les chambres ou les couverts se remplissent. Le déployer avant la visibilité revient à optimiser une activité qu\'on n\'a pas encore.',
         2 => 'Quand il arrive, son premier apport est le planning unique. Deux personnes prenant des réservations sur deux supports produisent tôt ou tard une double réservation, qui coûte un client mécontent et une nuit perdue.',
         3 => 'Le second est l\'acompte. Sans lui, une réservation ne vaut qu\'une promesse, et une chambre libérée la veille ne se reloue presque jamais en basse saison. C\'est la mesure qui change le plus la trésorerie sur une activité courte.',
+        4 => 'Odoo ne gere pas nativement un planning hotelier : il faut soit un module de la place, soit une reservation externe reliee par automatisation. C\'est un point a trancher au cadrage, car il change sensiblement le budget.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Ouidah',
       'items' => 
       array (
-        0 => 'Investir dans un ERP complet avant d\'avoir réglé la visibilité en ligne et la fiche Google. L\'ordre inverse est presque toujours plus rentable.',
-        1 => 'Dépendre uniquement des plateformes de réservation et de leurs commissions, sans canal direct.',
-        2 => 'Négliger la version anglaise quand une part de la clientèle vient de l\'étranger.',
+        0 => 'Activer des modules Odoo « parce qu\'ils sont inclus ». Chaque module active est un ecran de plus pour l\'equipe et une raison de plus de decrocher : on n\'ouvre que ce qui sert.',
+        1 => 'Investir dans un ERP complet avant d\'avoir réglé la visibilité en ligne et la fiche Google. L\'ordre inverse est presque toujours plus rentable.',
+        2 => 'Dépendre uniquement des plateformes de réservation et de leurs commissions, sans canal direct.',
+        3 => 'Négliger la version anglaise quand une part de la clientèle vient de l\'étranger.',
       ),
     ),
   ),

@@ -1,7 +1,6 @@
 <?php
-// Intégration Dolibarr à Abidjan — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Dolibarr à Abidjan — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'Cela change la nature du projet : il ne s\'agit plus de combler un manque mais de tenir un niveau. Un ERP approximatif se remarque immédiatement, en interne comme chez les clients.',
         2 => 'La difficulté dominante à Abidjan est la consolidation multi-points. Un article disponible dans une boutique reste invisible pour les autres : le stock global existe mais personne ne peut l\'exploiter. C\'est le premier chantier dans la plupart des cas.',
         3 => 'Le second est l\'intégration des paiements. Wave et Orange Money ne sont pas des options sur ce marché : un parcours qui ne les propose pas perd le client au dernier écran, après tout le coût d\'acquisition.',
+        4 => 'Sur un marche ou vos concurrents sont deja equipes, Dolibarr tient la comparaison sur le commercial et la facturation, moins sur la logistique multi-sites complexe. C\'est le bon choix si vous avez un ou deux points de vente, pas cinq.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Abidjan',
       'items' => 
       array (
-        0 => 'Empiler des outils sans jamais les relier. Beaucoup d\'entreprises abidjanaises ont déjà investi : les faire communiquer coûte souvent dix fois moins qu\'une refonte.',
-        1 => 'Lancer une boutique en ligne sans stock consolidé, ce qui produit des ventes d\'articles déjà écoulés.',
-        2 => 'Choisir un prestataire sur le seul critère du prix, sans clause de propriété du code et des données.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        1 => 'Empiler des outils sans jamais les relier. Beaucoup d\'entreprises abidjanaises ont déjà investi : les faire communiquer coûte souvent dix fois moins qu\'une refonte.',
+        2 => 'Lancer une boutique en ligne sans stock consolidé, ce qui produit des ventes d\'articles déjà écoulés.',
+        3 => 'Choisir un prestataire sur le seul critère du prix, sans clause de propriété du code et des données.',
       ),
     ),
   ),

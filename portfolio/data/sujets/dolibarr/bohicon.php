@@ -1,7 +1,6 @@
 <?php
-// Intégration Dolibarr à Bohicon — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Dolibarr à Bohicon — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'Concrètement : si enregistrer une vente prend dix secondes de plus qu\'aujourd\'hui, l\'outil sera contourné en trois semaines. On mesure donc le geste actuel avant de paramétrer quoi que ce soit, et on conçoit à partir de ce chiffre.',
         2 => 'Le second chantier est le carnet de crédit. L\'encours dû par les revendeurs représente souvent plusieurs mois de trésorerie et n\'est calculé nulle part. Le rendre visible change immédiatement les décisions, avant même toute automatisation.',
         3 => 'Vient enfin la marge par référence. Quand les prix d\'achat varient d\'un arrivage à l\'autre et que les remises se négocient au cas par cas, la rentabilité réelle se perd. C\'est souvent la découverte du projet : les produits qu\'on croyait rentables ne le sont pas.',
+        4 => 'Dolibarr est plus rapide a l\'affichage qu\'Odoo sur une connexion moyenne, ce qui sert directement le rythme du comptoir. Son module de caisse est plus sommaire : si votre volume de tickets est eleve, c\'est le point a arbitrer.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Bohicon',
       'items' => 
       array (
-        0 => 'Imposer un prix figé par article. À Bohicon le prix se négocie : il faut un prix de référence modifiable, avec la marge réelle calculée sur le prix pratiqué.',
-        1 => 'Vouloir référencer tout le catalogue dès le départ. On commence par les vingt références qui font l\'essentiel du chiffre.',
-        2 => 'Choisir un outil qui exige un ordinateur allumé en permanence dans un contexte de coupures fréquentes.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        1 => 'Imposer un prix figé par article. À Bohicon le prix se négocie : il faut un prix de référence modifiable, avec la marge réelle calculée sur le prix pratiqué.',
+        2 => 'Vouloir référencer tout le catalogue dès le départ. On commence par les vingt références qui font l\'essentiel du chiffre.',
+        3 => 'Choisir un outil qui exige un ordinateur allumé en permanence dans un contexte de coupures fréquentes.',
       ),
     ),
   ),

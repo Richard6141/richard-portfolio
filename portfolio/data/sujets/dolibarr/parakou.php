@@ -1,7 +1,6 @@
 <?php
-// Intégration Dolibarr à Parakou — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Dolibarr à Parakou — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'La saisie doit donc fonctionner sur téléphone, hors connexion, et se synchroniser seule au retour du réseau. Ce n\'est pas un confort : c\'est la condition pour que les données existent.',
         2 => 'Le suivi des avances producteurs vient ensuite. Qui a reçu quoi, qui a livré combien, ce qui reste dû : cette information vit aujourd\'hui dans plusieurs cahiers tenus par plusieurs personnes, et c\'est de là que naissent la quasi-totalité des litiges de fin de campagne.',
         3 => 'La saisonnalité, enfin, change le calcul de rentabilité. L\'outil se rentabilise sur une seule campagne s\'il évite les litiges d\'avances et permet de décider de vendre au bon moment. Hors saison, il ne coûte que son hébergement.',
+        4 => 'Dolibarr etant leger et servi en PHP, ses ecrans s\'affichent correctement meme sur une connexion faible — un avantage reel a Parakou. Pour la saisie franchement hors reseau, on lui adjoint la meme application terrain, mais l\'ensemble reste nettement moins couteux.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Parakou',
       'items' => 
       array (
-        0 => 'Déployer un ERP testé uniquement en Wi-Fi au bureau. Il faut le tester avec le vrai réseau et les vrais téléphones des agents avant de généraliser.',
-        1 => 'Concevoir les écrans avec le seul gérant, sans les agents qui saisiront réellement. L\'outil est alors abandonné dès la première campagne.',
-        2 => 'Multiplier les champs obligatoires pour « avoir des données propres ». Sur le terrain, chaque champ superflu est un abandon de saisie.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        1 => 'Déployer un ERP testé uniquement en Wi-Fi au bureau. Il faut le tester avec le vrai réseau et les vrais téléphones des agents avant de généraliser.',
+        2 => 'Concevoir les écrans avec le seul gérant, sans les agents qui saisiront réellement. L\'outil est alors abandonné dès la première campagne.',
+        3 => 'Multiplier les champs obligatoires pour « avoir des données propres ». Sur le terrain, chaque champ superflu est un abandon de saisie.',
       ),
     ),
   ),

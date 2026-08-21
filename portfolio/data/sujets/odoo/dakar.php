@@ -1,7 +1,6 @@
 <?php
-// Intégration Odoo à Dakar — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Odoo à Dakar — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'La conséquence pratique est que l\'ERP ne peut pas rester un outil interne isolé. Il doit dialoguer avec la boutique en ligne, les paiements et la livraison, sous peine de créer une double saisie que personne ne tiendra.',
         2 => 'La difficulté dominante est la justesse du stock entre les canaux. Vendre en ligne un article déjà écoulé est la première cause d\'annulation et d\'avis négatif — sur un marché où les avis comptent beaucoup.',
         3 => 'Vient ensuite la relance de panier abandonné, qui n\'est pas une fonction d\'ERP mais une automatisation branchée dessus. C\'est le meilleur retour sur investissement en e-commerce, et cela se met en place en quelques jours.',
+        4 => 'Odoo dispose d\'un module e-commerce integre, ce qui evite la double saisie entre boutique et stock. Si vous avez deja une boutique performante, on relie plutot que de migrer — la migration coute presque toujours plus cher que la passerelle.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Dakar',
       'items' => 
       array (
-        0 => 'Refaire entièrement une boutique fonctionnelle alors qu\'elle peut souvent être reliée au stock sans refonte.',
-        1 => 'Traiter Wave et Orange Money comme une option de fin de projet plutôt que comme un préalable.',
-        2 => 'Déployer un ERP sans prévoir le suivi de livraison, ce qui reporte toute la charge sur le service client.',
+        0 => 'Activer des modules Odoo « parce qu\'ils sont inclus ». Chaque module active est un ecran de plus pour l\'equipe et une raison de plus de decrocher : on n\'ouvre que ce qui sert.',
+        1 => 'Refaire entièrement une boutique fonctionnelle alors qu\'elle peut souvent être reliée au stock sans refonte.',
+        2 => 'Traiter Wave et Orange Money comme une option de fin de projet plutôt que comme un préalable.',
+        3 => 'Déployer un ERP sans prévoir le suivi de livraison, ce qui reporte toute la charge sur le service client.',
       ),
     ),
   ),

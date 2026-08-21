@@ -1,7 +1,6 @@
 <?php
-// Intégration Dolibarr à Ouidah — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Dolibarr à Ouidah — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'Un ERP arrive donc en second, une fois que les chambres ou les couverts se remplissent. Le déployer avant la visibilité revient à optimiser une activité qu\'on n\'a pas encore.',
         2 => 'Quand il arrive, son premier apport est le planning unique. Deux personnes prenant des réservations sur deux supports produisent tôt ou tard une double réservation, qui coûte un client mécontent et une nuit perdue.',
         3 => 'Le second est l\'acompte. Sans lui, une réservation ne vaut qu\'une promesse, et une chambre libérée la veille ne se reloue presque jamais en basse saison. C\'est la mesure qui change le plus la trésorerie sur une activité courte.',
+        4 => 'Dolibarr couvre bien la facturation et le suivi client d\'un hebergeur, mais pas le planning de chambres. On le relie donc a un outil de reservation, ce qui reste plus economique qu\'un ERP complet pour une structure de six a douze chambres.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Ouidah',
       'items' => 
       array (
-        0 => 'Investir dans un ERP complet avant d\'avoir réglé la visibilité en ligne et la fiche Google. L\'ordre inverse est presque toujours plus rentable.',
-        1 => 'Dépendre uniquement des plateformes de réservation et de leurs commissions, sans canal direct.',
-        2 => 'Négliger la version anglaise quand une part de la clientèle vient de l\'étranger.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        1 => 'Investir dans un ERP complet avant d\'avoir réglé la visibilité en ligne et la fiche Google. L\'ordre inverse est presque toujours plus rentable.',
+        2 => 'Dépendre uniquement des plateformes de réservation et de leurs commissions, sans canal direct.',
+        3 => 'Négliger la version anglaise quand une part de la clientèle vient de l\'étranger.',
       ),
     ),
   ),

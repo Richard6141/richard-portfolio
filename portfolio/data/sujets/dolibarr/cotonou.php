@@ -1,7 +1,6 @@
 <?php
-// Intégration Dolibarr à Cotonou — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Dolibarr à Cotonou — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'Cela a une conséquence directe sur le paramétrage : le coût de revient ne peut pas être un simple prix d\'achat. Il doit agréger le fret, la douane, le magasinage et le transport terrestre, et rester recalculable quand un frais tombe trois semaines après la vente. Un ERP paramétré comme pour un commerce de détail donne des marges fausses à Cotonou.',
         2 => 'La seconde particularité est le crédit revendeur. À Dantokpa comme à Akpakpa, une part importante du chiffre part à crédit, avec des règlements partiels en espèces et en Mobile Money. Le paramétrage doit accepter qu\'une facture soit soldée en quatre fois par deux canaux différents — sinon l\'équipe contourne l\'outil et note dans un cahier.',
         3 => 'Enfin, le rythme. Les entreprises cotonoises traitent de gros volumes avec des marges serrées : un écran de saisie mal pensé coûte des heures cumulées chaque semaine. On réduit à l\'essentiel avant d\'ajouter quoi que ce soit.',
+        4 => 'Dolibarr n\'egale pas Odoo sur la modelisation d\'un dossier d\'importation complexe : le cout de revient multi-frais s\'y construit avec plus d\'efforts. En revanche il s\'installe sur l\'hebergement que vous avez deja, s\'affiche vite, et coute une fraction du deploiement — un arbitrage souvent gagnant quand le volume de dossiers reste mesure.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Cotonou',
       'items' => 
       array (
-        0 => 'Vouloir couvrir l\'import, le stock, la vente et la comptabilité dès le premier mois. C\'est la cause d\'échec numéro un ici : l\'équipe décroche, et six mois plus tard le cahier est toujours là.',
-        1 => 'Négliger le paramétrage du coût de revient parce qu\'il est complexe. C\'est pourtant la seule raison valable de s\'équiper quand on importe.',
-        2 => 'Confier les mêmes droits à tout le monde pour aller plus vite. Dans une entreprise où plusieurs personnes encaissent, la traçabilité par utilisateur n\'est pas un luxe.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        1 => 'Vouloir couvrir l\'import, le stock, la vente et la comptabilité dès le premier mois. C\'est la cause d\'échec numéro un ici : l\'équipe décroche, et six mois plus tard le cahier est toujours là.',
+        2 => 'Négliger le paramétrage du coût de revient parce qu\'il est complexe. C\'est pourtant la seule raison valable de s\'équiper quand on importe.',
+        3 => 'Confier les mêmes droits à tout le monde pour aller plus vite. Dans une entreprise où plusieurs personnes encaissent, la traçabilité par utilisateur n\'est pas un luxe.',
       ),
     ),
   ),

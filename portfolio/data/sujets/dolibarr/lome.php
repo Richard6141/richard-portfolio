@@ -1,7 +1,6 @@
 <?php
-// Intégration Dolibarr à Lomé — reequilibre le 21/08/2026 : generique raccourci,
-// contenu local etendu. La differenciation ne peut pas reposer sur le
-// seul nom de la ville.
+// Intégration Dolibarr à Lomé — angle ERP differencie le 21/08/2026 : la ville est la
+// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -152,6 +151,7 @@ return array (
         1 => 'Le premier apport d\'un ERP y est la reprenabilité du dossier. Quand celui qui le suit est absent, il faut aujourd\'hui le reconstituer depuis les e-mails pendant que le client attend. Un dossier unique règle cela immédiatement.',
         2 => 'Le second est l\'alerte d\'échéance. Fin de franchise de magasinage, validité de document, délai de règlement : ces dépassements coûtent sans contrepartie et se répètent. C\'est la fonction qui se rentabilise le plus vite sur ce métier.',
         3 => 'Le troisième est la marge par dossier, aujourd\'hui connue au mieux une fois tout soldé. La calculer en continu change les décisions commerciales pendant l\'opération, pas après.',
+        4 => 'Le module Projets de Dolibarr permet de suivre un dossier de transit avec ses couts et son temps passe, pour un investissement bien inferieur. La limite se situe sur les automatisations d\'echeances, qu\'il faut construire via son API plutot que parametrer.',
       ),
     ),
     6 => 
@@ -161,9 +161,10 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Lomé',
       'items' => 
       array (
-        0 => 'Vouloir dupliquer dans l\'ERP ce que fait déjà le système douanier. L\'outil sert votre suivi commercial et financier, que celui-ci ne couvre pas.',
-        1 => 'Oublier d\'intégrer le transport terrestre du corridor dans le coût de revient, ce qui fausse toutes les marges.',
-        2 => 'Négliger le suivi partageable avec le client, qui est pourtant un argument commercial direct face aux confrères.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        1 => 'Vouloir dupliquer dans l\'ERP ce que fait déjà le système douanier. L\'outil sert votre suivi commercial et financier, que celui-ci ne couvre pas.',
+        2 => 'Oublier d\'intégrer le transport terrestre du corridor dans le coût de revient, ce qui fausse toutes les marges.',
+        3 => 'Négliger le suivi partageable avec le client, qui est pourtant un argument commercial direct face aux confrères.',
       ),
     ),
   ),
