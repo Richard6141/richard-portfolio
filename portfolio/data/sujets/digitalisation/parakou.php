@@ -62,7 +62,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'À Parakou, un premier outil de collecte ou de suivi, formation comprise, se situe généralement entre 300 000 et 800 000 FCFA. Le travail sur le mode hors connexion représente une part réelle du budget — c\'est aussi ce qui fait la différence entre un outil utilisé et un outil abandonné.',
+        0 => 'À Parakou, un premier outil de collecte ou de suivi, formation comprise, se situe généralement entre 300 000 et 800 000 FCFA. Le travail sur le mode hors connexion représente une part réelle du budget, c\'est aussi ce qui fait la différence entre un outil utilisé et un outil abandonné.',
         1 => '3 à 6 semaines pour un premier outil de terrain opérationnel, en comptant une phase de test avec les équipes avant déploiement général.',
       ),
     ),
@@ -82,7 +82,7 @@ return array (
     2 => 
     array (
       'q' => 'Nous avons déjà essayé un logiciel qui n\'a pas pris.',
-      'r' => 'C\'est fréquent, et la cause est presque toujours la même : outil pensé pour le bureau, imposé au terrain. On inverse l\'ordre — on part de ceux qui saisissent.',
+      'r' => 'C\'est fréquent, et la cause est presque toujours la même : outil pensé pour le bureau, imposé au terrain. On inverse l\'ordre, on part de ceux qui saisissent.',
     ),
   ),
 );

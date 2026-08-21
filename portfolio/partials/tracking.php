@@ -5,7 +5,7 @@
 // NE PAS inclure dans le dashboard admin.
 // ============================================================
 ?>
-<!-- Microsoft Clarity — chargement differe (20/08/2026) -->
+<!-- Microsoft Clarity, chargement differe (20/08/2026) -->
 <script type="text/javascript">
     // Avant : le tag s'injectait des le <head>, soit 28 Ko et 131 ms de thread
     // principal pendant le chargement. Le shim reste immediat (les appels

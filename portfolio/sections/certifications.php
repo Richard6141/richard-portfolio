@@ -22,7 +22,7 @@ $certTotal = count($certs);
                     <div>
                         <p class="cert-name"><?= sanitize($c['name']) ?></p>
                         <p class="cert-issuer"><?= sanitize($c['issuer']) ?></p>
-                        <p class="cert-date"><?= sanitize($c['issue_date']) ?><?= $c['no_expiry'] ? ' — Permanent' : ($c['expiry_date'] ? ' — Expire: ' . sanitize($c['expiry_date']) : '') ?></p>
+                        <p class="cert-date"><?= sanitize($c['issue_date']) ?><?= $c['no_expiry'] ? ', Permanent' : ($c['expiry_date'] ? ', Expire: ' . sanitize($c['expiry_date']) : '') ?></p>
                         <?php if ($c['credential_url']): ?>
                             <a href="<?= sanitize($c['credential_url']) ?>" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--color-primary);font-weight:500;margin-top:0.375rem;display:inline-block">Verifier &rarr;</a>
                         <?php endif; ?>

@@ -10,7 +10,7 @@ return array (
   'pays' => 'Bénin',
   'titre' => 'Digitalisation d\'entreprise à Porto-Novo',
   'accroche' => 'Des procédures écrites, des dossiers traçables, et une transition qui respecte l\'existant.',
-  'intro' => 'Porto-Novo est une ville administrative avant d\'être commerçante, et cela change la façon d\'aborder la digitalisation. Les structures qu\'on y trouve — écoles, établissements para-publics, cabinets, associations — fonctionnent avec des procédures écrites, des validations en cascade et des archives qui doivent rester consultables des années. Ici, le sujet n\'est pas la vitesse : c\'est la traçabilité. Une digitalisation réussie à Porto-Novo est celle qui rend un dossier retrouvable en trente secondes et qui garde la trace de qui a validé quoi.',
+  'intro' => 'Porto-Novo est une ville administrative avant d\'être commerçante, et cela change la façon d\'aborder la digitalisation. Les structures qu\'on y trouve, écoles, établissements para-publics, cabinets, associations, fonctionnent avec des procédures écrites, des validations en cascade et des archives qui doivent rester consultables des années. Ici, le sujet n\'est pas la vitesse : c\'est la traçabilité. Une digitalisation réussie à Porto-Novo est celle qui rend un dossier retrouvable en trente secondes et qui garde la trace de qui a validé quoi.',
   'sections' => 
   array (
     0 => 
@@ -63,7 +63,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'À Porto-Novo, un premier chantier — dossiers centralisés et circuit de validation tracé, formation comprise — se situe généralement entre 400 000 et 900 000 FCFA. Les structures para-publiques ont souvent des contraintes de marché à anticiper : je fournis un devis détaillé et décomposé.',
+        0 => 'À Porto-Novo, un premier chantier, dossiers centralisés et circuit de validation tracé, formation comprise, se situe généralement entre 400 000 et 900 000 FCFA. Les structures para-publiques ont souvent des contraintes de marché à anticiper : je fournis un devis détaillé et décomposé.',
         1 => '4 à 8 semaines pour un premier circuit opérationnel, en comptant le temps de validation interne propre à ce type de structure.',
       ),
     ),

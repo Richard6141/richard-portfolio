@@ -63,7 +63,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'Une première étape — fichier centralisé et relances automatiques, formation comprise — se situe généralement entre 300 000 et 800 000 FCFA. Un espace en ligne pour les usagers vient ensuite, comme deuxième chantier.',
+        0 => 'Une première étape, fichier centralisé et relances automatiques, formation comprise, se situe généralement entre 300 000 et 800 000 FCFA. Un espace en ligne pour les usagers vient ensuite, comme deuxième chantier.',
         1 => '2 à 5 semaines pour la centralisation et les relances. Comptez 6 à 10 semaines de plus pour un espace usager complet.',
       ),
     ),
@@ -73,7 +73,7 @@ return array (
     0 => 
     array (
       'q' => 'Nous sommes à 20 minutes de Cotonou, cela change quelque chose ?',
-      'r' => 'Sur le plan pratique, oui : je suis basé à Abomey-Calavi, donc les réunions sur place ne posent aucun problème. Sur le plan technique, non — l\'essentiel du travail se fait à distance de toute façon.',
+      'r' => 'Sur le plan pratique, oui : je suis basé à Abomey-Calavi, donc les réunions sur place ne posent aucun problème. Sur le plan technique, non, l\'essentiel du travail se fait à distance de toute façon.',
     ),
     1 => 
     array (

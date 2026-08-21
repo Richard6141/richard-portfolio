@@ -15,7 +15,7 @@ if (empty($awards)) return;
             <?php foreach ($awards as $a): ?>
                 <div class="card award-card anim">
                     <p class="award-title"><?= sanitize($a['title']) ?></p>
-                    <p class="award-issuer"><?= sanitize(implode(' — ', array_filter([$a['issuer'], $a['date']]))) ?></p>
+                    <p class="award-issuer"><?= sanitize(implode(', ', array_filter([$a['issuer'], $a['date']]))) ?></p>
                     <?php if ($a['description']): ?><p style="font-size:0.875rem;opacity:0.7;margin-top:0.5rem"><?= sanitize($a['description']) ?></p><?php endif; ?>
                     <?php if ($a['url']): ?><a href="<?= sanitize($a['url']) ?>" target="_blank" rel="noopener" style="font-size:0.8125rem;margin-top:0.5rem;display:inline-block;color:var(--color-primary)">En savoir plus &rarr;</a><?php endif; ?>
                 </div>

@@ -1,5 +1,5 @@
 <?php
-// Intégration Dolibarr à Parakou — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Dolibarr à Parakou, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Parakou, les structures qui tirent un bénéfice réel d\'un ERP sont les négociants agricoles, coopératives cotonnières, transporteurs du corridor nord et commerces de gros. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Parakou, les structures qui tirent un bénéfice réel d\'un ERP sont les négociants agricoles, coopératives cotonnières, transporteurs du corridor nord et commerces de gros. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -122,7 +122,7 @@ return array (
       'titre' => 'Ce que coûte une intégration Dolibarr à Parakou.',
       'paragraphes' => 
       array (
-        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation — c\'est l\'option la plus accessible quand le budget est le premier critère.',
+        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation, c\'est l\'option la plus accessible quand le budget est le premier critère.',
         1 => 'Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
       ),
     ),
@@ -136,7 +136,7 @@ return array (
         0 => 
         array (
           'titre' => 'Un négociant qui collecte sur douze points d\'achat',
-          'texte' => 'En pleine campagne, le tonnage réellement collecté n\'est connu qu\'une fois tous les bordereaux remontés — au moment précis où il faudrait décider de vendre ou d\'attendre. La saisie mobile hors connexion remonte les pesées dès que le réseau revient.',
+          'texte' => 'En pleine campagne, le tonnage réellement collecté n\'est connu qu\'une fois tous les bordereaux remontés, au moment précis où il faudrait décider de vendre ou d\'attendre. La saisie mobile hors connexion remonte les pesées dès que le réseau revient.',
         ),
       ),
     ),
@@ -147,11 +147,11 @@ return array (
       'titre' => 'Ce que le terrain impose dans le nord',
       'paragraphes' => 
       array (
-        0 => 'À Parakou, l\'activité ne se passe pas au bureau. Elle se passe sur les points de collecte, dans les magasins et sur le corridor. Un ERP conçu pour un poste fixe et une connexion permanente n\'y sera pas utilisé — c\'est la raison pour laquelle beaucoup d\'entreprises du nord ont déjà abandonné un outil.',
+        0 => 'À Parakou, l\'activité ne se passe pas au bureau. Elle se passe sur les points de collecte, dans les magasins et sur le corridor. Un ERP conçu pour un poste fixe et une connexion permanente n\'y sera pas utilisé, c\'est la raison pour laquelle beaucoup d\'entreprises du nord ont déjà abandonné un outil.',
         1 => 'La saisie doit donc fonctionner sur téléphone, hors connexion, et se synchroniser seule au retour du réseau. Ce n\'est pas un confort : c\'est la condition pour que les données existent.',
         2 => 'Le suivi des avances producteurs vient ensuite. Qui a reçu quoi, qui a livré combien, ce qui reste dû : cette information vit aujourd\'hui dans plusieurs cahiers tenus par plusieurs personnes, et c\'est de là que naissent la quasi-totalité des litiges de fin de campagne.',
         3 => 'La saisonnalité, enfin, change le calcul de rentabilité. L\'outil se rentabilise sur une seule campagne s\'il évite les litiges d\'avances et permet de décider de vendre au bon moment. Hors saison, il ne coûte que son hébergement.',
-        4 => 'Dolibarr etant leger et servi en PHP, ses ecrans s\'affichent correctement meme sur une connexion faible — un avantage reel a Parakou. Pour la saisie franchement hors reseau, on lui adjoint la meme application terrain, mais l\'ensemble reste nettement moins couteux.',
+        4 => 'Dolibarr etant leger et servi en PHP, ses ecrans s\'affichent correctement meme sur une connexion faible, un avantage reel a Parakou. Pour la saisie franchement hors reseau, on lui adjoint la meme application terrain, mais l\'ensemble reste nettement moins couteux.',
       ),
     ),
     6 => 
@@ -161,7 +161,7 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Parakou',
       'items' => 
       array (
-        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas, et un outil inadapte coute plus cher qu\'un outil payant adapte.',
         1 => 'Déployer un ERP testé uniquement en Wi-Fi au bureau. Il faut le tester avec le vrai réseau et les vrais téléphones des agents avant de généraliser.',
         2 => 'Concevoir les écrans avec le seul gérant, sans les agents qui saisiront réellement. L\'outil est alors abandonné dès la première campagne.',
         3 => 'Multiplier les champs obligatoires pour « avoir des données propres ». Sur le terrain, chaque champ superflu est un abandon de saisie.',
@@ -178,7 +178,7 @@ return array (
     1 => 
     array (
       'q' => 'Dolibarr convient-il à une entreprise de Parakou ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

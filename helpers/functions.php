@@ -187,7 +187,7 @@ function projectStatusLabel(?string $status): string
  *
  * Ajoute le 21/08/2026. Le sameAs declarait DEUX profils LinkedIn differents
  * (/in/richard-salanon et /in/salanon-richard) : un seul etait le bon, et le
- * doublon diluait la resolution d'entite — un moteur ne sait pas lequel fait
+ * doublon diluait la resolution d'entite, un moteur ne sait pas lequel fait
  * foi. La cause etait structurelle : les profils garantis du code et ceux du
  * dashboard etaient fusionnes par un array_unique() sur la chaine brute, qui
  * ne voit pas que "…/richard-salanon" et "…/richard-salanon/" sont la meme
@@ -342,7 +342,7 @@ function validateColor(?string $value, string $default): string
 
 /**
  * Accorde un titre de service après la préposition "de" : gère l'élision et
- * la casse. Ajouté le 20/08/2026 — les pages services affichaient sept H2
+ * la casse. Ajouté le 20/08/2026, les pages services affichaient sept H2
  * fautifs du type "Un projet de audit seo complet ?" : la préposition n'était
  * pas élidée et mb_strtolower() écrasait les sigles (SEO -> seo, IA -> ia).
  *
@@ -592,7 +592,7 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
     $xml .= "  </url>\n";
 
     $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/a-propos/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
-    // /contact — ajoutee au sitemap le 20/08/2026, en meme temps que la page.
+    // /contact, ajoutee au sitemap le 20/08/2026, en meme temps que la page.
     $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/contact', ENT_XML1) . "</loc>\n    <changefreq>yearly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
     $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/blog/', ENT_XML1) . "</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
 
@@ -612,7 +612,7 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
         }
     }
 
-    // Realisations — ajoutees au sitemap le 20/08/2026 avec les pages projet.
+    // Realisations, ajoutees au sitemap le 20/08/2026 avec les pages projet.
     try {
         $stmtRea = $pdo->prepare("SELECT slug, updated_at FROM projects WHERE user_id = ? ORDER BY is_featured DESC, sort_order ASC");
         $stmtRea->execute([$userId]);
@@ -630,7 +630,7 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
         }
     }
 
-    // Pages locales — le contenu vient de portfolio/data/villes.php, pas de la
+    // Pages locales, le contenu vient de portfolio/data/villes.php, pas de la
     // base : le sitemap le lit directement pour rester la seule source de verite.
     $fichierVilles = __DIR__ . '/../portfolio/data/villes.php';
     if (is_file($fichierVilles)) {

@@ -9,8 +9,8 @@ return array (
   'ville_slug' => 'abidjan',
   'pays' => 'Côte d\'Ivoire',
   'titre' => 'Digitalisation d\'entreprise à Abidjan',
-  'accroche' => 'Un marché plus mature, des attentes plus hautes — et un projet mené à distance depuis Cotonou.',
-  'intro' => 'Abidjan est le marché le plus structuré d\'Afrique de l\'Ouest francophone, et cela se ressent : vos clients y comparent, vos concurrents y sont déjà équipés, et un outil approximatif se remarque immédiatement. La digitalisation y répond moins à un manque qu\'à un besoin de tenir le niveau. Je travaille avec des entreprises ivoiriennes entièrement à distance — même fuseau horaire que le Bénin, aucune contrainte d\'horaire, échanges quotidiens par visioconférence et messagerie.',
+  'accroche' => 'Un marché plus mature, des attentes plus hautes, et un projet mené à distance depuis Cotonou.',
+  'intro' => 'Abidjan est le marché le plus structuré d\'Afrique de l\'Ouest francophone, et cela se ressent : vos clients y comparent, vos concurrents y sont déjà équipés, et un outil approximatif se remarque immédiatement. La digitalisation y répond moins à un manque qu\'à un besoin de tenir le niveau. Je travaille avec des entreprises ivoiriennes entièrement à distance, même fuseau horaire que le Bénin, aucune contrainte d\'horaire, échanges quotidiens par visioconférence et messagerie.',
   'sections' => 
   array (
     0 => 
@@ -63,7 +63,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'Pour une entreprise abidjanaise, mes tarifs se situent structurellement en dessous du marché local à qualité comparable — c\'est le principal intérêt de travailler avec un prestataire basé au Bénin. Une première étape se situe généralement entre 500 000 et 1 500 000 FCFA selon le périmètre. Devis détaillé après cadrage.',
+        0 => 'Pour une entreprise abidjanaise, mes tarifs se situent structurellement en dessous du marché local à qualité comparable, c\'est le principal intérêt de travailler avec un prestataire basé au Bénin. Une première étape se situe généralement entre 500 000 et 1 500 000 FCFA selon le périmètre. Devis détaillé après cadrage.',
         1 => '4 à 10 semaines pour un premier périmètre livré, avec des mises en ligne intermédiaires toutes les deux semaines.',
       ),
     ),

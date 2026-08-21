@@ -1,6 +1,6 @@
 <?php
 // ============================================================
-// Template: Creative — Hero plein ecran, sections alternees
+// Template: Creative, Hero plein ecran, sections alternees
 // ============================================================
 
 // Charger les donnees
@@ -156,7 +156,7 @@ $animatedTitles = json_decode($hero['title_animated'] ?? '[]', true) ?: [];
                                 <p style="color:var(--color-primary);font-weight:600;font-size:0.9rem"><?= sanitize($exp['company_name']) ?></p>
                             </div>
                             <div style="text-align:right">
-                                <p style="font-size:0.8rem;opacity:0.6"><?= sanitize($startFmt . ' — ' . $endFmt) ?></p>
+                                <p style="font-size:0.8rem;opacity:0.6"><?= sanitize($startFmt . ', ' . $endFmt) ?></p>
                                 <p style="font-size:0.75rem;opacity:0.5"><?= sanitize($exp['location'] ?? '') ?></p>
                             </div>
                         </div>
@@ -204,7 +204,7 @@ $animatedTitles = json_decode($hero['title_animated'] ?? '[]', true) ?: [];
                                 <h3 style="font-weight:700;font-size:1.05rem"><?= sanitize($edu['degree']) ?></h3>
                                 <p style="color:var(--color-primary);font-weight:600;font-size:0.9rem"><?= sanitize($edu['institution']) ?></p>
                             </div>
-                            <p style="font-size:0.8rem;opacity:0.5"><?= (int)$edu['start_year'] ?> — <?= $edu['is_current'] ? 'En cours' : (int)($edu['end_year'] ?? '') ?></p>
+                            <p style="font-size:0.8rem;opacity:0.5"><?= (int)$edu['start_year'] ?>, <?= $edu['is_current'] ? 'En cours' : (int)($edu['end_year'] ?? '') ?></p>
                         </div>
                         <?php if ($edu['grade']): ?><span style="display:inline-block;margin-top:0.5rem;padding:0.2rem 0.6rem;border-radius:6px;font-size:0.7rem;font-weight:700;background:var(--color-accent);color:#fff"><?= sanitize($edu['grade']) ?></span><?php endif; ?>
                     </div>
@@ -323,7 +323,7 @@ $animatedTitles = json_decode($hero['title_animated'] ?? '[]', true) ?: [];
                         <div style="width:44px;height:44px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.1rem;flex-shrink:0"><?= mb_strtoupper(mb_substr($t['author_name'], 0, 1)) ?></div>
                         <div>
                             <p style="font-weight:700;font-size:0.875rem"><?= sanitize($t['author_name']) ?></p>
-                            <p style="font-size:0.75rem;opacity:0.5"><?= sanitize(implode(' — ', array_filter([$t['author_role'], $t['author_company']]))) ?></p>
+                            <p style="font-size:0.75rem;opacity:0.5"><?= sanitize(implode(', ', array_filter([$t['author_role'], $t['author_company']]))) ?></p>
                         </div>
                     </div>
                 </div>

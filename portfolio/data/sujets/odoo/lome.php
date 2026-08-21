@@ -1,5 +1,5 @@
 <?php
-// Intégration Odoo à Lomé — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Odoo à Lomé, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Lomé, les structures qui tirent un bénéfice réel d\'un ERP sont les transitaires, importateurs, commerçants de la zone franche, transporteurs du corridor et PME de services. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Lomé, les structures qui tirent un bénéfice réel d\'un ERP sont les transitaires, importateurs, commerçants de la zone franche, transporteurs du corridor et PME de services. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -62,7 +62,7 @@ return array (
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement, base du calcul de marge.',
         ),
         3 => 
         array (
@@ -77,7 +77,7 @@ return array (
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money, c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -178,7 +178,7 @@ return array (
     1 => 
     array (
       'q' => 'Odoo convient-il à une entreprise de Lomé ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

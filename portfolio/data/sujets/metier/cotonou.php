@@ -37,7 +37,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le coût de revient réel se calcule trop tard',
-          'texte' => 'Les frais arrivent en ordre dispersé sur plusieurs semaines. Beaucoup d\'entreprises ne connaissent la marge réelle d\'un conteneur qu\'une fois tout payé — parfois après avoir déjà revendu à un prix fixé au jugé.',
+          'texte' => 'Les frais arrivent en ordre dispersé sur plusieurs semaines. Beaucoup d\'entreprises ne connaissent la marge réelle d\'un conteneur qu\'une fois tout payé, parfois après avoir déjà revendu à un prix fixé au jugé.',
         ),
         1 => 
         array (

@@ -1,5 +1,5 @@
 <?php
-// Intégration Odoo à Parakou — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Odoo à Parakou, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Parakou, les structures qui tirent un bénéfice réel d\'un ERP sont les négociants agricoles, coopératives cotonnières, transporteurs du corridor nord et commerces de gros. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Parakou, les structures qui tirent un bénéfice réel d\'un ERP sont les négociants agricoles, coopératives cotonnières, transporteurs du corridor nord et commerces de gros. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -62,7 +62,7 @@ return array (
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement, base du calcul de marge.',
         ),
         3 => 
         array (
@@ -77,7 +77,7 @@ return array (
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money, c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -136,7 +136,7 @@ return array (
         0 => 
         array (
           'titre' => 'Un négociant qui collecte sur douze points d\'achat',
-          'texte' => 'En pleine campagne, le tonnage réellement collecté n\'est connu qu\'une fois tous les bordereaux remontés — au moment précis où il faudrait décider de vendre ou d\'attendre. La saisie mobile hors connexion remonte les pesées dès que le réseau revient.',
+          'texte' => 'En pleine campagne, le tonnage réellement collecté n\'est connu qu\'une fois tous les bordereaux remontés, au moment précis où il faudrait décider de vendre ou d\'attendre. La saisie mobile hors connexion remonte les pesées dès que le réseau revient.',
         ),
       ),
     ),
@@ -147,11 +147,11 @@ return array (
       'titre' => 'Ce que le terrain impose dans le nord',
       'paragraphes' => 
       array (
-        0 => 'À Parakou, l\'activité ne se passe pas au bureau. Elle se passe sur les points de collecte, dans les magasins et sur le corridor. Un ERP conçu pour un poste fixe et une connexion permanente n\'y sera pas utilisé — c\'est la raison pour laquelle beaucoup d\'entreprises du nord ont déjà abandonné un outil.',
+        0 => 'À Parakou, l\'activité ne se passe pas au bureau. Elle se passe sur les points de collecte, dans les magasins et sur le corridor. Un ERP conçu pour un poste fixe et une connexion permanente n\'y sera pas utilisé, c\'est la raison pour laquelle beaucoup d\'entreprises du nord ont déjà abandonné un outil.',
         1 => 'La saisie doit donc fonctionner sur téléphone, hors connexion, et se synchroniser seule au retour du réseau. Ce n\'est pas un confort : c\'est la condition pour que les données existent.',
         2 => 'Le suivi des avances producteurs vient ensuite. Qui a reçu quoi, qui a livré combien, ce qui reste dû : cette information vit aujourd\'hui dans plusieurs cahiers tenus par plusieurs personnes, et c\'est de là que naissent la quasi-totalité des litiges de fin de campagne.',
         3 => 'La saisonnalité, enfin, change le calcul de rentabilité. L\'outil se rentabilise sur une seule campagne s\'il évite les litiges d\'avances et permet de décider de vendre au bon moment. Hors saison, il ne coûte que son hébergement.',
-        4 => 'Odoo dispose d\'un mode hors connexion sur son point de vente, mais pas sur l\'ensemble de ses ecrans. Pour la collecte terrain, on lui adjoint donc une application de saisie legere qui alimente Odoo au retour du reseau — c\'est un poste de travail supplementaire a budgeter, et je le dis avant, pas apres.',
+        4 => 'Odoo dispose d\'un mode hors connexion sur son point de vente, mais pas sur l\'ensemble de ses ecrans. Pour la collecte terrain, on lui adjoint donc une application de saisie legere qui alimente Odoo au retour du reseau, c\'est un poste de travail supplementaire a budgeter, et je le dis avant, pas apres.',
       ),
     ),
     6 => 
@@ -178,7 +178,7 @@ return array (
     1 => 
     array (
       'q' => 'Odoo convient-il à une entreprise de Parakou ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

@@ -57,7 +57,7 @@ include __DIR__ . '/partials/pv2-header.php';
     </div>
     <?php if ($aboutPhoto): ?>
     <div class="about-photo">
-      <img src="<?= sanitize($aboutPhoto) ?>" alt="<?= sanitize($fullName) ?> — <?= sanitize($profession) ?>">
+      <img src="<?= sanitize($aboutPhoto) ?>" alt="<?= sanitize($fullName) ?>, <?= sanitize($profession) ?>">
       <?php if ($aboutMaps): ?><a class="about-gbadge" href="<?= sanitize($aboutMaps) ?>" target="_blank" rel="noopener"><span class="st">★★★★★</span> Avis Google</a><?php endif; ?>
     </div>
     <?php endif; ?>

@@ -37,7 +37,7 @@ return array (
         0 => 
         array (
           'titre' => 'La position réelle se connaît en fin de campagne',
-          'texte' => 'Les bordereaux remontent par vagues. Tant qu\'ils ne sont pas tous saisis, le tonnage collecté et le prix de revient moyen restent des estimations — au moment précis où il faudrait décider de vendre ou d\'attendre.',
+          'texte' => 'Les bordereaux remontent par vagues. Tant qu\'ils ne sont pas tous saisis, le tonnage collecté et le prix de revient moyen restent des estimations, au moment précis où il faudrait décider de vendre ou d\'attendre.',
         ),
         1 => 
         array (

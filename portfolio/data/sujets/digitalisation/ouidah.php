@@ -10,7 +10,7 @@ return array (
   'pays' => 'Bénin',
   'titre' => 'Digitalisation d\'entreprise à Ouidah',
   'accroche' => 'Une activité saisonnière et une clientèle qui vient de loin : être trouvable avant d\'être équipé.',
-  'intro' => 'Ouidah vit d\'un tourisme culturel et mémoriel dont la clientèle vient d\'ailleurs — de Cotonou, de la diaspora, de l\'étranger. C\'est ce qui distingue la digitalisation ici de celle de n\'importe quelle autre ville du Bénin : votre client décide avant d\'arriver, souvent depuis un autre pays, sur la base de ce qu\'il trouve en ligne. La visibilité et la réservation à distance passent donc avant l\'outillage interne. Un établissement invisible sur internet perd la réservation au profit du voisin, quelle que soit la qualité de son accueil.',
+  'intro' => 'Ouidah vit d\'un tourisme culturel et mémoriel dont la clientèle vient d\'ailleurs, de Cotonou, de la diaspora, de l\'étranger. C\'est ce qui distingue la digitalisation ici de celle de n\'importe quelle autre ville du Bénin : votre client décide avant d\'arriver, souvent depuis un autre pays, sur la base de ce qu\'il trouve en ligne. La visibilité et la réservation à distance passent donc avant l\'outillage interne. Un établissement invisible sur internet perd la réservation au profit du voisin, quelle que soit la qualité de son accueil.',
   'sections' => 
   array (
     0 => 
@@ -63,7 +63,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'À Ouidah, la mise en visibilité — fiche Google, site avec demande de réservation, photos — se situe généralement entre 250 000 et 600 000 FCFA. Un système de réservation avec paiement d\'acompte en ligne vient ensuite, comme deuxième étape.',
+        0 => 'À Ouidah, la mise en visibilité, fiche Google, site avec demande de réservation, photos, se situe généralement entre 250 000 et 600 000 FCFA. Un système de réservation avec paiement d\'acompte en ligne vient ensuite, comme deuxième étape.',
         1 => '2 à 4 semaines pour la visibilité et la demande de réservation. 4 à 8 semaines de plus pour la réservation avec paiement intégré.',
       ),
     ),

@@ -10,7 +10,7 @@ return array (
   'pays' => 'Bénin',
   'titre' => 'Digitalisation d\'entreprise à Bohicon',
   'accroche' => 'Un carrefour commercial où tout va vite : des outils qui suivent le rythme du terrain.',
-  'intro' => 'Bohicon est un nœud routier avant d\'être une ville de bureaux. Les entreprises qui y prospèrent vivent du flux : marchandise qui entre le matin, repart l\'après-midi, clients qui viennent de tout le centre du pays. Dans ce rythme, un outil qui demande dix clics pour enregistrer une vente ne sera jamais utilisé. La digitalisation qui réussit à Bohicon est celle qui s\'insère dans la vitesse existante — trois champs, deux secondes, et on passe au client suivant.',
+  'intro' => 'Bohicon est un nœud routier avant d\'être une ville de bureaux. Les entreprises qui y prospèrent vivent du flux : marchandise qui entre le matin, repart l\'après-midi, clients qui viennent de tout le centre du pays. Dans ce rythme, un outil qui demande dix clics pour enregistrer une vente ne sera jamais utilisé. La digitalisation qui réussit à Bohicon est celle qui s\'insère dans la vitesse existante, trois champs, deux secondes, et on passe au client suivant.',
   'sections' => 
   array (
     0 => 
@@ -63,7 +63,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'À Bohicon, un premier outil — caisse simplifiée, crédit client et stock sur les références principales, formation comprise — se situe généralement entre 250 000 et 700 000 FCFA. C\'est l\'un des contextes où le retour se mesure le plus vite, parce que le volume de transactions est élevé.',
+        0 => 'À Bohicon, un premier outil, caisse simplifiée, crédit client et stock sur les références principales, formation comprise, se situe généralement entre 250 000 et 700 000 FCFA. C\'est l\'un des contextes où le retour se mesure le plus vite, parce que le volume de transactions est élevé.',
         1 => '2 à 4 semaines. Le travail de conception est court ; l\'essentiel du temps passe dans l\'ajustement avec l\'équipe en conditions réelles.',
       ),
     ),
@@ -73,7 +73,7 @@ return array (
     0 => 
     array (
       'q' => 'Nos vendeurs n\'auront pas le temps de saisir.',
-      'r' => 'C\'est exactement pour ça qu\'on chronomètre le geste actuel avant de concevoir. Si la saisie rallonge la vente, l\'outil est mal conçu — pas l\'équipe mal formée.',
+      'r' => 'C\'est exactement pour ça qu\'on chronomètre le geste actuel avant de concevoir. Si la saisie rallonge la vente, l\'outil est mal conçu, pas l\'équipe mal formée.',
     ),
     1 => 
     array (

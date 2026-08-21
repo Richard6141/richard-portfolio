@@ -1,5 +1,5 @@
 <?php
-// Intégration Dolibarr à Cotonou — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Dolibarr à Cotonou, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Cotonou, les structures qui tirent un bénéfice réel d\'un ERP sont les importateurs, grossistes, transitaires, commerces de détail multi-points et prestataires de services. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Cotonou, les structures qui tirent un bénéfice réel d\'un ERP sont les importateurs, grossistes, transitaires, commerces de détail multi-points et prestataires de services. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -122,7 +122,7 @@ return array (
       'titre' => 'Ce que coûte une intégration Dolibarr à Cotonou.',
       'paragraphes' => 
       array (
-        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation — c\'est l\'option la plus accessible quand le budget est le premier critère.',
+        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation, c\'est l\'option la plus accessible quand le budget est le premier critère.',
         1 => 'Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
       ),
     ),
@@ -136,7 +136,7 @@ return array (
         0 => 
         array (
           'titre' => 'Un importateur de Dantokpa qui reçoit trois conteneurs par mois',
-          'texte' => 'Le coût de revient réel d\'un conteneur n\'est connu qu\'une fois tous les frais soldés — souvent après la revente. L\'ERP rassemble fret, douane, magasinage et transport sur un même dossier, et la marge se lit pendant l\'opération au lieu d\'être découverte après.',
+          'texte' => 'Le coût de revient réel d\'un conteneur n\'est connu qu\'une fois tous les frais soldés, souvent après la revente. L\'ERP rassemble fret, douane, magasinage et transport sur un même dossier, et la marge se lit pendant l\'opération au lieu d\'être découverte après.',
         ),
       ),
     ),
@@ -149,9 +149,9 @@ return array (
       array (
         0 => 'Cotonou n\'est pas une ville de commerce comme une autre : c\'est le point d\'entrée de la marchandise pour le Bénin, mais aussi pour une partie du Niger et du Burkina Faso. Une entreprise qui s\'y équipe ne gère pas seulement des ventes, elle gère des dossiers d\'importation dont le cycle s\'étale sur des semaines et dont les frais arrivent en ordre dispersé.',
         1 => 'Cela a une conséquence directe sur le paramétrage : le coût de revient ne peut pas être un simple prix d\'achat. Il doit agréger le fret, la douane, le magasinage et le transport terrestre, et rester recalculable quand un frais tombe trois semaines après la vente. Un ERP paramétré comme pour un commerce de détail donne des marges fausses à Cotonou.',
-        2 => 'La seconde particularité est le crédit revendeur. À Dantokpa comme à Akpakpa, une part importante du chiffre part à crédit, avec des règlements partiels en espèces et en Mobile Money. Le paramétrage doit accepter qu\'une facture soit soldée en quatre fois par deux canaux différents — sinon l\'équipe contourne l\'outil et note dans un cahier.',
+        2 => 'La seconde particularité est le crédit revendeur. À Dantokpa comme à Akpakpa, une part importante du chiffre part à crédit, avec des règlements partiels en espèces et en Mobile Money. Le paramétrage doit accepter qu\'une facture soit soldée en quatre fois par deux canaux différents, sinon l\'équipe contourne l\'outil et note dans un cahier.',
         3 => 'Enfin, le rythme. Les entreprises cotonoises traitent de gros volumes avec des marges serrées : un écran de saisie mal pensé coûte des heures cumulées chaque semaine. On réduit à l\'essentiel avant d\'ajouter quoi que ce soit.',
-        4 => 'Dolibarr n\'egale pas Odoo sur la modelisation d\'un dossier d\'importation complexe : le cout de revient multi-frais s\'y construit avec plus d\'efforts. En revanche il s\'installe sur l\'hebergement que vous avez deja, s\'affiche vite, et coute une fraction du deploiement — un arbitrage souvent gagnant quand le volume de dossiers reste mesure.',
+        4 => 'Dolibarr n\'egale pas Odoo sur la modelisation d\'un dossier d\'importation complexe : le cout de revient multi-frais s\'y construit avec plus d\'efforts. En revanche il s\'installe sur l\'hebergement que vous avez deja, s\'affiche vite, et coute une fraction du deploiement, un arbitrage souvent gagnant quand le volume de dossiers reste mesure.',
       ),
     ),
     6 => 
@@ -161,7 +161,7 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Cotonou',
       'items' => 
       array (
-        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas, et un outil inadapte coute plus cher qu\'un outil payant adapte.',
         1 => 'Vouloir couvrir l\'import, le stock, la vente et la comptabilité dès le premier mois. C\'est la cause d\'échec numéro un ici : l\'équipe décroche, et six mois plus tard le cahier est toujours là.',
         2 => 'Négliger le paramétrage du coût de revient parce qu\'il est complexe. C\'est pourtant la seule raison valable de s\'équiper quand on importe.',
         3 => 'Confier les mêmes droits à tout le monde pour aller plus vite. Dans une entreprise où plusieurs personnes encaissent, la traçabilité par utilisateur n\'est pas un luxe.',
@@ -173,12 +173,12 @@ return array (
     0 => 
     array (
       'q' => 'Nos revendeurs achètent à crédit et règlent en plusieurs fois, parfois en espèces, parfois par Mobile Money. Est-ce gérable ?',
-      'r' => 'Oui, et c\'est même le point de départ à Cotonou. Chaque revendeur a son compte, les règlements partiels s\'imputent au fur et à mesure, et l\'encours total devient lisible à tout moment — ce qu\'aucun cahier ne permet.',
+      'r' => 'Oui, et c\'est même le point de départ à Cotonou. Chaque revendeur a son compte, les règlements partiels s\'imputent au fur et à mesure, et l\'encours total devient lisible à tout moment, ce qu\'aucun cahier ne permet.',
     ),
     1 => 
     array (
       'q' => 'Dolibarr convient-il à une entreprise de Cotonou ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

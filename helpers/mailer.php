@@ -18,7 +18,7 @@ foreach ($vendorPaths as $vp) {
     if (file_exists($vp)) { require_once $vp; $vendorLoaded = true; break; }
 }
 if (!$vendorLoaded) {
-    // PHPMailer non installe — les fonctions mail retournent silencieusement
+    // PHPMailer non installe, les fonctions mail retournent silencieusement
     function sendEmail(string $to, string $subject, string $htmlBody): void {}
     function sendWelcome(string $email, string $name, string $slug): void {}
     function sendPasswordReset(string $email, string $name, string $token): void {}
@@ -119,7 +119,7 @@ function sendPasswordReset(string $email, string $name, string $token): void
     <p>A bientot,<br>L'equipe {$appName}</p>
     HTML;
 
-    sendEmail($email, "Reinitialisation de mot de passe — {$appName}", $body);
+    sendEmail($email, "Reinitialisation de mot de passe, {$appName}", $body);
 }
 
 /**
@@ -205,7 +205,7 @@ function wrapInTemplate(string $title, string $content): string
                         <!-- Footer -->
                         <tr>
                             <td style="padding:16px 24px; text-align:center; color:#9ca3af; font-size:12px; border-top:1px solid #e5e7eb;">
-                                &copy; {$year} {$appName} — Tous droits reserves
+                                &copy; {$year} {$appName}, Tous droits reserves
                             </td>
                         </tr>
                     </table>

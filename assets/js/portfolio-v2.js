@@ -1,5 +1,5 @@
 /* ============================================================
-   portfolio-v2.js — Animations refonte (template "horizon")
+   portfolio-v2.js, Animations refonte (template "horizon")
    Révélations au scroll, compteurs, FAQ, rotator, header.
    ============================================================ */
 (function () {

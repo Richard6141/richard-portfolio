@@ -1,5 +1,5 @@
 <?php
-// Intégration Odoo à Dakar — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Odoo à Dakar, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Dakar, les structures qui tirent un bénéfice réel d\'un ERP sont les e-commerçants, distributeurs, startups, cabinets de services et importateurs. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Dakar, les structures qui tirent un bénéfice réel d\'un ERP sont les e-commerçants, distributeurs, startups, cabinets de services et importateurs. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -62,7 +62,7 @@ return array (
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement, base du calcul de marge.',
         ),
         3 => 
         array (
@@ -77,7 +77,7 @@ return array (
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money, c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -149,9 +149,9 @@ return array (
       array (
         0 => 'Dakar est l\'un des pôles technologiques les plus actifs d\'Afrique francophone : startups nombreuses, adoption massive du paiement mobile, clientèle habituée aux services en ligne. Une entreprise qui s\'équipe ici s\'aligne sur un standard local déjà élevé.',
         1 => 'La conséquence pratique est que l\'ERP ne peut pas rester un outil interne isolé. Il doit dialoguer avec la boutique en ligne, les paiements et la livraison, sous peine de créer une double saisie que personne ne tiendra.',
-        2 => 'La difficulté dominante est la justesse du stock entre les canaux. Vendre en ligne un article déjà écoulé est la première cause d\'annulation et d\'avis négatif — sur un marché où les avis comptent beaucoup.',
+        2 => 'La difficulté dominante est la justesse du stock entre les canaux. Vendre en ligne un article déjà écoulé est la première cause d\'annulation et d\'avis négatif, sur un marché où les avis comptent beaucoup.',
         3 => 'Vient ensuite la relance de panier abandonné, qui n\'est pas une fonction d\'ERP mais une automatisation branchée dessus. C\'est le meilleur retour sur investissement en e-commerce, et cela se met en place en quelques jours.',
-        4 => 'Odoo dispose d\'un module e-commerce integre, ce qui evite la double saisie entre boutique et stock. Si vous avez deja une boutique performante, on relie plutot que de migrer — la migration coute presque toujours plus cher que la passerelle.',
+        4 => 'Odoo dispose d\'un module e-commerce integre, ce qui evite la double saisie entre boutique et stock. Si vous avez deja une boutique performante, on relie plutot que de migrer, la migration coute presque toujours plus cher que la passerelle.',
       ),
     ),
     6 => 
@@ -178,7 +178,7 @@ return array (
     1 => 
     array (
       'q' => 'Odoo convient-il à une entreprise de Dakar ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

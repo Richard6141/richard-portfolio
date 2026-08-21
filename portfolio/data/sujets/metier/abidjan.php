@@ -10,7 +10,7 @@ return array (
   'pays' => 'Côte d\'Ivoire',
   'titre' => 'Digitaliser un commerce ou une distribution à Abidjan',
   'accroche' => 'Vendre en ligne, suivre les livraisons et relier les points de vente.',
-  'intro' => 'Le commerce abidjanais est le plus avancé de la sous-région sur la vente en ligne : la clientèle achète depuis son téléphone, paie en Mobile Money ou par carte, et attend une livraison en 24 à 48 heures dans le district. Pour un distributeur ou une enseigne multi-points, la difficulté n\'est plus de vendre en ligne mais de tenir la promesse — un stock juste, une livraison suivie, et des points de vente qui partagent la même information.',
+  'intro' => 'Le commerce abidjanais est le plus avancé de la sous-région sur la vente en ligne : la clientèle achète depuis son téléphone, paie en Mobile Money ou par carte, et attend une livraison en 24 à 48 heures dans le district. Pour un distributeur ou une enseigne multi-points, la difficulté n\'est plus de vendre en ligne mais de tenir la promesse, un stock juste, une livraison suivie, et des points de vente qui partagent la même information.',
   'sections' => 
   array (
     0 => 

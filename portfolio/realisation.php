@@ -7,7 +7,7 @@
 // donc rien a indexer et rien a citer pour un moteur generatif.
 //
 // Les sections "etude de cas" (contexte, probleme, solution, resultat) ne
-// s'affichent que si les colonnes correspondantes sont remplies — voir
+// s'affichent que si les colonnes correspondantes sont remplies, voir
 // migrations/2026-08-20-etudes-de-cas.sql. La page reste complete sans
 // elles : elle affiche alors la fiche projet seule.
 // ============================================================
@@ -62,11 +62,11 @@ $stmtAutres->execute([$userId, $slug]);
 $autres = $stmtAutres->fetchAll();
 
 // La categorie n'est ajoutee que si le titre ne porte pas deja son propre
-// tiret cadratin : "Toure Distribution — Logiciel de gestion" + " — Application"
+// tiret cadratin : "Toure Distribution, Logiciel de gestion" + ", Application"
 // donnait un titre a deux tirets, trop long pour garder la marque en suffixe.
 $titreCourt = trim((string) $p['title']);
 $pageTitle  = seoTitle(
-    (str_contains($titreCourt, '—') || !$p['category']) ? $titreCourt : $titreCourt . ' — ' . $p['category'],
+    (str_contains($titreCourt, '-') || !$p['category']) ? $titreCourt : $titreCourt . ', ' . $p['category'],
     $fullName
 );
 $pageDesc      = seoDescription($descShort ?: strip_tags($descLong) ?: ('Étude de cas : ' . $p['title'] . ' par ' . $fullName . '.'));
@@ -172,7 +172,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <?php if ($img): ?>
   <section class="sect soft"><div class="wrap">
     <figure class="rea-cover rv">
-      <img src="<?= sanitize($img) ?>" alt="<?= sanitize($p['title']) ?> — <?= sanitize($p['category'] ?: 'projet réalisé par ' . $fullName) ?>" loading="lazy" decoding="async">
+      <img src="<?= sanitize($img) ?>" alt="<?= sanitize($p['title']) ?>, <?= sanitize($p['category'] ?: 'projet réalisé par ' . $fullName) ?>" loading="lazy" decoding="async">
     </figure>
   </div></section>
   <?php endif; ?>

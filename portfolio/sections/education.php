@@ -27,7 +27,7 @@ $eduTotal = count($educations);
                             </div>
                         </div>
                         <div class="timeline-meta">
-                            <span><?= (int)$edu['start_year'] ?> — <?= $edu['is_current'] ? 'En cours' : ((int)($edu['end_year'] ?? '')) ?></span>
+                            <span><?= (int)$edu['start_year'] ?>, <?= $edu['is_current'] ? 'En cours' : ((int)($edu['end_year'] ?? '')) ?></span>
                             <?php if ($edu['field_of_study']): ?><span><?= sanitize($edu['field_of_study']) ?></span><?php endif; ?>
                             <?php if ($edu['location']): ?><span><?= sanitize($edu['location']) ?></span><?php endif; ?>
                             <?php if ($edu['grade']): ?>

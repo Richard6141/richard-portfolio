@@ -1,5 +1,5 @@
 // ============================================================
-// PortfolioSaaS — Portfolio public JavaScript
+// PortfolioSaaS, Portfolio public JavaScript
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {

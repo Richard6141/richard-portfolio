@@ -1,5 +1,5 @@
 <?php
-// Intégration Dolibarr à Bohicon — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Dolibarr à Bohicon, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Bohicon, les structures qui tirent un bénéfice réel d\'un ERP sont les grossistes et demi-grossistes, agro-transformateurs, transporteurs et commerces du carrefour. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Bohicon, les structures qui tirent un bénéfice réel d\'un ERP sont les grossistes et demi-grossistes, agro-transformateurs, transporteurs et commerces du carrefour. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -122,7 +122,7 @@ return array (
       'titre' => 'Ce que coûte une intégration Dolibarr à Bohicon.',
       'paragraphes' => 
       array (
-        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation — c\'est l\'option la plus accessible quand le budget est le premier critère.',
+        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation, c\'est l\'option la plus accessible quand le budget est le premier critère.',
         1 => 'Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
       ),
     ),
@@ -161,7 +161,7 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Bohicon',
       'items' => 
       array (
-        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas, et un outil inadapte coute plus cher qu\'un outil payant adapte.',
         1 => 'Imposer un prix figé par article. À Bohicon le prix se négocie : il faut un prix de référence modifiable, avec la marge réelle calculée sur le prix pratiqué.',
         2 => 'Vouloir référencer tout le catalogue dès le départ. On commence par les vingt références qui font l\'essentiel du chiffre.',
         3 => 'Choisir un outil qui exige un ordinateur allumé en permanence dans un contexte de coupures fréquentes.',
@@ -173,12 +173,12 @@ return array (
     0 => 
     array (
       'q' => 'Nos vendeurs n\'auront pas le temps de saisir pendant la vente. Comment on fait ?',
-      'r' => 'On chronomètre le geste actuel avant de paramétrer. Si la saisie rallonge la vente, l\'outil est mal conçu — pas l\'équipe mal formée. À Bohicon, c\'est le critère numéro un, avant toute fonctionnalité.',
+      'r' => 'On chronomètre le geste actuel avant de paramétrer. Si la saisie rallonge la vente, l\'outil est mal conçu, pas l\'équipe mal formée. À Bohicon, c\'est le critère numéro un, avant toute fonctionnalité.',
     ),
     1 => 
     array (
       'q' => 'Dolibarr convient-il à une entreprise de Bohicon ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

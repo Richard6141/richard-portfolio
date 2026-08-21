@@ -26,7 +26,7 @@ if (empty($testimonials)) return;
                         <div class="testimonial-avatar" style="display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--color-primary);background:var(--color-primary);opacity:0.1;font-size:1.125rem"><?= mb_strtoupper(mb_substr($t['author_name'], 0, 1)) ?></div>
                         <div>
                             <p class="testimonial-name"><?= sanitize($t['author_name']) ?></p>
-                            <p class="testimonial-role"><?= sanitize(implode(' — ', array_filter([$t['author_role'], $t['author_company']]))) ?></p>
+                            <p class="testimonial-role"><?= sanitize(implode(', ', array_filter([$t['author_role'], $t['author_company']]))) ?></p>
                         </div>
                     </div>
                 </div>

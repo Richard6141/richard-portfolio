@@ -18,7 +18,7 @@ $citiesIntl = ['Abidjan', 'Lomé', 'Dakar', 'Douala', 'Paris', 'Lyon', 'Marseill
 // Villes disposant d'une page dediee (20/08/2026). Les 21 villes ci-dessus
 // etaient affichees en <span> inertes : le site revendiquait une couverture
 // que rien ne portait. Celles qui ont une page deviennent des liens, les
-// autres restent en texte — mieux vaut un texte qu'un lien vers une 404.
+// autres restent en texte, mieux vaut un texte qu'un lien vers une 404.
 $villesAvecPage = [];
 $fichierVilles  = __DIR__ . '/../data/villes.php';
 if (is_file($fichierVilles)) {

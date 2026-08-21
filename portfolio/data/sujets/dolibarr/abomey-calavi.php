@@ -1,5 +1,5 @@
 <?php
-// Intégration Dolibarr à Abomey-Calavi — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Dolibarr à Abomey-Calavi, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Abomey-Calavi, les structures qui tirent un bénéfice réel d\'un ERP sont les écoles privées, cliniques et pharmacies de quartier, cabinets, promoteurs immobiliers et commerces de proximité. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Abomey-Calavi, les structures qui tirent un bénéfice réel d\'un ERP sont les écoles privées, cliniques et pharmacies de quartier, cabinets, promoteurs immobiliers et commerces de proximité. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -122,7 +122,7 @@ return array (
       'titre' => 'Ce que coûte une intégration Dolibarr à Abomey-Calavi.',
       'paragraphes' => 
       array (
-        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation — c\'est l\'option la plus accessible quand le budget est le premier critère.',
+        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation, c\'est l\'option la plus accessible quand le budget est le premier critère.',
         1 => 'Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
       ),
     ),
@@ -148,7 +148,7 @@ return array (
       'paragraphes' => 
       array (
         0 => 'Abomey-Calavi absorbe une population qui augmente plus vite que les structures qui la servent. Les écoles, cliniques et pharmacies qui s\'y équipent ont presque toutes le même profil : elles ont démarré petit, avec des méthodes qui fonctionnaient à cinquante dossiers et qui craquent à cinq cents.',
-        1 => 'Le besoin n\'est donc pas d\'ajouter des fonctions mais de reprendre le contrôle d\'un volume qui a débordé. La priorité est presque toujours la même : un fichier unique — élèves, patients, clients — qui remplace les trois versions divergentes qui circulent aujourd\'hui.',
+        1 => 'Le besoin n\'est donc pas d\'ajouter des fonctions mais de reprendre le contrôle d\'un volume qui a débordé. La priorité est presque toujours la même : un fichier unique, élèves, patients, clients, qui remplace les trois versions divergentes qui circulent aujourd\'hui.',
         2 => 'Vient ensuite l\'échéancier. Scolarités payées en tranches, actes réglés partiellement, prises en charge : savoir qui doit quoi à une date donnée est la question à laquelle personne ne sait répondre sans plusieurs heures de reconstitution. C\'est ce que l\'ERP règle en premier.',
         3 => 'La confidentialité structure enfin tout le projet. Dossiers d\'élèves, dossiers patients : les droits par rôle et le journal des consultations se définissent avant le premier paramétrage, jamais après.',
         4 => 'Pour une ecole ou une clinique de taille moyenne, Dolibarr couvre l\'essentiel : fichier unique, echeanciers, relances, facturation. Il demande moins de formation qu\'Odoo et se prend en main en quelques jours, ce qui compte quand l\'equipe n\'est pas a l\'aise avec l\'informatique.',
@@ -161,7 +161,7 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Abomey-Calavi',
       'items' => 
       array (
-        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas — et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas, et un outil inadapte coute plus cher qu\'un outil payant adapte.',
         1 => 'Vouloir numériser rétroactivement des années de registres. C\'est long, cher, et cela n\'aide personne : on démarre à une date de bascule et le papier reste consultable en archive.',
         2 => 'Ouvrir un espace en ligne pour les parents ou les patients avant d\'avoir stabilisé l\'interne. L\'ordre inverse produit des données publiques fausses.',
         3 => 'Partager un compte unique entre plusieurs personnes du secrétariat, ce qui annule toute traçabilité sur des données sensibles.',
@@ -173,12 +173,12 @@ return array (
     0 => 
     array (
       'q' => 'Nos données sont sensibles : dossiers d\'élèves, parfois de patients. Comment sont-elles protégées ?',
-      'r' => 'Par des droits stricts par rôle, un journal des consultations et des sauvegardes chiffrées. On définit ensemble qui voit quoi avant d\'écrire la première ligne de paramétrage — c\'est une contrainte de conception, pas une option ajoutée après.',
+      'r' => 'Par des droits stricts par rôle, un journal des consultations et des sauvegardes chiffrées. On définit ensemble qui voit quoi avant d\'écrire la première ligne de paramétrage, c\'est une contrainte de conception, pas une option ajoutée après.',
     ),
     1 => 
     array (
       'q' => 'Dolibarr convient-il à une entreprise de Abomey-Calavi ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

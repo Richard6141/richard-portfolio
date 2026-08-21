@@ -1,6 +1,6 @@
 <?php
 // ============================================================
-// blog-index.php — Liste des articles (URL /blog/)
+// blog-index.php, Liste des articles (URL /blog/)
 // ============================================================
 require __DIR__ . '/partials/pv2-bootstrap.php';
 

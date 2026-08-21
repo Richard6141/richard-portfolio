@@ -1,5 +1,5 @@
 <?php
-// Intégration Odoo à Cotonou — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Odoo à Cotonou, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Cotonou, les structures qui tirent un bénéfice réel d\'un ERP sont les importateurs, grossistes, transitaires, commerces de détail multi-points et prestataires de services. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Cotonou, les structures qui tirent un bénéfice réel d\'un ERP sont les importateurs, grossistes, transitaires, commerces de détail multi-points et prestataires de services. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -62,7 +62,7 @@ return array (
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement, base du calcul de marge.',
         ),
         3 => 
         array (
@@ -77,7 +77,7 @@ return array (
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money, c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -136,7 +136,7 @@ return array (
         0 => 
         array (
           'titre' => 'Un importateur de Dantokpa qui reçoit trois conteneurs par mois',
-          'texte' => 'Le coût de revient réel d\'un conteneur n\'est connu qu\'une fois tous les frais soldés — souvent après la revente. L\'ERP rassemble fret, douane, magasinage et transport sur un même dossier, et la marge se lit pendant l\'opération au lieu d\'être découverte après.',
+          'texte' => 'Le coût de revient réel d\'un conteneur n\'est connu qu\'une fois tous les frais soldés, souvent après la revente. L\'ERP rassemble fret, douane, magasinage et transport sur un même dossier, et la marge se lit pendant l\'opération au lieu d\'être découverte après.',
         ),
       ),
     ),
@@ -149,9 +149,9 @@ return array (
       array (
         0 => 'Cotonou n\'est pas une ville de commerce comme une autre : c\'est le point d\'entrée de la marchandise pour le Bénin, mais aussi pour une partie du Niger et du Burkina Faso. Une entreprise qui s\'y équipe ne gère pas seulement des ventes, elle gère des dossiers d\'importation dont le cycle s\'étale sur des semaines et dont les frais arrivent en ordre dispersé.',
         1 => 'Cela a une conséquence directe sur le paramétrage : le coût de revient ne peut pas être un simple prix d\'achat. Il doit agréger le fret, la douane, le magasinage et le transport terrestre, et rester recalculable quand un frais tombe trois semaines après la vente. Un ERP paramétré comme pour un commerce de détail donne des marges fausses à Cotonou.',
-        2 => 'La seconde particularité est le crédit revendeur. À Dantokpa comme à Akpakpa, une part importante du chiffre part à crédit, avec des règlements partiels en espèces et en Mobile Money. Le paramétrage doit accepter qu\'une facture soit soldée en quatre fois par deux canaux différents — sinon l\'équipe contourne l\'outil et note dans un cahier.',
+        2 => 'La seconde particularité est le crédit revendeur. À Dantokpa comme à Akpakpa, une part importante du chiffre part à crédit, avec des règlements partiels en espèces et en Mobile Money. Le paramétrage doit accepter qu\'une facture soit soldée en quatre fois par deux canaux différents, sinon l\'équipe contourne l\'outil et note dans un cahier.',
         3 => 'Enfin, le rythme. Les entreprises cotonoises traitent de gros volumes avec des marges serrées : un écran de saisie mal pensé coûte des heures cumulées chaque semaine. On réduit à l\'essentiel avant d\'ajouter quoi que ce soit.',
-        4 => 'Sur ce terrain, Odoo prend l\'avantage grace a son module d\'achats : les receptions partielles et les couts d\'approvisionnement s\'y modelisent nativement, ce qui est exactement ce qu\'exige un dossier d\'importation. En contrepartie, son interface reste lourde pour une saisie rapide au comptoir — on l\'allege ou on la reserve au bureau.',
+        4 => 'Sur ce terrain, Odoo prend l\'avantage grace a son module d\'achats : les receptions partielles et les couts d\'approvisionnement s\'y modelisent nativement, ce qui est exactement ce qu\'exige un dossier d\'importation. En contrepartie, son interface reste lourde pour une saisie rapide au comptoir, on l\'allege ou on la reserve au bureau.',
       ),
     ),
     6 => 
@@ -173,12 +173,12 @@ return array (
     0 => 
     array (
       'q' => 'Nos revendeurs achètent à crédit et règlent en plusieurs fois, parfois en espèces, parfois par Mobile Money. Est-ce gérable ?',
-      'r' => 'Oui, et c\'est même le point de départ à Cotonou. Chaque revendeur a son compte, les règlements partiels s\'imputent au fur et à mesure, et l\'encours total devient lisible à tout moment — ce qu\'aucun cahier ne permet.',
+      'r' => 'Oui, et c\'est même le point de départ à Cotonou. Chaque revendeur a son compte, les règlements partiels s\'imputent au fur et à mesure, et l\'encours total devient lisible à tout moment, ce qu\'aucun cahier ne permet.',
     ),
     1 => 
     array (
       'q' => 'Odoo convient-il à une entreprise de Cotonou ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

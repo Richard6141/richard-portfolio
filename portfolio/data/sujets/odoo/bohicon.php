@@ -1,5 +1,5 @@
 <?php
-// Intégration Odoo à Bohicon — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Odoo à Bohicon, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Bohicon, les structures qui tirent un bénéfice réel d\'un ERP sont les grossistes et demi-grossistes, agro-transformateurs, transporteurs et commerces du carrefour. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Bohicon, les structures qui tirent un bénéfice réel d\'un ERP sont les grossistes et demi-grossistes, agro-transformateurs, transporteurs et commerces du carrefour. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -62,7 +62,7 @@ return array (
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement, base du calcul de marge.',
         ),
         3 => 
         array (
@@ -77,7 +77,7 @@ return array (
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money, c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -151,7 +151,7 @@ return array (
         1 => 'Concrètement : si enregistrer une vente prend dix secondes de plus qu\'aujourd\'hui, l\'outil sera contourné en trois semaines. On mesure donc le geste actuel avant de paramétrer quoi que ce soit, et on conçoit à partir de ce chiffre.',
         2 => 'Le second chantier est le carnet de crédit. L\'encours dû par les revendeurs représente souvent plusieurs mois de trésorerie et n\'est calculé nulle part. Le rendre visible change immédiatement les décisions, avant même toute automatisation.',
         3 => 'Vient enfin la marge par référence. Quand les prix d\'achat varient d\'un arrivage à l\'autre et que les remises se négocient au cas par cas, la rentabilité réelle se perd. C\'est souvent la découverte du projet : les produits qu\'on croyait rentables ne le sont pas.',
-        4 => 'Le point de vente d\'Odoo est concu pour la vitesse et fonctionne pendant une coupure : c\'est son meilleur argument a Bohicon. Le reste de l\'interface, lui, est trop lourd pour le comptoir — on garde donc Odoo en arriere-plan et la caisse en frontal.',
+        4 => 'Le point de vente d\'Odoo est concu pour la vitesse et fonctionne pendant une coupure : c\'est son meilleur argument a Bohicon. Le reste de l\'interface, lui, est trop lourd pour le comptoir, on garde donc Odoo en arriere-plan et la caisse en frontal.',
       ),
     ),
     6 => 
@@ -173,12 +173,12 @@ return array (
     0 => 
     array (
       'q' => 'Nos vendeurs n\'auront pas le temps de saisir pendant la vente. Comment on fait ?',
-      'r' => 'On chronomètre le geste actuel avant de paramétrer. Si la saisie rallonge la vente, l\'outil est mal conçu — pas l\'équipe mal formée. À Bohicon, c\'est le critère numéro un, avant toute fonctionnalité.',
+      'r' => 'On chronomètre le geste actuel avant de paramétrer. Si la saisie rallonge la vente, l\'outil est mal conçu, pas l\'équipe mal formée. À Bohicon, c\'est le critère numéro un, avant toute fonctionnalité.',
     ),
     1 => 
     array (
       'q' => 'Odoo convient-il à une entreprise de Bohicon ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

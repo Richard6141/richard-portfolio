@@ -15,7 +15,7 @@ foreach ($allServices as $s) {
     if (generateSlug($s['title']) === $slug) { $svc = $s; break; }
 }
 // Corrige le 20/08/2026 : un slug de service inconnu renvoyait une redirection
-// 302 vers /services/ — soit un soft-404. Google suivait la redirection et
+// 302 vers /services/ : soit un soft-404. Google suivait la redirection et
 // indexait une URL inexistante comme valide. Un service absent doit repondre 404.
 if (!$svc) { http_response_code(404); include __DIR__ . '/../404.php'; exit; }
 

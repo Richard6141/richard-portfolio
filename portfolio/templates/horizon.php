@@ -60,7 +60,7 @@ $h_logo = siteLogoUrl();
 <!-- HERO -->
 <section class="hero" id="top"><div class="wrap hero-grid">
   <div>
-    <?php /* Hero : aucune classe .up ici — l'element LCP ne doit jamais demarrer a opacity:0 (LCP 4,2s -> ~1,4s). */ ?>
+    <?php /* Hero : aucune classe .up ici, l'element LCP ne doit jamais demarrer a opacity:0 (LCP 4,2s -> ~1,4s). */ ?>
     <span class="eyebrow"><span class="pulse"></span><span class="mono"><?= sanitize($fullName) ?> · Disponible</span></span>
     <h1>Développeur web, mobile & <span class="hl">automatisation</span> <span class="rotator" id="pv2-rot" data-words='["au Bénin","à Cotonou","et ailleurs"]'>au Bénin</span></h1>
     <p class="lead"><?= sanitize($h_lead) ?></p>

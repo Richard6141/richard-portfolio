@@ -10,7 +10,7 @@ return array (
   'pays' => 'Bénin',
   'titre' => 'Digitaliser une école privée à Porto-Novo',
   'accroche' => 'Inscriptions, scolarités et bulletins : arrêter de courir après les impayés.',
-  'intro' => 'Une école privée de Porto-Novo gère chaque année une rentrée, des centaines de dossiers d\'élèves, des scolarités payées en plusieurs tranches et des bulletins à produire trois fois par an. La difficulté n\'est pas pédagogique : elle est administrative et financière. Savoir, à une date donnée, qui a payé quelle tranche et combien il reste à recouvrer — c\'est souvent la question à laquelle personne ne sait répondre sans plusieurs heures de travail.',
+  'intro' => 'Une école privée de Porto-Novo gère chaque année une rentrée, des centaines de dossiers d\'élèves, des scolarités payées en plusieurs tranches et des bulletins à produire trois fois par an. La difficulté n\'est pas pédagogique : elle est administrative et financière. Savoir, à une date donnée, qui a payé quelle tranche et combien il reste à recouvrer, c\'est souvent la question à laquelle personne ne sait répondre sans plusieurs heures de travail.',
   'sections' => 
   array (
     0 => 

@@ -37,7 +37,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrer sur le terrain, pas sur le papier',
-          'texte' => 'On suit une commande de bout en bout, telle qu\'elle se passe vraiment aujourd\'hui : qui la reçoit, où elle est notée, qui prépare, qui facture, qui encaisse. C\'est presque toujours à ce moment qu\'on découvre les deux ou trois points qui coûtent le plus de temps — et ce ne sont jamais ceux qu\'on imaginait.',
+          'texte' => 'On suit une commande de bout en bout, telle qu\'elle se passe vraiment aujourd\'hui : qui la reçoit, où elle est notée, qui prépare, qui facture, qui encaisse. C\'est presque toujours à ce moment qu\'on découvre les deux ou trois points qui coûtent le plus de temps, et ce ne sont jamais ceux qu\'on imaginait.',
         ),
         1 => 
         array (
@@ -63,7 +63,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'À Cotonou, une première étape utile — facturation ou suivi de stock, formation comprise — se situe généralement entre 300 000 et 900 000 FCFA selon la complexité. Une plateforme métier complète dépasse ce cadre. Je découpe volontairement en chantiers successifs : vous mesurez le retour avant d\'engager la suite.',
+        0 => 'À Cotonou, une première étape utile, facturation ou suivi de stock, formation comprise, se situe généralement entre 300 000 et 900 000 FCFA selon la complexité. Une plateforme métier complète dépasse ce cadre. Je découpe volontairement en chantiers successifs : vous mesurez le retour avant d\'engager la suite.',
         1 => 'Un premier chantier utile est livré en 2 à 5 semaines. Une digitalisation complète s\'étale sur plusieurs mois, par paliers, sans jamais arrêter l\'activité.',
       ),
     ),

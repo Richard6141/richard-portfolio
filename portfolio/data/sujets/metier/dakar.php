@@ -10,7 +10,7 @@ return array (
   'pays' => 'Sénégal',
   'titre' => 'Digitaliser un e-commerce à Dakar',
   'accroche' => 'Paiement Wave et Orange Money, livraison suivie, paniers abandonnés récupérés.',
-  'intro' => 'Le e-commerce dakarois est le plus mature de la sous-région francophone : le client compare, paie par mobile en quelques secondes et attend une livraison rapide dans la région. Ce niveau d\'exigence est aussi ce qui rend les erreurs coûteuses — un moyen de paiement manquant, une livraison sans suivi ou un stock faux se traduisent immédiatement en panier abandonné et en avis négatif.',
+  'intro' => 'Le e-commerce dakarois est le plus mature de la sous-région francophone : le client compare, paie par mobile en quelques secondes et attend une livraison rapide dans la région. Ce niveau d\'exigence est aussi ce qui rend les erreurs coûteuses, un moyen de paiement manquant, une livraison sans suivi ou un stock faux se traduisent immédiatement en panier abandonné et en avis négatif.',
   'sections' => 
   array (
     0 => 

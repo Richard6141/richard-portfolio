@@ -41,7 +41,7 @@ if (!$profile['is_published']) {
 if ($profile['is_maintenance']) {
     $name = trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? '')) ?: $slug;
     $msg = $profile['maintenance_message'] ?: 'Portfolio en cours de construction. Revenez bientot !';
-    echo '<!DOCTYPE html><html><head><title>' . htmlspecialchars($name) . ' — Bientot disponible</title><meta name="robots" content="noindex"><style>*{margin:0;box-sizing:border-box}body{display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:system-ui;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:2rem}div{text-align:center;max-width:500px}h1{font-size:2rem;margin-bottom:1rem}p{opacity:.85;line-height:1.6}</style></head><body><div><h1>' . htmlspecialchars($name) . '</h1><p>' . htmlspecialchars($msg) . '</p></div></body></html>';
+    echo '<!DOCTYPE html><html><head><title>' . htmlspecialchars($name) . ', Bientot disponible</title><meta name="robots" content="noindex"><style>*{margin:0;box-sizing:border-box}body{display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:system-ui;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:2rem}div{text-align:center;max-width:500px}h1{font-size:2rem;margin-bottom:1rem}p{opacity:.85;line-height:1.6}</style></head><body><div><h1>' . htmlspecialchars($name) . '</h1><p>' . htmlspecialchars($msg) . '</p></div></body></html>';
     exit;
 }
 
@@ -134,7 +134,7 @@ $metaTitleFallback = "Développeur Web, Mobile & Automatisation au {$seoCountry}
 $metaDescFallback  = ($profile['bio_short'] ?? '')
     ?: "{$fullName}, développeur freelance à {$seoCity} ({$seoCountry}) : sites web, applications web & mobiles, automatisation et digitalisation pour entreprises. Devis gratuit.";
 
-// URL canonique de l'accueil — AVEC barre finale (20/08/2026).
+// URL canonique de l'accueil, AVEC barre finale (20/08/2026).
 // Le sitemap declare "https://richard.salanon.info/" tandis que la canonical
 // declarait "https://richard.salanon.info" : deux formes pour une meme page,
 // que Google devait arbitrer seul. $portfolioUrl reste sans barre finale car
@@ -160,7 +160,7 @@ $idOrg     = $portfolioUrl . '/#organization';
 $idWebsite = $portfolioUrl . '/#website';
 $orgName   = 'Richard Technologies';
 
-// JSON-LD — Person schema
+// JSON-LD, Person schema
 $jsonLd = [
     '@context' => 'https://schema.org',
     '@type'    => 'Person',
@@ -193,7 +193,7 @@ if (!empty($socialLinks)) {
 // canonique (barre finale, "www.", casse). Voir helpers/functions.php.
 $jsonLd['sameAs'] = normalizeProfileUrls(array_filter($profileSameAs));
 
-// JSON-LD — ProfessionalService (Bénin, Afrique, Europe francophone, Canada, Monde)
+// JSON-LD, ProfessionalService (Bénin, Afrique, Europe francophone, Canada, Monde)
 $serviceSchema = [
     '@context'          => 'https://schema.org',
     '@type'             => 'ProfessionalService',
@@ -206,7 +206,7 @@ $serviceSchema = [
     ],
     'areaServed' => [
         // Villes ajoutees le 20/08/2026 : clients reels dans tout le Benin.
-        // Pas de sameAs Wikidata sur les villes — un identifiant errone serait
+        // Pas de sameAs Wikidata sur les villes, un identifiant errone serait
         // pire qu'absent. Le pays porte deja son identifiant verifie.
         ['@type' => 'City',    'name' => 'Cotonou'],
         ['@type' => 'City',    'name' => 'Abomey-Calavi'],
@@ -247,7 +247,7 @@ if ($contactInfo['city']         ?? '') {
     ];
 }
 if ($contactInfo['google_maps_url'] ?? '') $serviceSchema['hasMap'] = $contactInfo['google_maps_url'];
-// Horaires — 7j/7 (20/08/2026).
+// Horaires, 7j/7 (20/08/2026).
 // ATTENTION : les horaires qui s'affichent dans le Local Pack Google viennent de
 // la fiche Google Business, PAS d'ici. Ce balisage sert la coherence de l'entite
 // et les moteurs generatifs ; il doit dire la meme chose que la fiche Google.
@@ -257,7 +257,7 @@ $serviceSchema['openingHoursSpecification'] = [[
     'opens'     => '07:00',
     'closes'    => '20:00',
 ]];
-// Note agregee — calculee depuis les avis REELS de la table testimonials
+// Note agregee, calculee depuis les avis REELS de la table testimonials
 // (20/08/2026). Ces avis sont deja affiches plus bas dans la page par le
 // template : la regle Google "le balisage doit refleter un contenu visible"
 // est donc respectee.
@@ -298,7 +298,7 @@ $serviceSchema['@id']                = $portfolioUrl . '/#service';
 $serviceSchema['provider']           = ['@id' => $idPerson];
 $serviceSchema['parentOrganization'] = ['@id' => $idOrg];
 
-// JSON-LD — Organization : declare la marque "Richard Technologies" comme entite
+// JSON-LD, Organization : declare la marque "Richard Technologies" comme entite
 // a part entiere et la rattache a la personne (founder <-> worksFor).
 $orgSchema = [
     '@context' => 'https://schema.org',
@@ -320,7 +320,7 @@ if ($contactInfo['phone']        ?? '') $orgSchema['telephone'] = $contactInfo['
 if (!empty($jsonLd['address']))         $orgSchema['address']   = $jsonLd['address'];
 if (!empty($jsonLd['sameAs']))          $orgSchema['sameAs']    = $jsonLd['sameAs'];
 
-// JSON-LD — WebSite. Volontairement SANS SearchAction : la recherche du blog est
+// JSON-LD, WebSite. Volontairement SANS SearchAction : la recherche du blog est
 // un filtre JavaScript cote client, sans URL de resultats. Declarer une
 // SearchAction sans point d'entree reel serait une fausse declaration.
 $websiteSchema = [
@@ -402,7 +402,7 @@ $websiteSchema = [
     <meta name="google-site-verification" content="<?= sanitize($seo['google_site_verification']) ?>">
     <?php endif; ?>
 
-    <!-- Google Fonts — 3 poids max, chargement non-bloquant -->
+    <!-- Google Fonts, 3 poids max, chargement non-bloquant -->
     <?php
     if (($profile['template'] ?? 'starter') === 'horizon') {
         // Le template horizon est rendu par portfolio-v2.css, qui n'utilise que

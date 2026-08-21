@@ -10,7 +10,7 @@ return array (
   'pays' => 'Sénégal',
   'titre' => 'Digitalisation d\'entreprise à Dakar',
   'accroche' => 'Un écosystème tech dense, des attentes élevées, et un projet mené à distance.',
-  'intro' => 'Dakar est l\'un des pôles technologiques les plus actifs d\'Afrique francophone : startups nombreuses, adoption massive du paiement mobile, clientèle habituée aux services en ligne. Une entreprise dakaroise qui se digitalise ne part pas d\'une page blanche — elle doit s\'aligner sur un standard local déjà élevé. Je travaille avec des entreprises sénégalaises entièrement à distance ; l\'heure de décalage avec le Bénin laisse la journée de travail intégralement commune.',
+  'intro' => 'Dakar est l\'un des pôles technologiques les plus actifs d\'Afrique francophone : startups nombreuses, adoption massive du paiement mobile, clientèle habituée aux services en ligne. Une entreprise dakaroise qui se digitalise ne part pas d\'une page blanche, elle doit s\'aligner sur un standard local déjà élevé. Je travaille avec des entreprises sénégalaises entièrement à distance ; l\'heure de décalage avec le Bénin laisse la journée de travail intégralement commune.',
   'sections' => 
   array (
     0 => 
@@ -63,7 +63,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'Pour une entreprise dakaroise, mes tarifs se situent nettement sous le marché local à qualité comparable — c\'est l\'intérêt principal d\'un prestataire basé au Bénin. Un premier périmètre se situe généralement entre 500 000 et 1 500 000 FCFA. Même monnaie, aucun frais de change.',
+        0 => 'Pour une entreprise dakaroise, mes tarifs se situent nettement sous le marché local à qualité comparable, c\'est l\'intérêt principal d\'un prestataire basé au Bénin. Un premier périmètre se situe généralement entre 500 000 et 1 500 000 FCFA. Même monnaie, aucun frais de change.',
         1 => '4 à 10 semaines selon le périmètre, avec des livraisons intermédiaires régulières.',
       ),
     ),
@@ -78,7 +78,7 @@ return array (
     1 => 
     array (
       'q' => 'Pourquoi ne pas prendre un prestataire dakarois ?',
-      'r' => 'Pour le rapport qualité-prix, et rien d\'autre. Si la présence physique est déterminante pour votre projet, un prestataire local sera plus adapté — je vous le dirai plutôt que de forcer.',
+      'r' => 'Pour le rapport qualité-prix, et rien d\'autre. Si la présence physique est déterminante pour votre projet, un prestataire local sera plus adapté, je vous le dirai plutôt que de forcer.',
     ),
     2 => 
     array (

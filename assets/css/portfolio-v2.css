@@ -1,12 +1,12 @@
 /* ============================================================
-   portfolio-v2.css — Design system refonte (navy + émeraude)
+   portfolio-v2.css, Design system refonte (navy + émeraude)
    Chargé uniquement pour le template "horizon" (accueil public).
    Autonome : ne dépend pas de style.css.
    ============================================================ */
 /* @import de Google Fonts RETIRE le 20/08/2026.
    Un @import place dans une feuille bloquante est lui-meme bloquant ET serialise :
    le navigateur devait telecharger ce CSS, y decouvrir l'import, puis aller
-   chercher les polices. PageSpeed mesurait 560 ms de blocage du rendu — alors
+   chercher les polices. PageSpeed mesurait 560 ms de blocage du rendu, alors
    que le <head> chargeait deja ses polices de facon non bloquante.
    Il chargeait aussi Fraunces et Lora sur TOUTES les pages, alors qu'elles ne
    servent qu'aux pages articles/blog (.art-*, .blog-hero).
@@ -384,7 +384,7 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 .pv2 .why h3{font-size:1rem;margin-bottom:.4rem}
 .pv2 .why p{font-size:.88rem;color:var(--muted)}
 
-/* TESTIMONIALS — cartes garnies */
+/* TESTIMONIALS, cartes garnies */
 .pv2 .greviews{display:inline-flex;align-items:center;gap:.9rem;margin-bottom:1.8rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.8rem 1.2rem;box-shadow:var(--shadow);transition:.2s}
 .pv2 .greviews:hover{border-color:var(--acc);transform:translateY(-2px)}
 .pv2 .greviews .gicon{width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--line);color:#4285F4;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -410,7 +410,7 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 .pv2 .tst .av img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .pv2 .tst .who b{display:block;font-size:.92rem;color:var(--navy)}
 .pv2 .tst .who small{color:var(--muted);font-size:.78rem}
-/* Cartes témoignages v2 — compactes & modernes */
+/* Cartes témoignages v2, compactes & modernes */
 .pv2 .tst{padding:1.4rem;justify-content:flex-start}
 .pv2 .tst-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
 .pv2 .tst-glogo{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;font-size:.82rem;color:var(--navy)}

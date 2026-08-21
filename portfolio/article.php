@@ -25,7 +25,7 @@ $post = $stmt->fetch();
 if (!$post) {
     // Slugs generes avant la correction du 20/08/2026 : les accents etaient
     // SUPPRIMES au lieu d'etre translitteres ("coute" -> "cote", "etape" -> "tape").
-    // On redirige en 301 vers le slug corrige — mais seulement s'il existe
+    // On redirige en 301 vers le slug corrige, mais seulement s'il existe
     // reellement en base. La table reste donc totalement inerte tant que les
     // slugs n'ont pas ete corriges dans le dashboard : aucun ordre de
     // deploiement a respecter, et aucun risque de rediriger vers un 404.
@@ -96,7 +96,7 @@ if ($post['cover_image']) {
 $publishedIso = $post['published_at'] ? date('c', strtotime($post['published_at'])) : '';
 $publishedFr  = $post['published_at'] ? date('d/m/Y', strtotime($post['published_at'])) : '';
 
-// dateModified — corrige le 20/08/2026.
+// dateModified, corrige le 20/08/2026.
 // updated_at est la date reelle d'ecriture en base. Sur un article dont
 // published_at a ete antidate ou programme, updated_at est ANTERIEUR a la date
 // de publication : 19 des 22 articles annoncaient ainsi une modification

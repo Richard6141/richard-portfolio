@@ -1,5 +1,5 @@
 /* ============================================================
-   PortfolioSaaS — Base CSS for public portfolios
+   PortfolioSaaS, Base CSS for public portfolios
    All values driven by CSS custom properties set in index.php
    ============================================================ */
 
@@ -442,7 +442,7 @@ body:has(.portfolio-sidebar) .portfolio-footer { margin-left: 260px; }
 .award-title { font-weight: 700; margin-bottom: 0.25rem; }
 .award-issuer { font-size: 0.875rem; opacity: 0.6; margin-bottom: 0.5rem; }
 
-/* --- Blog — Design cards v2 + sidebar --- */
+/* --- Blog, Design cards v2 + sidebar --- */
 
 /* ===== Layout global : grille + sidebar ===== */
 .blog-with-sidebar {
@@ -454,7 +454,7 @@ body:has(.portfolio-sidebar) .portfolio-footer { margin-left: 260px; }
 @media (max-width: 1100px) {
     .blog-with-sidebar { grid-template-columns: 1fr 240px; gap: 2rem; }
 }
-/* Sidebar masquée sur mobile — les articles occupent toute la largeur */
+/* Sidebar masquée sur mobile, les articles occupent toute la largeur */
 @media (max-width: 768px) {
     .blog-with-sidebar { display: block; }
     .blog-sidebar { display: none; }
@@ -600,7 +600,7 @@ body:has(.portfolio-sidebar) .portfolio-footer { margin-left: 260px; }
     .blog-card-v2-title { font-size: 0.875rem; margin-bottom: 0.25rem; }
 }
 
-/* Résumé — masqué sur petit mobile pour compacité */
+/* Résumé, masqué sur petit mobile pour compacité */
 .blog-card-v2-excerpt {
     font-size: 0.8125rem;
     line-height: 1.6;
@@ -716,7 +716,7 @@ body:has(.portfolio-sidebar) .portfolio-footer { margin-left: 260px; }
     opacity: 0.45;
 }
 
-/* ===== Lecteur d'article — Modal ===== */
+/* ===== Lecteur d'article, Modal ===== */
 .article-reader-overlay {
     position: fixed; inset: 0; z-index: 300;
     background: rgba(0,0,0,0.78);
@@ -731,7 +731,7 @@ body:has(.portfolio-sidebar) .portfolio-footer { margin-left: 260px; }
     box-shadow: 0 32px 80px rgba(0,0,0,0.35);
 }
 
-/* Bouton fermer — absolu en haut à droite */
+/* Bouton fermer, absolu en haut à droite */
 .article-reader-close {
     position: absolute; top: 1rem; right: 1rem;
     width: 38px; height: 38px; border-radius: 50%;
@@ -742,7 +742,7 @@ body:has(.portfolio-sidebar) .portfolio-footer { margin-left: 260px; }
 }
 .article-reader-close:hover { background: rgba(0,0,0,0.85); transform: scale(1.1); }
 
-/* Image de couverture — pleine largeur */
+/* Image de couverture, pleine largeur */
 .article-reader-cover {
     width: 100%; max-height: 380px; object-fit: cover; display: block;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -870,7 +870,7 @@ body:has(.portfolio-sidebar) .portfolio-footer { margin-left: 260px; }
     .article-sugg-list { grid-template-columns: 1fr; }
 }
 
-/* Contenu article — style "prose" pour le HTML de Quill */
+/* Contenu article, style "prose" pour le HTML de Quill */
 .article-prose { font-size: 1rem; line-height: 1.8; color: var(--color-text); }
 .article-prose h1 { font-size: 1.75rem; font-weight: 800; margin: 2rem 0 1rem; font-family: var(--font-heading); }
 .article-prose h2 { font-size: 1.375rem; font-weight: 700; margin: 1.75rem 0 0.75rem; font-family: var(--font-heading); }
@@ -939,7 +939,7 @@ body.js-ready[data-animations="1"][data-anim-style="bounce"] .anim { transform: 
 body.js-ready[data-animations="1"] .anim.visible { opacity: 1; transform: none; }
 
 /* ============================================================
-   Page article individuelle — Design professionnel
+   Page article individuelle, Design professionnel
    ============================================================ */
 
 .ap-body { background: var(--color-bg); min-height: 100vh; }

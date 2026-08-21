@@ -39,7 +39,7 @@ $expTotal = count($experiences);
                             </div>
                         </div>
                         <div class="timeline-meta">
-                            <span><?= sanitize($startFmt . ' — ' . $endFmt) ?></span>
+                            <span><?= sanitize($startFmt . ', ' . $endFmt) ?></span>
                             <?php if ($exp['location']): ?><span><?= sanitize($exp['location']) ?></span><?php endif; ?>
                             <?php if ($exp['work_type']): ?><span><?= sanitize($workLabels[$exp['work_type']] ?? '') ?></span><?php endif; ?>
                             <?php if ($exp['contract_type']): ?>

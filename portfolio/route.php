@@ -10,7 +10,7 @@
 //
 // Il consulte le registre data/sujets.php. Si le slug correspond a une
 // page, il la rend ; sinon il renvoie un 404 franc, exactement comme
-// avant. Le comportement 404 est donc preserve a l'identique — c'etait
+// avant. Le comportement 404 est donc preserve a l'identique, c'etait
 // la condition pour ne pas reintroduire le soft-404 corrige le 20/08.
 // ============================================================
 

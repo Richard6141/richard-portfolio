@@ -5,7 +5,7 @@
 // Cree le 21/08/2026. Les fiches plafonnaient a ~800 mots avec les quatre
 // champs de base (contexte, probleme, solution, resultat), tous stockes en
 // base et qui decrivent des CLIENTS REELS ET NOMMES. Les allonger revenait
-// a inventer des faits sur des entreprises identifiables — exclu.
+// a inventer des faits sur des entreprises identifiables, exclu.
 //
 // Ces trois sections comblent l'ecart sans jamais rien affirmer sur le
 // client. Elles portent sur le METIER, la TECHNIQUE et ce qu'une autre

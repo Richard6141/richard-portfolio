@@ -1,6 +1,6 @@
 <?php
 // ============================================================
-// Footer du portfolio public — 100% dynamique
+// Footer du portfolio public, 100% dynamique
 // Styles : dark / light / solid / gradient
 // Layouts : centered / columns / minimal
 // ============================================================

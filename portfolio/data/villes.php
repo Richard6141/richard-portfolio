@@ -20,7 +20,7 @@
 // Mesure de controle : voir la verification de similarite croisee, qui doit
 // rester tres en dessous de 60 % entre deux villes quelconques.
 //
-// Champs attendus — identite et logistique :
+// Champs attendus, identite et logistique :
 //   nom, slug, pays, pays_slug, region, distance_km, sur_place
 // Contenu redactionnel, propre a chaque ville :
 //   accroche, intro, contexte, quartiers[], concurrence, secteurs[],

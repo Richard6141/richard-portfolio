@@ -1,5 +1,5 @@
 <?php
-// Intégration Odoo à Abomey-Calavi — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Odoo à Abomey-Calavi, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Abomey-Calavi, les structures qui tirent un bénéfice réel d\'un ERP sont les écoles privées, cliniques et pharmacies de quartier, cabinets, promoteurs immobiliers et commerces de proximité. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Abomey-Calavi, les structures qui tirent un bénéfice réel d\'un ERP sont les écoles privées, cliniques et pharmacies de quartier, cabinets, promoteurs immobiliers et commerces de proximité. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -62,7 +62,7 @@ return array (
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement, base du calcul de marge.',
         ),
         3 => 
         array (
@@ -77,7 +77,7 @@ return array (
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money, c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -148,7 +148,7 @@ return array (
       'paragraphes' => 
       array (
         0 => 'Abomey-Calavi absorbe une population qui augmente plus vite que les structures qui la servent. Les écoles, cliniques et pharmacies qui s\'y équipent ont presque toutes le même profil : elles ont démarré petit, avec des méthodes qui fonctionnaient à cinquante dossiers et qui craquent à cinq cents.',
-        1 => 'Le besoin n\'est donc pas d\'ajouter des fonctions mais de reprendre le contrôle d\'un volume qui a débordé. La priorité est presque toujours la même : un fichier unique — élèves, patients, clients — qui remplace les trois versions divergentes qui circulent aujourd\'hui.',
+        1 => 'Le besoin n\'est donc pas d\'ajouter des fonctions mais de reprendre le contrôle d\'un volume qui a débordé. La priorité est presque toujours la même : un fichier unique, élèves, patients, clients, qui remplace les trois versions divergentes qui circulent aujourd\'hui.',
         2 => 'Vient ensuite l\'échéancier. Scolarités payées en tranches, actes réglés partiellement, prises en charge : savoir qui doit quoi à une date donnée est la question à laquelle personne ne sait répondre sans plusieurs heures de reconstitution. C\'est ce que l\'ERP règle en premier.',
         3 => 'La confidentialité structure enfin tout le projet. Dossiers d\'élèves, dossiers patients : les droits par rôle et le journal des consultations se définissent avant le premier paramétrage, jamais après.',
         4 => 'Odoo se justifie ici des que plusieurs services doivent partager le meme dossier : secretariat, comptabilite, direction. Sa gestion fine des droits par role repond directement a l\'exigence de confidentialite. Son cout de deploiement suppose en revanche un volume suffisant pour etre amorti.',
@@ -173,12 +173,12 @@ return array (
     0 => 
     array (
       'q' => 'Nos données sont sensibles : dossiers d\'élèves, parfois de patients. Comment sont-elles protégées ?',
-      'r' => 'Par des droits stricts par rôle, un journal des consultations et des sauvegardes chiffrées. On définit ensemble qui voit quoi avant d\'écrire la première ligne de paramétrage — c\'est une contrainte de conception, pas une option ajoutée après.',
+      'r' => 'Par des droits stricts par rôle, un journal des consultations et des sauvegardes chiffrées. On définit ensemble qui voit quoi avant d\'écrire la première ligne de paramétrage, c\'est une contrainte de conception, pas une option ajoutée après.',
     ),
     1 => 
     array (
       'q' => 'Odoo convient-il à une entreprise de Abomey-Calavi ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

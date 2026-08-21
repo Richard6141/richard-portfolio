@@ -1,5 +1,5 @@
 <?php
-// Paris (France) — cree le 21/08/2026. Angle acheteur : conformite,
+// Paris (France), cree le 21/08/2026. Angle acheteur : conformite,
 // fiscalite et recours, plutot qu'un argumentaire geographique.
 declare(strict_types=1);
 
@@ -10,7 +10,7 @@ return array (
   'pays' => 'France',
   'titre' => 'Externaliser son développement web depuis Paris',
   'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Paris concentre la plus forte densité d\'agences et de studios de France, et aussi les tarifs journaliers les plus élevés du pays. Beaucoup d\'entreprises parisiennes ne cherchent pas moins cher par principe : elles cherchent à absorber un pic de charge sans recruter, ou à financer un projet secondaire que leur budget ne couvre plus. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises françaises à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays — la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'intro' => 'Paris concentre la plus forte densité d\'agences et de studios de France, et aussi les tarifs journaliers les plus élevés du pays. Beaucoup d\'entreprises parisiennes ne cherchent pas moins cher par principe : elles cherchent à absorber un pic de charge sans recruter, ou à financer un projet secondaire que leur budget ne couvre plus. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises françaises à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
   'sections' => 
   array (
     0 => 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'La protection des données',
-          'texte' => 'Le RGPD s\'applique dès que des données personnelles de résidents européens sont traitées, quel que soit le lieu du prestataire. C\'est l\'objection la plus légitime que l\'on m\'oppose, et elle se traite par trois moyens : hébergement des données dans l\'UE — je déploie chez OVH, Scaleway ou Hetzner —, clauses contractuelles types annexées au contrat, et accès nominatifs tracés. Le prestataire est hors UE ; les données, elles, n\'en sortent pas.',
+          'texte' => 'Le RGPD s\'applique dès que des données personnelles de résidents européens sont traitées, quel que soit le lieu du prestataire. C\'est l\'objection la plus légitime que l\'on m\'oppose, et elle se traite par trois moyens : hébergement des données dans l\'UE, je déploie chez OVH, Scaleway ou Hetzner -, clauses contractuelles types annexées au contrat, et accès nominatifs tracés. Le prestataire est hors UE ; les données, elles, n\'en sortent pas.',
         ),
         1 => 
         array (
@@ -38,7 +38,7 @@ return array (
         3 => 
         array (
           'titre' => 'Le point qu\'on ne vous dira pas ailleurs',
-          'texte' => 'Attention en revanche au Crédit d\'Impôt Recherche et au CII : les dépenses sous-traitées hors UE n\'y ouvrent pas droit. Si votre projet repose sur ces dispositifs, un prestataire européen sera plus pertinent — je vous le dis avant que vous ne le découvriez au bilan.',
+          'texte' => 'Attention en revanche au Crédit d\'Impôt Recherche et au CII : les dépenses sous-traitées hors UE n\'y ouvrent pas droit. Si votre projet repose sur ces dispositifs, un prestataire européen sera plus pertinent, je vous le dis avant que vous ne le découvriez au bilan.',
         ),
       ),
     ),
@@ -81,7 +81,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage écrit avant tout devis',
-          'texte' => 'Deux à trois séances de visioconférence, chacune suivie d\'un compte rendu que vous validez. À distance, ce qui n\'est pas écrit n\'existe pas — c\'est la règle qui évite l\'essentiel des litiges.',
+          'texte' => 'Deux à trois séances de visioconférence, chacune suivie d\'un compte rendu que vous validez. À distance, ce qui n\'est pas écrit n\'existe pas, c\'est la règle qui évite l\'essentiel des litiges.',
         ),
         1 => 
         array (
@@ -101,7 +101,7 @@ return array (
         4 => 
         array (
           'titre' => 'Transfert complet en fin de mission',
-          'texte' => 'Code source, accès, documentation et formation. Vous devez pouvoir changer de prestataire sans repartir de zéro — c\'est une clause que je pose sans qu\'on me la demande.',
+          'texte' => 'Code source, accès, documentation et formation. Vous devez pouvoir changer de prestataire sans repartir de zéro, c\'est une clause que je pose sans qu\'on me la demande.',
         ),
       ),
     ),
@@ -114,7 +114,7 @@ return array (
       array (
         0 => 'Automatisation de processus avec n8n ou Make : c\'est mon terrain principal et celui où l\'écart de coût se transforme le plus vite en retour sur investissement.',
         1 => 'Développement d\'applications métier sur mesure en PHP/Laravel, Node.js ou Python.',
-        2 => 'Intégration et déploiement d\'ERP open source — Odoo, Dolibarr — y compris la reprise de données.',
+        2 => 'Intégration et déploiement d\'ERP open source, Odoo, Dolibarr, y compris la reprise de données.',
         3 => 'API REST et passerelles entre outils existants, pour faire communiquer ce que vous avez déjà.',
         4 => 'Renfort ponctuel sur un pic de charge, en complément de votre équipe interne.',
         5 => 'Ce que je ne fais pas : le design graphique pur, le natif iOS avancé, et tout projet exigeant une présence physique régulière. Vous perdriez du temps et moi aussi.',
@@ -137,7 +137,7 @@ return array (
     0 => 
     array (
       'q' => 'Où seront hébergées nos données ?',
-      'r' => 'Le RGPD s\'applique dès que des données personnelles de résidents européens sont traitées, quel que soit le lieu du prestataire. C\'est l\'objection la plus légitime que l\'on m\'oppose, et elle se traite par trois moyens : hébergement des données dans l\'UE — je déploie chez OVH, Scaleway ou Hetzner —, clauses contractuelles types annexées au contrat, et accès nominatifs tracés. Le prestataire est hors UE ; les données, elles, n\'en sortent pas.',
+      'r' => 'Le RGPD s\'applique dès que des données personnelles de résidents européens sont traitées, quel que soit le lieu du prestataire. C\'est l\'objection la plus légitime que l\'on m\'oppose, et elle se traite par trois moyens : hébergement des données dans l\'UE, je déploie chez OVH, Scaleway ou Hetzner -, clauses contractuelles types annexées au contrat, et accès nominatifs tracés. Le prestataire est hors UE ; les données, elles, n\'en sortent pas.',
     ),
     1 => 
     array (
@@ -162,7 +162,7 @@ return array (
     5 => 
     array (
       'q' => 'Que se passe-t-il si le projet dérape ?',
-      'r' => 'Le paiement par jalons limite mécaniquement votre exposition : vous ne payez que ce qui est livré et validé. Le contrat prévoit les conditions de rupture et la remise des travaux en cours. Et je préfère refuser un projet que je ne peux pas mener plutôt que de l\'accepter et l\'échouer — cela m\'est déjà arrivé.',
+      'r' => 'Le paiement par jalons limite mécaniquement votre exposition : vous ne payez que ce qui est livré et validé. Le contrat prévoit les conditions de rupture et la remise des travaux en cours. Et je préfère refuser un projet que je ne peux pas mener plutôt que de l\'accepter et l\'échouer, cela m\'est déjà arrivé.',
     ),
     6 => 
     array (

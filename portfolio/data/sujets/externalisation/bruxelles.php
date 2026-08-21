@@ -1,5 +1,5 @@
 <?php
-// Bruxelles (Belgique) — cree le 21/08/2026. Angle acheteur : conformite,
+// Bruxelles (Belgique), cree le 21/08/2026. Angle acheteur : conformite,
 // fiscalite et recours, plutot qu'un argumentaire geographique.
 declare(strict_types=1);
 
@@ -10,7 +10,7 @@ return array (
   'pays' => 'Belgique',
   'titre' => 'Externaliser son développement web depuis Bruxelles',
   'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Bruxelles combine un tissu institutionnel exigeant sur la conformité et un réseau dense de petites structures aux budgets contraints. Ces deux mondes ont un point commun : ils veulent des livrables documentés et un prestataire capable de répondre à un questionnaire de conformité sans improviser. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises belges à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays — la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'intro' => 'Bruxelles combine un tissu institutionnel exigeant sur la conformité et un réseau dense de petites structures aux budgets contraints. Ces deux mondes ont un point commun : ils veulent des livrables documentés et un prestataire capable de répondre à un questionnaire de conformité sans improviser. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises belges à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
   'sections' => 
   array (
     0 => 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'La protection des données',
-          'texte' => 'Le RGPD s\'applique intégralement. Je déploie systématiquement les données dans l\'UE — souvent en Belgique même ou aux Pays-Bas, pour la latence — avec clauses contractuelles types et accès tracés. Votre DPO reçoit la documentation nécessaire avant le démarrage, pas après.',
+          'texte' => 'Le RGPD s\'applique intégralement. Je déploie systématiquement les données dans l\'UE, souvent en Belgique même ou aux Pays-Bas, pour la latence, avec clauses contractuelles types et accès tracés. Votre DPO reçoit la documentation nécessaire avant le démarrage, pas après.',
         ),
         1 => 
         array (
@@ -81,7 +81,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage écrit avant tout devis',
-          'texte' => 'Deux à trois séances de visioconférence, chacune suivie d\'un compte rendu que vous validez. À distance, ce qui n\'est pas écrit n\'existe pas — c\'est la règle qui évite l\'essentiel des litiges.',
+          'texte' => 'Deux à trois séances de visioconférence, chacune suivie d\'un compte rendu que vous validez. À distance, ce qui n\'est pas écrit n\'existe pas, c\'est la règle qui évite l\'essentiel des litiges.',
         ),
         1 => 
         array (
@@ -101,7 +101,7 @@ return array (
         4 => 
         array (
           'titre' => 'Transfert complet en fin de mission',
-          'texte' => 'Code source, accès, documentation et formation. Vous devez pouvoir changer de prestataire sans repartir de zéro — c\'est une clause que je pose sans qu\'on me la demande.',
+          'texte' => 'Code source, accès, documentation et formation. Vous devez pouvoir changer de prestataire sans repartir de zéro, c\'est une clause que je pose sans qu\'on me la demande.',
         ),
       ),
     ),
@@ -114,7 +114,7 @@ return array (
       array (
         0 => 'Automatisation de processus avec n8n ou Make : c\'est mon terrain principal et celui où l\'écart de coût se transforme le plus vite en retour sur investissement.',
         1 => 'Développement d\'applications métier sur mesure en PHP/Laravel, Node.js ou Python.',
-        2 => 'Intégration et déploiement d\'ERP open source — Odoo, Dolibarr — y compris la reprise de données.',
+        2 => 'Intégration et déploiement d\'ERP open source, Odoo, Dolibarr, y compris la reprise de données.',
         3 => 'API REST et passerelles entre outils existants, pour faire communiquer ce que vous avez déjà.',
         4 => 'Renfort ponctuel sur un pic de charge, en complément de votre équipe interne.',
         5 => 'Ce que je ne fais pas : le design graphique pur, le natif iOS avancé, et tout projet exigeant une présence physique régulière. Vous perdriez du temps et moi aussi.',
@@ -137,7 +137,7 @@ return array (
     0 => 
     array (
       'q' => 'Où seront hébergées nos données ?',
-      'r' => 'Le RGPD s\'applique intégralement. Je déploie systématiquement les données dans l\'UE — souvent en Belgique même ou aux Pays-Bas, pour la latence — avec clauses contractuelles types et accès tracés. Votre DPO reçoit la documentation nécessaire avant le démarrage, pas après.',
+      'r' => 'Le RGPD s\'applique intégralement. Je déploie systématiquement les données dans l\'UE, souvent en Belgique même ou aux Pays-Bas, pour la latence, avec clauses contractuelles types et accès tracés. Votre DPO reçoit la documentation nécessaire avant le démarrage, pas après.',
     ),
     1 => 
     array (
@@ -162,7 +162,7 @@ return array (
     5 => 
     array (
       'q' => 'Que se passe-t-il si le projet dérape ?',
-      'r' => 'Le paiement par jalons limite mécaniquement votre exposition : vous ne payez que ce qui est livré et validé. Le contrat prévoit les conditions de rupture et la remise des travaux en cours. Et je préfère refuser un projet que je ne peux pas mener plutôt que de l\'accepter et l\'échouer — cela m\'est déjà arrivé.',
+      'r' => 'Le paiement par jalons limite mécaniquement votre exposition : vous ne payez que ce qui est livré et validé. Le contrat prévoit les conditions de rupture et la remise des travaux en cours. Et je préfère refuser un projet que je ne peux pas mener plutôt que de l\'accepter et l\'échouer, cela m\'est déjà arrivé.',
     ),
     6 => 
     array (

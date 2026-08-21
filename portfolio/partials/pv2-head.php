@@ -8,7 +8,7 @@ $pageRobots  = $pageRobots  ?? 'index';
 $pageSchemas = $pageSchemas ?? [];
 $ogType      = $ogType ?? 'website';
 
-// og:image — repli ajoute le 20/08/2026. /blog/ et /services/ ne definissaient
+// og:image, repli ajoute le 20/08/2026. /blog/ et /services/ ne definissaient
 // aucune image : leurs partages sur les reseaux sociaux s'affichaient sans visuel.
 // On retombe sur l'avatar du profil, present sur toutes les pages pv2.
 if (empty($ogImage) && !empty($profile['avatar_url']) && !empty($portfolioUrl)) {
@@ -17,7 +17,7 @@ if (empty($ogImage) && !empty($profile['avatar_url']) && !empty($portfolioUrl)) 
 
 $cssV = @filemtime(__DIR__ . '/../../assets/css/portfolio-v2.css') ?: '1';
 
-// Polices — declarees ici depuis le 20/08/2026 (l'@import de portfolio-v2.css a
+// Polices, declarees ici depuis le 20/08/2026 (l'@import de portfolio-v2.css a
 // ete retire : il bloquait le rendu 560 ms). Graisses identiques a l'ancien
 // import : aucun changement visuel.
 // Fraunces et Lora ne servent qu'aux pages editoriales (.art-*, .blog-hero) :

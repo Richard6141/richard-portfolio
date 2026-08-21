@@ -10,7 +10,7 @@ return array (
   'pays' => 'Bénin',
   'titre' => 'Digitaliser un commerce de gros à Bohicon',
   'accroche' => 'Crédit client, rotation des stocks et marge réelle : les trois chiffres qui manquent.',
-  'intro' => 'Un grossiste de Bohicon sert des dizaines de revendeurs venus de tout le centre du Bénin, souvent à crédit, souvent sur des quantités variables. Le chiffre d\'affaires n\'est pas le problème : il est visible. Ce qui manque, ce sont les trois chiffres qui décident de la santé réelle de l\'affaire — combien on me doit, quel stock tourne, et sur quoi je gagne vraiment.',
+  'intro' => 'Un grossiste de Bohicon sert des dizaines de revendeurs venus de tout le centre du Bénin, souvent à crédit, souvent sur des quantités variables. Le chiffre d\'affaires n\'est pas le problème : il est visible. Ce qui manque, ce sont les trois chiffres qui décident de la santé réelle de l\'affaire, combien on me doit, quel stock tourne, et sur quoi je gagne vraiment.',
   'sections' => 
   array (
     0 => 
@@ -37,7 +37,7 @@ return array (
         0 => 
         array (
           'titre' => 'L\'encours client n\'est connu de personne',
-          'texte' => 'Le crédit se donne sur la confiance et se note sur un cahier. Le total réellement dû, à un instant donné, demande de tout additionner à la main — donc il n\'est jamais calculé.',
+          'texte' => 'Le crédit se donne sur la confiance et se note sur un cahier. Le total réellement dû, à un instant donné, demande de tout additionner à la main, donc il n\'est jamais calculé.',
         ),
         1 => 
         array (

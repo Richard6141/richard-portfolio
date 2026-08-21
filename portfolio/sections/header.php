@@ -53,7 +53,7 @@ if ($headerStyle === 'sidebar') { /* TODO sidebar mode */ return; }
 .ph-cv,.ph-cta{font-size:.78rem!important;padding:.4rem .85rem!important}
 .ph-bg{display:none;background:none;border:none;cursor:pointer;padding:8px;border-radius:8px;color:var(--color-text)}
 
-/* Mobile overlay + drawer — EN DEHORS du header */
+/* Mobile overlay + drawer, EN DEHORS du header */
 .ph-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:150}
 .ph-overlay.open{display:block}
 .ph-dw{position:fixed;top:0;right:0;bottom:0;width:280px;max-width:85vw;background:var(--color-card-bg);z-index:200;transform:translateX(100%);transition:transform .25s ease;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:-4px 0 20px rgba(0,0,0,.1)}

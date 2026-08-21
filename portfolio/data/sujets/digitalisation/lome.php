@@ -10,7 +10,7 @@ return array (
   'pays' => 'Togo',
   'titre' => 'Digitalisation d\'entreprise à Lomé',
   'accroche' => 'Deux heures de route, aucun décalage horaire : la proximité d\'un voisin, à distance.',
-  'intro' => 'Lomé est la capitale la plus proche de Cotonou — deux heures de route, même fuseau horaire, mêmes moyens de paiement mobile, un tissu économique très comparable. C\'est le marché étranger où la distance compte le moins. Les entreprises togolaises que j\'accompagne fonctionnent exactement comme leurs homologues béninoises : les mêmes outils marchent, les mêmes écueils reviennent. Les projets se mènent à distance, avec la possibilité d\'un déplacement pour un cadrage important.',
+  'intro' => 'Lomé est la capitale la plus proche de Cotonou, deux heures de route, même fuseau horaire, mêmes moyens de paiement mobile, un tissu économique très comparable. C\'est le marché étranger où la distance compte le moins. Les entreprises togolaises que j\'accompagne fonctionnent exactement comme leurs homologues béninoises : les mêmes outils marchent, les mêmes écueils reviennent. Les projets se mènent à distance, avec la possibilité d\'un déplacement pour un cadrage important.',
   'sections' => 
   array (
     0 => 
@@ -63,7 +63,7 @@ return array (
       'titre' => 'Ce que ça coûte, ce que ça prend.',
       'paragraphes' => 
       array (
-        0 => 'Tarification identique au Bénin, en FCFA — même monnaie, mêmes moyens de paiement, aucun frais de change. Un premier chantier se situe généralement entre 300 000 et 900 000 FCFA selon le périmètre.',
+        0 => 'Tarification identique au Bénin, en FCFA, même monnaie, mêmes moyens de paiement, aucun frais de change. Un premier chantier se situe généralement entre 300 000 et 900 000 FCFA selon le périmètre.',
         1 => '3 à 8 semaines selon le périmètre, avec des livraisons intermédiaires régulières.',
       ),
     ),

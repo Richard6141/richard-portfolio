@@ -1,5 +1,5 @@
 <?php
-// pv2-blog-sidebar.php — Colonne latérale blog (auteur, récents, catégories).
+// pv2-blog-sidebar.php, Colonne latérale blog (auteur, récents, catégories).
 // Variables : $pdo, $userId, $profile, $fullName, $h_mailto.
 $sideAvatar = ($profile['avatar_url'] ?? '') ? '/api/thumb.php?src=' . urlencode(preg_replace('/\.\.[\\/]/', '', $profile['avatar_url'])) . '&s=170' : '';
 $sideBio = $profile['bio_short'] ?? "Développeur web, mobile & automatisation. J'aide les entreprises à gagner en visibilité et en efficacité.";

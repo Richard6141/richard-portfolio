@@ -79,7 +79,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <section class="sect<?= $num % 2 === 0 ? ' soft' : '' ?>"><div class="wrap">
     <div class="sect-head rv">
       <span class="mono"><span class="tag-num"><?= str_pad((string) $num, 2, '0', STR_PAD_LEFT) ?></span> / <?= sanitize($pays) ?></span>
-      <h2><?= sanitize($pays) ?> — <?= count($liste) ?> ville<?= count($liste) > 1 ? 's' : '' ?></h2>
+      <h2><?= sanitize($pays) ?>, <?= count($liste) ?> ville<?= count($liste) > 1 ? 's' : '' ?></h2>
     </div>
     <div class="bento stg">
       <?php foreach ($liste as $v): ?>

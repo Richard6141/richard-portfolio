@@ -1,5 +1,5 @@
 <?php
-// Intégration Odoo à Porto-Novo — angle ERP differencie le 21/08/2026 : la ville est la
+// Intégration Odoo à Porto-Novo, angle ERP differencie le 21/08/2026 : la ville est la
 // meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
@@ -23,7 +23,7 @@ return array (
         0 => 
         array (
           'titre' => 'Le tissu économique concerné',
-          'texte' => 'À Porto-Novo, les structures qui tirent un bénéfice réel d\'un ERP sont les établissements scolaires, structures para-publiques, cabinets, associations et artisans organisés. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet — je vous le dirai plutôt que de vous équiper inutilement.',
+          'texte' => 'À Porto-Novo, les structures qui tirent un bénéfice réel d\'un ERP sont les établissements scolaires, structures para-publiques, cabinets, associations et artisans organisés. En dessous d\'un certain volume, un outil ciblé reste plus pertinent qu\'un ERP complet, je vous le dirai plutôt que de vous équiper inutilement.',
         ),
         1 => 
         array (
@@ -62,7 +62,7 @@ return array (
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement, base du calcul de marge.',
         ),
         3 => 
         array (
@@ -77,7 +77,7 @@ return array (
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money, c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -91,7 +91,7 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
@@ -148,9 +148,9 @@ return array (
       'paragraphes' => 
       array (
         0 => 'À Porto-Novo, les structures fonctionnent avec des procédures écrites, des validations en cascade et des archives qui doivent rester consultables plusieurs exercices. Ce n\'est pas la vitesse qu\'on y cherche, c\'est la preuve.',
-        1 => 'Un ERP y réussit s\'il répond à deux questions : où est le dossier, et qui a validé quoi. Tout le reste — tableaux de bord, automatisations sophistiquées — vient après, et souvent ne vient jamais parce que le besoin réel était celui-là.',
+        1 => 'Un ERP y réussit s\'il répond à deux questions : où est le dossier, et qui a validé quoi. Tout le reste, tableaux de bord, automatisations sophistiquées, vient après, et souvent ne vient jamais parce que le besoin réel était celui-là.',
         2 => 'Le paramétrage doit donc épouser le circuit obligatoire plutôt que de proposer un circuit idéal. Quand une procédure est imposée par une tutelle, l\'ERP la trace ; il ne la réforme pas.',
-        3 => 'La production des états annuels est le second gain attendu. Les statistiques que vous reconstituez chaque fin d\'exercice deviennent consultables en continu, sans travail supplémentaire — c\'est souvent ce qui justifie le projet à lui seul.',
+        3 => 'La production des états annuels est le second gain attendu. Les statistiques que vous reconstituez chaque fin d\'exercice deviennent consultables en continu, sans travail supplémentaire, c\'est souvent ce qui justifie le projet à lui seul.',
         4 => 'L\'atout d\'Odoo a Porto-Novo est son moteur de validation : les circuits d\'approbation en cascade s\'y parametrent sans developpement. C\'est precisement ce qu\'attend une structure qui doit prouver qui a valide quoi.',
       ),
     ),
@@ -178,7 +178,7 @@ return array (
     1 => 
     array (
       'q' => 'Odoo convient-il à une entreprise de Porto-Novo ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
+      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (

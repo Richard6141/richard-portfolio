@@ -25,7 +25,7 @@ $formOn     = !empty($contactInfo['form_enabled']);
 $phoneDigits = preg_replace('/[^0-9]/', '', (string) $h_phone);
 $waDigits    = preg_replace('/[^0-9]/', '', $h_whatsapp ?: (string) $h_phone);
 
-$pageTitle     = seoTitle('Contact — devis gratuit sous 24 h', $fullName);
+$pageTitle     = seoTitle('Contact, devis gratuit sous 24 h', $fullName);
 $pageDesc      = seoDescription('Contactez ' . $fullName . ', développeur web et automatisation à ' . $h_city . ' (' . $h_country . ') : téléphone, WhatsApp, e-mail et formulaire. Devis gratuit sous 24 h.');
 $pageCanonical = $contactUrl;
 $ogImage = ($profile['avatar_url'] ?? '') ? $portfolioUrl . '/uploads/' . preg_replace('/\.\.[\\/]/', '', $profile['avatar_url']) : '';
@@ -108,7 +108,7 @@ include __DIR__ . '/partials/pv2-header.php';
     </div>
   </div></section>
 
-  <!-- COORDONNÉES (NAP) — bloc lisible par Google, les IA et les assistants vocaux -->
+  <!-- COORDONNÉES (NAP), bloc lisible par Google, les IA et les assistants vocaux -->
   <section class="sect"><div class="wrap">
     <div class="sect-head rv">
       <span class="mono"><span class="tag-num">01</span> / Coordonnées</span>
@@ -151,7 +151,7 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
 
   <?php if ($formOn): ?>
-  <!-- FORMULAIRE — poste en JSON vers /api/contact-form.php (honeypot + anti-flood) -->
+  <!-- FORMULAIRE, poste en JSON vers /api/contact-form.php (honeypot + anti-flood) -->
   <section class="sect soft"><div class="wrap" style="max-width:720px">
     <div class="sect-head rv">
       <span class="mono"><span class="tag-num">02</span> / Formulaire</span>
@@ -186,7 +186,7 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
   <?php endif; ?>
 
-  <!-- FAQ — les questions visibles sont exactement celles du schéma FAQPage -->
+  <!-- FAQ, les questions visibles sont exactement celles du schéma FAQPage -->
   <section class="sect"><div class="wrap" style="max-width:820px">
     <div class="sect-head rv">
       <span class="mono"><span class="tag-num">03</span> / Questions fréquentes</span>

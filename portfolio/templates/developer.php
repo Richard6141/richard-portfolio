@@ -1,6 +1,6 @@
 <?php
 // ============================================================
-// Template: Developer — Sidebar gauche + contenu droite
+// Template: Developer, Sidebar gauche + contenu droite
 // ============================================================
 
 // Charger les donnees necessaires
@@ -174,7 +174,7 @@ foreach ($sections as $s) $visMap[$s['section']] = $s;
                     <div class="tpl-exp-card">
                         <div class="tpl-exp-title"><?= sanitize($exp['job_title']) ?></div>
                         <div class="tpl-exp-company"><?= sanitize($exp['company_name']) ?></div>
-                        <div class="tpl-exp-meta"><?= sanitize($startFmt . ' — ' . $endFmt) ?> · <?= sanitize($exp['location'] ?? '') ?></div>
+                        <div class="tpl-exp-meta"><?= sanitize($startFmt . ', ' . $endFmt) ?> · <?= sanitize($exp['location'] ?? '') ?></div>
                         <?php if ($exp['contract_type']): ?><span class="tpl-exp-badge"><?= sanitize($contractLabels[$exp['contract_type']] ?? '') ?></span><?php endif; ?>
                     </div>
                 <?php endforeach; ?>
@@ -191,7 +191,7 @@ foreach ($sections as $s) $visMap[$s['section']] = $s;
                     <div class="tpl-exp-card">
                         <div class="tpl-exp-title"><?= sanitize($edu['degree']) ?></div>
                         <div class="tpl-exp-company"><?= sanitize($edu['institution']) ?></div>
-                        <div class="tpl-exp-meta"><?= (int)$edu['start_year'] ?> — <?= $edu['is_current'] ? 'En cours' : (int)($edu['end_year'] ?? '') ?></div>
+                        <div class="tpl-exp-meta"><?= (int)$edu['start_year'] ?>, <?= $edu['is_current'] ? 'En cours' : (int)($edu['end_year'] ?? '') ?></div>
                         <?php if ($edu['grade']): ?><span class="tpl-exp-badge" style="background:var(--color-accent)"><?= sanitize($edu['grade']) ?></span><?php endif; ?>
                     </div>
                 <?php endforeach; ?>
@@ -237,7 +237,7 @@ foreach ($sections as $s) $visMap[$s['section']] = $s;
                         <p class="tpl-testimonial-text">"<?= sanitize($t['content']) ?>"</p>
                         <div class="tpl-testimonial-avatar"><?= mb_strtoupper(mb_substr($t['author_name'], 0, 1)) ?></div>
                         <p class="tpl-testimonial-name"><?= sanitize($t['author_name']) ?></p>
-                        <p class="tpl-testimonial-role"><?= sanitize(implode(' — ', array_filter([$t['author_role'], $t['author_company']]))) ?></p>
+                        <p class="tpl-testimonial-role"><?= sanitize(implode(', ', array_filter([$t['author_role'], $t['author_company']]))) ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
