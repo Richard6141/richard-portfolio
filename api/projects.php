@@ -107,8 +107,9 @@ function handlePost(PDO $pdo, int $userId, string $userSlug): void
             (user_id, title, slug, description_short, description_long, category,
              client_name, client_url, link_live, link_github, link_demo,
              technologies, duration, year, status, badge_text, badge_color,
-             is_featured, sort_order)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             is_featured, sort_order,
+             case_contexte, case_probleme, case_solution, case_resultat, case_lieu)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ");
     $stmt->execute([
         $userId, $v['title'], $v['slug'], $v['description_short'], $v['description_long'],
@@ -117,6 +118,8 @@ function handlePost(PDO $pdo, int $userId, string $userSlug): void
         json_encode($v['technologies'], JSON_UNESCAPED_UNICODE),
         $v['duration'], $v['year'], $v['status'],
         $v['badge_text'], $v['badge_color'], $v['is_featured'], $next,
+        $v['case_contexte'], $v['case_probleme'], $v['case_solution'],
+        $v['case_resultat'], $v['case_lieu'],
     ]);
 
     $id = (int) $pdo->lastInsertId();
@@ -154,7 +157,9 @@ function handlePut(PDO $pdo, int $userId): void
             category = ?, client_name = ?, client_url = ?,
             link_live = ?, link_github = ?, link_demo = ?,
             technologies = ?, duration = ?, year = ?, status = ?,
-            badge_text = ?, badge_color = ?, is_featured = ?
+            badge_text = ?, badge_color = ?, is_featured = ?,
+            case_contexte = ?, case_probleme = ?, case_solution = ?,
+            case_resultat = ?, case_lieu = ?
         WHERE id = ? AND user_id = ?
     ");
     $stmt->execute([
@@ -164,6 +169,8 @@ function handlePut(PDO $pdo, int $userId): void
         json_encode($v['technologies'], JSON_UNESCAPED_UNICODE),
         $v['duration'], $v['year'], $v['status'],
         $v['badge_text'], $v['badge_color'], $v['is_featured'],
+        $v['case_contexte'], $v['case_probleme'], $v['case_solution'],
+        $v['case_resultat'], $v['case_lieu'],
         $id, $userId,
     ]);
 
@@ -315,7 +322,23 @@ function validateProject(array $data): array
     $badgeColor = trim($data['badge_color'] ?? '');
     if ($badgeColor !== '' && !preg_match('/^#[0-9a-fA-F]{6}$/', $badgeColor)) $badgeColor = null;
 
-    return [
+    // Etude de cas — ajoute le 21/08/2026. Les colonnes case_* existaient en
+    // base et s'affichaient sur /realisations/{slug}, mais l'API ne les
+    // connaissait pas : elles n'etaient modifiables que par SQL direct.
+    // Les champs vides sont enregistres en NULL et non en chaine vide, car
+    // realisation.php masque une section sur un test !empty().
+    $caseLieu = trim($data['case_lieu'] ?? '');
+    if (mb_strlen($caseLieu) > 120) jsonError('Lieu trop long (max 120)');
+
+    $caseFields = [];
+    foreach (['case_contexte', 'case_probleme', 'case_solution', 'case_resultat'] as $champ) {
+        $valeur = trim($data[$champ] ?? '');
+        if (mb_strlen($valeur) > 20000) jsonError('Texte trop long pour ' . $champ . ' (max 20 000 caracteres)');
+        $caseFields[$champ] = ($valeur === '') ? null : $valeur;
+    }
+    $caseFields['case_lieu'] = ($caseLieu === '') ? null : $caseLieu;
+
+    return $caseFields + [
         'title'             => $title,
         'slug'              => $slug,
         'description_short' => $descShort,

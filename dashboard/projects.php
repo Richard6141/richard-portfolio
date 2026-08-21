@@ -161,6 +161,45 @@ require_once __DIR__ . '/../includes/dashboard-layout.php';
                     </div>
                 </div>
 
+                <!-- Etude de cas — ajoutee le 21/08/2026.
+                     Ces quatre sections n'apparaissent sur /realisations/{slug} que
+                     si elles sont remplies : on peut donc les completer une par une
+                     sans jamais casser l'affichage de la fiche. -->
+                <div class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 p-6">
+                    <h3 class="text-base font-semibold text-gray-900 font-heading mb-1">Etude de cas</h3>
+                    <p class="text-xs text-gray-500 mb-4">
+                        Chaque bloc rempli ajoute sa section sur la page publique du projet.
+                        <strong class="text-gray-700">Le resultat n'engage que ce que vous pouvez justifier</strong> :
+                        un chiffre publie sur un client identifiable doit etre verifiable, et le client d'accord pour qu'il paraisse.
+                    </p>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Le contexte</label>
+                            <p class="text-xs text-gray-500 mb-1">Le client, son activite, sa situation avant le projet.</p>
+                            <textarea x-model="form.case_contexte" rows="4" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none" placeholder="Qui est le client et dans quel contexte le projet est arrive."></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Le probleme a resoudre</label>
+                            <p class="text-xs text-gray-500 mb-1">Ce qui coincait concretement, avant.</p>
+                            <textarea x-model="form.case_probleme" rows="4" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none" placeholder="Le probleme reel, pas une generalite sur le secteur."></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Ce qui a ete mis en place</label>
+                            <p class="text-xs text-gray-500 mb-1">Ce qui a ete concu, et pourquoi ces choix.</p>
+                            <textarea x-model="form.case_solution" rows="4" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none" placeholder="La solution livree et les partis pris de conception."></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Le resultat</label>
+                            <p class="text-xs text-gray-500 mb-1">Ce que ca a change. Chiffres justifiables uniquement.</p>
+                            <textarea x-model="form.case_resultat" rows="4" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none" placeholder="Ce que le client constate depuis. Aucun chiffre invente."></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Lieu</label>
+                            <input type="text" x-model="form.case_lieu" maxlength="120" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none" placeholder="Cotonou, Benin">
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Client + Liens -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 p-6">
@@ -337,6 +376,10 @@ function projectsPage() {
             technologies: [], duration: '', year: new Date().getFullYear(),
             status: 'draft', badge_text: '', badge_color: '',
             is_featured: false, image_url: '', gallery: [],
+            // Etude de cas (21/08/2026) : ces colonnes existaient en base et
+            // s'affichaient sur /realisations/{slug}, sans etre editables ici.
+            case_contexte: '', case_probleme: '', case_solution: '',
+            case_resultat: '', case_lieu: '',
         },
 
         emptyForm() {
@@ -347,6 +390,8 @@ function projectsPage() {
                 technologies: [], duration: '', year: new Date().getFullYear(),
                 status: 'draft', badge_text: '', badge_color: '',
                 is_featured: false, image_url: '', gallery: [],
+                case_contexte: '', case_probleme: '', case_solution: '',
+                case_resultat: '', case_lieu: '',
             };
         },
 
@@ -388,6 +433,13 @@ function projectsPage() {
                 gallery: [...(item.gallery || [])],
                 badge_text: item.badge_text || '',
                 badge_color: item.badge_color || '',
+                // NULL en base doit devenir '' cote formulaire, sinon le
+                // textarea affiche litteralement "null".
+                case_contexte: item.case_contexte || '',
+                case_probleme: item.case_probleme || '',
+                case_solution: item.case_solution || '',
+                case_resultat: item.case_resultat || '',
+                case_lieu: item.case_lieu || '',
             };
             this.view = 'form';
             this.$nextTick(() => this.initQuill());
