@@ -99,6 +99,10 @@ if (!empty($p['client_name'])) {
     ]);
 }
 
+// Complements editoriaux : charges ici pour alimenter aussi le schema FAQ.
+$complements = require __DIR__ . '/data/realisations.php';
+$c = $complements[$slug] ?? null;
+
 $pageSchemas = [
     $creativeWork,
     [
@@ -111,6 +115,23 @@ $pageSchemas = [
         ],
     ],
 ];
+
+// FAQ des complements editoriaux : elle porte sur le TYPE de projet, pas sur
+// le client, donc elle est publiable sans risque de fausse declaration.
+if (!empty($c['faq'])) {
+    $pageSchemas[] = [
+        '@context'   => 'https://schema.org',
+        '@type'      => 'FAQPage',
+        'mainEntity' => array_map(
+            static fn(array $qa): array => [
+                '@type'          => 'Question',
+                'name'           => $qa['q'],
+                'acceptedAnswer' => ['@type' => 'Answer', 'text' => $qa['r']],
+            ],
+            $c['faq']
+        ),
+    ];
+}
 
 include __DIR__ . '/partials/pv2-head.php';
 include __DIR__ . '/partials/pv2-header.php';
@@ -189,6 +210,61 @@ include __DIR__ . '/partials/pv2-header.php';
       <?= $richText($descLong) ?>
     </div>
   </div></section>
+  <?php endif; ?>
+
+  <?php if ($c): ?>
+
+  <?php if (!empty($c['secteur'])): ?>
+  <section class="sect"><div class="wrap" style="max-width:820px">
+    <div class="prose rv">
+      <h2><?= sanitize($c['secteur']['titre']) ?></h2>
+      <?php foreach ($c['secteur']['paragraphes'] as $par): ?><p><?= sanitize($par) ?></p><?php endforeach; ?>
+    </div>
+  </div></section>
+  <?php endif; ?>
+
+  <?php if (!empty($c['technique'])): ?>
+  <section class="sect soft"><div class="wrap" style="max-width:820px">
+    <div class="prose rv">
+      <h2><?= sanitize($c['technique']['titre']) ?></h2>
+      <?php foreach ($c['technique']['choix'] as $ch): ?>
+        <h3><?= sanitize($ch['titre']) ?></h3>
+        <p><?= sanitize($ch['texte']) ?></p>
+      <?php endforeach; ?>
+    </div>
+  </div></section>
+  <?php endif; ?>
+
+  <?php if (!empty($c['transferable'])): ?>
+  <section class="sect"><div class="wrap" style="max-width:820px">
+    <div class="prose rv">
+      <h2><?= sanitize($c['transferable']['titre']) ?></h2>
+      <?php foreach ($c['transferable']['paragraphes'] as $par): ?><p><?= sanitize($par) ?></p><?php endforeach; ?>
+    </div>
+  </div></section>
+  <?php endif; ?>
+
+  <?php if (!empty($c['checklist'])): ?>
+  <section class="sect"><div class="wrap" style="max-width:820px">
+    <div class="prose rv">
+      <h2><?= sanitize($c['checklist']['titre']) ?></h2>
+      <p><?= sanitize($c['checklist']['intro']) ?></p>
+      <ul class="inc-list"><?php foreach ($c['checklist']['points'] as $pt): ?><li><?= sanitize($pt) ?></li><?php endforeach; ?></ul>
+    </div>
+  </div></section>
+  <?php endif; ?>
+
+  <?php if (!empty($c['faq'])): ?>
+  <section class="sect soft"><div class="wrap" style="max-width:820px">
+    <div class="sect-head rv"><h2>Questions fréquentes sur ce type de projet</h2></div>
+    <div class="faq rv">
+      <?php foreach ($c['faq'] as $qa): ?>
+      <details><summary><?= sanitize($qa['q']) ?></summary><p><?= sanitize($qa['r']) ?></p></details>
+      <?php endforeach; ?>
+    </div>
+  </div></section>
+  <?php endif; ?>
+
   <?php endif; ?>
 
   <?php if ($autres): ?>
