@@ -101,7 +101,7 @@ include __DIR__ . '/partials/pv2-header.php';
       <a href="/contact" class="btn">Demander un devis gratuit</a>
       <a href="/developpeur-web-<?= sanitize($page['ville_slug']) ?>" class="btn btn-ghost">Développeur web à <?= sanitize($page['ville']) ?></a>
     </div>
-    <div class="vil-meta"><span><?= sanitize($page['ville']) ?>, <?= sanitize($page['pays']) ?></span></div>
+    <div class="vil-meta"><span><?= $page['ville_slug'] !== '' ? sanitize($page['ville']) . ', ' . sanitize($page['pays']) : sanitize($page['ville']) ?></span></div>
   </div></section>
 
   <?php if (!empty($page['intro'])): ?>
@@ -141,7 +141,7 @@ include __DIR__ . '/partials/pv2-header.php';
 
   <?php if (!empty($page['faq'])): ?>
   <section class="sect"><div class="wrap" style="max-width:820px">
-    <div class="sect-head rv"><h2>Ce qu'on me demande à <?= sanitize($page['ville']) ?>.</h2></div>
+    <div class="sect-head rv"><h2><?= $page['ville_slug'] !== '' ? "Ce qu'on me demande à " . sanitize($page['ville']) . "." : 'Questions fréquentes.' ?></h2></div>
     <div class="faq rv">
       <?php foreach ($page['faq'] as $qa): ?>
       <details><summary><?= sanitize($qa['q']) ?></summary><p><?= sanitize($qa['r']) ?></p></details>
@@ -152,7 +152,7 @@ include __DIR__ . '/partials/pv2-header.php';
 
   <?php if ($autresSujets): ?>
   <section class="sect soft"><div class="wrap" style="max-width:820px">
-    <div class="sect-head rv"><h2>Autres sujets à <?= sanitize($page['ville']) ?>.</h2></div>
+    <div class="sect-head rv"><h2><?= $page['ville_slug'] !== '' ? 'Autres sujets à ' . sanitize($page['ville']) . '.' : 'Autres sujets.' ?></h2></div>
     <div class="bento stg">
       <?php foreach ($autresSujets as $a): ?>
       <a class="svc" href="/<?= sanitize($a['page']['slug']) ?>"><h3><?= sanitize($a['page']['titre']) ?></h3><p><?= sanitize($a['page']['accroche']) ?></p><div class="arrow">Lire la page</div></a>
@@ -163,7 +163,7 @@ include __DIR__ . '/partials/pv2-header.php';
 
   <?php if ($memeSujetAilleurs): ?>
   <section class="sect"><div class="wrap" style="max-width:820px">
-    <div class="sect-head rv"><h2><?= sanitize($sujet['nom'] ?? '') ?> dans d'autres villes.</h2></div>
+    <div class="sect-head rv"><h2><?= $page['ville_slug'] !== '' ? sanitize($sujet['nom'] ?? '') . " dans d'autres villes." : 'À lire aussi.' ?></h2></div>
     <div class="zone-grid">
       <?php foreach ($memeSujetAilleurs as $pg): ?>
       <a href="/<?= sanitize($pg['slug']) ?>"><?= sanitize($pg['ville']) ?></a>
@@ -173,7 +173,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <?php endif; ?>
 
   <div class="cta-band"><div class="wrap"><div class="cta-inner rv" id="contact">
-    <h2>Un projet à <?= sanitize($page['ville']) ?> ?</h2>
+    <h2><?= $page['ville_slug'] !== '' ? 'Un projet à ' . sanitize($page['ville']) . ' ?' : 'Un projet de digitalisation ?' ?></h2>
     <p>Décrivez votre situation, je reviens avec un plan par étapes et un devis gratuit.</p>
     <a href="/contact" class="btn">Demander mon devis gratuit</a>
   </div></div></div>
