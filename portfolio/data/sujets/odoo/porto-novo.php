@@ -1,7 +1,7 @@
 <?php
-// Odoo x Porto-Novo — genere le 21/08/2026.
-// Squelette commun, substance propre a la ville (secteur, flux, contrainte,
-// quartiers, tissu economique) et a l'ERP (modules, budget, positionnement).
+// Intégration Odoo à Porto-Novo — genere le 21/08/2026, enrichi d'un cas concret et d'une
+// objection propres a la ville : la differenciation ne peut pas reposer
+// seulement sur le nom de la ville.
 declare(strict_types=1);
 
 return array (
@@ -127,35 +127,54 @@ return array (
         1 => 'Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
       ),
     ),
+    4 => 
+    array (
+      'type' => 'definitions',
+      'etiquette' => 'Cas concret',
+      'titre' => 'Un exemple typique à Porto-Novo.',
+      'items' => 
+      array (
+        0 => 
+        array (
+          'titre' => 'Un établissement scolaire qui doit justifier trois exercices',
+          'texte' => 'Retrouver un dossier de l\'année précédente prend une demi-heure et personne ne sait quelle version fait foi. L\'ERP horodate chaque validation et rend le dossier consultable en quelques secondes, avec sa trace complète.',
+        ),
+      ),
+    ),
   ),
   'faq' => 
   array (
     0 => 
     array (
+      'q' => 'Nos procédures sont imposées par la tutelle. L\'ERP va-t-il nous obliger à les changer ?',
+      'r' => 'Non, l\'inverse : le paramétrage épouse le circuit obligatoire et le rend traçable. Si un ERP vous demande de modifier une procédure imposée, c\'est qu\'il est mal paramétré.',
+    ),
+    1 => 
+    array (
       'q' => 'Odoo convient-il à une entreprise de Porto-Novo ?',
       'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Odoo se justifie quand plusieurs services doivent partager les mêmes données et que vos processus restent proches des standards du marché. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher — et je vous le dirai.',
     ),
-    1 => 
+    2 => 
     array (
       'q' => 'Combien de temps avant une mise en production ?',
       'r' => 'Comptez 4 à 8 semaines pour un premier module réellement en service, formation comprise. Un déploiement couvrant plusieurs métiers s\'étale sur quelques mois, par paliers, sans jamais interrompre votre activité.',
     ),
-    2 => 
+    3 => 
     array (
       'q' => 'Peut-on connecter Odoo à WhatsApp et au Mobile Money ?',
       'r' => 'Oui, par automatisation n8n. Les demandes reçues sur WhatsApp alimentent Odoo, et les règlements Mobile Money se rapprochent des factures. Ce n\'est pas natif : c\'est un travail d\'intégration à budgéter explicitement.',
     ),
-    3 => 
+    4 => 
     array (
       'q' => 'Intervenez-vous sur place à Porto-Novo ?',
       'r' => 'Je suis basé à Abomey-Calavi : un déplacement à Porto-Novo pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
     ),
-    4 => 
+    5 => 
     array (
       'q' => 'Que se passe-t-il si je change de prestataire ?',
       'r' => 'Odoo étant open source et auto-hébergé, vous gardez le serveur, la base et les modules. N\'importe quel intégrateur peut reprendre le dossier. C\'est un argument réel face à un logiciel propriétaire fermé, et une clause que je pose sans qu\'on me la demande.',
     ),
-    5 => 
+    6 => 
     array (
       'q' => 'Et si mon équipe n\'est pas à l\'aise avec l\'informatique ?',
       'r' => 'C\'est la situation la plus fréquente, et c\'est un critère de conception plutôt qu\'un obstacle. On réduit les écrans à ce qui sert, on forme sur les vraies données pendant le déploiement, et on garde le papier en parallèle le temps que la confiance s\'installe.',
