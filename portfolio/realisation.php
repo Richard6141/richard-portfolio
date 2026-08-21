@@ -136,7 +136,8 @@ include __DIR__ . '/partials/pv2-header.php';
       <?php if (!empty($p['category'])): ?><div><h3>Type de projet</h3><p><?= sanitize($p['category']) ?></p></div><?php endif; ?>
       <?php if (!empty($p['year'])): ?><div><h3>Année</h3><p><?= sanitize((string) $p['year']) ?></p></div><?php endif; ?>
       <?php if (!empty($p['duration'])): ?><div><h3>Durée</h3><p><?= sanitize($p['duration']) ?></p></div><?php endif; ?>
-      <?php if (!empty($p['status'])): ?><div><h3>Statut</h3><p><?= sanitize($p['status']) ?></p></div><?php endif; ?>
+      <?php $statutLabel = projectStatusLabel($p['status'] ?? null); ?>
+      <?php if ($statutLabel !== ''): ?><div><h3>Statut</h3><p><?= sanitize($statutLabel) ?></p></div><?php endif; ?>
     </div>
 
     <?php if ($technos): ?>

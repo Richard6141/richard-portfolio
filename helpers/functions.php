@@ -161,6 +161,68 @@ function seoDescription(string $text, int $max = 160): string
 }
 
 /**
+ * Libelle public du statut d'un projet.
+ *
+ * Ajoute le 21/08/2026. Les fiches realisations affichaient la valeur brute de
+ * la base : trois projets annoncaient "archived" a leurs visiteurs, ce qui se
+ * lit comme un projet abandonne alors qu'ils ont bien ete livres. "published"
+ * n'etait pas plus parlant pour un prospect.
+ *
+ * Un statut inconnu renvoie une chaine vide : le template masque alors la
+ * ligne, plutot que d'exposer un identifiant technique. Mieux vaut une
+ * information absente qu'une information incomprehensible.
+ */
+function projectStatusLabel(?string $status): string
+{
+    return match (mb_strtolower(trim((string) $status))) {
+        'published', 'archived', 'completed', 'done' => 'Livré',
+        'in_progress', 'ongoing', 'wip'              => 'En cours',
+        'maintenance'                                => 'En maintenance',
+        default                                      => '',
+    };
+}
+
+/**
+ * Normalise et dedoublonne une liste d'URL de profils pour le sameAs JSON-LD.
+ *
+ * Ajoute le 21/08/2026. Le sameAs declarait DEUX profils LinkedIn differents
+ * (/in/richard-salanon et /in/salanon-richard) : un seul etait le bon, et le
+ * doublon diluait la resolution d'entite — un moteur ne sait pas lequel fait
+ * foi. La cause etait structurelle : les profils garantis du code et ceux du
+ * dashboard etaient fusionnes par un array_unique() sur la chaine brute, qui
+ * ne voit pas que "…/richard-salanon" et "…/richard-salanon/" sont la meme
+ * page.
+ *
+ * On compare donc sur une forme canonique (schema et hote en minuscules, "www."
+ * retire, barre finale retiree) tout en conservant l'URL d'origine pour
+ * l'affichage. Le premier arrive gagne : les profils garantis du code passent
+ * avant ceux du dashboard.
+ *
+ * @param  list<string> $urls
+ * @return list<string>
+ */
+function normalizeProfileUrls(array $urls): array
+{
+    $vues   = [];
+    $sortie = [];
+
+    foreach ($urls as $url) {
+        $url = trim((string) $url);
+        if ($url === '') continue;
+
+        $cle = rtrim($url, '/');
+        $cle = preg_replace('#^https?://(www\.)?#i', '', $cle) ?? $cle;
+        $cle = mb_strtolower($cle);
+
+        if (isset($vues[$cle])) continue;
+        $vues[$cle] = true;
+        $sortie[]   = $url;
+    }
+
+    return $sortie;
+}
+
+/**
  * URL publique du logo du site.
  *
  * Prefere le WebP (5,4 Ko, sans perte) au PNG d'origine (48,3 Ko, 689x362

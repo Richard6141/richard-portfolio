@@ -184,11 +184,14 @@ if (($contactInfo['city'] ?? '') || ($contactInfo['country'] ?? '')) {
 }
 $jsonLd['knowsAbout'] = ['Développement web', 'Référencement naturel (SEO)', 'Automatisation', 'Intelligence artificielle', 'Digitalisation d\'entreprise'];
 // Profils officiels garantis (renforce l'entité pour Google et les moteurs IA), fusionnés avec les réseaux du dashboard
-$profileSameAs = ['https://www.linkedin.com/in/richard-salanon', 'https://github.com/Richard6141'];
+$profileSameAs = ['https://www.linkedin.com/in/richard-salanon/', 'https://github.com/Richard6141'];
 if (!empty($socialLinks)) {
     $profileSameAs = array_merge($profileSameAs, array_column($socialLinks, 'url'));
 }
-$jsonLd['sameAs'] = array_values(array_unique(array_filter($profileSameAs)));
+// 21/08/2026 : array_unique() sur la chaine brute laissait passer deux profils
+// LinkedIn pour la meme personne. normalizeProfileUrls() compare sur une forme
+// canonique (barre finale, "www.", casse). Voir helpers/functions.php.
+$jsonLd['sameAs'] = normalizeProfileUrls(array_filter($profileSameAs));
 
 // JSON-LD — ProfessionalService (Bénin, Afrique, Europe francophone, Canada, Monde)
 $serviceSchema = [

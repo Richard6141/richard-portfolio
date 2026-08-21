@@ -23,7 +23,7 @@ $pageSchemas = [
             'url' => $portfolioUrl, 'worksFor' => ['@type' => 'Organization', '@id' => $portfolioUrl . '/#organization', 'name' => 'Richard Technologies'],
             'address' => ['@type' => 'PostalAddress', 'addressLocality' => $h_city, 'addressCountry' => 'BJ'],
             'knowsAbout' => ['Developpement web', 'Referencement naturel (SEO)', 'Automatisation', 'Intelligence artificielle', 'Digitalisation d\'entreprise'],
-            'sameAs' => ['https://www.linkedin.com/in/richard-salanon', 'https://github.com/Richard6141'],
+            'sameAs' => ['https://www.linkedin.com/in/richard-salanon/', 'https://github.com/Richard6141'],
         ],
     ],
     [
