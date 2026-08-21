@@ -1,0 +1,62 @@
+<?php
+// Portfolio Prudence SALANON — site personnel (HTML/CSS, JavaScript, PHP).
+// Complements editoriaux : portfolio professionnel, architecture, enseignements.
+declare(strict_types=1);
+
+return [
+    'secteur' => [
+        'titre' => "Le portfolio professionnel : un outil de candidature, pas une vitrine",
+        'paragraphes' => [
+            "Un portfolio en ligne ne sert pas à impressionner : il sert à répondre, avant qu'elles ne soient posées, aux questions d'un recruteur ou d'un client qui hésite. Qui est cette personne, qu'a-t-elle réellement fait, et comment la contacter. Tout ce qui ne concourt pas à ces trois réponses encombre. C'est ce qui distingue un portfolio efficace d'une démonstration technique : le second flatte son auteur, le premier obtient un rendez-vous.",
+            "Le contexte de lecture est particulier et souvent mal anticipé. Un recruteur consulte un portfolio entre deux tâches, fréquemment depuis un téléphone, avec quelques dizaines de secondes d'attention. Il ne lira pas une biographie chronologique complète. Il cherche à situer rapidement un profil, à vérifier une compétence annoncée, et à trouver un moyen de contact. Un portfolio qui exige de faire défiler trois écrans avant d'afficher le métier de la personne a déjà échoué.",
+            "Dans les métiers de la communication en particulier, le portfolio est aussi un échantillon du travail. La façon dont l'information est organisée, la clarté des textes et la cohérence visuelle en disent autant que les réalisations présentées. Un portfolio confus dans un métier dont l'objet est de rendre les choses claires envoie un signal contradictoire, quelles que soient les références affichées.",
+            "Il y a enfin un enjeu de durée de vie. Un portfolio se construit une fois et doit rester pertinent plusieurs années, en s'enrichissant progressivement. Cela oriente vers des choix sobres, qui ne se démoderont pas, et vers une architecture où l'ajout d'une réalisation ne demande aucune intervention technique. Un portfolio qu'on ne peut pas mettre à jour soi-même cesse d'être à jour au bout de six mois, et devient alors contre-productif.",
+            "Dernier point, souvent négligé : un portfolio est de plus en plus lu par des machines avant de l'être par des humains. Outils de présélection, moteurs de recherche, assistants conversationnels. Un contenu rendu par le serveur, structuré et explicite se laisse lire et citer correctement ; un contenu construit par le navigateur reste souvent invisible pour eux.",
+        ],
+    ],
+
+    'technique' => [
+        'titre' => "Les choix techniques et leur justification",
+        'choix' => [
+            ['titre' => "Contenu rendu par le serveur", 'texte' => "Le texte est présent dans le HTML servi, pas assemblé par le navigateur. Cela garantit trois choses : la page s'affiche même sur une connexion lente, les moteurs de recherche lisent l'intégralité du contenu sans exécuter de script, et un outil de présélection automatique voit le même texte qu'un visiteur humain."],
+            ['titre' => "Une structure de titres qui reflète le contenu", 'texte' => "Un seul titre principal, des sections hiérarchisées logiquement. Ce n'est pas une question de style mais de lisibilité machine et d'accessibilité : c'est ce qui permet à un lecteur d'écran comme à un moteur de comprendre l'organisation de la page sans interprétation."],
+            ['titre' => "PHP léger plutôt qu'un générateur de site", 'texte' => "Un portfolio évolue par ajouts successifs de réalisations. Du PHP simple permet de gérer ces contenus sans imposer une chaîne de compilation ni une republication complète à chaque modification. C'est aussi ce qui garantit qu'il reste hébergeable partout, sans dépendance particulière."],
+            ['titre' => "Des images dimensionnées pour l'affichage réel", 'texte' => "Sur un portfolio, les visuels représentent l'essentiel du poids. Formats modernes, dimensions ajustées, chargement différé sous la ligne de flottaison. L'objectif est qu'un recruteur sur connexion mobile voie la page complète avant de perdre patience."],
+            ['titre' => "Contact accessible depuis n'importe quel écran", 'texte' => "Adresse e-mail et téléphone cliquables, présents en permanence et non relégués à une page dédiée. Un visiteur convaincu à mi-parcours doit pouvoir agir immédiatement, sans avoir à chercher comment vous joindre."],
+        ],
+    ],
+
+    'transferable' => [
+        'titre' => "Ce qu'on peut en retirer pour son propre portfolio",
+        'paragraphes' => [
+            "Le premier enseignement est de dire son métier dans les cinq premiers mots visibles. Beaucoup de portfolios commencent par une formule d'accroche générale ou une citation, obligeant le lecteur à deviner. Or c'est la première information cherchée. L'annoncer immédiatement, en clair, coûte une ligne et retient un visiteur qui serait parti.",
+            "Le deuxième porte sur la sélection. Un portfolio qui présente six réalisations bien décrites convainc davantage que vingt vignettes sans contexte. Pour chacune : ce qui était demandé, ce qui a été fait, et le résultat. La quantité impressionne rarement ; la capacité à expliquer une démarche, toujours.",
+            "Le troisième concerne le contact. Il doit être atteignable depuis n'importe quel endroit du site, en un geste. Un formulaire seul, sans adresse ni numéro visible, fait perdre des opportunités : beaucoup de gens préfèrent écrire depuis leur propre messagerie ou appeler directement.",
+            "Le quatrième est une question de maintenance. Choisissez une solution que vous pouvez mettre à jour vous-même. Un portfolio dont chaque modification exige un développeur ne sera pas mis à jour, et un portfolio obsolète nuit davantage qu'il ne sert — il donne à voir une activité arrêtée.",
+            "Le dernier point est la vitesse. On l'associe rarement à un portfolio, à tort. Un recruteur ou un client qui attend trois secondes sur mobile referme souvent avant d'avoir vu quoi que ce soit. La performance n'est pas un détail technique ici : c'est ce qui détermine si votre travail sera vu.",
+        ],
+    ],
+
+    'checklist' => [
+        'titre' => "À vérifier avant de publier un portfolio",
+        'intro' => "Ces points font la différence entre un portfolio qui génère des contacts et un portfolio qu'on montre sans jamais en tirer d'opportunité.",
+        'points' => [
+            "Votre métier est-il lisible dans les cinq premiers mots visibles, sans avoir à faire défiler ?",
+            "Combien de réalisations présentez-vous, et chacune est-elle expliquée ? Six commentées valent mieux que vingt muettes.",
+            "Peut-on vous contacter depuis n'importe quelle page, en un geste, avec un numéro et un e-mail visibles ?",
+            "La page se charge-t-elle en moins de trois secondes sur une connexion mobile ordinaire ?",
+            "Pouvez-vous ajouter une réalisation vous-même, sans intervention extérieure ?",
+            "Le contenu est-il lisible sans JavaScript ? C'est ce que voient les outils de présélection et les moteurs.",
+            "Vos textes sont-ils relus ? Dans les métiers de la communication, une faute coûte plus cher qu'ailleurs.",
+            "Le nom de domaine est-il à votre nom, et renouvelé automatiquement ? Un portfolio expiré efface des années de référencement.",
+        ],
+    ],
+
+    'faq' => [
+        ['q' => "Combien coûte un portfolio professionnel ?", 'r' => "Un portfolio soigné démarre autour de 150 000 à 300 000 FCFA selon le nombre de réalisations à présenter et le travail sur les visuels. C'est l'un des projets les plus accessibles, et souvent le plus rentable pour un indépendant."],
+        ['q' => "Un profil LinkedIn ne suffit-il pas ?", 'r' => "LinkedIn vous impose son format, sa mise en page et ses limites, et ne vous appartient pas. Un portfolio sur votre propre domaine vous permet de présenter votre travail comme vous l'entendez, et reste accessible même si la plateforme change ses règles."],
+        ['q' => "Combien de temps pour la mise en ligne ?", 'r' => "1 à 2 semaines en général. Le développement est court ; la sélection des réalisations et la rédaction des textes prennent l'essentiel du temps, et c'est là que se joue la qualité du résultat."],
+        ['q' => "Puis-je ajouter des réalisations moi-même ?", 'r' => "Oui, via un espace d'administration simple. C'est indispensable : un portfolio qu'on ne peut pas mettre à jour soi-même cesse d'être à jour en quelques mois."],
+        ['q' => "Mon portfolio sera-t-il trouvable sur Google ?", 'r' => "Sur votre nom, oui, assez rapidement. Sur des requêtes de métier, cela demande du contenu régulier et du temps. Pour un indépendant, être trouvable sur son nom est déjà l'essentiel : c'est ce que tape un prospect à qui l'on vous a recommandé."],
+    ],
+];
