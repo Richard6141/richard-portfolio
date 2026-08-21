@@ -80,6 +80,7 @@ return [
                 ['titre' => "Comment digitaliser son entreprise", 'texte' => "Le guide étape par étape.", 'url' => '/blog/comment-digitaliser-son-entreprise-le-guide-etape-par-etape'],
                 ['titre' => "Digitalisation des PME", 'texte' => "Par où commencer et à quel coût.", 'url' => '/blog/digitalisation-des-pme-par-o-commencer-et-quel-cot'],
                 ['titre' => "Le service et ses tarifs", 'texte' => "Le détail de la prestation de digitalisation.", 'url' => '/services/digitalisation-d-entreprise'],
+                ['titre' => "Consultant en digitalisation", 'texte' => "Si vous cherchez un diagnostic et une feuille de route avant d'engager une réalisation.", 'url' => '/consultant-digitalisation'],
             ],
         ],
     ],
