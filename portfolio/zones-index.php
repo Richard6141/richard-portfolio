@@ -112,6 +112,37 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
   <?php endforeach; ?>
 
+  <?php
+  // Villes presentes dans le registre mais absentes de data/villes : Paris,
+  // Bruxelles, Geneve, Montreal... Sans ce bloc elles restaient orphelines,
+  // la boucle ci-dessus ne parcourant que les villes ayant une page
+  // /developpeur-web-*. Ce filet rattrape aussi tout sujet ajoute plus tard.
+  $slugsConnus = [];
+  foreach ($villes as $v) { $slugsConnus[$v['slug']] = true; }
+  $horsListe = [];
+  foreach ($registre as $sj) {
+      foreach ($sj['pages'] as $vSlug => $pg) {
+          if (!isset($slugsConnus[$vSlug])) {
+              $horsListe[$pg['pays']][$vSlug][] = $pg;
+          }
+      }
+  }
+  ?>
+  <?php if ($horsListe): ?>
+  <section class="sect"><div class="wrap">
+    <div class="sect-head rv"><span class="mono">Europe &amp; Amérique du Nord</span><h2>J'accompagne aussi des entreprises hors d'Afrique</h2>
+      <p>Projets menés à distance, avec un cadre contractuel, fiscal et de protection des données adapté à chaque pays.</p></div>
+    <?php foreach ($horsListe as $paysNom => $parVille): ?>
+    <h3 style="margin:1.6rem 0 .6rem"><?= sanitize($paysNom) ?></h3>
+    <div class="zone-grid">
+      <?php foreach ($parVille as $pages): foreach ($pages as $pg): ?>
+        <a href="/<?= sanitize($pg['slug']) ?>"><?= sanitize($pg['ville']) ?></a>
+      <?php endforeach; endforeach; ?>
+    </div>
+    <?php endforeach; ?>
+  </div></section>
+  <?php endif; ?>
+
   <section class="sect"><div class="wrap" style="max-width:820px">
     <div class="prose rv">
       <h2>Votre ville n'est pas dans la liste ?</h2>
