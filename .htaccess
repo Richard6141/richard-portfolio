@@ -87,8 +87,6 @@ RewriteRule ^developpeur-web-([a-z0-9-]+)$ /portfolio/ville.php?ville=$1 [QSA,L]
 
 # Les pages digitalisation sont desormais servies par le registre generique
 # (data/sujets/) via route.php : leurs regles dediees sont devenues inutiles.
-RewriteRule ^(digitaliser-[a-z0-9-]+)/$ /$1 [R=301,L]
-RewriteRule ^(digitaliser-[a-z0-9-]+)$ /portfolio/digitalisation.php?p=$1 [QSA,L]
 
 # ----------------------------------------------------------
 # Servir directement les fichiers statiques qui existent
