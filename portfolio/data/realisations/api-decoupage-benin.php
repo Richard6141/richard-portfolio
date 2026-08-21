@@ -12,6 +12,7 @@ return [
             "Le second manque est celui de la structure hiérarchique. Une simple liste de communes ne suffit pas : une interface correcte propose d'abord le département, puis filtre les communes correspondantes, puis les arrondissements. Cela suppose que les relations entre niveaux soient explicites et interrogeables, et non déduites d'un fichier plat. C'est exactement ce qu'une API expose naturellement et qu'un fichier CSV recopié ne fournit jamais.",
             "Il y a enfin une dimension d'écosystème. Dans beaucoup de pays, ces données de référence sont publiées par une administration sous forme exploitable. Quand ce n'est pas le cas, chaque développeur bricole dans son coin. Publier une ressource ouverte, documentée et stable fait gagner du temps à tout le monde et améliore la qualité générale des applications locales — c'est un travail d'infrastructure discret, dont la valeur se mesure au nombre de projets qui n'ont plus à le refaire.",
             "Ce type de projet a par ailleurs une vertu pour celui qui le développe : une API publique est visible, testable par n'importe qui, et ne pardonne aucune approximation. Elle constitue une démonstration de rigueur bien plus convaincante qu'une capture d'écran, parce que le lecteur peut la vérifier lui-même en une requête.",
+            "Une ressource de ce type gagne enfin à indiquer clairement sa source et sa date de mise à jour. Un développeur qui envisage d'en dépendre veut savoir d'où viennent les données et à quand remonte leur dernière vérification.",
         ],
     ],
 

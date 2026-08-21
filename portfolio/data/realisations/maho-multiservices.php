@@ -12,6 +12,7 @@ return [
             "La solution structurelle consiste à donner à chaque prestation sa propre page, avec son propre contenu, son propre vocabulaire et sa propre preuve. C'est plus de travail à la conception, mais c'est ce qui transforme un site vitrine en source de contacts : chaque page devient une porte d'entrée sur une recherche précise, et le visiteur atterrit directement sur ce qu'il cherchait.",
             "Cette approche a un bénéfice commercial secondaire souvent sous-estimé. Un visiteur venu pour une prestation découvre les autres une fois la confiance établie. Le maillage entre les pages transforme un besoin ponctuel en relation durable — à condition que chaque page existe réellement et ne soit pas une simple ancre sur une liste.",
             "Reste la question de la crédibilité, particulièrement sensible pour une entreprise multiservices. Proposer beaucoup de choses éveille naturellement le soupçon de ne rien faire vraiment bien. Le seul contrepoids efficace est la preuve concrète : réalisations, avis clients, photos de chantiers ou d'interventions. Sans elles, la diversité de l'offre se retourne contre l'entreprise.",
+            "Un point pratique fait souvent la différence sur ce type de site : indiquer les délais d'intervention habituels. Un client qui cherche un service de proximité a presque toujours une contrainte de temps, et savoir si vous intervenez sous vingt-quatre heures ou sous une semaine oriente sa décision autant que le prix. Cette information manque sur la grande majorité des sites du secteur.",
         ],
     ],
 
