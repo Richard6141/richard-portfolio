@@ -1,7 +1,7 @@
 <?php
-// Intégration Odoo à Ouidah — genere le 21/08/2026, enrichi d'un cas concret et d'une
-// objection propres a la ville : la differenciation ne peut pas reposer
-// seulement sur le nom de la ville.
+// Intégration Odoo à Ouidah — reequilibre le 21/08/2026 : generique raccourci,
+// contenu local etendu. La differenciation ne peut pas reposer sur le
+// seul nom de la ville.
 declare(strict_types=1);
 
 return array (
@@ -53,32 +53,32 @@ return array (
         0 => 
         array (
           'titre' => 'Ventes et CRM',
-          'texte' => 'Devis, commandes, suivi des opportunités et historique client. C\'est presque toujours le module par lequel on commence, parce que son bénéfice se voit dès la première semaine.',
+          'texte' => 'Devis, commandes, suivi des opportunités. Presque toujours le premier module mis en service.',
         ),
         1 => 
         array (
           'titre' => 'Stock et inventaire',
-          'texte' => 'Entrées, sorties, emplacements multiples, inventaires tournants et alertes de seuil. Le second module le plus demandé, et celui qui révèle le plus d\'écarts avec la réalité au démarrage.',
+          'texte' => 'Entrées, sorties, emplacements multiples, alertes de seuil.',
         ),
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Demandes de prix, commandes fournisseurs, réceptions partielles et suivi des coûts d\'approvisionnement, base du calcul de marge réelle.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
         ),
         3 => 
         array (
           'titre' => 'Comptabilité',
-          'texte' => 'Le paramétrage livré par défaut ne correspond pas au plan comptable OHADA : c\'est du réglage à prévoir avec votre comptable, pas du développement.',
+          'texte' => 'Le paramétrage par défaut n\'est pas le plan OHADA : c\'est du réglage à prévoir avec votre comptable.',
         ),
         4 => 
         array (
           'titre' => 'Point de vente',
-          'texte' => 'Caisse tactile fonctionnant même en cas de coupure réseau, avec synchronisation au retour de la connexion. Utile dès qu\'il y a un comptoir.',
+          'texte' => 'Caisse tactile qui continue de fonctionner pendant une coupure réseau.',
         ),
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'C\'est là que je fais la différence : relier Odoo à WhatsApp, au Mobile Money ou à vos outils existants, plutôt que de vous demander de tout faire entrer dans Odoo.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -92,27 +92,27 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui à Ouidah : une demande de réservation, un acompte, un planning de chambres, un séjour avec extras et une facturation au départ. C\'est presque toujours là qu\'apparaissent les deux ou trois points qui coûtent le plus — et ce ne sont jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
-          'titre' => 'Un module mis en production, pas une démonstration',
-          'texte' => 'On choisit le module qui règle le point le plus douloureux, on le met en service sur les vraies données, et on mesure le gain avant d\'ouvrir le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
+          'titre' => 'Un module en production, pas une démonstration',
+          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
         ),
         2 => 
         array (
           'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Fichier clients, catalogue et soldes en cours : oui. L\'historique complet des années passées : rarement. Il coûte cher à migrer et importe d\'anciennes erreurs dans un système neuf.',
+          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
         ),
         3 => 
         array (
           'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp reste votre canal client, le Mobile Money votre moyen d\'encaissement. On les relie à Odoo par automatisation plutôt que de demander à vos clients de changer leurs habitudes.',
+          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
         ),
         4 => 
         array (
           'titre' => 'Formation d\'un référent interne',
-          'texte' => 'L\'objectif est que vous n\'ayez plus besoin de moi pour l\'exploitation courante : créer un utilisateur, ajuster un droit, sortir un état. Sans référent formé sur place, aucun ERP ne survit à deux ans.',
+          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
         ),
       ),
     ),
@@ -139,6 +139,31 @@ return array (
           'titre' => 'Une maison d\'hôtes de la route des Pêches',
           'texte' => 'Le planning tenu sur papier finit toujours par produire une double réservation, qui coûte un client mécontent et une nuit perdue. Un planning unique et partagé rend l\'erreur structurellement impossible.',
         ),
+      ),
+    ),
+    5 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qu\'une activité saisonnière et lointaine impose',
+      'paragraphes' => 
+      array (
+        0 => 'À Ouidah, le client décide avant d\'arriver, souvent depuis Cotonou, la diaspora ou l\'étranger. Cela déplace la priorité : avant d\'organiser l\'interne, il faut être trouvable et réservable.',
+        1 => 'Un ERP arrive donc en second, une fois que les chambres ou les couverts se remplissent. Le déployer avant la visibilité revient à optimiser une activité qu\'on n\'a pas encore.',
+        2 => 'Quand il arrive, son premier apport est le planning unique. Deux personnes prenant des réservations sur deux supports produisent tôt ou tard une double réservation, qui coûte un client mécontent et une nuit perdue.',
+        3 => 'Le second est l\'acompte. Sans lui, une réservation ne vaut qu\'une promesse, et une chambre libérée la veille ne se reloue presque jamais en basse saison. C\'est la mesure qui change le plus la trésorerie sur une activité courte.',
+      ),
+    ),
+    6 => 
+    array (
+      'type' => 'liste',
+      'etiquette' => 'Pièges',
+      'titre' => 'Erreurs fréquentes que je corrige à Ouidah',
+      'items' => 
+      array (
+        0 => 'Investir dans un ERP complet avant d\'avoir réglé la visibilité en ligne et la fiche Google. L\'ordre inverse est presque toujours plus rentable.',
+        1 => 'Dépendre uniquement des plateformes de réservation et de leurs commissions, sans canal direct.',
+        2 => 'Négliger la version anglaise quand une part de la clientèle vient de l\'étranger.',
       ),
     ),
   ),

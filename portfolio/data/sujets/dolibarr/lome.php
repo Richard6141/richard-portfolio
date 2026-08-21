@@ -1,7 +1,7 @@
 <?php
-// Intégration Dolibarr à Lomé — genere le 21/08/2026, enrichi d'un cas concret et d'une
-// objection propres a la ville : la differenciation ne peut pas reposer
-// seulement sur le nom de la ville.
+// Intégration Dolibarr à Lomé — reequilibre le 21/08/2026 : generique raccourci,
+// contenu local etendu. La differenciation ne peut pas reposer sur le
+// seul nom de la ville.
 declare(strict_types=1);
 
 return array (
@@ -52,33 +52,33 @@ return array (
       array (
         0 => 
         array (
-          'titre' => 'Tiers, prospects et clients',
-          'texte' => 'Un fichier unique pour les clients, fournisseurs et prospects, avec l\'historique complet des échanges. Le socle sur lequel tout le reste s\'appuie.',
+          'titre' => 'Tiers et clients',
+          'texte' => 'Un fichier unique clients, fournisseurs et prospects, avec tout l\'historique.',
         ),
         1 => 
         array (
-          'titre' => 'Devis, commandes et factures',
-          'texte' => 'Le circuit commercial complet, de la proposition au règlement, avec relances des impayés. C\'est le module qui rentabilise Dolibarr le plus vite.',
+          'titre' => 'Devis, commandes, factures',
+          'texte' => 'Le circuit commercial complet et les relances d\'impayés. Le module qui rentabilise le plus vite.',
         ),
         2 => 
         array (
           'titre' => 'Stock et entrepôts',
-          'texte' => 'Mouvements, entrepôts multiples et alertes de seuil. Suffisant pour la grande majorité des commerces et distributeurs, sans la complexité d\'un WMS.',
+          'texte' => 'Mouvements, entrepôts multiples, seuils. Suffisant pour la plupart des commerces.',
         ),
         3 => 
         array (
           'titre' => 'Projets et temps passé',
-          'texte' => 'Utile aux cabinets et prestataires de services : suivi du temps par mission et facturation à l\'avancement.',
+          'texte' => 'Pour les cabinets et prestataires : suivi par mission, facturation à l\'avancement.',
         ),
         4 => 
         array (
           'titre' => 'Comptabilité et banques',
-          'texte' => 'Rapprochement bancaire, journaux et export vers votre expert-comptable. Le plan OHADA se paramètre, comme sur tout ERP généraliste.',
+          'texte' => 'Rapprochement bancaire et export vers votre expert-comptable.',
         ),
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Dolibarr expose une API REST propre : relier WhatsApp, le Mobile Money ou un site e-commerce est plus simple et moins cher que sur beaucoup d\'ERP plus lourds.',
+          'texte' => 'API REST propre : relier WhatsApp, Mobile Money ou un site e-commerce reste simple.',
         ),
       ),
     ),
@@ -92,27 +92,27 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui à Lomé : une ouverture de dossier, un dédouanement, une franchise de magasinage, un transport sur le corridor et une facturation client. C\'est presque toujours là qu\'apparaissent les deux ou trois points qui coûtent le plus — et ce ne sont jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
-          'titre' => 'Un module mis en production, pas une démonstration',
-          'texte' => 'On choisit le module qui règle le point le plus douloureux, on le met en service sur les vraies données, et on mesure le gain avant d\'ouvrir le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
+          'titre' => 'Un module en production, pas une démonstration',
+          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
         ),
         2 => 
         array (
           'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Fichier clients, catalogue et soldes en cours : oui. L\'historique complet des années passées : rarement. Il coûte cher à migrer et importe d\'anciennes erreurs dans un système neuf.',
+          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
         ),
         3 => 
         array (
           'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp reste votre canal client, le Mobile Money votre moyen d\'encaissement. On les relie à Dolibarr par automatisation plutôt que de demander à vos clients de changer leurs habitudes.',
+          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
         ),
         4 => 
         array (
           'titre' => 'Formation d\'un référent interne',
-          'texte' => 'L\'objectif est que vous n\'ayez plus besoin de moi pour l\'exploitation courante : créer un utilisateur, ajuster un droit, sortir un état. Sans référent formé sur place, aucun ERP ne survit à deux ans.',
+          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
         ),
       ),
     ),
@@ -139,6 +139,31 @@ return array (
           'titre' => 'Un transitaire du port avec quinze dossiers ouverts',
           'texte' => 'La fin de franchise de magasinage se surveille de mémoire, et un dépassement de quelques jours coûte sans contrepartie. Les alertes d\'échéance sont la fonction qui se rentabilise le plus vite sur ce métier.',
         ),
+      ),
+    ),
+    5 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce que le corridor impose',
+      'paragraphes' => 
+      array (
+        0 => 'Le port de Lomé est le premier port en eau profonde de la sous-région et la porte d\'entrée du corridor vers le Burkina, le Mali et le Niger. Les entreprises qui y travaillent gèrent des dossiers longs, multi-intervenants, avec des frais qui s\'accumulent sur plusieurs semaines.',
+        1 => 'Le premier apport d\'un ERP y est la reprenabilité du dossier. Quand celui qui le suit est absent, il faut aujourd\'hui le reconstituer depuis les e-mails pendant que le client attend. Un dossier unique règle cela immédiatement.',
+        2 => 'Le second est l\'alerte d\'échéance. Fin de franchise de magasinage, validité de document, délai de règlement : ces dépassements coûtent sans contrepartie et se répètent. C\'est la fonction qui se rentabilise le plus vite sur ce métier.',
+        3 => 'Le troisième est la marge par dossier, aujourd\'hui connue au mieux une fois tout soldé. La calculer en continu change les décisions commerciales pendant l\'opération, pas après.',
+      ),
+    ),
+    6 => 
+    array (
+      'type' => 'liste',
+      'etiquette' => 'Pièges',
+      'titre' => 'Erreurs fréquentes que je corrige à Lomé',
+      'items' => 
+      array (
+        0 => 'Vouloir dupliquer dans l\'ERP ce que fait déjà le système douanier. L\'outil sert votre suivi commercial et financier, que celui-ci ne couvre pas.',
+        1 => 'Oublier d\'intégrer le transport terrestre du corridor dans le coût de revient, ce qui fausse toutes les marges.',
+        2 => 'Négliger le suivi partageable avec le client, qui est pourtant un argument commercial direct face aux confrères.',
       ),
     ),
   ),

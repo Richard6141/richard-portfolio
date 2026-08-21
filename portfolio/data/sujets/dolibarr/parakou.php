@@ -1,7 +1,7 @@
 <?php
-// Intégration Dolibarr à Parakou — genere le 21/08/2026, enrichi d'un cas concret et d'une
-// objection propres a la ville : la differenciation ne peut pas reposer
-// seulement sur le nom de la ville.
+// Intégration Dolibarr à Parakou — reequilibre le 21/08/2026 : generique raccourci,
+// contenu local etendu. La differenciation ne peut pas reposer sur le
+// seul nom de la ville.
 declare(strict_types=1);
 
 return array (
@@ -52,33 +52,33 @@ return array (
       array (
         0 => 
         array (
-          'titre' => 'Tiers, prospects et clients',
-          'texte' => 'Un fichier unique pour les clients, fournisseurs et prospects, avec l\'historique complet des échanges. Le socle sur lequel tout le reste s\'appuie.',
+          'titre' => 'Tiers et clients',
+          'texte' => 'Un fichier unique clients, fournisseurs et prospects, avec tout l\'historique.',
         ),
         1 => 
         array (
-          'titre' => 'Devis, commandes et factures',
-          'texte' => 'Le circuit commercial complet, de la proposition au règlement, avec relances des impayés. C\'est le module qui rentabilise Dolibarr le plus vite.',
+          'titre' => 'Devis, commandes, factures',
+          'texte' => 'Le circuit commercial complet et les relances d\'impayés. Le module qui rentabilise le plus vite.',
         ),
         2 => 
         array (
           'titre' => 'Stock et entrepôts',
-          'texte' => 'Mouvements, entrepôts multiples et alertes de seuil. Suffisant pour la grande majorité des commerces et distributeurs, sans la complexité d\'un WMS.',
+          'texte' => 'Mouvements, entrepôts multiples, seuils. Suffisant pour la plupart des commerces.',
         ),
         3 => 
         array (
           'titre' => 'Projets et temps passé',
-          'texte' => 'Utile aux cabinets et prestataires de services : suivi du temps par mission et facturation à l\'avancement.',
+          'texte' => 'Pour les cabinets et prestataires : suivi par mission, facturation à l\'avancement.',
         ),
         4 => 
         array (
           'titre' => 'Comptabilité et banques',
-          'texte' => 'Rapprochement bancaire, journaux et export vers votre expert-comptable. Le plan OHADA se paramètre, comme sur tout ERP généraliste.',
+          'texte' => 'Rapprochement bancaire et export vers votre expert-comptable.',
         ),
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'Dolibarr expose une API REST propre : relier WhatsApp, le Mobile Money ou un site e-commerce est plus simple et moins cher que sur beaucoup d\'ERP plus lourds.',
+          'texte' => 'API REST propre : relier WhatsApp, Mobile Money ou un site e-commerce reste simple.',
         ),
       ),
     ),
@@ -92,27 +92,27 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui à Parakou : une avance producteur, une collecte pesée sur un point d\'achat, un transport vers le magasin, un stock par qualité et une vente. C\'est presque toujours là qu\'apparaissent les deux ou trois points qui coûtent le plus — et ce ne sont jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
-          'titre' => 'Un module mis en production, pas une démonstration',
-          'texte' => 'On choisit le module qui règle le point le plus douloureux, on le met en service sur les vraies données, et on mesure le gain avant d\'ouvrir le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
+          'titre' => 'Un module en production, pas une démonstration',
+          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
         ),
         2 => 
         array (
           'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Fichier clients, catalogue et soldes en cours : oui. L\'historique complet des années passées : rarement. Il coûte cher à migrer et importe d\'anciennes erreurs dans un système neuf.',
+          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
         ),
         3 => 
         array (
           'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp reste votre canal client, le Mobile Money votre moyen d\'encaissement. On les relie à Dolibarr par automatisation plutôt que de demander à vos clients de changer leurs habitudes.',
+          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
         ),
         4 => 
         array (
           'titre' => 'Formation d\'un référent interne',
-          'texte' => 'L\'objectif est que vous n\'ayez plus besoin de moi pour l\'exploitation courante : créer un utilisateur, ajuster un droit, sortir un état. Sans référent formé sur place, aucun ERP ne survit à deux ans.',
+          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
         ),
       ),
     ),
@@ -139,6 +139,31 @@ return array (
           'titre' => 'Un négociant qui collecte sur douze points d\'achat',
           'texte' => 'En pleine campagne, le tonnage réellement collecté n\'est connu qu\'une fois tous les bordereaux remontés — au moment précis où il faudrait décider de vendre ou d\'attendre. La saisie mobile hors connexion remonte les pesées dès que le réseau revient.',
         ),
+      ),
+    ),
+    5 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce que le terrain impose dans le nord',
+      'paragraphes' => 
+      array (
+        0 => 'À Parakou, l\'activité ne se passe pas au bureau. Elle se passe sur les points de collecte, dans les magasins et sur le corridor. Un ERP conçu pour un poste fixe et une connexion permanente n\'y sera pas utilisé — c\'est la raison pour laquelle beaucoup d\'entreprises du nord ont déjà abandonné un outil.',
+        1 => 'La saisie doit donc fonctionner sur téléphone, hors connexion, et se synchroniser seule au retour du réseau. Ce n\'est pas un confort : c\'est la condition pour que les données existent.',
+        2 => 'Le suivi des avances producteurs vient ensuite. Qui a reçu quoi, qui a livré combien, ce qui reste dû : cette information vit aujourd\'hui dans plusieurs cahiers tenus par plusieurs personnes, et c\'est de là que naissent la quasi-totalité des litiges de fin de campagne.',
+        3 => 'La saisonnalité, enfin, change le calcul de rentabilité. L\'outil se rentabilise sur une seule campagne s\'il évite les litiges d\'avances et permet de décider de vendre au bon moment. Hors saison, il ne coûte que son hébergement.',
+      ),
+    ),
+    6 => 
+    array (
+      'type' => 'liste',
+      'etiquette' => 'Pièges',
+      'titre' => 'Erreurs fréquentes que je corrige à Parakou',
+      'items' => 
+      array (
+        0 => 'Déployer un ERP testé uniquement en Wi-Fi au bureau. Il faut le tester avec le vrai réseau et les vrais téléphones des agents avant de généraliser.',
+        1 => 'Concevoir les écrans avec le seul gérant, sans les agents qui saisiront réellement. L\'outil est alors abandonné dès la première campagne.',
+        2 => 'Multiplier les champs obligatoires pour « avoir des données propres ». Sur le terrain, chaque champ superflu est un abandon de saisie.',
       ),
     ),
   ),

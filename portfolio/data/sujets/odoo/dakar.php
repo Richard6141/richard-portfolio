@@ -1,7 +1,7 @@
 <?php
-// Intégration Odoo à Dakar — genere le 21/08/2026, enrichi d'un cas concret et d'une
-// objection propres a la ville : la differenciation ne peut pas reposer
-// seulement sur le nom de la ville.
+// Intégration Odoo à Dakar — reequilibre le 21/08/2026 : generique raccourci,
+// contenu local etendu. La differenciation ne peut pas reposer sur le
+// seul nom de la ville.
 declare(strict_types=1);
 
 return array (
@@ -53,32 +53,32 @@ return array (
         0 => 
         array (
           'titre' => 'Ventes et CRM',
-          'texte' => 'Devis, commandes, suivi des opportunités et historique client. C\'est presque toujours le module par lequel on commence, parce que son bénéfice se voit dès la première semaine.',
+          'texte' => 'Devis, commandes, suivi des opportunités. Presque toujours le premier module mis en service.',
         ),
         1 => 
         array (
           'titre' => 'Stock et inventaire',
-          'texte' => 'Entrées, sorties, emplacements multiples, inventaires tournants et alertes de seuil. Le second module le plus demandé, et celui qui révèle le plus d\'écarts avec la réalité au démarrage.',
+          'texte' => 'Entrées, sorties, emplacements multiples, alertes de seuil.',
         ),
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Demandes de prix, commandes fournisseurs, réceptions partielles et suivi des coûts d\'approvisionnement, base du calcul de marge réelle.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
         ),
         3 => 
         array (
           'titre' => 'Comptabilité',
-          'texte' => 'Le paramétrage livré par défaut ne correspond pas au plan comptable OHADA : c\'est du réglage à prévoir avec votre comptable, pas du développement.',
+          'texte' => 'Le paramétrage par défaut n\'est pas le plan OHADA : c\'est du réglage à prévoir avec votre comptable.',
         ),
         4 => 
         array (
           'titre' => 'Point de vente',
-          'texte' => 'Caisse tactile fonctionnant même en cas de coupure réseau, avec synchronisation au retour de la connexion. Utile dès qu\'il y a un comptoir.',
+          'texte' => 'Caisse tactile qui continue de fonctionner pendant une coupure réseau.',
         ),
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'C\'est là que je fais la différence : relier Odoo à WhatsApp, au Mobile Money ou à vos outils existants, plutôt que de vous demander de tout faire entrer dans Odoo.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -92,27 +92,27 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui à Dakar : un catalogue, une commande en ligne, un paiement Wave ou Orange Money, une préparation, une livraison suivie et un retour éventuel. C\'est presque toujours là qu\'apparaissent les deux ou trois points qui coûtent le plus — et ce ne sont jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
-          'titre' => 'Un module mis en production, pas une démonstration',
-          'texte' => 'On choisit le module qui règle le point le plus douloureux, on le met en service sur les vraies données, et on mesure le gain avant d\'ouvrir le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
+          'titre' => 'Un module en production, pas une démonstration',
+          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
         ),
         2 => 
         array (
           'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Fichier clients, catalogue et soldes en cours : oui. L\'historique complet des années passées : rarement. Il coûte cher à migrer et importe d\'anciennes erreurs dans un système neuf.',
+          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
         ),
         3 => 
         array (
           'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp reste votre canal client, le Mobile Money votre moyen d\'encaissement. On les relie à Odoo par automatisation plutôt que de demander à vos clients de changer leurs habitudes.',
+          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
         ),
         4 => 
         array (
           'titre' => 'Formation d\'un référent interne',
-          'texte' => 'L\'objectif est que vous n\'ayez plus besoin de moi pour l\'exploitation courante : créer un utilisateur, ajuster un droit, sortir un état. Sans référent formé sur place, aucun ERP ne survit à deux ans.',
+          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
         ),
       ),
     ),
@@ -139,6 +139,31 @@ return array (
           'titre' => 'Un e-commerçant qui livre dans la région de Dakar',
           'texte' => 'Quand la boutique en ligne et l\'entrepôt tiennent deux inventaires, la vente d\'un article déjà écoulé devient inévitable : c\'est la première cause d\'annulation et d\'avis négatif. Un stock unique supprime la survente.',
         ),
+      ),
+    ),
+    5 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qu\'un écosystème tech dense attend',
+      'paragraphes' => 
+      array (
+        0 => 'Dakar est l\'un des pôles technologiques les plus actifs d\'Afrique francophone : startups nombreuses, adoption massive du paiement mobile, clientèle habituée aux services en ligne. Une entreprise qui s\'équipe ici s\'aligne sur un standard local déjà élevé.',
+        1 => 'La conséquence pratique est que l\'ERP ne peut pas rester un outil interne isolé. Il doit dialoguer avec la boutique en ligne, les paiements et la livraison, sous peine de créer une double saisie que personne ne tiendra.',
+        2 => 'La difficulté dominante est la justesse du stock entre les canaux. Vendre en ligne un article déjà écoulé est la première cause d\'annulation et d\'avis négatif — sur un marché où les avis comptent beaucoup.',
+        3 => 'Vient ensuite la relance de panier abandonné, qui n\'est pas une fonction d\'ERP mais une automatisation branchée dessus. C\'est le meilleur retour sur investissement en e-commerce, et cela se met en place en quelques jours.',
+      ),
+    ),
+    6 => 
+    array (
+      'type' => 'liste',
+      'etiquette' => 'Pièges',
+      'titre' => 'Erreurs fréquentes que je corrige à Dakar',
+      'items' => 
+      array (
+        0 => 'Refaire entièrement une boutique fonctionnelle alors qu\'elle peut souvent être reliée au stock sans refonte.',
+        1 => 'Traiter Wave et Orange Money comme une option de fin de projet plutôt que comme un préalable.',
+        2 => 'Déployer un ERP sans prévoir le suivi de livraison, ce qui reporte toute la charge sur le service client.',
       ),
     ),
   ),

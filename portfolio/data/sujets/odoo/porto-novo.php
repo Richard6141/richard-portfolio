@@ -1,7 +1,7 @@
 <?php
-// Intégration Odoo à Porto-Novo — genere le 21/08/2026, enrichi d'un cas concret et d'une
-// objection propres a la ville : la differenciation ne peut pas reposer
-// seulement sur le nom de la ville.
+// Intégration Odoo à Porto-Novo — reequilibre le 21/08/2026 : generique raccourci,
+// contenu local etendu. La differenciation ne peut pas reposer sur le
+// seul nom de la ville.
 declare(strict_types=1);
 
 return array (
@@ -53,32 +53,32 @@ return array (
         0 => 
         array (
           'titre' => 'Ventes et CRM',
-          'texte' => 'Devis, commandes, suivi des opportunités et historique client. C\'est presque toujours le module par lequel on commence, parce que son bénéfice se voit dès la première semaine.',
+          'texte' => 'Devis, commandes, suivi des opportunités. Presque toujours le premier module mis en service.',
         ),
         1 => 
         array (
           'titre' => 'Stock et inventaire',
-          'texte' => 'Entrées, sorties, emplacements multiples, inventaires tournants et alertes de seuil. Le second module le plus demandé, et celui qui révèle le plus d\'écarts avec la réalité au démarrage.',
+          'texte' => 'Entrées, sorties, emplacements multiples, alertes de seuil.',
         ),
         2 => 
         array (
           'titre' => 'Achats et fournisseurs',
-          'texte' => 'Demandes de prix, commandes fournisseurs, réceptions partielles et suivi des coûts d\'approvisionnement, base du calcul de marge réelle.',
+          'texte' => 'Commandes, réceptions partielles, coûts d\'approvisionnement — base du calcul de marge.',
         ),
         3 => 
         array (
           'titre' => 'Comptabilité',
-          'texte' => 'Le paramétrage livré par défaut ne correspond pas au plan comptable OHADA : c\'est du réglage à prévoir avec votre comptable, pas du développement.',
+          'texte' => 'Le paramétrage par défaut n\'est pas le plan OHADA : c\'est du réglage à prévoir avec votre comptable.',
         ),
         4 => 
         array (
           'titre' => 'Point de vente',
-          'texte' => 'Caisse tactile fonctionnant même en cas de coupure réseau, avec synchronisation au retour de la connexion. Utile dès qu\'il y a un comptoir.',
+          'texte' => 'Caisse tactile qui continue de fonctionner pendant une coupure réseau.',
         ),
         5 => 
         array (
           'titre' => 'Automatisation n8n',
-          'texte' => 'C\'est là que je fais la différence : relier Odoo à WhatsApp, au Mobile Money ou à vos outils existants, plutôt que de vous demander de tout faire entrer dans Odoo.',
+          'texte' => 'Relier Odoo à WhatsApp et au Mobile Money — c\'est là que je fais la différence.',
         ),
       ),
     ),
@@ -92,27 +92,27 @@ return array (
         0 => 
         array (
           'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui à Porto-Novo : un dossier entrant, un circuit de validation, une pièce justificative, une décision archivée et un état statistique annuel. C\'est presque toujours là qu\'apparaissent les deux ou trois points qui coûtent le plus — et ce ne sont jamais ceux qu\'on avait listés.',
+          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent — jamais ceux qu\'on avait listés.',
         ),
         1 => 
         array (
-          'titre' => 'Un module mis en production, pas une démonstration',
-          'texte' => 'On choisit le module qui règle le point le plus douloureux, on le met en service sur les vraies données, et on mesure le gain avant d\'ouvrir le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
+          'titre' => 'Un module en production, pas une démonstration',
+          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
         ),
         2 => 
         array (
           'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Fichier clients, catalogue et soldes en cours : oui. L\'historique complet des années passées : rarement. Il coûte cher à migrer et importe d\'anciennes erreurs dans un système neuf.',
+          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
         ),
         3 => 
         array (
           'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp reste votre canal client, le Mobile Money votre moyen d\'encaissement. On les relie à Odoo par automatisation plutôt que de demander à vos clients de changer leurs habitudes.',
+          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
         ),
         4 => 
         array (
           'titre' => 'Formation d\'un référent interne',
-          'texte' => 'L\'objectif est que vous n\'ayez plus besoin de moi pour l\'exploitation courante : créer un utilisateur, ajuster un droit, sortir un état. Sans référent formé sur place, aucun ERP ne survit à deux ans.',
+          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
         ),
       ),
     ),
@@ -139,6 +139,31 @@ return array (
           'titre' => 'Un établissement scolaire qui doit justifier trois exercices',
           'texte' => 'Retrouver un dossier de l\'année précédente prend une demi-heure et personne ne sait quelle version fait foi. L\'ERP horodate chaque validation et rend le dossier consultable en quelques secondes, avec sa trace complète.',
         ),
+      ),
+    ),
+    5 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Réalité locale',
+      'titre' => 'Ce qu\'une ville administrative attend d\'un ERP',
+      'paragraphes' => 
+      array (
+        0 => 'À Porto-Novo, les structures fonctionnent avec des procédures écrites, des validations en cascade et des archives qui doivent rester consultables plusieurs exercices. Ce n\'est pas la vitesse qu\'on y cherche, c\'est la preuve.',
+        1 => 'Un ERP y réussit s\'il répond à deux questions : où est le dossier, et qui a validé quoi. Tout le reste — tableaux de bord, automatisations sophistiquées — vient après, et souvent ne vient jamais parce que le besoin réel était celui-là.',
+        2 => 'Le paramétrage doit donc épouser le circuit obligatoire plutôt que de proposer un circuit idéal. Quand une procédure est imposée par une tutelle, l\'ERP la trace ; il ne la réforme pas.',
+        3 => 'La production des états annuels est le second gain attendu. Les statistiques que vous reconstituez chaque fin d\'exercice deviennent consultables en continu, sans travail supplémentaire — c\'est souvent ce qui justifie le projet à lui seul.',
+      ),
+    ),
+    6 => 
+    array (
+      'type' => 'liste',
+      'etiquette' => 'Pièges',
+      'titre' => 'Erreurs fréquentes que je corrige à Porto-Novo',
+      'items' => 
+      array (
+        0 => 'Choisir un outil dont on ne peut pas exporter les données. Dans une structure qui doit justifier sur plusieurs années, c\'est disqualifiant.',
+        1 => 'Vouloir dématérialiser la signature avant d\'avoir tracé le circuit. On commence par savoir qui valide, ensuite seulement comment.',
+        2 => 'Sous-estimer le temps de validation interne : dans ce type de structure, il pèse plus lourd que le développement.',
       ),
     ),
   ),
