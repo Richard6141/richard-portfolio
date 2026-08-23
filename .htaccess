@@ -156,6 +156,10 @@ ErrorDocument 500 /500.php
 # Headers de securite
 # ----------------------------------------------------------
 <IfModule mod_headers.c>
+    # Revalidation systematique du HTML, voir le bloc mod_expires plus bas.
+    <FilesMatch "\.(php|html)$">
+        Header always set Cache-Control "no-cache, must-revalidate, max-age=0"
+    </FilesMatch>
     Header always set X-Frame-Options "SAMEORIGIN"
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-XSS-Protection "1; mode=block"
@@ -199,6 +203,16 @@ ErrorDocument 500 /500.php
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType font/woff "access plus 1 year"
     ExpiresByType application/pdf "access plus 1 month"
+
+    # Le HTML ne doit JAMAIS etre mis en cache (21/08/2026).
+    # Il n'avait aucun en-tete: les navigateurs lui appliquaient donc un
+    # cache heuristique base sur Last-Modified et continuaient de servir
+    # une ancienne page, qui referencait l'ancienne URL du CSS. Les
+    # modifications de style paraissaient absentes alors que le serveur
+    # envoyait bien la nouvelle version.
+    # Les assets, eux, restent a un an: ils sont versionnes par ?v=filemtime,
+    # donc toute modification change leur URL.
+    ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
 # ----------------------------------------------------------
