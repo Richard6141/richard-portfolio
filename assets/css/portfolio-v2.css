@@ -763,12 +763,18 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 .pv2 .why:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#ded6c9}
 .pv2 .why .ico{color:var(--acc-2);margin-bottom:.8rem}
 
-/* --- Temoignages: une seule carte ne doit pas paraitre vide --- */
-.pv2 .tst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;max-width:760px;margin:0 auto}
-.pv2 .tst{padding:1.7rem;position:relative}
-.pv2 .tst::before{content:"\201C";position:absolute;right:1.2rem;top:.3rem;font-size:4.5rem;
-  line-height:1;color:var(--acc);opacity:.14;font-family:Georgia,serif}
-.pv2 .tst .q{font-size:1.02rem;line-height:1.7;color:var(--ink);position:relative}
+/* --- Temoignages: bloc centre, lisible avec une seule carte --- */
+.pv2 .greviews{display:inline-flex;align-items:center;gap:.9rem;padding:.85rem 1.2rem;
+  border:1px solid var(--line);border-radius:999px;background:var(--bg);margin:0 auto 1.6rem;
+  transition:border-color .2s,box-shadow .2s}
+.pv2 .greviews:hover{border-color:var(--acc);box-shadow:var(--shadow)}
+.pv2 .tst-wrap{display:flex;flex-direction:column;align-items:center}
+.pv2 .tst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,340px));
+  gap:1.2rem;justify-content:center;width:100%}
+.pv2 .tst{padding:1.7rem;position:relative;text-align:left}
+.pv2 .tst::before{content:"C";position:absolute;right:1.1rem;top:.1rem;font-size:4rem;
+  line-height:1;color:var(--acc);opacity:.13;font-family:Georgia,serif;pointer-events:none}
+.pv2 .tst .q{font-size:.98rem;line-height:1.68;color:var(--ink);position:relative}
 .pv2 .tst .av{width:44px;height:44px;border-radius:50%;background:var(--acc-2);color:#fff;
   display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0}
 .pv2 .tst .stars{color:var(--acc);letter-spacing:.12em;margin:.7rem 0}
@@ -800,4 +806,43 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 @media(prefers-reduced-motion:reduce){
   .pv2 .svc,.pv2 .pf,.pv2 .step,.pv2 .why{transition:none}
   .pv2 .svc:hover,.pv2 .pf:hover,.pv2 .step:hover,.pv2 .why:hover{transform:none}
+}
+
+/* ============================================================
+   HERO DES PAGES VILLE, refait le 21/08/2026.
+   L'ancien empilait titre, phrase et boutons sur toute la largeur et
+   laissait la moitie droite vide. Les faits que le visiteur cherche en
+   premier (intervention sur place ou non, distance, delai, secteurs)
+   etaient enfouis plus bas. Ils occupent desormais ce vide.
+   ============================================================ */
+.pv2 .vil-hero{position:relative;padding:3.4rem 0 4.6rem;overflow:hidden;background:var(--soft)}
+.pv2 .vil-hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(46% 60% at 88% 12%,rgba(200,146,74,.16),transparent 68%),
+  radial-gradient(40% 50% at 2% 96%,rgba(200,146,74,.08),transparent 70%)}
+.pv2 .vil-hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;
+  gap:3rem;align-items:center}
+.pv2 .vil-hero h1{font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.06;letter-spacing:-.032em;margin:.2rem 0 .9rem}
+.pv2 .vil-hero .lead{font-size:1.06rem;color:#55555c;line-height:1.7;max-width:46ch}
+.pv2 .vil-hero .eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .85rem;
+  border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.75)}
+.pv2 .vil-hero .hero-cta{margin-top:1.8rem}
+
+/* Carte de faits: ce que le visiteur veut savoir avant de lire */
+.pv2 .vil-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.5rem 1.6rem;box-shadow:var(--shadow)}
+.pv2 .vc-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding:.72rem 0;border-bottom:1px solid var(--line)}
+.pv2 .vc-row:first-child{padding-top:0}
+.pv2 .vc-k{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);flex-shrink:0}
+.pv2 .vc-v{font-weight:700;font-size:.94rem;color:var(--navy);text-align:right}
+.pv2 .vc-sect{padding-top:1rem}
+.pv2 .vc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
+.pv2 .vc-tags span{font-size:.78rem;padding:.32rem .68rem;border-radius:999px;
+  background:var(--soft);color:var(--navy);border:1px solid var(--line)}
+
+@media(max-width:900px){
+  .pv2 .vil-hero-grid{grid-template-columns:1fr;gap:2rem}
+  .pv2 .vil-hero{padding:2.6rem 0 3.4rem}
+  .pv2 .vc-v{font-size:.9rem}
 }

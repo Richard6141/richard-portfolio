@@ -358,6 +358,7 @@ $h_logo = siteLogoUrl();
     <span class="mono"><span class="tag-num">06</span> / Témoignages</span>
     <h2>Ils me font confiance.</h2>
   </div>
+  <div class="tst-wrap">
   <?php if ($h_maps): ?>
   <a class="greviews rv" href="<?= sanitize($h_maps) ?>" target="_blank" rel="noopener">
     <span class="gicon"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7C21.8 18.9 23 15.9 23 12.3z"/><path fill="#34A853" d="M12 24c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3C3.7 21.4 7.5 24 12 24z"/><path fill="#FBBC05" d="M5.6 14.7c-.2-.7-.4-1.4-.4-2.2s.1-1.5.4-2.2v-3H1.8A12 12 0 0 0 0 12.5c0 1.9.5 3.8 1.8 5.2l3.8-3z"/><path fill="#EA4335" d="M12 4.8c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1.2 15.1 0 12 0 7.5 0 3.7 2.6 1.8 6.3l3.8 3C6.5 6.8 9 4.8 12 4.8z"/></svg></span>
@@ -387,8 +388,9 @@ $h_logo = siteLogoUrl();
     <?php endforeach; ?>
   </div>
   <?php else: ?>
-  <p class="rv" style="color:var(--muted);max-width:560px">Les premiers retours clients arriveront bientôt ici. En attendant, découvrez mes réalisations ou demandez un devis gratuit.</p>
+  <p class="rv" style="color:var(--muted);max-width:560px;text-align:center">Les premiers retours clients arriveront bientôt ici. En attendant, découvrez mes réalisations ou demandez un devis gratuit.</p>
   <?php endif; ?>
+  </div>
 </div></section>
 
 <?php if (!empty($h_recent)): ?>

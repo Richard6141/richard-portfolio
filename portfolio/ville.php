@@ -85,21 +85,51 @@ include __DIR__ . '/partials/pv2-header.php';
 <main id="main-content">
   <div class="wrap crumb"><a href="/">Accueil</a><span class="sep">/</span><a href="/zones/">Zones desservies</a><span class="sep">/</span><?= sanitize($v['nom']) ?></div>
 
-  <section class="svc-hero"><div class="wrap">
-    <h1>Développeur web à <?= sanitize($v['nom']) ?></h1>
-    <p><?= sanitize($v['accroche']) ?>.</p>
-    <div class="hero-cta">
-      <a href="/contact" class="btn">Demander un devis gratuit</a>
-      <a href="/services/" class="btn btn-ghost">Voir tous les services</a>
+  <?php
+  // Hero refait le 21/08/2026. L'ancien empilait un titre, une phrase et deux
+  // boutons sur toute la largeur, laissant la moitie droite vide. Les faits
+  // locaux (region, distance, secteurs, delais) etaient enfouis plus bas alors
+  // qu'ils repondent aux premieres questions du visiteur. Ils remontent ici,
+  // dans une carte qui occupe le vide et sert de repere immediat.
+  $vSecteurs = array_slice($v['secteurs'] ?? [], 0, 4);
+  ?>
+  <section class="vil-hero"><div class="wrap vil-hero-grid">
+    <div class="vil-hero-txt">
+      <span class="eyebrow"><span class="pulse"></span><span class="mono"><?= sanitize($v['region']) ?>, <?= sanitize($v['pays']) ?></span></span>
+      <h1>Développeur web à <span class="hl"><?= sanitize($v['nom']) ?></span></h1>
+      <p class="lead"><?= sanitize($v['accroche']) ?>.</p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn">Demander un devis gratuit</a>
+        <a href="#services-ville" class="btn btn-ghost">Ce que je fais ici</a>
+      </div>
     </div>
-    <div class="vil-meta">
-      <span><?= sanitize($v['region']) ?>, <?= sanitize($v['pays']) ?></span>
-      <?php if ($v['sur_place']): ?>
-        <span class="vil-tag">Déplacement possible<?= $v['distance_km'] ? ' · ' . (int) $v['distance_km'] . ' km' : '' ?></span>
-      <?php else: ?>
-        <span class="vil-tag">Projet mené à distance</span>
+
+    <aside class="vil-card">
+      <div class="vc-row">
+        <span class="vc-k">Intervention</span>
+        <span class="vc-v"><?php if ($v['sur_place']): ?>Sur place et à distance<?php else: ?>Entièrement à distance<?php endif; ?></span>
+      </div>
+      <?php if ($v['sur_place'] && $v['distance_km']): ?>
+      <div class="vc-row">
+        <span class="vc-k">Distance</span>
+        <span class="vc-v"><?= (int) $v['distance_km'] ?> km depuis Abomey-Calavi</span>
+      </div>
       <?php endif; ?>
-    </div>
+      <div class="vc-row">
+        <span class="vc-k">Délai de réponse</span>
+        <span class="vc-v">Sous 24 h</span>
+      </div>
+      <div class="vc-row">
+        <span class="vc-k">Devis</span>
+        <span class="vc-v">Gratuit, après cadrage</span>
+      </div>
+      <?php if ($vSecteurs): ?>
+      <div class="vc-sect">
+        <span class="vc-k">Secteurs suivis à <?= sanitize($v['nom']) ?></span>
+        <div class="vc-tags"><?php foreach ($vSecteurs as $sct): ?><span><?= sanitize($sct) ?></span><?php endforeach; ?></div>
+      </div>
+      <?php endif; ?>
+    </aside>
   </div></section>
 
   <section class="sect"><div class="wrap" style="max-width:820px">

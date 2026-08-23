@@ -25,6 +25,15 @@ if (!isset($page, $sujet)) {
 
 $url = $portfolioUrl . '/' . $page['slug'];
 
+// La page ville n'existe que pour les villes de data/villes. Les villes
+// presentes uniquement dans le registre (Paris, Montreal, Geneve...) n'en
+// ont pas: lier vers /developpeur-web-X y menait droit sur un 404.
+$villesAvecPage = [];
+foreach ((array) @require __DIR__ . '/data/villes.php' as $vv) {
+    if (!empty($vv['slug'])) { $villesAvecPage[$vv['slug']] = true; }
+}
+$aPageVille = $page['ville_slug'] !== '' && isset($villesAvecPage[$page['ville_slug']]);
+
 $pageTitle     = seoTitle($page['titre'], $fullName);
 $pageDesc      = seoDescription($page['accroche'] . ' ' . ($page['intro'] ?? ''));
 $pageCanonical = $url;
@@ -52,8 +61,9 @@ $pageSchemas = [
         'itemListElement' => array_values(array_filter([
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Accueil', 'item' => $portfolioUrl . '/'],
             ['@type' => 'ListItem', 'position' => 2, 'name' => 'Zones desservies', 'item' => $portfolioUrl . '/zones/'],
-            ['@type' => 'ListItem', 'position' => 3, 'name' => $page['ville'], 'item' => $portfolioUrl . '/developpeur-web-' . $page['ville_slug']],
-            ['@type' => 'ListItem', 'position' => 4, 'name' => $page['titre'], 'item' => $url],
+            // Echelon ville saute quand la ville n'a pas de page dediee.
+            $aPageVille ? ['@type' => 'ListItem', 'position' => 3, 'name' => $page['ville'], 'item' => $portfolioUrl . '/developpeur-web-' . $page['ville_slug']] : null,
+            ['@type' => 'ListItem', 'position' => $aPageVille ? 4 : 3, 'name' => $page['titre'], 'item' => $url],
         ])),
     ],
 ];
@@ -92,14 +102,14 @@ include __DIR__ . '/partials/pv2-head.php';
 include __DIR__ . '/partials/pv2-header.php';
 ?>
 <main id="main-content">
-  <div class="wrap crumb"><a href="/">Accueil</a><span class="sep">/</span><a href="/zones/">Zones desservies</a><span class="sep">/</span><a href="/developpeur-web-<?= sanitize($page['ville_slug']) ?>"><?= sanitize($page['ville']) ?></a><span class="sep">/</span><?= sanitize($sujet['nom'] ?? $sujet['slug']) ?></div>
+  <div class="wrap crumb"><a href="/">Accueil</a><span class="sep">/</span><a href="/zones/">Zones desservies</a><?php if ($aPageVille): ?><span class="sep">/</span><a href="/developpeur-web-<?= sanitize($page['ville_slug']) ?>"><?= sanitize($page['ville']) ?></a><?php endif; ?><span class="sep">/</span><?= sanitize($sujet['nom'] ?? $sujet['slug']) ?></div>
 
   <section class="svc-hero"><div class="wrap">
     <h1><?= sanitize($page['titre']) ?></h1>
     <p><?= sanitize($page['accroche']) ?></p>
     <div class="hero-cta">
       <a href="/contact" class="btn">Demander un devis gratuit</a>
-      <a href="/developpeur-web-<?= sanitize($page['ville_slug']) ?>" class="btn btn-ghost">Développeur web à <?= sanitize($page['ville']) ?></a>
+      <?php if ($aPageVille): ?><a href="/developpeur-web-<?= sanitize($page['ville_slug']) ?>" class="btn btn-ghost">Développeur web à <?= sanitize($page['ville']) ?></a><?php else: ?><a href="/zones/" class="btn btn-ghost">Zones desservies</a><?php endif; ?>
     </div>
     <div class="vil-meta"><span><?= $page['ville_slug'] !== '' ? sanitize($page['ville']) . ', ' . sanitize($page['pays']) : sanitize($page['ville']) ?></span></div>
   </div></section>
