@@ -846,3 +846,71 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
   .pv2 .vil-hero{padding:2.6rem 0 3.4rem}
   .pv2 .vc-v{font-size:.9rem}
 }
+
+/* ============================================================
+   CORPS DES PAGES VILLE, retravaille le 21/08/2026.
+   Le defaut: treize sections dont la plupart etaient de la prose
+   empilee, sans hierarchie ni point d'accroche. Un mur de texte que
+   personne ne lit en entier, et ou l'oeil ne sait pas ou se poser.
+
+   Trois reponses:
+   1. les donnees structurees (quartiers, erreurs) deviennent des
+      cartes, parce qu'elles etaient structurees des le depart
+   2. les titres recoivent un filet bronze qui rythme la descente
+   3. la prose est bornee et aeree, avec une ligne d'attaque marquee
+   ============================================================ */
+
+/* Titres de section: un filet court qui ancre chaque palier */
+.pv2 .prose h2{position:relative;padding-top:1.5rem;margin-top:3rem;
+  font-size:clamp(1.45rem,2.6vw,1.95rem);letter-spacing:-.022em;line-height:1.2}
+.pv2 .prose h2::before{content:"";position:absolute;top:0;left:0;width:42px;height:3px;
+  background:var(--acc);border-radius:2px}
+.pv2 .prose h2:first-child{margin-top:0}
+.pv2 .prose h3{font-size:1.08rem;margin:1.9rem 0 .45rem;letter-spacing:-.008em}
+.pv2 .prose p{line-height:1.78;color:#4a4a52;margin-bottom:1.05rem}
+.pv2 .prose>p:first-of-type{font-size:1.08rem;color:#3a3a42}
+.pv2 .prose .inc-list li{line-height:1.7;margin:.5rem 0}
+
+/* Quartiers: cartes numerotees, l'information etait deja structuree */
+.pv2 .vil-zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));
+  gap:1rem;margin:1.6rem 0 .6rem}
+.pv2 .vz{position:relative;padding:1.4rem 1.4rem 1.3rem;background:var(--bg);
+  border:1px solid var(--line);border-radius:var(--radius);
+  transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .25s}
+.pv2 .vz:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#ded6c9}
+.pv2 .vz-n{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--acc);
+  display:block;margin-bottom:.5rem}
+.pv2 .vz h3{margin:0 0 .4rem;font-size:1rem}
+.pv2 .vz p{font-size:.9rem;line-height:1.62;color:var(--muted);margin:0}
+
+/* Erreurs: cartes d'avertissement, filet bronze a gauche */
+.pv2 .vil-errs{display:grid;gap:.8rem;margin:1.6rem 0 .6rem}
+.pv2 .ve{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem 1.4rem;
+  background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--acc);
+  border-radius:0 var(--radius) var(--radius) 0}
+.pv2 .ve-i{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:rgba(200,146,74,.14);
+  color:var(--acc-2);display:flex;align-items:center;justify-content:center;margin-top:.1rem}
+.pv2 .ve h3{margin:0 0 .3rem;font-size:1rem}
+.pv2 .ve p{font-size:.91rem;line-height:1.64;color:var(--muted);margin:0}
+
+/* Tableau comparatif: lisible plutot que dense */
+.pv2 .vil-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg)}
+.pv2 .vil-table-wrap table{width:100%;border-collapse:collapse;font-size:.93rem;min-width:560px}
+.pv2 .vil-table-wrap th{background:var(--navy);color:#fff;font-weight:700;text-align:left;
+  padding:.85rem 1rem;font-size:.8rem;letter-spacing:.04em}
+.pv2 .vil-table-wrap td{padding:.85rem 1rem;border-top:1px solid var(--line);vertical-align:top}
+.pv2 .vil-table-wrap tbody tr:nth-child(even){background:var(--soft)}
+
+/* Villes voisines: pastilles plutot qu'une liste de liens nus */
+.pv2 .vil-links{display:flex;flex-wrap:wrap;gap:.55rem}
+.pv2 .vil-links a{padding:.55rem 1rem;border:1px solid var(--line);border-radius:999px;
+  background:var(--bg);font-size:.9rem;font-weight:600;color:var(--navy);transition:.2s}
+.pv2 .vil-links a:hover{border-color:var(--acc);color:var(--acc-2);background:var(--soft)}
+
+@media(max-width:768px){
+  .pv2 .prose h2{margin-top:2.2rem}
+  .pv2 .ve{padding:1.1rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .pv2 .vz{transition:none}.pv2 .vz:hover{transform:none}
+}

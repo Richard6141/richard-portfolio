@@ -147,10 +147,15 @@ include __DIR__ . '/partials/pv2-header.php';
       <?php if (!empty($v['quartiers'])): ?>
       <h2>Quartier par quartier</h2>
       <p>Les besoins ne sont pas les mêmes d'un bout à l'autre de la ville. Voici ce que j'observe selon les zones.</p>
-      <?php foreach ($v['quartiers'] as $q): ?>
-        <h3><?= sanitize($q[0]) ?></h3>
-        <p><?= sanitize($q[1]) ?></p>
-      <?php endforeach; ?>
+      <div class="vil-zones">
+        <?php foreach ($v['quartiers'] as $iq => $q): ?>
+        <article class="vz">
+          <span class="vz-n"><?= sprintf('%02d', $iq + 1) ?></span>
+          <h3><?= sanitize($q[0]) ?></h3>
+          <p><?= sanitize($q[1]) ?></p>
+        </article>
+        <?php endforeach; ?>
+      </div>
       <?php endif; ?>
 
       <?php if (!empty($v['concurrence'])): ?>
@@ -213,10 +218,18 @@ include __DIR__ . '/partials/pv2-header.php';
   <section class="sect soft"><div class="wrap" style="max-width:820px">
     <div class="prose rv">
       <h2>Les erreurs que je vois le plus souvent à <?= sanitize($v['nom']) ?></h2>
-      <?php foreach ($v['erreurs'] as $e): ?>
-        <h3><?= sanitize($e[0]) ?></h3>
-        <p><?= sanitize($e[1]) ?></p>
-      <?php endforeach; ?>
+      <div class="vil-errs">
+        <?php foreach ($v['erreurs'] as $e): ?>
+        <article class="ve">
+          <span class="ve-i" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round">
+              <path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/>
+            </svg>
+          </span>
+          <div><h3><?= sanitize($e[0]) ?></h3><p><?= sanitize($e[1]) ?></p></div>
+        </article>
+        <?php endforeach; ?>
+      </div>
     </div>
   </div></section>
   <?php endif; ?>
