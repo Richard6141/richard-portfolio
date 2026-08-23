@@ -102,10 +102,10 @@ include __DIR__ . '/partials/pv2-header.php';
   <section class="sect soft"><div class="wrap">
     <div class="sect-head rv"><span class="mono"><span class="tag-num">02</span> / Méthode</span><h2>De l'idée à la mise en ligne, en 4 étapes.</h2></div>
     <div class="proc stg">
-      <div class="step"><div class="sn">1</div><h4>Cadrage</h4><p>On clarifie le besoin, les objectifs et le budget. Devis transparent.</p></div>
-      <div class="step"><div class="sn">2</div><h4>Design</h4><p>Maquettes et architecture validées avant le code.</p></div>
-      <div class="step"><div class="sn">3</div><h4>Développement</h4><p>Code propre, testé, avec points d'avancement réguliers.</p></div>
-      <div class="step"><div class="sn">4</div><h4>Lancement & suivi</h4><p>Mise en ligne, formation et maintenance.</p></div>
+      <div class="step"><div class="sn">01</div><h4>Cadrage</h4><p>On clarifie le besoin, les objectifs et le budget. Devis transparent.</p></div>
+      <div class="step"><div class="sn">02</div><h4>Design</h4><p>Maquettes et architecture validées avant le code.</p></div>
+      <div class="step"><div class="sn">03</div><h4>Développement</h4><p>Code propre, testé, avec points d'avancement réguliers.</p></div>
+      <div class="step"><div class="sn">04</div><h4>Lancement & suivi</h4><p>Mise en ligne, formation et maintenance.</p></div>
     </div>
   </div></section>
   <?php endif; ?>

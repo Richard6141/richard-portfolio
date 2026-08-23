@@ -103,10 +103,10 @@ include __DIR__ . '/partials/pv2-header.php';
       <h2 id="methode">Ma méthode en 4 étapes</h2>
     </div>
     <div class="proc stg" style="margin-top:1.5rem">
-      <div class="step"><div class="sn">1</div><h3>Cadrage</h3><p>On clarifie votre besoin, vos objectifs et le budget. Devis transparent.</p></div>
-      <div class="step"><div class="sn">2</div><h3>Design</h3><p>Maquettes et architecture validées avant la moindre ligne de code.</p></div>
-      <div class="step"><div class="sn">3</div><h3>Développement</h3><p>Code propre, testé, avec des points d'avancement réguliers.</p></div>
-      <div class="step"><div class="sn">4</div><h3>Lancement &amp; suivi</h3><p>Mise en ligne, formation, maintenance et optimisation continue.</p></div>
+      <div class="step"><div class="sn">01</div><h3>Cadrage</h3><p>On clarifie votre besoin, vos objectifs et le budget. Devis transparent.</p></div>
+      <div class="step"><div class="sn">02</div><h3>Design</h3><p>Maquettes et architecture validées avant la moindre ligne de code.</p></div>
+      <div class="step"><div class="sn">03</div><h3>Développement</h3><p>Code propre, testé, avec des points d'avancement réguliers.</p></div>
+      <div class="step"><div class="sn">04</div><h3>Lancement &amp; suivi</h3><p>Mise en ligne, formation, maintenance et optimisation continue.</p></div>
     </div>
   </div></section>
 

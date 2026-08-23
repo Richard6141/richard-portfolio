@@ -171,7 +171,7 @@ include __DIR__ . '/partials/pv2-header.php';
     <?php elseif ($sec['type'] === 'etapes'): ?>
       <div class="proc stg">
         <?php foreach ($sec['items'] as $i => $it): ?>
-        <div class="step"><div class="sn"><?= $i + 1 ?></div><h3><?= sanitize($it['titre']) ?></h3><p><?= sanitize($it['texte']) ?></p></div>
+        <div class="step"><div class="sn"><?= sprintf('%02d', $i + 1) ?></div><h3><?= sanitize($it['titre']) ?></h3><p><?= sanitize($it['texte']) ?></p></div>
         <?php endforeach; ?>
       </div>
     <?php elseif ($sec['type'] === 'liens'): ?>

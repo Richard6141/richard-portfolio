@@ -329,10 +329,10 @@ $h_logo = siteLogoUrl();
     <h2>De l'idée à la mise en ligne, en 4 étapes.</h2>
   </div>
   <div class="proc stg">
-    <div class="step"><div class="sn">1</div><h3>Cadrage</h3><p>On clarifie le besoin, les objectifs et le budget. Devis transparent.</p></div>
-    <div class="step"><div class="sn">2</div><h3>Design</h3><p>Maquettes et architecture validées avant le code.</p></div>
-    <div class="step"><div class="sn">3</div><h3>Développement</h3><p>Code propre, testé, avec points d'avancement réguliers.</p></div>
-    <div class="step"><div class="sn">4</div><h3>Lancement & suivi</h3><p>Mise en ligne, formation et maintenance.</p></div>
+    <div class="step"><div class="sn">01</div><h3>Cadrage</h3><p>On clarifie le besoin, les objectifs et le budget. Devis transparent.</p></div>
+    <div class="step"><div class="sn">02</div><h3>Design</h3><p>Maquettes et architecture validées avant le code.</p></div>
+    <div class="step"><div class="sn">03</div><h3>Développement</h3><p>Code propre, testé, avec points d'avancement réguliers.</p></div>
+    <div class="step"><div class="sn">04</div><h3>Lancement & suivi</h3><p>Mise en ligne, formation et maintenance.</p></div>
   </div>
 </div></section>
 
