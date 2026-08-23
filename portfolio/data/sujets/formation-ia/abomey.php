@@ -1,7 +1,7 @@
 <?php
 // Formation IA x Abomey. Bloc local ajoute le 21/08/2026: le premier
-// jet plafonnait a 86 % de vocabulaire commun entre villes, le generique
-// ecrasant le local.
+// jet plafonnait à 86 % de vocabulaire commun entre villes, le générique
+// écrasant le local.
 declare(strict_types=1);
 
 return array (
@@ -10,8 +10,8 @@ return array (
   'ville_slug' => 'abomey',
   'pays' => 'Bénin',
   'titre' => 'Formation IA en entreprise à Abomey',
-  'accroche' => 'Former vos equipes sur vos vrais documents, pas sur des exercices de demonstration.',
-  'intro' => 'La majorite des formations a l\'intelligence artificielle echouent pour la meme raison: elles montrent des outils au lieu de resoudre un probleme. Une equipe qui a vu une demonstration impressionnante retourne a ses habitudes la semaine suivante. Je travaille l\'inverse: on part de deux ou trois taches que vos equipes de Abomey repetent chaque semaine, et on les traite pendant la formation, sur vos vrais documents. Ce qui est produit ce jour-la est utilisable des le lendemain.',
+  'accroche' => 'Former vos équipes sur vos vrais documents, pas sur des exercices de démonstration.',
+  'intro' => 'La majorité des formations à l\'intelligence artificielle échouent pour la même raison: elles montrent des outils au lieu de résoudre un problème. Une équipe qui a vu une démonstration impressionnante retourne à ses habitudes la semaine suivante. Je travaille l\'inverse: on part de deux ou trois tâches que vos équipes de Abomey répètent chaque semaine, et on les traite pendant la formation, sur vos vrais documents. Ce qui est produit ce jour-là est utilisable des le lendemain.',
   'sections' => 
   array (
     0 => 
@@ -21,9 +21,9 @@ return array (
       'titre' => 'Ce que l\'IA change concrètement à Abomey.',
       'items' => 
       array (
-        0 => 'Rediger en anglais les descriptions de pieces artisanales destinees a une clientele internationale ou a la diaspora.',
-        1 => 'Preparer les reponses aux demandes de visiteurs etrangers, souvent recues la nuit et sans reponse jusqu\'au lendemain.',
-        2 => 'Produire des textes de presentation pour un site ou une boutique, a partir de la simple description orale d\'une piece.',
+        0 => 'Rédiger en anglais les descriptions de pièces artisanales destinées à une clientèle internationale ou à la diaspora.',
+        1 => 'Préparer les réponses aux demandes de visiteurs étrangers, souvent reçues la nuit et sans réponse jusqu\'au lendemain.',
+        2 => 'Produire des textes de présentation pour un site ou une boutique, à partir de la simple description orale d\'une pièce.',
       ),
     ),
     1 => 
@@ -33,9 +33,9 @@ return array (
       'titre' => 'Ce qui freine l\'adoption à Abomey',
       'paragraphes' => 
       array (
-        0 => 'Le secteur artisanal a un rapport particulier a l\'outil numerique: le savoir-faire est manuel, transmis, et l\'idee d\'y meler une machine suscite une reserve legitime. Je la prends au serieux. L\'IA n\'intervient jamais sur la piece, seulement sur ce qui l\'entoure: la description, la reponse au client, la traduction.',
-        1 => 'Le deuxieme frein est le niveau d\'equipement. Beaucoup d\'artisans travaillent avec un telephone et rien d\'autre. Tout ce que je montre doit fonctionner depuis un telephone, sans ordinateur, sinon la formation reste theorique.',
-        2 => 'Le troisieme est la langue, encore une fois. Repondre a un acheteur etranger en anglais correct ouvre un marche reel. C\'est presque toujours l\'usage qui convainc en premier a Abomey, avant meme la redaction commerciale en francais.',
+        0 => 'Le secteur artisanal a un rapport particulier à l\'outil numérique: le savoir-faire est manuel, transmis, et l\'idée d\'y mêler une machine suscite une réserve légitime. Je la prends au sérieux. L\'IA n\'intervient jamais sur la pièce, seulement sur ce qui l\'entoure: la description, la réponse au client, la traduction.',
+        1 => 'Le deuxième frein est le niveau d\'équipement. Beaucoup d\'artisans travaillent avec un téléphone et rien d\'autre. Tout ce que je montre doit fonctionner depuis un téléphone, sans ordinateur, sinon la formation reste théorique.',
+        2 => 'Le troisième est la langue, encore une fois. Répondre à un acheteur étranger en anglais correct ouvre un marché réel. C\'est presque toujours l\'usage qui convainc en premier à Abomey, avant même la rédaction commerciale en français.',
       ),
     ),
     2 => 
@@ -48,22 +48,22 @@ return array (
         0 => 
         array (
           'titre' => 'Prise en main des assistants',
-          'texte' => 'ChatGPT, Claude et Gemini: ce qu\'ils savent faire, ce qu\'ils inventent, et comment verifier. Une demi-journee, sans prerequis technique.',
+          'texte' => 'ChatGPT, Claude et Gemini: ce qu\'ils savent faire, ce qu\'ils inventent, et comment vérifier. Une demi-journée, sans prérequis technique.',
         ),
         1 => 
         array (
-          'titre' => 'Rediger de bonnes consignes',
-          'texte' => 'La competence qui separe un usage decevant d\'un usage utile. On travaille sur vos propres documents, pas sur des exercices.',
+          'titre' => 'Rédiger de bonnes consignes',
+          'texte' => 'La compétence qui sépare un usage décevant d\'un usage utile. On travaille sur vos propres documents, pas sur des exercices.',
         ),
         2 => 
         array (
           'titre' => 'Automatiser avec l\'IA',
-          'texte' => 'Relier un assistant a vos outils via n8n: tri de messages, extraction de donnees, redaction de reponses. Le niveau ou l\'IA cesse d\'etre un gadget.',
+          'texte' => 'Relier un assistant à vos outils via n8n: tri de messages, extraction de données, rédaction de réponses. Le niveau ou l\'IA cesse d\'être un gadget.',
         ),
         3 => 
         array (
           'titre' => 'Cadrer les usages pour les dirigeants',
-          'texte' => 'Ce qu\'on autorise, ce qu\'on interdit, quelles donnees ne sortent jamais. Une demi-journee qui evite des incidents couteux.',
+          'texte' => 'Ce qu\'on autorise, ce qu\'on interdit, quelles données ne sortent jamais. Une demi-journée qui évite des incidents coûteux.',
         ),
       ),
     ),
@@ -74,10 +74,10 @@ return array (
       'titre' => 'Formats et tarifs indicatifs.',
       'items' => 
       array (
-        0 => 'Atelier decouverte, une demi-journee, jusqu\'a 12 personnes: a partir de 150 000 FCFA.',
-        1 => 'Formation complete, deux jours, jusqu\'a 10 personnes: a partir de 450 000 FCFA.',
-        2 => 'Accompagnement mensuel, une demi-journee par mois pendant trois mois: a partir de 350 000 FCFA.',
-        3 => 'Session dirigeants, deux heures: a partir de 100 000 FCFA. Les tarifs hors Afrique sont etablis apres cadrage.',
+        0 => 'Atelier découverte, une demi-journée, jusqu\'à 12 personnes: à partir de 150 000 FCFA.',
+        1 => 'Formation complète, deux jours, jusqu\'à 10 personnes: à partir de 450 000 FCFA.',
+        2 => 'Accompagnement mensuel, une demi-journée par mois pendant trois mois: à partir de 350 000 FCFA.',
+        3 => 'Session dirigeants, deux heures: à partir de 100 000 FCFA. Les tarifs hors Afrique sont établis après cadrage.',
       ),
     ),
     4 => 
@@ -87,9 +87,9 @@ return array (
       'titre' => 'Avec quelles structures de Abomey je travaille.',
       'paragraphes' => 
       array (
-        0 => 'A Abomey, les organisations qui tirent le meilleur parti d\'une formation IA sont les tourisme culturel, artisanat d\'art et commerces. Le critere n\'est pas la taille ni le niveau technique: c\'est d\'avoir des taches repetitives identifiables et quelqu\'un pour porter le sujet apres mon depart.',
-        1 => 'Les formations a Abomey se donnent en presentiel, dans vos locaux, avec vos propres documents de travail.',
-        2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systematiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les equipes ont essaye seules.',
+        0 => 'A Abomey, les organisations qui tirent le meilleur parti d\'une formation IA sont les tourisme culturel, artisanat d\'art et commerces. Le critère n\'est pas la taille ni le niveau technique: c\'est d\'avoir des tâches répétitives identifiables et quelqu\'un pour porter le sujet après mon départ.',
+        1 => 'Les formations à Abomey se donnent en présentiel, dans vos locaux, avec vos propres documents de travail.',
+        2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systématiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les équipes ont essaye seules.',
       ),
     ),
     5 => 
@@ -102,22 +102,22 @@ return array (
         0 => 
         array (
           'titre' => 'L\'IA se trompe avec aplomb',
-          'texte' => 'Elle produit des reponses fausses avec la meme assurance que les bonnes. Toute sortie destinee a un client, un partenaire ou une administration doit etre relue par quelqu\'un qui connait le sujet. Une formation qui ne dit pas cela est une formation dangereuse.',
+          'texte' => 'Elle produit des réponses fausses avec la même assurance que les bonnes. Toute sortie destinée à un client, un partenaire ou une administration doit être relue par quelqu\'un qui connaît le sujet. Une formation qui ne dit pas cela est une formation dangereuse.',
         ),
         1 => 
         array (
-          'titre' => 'Vos donnees sortent de chez vous',
-          'texte' => 'Ce que vous collez dans un assistant grand public part sur des serveurs etrangers. On definit ensemble ce qui peut sortir et ce qui ne sortira jamais: donnees clients nominatives, informations financieres, documents contractuels.',
+          'titre' => 'Vos données sortent de chez vous',
+          'texte' => 'Ce que vous collez dans un assistant grand public part sur des serveurs étrangers. On définit ensemble ce qui peut sortir et ce qui ne sortira jamais: données clients nominatives, informations financières, documents contractuels.',
         ),
         2 => 
         array (
           'titre' => 'Ce n\'est pas un remplacement',
-          'texte' => 'L\'IA fait gagner du temps sur des taches repetitives. Elle ne remplace ni le jugement metier ni la relation client. Une equipe qui croit l\'inverse produit vite du travail mediocre en grande quantite.',
+          'texte' => 'L\'IA fait gagner du temps sur des tâches répétitives. Elle ne remplace ni le jugement métier ni la relation client. Une équipe qui croit l\'inverse produit vite du travail médiocre en grande quantité.',
         ),
         3 => 
         array (
-          'titre' => 'Tout ne merite pas d\'etre automatise',
-          'texte' => 'Une tache faite deux fois par an ne justifie pas qu\'on y passe une journee. On cible ce qui revient chaque semaine, rien d\'autre.',
+          'titre' => 'Tout ne mérite pas d\'être automatisé',
+          'texte' => 'Une tâche faite deux fois par an ne justifie pas qu\'on y passe une journée. On cible ce qui revient chaque semaine, rien d\'autre.',
         ),
       ),
     ),
@@ -127,37 +127,37 @@ return array (
     0 => 
     array (
       'q' => 'Faut-il des connaissances techniques ?',
-      'r' => 'Aucune. Les formations s\'adressent a des equipes metier: commerciaux, secretariat, comptabilite, direction. Si quelqu\'un sait ecrire un message, il peut suivre.',
+      'r' => 'Aucune. Les formations s\'adressent à des équipes métier: commerciaux, secrétariat, comptabilité, direction. Si quelqu\'un sait écrire un message, il peut suivre.',
     ),
     1 => 
     array (
       'q' => 'Combien de personnes par session ?',
-      'r' => 'Jusqu\'a douze pour un atelier decouverte, dix pour une formation complete. Au-dela, on ne peut plus travailler sur les documents de chacun, et c\'est justement ce qui fait la valeur de la session.',
+      'r' => 'Jusqu\'à douze pour un atelier découverte, dix pour une formation complète. Au-delà, on ne peut plus travailler sur les documents de chacun, et c\'est justement ce qui fait la valeur de la session.',
     ),
     2 => 
     array (
-      'q' => 'Intervenez-vous sur place a Abomey ?',
-      'r' => 'Les formations a Abomey se donnent en presentiel, dans vos locaux, avec vos propres documents de travail.',
+      'q' => 'Intervenez-vous sur place à Abomey ?',
+      'r' => 'Les formations à Abomey se donnent en présentiel, dans vos locaux, avec vos propres documents de travail.',
     ),
     3 => 
     array (
       'q' => 'Que produit-on pendant la formation ?',
-      'r' => 'Des consignes reutilisables sur vos propres cas, et une ou deux automatisations simples si le format le permet. Vous repartez avec quelque chose qui fonctionne, pas seulement avec des notes.',
+      'r' => 'Des consignes réutilisables sur vos propres cas, et une ou deux automatisations simples si le format le permet. Vous repartez avec quelque chose qui fonctionne, pas seulement avec des notes.',
     ),
     4 => 
     array (
-      'q' => 'Et apres la formation ?',
-      'r' => 'Un point de suivi un mois plus tard est inclus dans les formats de deux jours. C\'est la que remontent les vrais blocages, une fois que les equipes ont essaye seules. Sans ce point, une formation retombe presque toujours.',
+      'q' => 'Et après la formation ?',
+      'r' => 'Un point de suivi un mois plus tard est inclus dans les formats de deux jours. C\'est la que remontent les vrais blocages, une fois que les équipes ont essaye seules. Sans ce point, une formation retombe presque toujours.',
     ),
     5 => 
     array (
-      'q' => 'Nos donnees sont sensibles. Est-ce compatible ?',
-      'r' => 'C\'est un sujet a part entiere de la formation. On definit ce qui peut sortir et ce qui ne sortira jamais, et on regarde les solutions qui gardent les donnees chez vous quand la sensibilite l\'exige.',
+      'q' => 'Nos données sont sensibles. Est-ce compatible ?',
+      'r' => 'C\'est un sujet à part entière de la formation. On définit ce qui peut sortir et ce qui ne sortira jamais, et on regarde les solutions qui gardent les données chez vous quand la sensibilité l\'exige.',
     ),
     6 => 
     array (
-      'q' => 'L\'IA va-t-elle remplacer nos employes ?',
-      'r' => 'Non, et une formation qui vend cette promesse ment. Elle supprime du temps passe sur des taches repetitives. Ce que vos equipes font de ce temps libere est une decision de management, pas une consequence de l\'outil.',
+      'q' => 'L\'IA va-t-elle remplacer nos employés ?',
+      'r' => 'Non, et une formation qui vend cette promesse ment. Elle supprime du temps passe sur des tâches répétitives. Ce que vos équipes font de ce temps libère est une décision de management, pas une conséquence de l\'outil.',
     ),
   ),
 );

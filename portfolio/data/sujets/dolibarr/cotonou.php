@@ -1,6 +1,6 @@
 <?php
 // Intégration Dolibarr à Cotonou, angle ERP differencie le 21/08/2026 : la ville est la
-// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
+// même pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -151,7 +151,7 @@ return array (
         1 => 'Cela a une conséquence directe sur le paramétrage : le coût de revient ne peut pas être un simple prix d\'achat. Il doit agréger le fret, la douane, le magasinage et le transport terrestre, et rester recalculable quand un frais tombe trois semaines après la vente. Un ERP paramétré comme pour un commerce de détail donne des marges fausses à Cotonou.',
         2 => 'La seconde particularité est le crédit revendeur. À Dantokpa comme à Akpakpa, une part importante du chiffre part à crédit, avec des règlements partiels en espèces et en Mobile Money. Le paramétrage doit accepter qu\'une facture soit soldée en quatre fois par deux canaux différents, sinon l\'équipe contourne l\'outil et note dans un cahier.',
         3 => 'Enfin, le rythme. Les entreprises cotonoises traitent de gros volumes avec des marges serrées : un écran de saisie mal pensé coûte des heures cumulées chaque semaine. On réduit à l\'essentiel avant d\'ajouter quoi que ce soit.',
-        4 => 'Dolibarr n\'egale pas Odoo sur la modelisation d\'un dossier d\'importation complexe : le cout de revient multi-frais s\'y construit avec plus d\'efforts. En revanche il s\'installe sur l\'hebergement que vous avez deja, s\'affiche vite, et coute une fraction du deploiement, un arbitrage souvent gagnant quand le volume de dossiers reste mesure.',
+        4 => 'Dolibarr n\'egale pas Odoo sur la modelisation d\'un dossier d\'importation complexe : le cout de revient multi-frais s\'y construit avec plus d\'efforts. En revanche il s\'installe sur l\'hebergement que vous avez déjà, s\'affiche vite, et coute une fraction du deploiement, un arbitrage souvent gagnant quand le volume de dossiers reste mesure.',
       ),
     ),
     6 => 

@@ -2,9 +2,9 @@
 // ============================================================
 // portfolio/data/villes.php · Chargeur des pages ville
 //
-// Cree le 20/08/2026, decoupe en un fichier par ville le meme jour : le
-// fichier unique depassait 1 000 lignes des que chaque ville a recu son
-// contenu complet, ce qui le rendait penible a relire et a modifier.
+// Créé le 20/08/2026, découpé en un fichier par ville le même jour : le
+// fichier unique dépassait 1 000 lignes des que chaque ville a recu son
+// contenu complet, ce qui le rendait pénible a relire et a modifier.
 //
 // Chaque fichier de data/villes/ retourne le tableau d'UNE ville et porte le
 // slug en nom de fichier. L'ordre d'affichage vient de $ordre ci-dessous,
@@ -17,8 +17,8 @@
 // declasse ET fait retomber les autres pages locales avec elle. Avant
 // d'ajouter une ville, ecrire d'abord son contenu.
 //
-// Mesure de controle : voir la verification de similarite croisee, qui doit
-// rester tres en dessous de 60 % entre deux villes quelconques.
+// Mesure de controle : voir la verification de similarité croisee, qui doit
+// rester très en dessous de 60 % entre deux villes quelconques.
 //
 // Champs attendus, identite et logistique :
 //   nom, slug, pays, pays_slug, region, distance_km, sur_place
@@ -26,7 +26,7 @@
 //   accroche, intro, contexte, quartiers[], concurrence, secteurs[],
 //   besoins[[titre, texte, slug_service]], comparatif[[profil, solution,
 //   budget, delai]], erreurs[[titre, texte]], rythme, cas_type,
-//   pourquoi_moi, travailler, paiement, faq[[question, reponse 40-60 mots]]
+//   pourquoi_moi, travailler, paiement, faq[[question, réponse 40-60 mots]]
 // ============================================================
 
 $dossier = __DIR__ . '/villes';

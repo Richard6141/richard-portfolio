@@ -2,8 +2,8 @@
 // ============================================================
 // data/realisations.php · Complements editoriaux des etudes de cas
 //
-// Cree le 21/08/2026. Les fiches plafonnaient a ~800 mots avec les quatre
-// champs de base (contexte, probleme, solution, resultat), tous stockes en
+// Créé le 21/08/2026. Les fiches plafonnaient a ~800 mots avec les quatre
+// champs de base (contexte, problème, solution, resultat), tous stockes en
 // base et qui decrivent des CLIENTS REELS ET NOMMES. Les allonger revenait
 // a inventer des faits sur des entreprises identifiables, exclu.
 //

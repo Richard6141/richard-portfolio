@@ -1,5 +1,5 @@
 <?php
-// Abomey, Zou. Cree le 21/08/2026: la ville figurait au pied
+// Abomey, Zou. Créé le 21/08/2026: la ville figurait au pied
 // de page sans qu'aucune URL ne porte cette couverture.
 declare(strict_types=1);
 

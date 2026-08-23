@@ -1,6 +1,6 @@
 <?php
 // Toure Distribution, logiciel de gestion (Laravel, MySQL, API REST).
-// Complements editoriaux : metier, architecture, enseignements. Aucune
+// Complements editoriaux : métier, architecture, enseignements. Aucune
 // affirmation sur le client, dont les faits restent dans les champs case_*.
 declare(strict_types=1);
 

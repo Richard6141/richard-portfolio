@@ -1,6 +1,6 @@
 <?php
 // Intégration Dolibarr à Abidjan, angle ERP differencie le 21/08/2026 : la ville est la
-// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
+// même pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -151,7 +151,7 @@ return array (
         1 => 'Cela change la nature du projet : il ne s\'agit plus de combler un manque mais de tenir un niveau. Un ERP approximatif se remarque immédiatement, en interne comme chez les clients.',
         2 => 'La difficulté dominante à Abidjan est la consolidation multi-points. Un article disponible dans une boutique reste invisible pour les autres : le stock global existe mais personne ne peut l\'exploiter. C\'est le premier chantier dans la plupart des cas.',
         3 => 'Le second est l\'intégration des paiements. Wave et Orange Money ne sont pas des options sur ce marché : un parcours qui ne les propose pas perd le client au dernier écran, après tout le coût d\'acquisition.',
-        4 => 'Sur un marche ou vos concurrents sont deja equipes, Dolibarr tient la comparaison sur le commercial et la facturation, moins sur la logistique multi-sites complexe. C\'est le bon choix si vous avez un ou deux points de vente, pas cinq.',
+        4 => 'Sur un marche ou vos concurrents sont déjà équipés, Dolibarr tient la comparaison sur le commercial et la facturation, moins sur la logistique multi-sites complexe. C\'est le bon choix si vous avez un ou deux points de vente, pas cinq.',
       ),
     ),
     6 => 

@@ -1,6 +1,6 @@
 <?php
 // Intégration Dolibarr à Lomé, angle ERP differencie le 21/08/2026 : la ville est la
-// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
+// même pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (

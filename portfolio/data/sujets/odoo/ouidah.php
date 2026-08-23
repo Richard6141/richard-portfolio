@@ -1,6 +1,6 @@
 <?php
 // Intégration Odoo à Ouidah, angle ERP differencie le 21/08/2026 : la ville est la
-// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
+// même pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -161,7 +161,7 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Ouidah',
       'items' => 
       array (
-        0 => 'Activer des modules Odoo « parce qu\'ils sont inclus ». Chaque module active est un ecran de plus pour l\'equipe et une raison de plus de decrocher : on n\'ouvre que ce qui sert.',
+        0 => 'Activer des modules Odoo « parce qu\'ils sont inclus ». Chaque module active est un ecran de plus pour l\'équipe et une raison de plus de decrocher : on n\'ouvre que ce qui sert.',
         1 => 'Investir dans un ERP complet avant d\'avoir réglé la visibilité en ligne et la fiche Google. L\'ordre inverse est presque toujours plus rentable.',
         2 => 'Dépendre uniquement des plateformes de réservation et de leurs commissions, sans canal direct.',
         3 => 'Négliger la version anglaise quand une part de la clientèle vient de l\'étranger.',

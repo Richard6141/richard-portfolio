@@ -1,5 +1,5 @@
 <?php
-// Djougou, Donga. Cree le 21/08/2026: la ville figurait au pied
+// Djougou, Donga. Créé le 21/08/2026: la ville figurait au pied
 // de page sans qu'aucune URL ne porte cette couverture.
 declare(strict_types=1);
 

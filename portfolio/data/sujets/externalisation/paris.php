@@ -1,5 +1,5 @@
 <?php
-// Paris (France), cree le 21/08/2026. Angle acheteur : conformite,
+// Paris (France), créé le 21/08/2026. Angle acheteur : conformite,
 // fiscalite et recours, plutot qu'un argumentaire geographique.
 declare(strict_types=1);
 

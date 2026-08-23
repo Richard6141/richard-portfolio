@@ -1,6 +1,6 @@
 <?php
 // Intégration Odoo à Abomey-Calavi, angle ERP differencie le 21/08/2026 : la ville est la
-// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
+// même pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -151,7 +151,7 @@ return array (
         1 => 'Le besoin n\'est donc pas d\'ajouter des fonctions mais de reprendre le contrôle d\'un volume qui a débordé. La priorité est presque toujours la même : un fichier unique, élèves, patients, clients, qui remplace les trois versions divergentes qui circulent aujourd\'hui.',
         2 => 'Vient ensuite l\'échéancier. Scolarités payées en tranches, actes réglés partiellement, prises en charge : savoir qui doit quoi à une date donnée est la question à laquelle personne ne sait répondre sans plusieurs heures de reconstitution. C\'est ce que l\'ERP règle en premier.',
         3 => 'La confidentialité structure enfin tout le projet. Dossiers d\'élèves, dossiers patients : les droits par rôle et le journal des consultations se définissent avant le premier paramétrage, jamais après.',
-        4 => 'Odoo se justifie ici des que plusieurs services doivent partager le meme dossier : secretariat, comptabilite, direction. Sa gestion fine des droits par role repond directement a l\'exigence de confidentialite. Son cout de deploiement suppose en revanche un volume suffisant pour etre amorti.',
+        4 => 'Odoo se justifie ici des que plusieurs services doivent partager le même dossier : secretariat, comptabilite, direction. Sa gestion fine des droits par role repond directement a l\'exigence de confidentialite. Son cout de deploiement suppose en revanche un volume suffisant pour être amorti.',
       ),
     ),
     6 => 
@@ -161,7 +161,7 @@ return array (
       'titre' => 'Erreurs fréquentes que je corrige à Abomey-Calavi',
       'items' => 
       array (
-        0 => 'Activer des modules Odoo « parce qu\'ils sont inclus ». Chaque module active est un ecran de plus pour l\'equipe et une raison de plus de decrocher : on n\'ouvre que ce qui sert.',
+        0 => 'Activer des modules Odoo « parce qu\'ils sont inclus ». Chaque module active est un ecran de plus pour l\'équipe et une raison de plus de decrocher : on n\'ouvre que ce qui sert.',
         1 => 'Vouloir numériser rétroactivement des années de registres. C\'est long, cher, et cela n\'aide personne : on démarre à une date de bascule et le papier reste consultable en archive.',
         2 => 'Ouvrir un espace en ligne pour les parents ou les patients avant d\'avoir stabilisé l\'interne. L\'ordre inverse produit des données publiques fausses.',
         3 => 'Partager un compte unique entre plusieurs personnes du secrétariat, ce qui annule toute traçabilité sur des données sensibles.',

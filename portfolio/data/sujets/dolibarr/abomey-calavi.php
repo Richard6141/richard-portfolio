@@ -1,6 +1,6 @@
 <?php
 // Intégration Dolibarr à Abomey-Calavi, angle ERP differencie le 21/08/2026 : la ville est la
-// meme pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
+// même pour Odoo et Dolibarr, ce que chacun y apporte ne l'est pas.
 declare(strict_types=1);
 
 return array (
@@ -151,7 +151,7 @@ return array (
         1 => 'Le besoin n\'est donc pas d\'ajouter des fonctions mais de reprendre le contrôle d\'un volume qui a débordé. La priorité est presque toujours la même : un fichier unique, élèves, patients, clients, qui remplace les trois versions divergentes qui circulent aujourd\'hui.',
         2 => 'Vient ensuite l\'échéancier. Scolarités payées en tranches, actes réglés partiellement, prises en charge : savoir qui doit quoi à une date donnée est la question à laquelle personne ne sait répondre sans plusieurs heures de reconstitution. C\'est ce que l\'ERP règle en premier.',
         3 => 'La confidentialité structure enfin tout le projet. Dossiers d\'élèves, dossiers patients : les droits par rôle et le journal des consultations se définissent avant le premier paramétrage, jamais après.',
-        4 => 'Pour une ecole ou une clinique de taille moyenne, Dolibarr couvre l\'essentiel : fichier unique, echeanciers, relances, facturation. Il demande moins de formation qu\'Odoo et se prend en main en quelques jours, ce qui compte quand l\'equipe n\'est pas a l\'aise avec l\'informatique.',
+        4 => 'Pour une ecole ou une clinique de taille moyenne, Dolibarr couvre l\'essentiel : fichier unique, echeanciers, relances, facturation. Il demande moins de formation qu\'Odoo et se prend en main en quelques jours, ce qui compte quand l\'équipe n\'est pas a l\'aise avec l\'informatique.',
       ),
     ),
     6 => 

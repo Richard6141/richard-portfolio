@@ -2,9 +2,9 @@
 // ============================================================
 // data/sujets.php · Registre generique « sujet x ville »
 //
-// Cree le 21/08/2026, en remplacement d'une organisation qui ne passait
+// Créé le 21/08/2026, en remplacement d'une organisation qui ne passait
 // pas l'echelle. Avant, chaque sujet exigeait SON module complet :
-//   - un dossier de donnees et son chargeur
+//   - un dossier de données et son chargeur
 //   - un gabarit PHP de ~200 lignes, quasi identique au precedent
 //   - deux a quatre regles de reecriture dans .htaccess
 //   - un bloc dedie dans le generateur de sitemap
@@ -16,7 +16,7 @@
 // data/sujets/{sujet}/{ville}.php. Route, index, maillage interne et
 // sitemap se construisent seuls a partir de ce registre.
 //
-// Chaque sujet porte un _sujet.php decrivant le sujet lui-meme (nom,
+// Chaque sujet porte un _sujet.php decrivant le sujet lui-même (nom,
 // libelle du fil d'Ariane, type de service pour le schema). Chaque
 // fichier de ville porte SON texte : aucune phrase generique interpolee
 // avec un nom de ville, sous peine de produire le duplicate content que

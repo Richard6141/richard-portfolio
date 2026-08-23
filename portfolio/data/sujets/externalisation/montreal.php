@@ -1,5 +1,5 @@
 <?php
-// Montréal (Canada), cree le 21/08/2026. Angle acheteur : conformite,
+// Montréal (Canada), créé le 21/08/2026. Angle acheteur : conformite,
 // fiscalite et recours, plutot qu'un argumentaire geographique.
 declare(strict_types=1);
 
