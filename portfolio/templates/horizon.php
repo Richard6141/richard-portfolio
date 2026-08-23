@@ -94,10 +94,107 @@ $h_logo = siteLogoUrl();
   <span>&nbsp;PHP / Laravel&nbsp;&nbsp;·&nbsp;&nbsp;Java / Spring Boot&nbsp;&nbsp;·&nbsp;&nbsp;Node.js&nbsp;&nbsp;·&nbsp;&nbsp;React&nbsp;&nbsp;·&nbsp;&nbsp;Flutter&nbsp;&nbsp;·&nbsp;&nbsp;n8n&nbsp;&nbsp;·&nbsp;&nbsp;Make&nbsp;&nbsp;·&nbsp;&nbsp;WordPress&nbsp;&nbsp;·&nbsp;&nbsp;Django&nbsp;&nbsp;·&nbsp;&nbsp;MySQL&nbsp;&nbsp;·&nbsp;&nbsp;API REST&nbsp;&nbsp;·&nbsp;&nbsp;IA / Chatbots&nbsp;&nbsp;·&nbsp;&nbsp;</span>
 </div></div>
 
+<!-- FLUX: de la saisie manuelle au flux automatise -->
+<section class="sect flux" id="flux"><div class="wrap">
+  <div class="sect-head rv">
+    <span class="mono"><span class="tag-num">01</span> / Le principe</span>
+    <h2>De la saisie manuelle au flux automatisé.</h2>
+    <p>Vos outils existent déjà : un cahier, WhatsApp, un tableur. Le problème n'est pas leur absence, c'est qu'ils ne se parlent pas. Mon travail consiste à les relier, pas à tout remplacer.</p>
+  </div>
+
+  <div class="fx-scene rv">
+
+    <!-- AVANT: trois sources qui derivent, aucune reliee -->
+    <div class="fx-step avant">
+      <span class="fx-tag">Aujourd'hui</span>
+      <svg class="fx-disc" viewBox="0 0 200 200" role="img" aria-label="Trois outils dispersés qui ne communiquent pas : cahier, WhatsApp, tableur">
+        <circle cx="100" cy="100" r="72" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1" stroke-dasharray="3 7"/>
+        <g class="drift">
+          <circle class="sat" cx="100" cy="42" r="19"/>
+          <text class="sat-l" x="100" y="45" text-anchor="middle">CAHIER</text>
+        </g>
+        <g class="drift d2">
+          <circle class="sat" cx="50" cy="132" r="19"/>
+          <text class="sat-l" x="50" y="135" text-anchor="middle">WHATSAPP</text>
+        </g>
+        <g class="drift d3">
+          <circle class="sat" cx="150" cy="132" r="19"/>
+          <text class="sat-l" x="150" y="135" text-anchor="middle">TABLEUR</text>
+        </g>
+        <text class="sat-l" x="100" y="104" text-anchor="middle" style="fill:#5b5650">AUCUN LIEN</text>
+      </svg>
+      <h3>Trois fois la même saisie</h3>
+      <p>La commande arrive sur WhatsApp, le stock vit dans un cahier, la facture se fait ailleurs. Personne ne connaît le chiffre du jour.</p>
+    </div>
+
+    <svg class="fx-bridge" viewBox="0 0 60 64" aria-hidden="true">
+      <line class="rail" x1="4" y1="32" x2="56" y2="32"/>
+      <circle class="pulse" cx="4" cy="32" r="3">
+        <animate attributeName="cx" values="4;56" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+
+    <!-- PONT: l'automatisation -->
+    <div class="fx-step pont">
+      <span class="fx-tag">Ce que je fais</span>
+      <svg class="fx-disc" viewBox="0 0 200 200" role="img" aria-label="L'automatisation relie les outils entre eux">
+        <circle class="core halo" cx="100" cy="100" r="58"/>
+        <g class="gear">
+          <circle class="gear" cx="100" cy="100" r="44" stroke-dasharray="14 9"/>
+        </g>
+        <g class="gear rev">
+          <circle class="gear" cx="100" cy="100" r="28" stroke-dasharray="9 7"/>
+        </g>
+        <circle cx="100" cy="100" r="9" fill="var(--acc)"/>
+        <text class="sat-l" x="100" y="166" text-anchor="middle" style="fill:var(--acc)">n8n / API</text>
+      </svg>
+      <h3>On relie, on ne remplace pas</h3>
+      <p>WhatsApp reste votre canal client. Ce qui y transite alimente désormais le stock et la facturation, sans ressaisie.</p>
+    </div>
+
+    <svg class="fx-bridge" viewBox="0 0 60 64" aria-hidden="true">
+      <line class="rail" x1="4" y1="32" x2="56" y2="32"/>
+      <circle class="pulse" cx="4" cy="32" r="3">
+        <animate attributeName="cx" values="4;56" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+
+    <!-- APRES: les memes sources, reliees et en rotation -->
+    <div class="fx-step apres">
+      <span class="fx-tag">Après</span>
+      <svg class="fx-disc" viewBox="0 0 200 200" role="img" aria-label="Les mêmes outils, désormais reliés autour d'une donnée unique">
+        <circle class="core halo" cx="100" cy="100" r="34"/>
+        <g class="orbit">
+          <circle class="ring" cx="100" cy="100" r="60"/>
+          <line class="spoke" x1="100" y1="100" x2="100" y2="40"/>
+          <line class="spoke" x1="100" y1="100" x2="48" y2="130"/>
+          <line class="spoke" x1="100" y1="100" x2="152" y2="130"/>
+          <circle class="sat-on" cx="100" cy="40" r="8"/>
+          <circle class="sat-on" cx="48" cy="130" r="8"/>
+          <circle class="sat-on" cx="152" cy="130" r="8"/>
+        </g>
+        <circle class="core-b" cx="100" cy="100" r="20"/>
+        <text class="sat-l" x="100" y="104" text-anchor="middle" style="fill:var(--acc)">1 DONNÉE</text>
+      </svg>
+      <h3>Une seule source de vérité</h3>
+      <p>Le stock, les encours et le chiffre du jour se lisent à tout moment, par vous comme par votre équipe.</p>
+    </div>
+
+  </div>
+
+  <div class="fx-gain rv">
+    <div><div class="g-n"><span class="ct" data-to="3">0</span>&nbsp;saisies</div><div class="g-l">remplacées par une seule</div></div>
+    <div><div class="g-n"><span class="ct" data-to="24">0</span>h</div><div class="g-l">pour obtenir un devis clair</div></div>
+    <div><div class="g-n"><span class="ct" data-to="2">0</span>&nbsp;à 5 sem.</div><div class="g-l">avant le premier gain mesurable</div></div>
+  </div>
+</div></section>
+
 <!-- SERVICES -->
 <section class="sect" id="services"><div class="wrap">
   <div class="sect-head rv">
-    <span class="mono"><span class="tag-num">01</span> / Services</span>
+    <span class="mono"><span class="tag-num">02</span> / Services</span>
     <h2>Tout votre numérique, un seul interlocuteur.</h2>
     <p>De la vitrine à l'automatisation : des solutions sur-mesure pensées pour des résultats concrets.</p>
   </div>
@@ -145,7 +242,7 @@ $h_logo = siteLogoUrl();
 <!-- PORTFOLIO -->
 <section class="sect soft" id="portfolio"><div class="wrap">
   <div class="sect-head rv">
-    <span class="mono"><span class="tag-num">02</span> / Réalisations</span>
+    <span class="mono"><span class="tag-num">03</span> / Réalisations</span>
     <h2>Des projets pensés pour des résultats.</h2>
     <p>Un aperçu de mes travaux. D'autres projets sont en cours et seront bientôt publiés.</p>
   </div>
@@ -189,7 +286,7 @@ $h_logo = siteLogoUrl();
 <!-- PROCESS -->
 <section class="sect" id="process"><div class="wrap">
   <div class="sect-head rv">
-    <span class="mono"><span class="tag-num">03</span> / Méthode</span>
+    <span class="mono"><span class="tag-num">04</span> / Méthode</span>
     <h2>De l'idée à la mise en ligne, en 4 étapes.</h2>
   </div>
   <div class="proc stg">
@@ -203,7 +300,7 @@ $h_logo = siteLogoUrl();
 <!-- WHY -->
 <section class="sect soft"><div class="wrap">
   <div class="sect-head rv">
-    <span class="mono"><span class="tag-num">04</span> / Pourquoi moi</span>
+    <span class="mono"><span class="tag-num">05</span> / Pourquoi moi</span>
     <h2>Un développeur, pas une boîte noire.</h2>
   </div>
   <div class="why-grid stg">
@@ -219,7 +316,7 @@ $h_logo = siteLogoUrl();
 <!-- TÉMOIGNAGES -->
 <section class="sect"><div class="wrap">
   <div class="sect-head rv">
-    <span class="mono"><span class="tag-num">05</span> / Témoignages</span>
+    <span class="mono"><span class="tag-num">06</span> / Témoignages</span>
     <h2>Ils me font confiance.</h2>
   </div>
   <?php if ($h_maps): ?>
@@ -259,7 +356,7 @@ $h_logo = siteLogoUrl();
 <!-- DERNIÈRES RESSOURCES -->
 <section class="sect"><div class="wrap">
   <div class="sect-head rv">
-    <span class="mono"><span class="tag-num">06</span> / Blog</span>
+    <span class="mono"><span class="tag-num">07</span> / Blog</span>
     <h2>Dernières ressources &amp; conseils.</h2>
     <p>Des articles pratiques sur le web, le SEO et le numérique pour faire croître votre activité.</p>
   </div>
@@ -282,7 +379,7 @@ $h_logo = siteLogoUrl();
 <!-- FAQ -->
 <section class="sect soft" id="faq"><div class="wrap">
   <div class="sect-head rv">
-    <span class="mono"><span class="tag-num">07</span> / Questions fréquentes</span>
+    <span class="mono"><span class="tag-num">08</span> / Questions fréquentes</span>
     <h2>Ce qu'on me demande souvent.</h2>
   </div>
   <div class="faq stg">

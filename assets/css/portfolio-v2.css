@@ -624,3 +624,76 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 .pv2 .vil-table tbody td:nth-child(4){color:var(--muted);white-space:nowrap}
 .pv2 .vil-table tbody tr:last-child th,.pv2 .vil-table tbody tr:last-child td{border-bottom:none}
 .pv2 .vil-table-note{margin-top:.8rem;font-size:.84rem;color:var(--muted);text-align:center}
+
+/* ============================================================
+   SECTION FLUX, ajoutee le 21/08/2026.
+   Montre le passage de la saisie manuelle au flux automatise.
+   Fond charbon volontaire: la page enchainait sept sections claires,
+   ce bloc sombre cree une respiration et isole la demonstration.
+   Tout est en SVG inline: aucune requete image, net a toute taille,
+   et les couleurs suivent la palette au lieu d'etre cuites dans un PNG.
+   ============================================================ */
+.pv2 .flux{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:5.5rem 0}
+.pv2 .flux::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 50% at 15% 0%,rgba(200,146,74,.16),transparent 70%),
+  radial-gradient(50% 45% at 88% 100%,rgba(200,146,74,.10),transparent 70%)}
+.pv2 .flux>.wrap{position:relative}
+.pv2 .flux .sect-head h2{color:#fff}
+.pv2 .flux .sect-head p{color:#b9b4ab;max-width:60ch}
+.pv2 .flux .sect-head .mono{color:#8d867c}
+
+/* Scene: trois etats relies par deux passerelles */
+.pv2 .fx-scene{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:.6rem;margin-top:3.2rem}
+.pv2 .fx-step{text-align:center}
+.pv2 .fx-disc{width:100%;max-width:210px;margin:0 auto;display:block}
+.pv2 .fx-tag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .7rem;border-radius:999px;margin-bottom:.9rem}
+.pv2 .fx-step.avant .fx-tag{background:rgba(255,255,255,.08);color:#b9b4ab}
+.pv2 .fx-step.pont  .fx-tag{background:rgba(200,146,74,.18);color:var(--acc)}
+.pv2 .fx-step.apres .fx-tag{background:var(--acc);color:#1c1c1e}
+.pv2 .fx-step h3{font-size:1.12rem;color:#fff;margin:1rem 0 .35rem}
+.pv2 .fx-step p{font-size:.9rem;color:#b9b4ab;line-height:1.6;max-width:30ch;margin:0 auto}
+
+/* Passerelle animee entre deux etats */
+.pv2 .fx-bridge{width:100%;min-width:54px;height:64px}
+.pv2 .fx-bridge .rail{stroke:rgba(255,255,255,.16);stroke-width:1.5;stroke-dasharray:2 6;stroke-linecap:round}
+.pv2 .fx-bridge .pulse{fill:var(--acc)}
+
+/* Etat AVANT: satellites disperses qui derivent, aucun lien */
+.pv2 .fx-disc .sat{fill:#3a3a3f;stroke:rgba(255,255,255,.14);stroke-width:1}
+.pv2 .fx-disc .sat-l{fill:#8d867c;font-family:var(--mono);font-size:8px;letter-spacing:.06em}
+.pv2 .fx-disc .drift{animation:fxDrift 6s ease-in-out infinite}
+.pv2 .fx-disc .drift.d2{animation-delay:-2s}
+.pv2 .fx-disc .drift.d3{animation-delay:-4s}
+@keyframes fxDrift{0%,100%{transform:translate(0,0)}50%{transform:translate(3px,-4px)}}
+
+/* Etat APRES: meme satellites, relies et en rotation lente */
+.pv2 .fx-disc .ring{fill:none;stroke:rgba(200,146,74,.35);stroke-width:1.5}
+.pv2 .fx-disc .spoke{stroke:rgba(200,146,74,.5);stroke-width:1.2}
+.pv2 .fx-disc .sat-on{fill:var(--acc);stroke:none}
+.pv2 .fx-disc .core{fill:var(--acc);opacity:.14}
+.pv2 .fx-disc .core-b{fill:none;stroke:var(--acc);stroke-width:1.5}
+.pv2 .fx-disc .orbit{transform-origin:100px 100px;animation:fxSpin 26s linear infinite}
+@keyframes fxSpin{to{transform:rotate(360deg)}}
+.pv2 .fx-disc .halo{transform-origin:100px 100px;animation:fxHalo 3.4s ease-in-out infinite}
+@keyframes fxHalo{0%,100%{opacity:.14;transform:scale(1)}50%{opacity:.26;transform:scale(1.06)}}
+
+/* Etat PONT: engrenage d'automatisation */
+.pv2 .fx-disc .gear{fill:none;stroke:var(--acc);stroke-width:1.6;transform-origin:100px 100px;animation:fxSpin 18s linear infinite}
+.pv2 .fx-disc .gear.rev{animation-direction:reverse;animation-duration:14s}
+
+/* Le gain, chiffres sous la scene */
+.pv2 .fx-gain{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3.4rem;padding-top:2.4rem;border-top:1px solid rgba(255,255,255,.1)}
+.pv2 .fx-gain div{text-align:center}
+.pv2 .fx-gain .g-n{font-size:1.9rem;font-weight:900;color:var(--acc);line-height:1.1}
+.pv2 .fx-gain .g-l{font-size:.82rem;color:#b9b4ab;margin-top:.3rem}
+
+@media(max-width:900px){
+  .pv2 .fx-scene{grid-template-columns:1fr;gap:.2rem}
+  .pv2 .fx-bridge{height:46px;width:46px;margin:0 auto;transform:rotate(90deg)}
+  .pv2 .fx-step p{max-width:38ch}
+  .pv2 .fx-gain{grid-template-columns:1fr;gap:1.6rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .pv2 .fx-disc .drift,.pv2 .fx-disc .orbit,.pv2 .fx-disc .halo,
+  .pv2 .fx-disc .gear,.pv2 .fx-bridge .pulse{animation:none}
+}
