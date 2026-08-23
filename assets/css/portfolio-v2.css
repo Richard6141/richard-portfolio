@@ -838,8 +838,12 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 .pv2 .vc-v{font-weight:700;font-size:.94rem;color:var(--navy);text-align:right}
 .pv2 .vc-sect{padding-top:1rem}
 .pv2 .vc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
-.pv2 .vc-tags span{font-size:.78rem;padding:.32rem .68rem;border-radius:999px;
+/* Les pages ville posent des <span> (secteurs, non cliquables), les pages sujet
+   des <a> (autres prestations de la meme ville) : meme pastille, le lien reagit. */
+.pv2 .vc-tags span,.pv2 .vc-tags a{font-size:.78rem;padding:.32rem .68rem;border-radius:999px;
   background:var(--soft);color:var(--navy);border:1px solid var(--line)}
+.pv2 .vc-tags a{text-decoration:none;transition:background .2s,border-color .2s,color .2s}
+.pv2 .vc-tags a:hover{background:var(--navy);border-color:var(--navy);color:#fff}
 
 @media(max-width:900px){
   .pv2 .vil-hero-grid{grid-template-columns:1fr;gap:2rem}

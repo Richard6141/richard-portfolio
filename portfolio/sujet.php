@@ -30,7 +30,7 @@ $url = $portfolioUrl . '/' . $page['slug'];
 // ont pas: lier vers /developpeur-web-X y menait droit sur un 404.
 $villesAvecPage = [];
 foreach ((array) @require __DIR__ . '/data/villes.php' as $vv) {
-    if (!empty($vv['slug'])) { $villesAvecPage[$vv['slug']] = true; }
+    if (!empty($vv['slug'])) { $villesAvecPage[$vv['slug']] = $vv; }
 }
 $aPageVille = $page['ville_slug'] !== '' && isset($villesAvecPage[$page['ville_slug']]);
 
@@ -104,14 +104,57 @@ include __DIR__ . '/partials/pv2-header.php';
 <main id="main-content">
   <div class="wrap crumb"><a href="/">Accueil</a><span class="sep">/</span><a href="/zones/">Zones desservies</a><?php if ($aPageVille): ?><span class="sep">/</span><a href="/developpeur-web-<?= sanitize($page['ville_slug']) ?>"><?= sanitize($page['ville']) ?></a><?php endif; ?><span class="sep">/</span><?= sanitize($sujet['nom'] ?? $sujet['slug']) ?></div>
 
-  <section class="svc-hero"><div class="wrap">
-    <h1><?= sanitize($page['titre']) ?></h1>
-    <p><?= sanitize($page['accroche']) ?></p>
-    <div class="hero-cta">
-      <a href="/contact" class="btn">Demander un devis gratuit</a>
-      <?php if ($aPageVille): ?><a href="/developpeur-web-<?= sanitize($page['ville_slug']) ?>" class="btn btn-ghost">Développeur web à <?= sanitize($page['ville']) ?></a><?php else: ?><a href="/zones/" class="btn btn-ghost">Zones desservies</a><?php endif; ?>
+  <?php
+  $vRec = $aPageVille ? $villesAvecPage[$page['ville_slug']] : null;
+  ?>
+  <section class="vil-hero"><div class="wrap vil-hero-grid">
+    <div class="vil-hero-txt">
+      <span class="eyebrow"><span class="pulse"></span><span class="mono"><?= $page['ville_slug'] !== '' ? sanitize($page['ville']) . ', ' . sanitize($page['pays']) : sanitize($page['ville']) ?></span></span>
+      <h1><?= sanitize($page['titre']) ?></h1>
+      <p class="lead"><?= sanitize($page['accroche']) ?></p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn">Demander un devis gratuit</a>
+        <?php if ($aPageVille): ?><a href="/developpeur-web-<?= sanitize($page['ville_slug']) ?>" class="btn btn-ghost">Développeur web à <?= sanitize($page['ville']) ?></a><?php else: ?><a href="/zones/" class="btn btn-ghost">Zones desservies</a><?php endif; ?>
+      </div>
     </div>
-    <div class="vil-meta"><span><?= $page['ville_slug'] !== '' ? sanitize($page['ville']) . ', ' . sanitize($page['pays']) : sanitize($page['ville']) ?></span></div>
+
+    <aside class="vil-card">
+      <div class="vc-row">
+        <span class="vc-k">Prestation</span>
+        <span class="vc-v"><?= sanitize($sujet['nom'] ?? $sujet['slug']) ?></span>
+      </div>
+      <?php if ($vRec !== null): ?>
+      <div class="vc-row">
+        <span class="vc-k">Intervention</span>
+        <span class="vc-v"><?php if (!empty($vRec['sur_place'])): ?>Sur place et à distance<?php else: ?>Entièrement à distance<?php endif; ?></span>
+      </div>
+      <?php if (!empty($vRec['sur_place']) && !empty($vRec['distance_km'])): ?>
+      <div class="vc-row">
+        <span class="vc-k">Distance</span>
+        <span class="vc-v"><?= (int) $vRec['distance_km'] ?> km depuis Abomey-Calavi</span>
+      </div>
+      <?php endif; ?>
+      <?php else: ?>
+      <div class="vc-row">
+        <span class="vc-k">Intervention</span>
+        <span class="vc-v">À distance, avec des points d'étape planifiés</span>
+      </div>
+      <?php endif; ?>
+      <div class="vc-row">
+        <span class="vc-k">Délai de réponse</span>
+        <span class="vc-v">Sous 24 h</span>
+      </div>
+      <div class="vc-row">
+        <span class="vc-k">Devis</span>
+        <span class="vc-v">Gratuit, après cadrage</span>
+      </div>
+      <?php if ($autresSujets): ?>
+      <div class="vc-sect">
+        <span class="vc-k">Aussi à <?= sanitize($page['ville']) ?></span>
+        <div class="vc-tags"><?php foreach (array_slice($autresSujets, 0, 4) as $as): ?><a href="/<?= sanitize($as['page']['slug']) ?>"><?= sanitize($as['sujet']['nom'] ?? $as['sujet']['slug']) ?></a><?php endforeach; ?></div>
+      </div>
+      <?php endif; ?>
+    </aside>
   </div></section>
 
   <?php if (!empty($page['intro'])): ?>
@@ -138,9 +181,13 @@ include __DIR__ . '/partials/pv2-header.php';
         <?php endforeach; ?>
       </div>
     <?php elseif ($sec['type'] === 'definitions'): ?>
-      <div class="prose rv">
-        <?php foreach ($sec['items'] as $it): ?>
-          <h3><?= sanitize($it['titre']) ?></h3><p><?= sanitize($it['texte']) ?></p>
+      <div class="vil-zones">
+        <?php foreach ($sec['items'] as $id => $it): ?>
+        <article class="vz">
+          <span class="vz-n"><?= sprintf('%02d', $id + 1) ?></span>
+          <h3><?= sanitize($it['titre']) ?></h3>
+          <p><?= sanitize($it['texte']) ?></p>
+        </article>
         <?php endforeach; ?>
       </div>
     <?php else: ?>
