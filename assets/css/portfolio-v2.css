@@ -697,3 +697,107 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
   .pv2 .fx-disc .drift,.pv2 .fx-disc .orbit,.pv2 .fx-disc .halo,
   .pv2 .fx-disc .gear,.pv2 .fx-bridge .pulse{animation:none}
 }
+
+/* ============================================================
+   REFONTE DE L'ACCUEIL, 21/08/2026.
+   Ce bloc surcharge volontairement les regles precedentes: il est
+   place en fin de feuille pour l'emporter sans avoir a les reecrire,
+   ce qui garde l'historique lisible et le retour arriere trivial.
+
+   Trois defauts corriges:
+   1. huit sections claires d'affilee, aucun rythme visuel
+   2. une echelle typographique trop plate, les titres ne portaient pas
+   3. des cartes sans profondeur ni reponse au survol
+   ============================================================ */
+
+/* --- Echelle typographique: les titres portent enfin --- */
+.pv2 .hero h1{font-size:clamp(2.4rem,5.4vw,4.1rem);line-height:1.04;letter-spacing:-.035em}
+.pv2 .hero .lead{font-size:clamp(1.02rem,1.5vw,1.18rem);color:#55555c;max-width:52ch;line-height:1.72}
+.pv2 .sect-head h2{font-size:clamp(1.75rem,3.2vw,2.6rem);line-height:1.1;letter-spacing:-.028em}
+.pv2 .sect-head p{font-size:1.02rem;color:var(--muted);max-width:62ch;line-height:1.7;margin-top:.7rem}
+.pv2 .sect-head{margin-bottom:2.8rem}
+.pv2 .sect-head .mono{display:inline-block;margin-bottom:.85rem}
+
+/* --- Rythme: alternance claire / creme, plus de mur blanc --- */
+.pv2 .sect{padding:5.5rem 0}
+.pv2 .sect.soft{background:var(--soft)}
+.pv2 #services{background:var(--soft)}
+.pv2 #portfolio{background:var(--bg)}
+
+/* --- Hero: profondeur et ancrage --- */
+.pv2 .hero{position:relative;padding:7rem 0 5rem;overflow:hidden}
+.pv2 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(48% 42% at 82% 8%,rgba(200,146,74,.13),transparent 68%),
+  radial-gradient(42% 38% at 0% 62%,rgba(200,146,74,.07),transparent 70%)}
+.pv2 .hero .eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .85rem;
+  border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.7);margin-bottom:1.4rem}
+.pv2 .hero .hero-cta{margin-top:2rem;gap:.8rem}
+.pv2 .hero .stats{margin-top:3rem;padding-top:1.8rem;border-top:1px solid var(--line)}
+.pv2 .stat .n{font-size:1.9rem;letter-spacing:-.03em}
+.pv2 .stat .l{color:var(--muted);font-size:.83rem}
+
+/* --- Cartes: profondeur reelle, reponse au survol --- */
+.pv2 .svc,.pv2 .pf,.pv2 .tst,.pv2 .step,.pv2 .why{
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);
+  transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .25s}
+.pv2 .svc{padding:1.6rem;position:relative;overflow:hidden}
+.pv2 .svc::after{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:var(--acc);transition:width .3s}
+.pv2 .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#ded6c9}
+.pv2 .svc:hover::after{width:100%}
+.pv2 .svc .ico{width:44px;height:44px;border-radius:11px;background:var(--soft);display:flex;
+  align-items:center;justify-content:center;color:var(--acc-2);margin-bottom:1rem;transition:.25s}
+.pv2 .svc:hover .ico{background:var(--acc);color:#fff}
+.pv2 .svc h3{font-size:1.06rem;margin-bottom:.4rem;letter-spacing:-.01em}
+.pv2 .svc p{font-size:.92rem;color:var(--muted);line-height:1.62}
+.pv2 .svc .arrow{margin-top:1rem;font-size:.83rem;font-weight:700;color:var(--acc-2);
+  display:inline-flex;align-items:center;gap:.35rem;transition:gap .25s}
+.pv2 .svc .arrow::after{content:"\2192"}
+.pv2 .svc:hover .arrow{gap:.6rem}
+
+.pv2 .pf:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.pv2 .step{padding:1.5rem;background:var(--bg)}
+.pv2 .step:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.pv2 .step .sn{width:34px;height:34px;border-radius:9px;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem;margin-bottom:.9rem}
+.pv2 .why{padding:1.5rem}
+.pv2 .why:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#ded6c9}
+.pv2 .why .ico{color:var(--acc-2);margin-bottom:.8rem}
+
+/* --- Temoignages: une seule carte ne doit pas paraitre vide --- */
+.pv2 .tst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;max-width:760px;margin:0 auto}
+.pv2 .tst{padding:1.7rem;position:relative}
+.pv2 .tst::before{content:"\201C";position:absolute;right:1.2rem;top:.3rem;font-size:4.5rem;
+  line-height:1;color:var(--acc);opacity:.14;font-family:Georgia,serif}
+.pv2 .tst .q{font-size:1.02rem;line-height:1.7;color:var(--ink);position:relative}
+.pv2 .tst .av{width:44px;height:44px;border-radius:50%;background:var(--acc-2);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0}
+.pv2 .tst .stars{color:var(--acc);letter-spacing:.12em;margin:.7rem 0}
+
+/* --- Bande d'appel: contraste et respiration --- */
+.pv2 .cta-band{background:var(--navy);position:relative;overflow:hidden;padding:4.5rem 0}
+.pv2 .cta-band::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(55% 60% at 50% 0%,rgba(200,146,74,.18),transparent 70%)}
+.pv2 .cta-inner{position:relative;text-align:center;max-width:640px;margin:0 auto}
+.pv2 .cta-inner h2{font-size:clamp(1.6rem,3vw,2.3rem);color:#fff;letter-spacing:-.025em}
+.pv2 .cta-inner p{color:#b9b4ab;margin:.8rem 0 1.8rem;font-size:1.02rem}
+
+/* --- Bandeau des technologies: plus discret, il ne doit pas crier --- */
+.pv2 .marquee{background:var(--navy);color:#8d867c;padding:.9rem 0;font-family:var(--mono);
+  font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;border:none}
+
+/* --- FAQ: cartes plutot que lignes nues --- */
+.pv2 .qa{border:1px solid var(--line);border-radius:12px;background:var(--bg);margin-bottom:.7rem;
+  transition:border-color .2s,box-shadow .2s}
+.pv2 .qa:hover{border-color:#ded6c9}
+.pv2 .qa.open{border-color:var(--acc);box-shadow:var(--shadow)}
+.pv2 .qa button{padding:1.15rem 1.4rem;font-size:1rem;font-weight:700}
+
+@media(max-width:768px){
+  .pv2 .sect{padding:3.8rem 0}
+  .pv2 .hero{padding:5rem 0 3.5rem}
+  .pv2 .sect-head{margin-bottom:2rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .pv2 .svc,.pv2 .pf,.pv2 .step,.pv2 .why{transition:none}
+  .pv2 .svc:hover,.pv2 .pf:hover,.pv2 .step:hover,.pv2 .why:hover{transform:none}
+}
