@@ -896,8 +896,15 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 /* Tableau comparatif: lisible plutot que dense */
 .pv2 .vil-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg)}
 .pv2 .vil-table-wrap table{width:100%;border-collapse:collapse;font-size:.93rem;min-width:560px}
-.pv2 .vil-table-wrap th{background:var(--navy);color:#fff;font-weight:700;text-align:left;
-  padding:.85rem 1rem;font-size:.8rem;letter-spacing:.04em}
+/* Corrige le 23/08/2026. La regle portait sur "th" tout court : elle peignait
+   donc AUSSI la premiere colonne du corps, qui est un <th scope="row">. Le fond
+   passait en navy pendant que la regle plus specifique ".vil-table tbody th"
+   gardait color:var(--navy) : texte navy sur fond navy, colonne noire et vide.
+   Les deux zones sont desormais visees separement. */
+.pv2 .vil-table-wrap thead th{background:var(--soft);color:var(--muted);font-weight:700;
+  text-align:left;padding:.85rem 1rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.pv2 .vil-table-wrap tbody th{background:transparent;color:var(--navy);font-weight:700;
+  text-align:left;width:26%;padding:.85rem 1rem;border-top:1px solid var(--line);vertical-align:top}
 .pv2 .vil-table-wrap td{padding:.85rem 1rem;border-top:1px solid var(--line);vertical-align:top}
 .pv2 .vil-table-wrap tbody tr:nth-child(even){background:var(--soft)}
 
