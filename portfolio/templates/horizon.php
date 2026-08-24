@@ -424,10 +424,10 @@ $h_logo = siteLogoUrl();
     <h2>Ce qu'on me demande souvent.</h2>
   </div>
   <div class="faq stg">
-    <div class="qa"><button type="button">Combien coûte un site web au Bénin ?<span class="plus">+</span></button><div class="a">Une vitrine démarre autour de 300 000 FCFA ; un e-commerce ou une application sur-mesure davantage. Je vous remets un devis clair après le cadrage, gratuit et sans engagement.</div></div>
-    <div class="qa"><button type="button">Quels sont les délais de réalisation ?<span class="plus">+</span></button><div class="a">Un site vitrine : 1 à 3 semaines. Une application sur-mesure : 1 à 3 mois selon la complexité. Le planning précis est fixé ensemble dès le cadrage.</div></div>
-    <div class="qa"><button type="button">Comment se passe le paiement ?<span class="plus">+</span></button><div class="a">Par Mobile Money (MTN / Moov), carte bancaire, PayPal, virement ou espèces, en plusieurs tranches liées aux étapes du projet.</div></div>
-    <div class="qa"><button type="button">Assurez-vous la maintenance après livraison ?<span class="plus">+</span></button><div class="a">Oui : mises à jour, corrections, sauvegardes et améliorations sont disponibles en forfait de maintenance, ou à la demande.</div></div>
+    <details><summary>Combien coûte un site web au Bénin ?</summary><p>Une vitrine démarre autour de 300 000 FCFA ; un e-commerce ou une application sur-mesure davantage. Je vous remets un devis clair après le cadrage, gratuit et sans engagement.</p></details>
+    <details><summary>Quels sont les délais de réalisation ?</summary><p>Un site vitrine : 1 à 3 semaines. Une application sur-mesure : 1 à 3 mois selon la complexité. Le planning précis est fixé ensemble dès le cadrage.</p></details>
+    <details><summary>Comment se passe le paiement ?</summary><p>Par Mobile Money (MTN / Moov), carte bancaire, PayPal, virement ou espèces, en plusieurs tranches liées aux étapes du projet.</p></details>
+    <details><summary>Assurez-vous la maintenance après livraison ?</summary><p>Oui : mises à jour, corrections, sauvegardes et améliorations sont disponibles en forfait de maintenance, ou à la demande.</p></details>
   </div>
 </div></section>
 

@@ -65,10 +65,9 @@
     root.querySelectorAll('.rv, .stg').forEach(function (el) { el.classList.add('in'); });
   }
 
-  // FAQ accordéon
-  root.querySelectorAll('.qa button').forEach(function (b) {
-    b.addEventListener('click', function () { b.parentElement.classList.toggle('open'); });
-  });
+  // FAQ : plus de gestionnaire ici depuis le 23/08/2026. Les questions sont
+  // des <details> natifs, qui s'ouvrent sans JavaScript et se parcourent au
+  // clavier sans travail supplémentaire.
 
   // Rotator de mots dans le H1
   var rot = document.getElementById('pv2-rot');

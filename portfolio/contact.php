@@ -194,10 +194,7 @@ include __DIR__ . '/partials/pv2-header.php';
     </div>
     <div class="faq rv">
       <?php foreach ($contactFaq as $qa): ?>
-        <div class="qa">
-          <button type="button"><?= sanitize($qa[0]) ?><span class="plus">+</span></button>
-          <div class="a"><?= sanitize($qa[1]) ?></div>
-        </div>
+        <details><summary><?= sanitize($qa[0]) ?></summary><p><?= sanitize($qa[1]) ?></p></details>
       <?php endforeach; ?>
     </div>
   </div></section>
