@@ -49,6 +49,12 @@ RewriteRule ^favicon\.ico$ - [L]
 #   /a-propos/  /blog/  /services/     -> AVEC slash final
 #   /blog/<slug>  /services/<slug>     -> SANS slash final
 # ----------------------------------------------------------
+# Ancien slug signale en 404 par Search Console le 29/08/2026. Il n'est lie
+# depuis aucune page du site : il vient donc d'un lien externe ou d'une
+# ancienne version. Rediriger vaut mieux que laisser un 404 : le visiteur
+# arrive sur la page equivalente et le lien entrant garde sa valeur.
+RewriteRule ^services/creation-de-site-web/?$ /services/site-vitrine-professionnel [R=301,L]
+
 RewriteRule ^(a-propos|blog|services)$ /$1/ [R=301,L]
 RewriteRule ^(blog|services)/([a-z0-9_-]+)/$ /$1/$2 [R=301,L]
 
@@ -61,12 +67,6 @@ RewriteRule ^blog/([a-z0-9_-]+)/?$ /portfolio/article.php?slug=$1 [QSA,L]
 # ----------------------------------------------------------
 # Pages services — URLs propres pour le SEO
 # ----------------------------------------------------------
-# Ancien slug signale en 404 par Search Console le 29/08/2026. Il n'est lie
-# depuis aucune page du site : il vient donc d'un lien externe ou d'une
-# ancienne version. Rediriger vaut mieux que laisser un 404 : le visiteur
-# arrive sur la page equivalente et le lien entrant garde sa valeur.
-RewriteRule ^services/creation-de-site-web/?$ /services/site-vitrine-professionnel [R=301,L]
-
 RewriteRule ^services/?$ /portfolio/services-index.php [QSA,L]
 RewriteRule ^services/([a-z0-9-]+)/?$ /portfolio/service.php?slug=$1 [QSA,L]
 
