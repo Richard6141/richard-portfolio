@@ -36,9 +36,19 @@ RewriteRule ^[a-z0-9-]+\.php$ - [L]
 # Fichiers SEO — servis par PHP dynamiquement
 # ----------------------------------------------------------
 RewriteRule ^robots\.txt$  /robots.php  [L]
-# sitemap.xml : on sert le fichier STATIQUE s'il existe (rapide, fiable),
-# sinon on bascule sur la generation dynamique sitemap.php (secours).
-RewriteCond %{DOCUMENT_ROOT}/sitemap.xml !-f
+# sitemap.xml — modifie le 01/09/2026.
+# Avant : le fichier STATIQUE etait servi s'il existait, et sitemap.php ne
+# servait que de secours. Or Search Console lit sitemap.php sans probleme
+# depuis le 28/07/2026, alors qu'elle n'a JAMAIS reussi a lire sitemap.xml
+# (« Impossible de recuperer le sitemap », type « Inconnu », zero lecture).
+# Le contenu est pourtant identique et irreprochable : teste en HTTP/1.1,
+# en HEAD, en requete conditionnelle, en gzip et en brotli, avec l'agent
+# Googlebot, huit fois de suite, toujours 200 et 25 363 octets.
+# La seule variable qui differe entre les deux URL est ce qui les sert :
+# PHP d'un cote, le fichier statique via LiteSpeed de l'autre. On bascule
+# donc sur ce qui a fait ses preuves chez Google.
+# Le fichier statique reste genere : il sert de secours si PHP tombe, et
+# la bascule inverse tient en une ligne.
 RewriteRule ^sitemap\.xml$ /sitemap.php [L]
 RewriteRule ^favicon\.ico$ - [L]
 
