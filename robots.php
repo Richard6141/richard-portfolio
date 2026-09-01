@@ -68,6 +68,12 @@ if ($isPublished) {
     echo "Allow: /uploads/*.svg$\n";
     echo "Allow: /uploads/*.avif$\n";
     echo "\n";
+    // Le 01/09/2026, robots.txt ne declarait que sitemap.php alors que la
+    // forme canonique servie est le fichier statique sitemap.xml, plus rapide
+    // et mieux traite par les robots. Les deux sont declares : ils renvoient
+    // le meme contenu, et le .htaccess bascule sur le PHP si le fichier
+    // statique venait a manquer.
+    echo "Sitemap: {$baseUrl}/sitemap.xml\n";
     echo "Sitemap: {$baseUrl}/sitemap.php\n";
 } else {
     // Portfolio non publié : bloquer tous les bots

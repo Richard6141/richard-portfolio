@@ -30,15 +30,26 @@ $host    = $_SERVER['HTTP_HOST'] ?? parse_url(BASE_URL, PHP_URL_HOST);
 $baseUrl = 'https://' . rtrim($host, '/');
 
 try {
-    $xml   = buildSitemapXml(getPDO(), $baseUrl);
-    $path  = __DIR__ . '/sitemap.xml';
-    $bytes = @file_put_contents($path, $xml);
+    $xml  = buildSitemapXml(getPDO(), $baseUrl);
+    $path = __DIR__ . '/sitemap.xml';
 
-    if ($bytes === false) {
+    // Ecriture atomique (01/09/2026). file_put_contents ecrivait directement
+    // dans sitemap.xml : pendant la fraction de seconde de la reecriture, une
+    // requete concurrente lisait un fichier tronque, donc un XML mal forme.
+    // Le sitemap etant regenere a CHAQUE deploiement, un robot qui tombait
+    // dans cette fenetre voyait « impossible de recuperer le sitemap ».
+    // On ecrit d'abord a cote, puis rename() remplace le fichier d'un bloc :
+    // un lecteur voit soit l'ancienne version complete, soit la nouvelle.
+    $tmp   = $path . '.' . getmypid() . '.tmp';
+    $bytes = @file_put_contents($tmp, $xml, LOCK_EX);
+
+    if ($bytes === false || !@rename($tmp, $path)) {
+        @unlink($tmp);
         http_response_code(500);
         echo "ECHEC : impossible d'ecrire {$path}. Verifiez les permissions du dossier.\n";
         exit;
     }
+    @chmod($path, 0644);
 
     $count = substr_count($xml, '<loc>');
     echo "Sitemap statique genere avec succes.\n";
