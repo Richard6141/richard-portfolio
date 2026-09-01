@@ -43,6 +43,9 @@ foreach (glob($racine . '/*', GLOB_ONLYDIR) ?: [] as $dossier) {
         $page = require $fichier;
         $page['ville_slug'] = $page['ville_slug'] ?? $villeSlug;
         $page['sujet']      = $sujetSlug;
+        // Date du fichier, reportee dans <lastmod> du sitemap (01/09/2026).
+        // Sans elle Google n'a aucun signal de fraicheur sur ces pages.
+        $page['_maj']       = filemtime($fichier) ?: null;
         $meta['pages'][$villeSlug] = $page;
     }
 

@@ -98,6 +98,33 @@ jobs:
           curl --fail --silent --show-error --max-time 60 \
             "https://richard.salanon.info/generate-sitemap.php?key=${{ secrets.SITEMAP_KEY }}"
 
+      # Signaler les URL a IndexNow (01/09/2026). Concerne Bing, Yandex,
+      # Seznam et Naver, PAS Google, qui a retire son point de ping en
+      # juin 2023 et ne decouvre plus que par crawl et sitemap.
+      # La cle est le fichier public a7f3c9e...txt deja servi a la racine.
+      - name: Signaler les URL a IndexNow
+        continue-on-error: true
+        run: |
+          cle=a7f3c9e21b6d4f08a5c2e9d7b4f16a83
+          curl --silent --show-error --max-time 60 \
+            "https://richard.salanon.info/sitemap.xml" \
+            | grep -o '<loc>[^<]*' | sed 's/<loc>//' > urls.txt
+          echo "URL a signaler : $(wc -l < urls.txt)"
+          python3 - "$cle" < urls.txt > payload.json <<'PY'
+          import sys, json
+          urls = [l.strip() for l in sys.stdin if l.strip()]
+          print(json.dumps({
+              "host": "richard.salanon.info",
+              "key": sys.argv[1],
+              "keyLocation": "https://richard.salanon.info/%s.txt" % sys.argv[1],
+              "urlList": urls[:10000],
+          }))
+          PY
+          code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 60 \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data @payload.json https://api.indexnow.org/IndexNow)
+          echo "IndexNow : HTTP $code (200 ou 202 = accepte)"
+
       # Filet de securite : si l'accueil ne repond plus 200 apres le
       # deploiement, le job echoue et vous etes notifie.
       - name: Verifier que le site repond

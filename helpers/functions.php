@@ -640,7 +640,12 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
             foreach ($villes as $ville) {
                 if (empty($ville['slug'])) continue;
                 $vLoc = htmlspecialchars($baseUrl . '/developpeur-web-' . $ville['slug'], ENT_XML1);
-                $xml .= "  <url>\n    <loc>{$vLoc}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+                // <lastmod> ajoute le 01/09/2026 : 81 des 134 URL du sitemap n'en
+                // portaient pas. Google n'avait donc aucun signal de fraicheur sur
+                // les pages ville ni sur celles du registre, alors que ce sont
+                // precisement les pages publiees le plus recemment.
+                $vMaj = !empty($ville['_maj']) ? date('Y-m-d', (int) $ville['_maj']) : date('Y-m-d');
+                $xml .= "  <url>\n    <loc>{$vLoc}</loc>\n    <lastmod>{$vMaj}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
             }
         }
     }
@@ -656,8 +661,10 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
                 foreach (($sujet['pages'] ?? []) as $pg) {
                     if (empty($pg['slug'])) continue;
                     $sLoc = htmlspecialchars($baseUrl . '/' . $pg['slug'], ENT_XML1);
+                    $sMaj = !empty($pg['_maj']) ? date('Y-m-d', (int) $pg['_maj']) : date('Y-m-d');
                     $xml .= "  <url>
     <loc>{$sLoc}</loc>
+    <lastmod>{$sMaj}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

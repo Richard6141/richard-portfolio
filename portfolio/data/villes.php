@@ -44,6 +44,7 @@ foreach ($ordre as $slug) {
     $chemin = $dossier . '/' . $slug . '.php';
     if (is_file($chemin)) {
         $villes[$slug] = require $chemin;
+        $villes[$slug]['_maj'] = filemtime($chemin) ?: null;
     }
 }
 
@@ -53,6 +54,7 @@ foreach (glob($dossier . '/*.php') ?: [] as $chemin) {
     $slug = basename($chemin, '.php');
     if (!isset($villes[$slug])) {
         $villes[$slug] = require $chemin;
+        $villes[$slug]['_maj'] = filemtime($chemin) ?: null;
     }
 }
 
