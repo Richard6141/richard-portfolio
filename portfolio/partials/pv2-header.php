@@ -30,6 +30,7 @@ $hasMega = array_filter($hdrCols);
   <nav class="nav-links" aria-label="Navigation principale">
     <a href="/">Accueil</a>
     <a href="/a-propos/">À propos</a>
+    <a href="/formations/">Formations</a>
     <div class="nav-item has-mega">
       <a href="/services/">Services<span class="chev"></span></a>
       <?php if ($hasMega): ?>
@@ -67,6 +68,7 @@ $hasMega = array_filter($hdrCols);
 <div class="m-menu" id="pv2-mmenu" aria-hidden="true">
   <a class="m-link" href="/">Accueil</a>
   <a class="m-link" href="/a-propos/">À propos</a>
+  <a class="m-link" href="/formations/">Formations</a>
   <a class="m-link" href="/services/">Services</a>
   <a class="m-link" href="/realisations/">Réalisations</a>
   <a class="m-link" href="/blog/">Blog</a>
