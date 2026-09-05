@@ -173,6 +173,18 @@ ErrorDocument 500 /500.php
 </FilesMatch>
 
 # ----------------------------------------------------------
+# Cache serveur LiteSpeed — desactive pour les pages (05/09/2026).
+# Constat sur le nouvel hebergement : apres un deploiement, l'ancienne
+# version des pages restait servie plusieurs minutes malgre le
+# Cache-Control no-cache, car le cache LiteSpeed de Hostinger est un cache
+# SERVEUR qui ne lit pas cet en-tete navigateur. Les assets, eux, restent
+# caches par le navigateur via mod_expires (URLs versionnees ?v=filemtime).
+# ----------------------------------------------------------
+<IfModule LiteSpeed>
+    CacheDisable public /
+</IfModule>
+
+# ----------------------------------------------------------
 # Headers de securite
 # ----------------------------------------------------------
 <IfModule mod_headers.c>
