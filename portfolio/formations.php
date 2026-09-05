@@ -20,34 +20,46 @@ $familles = [
         'nom'   => 'Intelligence artificielle',
         'texte' => 'Mettre l\'IA au travail, du poste de bureau au flux automatisé.',
         'items' => [
-            ['slug' => 'formation-ia-entreprise', 'titre' => 'IA en entreprise', 'ligne' => 'Rédiger, synthétiser, structurer avec les assistants, sur vos propres documents.', 'duree' => 'Demi-journée à 2 jours', 'niveau' => 'Sans prérequis'],
-            ['slug' => 'formation-vibecoding', 'titre' => 'Vibecoding', 'ligne' => 'Développer des applications avec Claude, Cursor ou Copilot, sans en faire du code jetable.', 'duree' => 'Demi-journée ou 2 jours', 'niveau' => 'Tous profils'],
-            ['slug' => 'formation-automatisation', 'titre' => 'Automatisation n8n et Make', 'ligne' => 'Relier vos outils pour que les tâches répétitives s\'exécutent seules, et rester autonome.', 'duree' => 'Demi-journée ou 2 jours', 'niveau' => 'Sans code'],
+            ['slug' => 'formation-ia-entreprise', 'titre' => 'IA en entreprise', 'ligne' => 'Rédiger, synthétiser, structurer avec les assistants, sur vos propres documents.', 'duree' => 'Demi-journée à 2 jours', 'max' => 'Max 12', 'niveau' => 'Sans prérequis', 'pop' => true],
+            ['slug' => 'formation-vibecoding', 'titre' => 'Vibecoding', 'ligne' => 'Développer des applications avec Claude, Cursor ou Copilot, sans en faire du code jetable.', 'duree' => 'Demi-journée ou 2 jours', 'max' => 'Max 10', 'niveau' => 'Tous profils', 'pop' => true],
+            ['slug' => 'formation-automatisation', 'titre' => 'Automatisation n8n et Make', 'ligne' => 'Relier vos outils pour que les tâches répétitives s\'exécutent seules, et rester autonome.', 'duree' => 'Demi-journée ou 2 jours', 'max' => 'Max 10', 'niveau' => 'Sans code'],
         ],
     ],
     [
         'nom'   => 'Outils de gestion',
         'texte' => 'Faire adopter les outils qui tiennent l\'entreprise au quotidien.',
         'items' => [
-            ['slug' => 'formation-odoo', 'titre' => 'Odoo pour vos équipes', 'ligne' => 'Chaque poste apprend son parcours réel sur votre instance : ventes, stock, facturation.', 'duree' => 'Demi-journée par poste', 'niveau' => 'Utilisateurs'],
-            ['slug' => 'formation-dolibarr', 'titre' => 'Dolibarr pour vos équipes', 'ligne' => 'Le cycle complet de gestion d\'une PME, du devis au règlement, sans mauvaises habitudes.', 'duree' => '1 journée', 'niveau' => 'Utilisateurs'],
-            ['slug' => 'formation-outils-numeriques', 'titre' => 'Outils numériques et bureautique', 'ligne' => 'Tableur juste, messagerie tenue, fichiers partagés, sécurité : le socle de tout le reste.', 'duree' => 'Demi-journée par module', 'niveau' => 'Débutants bienvenus'],
+            ['slug' => 'formation-odoo', 'titre' => 'Odoo pour vos équipes', 'ligne' => 'Chaque poste apprend son parcours réel sur votre instance : ventes, stock, facturation.', 'duree' => 'Demi-journée par poste', 'max' => 'Max 6', 'niveau' => 'Utilisateurs'],
+            ['slug' => 'formation-dolibarr', 'titre' => 'Dolibarr pour vos équipes', 'ligne' => 'Le cycle complet de gestion d\'une PME, du devis au règlement, sans mauvaises habitudes.', 'duree' => '1 journée', 'max' => 'Max 6', 'niveau' => 'Utilisateurs'],
+            ['slug' => 'formation-outils-numeriques', 'titre' => 'Outils numériques et bureautique', 'ligne' => 'Tableur juste, messagerie tenue, fichiers partagés, sécurité : le socle de tout le reste.', 'duree' => 'Demi-journée par module', 'max' => 'Max 10', 'niveau' => 'Débutants bienvenus'],
         ],
     ],
     [
         'nom'   => 'Web et visibilité',
         'texte' => 'Construire pour le web, vendre sur WhatsApp, exister sur Google.',
         'items' => [
-            ['slug' => 'formation-developpement-web', 'titre' => 'Développement web', 'ligne' => 'HTML, CSS, JavaScript, PHP et MySQL par projets complets, avec l\'IA comme accélérateur.', 'duree' => 'Parcours sur plusieurs semaines', 'niveau' => 'Débutant à intermédiaire'],
-            ['slug' => 'formation-whatsapp-business', 'titre' => 'WhatsApp Business', 'ligne' => 'Catalogue, réponses rapides, suivi des commandes : votre premier canal de vente, structuré.', 'duree' => 'Demi-journée ou 1 jour', 'niveau' => 'Commerces'],
-            ['slug' => 'formation-seo-visibilite-google', 'titre' => 'Visibilité Google', 'ligne' => 'Fiche d\'établissement, collecte d\'avis et bases du référencement, gérées par votre équipe.', 'duree' => 'Demi-journée ou 1 jour', 'niveau' => 'Sans prérequis'],
+            ['slug' => 'formation-developpement-web', 'titre' => 'Développement web', 'ligne' => 'HTML, CSS, JavaScript, PHP et MySQL par projets complets, avec l\'IA comme accélérateur.', 'duree' => 'Plusieurs semaines', 'max' => 'Max 10', 'niveau' => 'Débutant à intermédiaire'],
+            ['slug' => 'formation-whatsapp-business', 'titre' => 'WhatsApp Business', 'ligne' => 'Catalogue, réponses rapides, suivi des commandes : votre premier canal de vente, structuré.', 'duree' => 'Demi-journée ou 1 jour', 'max' => 'Max 10', 'niveau' => 'Commerces'],
+            ['slug' => 'formation-seo-visibilite-google', 'titre' => 'Visibilité Google', 'ligne' => 'Fiche d\'établissement, collecte d\'avis et bases du référencement, gérées par votre équipe.', 'duree' => 'Demi-journée ou 1 jour', 'max' => 'Max 10', 'niveau' => 'Sans prérequis'],
         ],
     ],
 ];
 
+// Bande de chiffres sous le hero. VALEURS PAR DEFAUT posees le 05/09/2026 a
+// la demande de Richard, qui les corrigera : le nombre de professionnels
+// formes est une estimation a valider, pas une mesure. Les villes comptent
+// les pages locales publiees (13 villes + 8 hors Afrique). Aucune note de
+// satisfaction n'est affichee tant qu'aucun systeme d'avis ne la mesure.
+$chiffres = [
+    ['n' => '9',    'l' => 'formations au catalogue'],
+    ['n' => '20+',  'l' => 'villes couvertes, sur place ou à distance'],
+    ['n' => '100+', 'l' => 'professionnels formés'],
+    ['n' => '100%', 'l' => 'pratique, sur vos documents réels'],
+];
+
 $faq = [
     ['q' => 'Les formations se donnent-elles en entreprise ?', 'r' => 'Oui, c\'est le format principal : j\'interviens dans vos locaux, sur vos outils et vos documents, à Cotonou, Abomey-Calavi et dans les villes où je me déplace. Toutes les formations existent aussi en visioconférence.'],
-    ['q' => 'Combien coûte une formation ?', 'r' => 'Les repères publiés : atelier découverte à partir de 150 000 FCFA, formation complète de deux jours à partir de 450 000 FCFA, session dirigeants à partir de 100 000 FCFA. Chaque devis est établi après un cadrage gratuit, poste par poste.'],
+    ['q' => 'Combien coûte une formation ?', 'r' => 'Chaque devis est établi après un cadrage gratuit, car le tarif dépend du format, du nombre de participants et de la préparation sur vos documents. À titre de repère, les ateliers d\'une demi-journée démarrent à 150 000 FCFA.'],
     ['q' => 'Sur quoi travaille-t-on pendant les sessions ?', 'r' => 'Sur vos documents, vos outils et vos cas réels, jamais sur des exercices de démonstration. C\'est le principe commun à tout le catalogue : repartir avec quelque chose qui fonctionne déjà chez vous.'],
     ['q' => 'Combien de participants par session ?', 'r' => 'Une dizaine au maximum, souvent moins : la pratique guidée sur poste, qui fait la valeur des sessions, devient impossible au-delà. Les groupes se composent par niveau réel, évalué au cadrage.'],
     ['q' => 'Délivrez-vous une attestation ?', 'r' => 'Oui, une attestation de formation, accompagnée des supports et des fiches construites pendant la session. Pour le développement web, les projets mis en ligne constituent le vrai livrable.'],
@@ -126,6 +138,14 @@ include __DIR__ . '/partials/pv2-header.php';
     </aside>
   </div></section>
 
+  <section class="sect soft" style="padding:2.2rem 0"><div class="wrap">
+    <div class="stats rv" style="justify-content:space-around">
+      <?php foreach ($chiffres as $c): ?>
+      <div class="stat"><div class="n"><?= sanitize($c['n']) ?></div><div class="l"><?= sanitize($c['l']) ?></div></div>
+      <?php endforeach; ?>
+    </div>
+  </div></section>
+
   <?php $n = 0; foreach ($familles as $f): $n++; ?>
   <section class="sect<?= $n % 2 === 1 ? ' soft' : '' ?>" <?= $n === 1 ? 'id="catalogue"' : '' ?>><div class="wrap">
     <div class="sect-head rv">
@@ -136,9 +156,10 @@ include __DIR__ . '/partials/pv2-header.php';
     <div class="bento stg">
       <?php foreach ($f['items'] as $it): ?>
       <a class="svc" href="/<?= sanitize($it['slug']) ?>">
+        <?php if (!empty($it['pop'])): ?><span class="fmt-pop">Populaire</span><?php endif; ?>
         <h3><?= sanitize($it['titre']) ?></h3>
         <p><?= sanitize($it['ligne']) ?></p>
-        <p class="fmt-meta"><span><?= sanitize($it['duree']) ?></span><span><?= sanitize($it['niveau']) ?></span></p>
+        <p class="fmt-meta"><span><?= sanitize($it['duree']) ?></span><span><?= sanitize($it['max']) ?></span><span><?= sanitize($it['niveau']) ?></span></p>
         <div class="arrow">Voir la formation</div>
       </a>
       <?php endforeach; ?>
@@ -157,10 +178,14 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
 
   <section class="sect soft"><div class="wrap" style="max-width:820px">
-    <div class="sect-head rv"><span class="mono"><span class="tag-num">05</span> / Tarifs</span><h2>Des repères publics, un devis après cadrage.</h2></div>
+    <div class="sect-head rv"><span class="mono"><span class="tag-num">05</span> / Sur mesure</span><h2>Formation intra-entreprise.</h2></div>
     <div class="prose rv">
-      <p class="lead">Les tarifs dépendent du format, du nombre de participants et de la préparation nécessaire sur vos documents. Les repères publiés : atelier découverte d'une demi-journée à partir de 150 000 FCFA, formation complète de deux jours à partir de 450 000 FCFA, accompagnement mensuel à partir de 350 000 FCFA par mois, session dirigeants de deux heures à partir de 100 000 FCFA.</p>
-      <p>Le cadrage est gratuit et sans engagement. Le devis final est détaillé poste par poste, et les tarifs hors Afrique sont établis après cadrage. Aucun résultat n'est promis qu'une formation ne peut pas tenir : je forme, je ne vends pas de miracle.</p>
+      <p class="lead">Toutes les formations du catalogue s'adaptent en intra-entreprise : dans vos locaux ou en visioconférence, aux dates qui arrangent vos équipes, avec un programme composé à partir de vos documents et de vos outils. C'est le format que je recommande dès que trois personnes sont concernées.</p>
+      <p>Plusieurs formations se combinent en parcours : le socle outils numériques suivi de l'IA en entreprise, ou Odoo suivi de l'automatisation. Le cadrage est gratuit et sans engagement, le devis détaillé poste par poste, et je dis franchement quand une formation n'est pas la bonne réponse à votre besoin.</p>
+    </div>
+    <div class="hero-cta rv" style="margin-top:1.4rem">
+      <a href="/contact" class="btn">Demander un devis formation</a>
+      <a href="https://wa.me/2290161413177" class="btn btn-ghost" rel="noopener">Discuter sur WhatsApp</a>
     </div>
   </div></section>
 
