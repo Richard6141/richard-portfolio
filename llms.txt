@@ -4,28 +4,28 @@
 
 ## Services
 
-- [Referencement naturel (SEO)](https://richard.salanon.info/services/referencement-naturel-seo): Etre trouve en premier sur Google par ses clients, durablement, sans publicite.
-- [Automatisation & IA](https://richard.salanon.info/services/automatisation-ia): Automatiser les taches repetitives avec n8n, Make et l'intelligence artificielle.
-- [Site vitrine professionnel](https://richard.salanon.info/services/site-vitrine-professionnel): Sites vitrines modernes, rapides et optimises pour Google.
-- [Site e-commerce](https://richard.salanon.info/services/site-e-commerce): Boutiques en ligne avec paiement Mobile Money, carte bancaire et PayPal.
-- [Landing page haute conversion](https://richard.salanon.info/services/landing-page-haute-conversion): Pages uniques concues pour convertir une offre ou une campagne.
-- [Refonte & migration de site](https://richard.salanon.info/services/refonte-migration-de-site): Moderniser un site en preservant son referencement (redirections 301).
-- [Maintenance & support](https://richard.salanon.info/services/maintenance-support): Securite, mises a jour, sauvegardes et assistance continue.
-- [Application web sur mesure](https://richard.salanon.info/services/application-web-sur-mesure): Espaces client, tableaux de bord et outils metier sur mesure.
-- [Application mobile (Android & iOS)](https://richard.salanon.info/services/application-mobile-android-ios): Applications mobiles pour Android et iPhone.
-- [SaaS & espace client](https://richard.salanon.info/services/saas-espace-client): Plateformes SaaS et espaces client par abonnement.
-- [API REST & integrations](https://richard.salanon.info/services/api-rest-integrations): API sur mesure et connexion de vos outils entre eux.
-- [Systeme de reservation en ligne](https://richard.salanon.info/services/systeme-de-reservation-en-ligne): Reservation et prise de rendez-vous en ligne avec paiement et rappels.
-- [Audit SEO complet](https://richard.salanon.info/services/audit-seo-complet): Diagnostic ponctuel du site avec plan d'action priorise.
-- [SEO local & Google Business](https://richard.salanon.info/services/seo-local-google-business): Referencement local, fiche Google Business, avis et pack local.
-- [Audit & etude de projet](https://richard.salanon.info/services/audit-etude-de-projet): Cadrage, faisabilite et estimation avant developpement.
-- [Digitalisation d'entreprise](https://richard.salanon.info/services/digitalisation-d-entreprise): Digitalisation progressive des processus et des outils.
-- [Formation en programmation](https://richard.salanon.info/services/formation-en-programmation): Formations au developpement web et a la creation avec l'IA.
+- [Referencement naturel (SEO)](https://richardsalanon.com/services/referencement-naturel-seo): Etre trouve en premier sur Google par ses clients, durablement, sans publicite.
+- [Automatisation & IA](https://richardsalanon.com/services/automatisation-ia): Automatiser les taches repetitives avec n8n, Make et l'intelligence artificielle.
+- [Site vitrine professionnel](https://richardsalanon.com/services/site-vitrine-professionnel): Sites vitrines modernes, rapides et optimises pour Google.
+- [Site e-commerce](https://richardsalanon.com/services/site-e-commerce): Boutiques en ligne avec paiement Mobile Money, carte bancaire et PayPal.
+- [Landing page haute conversion](https://richardsalanon.com/services/landing-page-haute-conversion): Pages uniques concues pour convertir une offre ou une campagne.
+- [Refonte & migration de site](https://richardsalanon.com/services/refonte-migration-de-site): Moderniser un site en preservant son referencement (redirections 301).
+- [Maintenance & support](https://richardsalanon.com/services/maintenance-support): Securite, mises a jour, sauvegardes et assistance continue.
+- [Application web sur mesure](https://richardsalanon.com/services/application-web-sur-mesure): Espaces client, tableaux de bord et outils metier sur mesure.
+- [Application mobile (Android & iOS)](https://richardsalanon.com/services/application-mobile-android-ios): Applications mobiles pour Android et iPhone.
+- [SaaS & espace client](https://richardsalanon.com/services/saas-espace-client): Plateformes SaaS et espaces client par abonnement.
+- [API REST & integrations](https://richardsalanon.com/services/api-rest-integrations): API sur mesure et connexion de vos outils entre eux.
+- [Systeme de reservation en ligne](https://richardsalanon.com/services/systeme-de-reservation-en-ligne): Reservation et prise de rendez-vous en ligne avec paiement et rappels.
+- [Audit SEO complet](https://richardsalanon.com/services/audit-seo-complet): Diagnostic ponctuel du site avec plan d'action priorise.
+- [SEO local & Google Business](https://richardsalanon.com/services/seo-local-google-business): Referencement local, fiche Google Business, avis et pack local.
+- [Audit & etude de projet](https://richardsalanon.com/services/audit-etude-de-projet): Cadrage, faisabilite et estimation avant developpement.
+- [Digitalisation d'entreprise](https://richardsalanon.com/services/digitalisation-d-entreprise): Digitalisation progressive des processus et des outils.
+- [Formation en programmation](https://richardsalanon.com/services/formation-en-programmation): Formations au developpement web et a la creation avec l'IA.
 
 ## Blog
 
-- [Referencement local: le guide pour dominer le pack local de Google](https://richard.salanon.info/blog/referencement-local-dominer-pack-local-google): Methode pour figurer dans le pack local et sur Google Maps.
-- [Tous les articles](https://richard.salanon.info/blog/)
+- [Referencement local: le guide pour dominer le pack local de Google](https://richardsalanon.com/blog/referencement-local-dominer-pack-local-google): Methode pour figurer dans le pack local et sur Google Maps.
+- [Tous les articles](https://richardsalanon.com/blog/)
 
 ## Reperes concrets
 
@@ -37,6 +37,6 @@
 
 ## A propos et contact
 
-- [A propos de Richard SALANON](https://richard.salanon.info/a-propos/): Parcours, expertise et approche.
-- [Contact et devis gratuit](https://richard.salanon.info/contact): Telephone, WhatsApp, e-mail, formulaire, adresse et questions frequentes.
-- [Tous les services](https://richard.salanon.info/services/)
+- [A propos de Richard SALANON](https://richardsalanon.com/a-propos/): Parcours, expertise et approche.
+- [Contact et devis gratuit](https://richardsalanon.com/contact): Telephone, WhatsApp, e-mail, formulaire, adresse et questions frequentes.
+- [Tous les services](https://richardsalanon.com/services/)

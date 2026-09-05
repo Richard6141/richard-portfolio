@@ -85,7 +85,7 @@ $contactInfo = $stmt->fetch();
 
 // Variables
 $fullName = trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? ''));
-// URL dynamique selon le sous-domaine actif (richard.salanon.info, etc.)
+// URL dynamique selon le sous-domaine actif (richardsalanon.com, etc.)
 $currentHost  = $_SERVER['HTTP_HOST'] ?? parse_url(BASE_URL, PHP_URL_HOST);
 $portfolioUrl = 'https://' . $currentHost;
 $fontHeading = $profile['font_heading'] ?? 'Inter';
@@ -135,8 +135,8 @@ $metaDescFallback  = ($profile['bio_short'] ?? '')
     ?: "{$fullName}, développeur freelance à {$seoCity} ({$seoCountry}) : sites web, applications web & mobiles, automatisation et digitalisation pour entreprises. Devis gratuit.";
 
 // URL canonique de l'accueil, AVEC barre finale (20/08/2026).
-// Le sitemap declare "https://richard.salanon.info/" tandis que la canonical
-// declarait "https://richard.salanon.info" : deux formes pour une meme page,
+// Le sitemap declare "https://richardsalanon.com/" tandis que la canonical
+// declarait "https://richardsalanon.com" : deux formes pour une meme page,
 // que Google devait arbitrer seul. $portfolioUrl reste sans barre finale car
 // il sert de prefixe a toutes les autres URL (/blog/x, /services/x).
 $homeUrl = $portfolioUrl . '/';

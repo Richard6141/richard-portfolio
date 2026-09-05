@@ -62,7 +62,11 @@ $h_logo = siteLogoUrl();
   <div>
     <?php /* Hero : aucune classe .up ici, l'element LCP ne doit jamais demarrer a opacity:0 (LCP 4,2s -> ~1,4s). */ ?>
     <span class="eyebrow"><span class="pulse"></span><span class="mono"><?= sanitize($fullName) ?> · Disponible</span></span>
-    <h1>Développeur web, mobile & <span class="hl">automatisation</span> <span class="rotator" id="pv2-rot" data-words='["au Bénin","à Cotonou","et ailleurs"]'>au Bénin</span></h1>
+    <?php /* Titre elargi le 05/09/2026. « Developpeur web » decrivait mal une
+             offre qui couvre aussi le backend, le mobile, les ERP et la
+             formation. Les slugs developpeur-web-<ville> ne changent pas pour
+             autant : c'est le terme que les clients tapent reellement. */ ?>
+    <h1>Consultant en <span class="hl">digitalisation</span> et développement logiciel <span class="rotator" id="pv2-rot" data-words='["au Bénin","à Cotonou","et ailleurs"]'>au Bénin</span></h1>
     <p class="lead"><?= sanitize($h_lead) ?></p>
     <div class="hero-cta">
       <a href="<?= sanitize($h_mailto) ?>" class="btn">Demander un devis gratuit</a>

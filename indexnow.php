@@ -1,7 +1,7 @@
 <?php
 // ============================================================
 // indexnow.php — Soumission groupée des URLs à IndexNow (Bing, Yandex...)
-// Usage : https://richard.salanon.info/indexnow.php?key=VOTRE_CLE_INDEXNOW
+// Usage : https://richardsalanon.com/indexnow.php?key=VOTRE_CLE_INDEXNOW
 // Notifie instantanément les moteurs compatibles IndexNow des pages publiées.
 // (Google n'utilise pas IndexNow : pour Google, voir la procédure GSC.)
 // À visiter après avoir publié / mis à jour des articles.

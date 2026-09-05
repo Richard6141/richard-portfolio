@@ -2,7 +2,7 @@
 // ============================================================
 // generate-sitemap.php — Ecrit un fichier STATIQUE /sitemap.xml sur le disque.
 // A lancer via cron (quotidien) ou manuellement :
-//   https://richard.salanon.info/generate-sitemap.php?key=VOTRE_CLE
+//   https://richardsalanon.com/generate-sitemap.php?key=VOTRE_CLE
 // Le fichier statique est ensuite servi directement par Apache (rapide, fiable,
 // jamais de timeout). Voir la regle .htaccess qui privilegie le fichier statique.
 // ============================================================

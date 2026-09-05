@@ -1,6 +1,6 @@
 name: Deploiement production
 
-# Chaque push sur main met richard.salanon.info a jour.
+# Chaque push sur main met richardsalanon.com a jour.
 # "workflow_dispatch" permet de relancer un deploiement a la main depuis
 # l'onglet Actions, sans avoir a faire un commit.
 on:
@@ -96,7 +96,7 @@ jobs:
       - name: Regenerer le sitemap
         run: |
           curl --fail --silent --show-error --max-time 60 \
-            "https://richard.salanon.info/generate-sitemap.php?key=${{ secrets.SITEMAP_KEY }}"
+            "https://richardsalanon.com/generate-sitemap.php?key=${{ secrets.SITEMAP_KEY }}"
 
       # Signaler les URL a IndexNow (01/09/2026). Concerne Bing, Yandex,
       # Seznam et Naver, PAS Google, qui a retire son point de ping en
@@ -107,16 +107,16 @@ jobs:
         run: |
           cle=a7f3c9e21b6d4f08a5c2e9d7b4f16a83
           curl --silent --show-error --max-time 60 \
-            "https://richard.salanon.info/sitemap.xml" \
+            "https://richardsalanon.com/sitemap.xml" \
             | grep -o '<loc>[^<]*' | sed 's/<loc>//' > urls.txt
           echo "URL a signaler : $(wc -l < urls.txt)"
           python3 - "$cle" < urls.txt > payload.json <<'PY'
           import sys, json
           urls = [l.strip() for l in sys.stdin if l.strip()]
           print(json.dumps({
-              "host": "richard.salanon.info",
+              "host": "richardsalanon.com",
               "key": sys.argv[1],
-              "keyLocation": "https://richard.salanon.info/%s.txt" % sys.argv[1],
+              "keyLocation": "https://richardsalanon.com/%s.txt" % sys.argv[1],
               "urlList": urls[:10000],
           }))
           PY
@@ -129,6 +129,6 @@ jobs:
       # deploiement, le job echoue et vous etes notifie.
       - name: Verifier que le site repond
         run: |
-          code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 https://richard.salanon.info/)
+          code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 https://richardsalanon.com/)
           echo "Page d'accueil : HTTP $code"
           test "$code" = "200"
