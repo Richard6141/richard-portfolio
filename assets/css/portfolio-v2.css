@@ -448,6 +448,14 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 .pv2 .tst .stars{color:#fbbc05;font-size:.92rem;letter-spacing:2px;margin-bottom:.6rem;display:flex}
 .pv2 .tst .q{font-size:.92rem;color:var(--ink);line-height:1.6;margin:0;flex:none}
 
+/* --- Hub des formations (05/09/2026) --- */
+/* Sous-titre de famille, sous le h2 du sect-head. */
+.pv2 .sect-sub{margin-top:.55rem;color:var(--muted);font-size:.98rem;line-height:1.6}
+/* Ligne duree + niveau des cartes du catalogue : discrete, au-dessus de la fleche. */
+.pv2 .fmt-meta{display:flex;flex-wrap:wrap;gap:.45rem;margin:.8rem 0 .2rem}
+.pv2 .fmt-meta span{font-size:.76rem;font-weight:600;color:var(--muted);
+  background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.28rem .65rem}
+
 /* Les regles .qa ont ete retirees le 23/08/2026: aucun gabarit n'emet plus
    ce balisage, les FAQ sont desormais des <details> natifs. */
 /* FAQ

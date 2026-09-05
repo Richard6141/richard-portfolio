@@ -637,6 +637,9 @@ function buildSitemapXml(PDO $pdo, string $baseUrl): string
         $villes = require $fichierVilles;
         if (is_array($villes) && $villes) {
             $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/zones/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+            // Hub des formations (05/09/2026). Les pages formation-* du
+            // registre sont ajoutees par le bloc generique plus bas.
+            $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/formations/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>\n";
             foreach ($villes as $ville) {
                 if (empty($ville['slug'])) continue;
                 $vLoc = htmlspecialchars($baseUrl . '/developpeur-web-' . $ville['slug'], ENT_XML1);

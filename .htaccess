@@ -96,6 +96,10 @@ RewriteRule ^realisations$ /realisations/ [R=301,L]
 RewriteRule ^realisations/$ /portfolio/realisations-index.php [QSA,L]
 RewriteRule ^realisations/([a-z0-9_-]+)/$ /realisations/$1 [R=301,L]
 RewriteRule ^realisations/([a-z0-9_-]+)$ /portfolio/realisation.php?slug=$1 [QSA,L]
+# Catalogue des formations — ajoute le 05/09/2026. Le hub /formations/ liste
+# les 9 formations du registre (formation-*), servies elles par route.php.
+RewriteRule ^formations$ /formations/ [R=301,L]
+RewriteRule ^formations/$ /portfolio/formations.php [QSA,L]
 RewriteRule ^zones$ /zones/ [R=301,L]
 RewriteRule ^zones/$ /portfolio/zones-index.php [QSA,L]
 RewriteRule ^developpeur-web-([a-z0-9-]+)/$ /developpeur-web-$1 [R=301,L]
