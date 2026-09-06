@@ -199,5 +199,6 @@ return [
             'r' => 'Oui, et le format intra-entreprise s\'y prête bien : l\'équipe travaille alors sur un projet interne commun, ce qui double l\'intérêt de la session. La revue croisée entre collègues installe en plus une culture de relecture qui survit à la formation.',
         ],
         ['q' => 'Le vibecoding est-il adapté aux projets avec paiement en ligne ?', 'r' => 'Avec prudence : l\'intégration Mobile Money ou carte bancaire se vibecode techniquement, mais l\'argent exige une relecture renforcée et des tests stricts, couverts dans le module production. Pour un premier projet, je recommande de commencer par le reste et d\'ajouter le paiement en second palier.'],
+        ['q' => 'Combien coûte la formation vibecoding ?', 'r' => 'L\'atelier découverte d\'une demi-journée se situe dans la gamme des ateliers du catalogue, à partir de 150 000 FCFA, et la formation complète de deux jours dans celle des formations complètes. Le devis exact est établi après le cadrage gratuit, selon le groupe et les projets supports.'],
     ],
 ];

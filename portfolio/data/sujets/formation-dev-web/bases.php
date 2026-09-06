@@ -145,5 +145,6 @@ return [
         ['q' => 'Puis-je payer le parcours en plusieurs fois ?', 'r' => 'Oui, le paiement se fractionne par palier : chaque étape se règle avant de commencer, et vous pouvez vous arrêter à la fin de n\'importe laquelle avec des acquis complets. Le détail se fixe au devis, après le cadrage gratuit.'],
         ['q' => 'Acceptez-vous les groupes constitués, une promotion d\'école par exemple ?', 'r' => 'Oui, le parcours se donne aussi en partenariat avec des structures : école, incubateur, entreprise qui forme ses agents. Le programme reste le même, le rythme et la facturation s\'adaptent à la structure, et les jalons publics de fin de palier deviennent des événements internes.'],
         ['q' => 'Peut-on rejoindre un parcours déjà commencé ?', 'r' => 'Non, sauf niveau vérifié équivalent au palier en cours : les groupes avancent ensemble et l\'arrivée en cours de route pénalise tout le monde. Les départs de parcours sont réguliers ; le cadrage vous inscrit sur le prochain plutôt que de forcer une entrée bancale.'],
+        ['q' => 'Le parcours prépare-t-il aux certifications ?', 'r' => 'Il ne vise aucune certification d\'éditeur, par choix : sur ce marché, les projets en ligne pèsent plus lourd que les badges. Ceux qui veulent ensuite passer une certification précise arrivent avec des fondations qui rendent la préparation courte.'],
     ],
 ];
