@@ -198,5 +198,6 @@ return [
             'q' => 'Une entreprise peut-elle envoyer une équipe entière ?',
             'r' => 'Oui, et le format intra-entreprise s\'y prête bien : l\'équipe travaille alors sur un projet interne commun, ce qui double l\'intérêt de la session. La revue croisée entre collègues installe en plus une culture de relecture qui survit à la formation.',
         ],
+        ['q' => 'Le vibecoding est-il adapté aux projets avec paiement en ligne ?', 'r' => 'Avec prudence : l\'intégration Mobile Money ou carte bancaire se vibecode techniquement, mais l\'argent exige une relecture renforcée et des tests stricts, couverts dans le module production. Pour un premier projet, je recommande de commencer par le reste et d\'ajouter le paiement en second palier.'],
     ],
 ];

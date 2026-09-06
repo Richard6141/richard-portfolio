@@ -146,5 +146,6 @@ return [
         ['q' => 'Faut-il équiper les participants avant la session ?', 'r' => 'Un ordinateur ou un téléphone par participant et une connexion correcte suffisent. Les comptes se créent en début de session sur les paliers gratuits ; aucun achat n\'est nécessaire avant d\'avoir mesuré ce qui sert.'],
         ['q' => 'Formez-vous des équipes non francophones ?', 'r' => 'Les sessions se donnent en français, et les usages bilingues sont couverts : répondre en anglais à un client étranger, traduire un document en gardant le vocabulaire du métier. C\'est même l\'un des gains les plus demandés.'],
         ['q' => 'Que devient la formation quand les outils changent ?', 'r' => 'Les assistants évoluent vite, la méthode reste : décrire précisément, donner le contexte, vérifier la sortie. Les consignes construites pendant la session survivent aux changements de version, et c\'est pour cela qu\'on investit dans la méthode plutôt que dans les boutons.'],
+        ['q' => 'Peut-on mélanger plusieurs services dans une même session ?', 'r' => 'Pour l\'atelier découverte, oui : la diversité nourrit la séance. Pour la formation complète, mieux vaut des groupes par métier, car on travaille en profondeur sur les documents de chacun, et les cas d\'un comptable n\'aident pas un vendeur. Le cadrage compose les groupes en conséquence.'],
     ],
 ];
