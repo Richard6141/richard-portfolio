@@ -190,6 +190,15 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
 
   <section class="sect"><div class="wrap" style="max-width:1000px">
+    <div class="sect-head rv"><span class="mono"><span class="tag-num">06</span> / Le formateur</span><h2>Pourquoi choisir Richard SALANON.</h2></div>
+    <div class="prose rv">
+      <p class="lead">Parce que je suis d'abord un praticien. Consultant en digitalisation et développement logiciel, je passe mes semaines à livrer ce que ces formations enseignent : des sites, des boutiques en ligne, des déploiements Odoo et Dolibarr, des automatisations, des projets menés avec les outils d'IA. Ce que vous apprenez sort de ce terrain, avec ses réussites et ses erreurs vécues, pas d'un support téléchargé.</p>
+      <p>Parce que la méthode est la même sur tout le catalogue : un cadrage gratuit qui peut conclure que vous n'avez pas besoin de moi, des sessions préparées sur vos documents réels, des groupes assez petits pour que je passe sur chaque poste, et un critère de réussite qui ne triche pas : en fin de session, chacun exécute le geste appris, seul. Ce qui se construit pendant une session, consignes, fiches, flux, projets, appartient à votre entreprise et survit à mon départ.</p>
+      <p>Et parce qu'un interlocuteur unique a de la valeur : le jour où votre besoin dépasse la formation, un outil à construire, un ERP à déployer, un site à refondre, la personne qui vous a formé connaît déjà vos flux et vos équipes. L'inverse est vrai aussi : mes clients en prestation deviennent des équipes que je forme à reprendre la main. Basé à Abomey-Calavi, j'interviens sur place au Bénin et à distance partout ailleurs.</p>
+    </div>
+  </div></section>
+
+  <section class="sect soft"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><h2>Questions fréquentes.</h2></div>
     <div class="faq rv">
       <?php foreach ($faq as $qa): ?>

@@ -196,6 +196,37 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
   <?php endforeach; ?>
 
+  <?php if (str_starts_with($sujet['slug'] ?? '', 'formation')): ?>
+  <?php /* Bloc de reassurance commun aux pages formation (06/09/2026),
+           rendu par le gabarit plutot que duplique dans chaque fichier
+           de donnees : un seul endroit a maintenir. */ ?>
+  <section class="sect soft"><div class="wrap" style="max-width:1000px">
+    <div class="sect-head rv"><span class="mono"><span class="tag-num">+</span> / Le formateur</span><h2>Pourquoi choisir Richard SALANON.</h2></div>
+    <div class="vil-zones">
+      <article class="vz">
+        <span class="vz-n">01</span>
+        <h3>Un formateur qui pratique</h3>
+        <p>Je ne suis pas un formateur de salle : je livre des sites, des ERP et des automatisations à des clients toutes les semaines. Ce que j'enseigne sort de ce terrain, erreurs vécues comprises, et mes propres outils sont construits avec les méthodes que je transmets.</p>
+      </article>
+      <article class="vz">
+        <span class="vz-n">02</span>
+        <h3>Vos documents, pas des diapositives</h3>
+        <p>Chaque session se prépare avec vos fichiers, vos outils et vos cas réels. Le critère de réussite est un geste exécuté seul en fin de session, pas un questionnaire de satisfaction. Vous repartez avec quelque chose qui fonctionne déjà chez vous.</p>
+      </article>
+      <article class="vz">
+        <span class="vz-n">03</span>
+        <h3>La franchise avant la vente</h3>
+        <p>Le cadrage gratuit peut conclure que la formation demandée n'est pas la bonne réponse, et je le dis. Aucun résultat invérifiable n'est promis, aucun chiffre gonflé : c'est aussi ce que j'enseigne, alors autant l'appliquer à ma propre offre.</p>
+      </article>
+      <article class="vz">
+        <span class="vz-n">04</span>
+        <h3>Tout reste chez vous</h3>
+        <p>Consignes, fiches réflexes, flux, accès : ce qui se construit pendant une session appartient à votre entreprise et survit à mon départ. Je forme pour rendre autonome, pas pour entretenir une dépendance au prestataire.</p>
+      </article>
+    </div>
+  </div></section>
+  <?php endif; ?>
+
   <?php if (!empty($page['faq'])): ?>
   <section class="sect"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><h2><?= $page['ville_slug'] !== '' ? "Ce qu'on me demande à " . sanitize($page['ville']) . "." : 'Questions fréquentes.' ?></h2></div>
