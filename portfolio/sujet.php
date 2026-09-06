@@ -158,13 +158,13 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
 
   <?php if (!empty($page['intro'])): ?>
-  <section class="sect"><div class="wrap" style="max-width:820px">
+  <section class="sect"><div class="wrap" style="max-width:1000px">
     <div class="prose rv"><p class="lead"><?= sanitize($page['intro']) ?></p></div>
   </div></section>
   <?php endif; ?>
 
   <?php $n = 0; foreach (($page['sections'] ?? []) as $sec): $n++; $soft = ($n % 2 === 1) ? ' soft' : ''; ?>
-  <section class="sect<?= $soft ?>"><div class="wrap" style="max-width:820px">
+  <section class="sect<?= $soft ?>"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><span class="mono"><span class="tag-num"><?= sprintf('%02d', $n) ?></span> / <?= sanitize($sec['etiquette'] ?? 'Détail') ?></span><h2><?= sanitize($sec['titre']) ?></h2></div>
     <?php if (($sec['type'] ?? 'prose') === 'liste'): ?>
       <ul class="inc-list rv"><?php foreach ($sec['items'] as $it): ?><li><?= sanitize($it) ?></li><?php endforeach; ?></ul>
@@ -197,7 +197,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <?php endforeach; ?>
 
   <?php if (!empty($page['faq'])): ?>
-  <section class="sect"><div class="wrap" style="max-width:820px">
+  <section class="sect"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><h2><?= $page['ville_slug'] !== '' ? "Ce qu'on me demande à " . sanitize($page['ville']) . "." : 'Questions fréquentes.' ?></h2></div>
     <div class="faq rv">
       <?php foreach ($page['faq'] as $qa): ?>
@@ -208,7 +208,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <?php endif; ?>
 
   <?php if ($autresSujets): ?>
-  <section class="sect soft"><div class="wrap" style="max-width:820px">
+  <section class="sect soft"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><h2><?= $page['ville_slug'] !== '' ? 'Autres sujets à ' . sanitize($page['ville']) . '.' : 'Autres sujets.' ?></h2></div>
     <div class="bento stg">
       <?php foreach ($autresSujets as $a): ?>
@@ -219,7 +219,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <?php endif; ?>
 
   <?php if ($memeSujetAilleurs): ?>
-  <section class="sect"><div class="wrap" style="max-width:820px">
+  <section class="sect"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><h2><?= $page['ville_slug'] !== '' ? sanitize($sujet['nom'] ?? '') . " dans d'autres villes." : 'À lire aussi.' ?></h2></div>
     <div class="zone-grid">
       <?php foreach ($memeSujetAilleurs as $pg): ?>

@@ -56,6 +56,62 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Terrain',
+            'titre'      => 'Une journée type dans un commerce qui vend sur WhatsApp.',
+            'paragraphes' => [
+                'Suivons une commande réelle, telle qu\'elle se passe sans structure. Une cliente écrit à 9 h pour demander le prix d\'un article vu en story. La vendeuse répond à 11 h, entre deux clients au comptoir. La cliente négocie, commande, promet de passer. Son message se noie ensuite sous quarante conversations. Le soir, impossible de dire combien de commandes sont en attente, lesquelles sont payées, lesquelles livrées. À la fin du mois, impossible de dire combien WhatsApp a rapporté. Le canal vend, mais personne ne sait combien, et chaque journée chargée fait perdre des ventes que personne ne voit.',
+                'La même journée, structurée : le catalogue répond aux questions de prix avant même la conversation. Le message de bienvenue annonce les délais de réponse. Chaque commande confirmée reçoit son étiquette, et le tableau de bord du soir se lit en une minute : tant à préparer, tant à livrer, tant à encaisser. La relance des commandes non retirées part chaque vendredi, en quelques minutes, à partir des étiquettes. Rien de tout cela ne demande un outil payant : tout est dans l\'application gratuite, correctement utilisée.',
+                'L\'écart entre ces deux journées est exactement ce que la formation installe. Et il se mesure vite : le simple fait de compter ses commandes WhatsApp de la semaine, ce que la plupart des commerces n\'ont jamais fait, change la façon de voir ce canal.',
+            ],
+        ],
+        [
+            'type'      => 'definitions',
+            'etiquette' => 'Erreurs',
+            'titre'     => 'Les pratiques qui coûtent des ventes ou un numéro.',
+            'items'     => [
+                ['titre' => 'Le prix seulement en privé', 'texte' => 'Refuser d\'afficher les prix pour forcer la conversation fait fuir une partie des acheteurs et noie la vendeuse sous des demandes sans suite. Le catalogue avec prix filtre les curieux et fait arriver des clients déjà décidés.'],
+                ['titre' => 'Les envois en masse sauvages', 'texte' => 'Arroser tout le carnet de contacts avec la promotion du jour, c\'est le chemin le plus court vers les signalements, et les signalements mènent au bannissement. Les listes de diffusion ont des règles précises, enseignées au module croissance.'],
+                ['titre' => 'Le numéro personnel comme numéro commercial', 'texte' => 'L\'activité entière repose sur le numéro privé du gérant, invérifiable et intransmissible. La migration vers un numéro professionnel dédié, avec conservation de l\'historique, est traitée pas à pas en session.'],
+                ['titre' => 'Aucune trace des ventes', 'texte' => 'Les commandes vivent et meurent dans les conversations. Sans étiquettes ni sortie hebdomadaire vers un tableau, impossible de connaître son chiffre WhatsApp, ses clients fidèles ou ses relances à faire. C\'est le cœur du module suivi.'],
+                ['titre' => 'Répondre à toute heure, ou plus du tout', 'texte' => 'Sans cadre, le canal dévore les soirées du gérant puis finit abandonné par épuisement. Messages d\'absence, horaires annoncés et réponses rapides ramènent le canal à un outil de travail qui respecte des horaires.'],
+            ],
+        ],
+        [
+            'type'      => 'liste',
+            'etiquette' => 'Livrables',
+            'titre'     => 'Ce que chaque commerce repart avec.',
+            'items'     => [
+                'Un profil professionnel complet : nom, description, horaires, adresse, lien de localisation.',
+                'Un catalogue amorcé en session avec vos produits, vos photos et vos prix, et la méthode pour l\'entretenir.',
+                'Vos réponses rapides enregistrées pour les dix questions qui reviennent le plus chez vous.',
+                'Un système d\'étiquettes posé sur vos conversations réelles, du premier contact à la livraison payée.',
+                'Le lien wa.me prêt à diffuser sur vos supports, et la fiche des règles anti-bannissement en une page.',
+            ],
+        ],
+        [
+            'type'      => 'definitions',
+            'etiquette' => 'Par activité',
+            'titre'     => 'Ce que la formation ajuste selon votre commerce.',
+            'items'     => [
+                ['titre' => 'Prêt-à-porter et mode', 'texte' => 'Le catalogue par collections avec tailles et coloris, la réponse type aux demandes de disponibilité, et la gestion des réservations qui expirent : l\'article gardé trois jours pour une cliente qui ne vient pas est la plaie du secteur.'],
+                ['titre' => 'Alimentaire et traiteur', 'texte' => 'Les commandes du jour avec heure limite, le message de disponibilité quotidien envoyé proprement, et le circuit des commandes récurrentes des habitués. La rapidité de réponse y pèse plus que partout ailleurs.'],
+                ['titre' => 'Cosmétique et soins', 'texte' => 'Le conseil avant vente en réponses rapides documentées, les photos avant-après avec l\'accord des clientes, et la relance de réapprovisionnement au bon intervalle : le produit fini se rachète, encore faut-il y penser au bon moment.'],
+                ['titre' => 'Services et rendez-vous', 'texte' => 'La prise de rendez-vous cadrée par des créneaux annoncés, la confirmation de la veille, et la liste d\'attente pour les désistements. Un salon ou un cabinet perd moins au rendez-vous manqué qu\'au créneau resté vide faute d\'organisation.'],
+                ['titre' => 'E-commerce avec livraison', 'texte' => 'Le circuit complet commande, paiement Mobile Money, remise au livreur, confirmation de réception, avec une étiquette par étape. C\'est le profil qui bascule le plus vite vers l\'automatisation, et la formation prépare cette suite.'],
+            ],
+        ],
+        [
+            'type'       => 'prose',
+            'etiquette'  => 'Préparation',
+            'titre'      => 'Comment se préparer pour tirer le maximum de la session.',
+            'paragraphes' => [
+                'La session travaille sur votre matière réelle, alors la préparation compte. Avant le jour J, rassemblez trois choses. D\'abord vos photos produits : une vingtaine d\'images correctes suffisent à amorcer le catalogue, et la session inclut les règles simples qui rendent une photo de téléphone vendeuse : lumière du jour, fond propre, produit net. Ensuite, votre liste de prix à jour, celle que vous donnez réellement, pas celle de l\'an dernier. Enfin, relisez vos vingt dernières conversations clients et notez les questions qui reviennent : elles deviendront vos réponses rapides.',
+                'Prévoyez aussi la décision sur le numéro. Si l\'activité tourne sur le numéro personnel du gérant, la session est le bon moment pour trancher : le garder en le professionnalisant, ou migrer vers un numéro dédié. Les deux se font proprement, mais la décision doit être prise avant de construire le profil, pas après. Le cadrage gratuit aide à choisir selon votre situation : ancienneté du numéro, volume de contacts, nombre de personnes qui répondent.',
+                'Dernier point pratique : venez avec le téléphone qui sert réellement à vendre, chargé, avec de l\'espace de stockage et le code de validation accessible. Tout se construit dessus pendant la session, et c\'est précisément ce qui fait qu\'à la fin, il n\'y a rien à « mettre en place plus tard » : c\'est déjà en place.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Les marches suivantes.',
@@ -73,5 +129,9 @@ return [
         ['q' => 'Les bots WhatsApp qu\'on nous propose partout, qu\'en penser ?', 'r' => 'Beaucoup reposent sur des solutions non officielles qui exposent le numéro au bannissement. Le module croissance apprend à les reconnaître et présente les alternatives conformes, avec leurs coûts réels.'],
         ['q' => 'Nous sommes plusieurs sur le même numéro. Est-ce gérable ?', 'r' => 'Jusqu\'à un certain volume, oui : l\'application autorise plusieurs appareils, et la formation pose les règles communes, étiquettes et réponses types en tête. Au-delà, c\'est le signe qu\'il faut passer à l\'API.'],
         ['q' => 'Que repart-on avec, concrètement ?', 'r' => 'Un profil professionnel complet, un catalogue amorcé avec vos produits, vos réponses rapides enregistrées et un système d\'étiquettes en place. Tout est fait sur vos téléphones pendant la session, pas sur un exemple.'],
+        ['q' => 'Comment mesurer ce que WhatsApp rapporte vraiment ?', 'r' => 'Par les étiquettes et la sortie hebdomadaire vers un tableau simple : nombre de commandes, montants, clients récurrents. La plupart des commerces découvrent leur chiffre WhatsApp réel à ce moment-là, et c\'est souvent la surprise de la formation.'],
+        ['q' => 'WhatsApp peut-il encaisser les paiements ?', 'r' => 'Pas directement dans la sous-région : les paiements passent par Mobile Money ou en boutique. La formation montre comment cadrer proprement la confirmation de paiement dans la conversation, pour que l\'étiquette « payé » corresponde toujours à un encaissement vérifié.'],
+        ['q' => 'Faut-il aussi une page Facebook ou Instagram ?', 'r' => 'Elles amènent du monde vers WhatsApp, où la vente se conclut. La formation se concentre sur la conclusion, mais le lien wa.me et le catalogue s\'intègrent à vos pages existantes, et le sujet est couvert dans le module croissance.'],
+        ['q' => 'Et quand les volumes dépasseront l\'application gratuite ?', 'r' => 'C\'est un bon problème, et il a une réponse propre : l\'API officielle WhatsApp Business, avec de vraies automatisations. La formation vous apprend à reconnaître ce seuil, et la marche suivante est couverte par la formation automatisation ou par une prestation dédiée.'],
     ],
 ];

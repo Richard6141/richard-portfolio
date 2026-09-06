@@ -167,7 +167,7 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
   <?php endforeach; ?>
 
-  <section class="sect"><div class="wrap" style="max-width:820px">
+  <section class="sect"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><span class="mono"><span class="tag-num">04</span> / Méthode</span><h2>Ce qui est commun à toutes les sessions.</h2></div>
     <div class="proc stg">
       <div class="step"><div class="sn">01</div><h3>Cadrage gratuit</h3><p>Deux échanges pour comprendre votre situation, évaluer les niveaux et composer les groupes. C'est aussi là que je dis si la formation demandée est la bonne réponse.</p></div>
@@ -177,7 +177,7 @@ include __DIR__ . '/partials/pv2-header.php';
     </div>
   </div></section>
 
-  <section class="sect soft"><div class="wrap" style="max-width:820px">
+  <section class="sect soft"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><span class="mono"><span class="tag-num">05</span> / Sur mesure</span><h2>Formation intra-entreprise.</h2></div>
     <div class="prose rv">
       <p class="lead">Toutes les formations du catalogue s'adaptent en intra-entreprise : dans vos locaux ou en visioconférence, aux dates qui arrangent vos équipes, avec un programme composé à partir de vos documents et de vos outils. C'est le format que je recommande dès que trois personnes sont concernées.</p>
@@ -189,7 +189,7 @@ include __DIR__ . '/partials/pv2-header.php';
     </div>
   </div></section>
 
-  <section class="sect"><div class="wrap" style="max-width:820px">
+  <section class="sect"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><h2>Questions fréquentes.</h2></div>
     <div class="faq rv">
       <?php foreach ($faq as $qa): ?>

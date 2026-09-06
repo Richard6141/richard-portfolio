@@ -55,6 +55,62 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Méthode',
+            'titre'      => 'Par où commencer : la cartographie des tâches.',
+            'paragraphes' => [
+                'La première erreur des entreprises qui découvrent l\'automatisation est de partir de l\'outil : on installe n8n, puis on cherche quoi automatiser. La formation prend le chemin inverse et commence par une cartographie : chaque participant liste les tâches de sa semaine, leur fréquence, leur durée et leur degré de règle. Une tâche fréquente, chronophage et régie par des règles claires est une candidate en or. Une tâche rare ou pleine de jugement humain reste manuelle, et c\'est très bien ainsi.',
+                'Cette cartographie produit systématiquement des surprises. La tâche que tout le monde voulait automatiser se révèle marginale, et le vrai gisement se cache dans un geste si banal que personne ne le voyait plus : recopier les virements du relevé bancaire vers le tableur, renvoyer chaque lundi le même état des stocks, répondre trente fois par semaine à la même question sur les délais. Les automatisations les plus rentables sont rarement les plus spectaculaires.',
+                'Chaque participant choisit ensuite sa cible dans sa propre cartographie, et c\'est elle qu\'il construit pendant la formation. Ce choix personnel n\'est pas un détail pédagogique : on maintient avec soin une automatisation qui supprime sa propre corvée, on abandonne vite celle qu\'on a construite sur un exemple inventé.',
+            ],
+        ],
+        [
+            'type'      => 'definitions',
+            'etiquette' => 'Erreurs',
+            'titre'     => 'Ce qui fait mourir les automatisations.',
+            'items'     => [
+                ['titre' => 'L\'automatisation silencieuse', 'texte' => 'Le flux tombe en panne et personne ne le sait : les relances ne partent plus depuis trois semaines et on le découvre par un impayé. Toute automatisation construite en formation embarque sa notification d\'échec, c\'est une règle absolue.'],
+                ['titre' => 'Le flux que seul son auteur comprend', 'texte' => 'L\'auteur part, l\'automatisation devient une boîte noire qu\'on n\'ose plus toucher, puis qu\'on débranche au premier incident. La documentation minimale, trois lignes par flux : ce qu\'il fait, ce qui le déclenche, qui prévenir en cas d\'échec.'],
+                ['titre' => 'Automatiser un processus malade', 'texte' => 'Si la tâche manuelle est mal définie, son automatisation exécute le désordre plus vite. On assainit le processus d\'abord, on l\'automatise ensuite. La cartographie sert aussi à repérer ces cas et à les renvoyer vers un travail d\'organisation.'],
+                ['titre' => 'Ignorer les cas limites', 'texte' => 'Le flux marche pour le cas courant et casse sur l\'exception : le message sans pièce jointe, le montant vide, le client inconnu. La formation consacre un exercice entier à provoquer ces cas et à décider, pour chacun, entre traiter et alerter.'],
+                ['titre' => 'Empiler sans gouverner', 'texte' => 'Vingt flux créés par cinq personnes, sans inventaire : personne ne sait plus ce qui tourne ni pourquoi. Dès la formation, un registre simple liste chaque automatisation, son responsable et sa date de dernière vérification.'],
+            ],
+        ],
+        [
+            'type'      => 'liste',
+            'etiquette' => 'Livrables',
+            'titre'     => 'Ce que chaque participant emporte.',
+            'items'     => [
+                'Sa cartographie personnelle des tâches, hiérarchisée par gain espéré, qui sert de feuille de route pour les mois suivants.',
+                'Une automatisation réelle en production sur son propre compte ou serveur, avec notification d\'échec en place.',
+                'Le registre des flux de l\'équipe, prêt à accueillir les automatisations suivantes.',
+                'Les gabarits n8n construits en session, réutilisables comme points de départ.',
+                'Une attestation de formation et la documentation de chaque exercice.',
+            ],
+        ],
+        [
+            'type'      => 'definitions',
+            'etiquette' => 'Par secteur',
+            'titre'     => 'Ce que les entreprises automatisent en premier, selon leur activité.',
+            'items'     => [
+                ['titre' => 'Import-export et transit', 'texte' => 'Le suivi documentaire : chaque pièce reçue par mail est extraite, renommée selon le dossier et classée, avec alerte sur les pièces manquantes à l\'approche de l\'échéance. Le flux qui économise le plus d\'allers-retours avec les transitaires.'],
+                ['titre' => 'Commerce et e-commerce', 'texte' => 'Les commandes entrantes, tous canaux confondus, atterrissent dans un seul tableau avec accusé de réception. Puis viennent les relances de paniers et le rapport de ventes du lundi matin.'],
+                ['titre' => 'Écoles et centres de formation', 'texte' => 'Les inscriptions par formulaire alimentent les listes de classes, les rappels d\'échéances de scolarité partent seuls, et les attestations se génèrent à la demande. Un secteur où la saisonnalité rend l\'automatisation très rentable.'],
+                ['titre' => 'Cabinets et services', 'texte' => 'La prise de rendez-vous avec confirmation et rappel la veille, l\'accusé de réception des dossiers, la relance des pièces manquantes. Des flux courts, peu spectaculaires, qui rendent le cabinet joignable et ponctuel.'],
+                ['titre' => 'Hôtels et restauration', 'texte' => 'Les demandes de réservation venues de WhatsApp et du site convergent vers un registre unique, avec confirmation automatique et rappel. La double réservation, plaie du secteur, disparaît avec le registre.'],
+            ],
+        ],
+        [
+            'type'       => 'prose',
+            'etiquette'  => 'Coûts',
+            'titre'      => 'Le coût réel d\'une automatisation, sans les omissions habituelles.',
+            'paragraphes' => [
+                'Les vendeurs d\'automatisation annoncent volontiers le temps gagné et oublient de compter le reste. Comptons tout. Une automatisation coûte d\'abord sa construction : quelques heures pour un flux simple, quelques jours pour une chaîne complète. Elle coûte ensuite son hébergement : celui de n8n auto-hébergé se réduit à la part d\'un petit serveur, quelques milliers de FCFA par mois, là où les plateformes facturant à l\'opération deviennent chères dès que les volumes montent. Elle coûte enfin sa maintenance : les outils reliés changent, les mots de passe expirent, les cas limites apparaissent. Compter une heure ou deux par mois pour un parc de flux bien construit.',
+                'Face à ces coûts, le calcul du rendement est simple et fait partie de la formation : une tâche de vingt minutes exécutée chaque jour ouvrable représente environ quatre-vingts heures par an. Même en comptant large la construction et la maintenance, le flux se rembourse en quelques semaines. Mais le même calcul, appliqué à une tâche mensuelle de dix minutes, conclut honnêtement qu\'il ne faut pas l\'automatiser. Savoir faire ce calcul avant de construire, c\'est ce qui sépare une démarche d\'automatisation d\'une collection de gadgets.',
+                'Reste le coût que personne ne chiffre : la dépendance. Un flux construit par un prestataire sur son propre compte, avec ses propres accès, vous lie à lui pour chaque virgule. C\'est précisément ce que la formation élimine : tout se construit sur vos comptes, vos accès, vos serveurs, et la compétence de modification reste dans vos murs.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Formations et services liés.',
@@ -72,5 +128,9 @@ return [
         ['q' => 'Peut-on automatiser WhatsApp ?', 'r' => 'Oui, dans le cadre des solutions officielles WhatsApp Business, avec leurs contraintes réelles : ce qui est permis, ce qui ne l\'est pas, et ce qui risque de faire bannir un numéro. Le module y consacre un temps dédié.'],
         ['q' => 'Que devient le flux construit pendant la formation ?', 'r' => 'Il vous appartient et tourne sur votre compte ou votre serveur, pas sur le mien. C\'est un principe : vous repartez avec quelque chose qui fonctionne et que vous savez modifier.'],
         ['q' => 'Et si une automatisation casse après la formation ?', 'r' => 'Le module maintenance sert précisément à ça : notifications d\'échec, diagnostic, documentation. Pour le reste, un accompagnement ponctuel reste possible, en visioconférence.'],
+        ['q' => 'Où n8n est-il hébergé pendant et après la formation ?', 'r' => 'Sur votre propre serveur ou hébergement quand vous en avez un, sinon sur l\'offre en ligne de n8n le temps de la formation, migrable ensuite. La question de l\'hébergement, avec ses coûts réels, est traitée en session plutôt que découverte après.'],
+        ['q' => 'Nos outils sont artisanaux : cahiers, tableurs, WhatsApp. Est-ce automatisable ?', 'r' => 'C\'est le cas le plus courant ici, et oui : le tableur et WhatsApp s\'intègrent très bien, et le cahier se remplace progressivement par un formulaire qui alimente le reste. La cartographie tient compte du point de départ réel, pas d\'un système d\'information idéal.'],
+        ['q' => 'Quelle différence avec la formation IA en entreprise ?', 'r' => 'La formation IA outille des gestes individuels : rédiger, synthétiser, structurer. Celle-ci relie des systèmes entre eux pour supprimer des tâches entières. Elles se complètent, et l\'IA apparaît ici comme une étape de flux : trier, extraire, rédiger au sein d\'une chaîne automatique.'],
+        ['q' => 'Combien d\'automatisations une PME entretient-elle raisonnablement ?', 'r' => 'Mieux vaut cinq flux robustes, documentés et surveillés que vingt fragiles. La formation enseigne aussi à dire non : chaque automatisation est un petit système à maintenir, et le registre sert à garder ce parc à une taille que l\'équipe maîtrise.'],
     ],
 ];

@@ -56,6 +56,62 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Débouchés',
+            'titre'      => 'Ce que le marché attend réellement d\'un développeur junior.',
+            'paragraphes' => [
+                'Le marché local du développement a une particularité que les formations généralistes ignorent : les clients sont des PME, des commerces et des institutions qui veulent des choses concrètes, livrées, qui marchent. Personne ne demande la dernière bibliothèque à la mode ; on demande un site qui charge vite sur une connexion moyenne, un formulaire qui enregistre sans perdre de données, un back-office qu\'une secrétaire peut utiliser. Le parcours est calibré sur cette demande réelle, pas sur les offres d\'emploi de la Silicon Valley.',
+                'C\'est aussi pour cela que le parcours impose la mise en ligne dès le premier palier. Un développeur qui n\'a jamais déployé, configuré un nom de domaine ou diagnostiqué un site en panne n\'est pas employable, quelle que soit la qualité de son code local. La différence entre celui qui trouve des clients et celui qui cherche encore tient rarement à la connaissance des langages : elle tient à la capacité de livrer de bout en bout, preuves à l\'appui.',
+                'Le portfolio construit pendant le parcours vise exactement cela : trois projets en ligne, avec leur code consultable sur un dépôt Git propre, valent tous les certificats. C\'est ce que je regarde moi-même quand un junior me propose ses services, et c\'est ce que regardent les plateformes de freelance comme les employeurs sérieux.',
+            ],
+        ],
+        [
+            'type'      => 'definitions',
+            'etiquette' => 'Blocages',
+            'titre'     => 'Pourquoi les autodidactes se bloquent, et comment le parcours l\'évite.',
+            'items'     => [
+                ['titre' => 'L\'enfer des tutoriels', 'texte' => 'Suivre des tutoriels en boucle donne l\'illusion d\'apprendre : tout semble clair tant qu\'on recopie. Le blocage survient au premier projet sans guide. Le parcours inverse la proportion : peu de démonstration, beaucoup de construction, l\'aide arrivant sur VOTRE problème.'],
+                ['titre' => 'Apprendre dans le désordre', 'texte' => 'Attaquer un framework avant de comprendre le langage, ou le JavaScript avancé avant le HTML : chaque trou de fondation se paie plus tard avec intérêts. Les paliers du parcours existent précisément pour interdire ce désordre.'],
+                ['titre' => 'Coder sans lire les erreurs', 'texte' => 'Le réflexe débutant devant un message d\'erreur est la panique ou le copier-coller aveugle. Lire l\'erreur, la comprendre, remonter à la cause : c\'est LA compétence transversale, travaillée à chaque session parce qu\'elle ne s\'acquiert que par répétition.'],
+                ['titre' => 'Rester seul', 'texte' => 'L\'autodidacte bloqué n\'a personne pour dire « ton erreur est ligne 12 » et surtout « voilà comment j\'aurais cherché ». La revue de code hebdomadaire du parcours sert à transmettre cette façon de chercher, pas seulement la correction.'],
+                ['titre' => 'Ne jamais finir', 'texte' => 'Dix projets commencés, zéro terminé : le mal le plus répandu. Le parcours impose de finir, précisément parce que les vingt derniers pour cent, formulaires validés, cas d\'erreur, mise en ligne, contiennent l\'essentiel du métier.'],
+            ],
+        ],
+        [
+            'type'      => 'liste',
+            'etiquette' => 'Livrables',
+            'titre'     => 'Ce que chaque participant construit pendant le parcours.',
+            'items'     => [
+                'Un site complet mis en ligne dès le premier palier, sur un vrai hébergement avec un vrai nom de domaine.',
+                'Une application avec base de données au second palier : formulaires, sessions, espace d\'administration.',
+                'Un dépôt Git propre par projet, avec un historique de commits qui raconte le travail.',
+                'Un projet final choisi par le participant, idéalement relié à un besoin réel de son entourage ou de son employeur.',
+                'Une attestation de formation, et un portfolio de projets consultables qui constitue le vrai passeport vers le marché.',
+            ],
+        ],
+        [
+            'type'       => 'prose',
+            'etiquette'  => 'Comparaison',
+            'titre'      => 'Pourquoi pas une plateforme en ligne gratuite ?',
+            'paragraphes' => [
+                'La question est légitime : les cours en ligne existent, souvent gratuits, parfois excellents. Si vous avez la discipline de fer qu\'ils exigent, prenez-les, sincèrement. Mais les chiffres publiés par ces plateformes elles-mêmes racontent l\'autre moitié de l\'histoire : l\'immense majorité des inscrits n\'atteint jamais la fin. Non par manque d\'intelligence, mais parce qu\'apprendre seul, le soir, sans personne pour débloquer une erreur incompréhensible ni personne à qui rendre des comptes, use la motivation la plus solide.',
+                'Ce que cette formation ajoute au contenu, qui est largement disponible partout, c\'est la structure qui fait finir : un rythme imposé, un formateur qui débloque en minutes ce qui coûterait des soirées entières, des projets calibrés sur le marché d\'ici plutôt que sur des exemples américains, et un groupe dont l\'émulation porte dans les semaines creuses. Le contenu s\'achète partout ; la traversée complète, beaucoup plus rarement.',
+                'Et il y a le contexte local, absent des plateformes : héberger à petit prix, encaisser par Mobile Money, servir des utilisateurs sur téléphone d\'entrée de gamme avec une connexion instable, facturer un client béninois. Ces savoirs ne figurent dans aucun cours international, et ils font la différence entre un diplômé de plateforme et quelqu\'un qui livre ici.',
+            ],
+        ],
+        [
+            'type'      => 'definitions',
+            'etiquette' => 'Débouchés',
+            'titre'     => 'Les portes que le parcours ouvre.',
+            'items'     => [
+                ['titre' => 'Freelance local', 'texte' => 'Sites et petits outils pour les commerces et PME de sa ville. Le marché le plus accessible en sortie de parcours : la demande existe, le portfolio en ligne sert de preuve, et les premiers clients viennent souvent de l\'entourage.'],
+                ['titre' => 'Salarié en entreprise', 'texte' => 'Les entreprises d\'ici recrutent des profils capables d\'entretenir leur site, leurs outils internes et leurs intégrations. La stack enseignée est exactement celle qu\'on trouve dans leurs systèmes.'],
+                ['titre' => 'Prestataire à distance', 'texte' => 'Agences et clients francophones d\'Europe et du Canada externalisent des développements. La marche est plus haute : elle exige la rigueur de livraison et le Git propre que le parcours impose précisément.'],
+                ['titre' => 'Créateur de son propre outil', 'texte' => 'Beaucoup de participants viennent avec une idée : un service pour leur secteur, une plateforme pour leur communauté. Le parcours leur donne de quoi construire la première version eux-mêmes, au lieu de chercher un budget de développement.'],
+                ['titre' => 'Poursuite vers les frameworks', 'texte' => 'Pour ceux qui visent les stacks modernes, le socle rend l\'apprentissage de Laravel ou de React rapide et solide : on comprend ce que le framework automatise au lieu de le réciter.'],
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Formations et services liés.',
@@ -73,5 +129,9 @@ return [
         ['q' => 'L\'IA ne rend-elle pas cette formation inutile ?', 'r' => 'Elle rend inutile l\'apprentissage de la syntaxe par cœur, pas celui du métier. Relire du code généré, repérer une faille, structurer un projet : ces compétences valent plus cher depuis que tout le monde peut générer du code sans les avoir.'],
         ['q' => 'Y a-t-il un diplôme à la clé ?', 'r' => 'Une attestation de formation, et surtout des projets en ligne qui constituent un début de portfolio. Sur ce marché, c\'est ce que les recruteurs et les clients regardent en premier.'],
         ['q' => 'Peut-on suivre en travaillant à côté ?', 'r' => 'Oui, le rythme se cale au cadrage : sessions en soirée ou le samedi, avec un volume de travail personnel annoncé honnêtement à l\'avance. Ce qui ne se négocie pas, c\'est la régularité.'],
+        ['q' => 'Quel matériel faut-il ?', 'r' => 'Un ordinateur portable correct, même modeste : tout ce qu\'on utilise fonctionne sur une machine d\'occasion à petit budget. La connexion compte davantage ; les sessions sont conçues pour économiser la bande passante, et les projets s\'hébergent sur des offres à quelques milliers de FCFA par an.'],
+        ['q' => 'En combien de temps devient-on employable ?', 'r' => 'Personne ne peut le promettre honnêtement : cela dépend de la régularité et du temps investi entre les sessions. Ce que le parcours garantit, c\'est le chemin : des projets finis, en ligne, avec un code consultable. Le rythme auquel vous le parcourez vous appartient.'],
+        ['q' => 'Enseignez-vous WordPress ?', 'r' => 'Le parcours enseigne le socle, qui rend ensuite WordPress facile à prendre en main et surtout à dépasser : comprendre PHP et MySQL, c\'est comprendre ce que WordPress fait sous le capot. Un module d\'orientation WordPress peut s\'ajouter pour ceux qui visent ce marché spécifique.'],
+        ['q' => 'Puis-je payer le parcours en plusieurs fois ?', 'r' => 'Oui, le paiement se fractionne par palier : chaque étape se règle avant de commencer, et vous pouvez vous arrêter à la fin de n\'importe laquelle avec des acquis complets. Le détail se fixe au devis, après le cadrage gratuit.'],
     ],
 ];

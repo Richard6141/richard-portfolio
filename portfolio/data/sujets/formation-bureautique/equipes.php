@@ -56,6 +56,62 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Terrain',
+            'titre'      => 'Trois scènes de bureau que cette formation fait disparaître.',
+            'paragraphes' => [
+                'Première scène : la direction demande le chiffre des ventes du trimestre. Trois personnes ouvrent trois versions du même classeur et obtiennent trois totaux différents. Personne ne sait lequel est juste, alors on ressort les carnets et on recompte à la main. Le classeur unique, protégé, aux formules vérifiées, remplace cette scène par une consultation de trente secondes, et c\'est l\'exercice final du module tableur.',
+                'Deuxième scène : un fournisseur envoie une facture par mail. Elle est lue sur un téléphone, oubliée, réclamée deux semaines plus tard, réenvoyée, imprimée, perdue, payée en retard avec pénalités. Le module messagerie et le module fichiers travaillent ensemble sur ce circuit : une adresse professionnelle relevée à heures fixes, un dossier de classement unique, une règle simple sur qui traite quoi. Rien de sophistiqué, tout dans la constance.',
+                'Troisième scène : le comptable externe demande les pièces du mois. S\'ensuivent trois jours de recherche dans les téléphones, les boîtes personnelles et les clés USB de chacun. Après la formation, la question ne se pose plus : les pièces vivent au même endroit, nommées de la même façon, accessibles selon les droits de chacun. Le comptable le remarque dès le premier mois, et c\'est souvent lui qui le dit au dirigeant.',
+            ],
+        ],
+        [
+            'type'      => 'definitions',
+            'etiquette' => 'Erreurs',
+            'titre'     => 'Les habitudes qui coûtent le plus cher.',
+            'items'     => [
+                ['titre' => 'Le fichier envoyé au lieu du fichier partagé', 'texte' => 'Chaque envoi par WhatsApp ou par mail crée une copie divergente. Le partage d\'un fichier unique avec droits d\'accès supprime le problème à la racine, et le geste s\'apprend en dix minutes.'],
+                ['titre' => 'Le mot de passe unique et partagé', 'texte' => 'Le même mot de passe partout, connu de tous, parfois affiché au mur. Un seul compte compromis expose alors tout. Le gestionnaire de mots de passe, installé et pris en main pendant la session, coûte moins cher qu\'une seule fraude évitée.'],
+                ['titre' => 'La formule écrasée en silence', 'texte' => 'Quelqu\'un tape un montant par-dessus une formule, le total ment désormais, et il mentira pendant des mois. La protection des cellules et la vérification des totaux font partie des gestes obligatoires du module tableur.'],
+                ['titre' => 'La sauvegarde supposée', 'texte' => 'Tout le monde croit que quelqu\'un sauvegarde, personne ne le fait, et un téléphone volé emporte trois ans de contacts clients. La session met en place une sauvegarde réelle et la teste : restaurer un fichier fait partie de l\'exercice.'],
+                ['titre' => 'Le clic sur le faux mail', 'texte' => 'Le message qui imite la banque ou un fournisseur et demande une validation urgente. Le module sécurité entraîne l\'œil sur de vrais exemples, car la seule défense qui marche est le réflexe de vérification avant le clic.'],
+            ],
+        ],
+        [
+            'type'      => 'liste',
+            'etiquette' => 'Livrables',
+            'titre'     => 'Ce que l\'entreprise garde après les modules.',
+            'items'     => [
+                'Une arborescence de fichiers commune, créée pendant la session avec l\'équipe, et la règle de nommage qui va avec, affichée en une page.',
+                'Un classeur de suivi propre, aux formules protégées, qui remplace celui dont personne n\'était sûr.',
+                'Un gestionnaire de mots de passe déployé, avec les comptes critiques migrés pendant la session.',
+                'Une sauvegarde en place et testée par une restauration réelle.',
+                'Les fiches réflexes par module et l\'attestation de formation de chaque participant.',
+            ],
+        ],
+        [
+            'type'      => 'definitions',
+            'etiquette' => 'Par service',
+            'titre'     => 'Ce que chaque service de l\'entreprise y gagne.',
+            'items'     => [
+                ['titre' => 'Direction', 'texte' => 'Des chiffres consultables sans les demander, un classement où retrouver soi-même un contrat, et la fin des décisions prises sur des totaux dont personne n\'était sûr. La session dirigeant se concentre sur la lecture, pas sur la saisie.'],
+                ['titre' => 'Comptabilité et administration', 'texte' => 'Le classeur protégé qui tombe juste, les pièces du mois réunies au même endroit, l\'export propre vers le comptable externe. Le service qui gagne le plus d\'heures, et celui qui adopte le plus vite.'],
+                ['titre' => 'Équipe commerciale', 'texte' => 'Un fichier clients unique au lieu des carnets individuels, des mails qui obtiennent des réponses, et un suivi des relances qui survit aux absences. Le savoir commercial cesse de partir avec les vendeurs.'],
+                ['titre' => 'Accueil et secrétariat', 'texte' => 'La boîte mail tenue, le courrier tracé, les documents types retrouvés en secondes. Le poste par lequel tout transite est aussi celui où les bons gestes rapportent à toute l\'entreprise.'],
+                ['titre' => 'Ressources humaines', 'texte' => 'Les dossiers du personnel classés selon une règle unique, les modèles de contrats et d\'attestations à jour, et l\'accès restreint à ce qui doit l\'être. La confidentialité interne se joue dans les droits d\'accès, couverts au module fichiers.'],
+            ],
+        ],
+        [
+            'type'       => 'prose',
+            'etiquette'  => 'Durée',
+            'titre'      => 'Pourquoi ce socle rapporte plus qu\'il n\'y paraît.',
+            'paragraphes' => [
+                'Les formations au numérique souffrent d\'une hiérarchie implicite : l\'IA fascine, les ERP impressionnent, la bureautique fait sourire. Cette hiérarchie est exactement inverse à celle des gains. Une entreprise dont les fichiers se perdent, dont les totaux mentent et dont les mots de passe traînent perd chaque semaine des heures et prend chaque jour des risques, silencieusement, sans qu\'aucune ligne de budget ne les montre. Aucun outil avancé ne corrige cela : il s\'y ajoute et en hérite.',
+                'L\'expérience des déploiements le confirme : quand j\'installe un ERP ou une automatisation dans une entreprise au socle solide, le projet avance vite et tient. Quand le socle manque, le projet passe son temps à buter sur des fichiers introuvables, des données ressaisies de travers et des comptes partagés. C\'est pour cette raison précise que cette formation figure au catalogue : elle est le meilleur préalable aux autres, et parfois le meilleur investissement tout court.',
+                'Il y a enfin l\'effet sur les personnes, moins mesurable et bien réel : une équipe qui maîtrise ses outils cesse de subir son informatique. La peur de « casser quelque chose », qui paralyse tant de bureaux, disparaît avec la compréhension. Les participants qui arrivent en s\'excusant de leur niveau repartent en proposant des améliorations : c\'est le signe qu\'une formation a fait son travail.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Les marches suivantes.',
@@ -73,5 +129,9 @@ return [
         ['q' => 'Est-ce vraiment utile à l\'heure de l\'IA ?', 'r' => 'C\'est le prérequis. Une équipe qui perd ses fichiers et se fait piéger par un faux mail ne tirera rien d\'un assistant IA. Le socle d\'abord, l\'accélération ensuite.'],
         ['q' => 'Combien de personnes par session ?', 'r' => 'Une dizaine au maximum par module, moins si les niveaux l\'exigent. La formation vaut par la pratique sur poste, pas par la projection de diapositives.'],
         ['q' => 'Peut-on ne prendre qu\'un seul module ?', 'r' => 'Oui, chaque module est autonome. Le module sécurité est celui qu\'on choisit le plus souvent seul, généralement après un incident.'],
+        ['q' => 'Certains collaborateurs n\'ont jamais utilisé d\'ordinateur. Est-ce un problème ?', 'r' => 'Non, à condition de le dire au cadrage pour composer les groupes en conséquence. Il n\'y a aucun mépris à avoir : un excellent vendeur qui découvre le clavier reste un excellent vendeur, et il progresse vite quand la formation part de son niveau réel.'],
+        ['q' => 'Faut-il acheter des licences ou des abonnements ?', 'r' => 'Presque jamais : la formation s\'appuie d\'abord sur ce que vous avez déjà et sur des outils gratuits. Quand un abonnement se justifie, stockage partagé ou gestionnaire de mots de passe d\'équipe, son coût réel est présenté en session et la décision vous revient.'],
+        ['q' => 'Les gestes tiennent-ils dans la durée ?', 'r' => 'Ils tiennent si la direction les porte : l\'arborescence commune survit quand le dirigeant lui-même classe ses fichiers dedans. C\'est pour cela que la présence d\'au moins un responsable pendant les sessions est fortement recommandée, et que les règles sont écrites et affichées.'],
+        ['q' => 'Proposez-vous un suivi après les modules ?', 'r' => 'Une session de retour peut se caler un mois après pour corriger ce qui dérive et répondre aux questions apparues à l\'usage. C\'est le même principe que pour les autres formations du catalogue : l\'ancrage se joue dans les semaines qui suivent, pas le jour même.'],
     ],
 ];
