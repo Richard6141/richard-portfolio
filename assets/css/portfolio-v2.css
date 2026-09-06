@@ -457,9 +457,17 @@ body.pv2{background:var(--bg);color:var(--ink);font-family:var(--body);line-heig
 .pv2 .fmt-pop{position:absolute;top:.9rem;right:.9rem;font-size:.68rem;font-weight:800;
   letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--acc-2);
   border-radius:999px;padding:.24rem .6rem}
-.pv2 .fmt-meta{display:flex;flex-wrap:wrap;gap:.45rem;margin:.8rem 0 .2rem}
-.pv2 .fmt-meta span{font-size:.76rem;font-weight:600;color:var(--muted);
-  background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.28rem .65rem}
+/* Corrige le 06/09/2026 : .svc est une colonne flex dont la regle
+   « .svc p{flex:1} » attrapait AUSSI cette ligne de pastilles, un <p>.
+   Elle s'etirait sur l'espace restant de la carte et ses pastilles se
+   deformaient en gros ovales. flex:0 la fige, margin-top:auto la pose au
+   bas de la carte, alignee d'une carte a l'autre, et chaque pastille est
+   centree sur son texte, sur une seule ligne. */
+.pv2 .fmt-meta{display:flex;flex-wrap:wrap;gap:.45rem;margin:.9rem 0 .1rem;
+  flex:0 0 auto;margin-top:auto;padding-top:.9rem;align-items:center;align-content:flex-start}
+.pv2 .fmt-meta span{display:inline-flex;align-items:center;line-height:1;white-space:nowrap;
+  font-size:.76rem;font-weight:600;color:var(--muted);
+  background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.34rem .7rem}
 
 /* Les regles .qa ont ete retirees le 23/08/2026: aucun gabarit n'emet plus
    ce balisage, les FAQ sont desormais des <details> natifs. */
