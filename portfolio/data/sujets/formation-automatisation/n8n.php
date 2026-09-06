@@ -111,6 +111,17 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Sécurité',
+            'titre'      => 'Automatiser sans ouvrir de brèche.',
+            'paragraphes' => [
+                'Une automatisation est, par construction, un programme qui détient vos accès : votre boîte mail, votre tableur, votre WhatsApp, parfois votre banque de données clients. Cette concentration de pouvoirs mérite un traitement sérieux, et le module fiabilisation lui consacre une part entière. Première règle : les accès donnés à un flux sont des accès dédiés et minimaux. On ne branche pas une automatisation sur le compte personnel du gérant avec tous ses droits ; on crée des accès applicatifs, limités à ce que le flux doit réellement toucher, révocables sans casser le reste.',
+                'Deuxième règle : savoir où passent les données. Un flux qui envoie vos messages clients vers un service d\'IA les fait sortir de chez vous, et il faut le décider en connaissance de cause plutôt que le découvrir. La formation apprend à lire ce trajet pour chaque flux et à trancher : quelles données peuvent transiter par des services externes, lesquelles restent sur votre serveur, lesquelles s\'anonymisent avant traitement. C\'est d\'ailleurs un des arguments d\'un n8n auto-hébergé : le moteur d\'orchestration lui-même reste chez vous.',
+                'Troisième règle : prévoir la sortie. Les mots de passe changent, les employés partent, les prestataires aussi. Chaque flux construit en formation est accompagné de sa fiche d\'accès : quels comptes il utilise, où sont stockés les secrets, comment les faire tourner. Une entreprise qui sait révoquer et remplacer un accès en dix minutes dort mieux que celle qui a peur de toucher à quoi que ce soit.',
+                'Rien de tout cela n\'exige un expert en sécurité : ce sont des habitudes d\'hygiène, prises dès le premier flux. Elles coûtent quelques minutes par automatisation et évitent les deux scénarios qui font mal : la fuite de données par un maillon oublié, et la paralysie du jour où la seule personne qui savait est partie.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Formations et services liés.',

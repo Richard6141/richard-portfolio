@@ -115,6 +115,16 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Cas type',
+            'titre'      => 'À quoi ressemble une mise à niveau réussie.',
+            'paragraphes' => [
+                'Le scénario le plus courant que je rencontre : une entreprise de négoce ou de services, trois à huit personnes, un Dolibarr installé il y a deux ans par un prestataire reparti depuis. L\'outil sert à émettre des factures, rien d\'autre. Les devis se font sur un modèle de traitement de texte, le stock sur un cahier, les relances de mémoire. La gérante sait qu\'elle sous-utilise l\'outil, mais personne n\'a le temps d\'ouvrir le chantier, et chaque tentative solitaire s\'est soldée par un écran incompréhensible refermé aussitôt.',
+                'La mise à niveau type tient en une journée et demie. Le matin du premier jour, le cadrage sur pièce : on regarde ensemble l\'instance, on liste ce qui existe déjà et ce qui manque, on pose la convention de nommage et la décision de reprise. L\'après-midi et le lendemain matin, la personne qui tient la gestion parcourt le cycle complet sur les données réelles : ses devis d\'abord, car c\'est le manque le plus douloureux, puis la chaîne jusqu\'au règlement et à la relance. La demi-journée restante forme le second utilisateur au minimum vital et met en place la sauvegarde, testée par une restauration.',
+                'Ce qui change dans les semaines suivantes ne tient pas du miracle mais du mécanisme : les devis partent avec une numérotation propre et reviennent signés plus vite, les relances tombent chaque semaine depuis la liste des impayés au lieu de dépendre de la mémoire, et le comptable reçoit en fin de mois un export au lieu d\'un carton. Le cahier de stock, lui, survit souvent quelques mois de plus, et c\'est très bien : on ne déplace pas tout d\'un coup, on déplace ce qui rapporte.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Formations et services liés.',

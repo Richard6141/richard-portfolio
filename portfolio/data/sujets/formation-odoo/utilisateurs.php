@@ -112,6 +112,16 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Calendrier',
+            'titre'      => 'Le déroulé complet, du premier contact au retour à un mois.',
+            'paragraphes' => [
+                'Semaine zéro : le cadrage, gratuit, en visioconférence. Vous décrivez l\'entreprise, les postes et ce qui coince ; je demande un accès en lecture à l\'instance pour me faire une idée de son état réel. De là sort une proposition datée : quels parcours, pour qui, dans quel ordre, à quel prix. Si l\'instance présente des défauts de configuration qui rendraient la formation contre-productive, c\'est dit à ce moment, avec un chiffrage séparé de la remise en état, et vous restez libre de la confier à qui vous voulez.',
+                'Semaine une : la demi-journée d\'audit sur site. J\'observe le travail réel, poste par poste, sans rien changer : qui saisit quoi, ce qui se fait hors système, où les données divergent. L\'après-midi même, la direction reçoit la liste des écarts et la convention de nommage à valider. Les semaines suivantes déroulent les sessions par poste, en commençant toujours par le flux le plus critique pour l\'activité, généralement les ventes, à raison d\'une demi-journée par groupe pour que le comptoir continue de tourner.',
+                'La session dirigeants se place en fin de parcours, quand les équipes ont pris leurs marques : le tableau de bord qu\'on apprend à lire reflète alors des données devenues fiables, ce qui change tout à l\'exercice. Un mois après la dernière session, le retour : une demi-journée pour traiter les questions accumulées, corriger les gestes qui ont dérivé et constater, chiffres à l\'appui, ce qui a changé dans la tenue du système. C\'est ce rendez-vous, plus que tout autre, qui transforme une formation en adoption.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Formations et services liés.',

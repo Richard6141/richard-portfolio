@@ -112,6 +112,16 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Rythme',
+            'titre'      => 'Une semaine type dans le parcours.',
+            'paragraphes' => [
+                'Le parcours vit sur un cycle hebdomadaire stable, parce que la régularité est la seule variable qui prédit la réussite. La session de la semaine, en soirée ou le samedi selon le groupe, ouvre une capacité nouvelle : elle commence par la revue des travaux de la semaine passée, continue par une démonstration courte de la notion du jour, et se termine par le lancement de l\'exercice suivant, entamé sur place pour que personne ne reparte devant une page blanche.',
+                'Entre deux sessions, le travail personnel représente quelques heures, annoncées honnêtement au cadrage : c\'est là que l\'apprentissage se fait réellement, la session ne servant qu\'à ouvrir et à débloquer. Le groupe reste relié toute la semaine : une question postée avec son message d\'erreur reçoit une piste, rarement la solution toute faite, parce qu\'apprendre à chercher fait partie du programme. Les blocages de plus de vingt-quatre heures remontent en visioconférence courte, pour qu\'aucune semaine ne soit perdue.',
+                'Toutes les trois ou quatre semaines, un palier se clôt par la mise en ligne d\'un projet, et ce rendez-vous est non négociable : on présente ce qui marche, on montre son code, on encaisse la revue. Ces jalons publics font ce que la volonté seule ne fait pas : ils créent l\'échéance qui fait finir. Les participants qui décrochent d\'une semaine reprennent sans drame ; ceux qui décrochent d\'un palier ont une conversation franche avec moi sur le rythme, et le parcours s\'ajuste ou se suspend proprement plutôt que de s\'éterniser en inscription fantôme.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Formations et services liés.',

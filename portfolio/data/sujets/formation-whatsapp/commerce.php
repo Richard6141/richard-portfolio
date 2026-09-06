@@ -112,6 +112,16 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Règles',
+            'titre'      => 'Ce que WhatsApp autorise vraiment, et pourquoi c\'est votre allié.',
+            'paragraphes' => [
+                'Les règles de WhatsApp tiennent en un principe : le destinataire doit vouloir vos messages. Un client qui vous a écrit, vous a enregistré ou a accepté d\'être tenu informé est un contact légitime ; un numéro récupéré dans un groupe ou acheté dans une liste ne l\'est pas. Tout le système de détection, les signalements des utilisateurs en tête, mesure cette différence. Les comptes bannis ne le sont presque jamais par hasard : ils le sont parce qu\'ils écrivent massivement à des gens qui ne leur ont rien demandé.',
+                'Bien comprises, ces règles jouent pour vous. Elles maintiennent WhatsApp comme un canal où les messages sont lus, ce qui est précisément sa valeur commerciale : votre relance de commande arrive au milieu des conversations familiales, pas dans un dossier de courrier indésirable. Le module croissance enseigne donc les pratiques qui respectent le principe tout en développant l\'audience : faire enregistrer son numéro par les clients, proposer l\'inscription à la liste de diffusion au moment de l\'achat, espacer les envois, et donner une vraie porte de sortie à qui ne veut plus recevoir.',
+                'La formation apprend aussi à reconnaître les signaux d\'alerte avant la sanction : messages qui n\'arrivent plus, restrictions temporaires, avertissements dans l\'application. À ce stade, il est encore temps de corriger, et la marche à suivre est couverte. L\'objectif est simple : que votre numéro professionnel, avec son historique et son carnet de clients, soit un actif protégé, pas une roulette russe.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Les marches suivantes.',

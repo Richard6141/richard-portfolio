@@ -112,6 +112,17 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Choisir',
+            'titre'      => 'Quel format choisir : le guide de décision.',
+            'paragraphes' => [
+                'Si vos équipes n\'ont jamais utilisé d\'assistant, ou seulement en curiosité personnelle, commencez par l\'atelier découverte. Une demi-journée suffit pour lever les deux obstacles qui bloquent tout le reste : la peur de mal faire et l\'illusion que l\'outil pense à votre place. On en sort avec deux ou trois gestes acquis et, surtout, avec une vision claire de ce qu\'une formation complète apporterait. Beaucoup d\'entreprises enchaînent naturellement ; certaines découvrent que l\'atelier leur suffit, et c\'est une conclusion parfaitement honorable que je valide volontiers.',
+                'Si l\'usage a déjà commencé de façon désordonnée, chacun avec son compte personnel et ses recettes, la formation complète de deux jours est le bon point d\'entrée : elle remet tout le monde au même niveau, remplace les recettes par une méthode et pose les règles d\'usage en même temps que les gestes. C\'est aussi le format adapté quand une tâche précise et volumineuse justifie à elle seule l\'investissement, comme un service client submergé ou une production documentaire lourde.',
+                'L\'accompagnement mensuel s\'adresse aux équipes qui partent de loin ou qui veulent aller loin : trois rendez-vous espacés d\'un mois, entre lesquels l\'usage réel révèle les vraies questions. C\'est le format au meilleur taux d\'ancrage, précisément parce qu\'il épouse le rythme auquel les habitudes changent. Quant à la session dirigeants, elle se combine avec tous les autres formats, et je la recommande systématiquement en ouverture : deux heures qui évitent des mois de flottement sur ce qui est permis.',
+                'Dans le doute, le cadrage gratuit tranche : décrivez-moi vos tâches et votre équipe, je vous dis quel format je choisirais à votre place, et pourquoi. Il m\'arrive régulièrement de conseiller moins que ce qui était envisagé ; une formation surdimensionnée déçoit aussi sûrement qu\'une formation bâclée.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Par ville',
             'titre'     => 'La formation près de chez vous.',

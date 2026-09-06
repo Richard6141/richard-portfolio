@@ -190,5 +190,13 @@ return [
             'q' => 'J\'ai déjà commencé un projet avec l\'IA et je suis bloqué. La formation peut-elle servir ?',
             'r' => 'C\'est même un excellent point de départ : un projet bloqué contient toutes les leçons de la formation en condensé. On le reprend ensemble, on diagnostique ce qui coince, et il devient votre projet support. Le déblocage fait alors partie du résultat.',
         ],
+        [
+            'q' => 'La formation couvre-t-elle l\'hébergement et la mise en ligne ?',
+            'r' => 'Oui, jusqu\'au bout : hébergement réel, nom de domaine, certificat, sauvegardes. Un projet qui ne tourne que sur l\'ordinateur de son auteur n\'est pas terminé, et la formation refuse de s\'arrêter là. Les coûts d\'hébergement réels, modestes, sont présentés sans surprise.',
+        ],
+        [
+            'q' => 'Une entreprise peut-elle envoyer une équipe entière ?',
+            'r' => 'Oui, et le format intra-entreprise s\'y prête bien : l\'équipe travaille alors sur un projet interne commun, ce qui double l\'intérêt de la session. La revue croisée entre collègues installe en plus une culture de relecture qui survit à la formation.',
+        ],
     ],
 ];

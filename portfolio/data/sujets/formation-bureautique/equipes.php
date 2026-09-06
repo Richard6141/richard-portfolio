@@ -112,6 +112,16 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Déroulé',
+            'titre'      => 'À quoi ressemble la première demi-journée.',
+            'paragraphes' => [
+                'Le module commence toujours par un tour de table sans jugement : chacun montre comment il fait aujourd\'hui, sur son propre poste. Ce moment vaut de l\'or, parce qu\'il révèle les astuces individuelles, souvent ingénieuses, que la formation va généraliser, et les contournements dangereux qu\'elle va remplacer. Il désamorce aussi la honte : quand chacun a vu que le voisin cherche ses fichiers lui aussi, la salle se détend et les vraies questions sortent.',
+                'Vient ensuite la construction, ensemble et pour de vrai. Sur le module fichiers, par exemple, l\'arborescence commune ne sort pas d\'un modèle tout fait : elle se dessine au tableau avec l\'équipe, à partir des documents qui circulent réellement dans l\'entreprise, puis se crée séance tenante dans le stockage partagé, et chacun y déplace ses premiers dossiers avant la pause. La règle de nommage s\'écrit de la même façon, avec les mots de l\'équipe, et s\'affiche avant la fin de la session.',
+                'La dernière heure est une heure de gestes : chaque participant exécute seul le parcours complet du module, sous mes yeux mais sans mon aide. Retrouver un fichier, partager sans dupliquer, vérifier un total, selon le module du jour. C\'est le même principe de validation que sur toutes mes formations : on ne conclut pas sur un sentiment, on conclut sur un geste réussi. Et l\'équipe repart avec un engagement simple pour la semaine : tout nouveau document naît dans l\'arborescence commune, sans exception.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Les marches suivantes.',
@@ -133,5 +143,6 @@ return [
         ['q' => 'Faut-il acheter des licences ou des abonnements ?', 'r' => 'Presque jamais : la formation s\'appuie d\'abord sur ce que vous avez déjà et sur des outils gratuits. Quand un abonnement se justifie, stockage partagé ou gestionnaire de mots de passe d\'équipe, son coût réel est présenté en session et la décision vous revient.'],
         ['q' => 'Les gestes tiennent-ils dans la durée ?', 'r' => 'Ils tiennent si la direction les porte : l\'arborescence commune survit quand le dirigeant lui-même classe ses fichiers dedans. C\'est pour cela que la présence d\'au moins un responsable pendant les sessions est fortement recommandée, et que les règles sont écrites et affichées.'],
         ['q' => 'Proposez-vous un suivi après les modules ?', 'r' => 'Une session de retour peut se caler un mois après pour corriger ce qui dérive et répondre aux questions apparues à l\'usage. C\'est le même principe que pour les autres formations du catalogue : l\'ancrage se joue dans les semaines qui suivent, pas le jour même.'],
+        ['q' => 'Nos ordinateurs sont vieux et lents. Faut-il d\'abord renouveler le parc ?', 'r' => 'Rarement : la plupart des gestes enseignés ne demandent aucune puissance, et une machine ralentie souffre souvent plus de son encombrement que de son âge. Quand un renouvellement se justifie vraiment, je le dis au cadrage, avec un ordre de priorité par poste plutôt qu\'un remplacement général.'],
     ],
 ];

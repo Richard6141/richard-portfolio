@@ -111,6 +111,16 @@ return [
             ],
         ],
         [
+            'type'       => 'prose',
+            'etiquette'  => 'Articulation',
+            'titre'      => 'Fiche, site, réseaux sociaux : qui fait quoi.',
+            'paragraphes' => [
+                'Beaucoup d\'établissements dispersent leurs efforts faute de comprendre le rôle de chaque présence. Le partage est pourtant net. La fiche Google capte l\'intention chaude : quelqu\'un cherche votre catégorie, maintenant, près de chez lui, et compare trois options avant d\'appeler. Les réseaux sociaux créent l\'envie et entretiennent le lien : on y découvre votre travail sans le chercher, on vous suit, on pense à vous plus tard. Le site, quand il existe, fait la démonstration complète : il raconte, prouve et convertit ceux qui veulent en savoir plus avant de s\'engager.',
+                'Cette répartition dicte les priorités selon l\'activité. Un restaurant, une pharmacie, un dépanneur vivent de l\'intention chaude : la fiche d\'abord, massivement, et le reste ensuite. Une créatrice de mode ou un traiteur événementiel vivent de l\'envie : les réseaux pèsent davantage, mais la fiche reste le filet qui rattrape la recherche du nom. Un cabinet ou une entreprise de services B2B a besoin de la démonstration : le site compte autant que la fiche. La formation vous situe sur cette carte et concentre les efforts là où votre clientèle décide réellement.',
+                'Le point commun à tous les profils : la cohérence. Même nom, même numéro, mêmes horaires partout, et chaque présence qui renvoie vers les autres, la fiche vers WhatsApp pour commander, les réseaux vers la fiche pour les avis, le site vers tout le reste. Cette toile cohérente rassure les clients et les moteurs pour la même raison : elle prouve que l\'établissement est réel, actif et tenu. C\'est l\'exercice de clôture de la session, et il ne demande ensuite qu\'un entretien minimal.',
+            ],
+        ],
+        [
             'type'      => 'liens',
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Formations et services liés.',
