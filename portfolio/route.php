@@ -1,48 +1,43 @@
 <?php
 // ============================================================
-// route.php · Resolveur des URL non reconnues par .htaccess
-//
-// Cree le 21/08/2026. Auparavant, publier un sujet dans une ville
-// imposait d'ajouter des regles de reecriture dediees. Le serveur ne
-// peut pas interroger le registre PHP : la seule facon d'avoir UNE
-// route valable pour tous les sujets, presents et futurs, est de faire
-// passer les URL inconnues par ce resolveur.
-//
-// Il consulte le registre data/sujets.php. Si le slug correspond a une
-// page, il la rend ; sinon il renvoie un 404 franc, exactement comme
-// avant. Le comportement 404 est donc preserve a l'identique, c'etait
-// la condition pour ne pas reintroduire le soft-404 corrige le 20/08.
+// route.php · Routeur des URL sans règle dédiée dans .htaccess (vague 0C).
+// Ordre : pages de registre publiées, pages historiques du registre « sujets »
+// (un seul segment), 404 franc. Les redirections actives passent en premier.
+// Historique : créé le 21/08/2026 pour servir data/sujets.php sans règle par sujet ;
+// le 404 franc (pas de soft-404, corrigé le 20/08/2026) est conservé.
 // ============================================================
-
 declare(strict_types=1);
 
-$slugDemande = preg_replace('/[^a-z0-9-]/', '', strtolower((string) ($_GET['p'] ?? '')));
+require_once __DIR__ . '/../helpers/functions.php';
 
-if ($slugDemande === '') {
-    http_response_code(404);
-    include __DIR__ . '/../404.php';
+$chemin = (string) ($_GET['p'] ?? '');
+if (!preg_match('#^[a-z0-9-]+(?:/[a-z0-9-]+){0,3}/?$#', $chemin)) {
+    route_404();
+}
+
+if (($page = route_resoudre($chemin)) !== null) {
+    require __DIR__ . '/partials/pv2-bootstrap.php';
+    require __DIR__ . '/' . (in_array($page['type'], ['hub', 'domaine'], true) ? 'registre-hub.php' : 'registre.php');
     exit;
 }
 
+// Pages historiques (data/sujets/) : un seul segment.
+if (!preg_match('#^[a-z0-9-]+$#', $chemin)) {
+    route_404();
+}
+$slugDemande    = $chemin;
 $sujetsRegistre = require __DIR__ . '/data/sujets.php';
-
-// Index slug -> [sujet, ville]. Construit a la volee : deposer un fichier
-// dans data/sujets/{sujet}/{ville}.php suffit a publier la page.
 $trouve = null;
-foreach ($sujetsRegistre as $sujetSlug => $s) {
-    foreach ($s['pages'] as $villeSlug => $pg) {
+foreach ($sujetsRegistre as $s) {
+    foreach ($s['pages'] as $pg) {
         if (($pg['slug'] ?? '') === $slugDemande) {
             $trouve = [$s, $pg];
             break 2;
         }
     }
 }
-
 if ($trouve === null) {
-    http_response_code(404);
-    include __DIR__ . '/../404.php';
-    exit;
+    route_404();
 }
-
 [$sujet, $page] = $trouve;
 require __DIR__ . '/sujet.php';
