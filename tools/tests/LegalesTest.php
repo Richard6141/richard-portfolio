@@ -35,3 +35,15 @@ function test_legales_revue_formulaire_de_contact_decrit(): void
     assert_contains('formulaire de contact', $c);
     assert_contains('adresse IP', $c);
 }
+
+function test_pages_auteur_publiee_profil_et_sans_donnees_privees(): void
+{
+    $r = http_local('/richard-salanon');
+    assert_same(200, $r['code']);
+    assert_contains('"ProfilePage"', $r['corps']);
+    assert_contains('EPITECH', $r['corps']);
+    foreach (['BENDJELOUNE', 'SETTOSSI', '53 04 76 07', '91 61 77 04', 'Tankpè', '31 ans', '@epitech.eu'] as $prive) {
+        assert_not_contains($prive, $r['corps'], $prive);
+    }
+    assert_contains('href="/richard-salanon"', http_local('/comparatifs/odoo-vs-dolibarr')['corps'], 'boîte auteur vers la page auteur');
+}

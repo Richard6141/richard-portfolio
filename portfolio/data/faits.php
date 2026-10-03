@@ -47,7 +47,7 @@ return [
         'Gabon', 'RD Congo', 'France', 'Belgique', 'Suisse', 'Canada',
     ],
 
-    'formation' => ['nom' => 'EPITECH', 'url' => 'https://www.epitech.eu', 'annee' => 2022],
+    'formation' => ['nom' => 'EPITECH', 'url' => 'https://epitech.africa/ecole-informatique-cotonou/', 'annee' => 2022],
     'langues'   => ['fr' => 'Français', 'en' => 'Anglais'],
 
     'competences' => [
