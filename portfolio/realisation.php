@@ -12,6 +12,7 @@
 // elles : elle affiche alors la fiche projet seule.
 // ============================================================
 require __DIR__ . '/partials/pv2-bootstrap.php';
+exiger_base($pdo);
 
 $slug = preg_replace('/[^a-z0-9-]/', '', strtolower((string)($_GET['slug'] ?? '')));
 

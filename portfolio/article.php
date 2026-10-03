@@ -9,7 +9,8 @@ require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../helpers/functions.php';
 require_once __DIR__ . '/../helpers/icons.php';
 
-$pdo = getPDO();
+try { $pdo = getPDO(); } catch (Throwable $e) { $pdo = null; }
+exiger_base($pdo);
 
 $stmt = $pdo->query("SELECT id, slug FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1");
 $user = $stmt->fetch();

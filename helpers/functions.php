@@ -12,6 +12,24 @@ require_once __DIR__ . '/faits.php';
 require_once __DIR__ . '/schema.php';
 
 /**
+ * Page qui ne peut pas vivre sans base (services, blog, réalisations) :
+ * 503 propre et temporaire au lieu d'une erreur fatale (vague 0B).
+ */
+function exiger_base(?PDO $pdo): void
+{
+    if ($pdo !== null) {
+        return;
+    }
+    http_response_code(503);
+    header('Retry-After: 300');
+    header('Content-Type: text/html; charset=UTF-8');
+    echo '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="robots" content="noindex">'
+       . '<title>Service momentanément indisponible</title></head><body>'
+       . '<main><h1>Service momentanément indisponible</h1><p>La page revient dans quelques minutes.</p></main></body></html>';
+    exit;
+}
+
+/**
  * Envoie une reponse JSON de succes et arrete le script.
  *
  * @param mixed       $data    Donnees a retourner.

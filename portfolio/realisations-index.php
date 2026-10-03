@@ -7,6 +7,7 @@
 // et aucune requete du type "logiciel de gestion Benin" n'avait de cible.
 // ============================================================
 require __DIR__ . '/partials/pv2-bootstrap.php';
+exiger_base($pdo);
 
 $reaUrl = $portfolioUrl . '/realisations/';
 
