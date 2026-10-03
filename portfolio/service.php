@@ -3,6 +3,14 @@
 // service.php · Page d'un service (URL /services/{slug})
 // ============================================================
 require __DIR__ . '/partials/pv2-bootstrap.php';
+
+// Vague 0C : un pilier publié dans data/services/ remplace la fiche en base.
+$slugRegistre = (string) ($_GET['slug'] ?? '');
+if (preg_match('#^[a-z0-9-]+$#', $slugRegistre) && ($page = route_resoudre('services/' . $slugRegistre)) !== null) {
+    require __DIR__ . '/registre.php';
+    exit;
+}
+
 exiger_base($pdo);
 
 $slug = preg_replace('/[^a-z0-9-]/', '', strtolower((string)($_GET['slug'] ?? '')));

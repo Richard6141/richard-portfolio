@@ -69,6 +69,7 @@ $etapes = [
 <section class="confiance" id="confiance" aria-labelledby="confiance-titre">
   <p class="confiance__titre" id="confiance-titre">Sites et applications que j'ai développés</p>
   <?php if ($sousTraites > 0): ?><p class="confiance__note">Dont <?= $sousTraites ?> en sous-traitance pour Digital Développement.</p><?php endif; ?>
+  <button class="defilant__pause" type="button" aria-pressed="false" hidden>Mettre en pause le défilement</button>
   <div class="defilant">
     <?php foreach ([false, true] as $copie): ?>
     <ul class="defilant__piste"<?= $copie ? ' aria-hidden="true"' : '' ?>>

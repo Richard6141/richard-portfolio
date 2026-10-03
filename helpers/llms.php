@@ -119,6 +119,28 @@ function llms_requete(?PDO $pdo, string $sql, callable $ligne): array
     }
 }
 
+/** Sections de llms.txt issues des registres (pages publiées et indexables). */
+function llms_registres(string $base, bool $complet, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): array
+{
+    $titres = ['service' => 'Services', 'formation' => 'Formations', 'domaine' => 'Formations', 'metier' => 'Formations par métier',
+               'pays' => 'Pays', 'secteur' => 'Secteurs', 'histoire' => 'Histoires', 'comparatif' => 'Comparatifs',
+               'guide' => 'Guides', 'terme' => 'Glossaire', 'outil' => 'Outils', 'page' => 'Pages',
+               'service-pays' => 'Pages par pays', 'formation-pays' => 'Pages par pays', 'metier-pays' => 'Pages par pays'];
+    $base = rtrim($base, '/');
+    $sections = [];
+    foreach ($titres as $type => $titre) {
+        if (!$complet && $titre === 'Pages par pays') {
+            continue;
+        }
+        foreach (registre_publiees($type, $racine, $aujourdhui) as $p) {
+            if (($p['robots'] ?? 'index') === 'index') {
+                $sections[$titre][] = ['titre' => $p['titre'], 'url' => $base . $p['url'], 'resume' => $p['meta']];
+            }
+        }
+    }
+    return $sections;
+}
+
 /** Sections de llms.txt depuis la base (si disponible) et les registres de fichiers. */
 function llms_collecter(?PDO $pdo, string $base, bool $complet): array
 {
@@ -158,6 +180,21 @@ function llms_collecter(?PDO $pdo, string $base, bool $complet): array
     }
     if ($complet) {
         $sections['Pages locales'] = $locales;
+    }
+
+    // Vague 0C : pages de registre en tête de section, doublons d'URL retirés,
+    // anciennes URL redirigées retirées.
+    foreach (llms_registres($base, $complet) as $titre => $items) {
+        $sections[$titre] = array_merge($items, $sections[$titre] ?? []);
+    }
+    foreach ($sections as $titre => $items) {
+        $vues = [];
+        $sections[$titre] = array_values(array_filter($items, static function (array $it) use (&$vues): bool {
+            if (isset($vues[$it['url']]) || redirection_cible((string) (parse_url($it['url'], PHP_URL_PATH) ?? '')) !== null) {
+                return false;
+            }
+            return $vues[$it['url']] = true;
+        }));
     }
     return $sections;
 }

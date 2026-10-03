@@ -8,6 +8,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../helpers/functions.php';
 require_once __DIR__ . '/../helpers/icons.php';
+redirection_appliquer((string) (parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'));
 
 try { $pdo = getPDO(); } catch (Throwable $e) { $pdo = null; }
 exiger_base($pdo);
@@ -75,7 +76,7 @@ $stmt = $pdo->prepare("
     LIMIT 3
 ");
 $stmt->execute([$userId, $post['id'], $post['category'] ?? '']);
-$related = $stmt->fetchAll();
+$related = blog_sans_rediriges($stmt->fetchAll());
 
 // Variables marque (pour header/footer partials)
 $fullName     = trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? '')) ?: $user['slug'];

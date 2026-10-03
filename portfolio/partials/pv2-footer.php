@@ -7,7 +7,7 @@
 // Sur mobile, une barre collante remplace le bouton WhatsApp flottant.
 // Données : fiche de faits et portfolio/data/navigation.php.
 // ============================================================
-$nav    = $nav ?? (require __DIR__ . '/../data/navigation.php');
+$nav    = $nav ?? navigation_chargee();
 $h_wa   = preg_replace('/\D/', '', (string) fait('whatsapp'));
 $waLien = 'https://wa.me/' . $h_wa . '?text=' . rawurlencode('Bonjour Richard, je souhaite parler d\'un projet.');
 
@@ -49,7 +49,7 @@ $horaires = fait('horaires');
       <a href="/" class="pied__logo" aria-label="Richard SALANON, accueil"><img src="/assets/img/logo-rs-clair.svg" alt="Richard SALANON" width="232" height="48" loading="lazy" decoding="async"></a>
       <p><?= sanitize(fait('description_courte')) ?></p>
       <ul class="pied__coordonnees">
-        <li><?= icone('map-pin', 18) ?><span><?= sanitize(fait('ville')) ?>, <?= sanitize(fait('pays')) ?>. Interventions dans 34 pays, sur place ou à distance.</span></li>
+        <li><?= icone('map-pin', 18) ?><span><?= sanitize(fait('ville')) ?>, <?= sanitize(fait('pays')) ?>. Interventions dans <?= count(fait('zones')) ?> pays, sur place ou à distance.</span></li>
         <li><?= icone('phone', 18) ?><a href="tel:<?= sanitize(fait('telephone')) ?>"><?= sanitize(fait('telephone')) ?></a></li>
         <li><?= icone('envelope-simple', 18) ?><a href="mailto:<?= sanitize(fait('email')) ?>"><?= sanitize(fait('email')) ?></a></li>
         <?php if (!empty($horaires)): ?><li><?= icone('clock', 18) ?><span><?= sanitize(horaires_texte($horaires)) ?></span></li><?php endif; ?>
@@ -64,7 +64,7 @@ $horaires = fait('horaires');
     <nav class="pied__colonne" aria-label="Services">
       <p class="pied__titre">Services</p>
       <ul>
-        <?php foreach ($piedServices as [$libelle, $url]): ?><li><a href="<?= sanitize($url) ?>"><?= sanitize($libelle) ?></a></li><?php endforeach; ?>
+        <?php foreach ($piedServices as [$libelle, $url]): ?><li><a href="<?= sanitize(url_finale($url)) ?>"><?= sanitize($libelle) ?></a></li><?php endforeach; ?>
         <li><a href="/services/">Tous les services</a></li>
       </ul>
     </nav>
@@ -73,8 +73,8 @@ $horaires = fait('horaires');
       <p class="pied__titre">Formations</p>
       <ul>
         <?php foreach ($nav['formations'] as $famille => $g): ?><li><a href="<?= sanitize($g['liens'][0][1]) ?>"><?= sanitize($famille) ?></a></li><?php endforeach; ?>
-        <li><a href="/formation-vibecoding">Vibecoding</a></li>
-        <li><a href="/formation-whatsapp-business">WhatsApp Business</a></li>
+        <li><a href="<?= sanitize(url_finale('/formation-vibecoding')) ?>">Vibecoding</a></li>
+        <li><a href="<?= sanitize(url_finale('/formation-whatsapp-business')) ?>">WhatsApp Business</a></li>
         <li><a href="/formations/">Toutes les formations</a></li>
       </ul>
     </nav>
@@ -82,12 +82,13 @@ $horaires = fait('horaires');
     <nav class="pied__colonne" aria-label="Zones et ressources">
       <p class="pied__titre">Zones</p>
       <ul class="pied__zones">
-        <?php foreach ($piedZones as [$ville, $url]): ?><li><a href="<?= sanitize($url) ?>"><?= sanitize($ville) ?></a></li><?php endforeach; ?>
-        <li><a href="/zones/">Les 34 pays</a></li>
+        <?php foreach ($piedZones as [$ville, $url]): ?><li><a href="<?= sanitize(url_finale($url)) ?>"><?= sanitize($ville) ?></a></li><?php endforeach; ?>
+        <li><a href="/zones/">Les <?= count(fait('zones')) ?> pays</a></li>
       </ul>
       <p class="pied__titre">Ressources</p>
       <ul>
-        <li><a href="/realisations/">Réalisations</a></li>
+        <li><a href="<?= sanitize(url_finale('/realisations/')) ?>">Réalisations</a></li>
+        <li><a href="/comparatifs/">Comparatifs</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/a-propos/">À propos</a></li>
         <li><a href="/contact">Contact et devis</a></li>
@@ -97,6 +98,7 @@ $horaires = fait('horaires');
 
   <div class="pied__bas">
     <p>© <?= date('Y') ?> <?= sanitize(fait('nom')) ?>. Tous droits réservés.</p>
+    <p><a href="/mentions-legales">Mentions légales</a> · <a href="/confidentialite">Confidentialité</a></p>
     <p><?= sanitize(fait('intitule')) ?>, <?= sanitize(fait('ville')) ?>.</p>
   </div>
 </footer>

@@ -6,14 +6,14 @@
 // boutons, tiroir mobile. Sans JavaScript, chaque libellé reste un lien
 // vers son hub. Données : portfolio/data/navigation.php et la fiche de faits.
 // ============================================================
-$nav     = require __DIR__ . '/../data/navigation.php';
+$nav     = navigation_chargee();
 $navHome = $navHome ?? '/';
 $h_wa    = preg_replace('/\D/', '', (string) fait('whatsapp'));
 $waLien  = 'https://wa.me/' . $h_wa . '?text=' . rawurlencode('Bonjour Richard, je souhaite parler d\'un projet.');
 $megas   = [
     ['id' => 'services', 'libelle' => 'Services', 'hub' => '/services/', 'tout' => 'Tous les services'],
     ['id' => 'formations', 'libelle' => 'Formations', 'hub' => '/formations/', 'tout' => 'Toutes les formations'],
-    ['id' => 'pays', 'libelle' => 'Pays', 'hub' => '/zones/', 'tout' => 'Les 34 pays servis'],
+    ['id' => 'pays', 'libelle' => 'Pays', 'hub' => '/zones/', 'tout' => 'Les ' . count(fait('zones')) . ' pays servis'],
 ];
 $cta = $nav['carte_cta'];
 ?>

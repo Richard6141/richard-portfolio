@@ -40,3 +40,24 @@ function test_sitemap_servi_en_local_sans_base(): void
     assert_same(200, $r['code']);
     assert_contains('<loc>http://localhost:8081/developpeur-web-cotonou</loc>', $r['corps']);
 }
+
+function test_sitemap_registres_publies_indexables_date_maj(): void
+{
+    require_once racine('helpers/functions.php');
+    $e = sitemap_entrees_registres('https://richardsalanon.com', racine('tools/tests/fixtures/registres'), '2026-10-03');
+    $par = array_column($e, 'lastmod', 'loc');
+    assert_same('2026-01-02', $par['https://richardsalanon.com/services/site-test'] ?? null);
+    assert_true(isset($par['https://richardsalanon.com/histoires/']), 'hub publié');
+    assert_true(!isset($par['https://richardsalanon.com/services/site-futur']), 'date future');
+    assert_true(!isset($par['https://richardsalanon.com/page-legale-test']), 'noindex');
+}
+
+function test_sitemap_exclut_les_anciennes_url_redirigees(): void
+{
+    $xml = buildSitemapXml(null, 'https://richardsalanon.com');
+    foreach (redirections_table() as $de => $vers) {
+        if (redirection_cible($de) !== null) {
+            assert_not_contains('<loc>https://richardsalanon.com' . $de . '</loc>', $xml, $de);
+        }
+    }
+}

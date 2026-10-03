@@ -102,3 +102,54 @@ function test_schema_faq_du_template_horizon_est_lisible(): void
         assert_true($qr['q'] !== '' && $qr['r'] !== '', 'question ou réponse vide');
     }
 }
+
+function schema_fixture(string $type, string $slug): array
+{
+    require_once racine('helpers/functions.php');
+    return registre_lire($type, $slug, racine('tools/tests/fixtures/registres'));
+}
+
+function test_schema_registre_type_principal_par_type(): void
+{
+    $base = 'https://richardsalanon.com';
+    $attendus = [['service', 'site-test', 'Service'], ['service-pays', 'site-test/benin', 'Service'], ['formation', 'ia-test', 'Course'],
+                 ['histoire', 'histoire-test', 'Article'], ['comparatif', 'a-vs-b', 'Article'], ['page', 'page-test', 'WebPage'], ['terme', 'terme-test', 'DefinedTerm']];
+    foreach ($attendus as [$type, $slug, $schema]) {
+        $p = schema_fixture($type, $slug);
+        $noeuds = schema_page_registre($p, [['Accueil', '/'], [$p['titre'], $p['url']]], $base);
+        assert_same($schema, $noeuds[0]['@type'], $type);
+        assert_same('BreadcrumbList', $noeuds[1]['@type'], $type);
+        foreach ($noeuds as $n) {
+            schema_verifier($n);
+        }
+        assert_same(1, substr_count(schema_graphe($noeuds), 'application/ld+json'), $type);
+    }
+}
+
+function test_schema_registre_pays_de_la_page_et_dates_reelles(): void
+{
+    $base = 'https://richardsalanon.com';
+    $p = schema_fixture('service-pays', 'site-test/benin');
+    $n = schema_page_registre($p, [['Accueil', '/']], $base)[0];
+    assert_same(['@type' => 'Country', 'name' => 'Bénin'], $n['areaServed']);
+    assert_same(['@id' => $base . '/#person'], $n['provider']);
+    $a = schema_page_registre(schema_fixture('histoire', 'histoire-test'), [['Accueil', '/']], $base)[0];
+    assert_same('2026-01-01', $a['datePublished']);
+    assert_same('2026-01-02', $a['dateModified']);
+}
+
+function test_schema_fil_ariane_urls_absolues_positions(): void
+{
+    $f = schema_fil_ariane([['Accueil', '/'], ['Comparatifs', '/comparatifs/'], ['Odoo ou Dolibarr', '/comparatifs/odoo-vs-dolibarr']], 'https://richardsalanon.com');
+    assert_same(3, count($f['itemListElement']));
+    assert_same(3, $f['itemListElement'][2]['position']);
+    assert_same('https://richardsalanon.com/comparatifs/', $f['itemListElement'][1]['item']);
+}
+
+function test_schema_collection_liste_les_elements(): void
+{
+    $c = schema_collection('Comparatifs', '/comparatifs/', [['Odoo ou Dolibarr', '/comparatifs/odoo-vs-dolibarr']], 'https://richardsalanon.com');
+    assert_same('CollectionPage', $c['@type']);
+    assert_same('ItemList', $c['mainEntity']['@type']);
+    assert_same('https://richardsalanon.com/comparatifs/odoo-vs-dolibarr', $c['mainEntity']['itemListElement'][0]['url']);
+}

@@ -11,6 +11,10 @@ require_once __DIR__ . '/../config/site.php';
 require_once __DIR__ . '/faits.php';
 require_once __DIR__ . '/schema.php';
 require_once __DIR__ . '/phosphor.php';
+require_once __DIR__ . '/registres.php';
+require_once __DIR__ . '/maillage.php';
+require_once __DIR__ . '/routes.php';
+require_once __DIR__ . '/redirections.php';
 
 /**
  * Page qui ne peut pas vivre sans base (services, blog, réalisations) :
@@ -605,10 +609,28 @@ function sitemap_xml(array $entrees): string
 }
 
 /** Pages servies depuis des fichiers : listées même si la base est indisponible. */
+/** Pages de registre publiées et indexables ; lastmod = champ « maj » tenu à la main (spec 4.2). */
+function sitemap_entrees_registres(string $baseUrl, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): array
+{
+    $base = rtrim($baseUrl, '/');
+    $entrees = [];
+    foreach (array_keys(REGISTRES_TYPES) as $type) {
+        foreach (registre_publiees($type, $racine, $aujourdhui) as $p) {
+            if (($p['robots'] ?? 'index') !== 'index') {
+                continue;
+            }
+            $entrees[] = ['loc' => $base . $p['url'], 'lastmod' => $p['maj'], 'changefreq' => 'monthly',
+                          'priority' => in_array($type, ['service', 'formation', 'pays', 'hub'], true) ? '0.9' : '0.8'];
+        }
+    }
+    return $entrees;
+}
+
 function sitemap_entrees_fichiers(string $baseUrl): array
 {
     $baseUrl  = rtrim($baseUrl, '/');
-    $entrees  = [];
+    // Vague 0C : les pages de registre en tête (un pilier publié l'emporte sur la fiche en base).
+    $entrees  = sitemap_entrees_registres($baseUrl);
     $fixes    = [
         ['/', 'weekly', '1.0'], ['/a-propos/', 'monthly', '0.7'], ['/contact', 'yearly', '0.8'],
         ['/services/', 'monthly', '0.9'], ['/formations/', 'monthly', '0.9'], ['/zones/', 'monthly', '0.8'],
@@ -680,7 +702,11 @@ function sitemap_entrees_base(?PDO $pdo, string $baseUrl): array
  */
 function buildSitemapXml(?PDO $pdo, string $baseUrl): string
 {
-    return sitemap_xml(array_merge(sitemap_entrees_fichiers($baseUrl), sitemap_entrees_base($pdo, $baseUrl)));
+    $entrees = array_merge(sitemap_entrees_fichiers($baseUrl), sitemap_entrees_base($pdo, $baseUrl));
+    // Vague 0C : une ancienne URL dont la redirection est active ne figure plus au sitemap.
+    $entrees = array_filter($entrees, static fn(array $e): bool =>
+        redirection_cible((string) (parse_url($e['loc'], PHP_URL_PATH) ?? '')) === null);
+    return sitemap_xml($entrees);
 }
 
 /**

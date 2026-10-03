@@ -23,7 +23,7 @@ $totalPages = max(1, (int)ceil($total / $perPage));
 
 $st = $pdo->prepare("SELECT title, slug, summary, cover_image, category, published_at, reading_time FROM blog_posts WHERE $where ORDER BY published_at DESC LIMIT $perPage OFFSET $offset");
 $st->execute($params);
-$posts = $st->fetchAll();
+$posts = blog_sans_rediriges($st->fetchAll());
 
 // sanitize($cat) retire ici le 20/08/2026 : pv2-head.php echappe deja $pageTitle,
 // ce qui produisait un double-echappement ("&amp;amp;" pour une categorie

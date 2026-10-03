@@ -94,3 +94,41 @@ function test_qa_ressemblance_neutralise_les_lieux(): void
     assert_same(0.0, qa_part_propre($a, [$b]));
     assert_same(1.0, qa_part_propre($a, [$c]));
 }
+
+function test_qa_devise_conforme_au_pays(): void
+{
+    require_once racine('tools/qa/lib.php');
+    assert_true(qa_devise_conforme('Un site vitrine coûte 1 500 € en France.', 'EUR'));
+    assert_true(!qa_devise_conforme('Comptez 450 000 FCFA à Paris.', 'EUR'));
+    assert_true(!qa_devise_conforme('Prix : 300 000 XOF.', 'CAD'));
+    assert_true(qa_devise_conforme('300 000 FCFA, soit environ 457 €.', 'XOF'));
+    assert_true(!qa_devise_conforme('Environ 457 € seulement.', 'XOF'), 'prix africain toujours en devise locale');
+}
+
+function test_qa_faq_visible_egale_faqpage(): void
+{
+    require_once racine('tools/qa/lib.php');
+    $ok = '<section class="bloc bloc--faq"><details><summary>A ?</summary></details><details><summary>B ?</summary></details></section>'
+        . '<script type="application/ld+json">{"@graph":[{"@type":"FAQPage","mainEntity":[{"@type":"Question"},{"@type":"Question"}]}]}</script>';
+    assert_true(qa_faq_conforme($ok));
+    assert_true(!qa_faq_conforme(str_replace('<details><summary>B ?</summary></details>', '', $ok)));
+}
+
+function test_qa_controle_page_signale_une_page_trop_courte(): void
+{
+    require_once racine('helpers/functions.php');
+    require_once racine('tools/qa/lib.php');
+    $r = racine('tools/tests/fixtures/registres');
+    $p = registre_lire('formation', 'ia-test', $r);
+    $echecs = qa_controle_page($p, qa_rendre_registre($p, $r));
+    assert_contains('mots', implode(' ', $echecs));
+    assert_true(!in_array('h1', $echecs, true));
+    assert_true(!in_array('schema', $echecs, true));
+}
+
+function test_qa_cli_registres_echoue_sur_les_fixtures(): void
+{
+    exec(PHP_BINARY . ' ' . escapeshellarg(racine('tools/qa/registres.php')) . ' --racine=' . escapeshellarg(racine('tools/tests/fixtures/registres')) . ' 2>&1', $sortie, $code);
+    assert_same(1, $code);
+    assert_contains('formation/ia-test', implode("\n", $sortie));
+}

@@ -145,6 +145,15 @@ RewriteRule \.(txt|xml|ico|png|jpe?g|gif|svg|webp|avif|pdf|woff2?|css|js)$ - [L]
 RewriteRule ^$ /portfolio/accueil.php [QSA,L]
 
 # ----------------------------------------------------------
+# Registres (vague 0C) : hubs et pages à plusieurs segments servis par route.php.
+# /services/{slug} reste sur service.php, qui consulte d'abord le registre.
+# ----------------------------------------------------------
+RewriteRule ^(secteurs|histoires|comparatifs|guides|glossaire)$ /$1/ [R=301,L]
+RewriteRule ^((?:services|formations|zones|secteurs|histoires|comparatifs|guides|glossaire|outils)/[a-z0-9-]+(?:/[a-z0-9-]+){0,2})/$ /$1 [R=301,L]
+RewriteRule ^((?:secteurs|histoires|comparatifs|guides|glossaire)/)$ /portfolio/route.php?p=$1 [QSA,L]
+RewriteRule ^((?:services|formations|zones|secteurs|histoires|comparatifs|guides|glossaire|outils)/[a-z0-9-]+(?:/[a-z0-9-]+){0,2})$ /portfolio/route.php?p=$1 [QSA,L]
+
+# ----------------------------------------------------------
 # Vrai 404 — corrige le 20/08/2026
 # Avant : "RewriteRule ^(.*)$ /portfolio/index.php" renvoyait la PAGE D'ACCUEIL
 # en HTTP 200 pour n'importe quelle URL inexistante (soft-404). Google decouvrait

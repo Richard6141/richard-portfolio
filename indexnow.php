@@ -64,7 +64,7 @@ try {
              ORDER BY published_at DESC"
         );
         $stmtBlog->execute([$userId]);
-        foreach ($stmtBlog->fetchAll(PDO::FETCH_ASSOC) as $bp) {
+        foreach (blog_sans_rediriges($stmtBlog->fetchAll(PDO::FETCH_ASSOC)) as $bp) {
             $urls[] = $baseUrl . '/blog/' . $bp['slug'];
         }
     } catch (\Exception $e) { /* table absente : on continue */ }

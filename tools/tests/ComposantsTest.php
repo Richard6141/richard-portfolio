@@ -86,3 +86,21 @@ function test_composants_revue_boutons_entiers_a_320_px(): void
     assert_true((bool) preg_match('#@media \(max-width:400px\)\{[^@]*\.pv2 \.cta-inner\{padding-left:1\.25rem;padding-right:1\.25rem\}[^@]*\.pv2 \.cta-inner \.btn\{white-space:normal;#', $css), 'règle 320 px de la bande d\'appel');
     assert_true((bool) preg_match('#@media \(max-width:400px\)\{[^@]*\.pv2 \.barre-mobile \.btn\{[^}]*font-size:\.88rem#', $css), 'règle 320 px de la barre mobile');
 }
+
+function test_composants_dettes_0b_soldees(): void
+{
+    foreach (['portfolio/partials/pv2-header.php', 'portfolio/partials/pv2-footer.php'] as $f) {
+        assert_true(!preg_match('/\b34 pays\b/u', (string) file_get_contents(racine($f))), "{$f} : nombre de pays écrit en dur");
+    }
+    $head = (string) file_get_contents(racine('portfolio/partials/pv2-head.php'));
+    assert_not_contains('rel="preload" as="style"', $head);
+    assert_contains('media=', $head);
+    $accueil = http_local('/')['corps'];
+    assert_contains('media="(min-width: 1024px)"', $accueil, 'portrait préchargé sur ordinateur seulement');
+    assert_contains('class="defilant__pause"', $accueil);
+    $js = (string) file_get_contents(racine('assets/js/portfolio-v2.js'));
+    assert_contains('defilant__pause', $js);
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    assert_contains('.pv2 .crumb a{color:var(--link);text-decoration:underline;text-underline-offset:3px}', $css);
+    assert_contains('.pv2 .defilant.est-en-pause .defilant__piste,.pv2 .defilant:focus-within .defilant__piste{animation-play-state:paused}', $css);
+}
