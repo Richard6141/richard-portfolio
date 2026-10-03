@@ -2283,7 +2283,7 @@ declare(strict_types=1);
 function test_accueil_compteurs_portent_leur_valeur_finale_dans_le_html(): void
 {
     $src = (string) file_get_contents(racine('portfolio/templates/horizon.php'));
-    preg_match_all('/class="ct" data-to="([^"]+)">([^<]*)</', $src, $m, PREG_SET_ORDER);
+    preg_match_all('#class="ct" data-to="([^"]+)">(.*?)</span>#', $src, $m, PREG_SET_ORDER);
     assert_true(count($m) >= 5, 'compteurs introuvables');
     foreach ($m as [, $cible, $affiche]) {
         assert_same($cible, $affiche, 'le HTML doit afficher la valeur finale du compteur');

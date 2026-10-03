@@ -50,8 +50,6 @@ $pv2FontUrl = 'https://fonts.googleapis.com/css2?family=' . implode('&family=', 
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="<?= sanitize($fullName) ?>">
 <?php if (!empty($ogImage)): ?><meta property="og:image" content="<?= sanitize($ogImage) ?>">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="<?= sanitize($pageTitle) ?>"><?php endif; ?>
 <?php if ($ogType === 'article'): ?>
 <?php if (!empty($ogPublishedTime)): ?><meta property="article:published_time" content="<?= sanitize($ogPublishedTime) ?>"><?php endif; ?>

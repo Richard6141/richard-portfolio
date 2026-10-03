@@ -201,8 +201,6 @@ if (($profile['template'] ?? 'starter') === 'horizon') {
     <meta property="og:url" content="<?= sanitize($homeUrl) ?>">
     <?php if ($ogImage): ?>
     <meta property="og:image" content="<?= sanitize($ogImage) ?>">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="<?= sanitize($fullName) ?>">
     <?php endif; ?>
 
@@ -334,27 +332,6 @@ if ($template !== 'starter' && file_exists($templateFile)) {
 
 <?php if (($profile['template'] ?? 'starter') !== 'horizon'): ?>
 <script defer src="/assets/js/app.js"></script>
-<?php endif; ?>
-<?php if ($seo['google_analytics_id'] ?? ''): ?>
-<script>
-window.addEventListener('load', function() {
-    // Repousse en periode d'inactivite (20/08/2026) : gtag.js pese 162 Ko et
-    // occupait 141 ms de thread principal juste apres 'load', en concurrence
-    // avec le rendu. requestIdleCallback attend que le navigateur soit libre.
-    var start = function() {
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=<?= sanitize($seo['google_analytics_id']) ?>';
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '<?= sanitize($seo['google_analytics_id']) ?>');
-    };
-    if ('requestIdleCallback' in window) { requestIdleCallback(start, { timeout: 4000 }); }
-    else { setTimeout(start, 2500); }
-});
-</script>
 <?php endif; ?>
 </body>
 </html>

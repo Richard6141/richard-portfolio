@@ -72,10 +72,13 @@ $h_logo = siteLogoUrl();
       <a href="<?= sanitize($h_mailto) ?>" class="btn">Demander un devis gratuit</a>
       <a href="/realisations/" class="btn btn-ghost">Voir mes réalisations</a>
     </div>
+    <?php /* Compteurs (03/10/2026) : le HTML porte la valeur finale. Avant, il
+             affichait « 0 » : c'est ce que lisent Google et les robots IA, qui
+             n'exécutent pas le JavaScript d'animation. */ ?>
     <div class="stats">
-      <div class="stat"><div class="n"><span class="ct" data-to="<?= (int)$h_svcCount ?>">0</span></div><div class="l">domaines d'expertise</div></div>
+      <div class="stat"><div class="n"><span class="ct" data-to="<?= (int)$h_svcCount ?>"><?= (int)$h_svcCount ?></span></div><div class="l">domaines d'expertise</div></div>
       <div class="stat"><div class="n">24h</div><div class="l">délai de réponse</div></div>
-      <div class="stat"><div class="n"><span class="ct" data-to="100">0</span><span>%</span></div><div class="l">sur-mesure & SEO</div></div>
+      <div class="stat"><div class="n"><span class="ct" data-to="100">100</span><span>%</span></div><div class="l">sur-mesure & SEO</div></div>
     </div>
   </div>
   <div class="hero-bento parallax" data-parallax="-0.05">
@@ -228,9 +231,9 @@ $h_logo = siteLogoUrl();
   </div>
 
   <div class="fx-gain rv">
-    <div><div class="g-n"><span class="ct" data-to="3">0</span>&nbsp;saisies</div><div class="g-l">remplacées par une seule</div></div>
-    <div><div class="g-n"><span class="ct" data-to="24">0</span>h</div><div class="g-l">pour obtenir un devis clair</div></div>
-    <div><div class="g-n"><span class="ct" data-to="2">0</span>&nbsp;à 5 sem.</div><div class="g-l">avant le premier gain mesurable</div></div>
+    <div><div class="g-n"><span class="ct" data-to="3">3</span>&nbsp;saisies</div><div class="g-l">remplacées par une seule</div></div>
+    <div><div class="g-n"><span class="ct" data-to="24">24</span>h</div><div class="g-l">pour obtenir un devis clair</div></div>
+    <div><div class="g-n"><span class="ct" data-to="2">2</span>&nbsp;à 5 sem.</div><div class="g-l">avant le premier gain mesurable</div></div>
   </div>
 </div></section>
 

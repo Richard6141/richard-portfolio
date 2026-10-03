@@ -43,3 +43,23 @@
   Commentaire PHP et non HTML : un commentaire HTML serait envoye a chaque
   visiteur (378 octets sur chacune des 43 pages).
 */ ?>
+<?php if (defined('GA4_ID') && GA4_ID !== ''): ?>
+<!-- Google Analytics 4 : sur toutes les pages publiques depuis le 03/10/2026
+     (avant : accueil seulement). Chargement repoussé en période d'inactivité. -->
+<script>
+window.addEventListener('load', function () {
+    var start = function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=<?= GA4_ID ?>';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<?= GA4_ID ?>');
+    };
+    if ('requestIdleCallback' in window) { requestIdleCallback(start, { timeout: 4000 }); }
+    else { setTimeout(start, 2500); }
+});
+</script>
+<?php endif; ?>
