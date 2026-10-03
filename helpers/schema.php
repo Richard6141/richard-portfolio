@@ -185,3 +185,83 @@ function schema_graphe_sur(array $noeuds): string
         return '';
     }
 }
+
+/** BreadcrumbList depuis [[nom, chemin], ...] ; chemins relatifs à la racine du site. */
+function schema_fil_ariane(array $miettes, string $base): array
+{
+    $items = [];
+    foreach (array_values($miettes) as $i => [$nom, $chemin]) {
+        $items[] = ['@type' => 'ListItem', 'position' => $i + 1, 'name' => $nom, 'item' => $base . $chemin];
+    }
+    $dernier = end($miettes);
+    return ['@type' => 'BreadcrumbList', '@id' => $base . $dernier[1] . '#ariane', 'itemListElement' => $items];
+}
+
+/** CollectionPage d'un hub, avec la liste réelle des pages publiées. */
+function schema_collection(string $nom, string $chemin, array $elements, string $base): array
+{
+    $items = [];
+    foreach (array_values($elements) as $i => [$titre, $url]) {
+        $items[] = ['@type' => 'ListItem', 'position' => $i + 1, 'name' => $titre, 'url' => $base . $url];
+    }
+    return ['@type' => 'CollectionPage', '@id' => $base . $chemin . '#page', 'name' => $nom, 'url' => $base . $chemin,
+            'inLanguage' => 'fr', 'isPartOf' => ['@id' => $base . '/#website'],
+            'mainEntity' => ['@type' => 'ItemList', 'numberOfItems' => count($items), 'itemListElement' => $items]];
+}
+
+/** Nœuds d'une page de registre : principal selon le type (spec 5.3), fil d'Ariane, FAQ visible. */
+function schema_page_registre(array $p, array $miettes, string $base): array
+{
+    $url  = $base . $p['url'];
+    $moi  = ['@id' => $base . '/#person'];
+    $pays = pays_liste();
+    $cle  = str_ends_with($p['type'], '-pays') ? basename($p['slug']) : ($p['type'] === 'pays' ? $p['slug'] : null);
+    $zone = ($cle !== null && isset($pays[$cle]))
+        ? ['@type' => 'Country', 'name' => $pays[$cle]['nom']]
+        : array_map(static fn(array $x): array => ['@type' => 'Country', 'name' => $x['nom']], array_values($pays));
+
+    $noeuds = [];
+    switch ($p['type']) {
+        case 'service': case 'service-pays': case 'pays': case 'secteur':
+            $noeuds[] = ['@type' => 'Service', '@id' => $url . '#service', 'name' => $p['titre'], 'serviceType' => $p['titre'],
+                         'description' => $p['meta'], 'url' => $url, 'provider' => $moi, 'areaServed' => $zone];
+            break;
+        case 'formation': case 'formation-pays': case 'metier': case 'metier-pays':
+            $modes = [];
+            foreach ((array) ($p['formats'] ?? ['intra', 'distance']) as $f) {
+                $modes[] = match ($f) { 'distance' => 'online', 'hybride' => 'blended', default => 'onsite' };
+            }
+            $noeuds[] = ['@type' => 'Course', '@id' => $url . '#course', 'name' => $p['titre'], 'description' => $p['meta'],
+                         'url' => $url, 'inLanguage' => 'fr', 'provider' => $moi,
+                         'hasCourseInstance' => array_map(static fn(string $m): array => ['@type' => 'CourseInstance', 'courseMode' => $m], array_values(array_unique($modes)))];
+            break;
+        case 'histoire': case 'comparatif': case 'guide':
+            $noeuds[] = ['@type' => 'Article', '@id' => $url . '#article', 'headline' => $p['titre'], 'description' => $p['meta'],
+                         'url' => $url, 'mainEntityOfPage' => $url, 'inLanguage' => 'fr', 'author' => $moi, 'publisher' => $moi,
+                         'datePublished' => $p['publie'], 'dateModified' => $p['maj'], 'image' => $base . fait('photo_og')];
+            break;
+        case 'terme':
+            $noeuds[] = ['@type' => 'DefinedTerm', '@id' => $url . '#terme', 'name' => $p['terme'], 'description' => $p['definition'],
+                         'url' => $url, 'inDefinedTermSet' => ['@id' => $base . '/glossaire/#termes']];
+            break;
+        case 'outil':
+            $noeuds[] = ['@type' => 'WebApplication', '@id' => $url . '#outil', 'name' => $p['titre'], 'description' => $p['meta'],
+                         'url' => $url, 'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web',
+                         'isAccessibleForFree' => true, 'author' => $moi];
+            break;
+        case 'page':
+            $n = ['@type' => $p['schema'], '@id' => $url . '#page', 'name' => $p['titre'], 'description' => $p['meta'],
+                  'url' => $url, 'inLanguage' => 'fr', 'isPartOf' => ['@id' => $base . '/#website']];
+            if ($p['schema'] === 'ProfilePage') {
+                $n['mainEntity'] = $moi;
+                $n['dateModified'] = $p['maj'];
+            }
+            $noeuds[] = $n;
+            break;
+    }
+    $noeuds[] = schema_fil_ariane($miettes, $base);
+    if (!empty($p['faq'])) {
+        $noeuds[] = schema_faq($p['faq']);
+    }
+    return $noeuds;
+}
