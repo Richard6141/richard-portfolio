@@ -6,7 +6,7 @@
 // boutons, tiroir mobile. Sans JavaScript, chaque libellé reste un lien
 // vers son hub. Données : portfolio/data/navigation.php et la fiche de faits.
 // ============================================================
-$nav     = require __DIR__ . '/../data/navigation.php';
+$nav     = navigation_chargee();
 $navHome = $navHome ?? '/';
 $h_wa    = preg_replace('/\D/', '', (string) fait('whatsapp'));
 $waLien  = 'https://wa.me/' . $h_wa . '?text=' . rawurlencode('Bonjour Richard, je souhaite parler d\'un projet.');

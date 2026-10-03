@@ -8,6 +8,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../helpers/functions.php';
 require_once __DIR__ . '/../helpers/icons.php';
+redirection_appliquer((string) (parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'));
 
 try { $pdo = getPDO(); } catch (Throwable $e) { $pdo = null; }
 exiger_base($pdo);

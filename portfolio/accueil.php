@@ -29,7 +29,7 @@ $h_projects     = $lire($pdo, "SELECT * FROM projects WHERE user_id = ? AND stat
 $h_testimonials = $lire($pdo, 'SELECT * FROM testimonials WHERE user_id = ? ORDER BY is_featured DESC, sort_order ASC LIMIT 3', [$userId]);
 $h_recent       = $lire($pdo, "SELECT title, slug, cover_image, category, published_at FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) ORDER BY published_at DESC LIMIT 3", [$userId]);
 
-$nav     = require __DIR__ . '/data/navigation.php';
+$nav     = navigation_chargee();
 // Le bandeau ne montre que des projets clients : Wapy, produit de Richard, en sort.
 $clients = json_decode((string) @file_get_contents(__DIR__ . '/../assets/img/clients/clients.json'), true) ?: [];
 $clients = array_values(array_filter($clients, static fn (array $c): bool => empty($c['produit_propre'])));

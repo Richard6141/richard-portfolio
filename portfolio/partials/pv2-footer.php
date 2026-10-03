@@ -7,7 +7,7 @@
 // Sur mobile, une barre collante remplace le bouton WhatsApp flottant.
 // Données : fiche de faits et portfolio/data/navigation.php.
 // ============================================================
-$nav    = $nav ?? (require __DIR__ . '/../data/navigation.php');
+$nav    = $nav ?? navigation_chargee();
 $h_wa   = preg_replace('/\D/', '', (string) fait('whatsapp'));
 $waLien = 'https://wa.me/' . $h_wa . '?text=' . rawurlencode('Bonjour Richard, je souhaite parler d\'un projet.');
 
@@ -64,7 +64,7 @@ $horaires = fait('horaires');
     <nav class="pied__colonne" aria-label="Services">
       <p class="pied__titre">Services</p>
       <ul>
-        <?php foreach ($piedServices as [$libelle, $url]): ?><li><a href="<?= sanitize($url) ?>"><?= sanitize($libelle) ?></a></li><?php endforeach; ?>
+        <?php foreach ($piedServices as [$libelle, $url]): ?><li><a href="<?= sanitize(url_finale($url)) ?>"><?= sanitize($libelle) ?></a></li><?php endforeach; ?>
         <li><a href="/services/">Tous les services</a></li>
       </ul>
     </nav>
@@ -73,8 +73,8 @@ $horaires = fait('horaires');
       <p class="pied__titre">Formations</p>
       <ul>
         <?php foreach ($nav['formations'] as $famille => $g): ?><li><a href="<?= sanitize($g['liens'][0][1]) ?>"><?= sanitize($famille) ?></a></li><?php endforeach; ?>
-        <li><a href="/formation-vibecoding">Vibecoding</a></li>
-        <li><a href="/formation-whatsapp-business">WhatsApp Business</a></li>
+        <li><a href="<?= sanitize(url_finale('/formation-vibecoding')) ?>">Vibecoding</a></li>
+        <li><a href="<?= sanitize(url_finale('/formation-whatsapp-business')) ?>">WhatsApp Business</a></li>
         <li><a href="/formations/">Toutes les formations</a></li>
       </ul>
     </nav>
@@ -82,12 +82,12 @@ $horaires = fait('horaires');
     <nav class="pied__colonne" aria-label="Zones et ressources">
       <p class="pied__titre">Zones</p>
       <ul class="pied__zones">
-        <?php foreach ($piedZones as [$ville, $url]): ?><li><a href="<?= sanitize($url) ?>"><?= sanitize($ville) ?></a></li><?php endforeach; ?>
+        <?php foreach ($piedZones as [$ville, $url]): ?><li><a href="<?= sanitize(url_finale($url)) ?>"><?= sanitize($ville) ?></a></li><?php endforeach; ?>
         <li><a href="/zones/">Les 34 pays</a></li>
       </ul>
       <p class="pied__titre">Ressources</p>
       <ul>
-        <li><a href="/realisations/">Réalisations</a></li>
+        <li><a href="<?= sanitize(url_finale('/realisations/')) ?>">Réalisations</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/a-propos/">À propos</a></li>
         <li><a href="/contact">Contact et devis</a></li>

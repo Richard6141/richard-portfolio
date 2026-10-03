@@ -10,6 +10,9 @@ require_once __DIR__ . '/../../config/db.php';
 require_once __DIR__ . '/../../helpers/functions.php';
 require_once __DIR__ . '/../../helpers/icons.php';
 
+// Vague 0C : une ancienne URL dont la cible est publiée part en 301 avant toute requête en base.
+redirection_appliquer((string) (parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'));
+
 // Base facultative (03/10/2026, vague 0B) : les pages servies depuis des
 // fichiers (villes, sujets, formations, zones, à-propos, contact) doivent
 // s'afficher même base arrêtée, avec les données de la fiche de faits.

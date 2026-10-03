@@ -14,6 +14,7 @@ $chemin = (string) ($_GET['p'] ?? '');
 if (!preg_match('#^[a-z0-9-]+(?:/[a-z0-9-]+){0,3}/?$#', $chemin)) {
     route_404();
 }
+redirection_appliquer('/' . $chemin);
 
 if (($page = route_resoudre($chemin)) !== null) {
     require __DIR__ . '/partials/pv2-bootstrap.php';
