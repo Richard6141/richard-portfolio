@@ -181,6 +181,18 @@
     }
   }
 
+  /* ---------- Bandeau de logos : pause (WCAG 2.2.2) ---------- */
+  var pause = doc.querySelector('.defilant__pause');
+  var defilant = doc.querySelector('.defilant');
+  if (pause && defilant && !reduit) {
+    pause.hidden = false;
+    pause.addEventListener('click', function () {
+      var actif = defilant.classList.toggle('est-en-pause');
+      pause.setAttribute('aria-pressed', actif ? 'true' : 'false');
+      pause.textContent = actif ? 'Reprendre le défilement' : 'Mettre en pause le défilement';
+    });
+  }
+
   /* ---------- Recherche du blog ---------- */
   var recherche = doc.getElementById('blog-search-input');
   if (recherche) {

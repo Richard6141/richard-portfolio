@@ -49,7 +49,7 @@ $horaires = fait('horaires');
       <a href="/" class="pied__logo" aria-label="Richard SALANON, accueil"><img src="/assets/img/logo-rs-clair.svg" alt="Richard SALANON" width="232" height="48" loading="lazy" decoding="async"></a>
       <p><?= sanitize(fait('description_courte')) ?></p>
       <ul class="pied__coordonnees">
-        <li><?= icone('map-pin', 18) ?><span><?= sanitize(fait('ville')) ?>, <?= sanitize(fait('pays')) ?>. Interventions dans 34 pays, sur place ou à distance.</span></li>
+        <li><?= icone('map-pin', 18) ?><span><?= sanitize(fait('ville')) ?>, <?= sanitize(fait('pays')) ?>. Interventions dans <?= count(fait('zones')) ?> pays, sur place ou à distance.</span></li>
         <li><?= icone('phone', 18) ?><a href="tel:<?= sanitize(fait('telephone')) ?>"><?= sanitize(fait('telephone')) ?></a></li>
         <li><?= icone('envelope-simple', 18) ?><a href="mailto:<?= sanitize(fait('email')) ?>"><?= sanitize(fait('email')) ?></a></li>
         <?php if (!empty($horaires)): ?><li><?= icone('clock', 18) ?><span><?= sanitize(horaires_texte($horaires)) ?></span></li><?php endif; ?>
@@ -83,7 +83,7 @@ $horaires = fait('horaires');
       <p class="pied__titre">Zones</p>
       <ul class="pied__zones">
         <?php foreach ($piedZones as [$ville, $url]): ?><li><a href="<?= sanitize(url_finale($url)) ?>"><?= sanitize($ville) ?></a></li><?php endforeach; ?>
-        <li><a href="/zones/">Les 34 pays</a></li>
+        <li><a href="/zones/">Les <?= count(fait('zones')) ?> pays</a></li>
       </ul>
       <p class="pied__titre">Ressources</p>
       <ul>

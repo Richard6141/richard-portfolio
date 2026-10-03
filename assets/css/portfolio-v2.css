@@ -1522,3 +1522,9 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
   .pv2 .registre__corps{grid-template-columns:16rem minmax(0,1fr);gap:3.5rem;align-items:start}
   .pv2 .sommaire{position:sticky;top:calc(var(--header-h) + 1.5rem)}
 }
+
+/* ---------- Dettes 0B (vague 0C) : pause du bandeau, fil d'Ariane souligné ---------- */
+.pv2 .defilant__pause{display:block;margin:0 auto 1rem;padding:.35rem .9rem;border:1px solid var(--line-strong);border-radius:var(--pill);background:#fff;color:var(--ink-soft);font:600 .8rem var(--body);cursor:pointer}
+.pv2 .defilant__pause[hidden]{display:none}
+.pv2 .defilant.est-en-pause .defilant__piste,.pv2 .defilant:focus-within .defilant__piste{animation-play-state:paused}
+.pv2 .crumb a{color:var(--link);text-decoration:underline;text-underline-offset:3px}

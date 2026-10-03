@@ -13,7 +13,7 @@ $waLien  = 'https://wa.me/' . $h_wa . '?text=' . rawurlencode('Bonjour Richard, 
 $megas   = [
     ['id' => 'services', 'libelle' => 'Services', 'hub' => '/services/', 'tout' => 'Tous les services'],
     ['id' => 'formations', 'libelle' => 'Formations', 'hub' => '/formations/', 'tout' => 'Toutes les formations'],
-    ['id' => 'pays', 'libelle' => 'Pays', 'hub' => '/zones/', 'tout' => 'Les 34 pays servis'],
+    ['id' => 'pays', 'libelle' => 'Pays', 'hub' => '/zones/', 'tout' => 'Les ' . count(fait('zones')) . ' pays servis'],
 ];
 $cta = $nav['carte_cta'];
 ?>
