@@ -9,7 +9,7 @@ if ($rp['type'] === 'histoire' && ($rp['relation'] ?? '') === 'externe') { $etiq
     <?php else: ?><a href="<?= sanitize($chemin) ?>"><?= sanitize($nom) ?></a><?php endif; ?>
   <?php endforeach; ?>
 </nav>
-<header class="registre-hero">
+<div class="registre-hero">
   <div class="registre-hero__grille conteneur">
     <div>
       <?php if ($etiquette !== ''): ?><span class="eyebrow"><?= sanitize($etiquette) ?></span><?php endif; ?>
@@ -25,4 +25,4 @@ if ($rp['type'] === 'histoire' && ($rp['relation'] ?? '') === 'externe') { $etiq
     </aside>
     <?php endif; ?>
   </div>
-</header>
+</div>

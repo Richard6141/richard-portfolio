@@ -43,4 +43,5 @@ return $r + [
     '/consultant-digitalisation'            => '/services/consultant-digitalisation',
     '/expert-digitalisation-entreprise'     => '/services/digitalisation-d-entreprise',
     '/realisations/'                        => '/histoires/',
+    '/blog/n8n-vs-zapier-vs-make-2026'       => '/comparatifs/n8n-vs-make-vs-zapier',
 ];

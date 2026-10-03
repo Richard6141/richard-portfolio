@@ -88,6 +88,7 @@ $horaires = fait('horaires');
       <p class="pied__titre">Ressources</p>
       <ul>
         <li><a href="<?= sanitize(url_finale('/realisations/')) ?>">Réalisations</a></li>
+        <li><a href="/comparatifs/">Comparatifs</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/a-propos/">À propos</a></li>
         <li><a href="/contact">Contact et devis</a></li>

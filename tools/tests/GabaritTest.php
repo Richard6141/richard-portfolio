@@ -52,3 +52,12 @@ function test_gabarit_page_noindex_respectee(): void
 {
     assert_contains('content="noindex, follow"', gabarit_rendre('page', 'page-legale-test'));
 }
+
+function test_gabarit_un_seul_header_celui_du_site(): void
+{
+    // Recette 0C : l'ancienne règle « .pv2 header{position:fixed} » fixait le hero des
+    // pages de registre en haut de l'écran, par-dessus l'en-tête et le sommaire.
+    foreach ([['comparatif', 'a-vs-b'], ['hub', 'histoires'], ['formation', 'ia-test']] as [$type, $slug]) {
+        assert_same(1, substr_count(gabarit_rendre($type, $slug), '<header'), "{$type} : un seul <header>");
+    }
+}

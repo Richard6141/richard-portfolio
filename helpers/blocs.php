@@ -20,9 +20,16 @@ function bloc_texte(string $texte): string
     $s = preg_replace('#&lt;(/?)(strong|em|abbr)&gt;#i', '<$1$2>', $s) ?? $s;
     $s = preg_replace('#&lt;br\s*/?&gt;#i', '<br>', $s) ?? $s;
     $s = preg_replace('#&lt;abbr title=&quot;([^&<>]*)&quot;&gt;#i', '<abbr title="$1">', $s) ?? $s;
-    $s = preg_replace(
+    $s = preg_replace_callback(
         '#&lt;a href=&quot;((?:https?://|/(?![/\\\\])|\#)(?:[^"<>\s&]|&amp;)*|mailto:[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})&quot;&gt;(.*?)&lt;/a&gt;#i',
-        '<a href="$1">$2</a>',
+        static function (array $m): string {
+            $href = $m[1];
+            // Lien interne vers son URL finale : aucune 301 interne (spec 8). Le href arrive échappé.
+            if (str_starts_with($href, '/') && function_exists('url_finale')) {
+                $href = htmlspecialchars(url_finale(html_entity_decode($href, ENT_QUOTES | ENT_HTML5, 'UTF-8')), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            }
+            return '<a href="' . $href . '">' . $m[2] . '</a>';
+        },
         $s
     ) ?? $s;
     return $s;

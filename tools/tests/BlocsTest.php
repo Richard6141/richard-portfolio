@@ -126,3 +126,11 @@ function test_blocs_liens_mailto_seulement_vers_une_adresse(): void
     assert_same(null, bloc_href('mailto:javascript'));
     assert_not_contains('<a href=', bloc_texte('<a href="mailto:pas-une-adresse">x</a>'));
 }
+
+function test_blocs_liens_internes_vers_l_url_finale(): void
+{
+    // Un lien du texte vers une ancienne URL suit la redirection active : aucune 301 interne.
+    $html = bloc_texte('<a href="/contact">Contact</a>');
+    assert_contains('href="/contact"', $html);
+    assert_contains('url_finale(', (string) file_get_contents(racine('helpers/blocs.php')));
+}
