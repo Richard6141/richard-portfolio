@@ -2760,7 +2760,9 @@ function qa_get(string $url, int $pauseMs = 0): array
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => false,
         CURLOPT_TIMEOUT        => 40,
-        CURLOPT_ENCODING       => '',
+        // Pas d'Accept-Encoding (03/10/2026) : le CDN Hostinger sert un défi
+        // JavaScript (403) aux clients qui annoncent la compression depuis une
+        // IP déjà très sollicitée ; sans cet en-tête, la page est servie.
         CURLOPT_USERAGENT      => 'Mozilla/5.0 (compatible; controle-qualite-richardsalanon)',
     ]);
     $corps = (string) curl_exec($ch);
@@ -3143,7 +3145,7 @@ Run:
 ```bash
 php -l tools/qa/crawl.php && php -l tools/qa/unicite.php
 php tools/qa/crawl.php https://richardsalanon.com --max=5
-php tools/qa/unicite.php https://richardsalanon.com --groupe=/externaliser-developpement-web-
+php tools/qa/unicite.php https://richardsalanon.com --groupe=externaliser-developpement-web-
 ```
 Expected: le crawl liste 5 pages avec leur nombre de mots ; avant déploiement de la vague 0A, elles sont en ECHEC sur « 4 balises JSON-LD » ou similaire (accueil) : l'outil fonctionne. L'unicité des 8 pages `externaliser-*` sort en ECHEC (ressemblance ≈ 59 % relevée par l'audit) : c'est attendu, ces pages sont fusionnées en vague 0C.
 
