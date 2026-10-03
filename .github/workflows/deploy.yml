@@ -72,7 +72,7 @@ jobs:
       # A relire au moindre doute apres un changement du .deployignore.
       - name: Simulation (aucune modification)
         run: |
-          rsync -rlzt --delete --dry-run --itemize-changes \
+          rsync -rlztO --delete --dry-run --itemize-changes \
             --exclude-from=.deployignore \
             -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=accept-new" \
             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}" \
@@ -82,7 +82,7 @@ jobs:
 
       - name: Deploiement
         run: |
-          rsync -rlzt --delete --itemize-changes \
+          rsync -rlztO --delete --itemize-changes \
             --exclude-from=.deployignore \
             -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=accept-new" \
             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}"

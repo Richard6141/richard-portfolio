@@ -76,7 +76,7 @@ $pv2FontUrl = 'https://fonts.googleapis.com/css2?family=' . implode('&family=', 
 
 <?php /* Graphe JSON-LD unique (03/10/2026, spec 5.3) : Person, WebSite et
          ProfessionalService sur chaque page, plus les nœuds propres à la page. */ ?>
-<?= schema_graphe(array_merge(schema_noeuds_base(faits(), SITE_URL), $pageSchemas)) ?>
+<?= schema_graphe_sur(array_merge(schema_noeuds_base(faits(), SITE_URL), $pageSchemas)) ?>
 
 <?php include __DIR__ . '/tracking.php'; ?>
 </head>

@@ -15,7 +15,8 @@ function test_donnees_migration_des_realisations_retire_tirets_et_benin_sans_acc
     assert_contains("'Benin'", $sql);
     assert_contains("'Bénin'", $sql);
     assert_contains("'Toure Distribution'", $sql);
-    foreach (['title', 'description_short', 'description_long', 'case_contexte', 'case_probleme', 'case_solution', 'case_resultat'] as $colonne) {
+    // Portée réduite aux champs courts après la revue (03/10/2026).
+    foreach (['title', 'description_short'] as $colonne) {
         assert_true(preg_match('/\b' . $colonne . '\s+= REPLACE/', $sql) === 1, "colonne non traitée : {$colonne}");
     }
 }

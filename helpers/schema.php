@@ -23,6 +23,12 @@ function schema_personne(array $f, string $base, bool $complet = false): array
         'url'      => $base . '/',
         'address'  => ['@type' => 'PostalAddress', 'addressLocality' => $f['ville'], 'addressCountry' => $f['pays_code']],
         'sameAs'   => array_values($f['profils']),
+        // Compétences et formation sur chaque page (spec 5.3, revue du 03/10/2026).
+        'knowsAbout' => array_values($f['competences']),
+        'alumniOf'   => !empty($f['formation']['nom'])
+            ? ['@type' => 'CollegeOrUniversity', 'name' => $f['formation']['nom'], 'url' => $f['formation']['url'] ?? null]
+            : null,
+        'image'      => !empty($f['photo']) ? $base . $f['photo'] : null,
     ];
     if (!$complet) {
         return $noeud;
@@ -32,12 +38,7 @@ function schema_personne(array $f, string $base, bool $complet = false): array
     $noeud['description']   = $f['phrase_entite'];
     $noeud['email']         = $f['email'];
     $noeud['telephone']     = $f['telephone'];
-    $noeud['knowsAbout']    = array_values($f['competences']);
     $noeud['knowsLanguage'] = array_keys($f['langues'] ?? []);
-    $noeud['image']         = !empty($f['photo']) ? $base . $f['photo'] : null;
-    if (!empty($f['formation']['nom'])) {
-        $noeud['alumniOf'] = ['@type' => 'CollegeOrUniversity', 'name' => $f['formation']['nom'], 'url' => $f['formation']['url'] ?? null];
-    }
     $noeud['affiliation'] = array_map(
         static fn(array $a): array => ['@type' => 'Organization', 'name' => $a['nom'], 'url' => $a['url'] ?? null],
         $f['affiliations'] ?? []
@@ -167,4 +168,20 @@ function schema_graphe(array $noeuds): string
     $document = ['@context' => 'https://schema.org', '@graph' => array_merge(array_values($parId), $sansId)];
     $json = json_encode($document, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_THROW_ON_ERROR);
     return '<script type="application/ld+json">' . $json . '</script>';
+}
+
+/**
+ * Version des gabarits (revue du 03/10/2026) : une donnée fautive (type
+ * interdit, UTF-8 invalide) retire le schéma de la page et laisse une trace
+ * dans le journal d'erreurs, au lieu de faire tomber toute la page en 500.
+ * Les tests et les contrôles qualité utilisent schema_graphe(), stricte.
+ */
+function schema_graphe_sur(array $noeuds): string
+{
+    try {
+        return schema_graphe($noeuds);
+    } catch (\Throwable $e) {
+        error_log('schema_graphe : ' . $e->getMessage());
+        return '';
+    }
 }

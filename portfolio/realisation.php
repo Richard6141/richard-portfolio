@@ -83,7 +83,7 @@ $creativeWork = [
     'description' => $pageDesc,
     'creator'     => ['@id' => $portfolioUrl . '/#person'],
     'author'      => ['@id' => $portfolioUrl . '/#person'],
-    'publisher'   => ['@id' => $portfolioUrl . '/#organization'],
+    'publisher'   => ['@id' => SITE_URL . '/#person'],
     'isPartOf'    => ['@id' => $portfolioUrl . '/#website'],
     'inLanguage'  => 'fr-BJ',
 ];

@@ -284,7 +284,7 @@ if (($profile['template'] ?? 'starter') === 'horizon') {
     </style>
 
     <!-- JSON-LD Structured Data -->
-    <?= schema_graphe($schemasAccueil) ?>
+    <?= schema_graphe_sur($schemasAccueil) ?>
 
     <?php include __DIR__ . '/partials/tracking.php'; ?>
 </head>

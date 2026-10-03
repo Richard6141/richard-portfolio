@@ -69,7 +69,7 @@ $pageSchemas = [
         'isPartOf'    => ['@id' => $portfolioUrl . '/#website'],
         // Rattache la page a l'entite deja declaree sur l'accueil plutot que de
         // redeclarer une organisation concurrente : un seul @id, un seul noeud.
-        'mainEntity'  => ['@id' => $portfolioUrl . '/#organization'],
+        'mainEntity'  => ['@id' => SITE_URL . '/#person'],
         'about'       => ['@id' => $portfolioUrl . '/#service'],
     ],
     [
