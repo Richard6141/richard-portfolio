@@ -142,7 +142,7 @@ RewriteRule \.(txt|xml|ico|png|jpe?g|gif|svg|webp|avif|pdf|woff2?|css|js)$ - [L]
 # ----------------------------------------------------------
 # Racine du site → portfolio public (mono-utilisateur)
 # ----------------------------------------------------------
-RewriteRule ^$ /portfolio/index.php [QSA,L]
+RewriteRule ^$ /portfolio/accueil.php [QSA,L]
 
 # ----------------------------------------------------------
 # Vrai 404 — corrige le 20/08/2026

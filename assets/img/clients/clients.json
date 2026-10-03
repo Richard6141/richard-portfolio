@@ -1,0 +1,112 @@
+[
+    {
+        "slug": "inovis",
+        "nom": "INOVIS Côte d'Ivoire",
+        "url": "https://inovis-site.vercel.app/",
+        "fichier": "/assets/img/clients/inovis.webp",
+        "largeur": 124,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": true
+    },
+    {
+        "slug": "impulse-finance",
+        "nom": "Impulse Finance",
+        "url": "https://impulsefinance.fr/",
+        "fichier": "/assets/img/clients/impulse-finance.webp",
+        "largeur": 351,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": true
+    },
+    {
+        "slug": "afro-joyce",
+        "nom": "Afro Joy'ce",
+        "url": "https://afrojoyce.vercel.app/",
+        "fichier": "/assets/img/clients/afro-joyce.webp",
+        "largeur": 256,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": true
+    },
+    {
+        "slug": "oba-tv",
+        "nom": "OBA TV",
+        "url": "https://obatv.bj/",
+        "fichier": "/assets/img/clients/oba-tv.webp",
+        "largeur": 177,
+        "hauteur": 96,
+        "fond_sombre": true,
+        "sous_traitance": false
+    },
+    {
+        "slug": "gc-pro",
+        "nom": "GC Pro Consulting",
+        "url": "https://cabinetgcpro.com/",
+        "fichier": "/assets/img/clients/gc-pro.svg",
+        "largeur": 356,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": false
+    },
+    {
+        "slug": "ik-fashion-house",
+        "nom": "IK Fashion House",
+        "url": "https://ik-fashionhouse.com/",
+        "fichier": "/assets/img/clients/ik-fashion-house.webp",
+        "largeur": 117,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": true
+    },
+    {
+        "slug": "queenk-beauty",
+        "nom": "QueenK Beauty",
+        "url": "https://www.queenkbeauty.com/",
+        "fichier": "/assets/img/clients/queenk-beauty.webp",
+        "largeur": 123,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": true
+    },
+    {
+        "slug": "at-consulting",
+        "nom": "AT Consulting International",
+        "url": "https://at-internationalconsulting.com/",
+        "fichier": "/assets/img/clients/at-consulting.webp",
+        "largeur": 131,
+        "hauteur": 96,
+        "fond_sombre": true,
+        "sous_traitance": true
+    },
+    {
+        "slug": "kosskoss",
+        "nom": "KossKoss Select",
+        "url": "https://kosskoss.com/",
+        "fichier": "/assets/img/clients/kosskoss.webp",
+        "largeur": 338,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": false
+    },
+    {
+        "slug": "laura-cosmetics",
+        "nom": "Laura Cosmetics",
+        "url": "https://lauracosmeticsparis.com/",
+        "fichier": "/assets/img/clients/laura-cosmetics.webp",
+        "largeur": 138,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": true
+    },
+    {
+        "slug": "wapy",
+        "nom": "Wapy",
+        "url": "https://wapy.pro/",
+        "fichier": "/assets/img/clients/wapy.svg",
+        "largeur": 321,
+        "hauteur": 96,
+        "fond_sombre": false,
+        "sous_traitance": false
+    }
+]

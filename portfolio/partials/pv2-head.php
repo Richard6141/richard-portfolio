@@ -2,7 +2,8 @@
 // ============================================================
 // pv2-head.php · <head> SEO partagé des pages "pv2" autonomes.
 // Variables attendues : $pageTitle, $pageDesc, $pageCanonical
-// Optionnelles : $pageRobots ('index'|'noindex'), $pageSchemas (array de tableaux JSON-LD), $ogImage
+// Optionnelles : $pageRobots ('index'|'noindex'), $pageSchemas (array de tableaux JSON-LD), $ogImage,
+//                $pagePrecharge (images à précharger : chemin, ou [chemin, srcset, sizes])
 // ============================================================
 $pageRobots  = $pageRobots  ?? 'index';
 $pageSchemas = $pageSchemas ?? [];
@@ -56,6 +57,8 @@ $cssV = @filemtime(__DIR__ . '/../../assets/css/portfolio-v2.css') ?: '1';
 
 <?php include __DIR__ . '/polices.php'; ?>
 
+<?php foreach ($pagePrecharge ?? [] as $img): $img = (array) $img; ?><link rel="preload" as="image" href="<?= sanitize($img[0]) ?>"<?php if (isset($img[1], $img[2])): ?> imagesrcset="<?= sanitize($img[1]) ?>" imagesizes="<?= sanitize($img[2]) ?>"<?php endif; ?> fetchpriority="high">
+<?php endforeach; ?>
 <link rel="preload" as="style" href="/assets/css/portfolio-v2.css?v=<?= $cssV ?>">
 <link rel="stylesheet" href="/assets/css/portfolio-v2.css?v=<?= $cssV ?>">
 
