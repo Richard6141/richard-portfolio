@@ -21,6 +21,19 @@ jobs:
     steps:
       - name: Recuperer le depot
         uses: actions/checkout@v4
+        with:
+          # Historique complet : necessaire pour dater chaque fichier.
+          fetch-depth: 0
+
+      # Dates reelles des fichiers (03/10/2026). Le checkout date tous les
+      # fichiers du jour du deploiement ; le sitemap lisait ces dates et 89
+      # URL sur 120 annoncaient un faux lastmod. git restore-mtime remet
+      # sur chaque fichier la date de son dernier commit ; rsync -t la conserve.
+      - name: Restaurer les dates des fichiers depuis git
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq git-restore-mtime
+          git restore-mtime
 
       - name: Charger la cle SSH
         uses: webfactory/ssh-agent@v0.9.0
@@ -59,7 +72,7 @@ jobs:
       # A relire au moindre doute apres un changement du .deployignore.
       - name: Simulation (aucune modification)
         run: |
-          rsync -rlz --delete --dry-run --itemize-changes \
+          rsync -rlzt --delete --dry-run --itemize-changes \
             --exclude-from=.deployignore \
             -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=accept-new" \
             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}" \
@@ -69,7 +82,7 @@ jobs:
 
       - name: Deploiement
         run: |
-          rsync -rlz --delete --itemize-changes \
+          rsync -rlzt --delete --itemize-changes \
             --exclude-from=.deployignore \
             -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=accept-new" \
             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}"
@@ -132,3 +145,9 @@ jobs:
           code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 https://richardsalanon.com/)
           echo "Page d'accueil : HTTP $code"
           test "$code" = "200"
+
+      # Controle de fumee (03/10/2026) : redirections, robots, llms, sitemap,
+      # graphe JSON-LD. Signale sans bloquer : le site est deja en ligne.
+      - name: Controle de fumee
+        continue-on-error: true
+        run: php tools/qa/smoke.php https://richardsalanon.com
