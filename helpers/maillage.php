@@ -126,3 +126,10 @@ function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $au
     }
     return $groupes;
 }
+
+/** Lien de la boîte auteur : la page auteur dès sa publication, l'à-propos avant. */
+function boite_auteur_lien(): string
+{
+    $p = registre_lire('page', 'richard-salanon');
+    return ($p !== null && registre_publiee($p)) ? '/richard-salanon' : '/a-propos/';
+}

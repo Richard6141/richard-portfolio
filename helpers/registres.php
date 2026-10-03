@@ -184,3 +184,19 @@ function registre_publiees(string $type, string $racine = REGISTRES_RACINE, ?str
 {
     return array_filter(registre_tous($type, $racine), static fn(array $p): bool => registre_publiee($p, $aujourdhui));
 }
+
+/** Pastille du hero par type. */
+const REGISTRE_ETIQUETTES = [
+    'service' => 'Service', 'service-pays' => 'Service', 'pays' => 'Pays', 'formation' => 'Formation',
+    'formation-pays' => 'Formation', 'domaine' => 'Domaine de formation', 'metier' => 'Formation par métier',
+    'metier-pays' => 'Formation par métier', 'secteur' => 'Secteur', 'histoire' => 'Histoire client',
+    'comparatif' => 'Comparatif', 'guide' => 'Guide', 'terme' => 'Glossaire', 'outil' => 'Outil', 'page' => '', 'hub' => '',
+];
+
+/** « 2026-01-02 » vers « 2 janvier 2026 ». */
+function registre_date_fr(string $iso): string
+{
+    $mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+    [$a, $m, $j] = array_map('intval', explode('-', $iso));
+    return $j . ($j === 1 ? 'er' : '') . ' ' . $mois[$m - 1] . ' ' . $a;
+}

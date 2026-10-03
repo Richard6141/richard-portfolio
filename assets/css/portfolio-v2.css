@@ -1482,3 +1482,43 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .pv2 .galerie__image{margin:0}
 .pv2 .galerie__image img{display:block;width:100%;height:auto;border-radius:var(--radius-lg);border:1px solid var(--line)}
 .pv2 .galerie__image figcaption{margin-top:.5rem;font-size:.88rem;color:var(--muted)}
+
+/* ---------- Pages de registre (vague 0C) ---------- */
+.pv2 .registre-hero{padding:1.5rem 0 2.5rem}
+.pv2 .registre-hero__grille{display:grid;gap:2rem;align-items:start}
+.pv2 .registre-hero h1{font-family:var(--titres);font-weight:700;font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.12;letter-spacing:-.015em;margin:1rem 0 0;max-width:24ch;color:var(--ink)}
+.pv2 .registre-hero__bref{margin:1.25rem 0 0;max-width:62ch;padding:1rem 1.2rem;border-left:4px solid var(--link);background:#fff;border-radius:0 var(--radius) var(--radius) 0;font-size:1.08rem;color:var(--ink-soft)}
+.pv2 .registre-hero__mention{margin:.9rem 0 0;font-size:.92rem;font-weight:600;color:var(--brand)}
+.pv2 .registre-hero__maj{margin:.9rem 0 0;font-size:.88rem;color:var(--muted)}
+.pv2 .panneau-faits{padding:1.25rem 1.4rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-card)}
+.pv2 .panneau-faits dl{margin:0;display:grid;gap:.9rem}
+.pv2 .panneau-faits dt{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.pv2 .panneau-faits dd{margin:.15rem 0 0;font-weight:600;color:var(--ink)}
+.pv2 .registre__corps{display:grid;gap:2rem;padding-bottom:2rem}
+.pv2 .registre__article{min-width:0}
+.pv2 .sommaire{padding:1rem 1.2rem;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;font-size:.92rem}
+.pv2 .sommaire__titre{margin:0 0 .5rem;font-weight:700;color:var(--ink)}
+.pv2 .sommaire ol{margin:0;padding-left:1.1rem;display:grid;gap:.35rem}
+.pv2 .sommaire a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-strong)}
+.pv2 .sommaire a[aria-current]{color:var(--link);font-weight:600;text-decoration-color:var(--link)}
+.pv2 .boite-auteur{display:grid;grid-template-columns:96px 1fr;gap:1.25rem;align-items:start;margin:3rem 0 0;padding:1.5rem;border:1px solid var(--line);border-radius:var(--radius-lg);background:#FBF8F4}
+.pv2 .boite-auteur img{border-radius:var(--radius);object-fit:cover;width:96px;height:128px}
+.pv2 .boite-auteur p{margin:0 0 .5rem;color:var(--ink-soft)}
+.pv2 .boite-auteur__nom{font-family:var(--titres);font-weight:700;font-size:1.1rem}
+.pv2 .boite-auteur__nom a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.pv2 .boite-auteur__titre{font-size:.9rem;color:var(--muted)!important}
+.pv2 .liens-lies{padding-top:2rem;padding-bottom:3rem}
+.pv2 .liens-lies h2{font-family:var(--titres);font-size:1.5rem;margin:0 0 1.25rem}
+.pv2 .liens-lies__grille{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr))}
+.pv2 .liens-lies h3{font-size:.85rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 .6rem}
+.pv2 .liens-lies ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.pv2 .liens-lies a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+.pv2 .liste-hub{list-style:none;margin:0 0 3rem;padding:0}
+.pv2 .carte-hub{display:flex;flex-direction:column;gap:.6rem;height:100%;padding:1.4rem;color:var(--ink)}
+.pv2 .carte-hub h2{font-family:var(--titres);font-size:1.15rem;margin:0;color:var(--ink)}
+.pv2 .carte-hub p{margin:0;font-size:.93rem;color:var(--ink-soft)}
+@media (min-width:1024px){
+  .pv2 .registre-hero__grille{grid-template-columns:minmax(0,1fr) 20rem;gap:3rem}
+  .pv2 .registre__corps{grid-template-columns:16rem minmax(0,1fr);gap:3.5rem;align-items:start}
+  .pv2 .sommaire{position:sticky;top:calc(var(--header-h) + 1.5rem)}
+}
