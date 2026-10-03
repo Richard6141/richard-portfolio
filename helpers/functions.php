@@ -10,6 +10,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../config/site.php';
 require_once __DIR__ . '/faits.php';
 require_once __DIR__ . '/schema.php';
+require_once __DIR__ . '/phosphor.php';
 
 /**
  * Page qui ne peut pas vivre sans base (services, blog, réalisations) :

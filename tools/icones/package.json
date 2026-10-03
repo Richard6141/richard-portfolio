@@ -1,0 +1,13 @@
+{
+  "name": "icones-phosphor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Genere helpers/phosphor.php, le jeu d'icones Phosphor (regular) retenu pour le site, a partir de liste.json.",
+  "type": "module",
+  "scripts": {
+    "generer": "node generer.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/core": "^2.1.1"
+  }
+}
