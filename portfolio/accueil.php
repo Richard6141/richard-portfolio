@@ -27,7 +27,7 @@ $lire = static function (?PDO $pdo, string $sql, array $params = []): array {
 
 $h_projects     = $lire($pdo, "SELECT * FROM projects WHERE user_id = ? AND status = 'published' ORDER BY is_featured DESC, sort_order ASC LIMIT 6", [$userId]);
 $h_testimonials = $lire($pdo, 'SELECT * FROM testimonials WHERE user_id = ? ORDER BY is_featured DESC, sort_order ASC LIMIT 3', [$userId]);
-$h_recent       = $lire($pdo, "SELECT title, slug, cover_image, category, published_at FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) ORDER BY published_at DESC LIMIT 3", [$userId]);
+$h_recent       = blog_sans_rediriges($lire($pdo, "SELECT title, slug, cover_image, category, published_at FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) ORDER BY published_at DESC LIMIT 3", [$userId]));
 
 $nav     = navigation_chargee();
 // Le bandeau ne montre que des projets clients : Wapy, produit de Richard, en sort.

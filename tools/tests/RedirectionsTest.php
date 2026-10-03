@@ -49,3 +49,14 @@ function test_redirections_appliquees_partout_et_liens_finaux(): void
     }
     assert_contains('url_finale(', (string) file_get_contents(racine('portfolio/partials/pv2-footer.php')));
 }
+
+function test_redirections_revue_articles_de_blog_rediriges_retires_des_listes(): void
+{
+    // Revue finale 0C : liste du blog, barre latérale, accueil, articles liés et IndexNow
+    // pointaient encore vers l'article devenu comparatif (301).
+    $lignes = [['slug' => 'n8n-vs-zapier-vs-make-2026', 'title' => 'Ancien'], ['slug' => 'autre-article', 'title' => 'Garde']];
+    assert_same(['autre-article'], array_column(blog_sans_rediriges($lignes), 'slug'));
+    foreach (['portfolio/blog-index.php', 'portfolio/partials/pv2-blog-sidebar.php', 'portfolio/accueil.php', 'portfolio/article.php', 'indexnow.php'] as $f) {
+        assert_contains('blog_sans_rediriges(', (string) file_get_contents(racine($f)), $f);
+    }
+}

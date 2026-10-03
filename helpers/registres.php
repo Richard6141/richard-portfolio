@@ -118,6 +118,9 @@ function registre_valider(string $type, string $slug, array $p): array
             $e[] = "sources[{$i}] : titre, url https et date attendus";
         }
     }
+    if ($type === 'pays' && !isset(pays_liste()[$slug])) {
+        $e[] = 'pays inconnu : ' . $slug;
+    }
     if (str_ends_with($type, '-pays') && !isset(pays_liste()[basename($slug)])) {
         $e[] = 'pays inconnu : ' . basename($slug);
     }
@@ -146,7 +149,13 @@ function registre_lire(string $type, string $slug, string $racine = REGISTRES_RA
     if ($chemin === null || !is_file($chemin)) {
         return null;
     }
-    $p = require $chemin;
+    try {
+        $p = require $chemin;
+    } catch (\Throwable $e) {
+        // Un fichier au PHP invalide ne doit pas faire tomber sitemap, llms.txt ni les hubs.
+        error_log("registre {$type}/{$slug} illisible : " . $e->getMessage());
+        return null;
+    }
     if (!is_array($p)) {
         return null;
     }

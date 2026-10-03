@@ -26,3 +26,12 @@ function test_legales_liees_depuis_le_pied_et_hors_sitemap(): void
     $xml = http_local('/sitemap.xml')['corps'];
     assert_not_contains('/mentions-legales<', $xml);
 }
+
+function test_legales_revue_formulaire_de_contact_decrit(): void
+{
+    // Revue finale 0C : le formulaire de contact (api/contact-form.php) enregistre nom,
+    // coordonnées, message et adresse IP ; la politique doit le dire.
+    $c = http_local('/confidentialite')['corps'];
+    assert_contains('formulaire de contact', $c);
+    assert_contains('adresse IP', $c);
+}

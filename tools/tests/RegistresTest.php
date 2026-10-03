@@ -83,3 +83,18 @@ function test_registres_donnees_reelles_toutes_valides(): void
     }
     assert_same([], $erreurs);
 }
+
+function test_registres_revue_erreur_php_dans_un_fichier_ne_fait_pas_tomber_le_site(): void
+{
+    // Revue finale 0C : un fichier au PHP invalide faisait tomber sitemap, llms.txt et hubs.
+    assert_same(null, registre_lire('service', 'site-syntaxe', fixtures()));
+    assert_true(!isset(registre_tous('service', fixtures())['site-syntaxe']));
+}
+
+function test_registres_revue_fiche_pays_hors_liste_refusee(): void
+{
+    // Revue finale 0C : data/pays/beninn.php passait la validation puis faisait planter le maillage.
+    $base = require fixtures() . '/pays/benin.php';
+    assert_contains('pays inconnu', implode(' ', registre_valider('pays', 'beninn', $base)));
+    assert_same([], registre_valider('pays', 'benin', $base));
+}

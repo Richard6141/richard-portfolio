@@ -76,7 +76,7 @@ $stmt = $pdo->prepare("
     LIMIT 3
 ");
 $stmt->execute([$userId, $post['id'], $post['category'] ?? '']);
-$related = $stmt->fetchAll();
+$related = blog_sans_rediriges($stmt->fetchAll());
 
 // Variables marque (pour header/footer partials)
 $fullName     = trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? '')) ?: $user['slug'];

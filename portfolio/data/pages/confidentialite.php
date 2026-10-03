@@ -17,6 +17,7 @@ return [
         ]],
         ['type' => 'prose', 'titre' => 'Quelles données sont collectées ?', 'paragraphes' => [
             'Les messages que vous envoyez par e-mail, par WhatsApp ou par téléphone : votre nom, vos coordonnées et le contenu de votre demande. Ces informations ne servent qu\'à vous répondre et à suivre votre projet.',
+            'Si vous utilisez le formulaire de contact du site, votre nom, votre adresse électronique, votre téléphone, l\'objet et le texte de votre message, ainsi que l\'adresse IP depuis laquelle il est envoyé, sont enregistrés dans la base de données du site pour traiter votre demande et prévenir les envois abusifs ; ils suivent la durée de conservation des échanges commerciaux indiquée plus bas.',
             'Les journaux techniques de l\'hébergeur (adresse IP, date, page demandée), conservés par Hostinger pour la sécurité et le bon fonctionnement du site.',
             'Des statistiques de visite, décrites dans la section suivante. Le site ne propose aucun compte utilisateur et aucune donnée n\'est vendue ni louée.',
         ]],

@@ -9,7 +9,7 @@ $sideCats = [];
 try {
     $st = $pdo->prepare("SELECT title, slug, cover_image, published_at FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) ORDER BY published_at DESC LIMIT 5");
     $st->execute([$userId]);
-    $sideRecent = $st->fetchAll();
+    $sideRecent = blog_sans_rediriges($st->fetchAll());
     $st = $pdo->prepare("SELECT category, COUNT(*) AS n FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) AND category IS NOT NULL AND category <> '' GROUP BY category ORDER BY n DESC");
     $st->execute([$userId]);
     $sideCats = $st->fetchAll();

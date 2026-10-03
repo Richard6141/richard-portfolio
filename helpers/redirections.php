@@ -38,6 +38,12 @@ function redirection_appliquer(string $chemin): void
     }
 }
 
+/** Articles de blog sans ceux dont l'URL redirige (devenus comparatifs ou fusionnés) : aucune carte vers une 301. */
+function blog_sans_rediriges(array $lignes): array
+{
+    return array_values(array_filter($lignes, static fn(array $l): bool => redirection_cible('/blog/' . ($l['slug'] ?? '')) === null));
+}
+
 /** Registre de navigation avec chaque URL ramenée à son URL finale. */
 function navigation_chargee(): array
 {
