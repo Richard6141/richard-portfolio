@@ -12,6 +12,7 @@ require_once __DIR__ . '/faits.php';
 require_once __DIR__ . '/schema.php';
 require_once __DIR__ . '/phosphor.php';
 require_once __DIR__ . '/registres.php';
+require_once __DIR__ . '/maillage.php';
 
 /**
  * Page qui ne peut pas vivre sans base (services, blog, réalisations) :
