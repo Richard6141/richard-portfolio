@@ -4,11 +4,20 @@
 
 RewriteEngine On
 
+# Encodage des réponses texte (03/10/2026) : llms.txt partait sans charset.
+AddDefaultCharset UTF-8
+
 # ----------------------------------------------------------
-# Forcer HTTPS
+# Domaine canonique et HTTPS, en un seul saut (03/10/2026).
+# Avant : seul HTTPS était forcé, et www.richardsalanon.com servait une
+# copie complète du site avec des canoniques en www (audit du 03/10/2026).
+# Les hôtes locaux sont exclus : les tests tournent sur localhost:8081.
+# Lecture des conditions : (hôte non local) ET (http OU www).
 # ----------------------------------------------------------
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://richardsalanon.com%{REQUEST_URI} [L,R=301,NE]
 
 # ----------------------------------------------------------
 # Bloquer l'acces direct aux dossiers sensibles
@@ -17,6 +26,16 @@ RewriteRule ^config/ - [F,L]
 RewriteRule ^helpers/ - [F,L]
 RewriteRule ^includes/ - [F,L]
 RewriteRule ^uploads/.*\.php$ - [F,L]
+
+# ----------------------------------------------------------
+# Scripts internes appelés directement (03/10/2026) : /index.php et
+# /portfolio/*.php répondaient 200, en doublon des URL propres.
+# THE_REQUEST ne contient que la requête du visiteur, jamais les
+# réécritures internes : les routes plus bas visent toujours ces scripts.
+# Le « ? » final de la cible supprime la chaîne de requête.
+# ----------------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/+(index\.php|portfolio/[^\s?]*\.php)[\s?] [NC]
+RewriteRule ^ /? [R=301,L]
 
 # ----------------------------------------------------------
 # NE PAS rediriger ces dossiers (laisser Apache les servir)
@@ -50,7 +69,9 @@ RewriteRule ^robots\.txt$  /robots.php  [L]
 # Le fichier statique reste genere : il sert de secours si PHP tombe, et
 # la bascule inverse tient en une ligne.
 RewriteRule ^sitemap\.xml$ /sitemap.php [L]
-RewriteRule ^favicon\.ico$ - [L]
+# favicon.ico n'existait pas (404 relevé par l'audit du 03/10/2026) : on sert
+# le favicon SVG existant. Remplacé par le logo définitif en vague 0B.
+RewriteRule ^favicon\.ico$ /favicon.php [L]
 
 # ----------------------------------------------------------
 # Canonicalisation des URL — ajoute le 20/08/2026

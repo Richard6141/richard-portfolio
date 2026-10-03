@@ -40,3 +40,35 @@ function racine(string $chemin = ''): string
 {
     return dirname(__DIR__, 2) . ($chemin !== '' ? '/' . ltrim($chemin, '/') : '');
 }
+
+/**
+ * Requête vers l'Apache local (Task 1), sans suivre les redirections.
+ * @return array{code:int, location:string, type:string, corps:string}
+ */
+function http_local(string $chemin, string $hote = 'localhost:8081'): array
+{
+    $ch = curl_init('http://127.0.0.1:8081' . $chemin);
+    curl_setopt_array($ch, [
+        CURLOPT_HTTPHEADER     => ['Host: ' . $hote],
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HEADER         => true,
+        CURLOPT_FOLLOWLOCATION => false,
+        CURLOPT_TIMEOUT        => 15,
+    ]);
+    $brut = curl_exec($ch);
+    if ($brut === false) {
+        throw new EchecTest('Apache local injoignable sur 127.0.0.1:8081 (Task 1, step 6) : ' . curl_error($ch));
+    }
+    $code   = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+    $taille = (int) curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    curl_close($ch);
+    $entetes = substr((string) $brut, 0, $taille);
+    preg_match('/^Location:\s*(\S+)/mi', $entetes, $loc);
+    preg_match('/^Content-Type:\s*([^\r\n]+)/mi', $entetes, $type);
+    return [
+        'code'     => $code,
+        'location' => $loc[1] ?? '',
+        'type'     => strtolower(trim($type[1] ?? '')),
+        'corps'    => substr((string) $brut, $taille),
+    ];
+}
