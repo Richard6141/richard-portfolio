@@ -43,3 +43,18 @@ function test_entete_identite_et_contact(): void
     assert_not_contains('Richard Technologies', $html);
     assert_not_contains('<h1', $html);
 }
+
+function test_entete_ne_modifie_aucune_variable_de_la_page(): void
+{
+    // Recette du 04/10/2026 : la boucle des pays de l'en-tête réutilisait $p et
+    // effaçait le projet de realisation.php (H1 vide en production).
+    require_once racine('helpers/functions.php');
+    $p = ['title' => 'Projet témoin'];
+    $page = ['titre' => 'Page témoin'];
+    $pdo = null; $fullName = fait('nom'); $h_logo = siteLogoUrl();
+    ob_start();
+    include racine('portfolio/partials/pv2-header.php');
+    ob_end_clean();
+    assert_same(['title' => 'Projet témoin'], $p);
+    assert_same(['titre' => 'Page témoin'], $page);
+}
