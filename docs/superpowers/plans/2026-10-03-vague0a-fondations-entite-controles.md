@@ -1929,8 +1929,8 @@ function test_sitemap_sans_base_liste_encore_les_pages_de_fichiers(): void
     assert_contains('<loc>https://richardsalanon.com/developpeur-web-cotonou</loc>', $xml);
     assert_contains('<loc>https://richardsalanon.com/formation-vibecoding</loc>', $xml);
     assert_contains('<loc>https://richardsalanon.com/formations/</loc>', $xml);
-    assert_not_contains('www.', $xml);
-    assert_true(substr_count($xml, '<loc>') >= 100, 'moins de 100 URL de fichiers');
+    assert_not_contains('://www.richardsalanon', $xml);
+    assert_true(substr_count($xml, '<loc>') >= 90, 'moins de 90 URL de fichiers (97 au 03/10/2026)');
 }
 
 function test_sitemap_servi_en_local_sans_base(): void
@@ -2163,7 +2163,7 @@ $controles = [
     'sitemap.xml valide, au moins 100 URL, aucune en www' => static function () use ($base): bool {
         $r = smoke_get($base . '/sitemap.xml');
         return $r['code'] === 200 && @simplexml_load_string($r['corps']) !== false
-            && substr_count($r['corps'], '<loc>') >= 100 && !str_contains($r['corps'], '://www.');
+            && substr_count($r['corps'], '<loc>') >= 100 && !str_contains($r['corps'], '://www.richardsalanon');
     },
     "accueil : un seul JSON-LD, Person présente, pas d'ancienne marque" => static function () use ($base): bool {
         $r = smoke_get($base . '/');

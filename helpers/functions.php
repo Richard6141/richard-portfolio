@@ -533,163 +533,115 @@ function buildHowToSchema(string $html, string $name): ?array
 }
 
 /**
- * Construit le XML complet du sitemap (pages fixes + services + articles publiés).
- * Utilisé à la fois par sitemap.php (génération à la volée, secours) et par
- * generate-sitemap.php / indexnow.php (écriture d'un fichier statique).
- * Retourne un urlset vide si aucun portfolio publié.
+ * Date AAAA-MM-JJ d'une page pour <lastmod> (03/10/2026).
+ * Le champ « maj » saisi à la main l'emporte ; sinon la date du fichier,
+ * rendue fiable par le déploiement (dates git restaurées, rsync -t).
  */
-function buildSitemapXml(PDO $pdo, string $baseUrl): string
+function sitemap_lastmod(?string $maj, int|false|null $mtime): ?string
 {
-    $baseUrl   = rtrim($baseUrl, '/');
-    $emptyset  = '<?xml version="1.0" encoding="UTF-8"?>' . "\n"
-               . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>';
-
-    $stmt   = $pdo->query("SELECT id FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1");
-    $userId = (int) ($stmt->fetchColumn() ?: 0);
-    if (!$userId) {
-        return $emptyset;
+    if (is_string($maj) && preg_match('/^\d{4}-\d{2}-\d{2}$/', $maj) === 1) {
+        return $maj;
     }
+    return is_int($mtime) && $mtime > 0 ? date('Y-m-d', $mtime) : null;
+}
 
-    $stmt = $pdo->prepare("SELECT is_published FROM profiles WHERE user_id = ?");
-    $stmt->execute([$userId]);
-    if (!(bool) $stmt->fetchColumn()) {
-        return $emptyset;
-    }
-
-    // Date de dernière modif globale du portfolio
-    $stmt = $pdo->prepare("
-        SELECT MAX(updated) FROM (
-            SELECT MAX(updated_at) AS updated FROM profiles      WHERE user_id = ?
-            UNION ALL SELECT MAX(updated_at) FROM hero_sections  WHERE user_id = ?
-            UNION ALL SELECT MAX(updated_at) FROM about_sections WHERE user_id = ?
-            UNION ALL SELECT MAX(updated_at) FROM experiences    WHERE user_id = ?
-            UNION ALL SELECT MAX(updated_at) FROM projects       WHERE user_id = ?
-            UNION ALL SELECT MAX(updated_at) FROM skills         WHERE user_id = ?
-        ) AS t
-    ");
-    $stmt->execute([$userId, $userId, $userId, $userId, $userId, $userId]);
-    $raw     = $stmt->fetchColumn();
-    $lastmod = $raw ? date('Y-m-d', strtotime($raw)) : date('Y-m-d');
-
-    // Articles publiés (date de publication passée)
-    $blogPosts = [];
-    try {
-        $stmtBlog = $pdo->prepare(
-            "SELECT slug, published_at FROM blog_posts
-             WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW())
-             ORDER BY published_at DESC"
-        );
-        $stmtBlog->execute([$userId]);
-        $blogPosts = $stmtBlog->fetchAll(PDO::FETCH_ASSOC);
-    } catch (\Exception $e) {
-        $blogPosts = [];
-    }
-
+/** XML d'un sitemap ; une URL déjà vue est ignorée. */
+function sitemap_xml(array $entrees): string
+{
     $xml  = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
-
-    $xml .= "  <url>\n";
-    $xml .= "    <loc>" . htmlspecialchars($baseUrl . '/', ENT_XML1) . "</loc>\n";
-    $xml .= "    <lastmod>{$lastmod}</lastmod>\n";
-    $xml .= "    <changefreq>weekly</changefreq>\n";
-    $xml .= "    <priority>1.0</priority>\n";
-    $xml .= "  </url>\n";
-
-    $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/a-propos/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
-    // /contact, ajoutee au sitemap le 20/08/2026, en meme temps que la page.
-    $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/contact', ENT_XML1) . "</loc>\n    <changefreq>yearly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
-    $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/blog/', ENT_XML1) . "</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
-
-    // Pages services
-    try {
-        $stmtSvc = $pdo->prepare("SELECT title FROM services WHERE user_id = ? ORDER BY sort_order ASC");
-        $stmtSvc->execute([$userId]);
-        $svcRows = $stmtSvc->fetchAll(PDO::FETCH_ASSOC);
-    } catch (\Exception $e) {
-        $svcRows = [];
+    $vues = [];
+    foreach ($entrees as $e) {
+        if (isset($vues[$e['loc']])) {
+            continue;
+        }
+        $vues[$e['loc']] = true;
+        $xml .= "  <url>\n    <loc>" . htmlspecialchars($e['loc'], ENT_XML1) . "</loc>\n";
+        if (!empty($e['lastmod'])) {
+            $xml .= "    <lastmod>{$e['lastmod']}</lastmod>\n";
+        }
+        $xml .= "    <changefreq>{$e['changefreq']}</changefreq>\n    <priority>{$e['priority']}</priority>\n  </url>\n";
     }
-    if ($svcRows) {
-        $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/services/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>\n";
-        foreach ($svcRows as $sv) {
-            $sLoc = htmlspecialchars($baseUrl . '/services/' . generateSlug($sv['title']), ENT_XML1);
-            $xml .= "  <url>\n    <loc>{$sLoc}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+    return $xml . '</urlset>';
+}
+
+/** Pages servies depuis des fichiers : listées même si la base est indisponible. */
+function sitemap_entrees_fichiers(string $baseUrl): array
+{
+    $baseUrl  = rtrim($baseUrl, '/');
+    $entrees  = [];
+    $fixes    = [
+        ['/', 'weekly', '1.0'], ['/a-propos/', 'monthly', '0.7'], ['/contact', 'yearly', '0.8'],
+        ['/services/', 'monthly', '0.9'], ['/formations/', 'monthly', '0.9'], ['/zones/', 'monthly', '0.8'],
+        ['/realisations/', 'monthly', '0.8'], ['/blog/', 'weekly', '0.7'],
+    ];
+    foreach ($fixes as [$chemin, $frequence, $priorite]) {
+        $entrees[] = ['loc' => $baseUrl . $chemin, 'lastmod' => null, 'changefreq' => $frequence, 'priority' => $priorite];
+    }
+
+    $villes = is_file(__DIR__ . '/../portfolio/data/villes.php') ? (require __DIR__ . '/../portfolio/data/villes.php') : [];
+    foreach ((array) $villes as $ville) {
+        if (!empty($ville['slug'])) {
+            $entrees[] = ['loc' => $baseUrl . '/developpeur-web-' . $ville['slug'], 'lastmod' => sitemap_lastmod($ville['maj'] ?? null, $ville['_maj'] ?? null), 'changefreq' => 'monthly', 'priority' => '0.8'];
         }
     }
 
-    // Realisations, ajoutees au sitemap le 20/08/2026 avec les pages projet.
-    try {
-        $stmtRea = $pdo->prepare("SELECT slug, updated_at FROM projects WHERE user_id = ? ORDER BY is_featured DESC, sort_order ASC");
-        $stmtRea->execute([$userId]);
-        $reaRows = $stmtRea->fetchAll(PDO::FETCH_ASSOC);
-    } catch (\Exception $e) {
-        $reaRows = [];
-    }
-    if ($reaRows) {
-        $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/realisations/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
-        foreach ($reaRows as $rea) {
-            if (empty($rea['slug'])) continue;
-            $rLoc     = htmlspecialchars($baseUrl . '/realisations/' . $rea['slug'], ENT_XML1);
-            $rLastmod = !empty($rea['updated_at']) ? date('Y-m-d', strtotime((string) $rea['updated_at'])) : $lastmod;
-            $xml .= "  <url>\n    <loc>{$rLoc}</loc>\n    <lastmod>{$rLastmod}</lastmod>\n    <changefreq>yearly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
-        }
-    }
-
-    // Pages locales, le contenu vient de portfolio/data/villes.php, pas de la
-    // base : le sitemap le lit directement pour rester la seule source de verite.
-    $fichierVilles = __DIR__ . '/../portfolio/data/villes.php';
-    if (is_file($fichierVilles)) {
-        $villes = require $fichierVilles;
-        if (is_array($villes) && $villes) {
-            $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/zones/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
-            // Hub des formations (05/09/2026). Les pages formation-* du
-            // registre sont ajoutees par le bloc generique plus bas.
-            $xml .= "  <url>\n    <loc>" . htmlspecialchars($baseUrl . '/formations/', ENT_XML1) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>\n";
-            foreach ($villes as $ville) {
-                if (empty($ville['slug'])) continue;
-                $vLoc = htmlspecialchars($baseUrl . '/developpeur-web-' . $ville['slug'], ENT_XML1);
-                // <lastmod> ajoute le 01/09/2026 : 81 des 134 URL du sitemap n'en
-                // portaient pas. Google n'avait donc aucun signal de fraicheur sur
-                // les pages ville ni sur celles du registre, alors que ce sont
-                // precisement les pages publiees le plus recemment.
-                $vMaj = !empty($ville['_maj']) ? date('Y-m-d', (int) $ville['_maj']) : date('Y-m-d');
-                $xml .= "  <url>\n    <loc>{$vLoc}</loc>\n    <lastmod>{$vMaj}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+    $sujets = is_file(__DIR__ . '/../portfolio/data/sujets.php') ? (require __DIR__ . '/../portfolio/data/sujets.php') : [];
+    foreach ((array) $sujets as $sujet) {
+        foreach (($sujet['pages'] ?? []) as $page) {
+            if (!empty($page['slug'])) {
+                $entrees[] = ['loc' => $baseUrl . '/' . $page['slug'], 'lastmod' => sitemap_lastmod($page['maj'] ?? null, $page['_maj'] ?? null), 'changefreq' => 'monthly', 'priority' => '0.8'];
             }
         }
     }
+    return $entrees;
+}
 
-    // Registre generique « sujet x ville » (21/08/2026). Un seul bloc pour
-    // TOUS les sujets presents et futurs : deposer data/sujets/{sujet}/{ville}.php
-    // suffit a faire apparaitre la page ici, sans revenir editer ce fichier.
-    $fichierSujets = __DIR__ . '/../portfolio/data/sujets.php';
-    if (is_file($fichierSujets)) {
-        $sujets = require $fichierSujets;
-        if (is_array($sujets)) {
-            foreach ($sujets as $sujet) {
-                foreach (($sujet['pages'] ?? []) as $pg) {
-                    if (empty($pg['slug'])) continue;
-                    $sLoc = htmlspecialchars($baseUrl . '/' . $pg['slug'], ENT_XML1);
-                    $sMaj = !empty($pg['_maj']) ? date('Y-m-d', (int) $pg['_maj']) : date('Y-m-d');
-                    $xml .= "  <url>
-    <loc>{$sLoc}</loc>
-    <lastmod>{$sMaj}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-";
-                }
-            }
+/** Pages issues de la base (services, réalisations, articles) ; [] si la base manque. */
+function sitemap_entrees_base(?PDO $pdo, string $baseUrl): array
+{
+    if ($pdo === null) {
+        return [];
+    }
+    $baseUrl = rtrim($baseUrl, '/');
+    $entrees = [];
+    try {
+        foreach ($pdo->query('SELECT title FROM services ORDER BY sort_order ASC')->fetchAll(PDO::FETCH_ASSOC) as $s) {
+            $entrees[] = ['loc' => $baseUrl . '/services/' . generateSlug($s['title']), 'lastmod' => null, 'changefreq' => 'monthly', 'priority' => '0.8'];
         }
+    } catch (\Throwable $e) {
+        // table absente : on continue
     }
-
-    foreach ($blogPosts as $bp) {
-        $bLastmod = $bp['published_at'] ? date('Y-m-d', strtotime($bp['published_at'])) : date('Y-m-d');
-        $bLoc     = htmlspecialchars($baseUrl . '/blog/' . $bp['slug'], ENT_XML1);
-        $xml .= "  <url>\n    <loc>{$bLoc}</loc>\n    <lastmod>{$bLastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
+    try {
+        foreach ($pdo->query("SELECT slug, updated_at FROM projects WHERE slug IS NOT NULL AND slug <> '' ORDER BY is_featured DESC, sort_order ASC")->fetchAll(PDO::FETCH_ASSOC) as $p) {
+            $entrees[] = ['loc' => $baseUrl . '/realisations/' . $p['slug'], 'lastmod' => !empty($p['updated_at']) ? date('Y-m-d', (int) strtotime((string) $p['updated_at'])) : null, 'changefreq' => 'yearly', 'priority' => '0.7'];
+        }
+    } catch (\Throwable $e) {
+        // table absente : on continue
     }
+    try {
+        $sql = "SELECT slug, published_at, updated_at FROM blog_posts
+                 WHERE status = 'published' AND (published_at IS NULL OR published_at <= NOW())
+                 ORDER BY published_at DESC";
+        foreach ($pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC) as $b) {
+            // Date de modification jamais antérieure à la publication (articles antidatés).
+            $ts = max((int) strtotime((string) ($b['published_at'] ?? '')), (int) strtotime((string) ($b['updated_at'] ?? '')));
+            $entrees[] = ['loc' => $baseUrl . '/blog/' . $b['slug'], 'lastmod' => $ts > 0 ? date('Y-m-d', $ts) : null, 'changefreq' => 'monthly', 'priority' => '0.7'];
+        }
+    } catch (\Throwable $e) {
+        // table absente : on continue
+    }
+    return $entrees;
+}
 
-    $xml .= '</urlset>';
-
-    return $xml;
+/**
+ * Sitemap complet (03/10/2026). Avant : urlset vide dès que la base tombait
+ * ou que profiles.is_published valait 0, et 89 dates égales au jour du
+ * déploiement. Les pages de fichiers sont désormais toujours listées.
+ */
+function buildSitemapXml(?PDO $pdo, string $baseUrl): string
+{
+    return sitemap_xml(array_merge(sitemap_entrees_fichiers($baseUrl), sitemap_entrees_base($pdo, $baseUrl)));
 }
 
 /**

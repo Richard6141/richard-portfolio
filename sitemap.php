@@ -15,14 +15,12 @@ require_once __DIR__ . '/helpers/functions.php';
 $baseUrl = SITE_URL;
 
 try {
-    $xml = buildSitemapXml(getPDO(), $baseUrl);
-    ob_clean();
-    header('Content-Type: application/xml; charset=UTF-8');
-    header('Cache-Control: public, max-age=3600');
-    echo $xml;
+    $pdo = getPDO();
 } catch (\Throwable $e) {
-    ob_clean();
-    header('Content-Type: application/xml; charset=UTF-8');
-    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
-    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>';
+    $pdo = null; // les pages de fichiers restent listées
 }
+$xml = buildSitemapXml($pdo, $baseUrl);
+ob_clean();
+header('Content-Type: application/xml; charset=UTF-8');
+header('Cache-Control: public, max-age=3600');
+echo $xml;
