@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palettes refonte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:#e9e9ec;color:#16161a;line-height:1.6}
+h1,h2,h3{font-family:Sora,sans-serif;letter-spacing:-.01em;text-wrap:balance}
+.intro{max-width:1100px;margin:0 auto;padding:32px 16px 8px}
+.intro h1{font-size:1.6rem;margin-bottom:6px}
+.intro p{color:#55555c;max-width:70ch}
+
+/* Une planche = une palette, toutes les couleurs passent par les variables */
+.board{max-width:1100px;margin:28px auto;background:var(--bg);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px -25px rgba(0,0,0,.35)}
+.tag{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;background:#fff;border-bottom:1px solid #e3e3e6}
+.tag strong{font-family:Sora,sans-serif;font-size:1.05rem}
+.tag em{font-style:normal;font-size:.8rem;font-weight:600;padding:3px 10px;border-radius:50px;background:#16161a;color:#fff}
+.sw{display:flex;gap:6px;flex-wrap:wrap}
+.sw span{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;color:#55555c;font-family:ui-monospace,monospace}
+.sw i{width:18px;height:18px;border-radius:5px;border:1px solid rgba(0,0,0,.12);display:inline-block}
+
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:700;color:var(--ink)}
+.logo b{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--ink);color:var(--brand);font-size:.95rem}
+.nav{display:flex;gap:18px;font-weight:600;font-size:.92rem;color:var(--ink-soft)}
+.nav span:first-child{color:var(--link)}
+@media (max-width:760px){.nav{display:none}}
+
+.hero{position:relative;padding:40px 20px 48px;background:
+ radial-gradient(60% 80% at 100% 0%,var(--halo1),transparent 70%),
+ radial-gradient(50% 70% at 0% 100%,var(--halo2),transparent 70%),
+ linear-gradient(180deg,var(--bg),var(--surface));
+ border-radius:0 0 50% 50%/0 0 2.75rem 2.75rem}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--link);background:#fff;padding:5px 12px;border-radius:50px;box-shadow:0 0 0 1px var(--line)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand)}
+.hero h2{font-size:clamp(1.9rem,1.2rem + 3vw,3.1rem);line-height:1.12;color:var(--ink);margin:16px 0 12px;max-width:22ch}
+.hero h2 mark{background:none;color:var(--link)}
+.hero p{font-size:1.1rem;color:var(--ink-soft);max-width:58ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:10px;font-weight:600;border:2px solid transparent}
+.btn-cta{background:var(--cta);color:var(--cta-ink);box-shadow:0 10px 24px -10px var(--cta)}
+.btn-out{border-color:var(--line-strong);color:var(--ink);background:#fff}
+.trust{display:flex;flex-wrap:wrap;gap:28px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.trust div{font-size:.85rem;color:var(--muted)}
+.trust strong{display:block;font-family:Sora,sans-serif;font-size:1.9rem;line-height:1.1;background:linear-gradient(135deg,var(--link),var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.sec{padding:36px 20px}
+.sec .kick{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--link)}
+.sec h3{font-size:1.5rem;color:var(--ink);margin:6px 0 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px -12px rgba(0,0,0,.12)}
+.card.hov{transform:translateY(-4px);border-color:var(--link);box-shadow:0 0 32px 14px var(--glow)}
+.ico{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;background:var(--surface);color:var(--link);margin-bottom:12px}
+.card.hov .ico{background:var(--link);color:#fff}
+.card h4{font-family:Sora,sans-serif;color:var(--ink);font-size:1.05rem;margin-bottom:6px}
+.card p{font-size:.92rem;color:var(--muted)}
+.card a{display:inline-block;margin-top:12px;font-weight:600;color:var(--link);font-size:.9rem}
+.note{font-size:.8rem;color:var(--muted);margin-top:10px}
+
+.dark{margin:0 20px 24px;border-radius:18px;padding:32px 24px;color:#fff;background:
+ radial-gradient(90% 70% at 100% 0%,var(--dk1),transparent 70%),
+ radial-gradient(70% 60% at 0% 100%,var(--dk2),transparent 70%),var(--ink)}
+.dark h3{font-size:1.4rem;margin-bottom:8px}
+.dark p{color:var(--on-dark-soft);max-width:60ch}
+.dark .btn{margin-top:18px;background:var(--cta);color:var(--cta-ink)}
+.why{padding:0 20px 28px;font-size:.9rem;color:var(--ink-soft)}
+.why li{margin:4px 0 4px 18px}
+
+/* ---- Palettes ---- */
+.p1{--bg:#FAF8F4;--surface:#F3EEE6;--ink:#16161A;--ink-soft:#3A3A42;--muted:#66666E;--line:#E7E1D7;--line-strong:#D6CCBC;
+ --brand:#C8924A;--link:#8A5A1F;--cta:#C8924A;--cta-ink:#16161A;--glow:#EFDFC6;--halo1:rgba(200,146,74,.14);--halo2:rgba(138,90,31,.08);
+ --dk1:rgba(200,146,74,.35);--dk2:rgba(138,90,31,.45);--on-dark-soft:#D9D2C6}
+.p2{--bg:#F7FAF8;--surface:#E9F3EE;--ink:#0F1B2D;--ink-soft:#2C3A4F;--muted:#5D6878;--line:#DCE7E1;--line-strong:#C3D5CB;
+ --brand:#E5A93B;--link:#0E7A57;--cta:#0E8A63;--cta-ink:#FFFFFF;--glow:#D3EDE2;--halo1:rgba(14,138,99,.12);--halo2:rgba(229,169,59,.10);
+ --dk1:rgba(14,138,99,.45);--dk2:rgba(229,169,59,.25);--on-dark-soft:#C9D3DF}
+.p3{--bg:#FBF7F2;--surface:#F4EBE1;--ink:#1E1714;--ink-soft:#43362F;--muted:#6E6058;--line:#EADFD3;--line-strong:#DCCAB8;
+ --brand:#D9A441;--link:#A8401F;--cta:#C2502F;--cta-ink:#FFFFFF;--glow:#F4DCCF;--halo1:rgba(194,80,47,.12);--halo2:rgba(217,164,65,.12);
+ --dk1:rgba(194,80,47,.45);--dk2:rgba(217,164,65,.25);--on-dark-soft:#E2D5CB}
+.p5{--bg:#FBF8F4;--surface:#F5EEE6;--ink:#14161F;--ink-soft:#343846;--muted:#626676;--line:#E8E1D8;--line-strong:#D5CBBE;
+ --brand:#E0A43A;--link:#0F6B6B;--cta:#C2502F;--cta-ink:#FFFFFF;--glow:#F3DDD2;--halo1:rgba(194,80,47,.12);--halo2:rgba(15,107,107,.10);
+ --dk1:rgba(194,80,47,.45);--dk2:rgba(15,107,107,.45);--on-dark-soft:#D6D8E0}
+.p5 .trust strong{background:linear-gradient(135deg,#C2502F,#E0A43A);-webkit-background-clip:text;background-clip:text}
+.p5 .logo b{background:#14161F;color:#fff;position:relative}
+.p5 .logo b::after{content:"";position:absolute;right:5px;bottom:5px;width:6px;height:6px;border-radius:50%;background:#C2502F}
+.p4{--bg:#F8F8FC;--surface:#EDEFFB;--ink:#12142E;--ink-soft:#2E3152;--muted:#5D6180;--line:#E3E5F3;--line-strong:#CCD0EA;
+ --brand:#F5B83D;--link:#4338CA;--cta:#F5B83D;--cta-ink:#12142E;--glow:#E2E4FB;--halo1:rgba(67,56,202,.10);--halo2:rgba(245,184,61,.12);
+ --dk1:rgba(129,120,255,.45);--dk2:rgba(67,56,202,.5);--on-dark-soft:#CBCDE6}
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Refonte richardsalanon.com : choix de la palette</h1>
+  <p>Quatre palettes appliquées aux mêmes dispositions, reprises d'Audyxa Formation. Polices Sora pour les titres, Plus Jakarta Sans pour le texte. La deuxième carte de chaque planche montre l'état au survol. Tous les contrastes de texte respectent le niveau AA.</p>
+</div>
+
+<!-- P5 : choix retenu -->
+<section class="board p5">
+  <div class="tag"><strong>Choix retenu : encre, terracotta et sarcelle</strong><em>Retenue</em>
+    <div class="sw"><span><i style="background:#14161F"></i>#14161F</span><span><i style="background:#C2502F"></i>#C2502F</span><span><i style="background:#0F6B6B"></i>#0F6B6B</span><span><i style="background:#E0A43A"></i>#E0A43A</span><span><i style="background:#F5EEE6"></i>#F5EEE6</span></div></div>
+  <div class="hdr"><div class="logo"><b>RS</b>Richard SALANON</div><div class="nav"><span>Services</span><span>Formations</span><span>Pays</span><span>Histoires</span><span>Ressources</span></div></div>
+  <div class="hero">
+    <span class="eyebrow">Consultant digital, Afrique francophone et Europe</span>
+    <h2>Sites, applications et <mark>automatisations IA</mark> qui font grandir votre entreprise</h2>
+    <p>Création de sites et d'applications, référencement Google et IA, automatisation, ERP Odoo et Dolibarr, formations. Depuis Cotonou, pour 29 pays.</p>
+    <div class="btns"><span class="btn btn-cta">Demander un devis</span><span class="btn btn-out">Voir les histoires clients</span></div>
+    <div class="trust"><div><strong>29</strong>pays couverts</div><div><strong>17</strong>services</div><div><strong>40+</strong>formations</div></div>
+  </div>
+  <div class="sec"><span class="kick">Services</span><h3>Ce que je construis pour vous</h3>
+    <div class="cards">
+      <div class="card"><div class="ico">&#9635;</div><h4>Création de site web</h4><p>Vitrine, e-commerce, landing page, rapides et pensés pour Google.</p><a>Voir le service</a></div>
+      <div class="card hov"><div class="ico">&#9881;</div><h4>Automatisation et IA</h4><p>n8n, Make, agents IA et chatbots WhatsApp branchés sur vos outils.</p><a>Voir le service</a></div>
+      <div class="card"><div class="ico">&#9638;</div><h4>ERP Odoo et Dolibarr</h4><p>Ventes, stock, facturation conforme, adoptés par vos équipes.</p><a>Voir le service</a></div>
+    </div>
+  </div>
+  <div class="dark"><h3>Un projet au Sénégal, en Côte d'Ivoire ou au Canada ?</h3><p>Premier échange gratuit, devis détaillé en 48 heures, paiement par Mobile Money, carte ou virement.</p><span class="btn">Parler de mon projet</span></div>
+  <ul class="why"><li>Terracotta #C2502F : la couleur de Wapy, ton produit. Ton site et ton produit portent la même signature.</li><li>Sarcelle #0F6B6B pour les liens et les icônes : le couple terracotta et sarcelle est contrasté, élégant, et ne ressemble ni à Audyxa (bleu et jaune) ni aux sites tech habituels (bleu).</li><li>Encre #14161F pour les titres et les bandes sombres, ocre #E0A43A en touche pour les chiffres. Contrastes AA vérifiés (boutons 6,4:1, liens 5,9:1).</li></ul>
+</section>
+
+<!-- P1 -->
+<section class="board p1">
+  <div class="tag"><strong>1. Charbon et or</strong><em>Proposée</em>
+    <div class="sw"><span><i style="background:#16161A"></i>#16161A</span><span><i style="background:#C8924A"></i>#C8924A</span><span><i style="background:#8A5A1F"></i>#8A5A1F</span><span><i style="background:#F3EEE6"></i>#F3EEE6</span></div></div>
+  <div class="hdr"><div class="logo"><b>RT</b>Richard SALANON</div><div class="nav"><span>Services</span><span>Formations</span><span>Pays</span><span>Histoires</span><span>Ressources</span></div></div>
+  <div class="hero">
+    <span class="eyebrow">Consultant digital, Afrique francophone et Europe</span>
+    <h2>Sites, applications et <mark>automatisations IA</mark> qui font grandir votre entreprise</h2>
+    <p>Création de sites et d'applications, référencement Google et IA, automatisation, ERP Odoo et Dolibarr, formations. Depuis Cotonou, pour 29 pays.</p>
+    <div class="btns"><span class="btn btn-cta">Demander un devis</span><span class="btn btn-out">Voir les histoires clients</span></div>
+    <div class="trust"><div><strong>29</strong>pays couverts</div><div><strong>17</strong>services</div><div><strong>40+</strong>formations</div></div>
+  </div>
+  <div class="sec"><span class="kick">Services</span><h3>Ce que je construis pour vous</h3>
+    <div class="cards">
+      <div class="card"><div class="ico">&#9635;</div><h4>Création de site web</h4><p>Vitrine, e-commerce, landing page, rapides et pensés pour Google.</p><a>Voir le service</a></div>
+      <div class="card hov"><div class="ico">&#9881;</div><h4>Automatisation et IA</h4><p>n8n, Make, agents IA et chatbots WhatsApp branchés sur vos outils.</p><a>Voir le service</a></div>
+      <div class="card"><div class="ico">&#9638;</div><h4>ERP Odoo et Dolibarr</h4><p>Ventes, stock, facturation conforme, adoptés par vos équipes.</p><a>Voir le service</a></div>
+    </div>
+  </div>
+  <div class="dark"><h3>Un projet au Sénégal, en Côte d'Ivoire ou au Canada ?</h3><p>Premier échange gratuit, devis détaillé en 48 heures, paiement par Mobile Money, carte ou virement.</p><span class="btn">Parler de mon projet</span></div>
+  <ul class="why"><li>Garde ton logo actuel tel quel : aucune refonte d'identité à prévoir.</li><li>Registre premium, celui des cabinets de conseil, distinct d'Audyxa (bleu) et des concurrents.</li><li>Le bronze clair sert aux boutons, un bronze foncé #8A5A1F aux liens pour rester lisible.</li></ul>
+</section>
+
+<!-- P2 -->
+<section class="board p2">
+  <div class="tag"><strong>2. Encre et émeraude</strong>
+    <div class="sw"><span><i style="background:#0F1B2D"></i>#0F1B2D</span><span><i style="background:#0E8A63"></i>#0E8A63</span><span><i style="background:#E5A93B"></i>#E5A93B</span><span><i style="background:#E9F3EE"></i>#E9F3EE</span></div></div>
+  <div class="hdr"><div class="logo"><b>RT</b>Richard SALANON</div><div class="nav"><span>Services</span><span>Formations</span><span>Pays</span><span>Histoires</span><span>Ressources</span></div></div>
+  <div class="hero">
+    <span class="eyebrow">Consultant digital, Afrique francophone et Europe</span>
+    <h2>Sites, applications et <mark>automatisations IA</mark> qui font grandir votre entreprise</h2>
+    <p>Création de sites et d'applications, référencement Google et IA, automatisation, ERP Odoo et Dolibarr, formations. Depuis Cotonou, pour 29 pays.</p>
+    <div class="btns"><span class="btn btn-cta">Demander un devis</span><span class="btn btn-out">Voir les histoires clients</span></div>
+    <div class="trust"><div><strong>29</strong>pays couverts</div><div><strong>17</strong>services</div><div><strong>40+</strong>formations</div></div>
+  </div>
+  <div class="sec"><span class="kick">Services</span><h3>Ce que je construis pour vous</h3>
+    <div class="cards">
+      <div class="card"><div class="ico">&#9635;</div><h4>Création de site web</h4><p>Vitrine, e-commerce, landing page, rapides et pensés pour Google.</p><a>Voir le service</a></div>
+      <div class="card hov"><div class="ico">&#9881;</div><h4>Automatisation et IA</h4><p>n8n, Make, agents IA et chatbots WhatsApp branchés sur vos outils.</p><a>Voir le service</a></div>
+      <div class="card"><div class="ico">&#9638;</div><h4>ERP Odoo et Dolibarr</h4><p>Ventes, stock, facturation conforme, adoptés par vos équipes.</p><a>Voir le service</a></div>
+    </div>
+  </div>
+  <div class="dark"><h3>Un projet au Sénégal, en Côte d'Ivoire ou au Canada ?</h3><p>Premier échange gratuit, devis détaillé en 48 heures, paiement par Mobile Money, carte ou virement.</p><span class="btn">Parler de mon projet</span></div>
+  <ul class="why"><li>Évoque la croissance et la tech, rassurant pour les dirigeants et la finance.</li><li>Le logo doit passer en encre et émeraude (petite retouche).</li><li>Couleur fréquente chez les fintechs africaines : moins distinctive.</li></ul>
+</section>
+
+<!-- P3 -->
+<section class="board p3">
+  <div class="tag"><strong>3. Nuit et terracotta</strong>
+    <div class="sw"><span><i style="background:#1E1714"></i>#1E1714</span><span><i style="background:#C2502F"></i>#C2502F</span><span><i style="background:#D9A441"></i>#D9A441</span><span><i style="background:#F4EBE1"></i>#F4EBE1</span></div></div>
+  <div class="hdr"><div class="logo"><b>RT</b>Richard SALANON</div><div class="nav"><span>Services</span><span>Formations</span><span>Pays</span><span>Histoires</span><span>Ressources</span></div></div>
+  <div class="hero">
+    <span class="eyebrow">Consultant digital, Afrique francophone et Europe</span>
+    <h2>Sites, applications et <mark>automatisations IA</mark> qui font grandir votre entreprise</h2>
+    <p>Création de sites et d'applications, référencement Google et IA, automatisation, ERP Odoo et Dolibarr, formations. Depuis Cotonou, pour 29 pays.</p>
+    <div class="btns"><span class="btn btn-cta">Demander un devis</span><span class="btn btn-out">Voir les histoires clients</span></div>
+    <div class="trust"><div><strong>29</strong>pays couverts</div><div><strong>17</strong>services</div><div><strong>40+</strong>formations</div></div>
+  </div>
+  <div class="sec"><span class="kick">Services</span><h3>Ce que je construis pour vous</h3>
+    <div class="cards">
+      <div class="card"><div class="ico">&#9635;</div><h4>Création de site web</h4><p>Vitrine, e-commerce, landing page, rapides et pensés pour Google.</p><a>Voir le service</a></div>
+      <div class="card hov"><div class="ico">&#9881;</div><h4>Automatisation et IA</h4><p>n8n, Make, agents IA et chatbots WhatsApp branchés sur vos outils.</p><a>Voir le service</a></div>
+      <div class="card"><div class="ico">&#9638;</div><h4>ERP Odoo et Dolibarr</h4><p>Ventes, stock, facturation conforme, adoptés par vos équipes.</p><a>Voir le service</a></div>
+    </div>
+  </div>
+  <div class="dark"><h3>Un projet au Sénégal, en Côte d'Ivoire ou au Canada ?</h3><p>Premier échange gratuit, devis détaillé en 48 heures, paiement par Mobile Money, carte ou virement.</p><span class="btn">Parler de mon projet</span></div>
+  <ul class="why"><li>Même couleur que Wapy (#C2502F) : une signature commune à ton site et à ton produit.</li><li>Chaleureuse, ancrée en Afrique, très mémorable.</li><li>Le logo passe du bronze au terracotta (retouche simple).</li></ul>
+</section>
+
+<!-- P4 -->
+<section class="board p4">
+  <div class="tag"><strong>4. Indigo et ambre</strong>
+    <div class="sw"><span><i style="background:#12142E"></i>#12142E</span><span><i style="background:#4338CA"></i>#4338CA</span><span><i style="background:#F5B83D"></i>#F5B83D</span><span><i style="background:#EDEFFB"></i>#EDEFFB</span></div></div>
+  <div class="hdr"><div class="logo"><b>RT</b>Richard SALANON</div><div class="nav"><span>Services</span><span>Formations</span><span>Pays</span><span>Histoires</span><span>Ressources</span></div></div>
+  <div class="hero">
+    <span class="eyebrow">Consultant digital, Afrique francophone et Europe</span>
+    <h2>Sites, applications et <mark>automatisations IA</mark> qui font grandir votre entreprise</h2>
+    <p>Création de sites et d'applications, référencement Google et IA, automatisation, ERP Odoo et Dolibarr, formations. Depuis Cotonou, pour 29 pays.</p>
+    <div class="btns"><span class="btn btn-cta">Demander un devis</span><span class="btn btn-out">Voir les histoires clients</span></div>
+    <div class="trust"><div><strong>29</strong>pays couverts</div><div><strong>17</strong>services</div><div><strong>40+</strong>formations</div></div>
+  </div>
+  <div class="sec"><span class="kick">Services</span><h3>Ce que je construis pour vous</h3>
+    <div class="cards">
+      <div class="card"><div class="ico">&#9635;</div><h4>Création de site web</h4><p>Vitrine, e-commerce, landing page, rapides et pensés pour Google.</p><a>Voir le service</a></div>
+      <div class="card hov"><div class="ico">&#9881;</div><h4>Automatisation et IA</h4><p>n8n, Make, agents IA et chatbots WhatsApp branchés sur vos outils.</p><a>Voir le service</a></div>
+      <div class="card"><div class="ico">&#9638;</div><h4>ERP Odoo et Dolibarr</h4><p>Ventes, stock, facturation conforme, adoptés par vos équipes.</p><a>Voir le service</a></div>
+    </div>
+  </div>
+  <div class="dark"><h3>Un projet au Sénégal, en Côte d'Ivoire ou au Canada ?</h3><p>Premier échange gratuit, devis détaillé en 48 heures, paiement par Mobile Money, carte ou virement.</p><span class="btn">Parler de mon projet</span></div>
+  <ul class="why"><li>La plus proche d'Audyxa Formation : rendu tech et moderne.</li><li>Risque de confusion entre les deux marques, d'autant que tu es co-fondateur.</li><li>Le logo doit être refait en indigo.</li></ul>
+</section>
+
+</body>
+</html>
