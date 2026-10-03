@@ -3,6 +3,13 @@
 // services-index.php · Index des services (URL /services/)
 // ============================================================
 require __DIR__ . '/partials/pv2-bootstrap.php';
+
+// Vague 1A : le hub rédigé dans data/hubs/services.php remplace la liste en base.
+if (($page = route_resoudre('services/')) !== null) {
+    require __DIR__ . '/registre-hub.php';
+    exit;
+}
+
 exiger_base($pdo);
 
 $stmt = $pdo->prepare("SELECT * FROM services WHERE user_id = ? ORDER BY is_featured DESC, sort_order ASC");

@@ -98,3 +98,10 @@ function test_registres_revue_fiche_pays_hors_liste_refusee(): void
     assert_contains('pays inconnu', implode(' ', registre_valider('pays', 'beninn', $base)));
     assert_same([], registre_valider('pays', 'benin', $base));
 }
+
+function test_registres_famille_de_service_connue(): void
+{
+    $base = require fixtures() . '/services/site-test.php';
+    assert_same([], registre_valider('service', 'site-test', $base));
+    assert_contains('famille inconnue', implode(' ', registre_valider('service', 'x', ['famille' => 'Divers'] + $base)));
+}

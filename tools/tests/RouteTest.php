@@ -45,3 +45,10 @@ function test_route_http_404_franc_et_historique_intact(): void
     assert_same(200, http_local('/developpeur-web-cotonou')['code']);
     assert_same(404, http_local('/n-existe-pas')['code']);
 }
+
+function test_route_hub_services_prefere_le_registre(): void
+{
+    $src = (string) file_get_contents(racine('portfolio/services-index.php'));
+    $p = strpos($src, "route_resoudre('services/')");
+    assert_true($p !== false && $p < strpos($src, 'exiger_base($pdo)'), 'registre avant la base');
+}

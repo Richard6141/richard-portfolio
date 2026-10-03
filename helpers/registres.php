@@ -46,6 +46,9 @@ const REGISTRES_CHAMPS_TYPE = [
 /** Domaines de formation (spec 6.3). */
 const REGISTRES_DOMAINES = ['intelligence-artificielle', 'automatisation', 'developpement', 'erp-gestion', 'marketing-visibilite', 'cybersecurite-it', 'transformation-digitale', 'ia-systemes-existants'];
 
+/** Familles de services (registre de navigation). */
+const REGISTRES_FAMILLES = ['Sites et boutiques', 'Applications et IA', 'Visibilité et conseil', 'ERP et gestion'];
+
 /** Les 34 pays, chargés une fois. */
 function pays_liste(): array
 {
@@ -123,6 +126,9 @@ function registre_valider(string $type, string $slug, array $p): array
     }
     if (str_ends_with($type, '-pays') && !isset(pays_liste()[basename($slug)])) {
         $e[] = 'pays inconnu : ' . basename($slug);
+    }
+    if ($type === 'service' && isset($p['famille']) && !in_array($p['famille'], REGISTRES_FAMILLES, true)) {
+        $e[] = 'famille inconnue : ' . $p['famille'];
     }
     if ($type === 'formation' && in_array($slug, ['domaine', 'metier'], true)) {
         $e[] = "slug réservé : {$slug}";
