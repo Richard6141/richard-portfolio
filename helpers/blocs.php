@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 const BLOCS_TYPES = [
     'prose', 'points', 'etapes', 'tableau', 'comparaison', 'chiffres', 'cas', 'prix',
-    'frise', 'vigilance', 'lecon', 'citation', 'checklist', 'faq', 'sources', 'cta',
+    'frise', 'vigilance', 'lecon', 'citation', 'checklist', 'faq', 'sources', 'cta', 'programme', 'galerie',
 ];
 
 /** Texte échappé, avec les seules balises autorisées restaurées. */
@@ -21,11 +21,17 @@ function bloc_texte(string $texte): string
     $s = preg_replace('#&lt;br\s*/?&gt;#i', '<br>', $s) ?? $s;
     $s = preg_replace('#&lt;abbr title=&quot;([^&<>]*)&quot;&gt;#i', '<abbr title="$1">', $s) ?? $s;
     $s = preg_replace(
-        '#&lt;a href=&quot;((?:https?://|/|\#)(?:[^"<>\s&]|&amp;)*)&quot;&gt;(.*?)&lt;/a&gt;#i',
+        '#&lt;a href=&quot;((?:https?://|/(?![/\\\\])|\#)(?:[^"<>\s&]|&amp;)*)&quot;&gt;(.*?)&lt;/a&gt;#i',
         '<a href="$1">$2</a>',
         $s
     ) ?? $s;
     return $s;
+}
+
+/** Href sûr (https, chemin interne, ancre) ou null. */
+function bloc_href(string $url): ?string
+{
+    return preg_match('#^(?:https?://[^\s"<>]+|/(?![/\\\\])[^\s"<>]*|\#[A-Za-z0-9_-]*)$#', $url) ? $url : null;
 }
 
 /** Ancre stable d'un titre, pour le sommaire. */

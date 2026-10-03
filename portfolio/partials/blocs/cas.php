@@ -7,7 +7,7 @@
       <p class="carte-cas__secteur"><?= bloc_texte((string) ($it['secteur'] ?? '')) ?></p>
       <h3><?= bloc_texte((string) ($it['probleme'] ?? '')) ?></h3>
       <p><?= bloc_texte((string) ($it['solution'] ?? '')) ?></p>
-      <?php if (!empty($it['lien']['url'])): ?><a class="lien-fleche" href="<?= htmlspecialchars((string) $it['lien']['url'], ENT_QUOTES) ?>"><?= bloc_texte((string) ($it['lien']['texte'] ?? 'En savoir plus')) ?></a><?php endif; ?>
+      <?php if (($h = bloc_href((string) ($it['lien']['url'] ?? ''))) !== null): ?><a class="lien-fleche" href="<?= htmlspecialchars($h, ENT_QUOTES) ?>"><?= bloc_texte((string) ($it['lien']['texte'] ?? 'En savoir plus')) ?></a><?php endif; ?>
     </article>
     <?php endforeach; ?>
   </div>
