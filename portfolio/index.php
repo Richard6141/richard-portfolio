@@ -149,188 +149,22 @@ $robots    = $seo['robots'] ?? 'index';
 // Chemin avatar sécurisé (sans path traversal)
 $safeAvatarPath = preg_replace('/\.\.[\\/]/', '', $profile['avatar_url'] ?? '');
 
-// Identifiants stables du graphe d'entites (20/08/2026).
-// Avant, "Richard SALANON" (Person) et "Richard Technologies" (publisher des
-// articles, marque du logo) coexistaient sans aucun lien declare : rien ne
-// permettait a Google ni a un moteur IA de savoir qu'il s'agit de la meme offre.
-// Les @id ci-dessous relient Person <-> Organization <-> WebSite <-> Service.
-$idPerson  = $portfolioUrl . '/#person';
-$idOrg     = $portfolioUrl . '/#organization';
-$idWebsite = $portfolioUrl . '/#website';
-$orgName   = 'Richard Technologies';
-
-// JSON-LD, Person schema
-$jsonLd = [
-    '@context' => 'https://schema.org',
-    '@type'    => 'Person',
-    '@id'      => $idPerson,
-    'name'     => $fullName,
-    'url'      => $portfolioUrl,
-    'worksFor' => ['@id' => $idOrg],
-];
-if ($profile['profession']        ?? '') $jsonLd['jobTitle']    = $profile['profession'];
-if ($profile['bio_short']         ?? '') $jsonLd['description'] = $profile['bio_short'];
-if ($safeAvatarPath                    ) $jsonLd['image']       = $portfolioUrl . '/uploads/' . $safeAvatarPath;
-if ($contactInfo['email_public']  ?? '') $jsonLd['email']       = $contactInfo['email_public'];
-if ($contactInfo['phone']         ?? '') $jsonLd['telephone']   = $contactInfo['phone'];
-if (($contactInfo['city'] ?? '') || ($contactInfo['country'] ?? '')) {
-    $jsonLd['address'] = array_filter([
-        '@type'           => 'PostalAddress',
-        'addressLocality' => $contactInfo['city']    ?? '',
-        'addressRegion'   => $contactInfo['city']    ?? '',
-        'addressCountry'  => $contactInfo['country'] ?? 'BJ',
-    ]);
+// Graphe d'entités (03/10/2026, spec 5.3) : construit depuis la fiche de faits,
+// une seule balise JSON-LD. « Richard Technologies » disparaît (marque unique).
+// La note agrégée calculée sur la table testimonials est retirée : types
+// Review et AggregateRating interdits tant qu'aucune source vérifiable n'existe.
+$schemasAccueil = array_merge(schema_noeuds_base(faits(), SITE_URL, true), [[
+    '@type'       => 'WebPage',
+    '@id'         => $homeUrl . '#webpage',
+    'url'         => $homeUrl,
+    'name'        => $metaTitle,
+    'description' => $metaDesc,
+    'isPartOf'    => ['@id' => SITE_URL . '/#website'],
+    'about'       => ['@id' => SITE_URL . '/#person'],
+]]);
+if (($profile['template'] ?? 'starter') === 'horizon') {
+    $schemasAccueil[] = schema_faq(require __DIR__ . '/templates/horizon-faq.php');
 }
-$jsonLd['knowsAbout'] = ['Développement web', 'Référencement naturel (SEO)', 'Automatisation', 'Intelligence artificielle', 'Digitalisation d\'entreprise'];
-// Profils officiels garantis (renforce l'entité pour Google et les moteurs IA), fusionnés avec les réseaux du dashboard
-$profileSameAs = ['https://www.linkedin.com/in/richard-salanon/', 'https://github.com/Richard6141'];
-if (!empty($socialLinks)) {
-    $profileSameAs = array_merge($profileSameAs, array_column($socialLinks, 'url'));
-}
-// 21/08/2026 : array_unique() sur la chaine brute laissait passer deux profils
-// LinkedIn pour la meme personne. normalizeProfileUrls() compare sur une forme
-// canonique (barre finale, "www.", casse). Voir helpers/functions.php.
-$jsonLd['sameAs'] = normalizeProfileUrls(array_filter($profileSameAs));
-
-// JSON-LD, ProfessionalService (Bénin, Afrique, Europe francophone, Canada, Monde)
-$serviceSchema = [
-    '@context'          => 'https://schema.org',
-    '@type'             => 'ProfessionalService',
-    'name'              => $fullName . ($profile['profession'] ? ', ' . $profile['profession'] : ''),
-    'url'               => $portfolioUrl,
-    'description'       => $metaDesc,
-    'availableLanguage' => [
-        ['@type' => 'Language', 'name' => 'French',  'alternateName' => 'fr'],
-        ['@type' => 'Language', 'name' => 'English', 'alternateName' => 'en'],
-    ],
-    'areaServed' => [
-        // Villes ajoutees le 20/08/2026 : clients reels dans tout le Benin.
-        // Pas de sameAs Wikidata sur les villes, un identifiant errone serait
-        // pire qu'absent. Le pays porte deja son identifiant verifie.
-        ['@type' => 'City',    'name' => 'Cotonou'],
-        ['@type' => 'City',    'name' => 'Abomey-Calavi'],
-        ['@type' => 'City',    'name' => 'Porto-Novo'],
-        ['@type' => 'City',    'name' => 'Parakou'],
-        ['@type' => 'City',    'name' => 'Bohicon'],
-        ['@type' => 'City',    'name' => 'Djougou'],
-        ['@type' => 'City',    'name' => 'Ouidah'],
-        ['@type' => 'Country', 'name' => 'Bénin',          'sameAs' => 'https://www.wikidata.org/wiki/Q962'],
-        ['@type' => 'Country', 'name' => 'Togo',           'sameAs' => 'https://www.wikidata.org/wiki/Q945'],
-        ['@type' => 'Country', 'name' => 'Côte d\'Ivoire', 'sameAs' => 'https://www.wikidata.org/wiki/Q1008'],
-        // Couverture reelle confirmee le 20/08/2026. Les projets hors Benin
-        // sont menes a distance, ce que les pages villes annoncent explicitement.
-        // Pas de sameAs ici : ces identifiants Wikidata n'ont pas ete verifies,
-        // et un identifiant faux relie l'entite au mauvais pays.
-        ['@type' => 'Country', 'name' => 'Sénégal'],
-        ['@type' => 'Country', 'name' => 'Gabon'],
-        ['@type' => 'Country', 'name' => 'Congo'],
-        ['@type' => 'Country', 'name' => 'Niger'],
-        ['@type' => 'Country', 'name' => 'Burkina Faso'],
-        ['@type' => 'Country', 'name' => 'Nigeria'],
-        ['@type' => 'Country', 'name' => 'France'],
-        ['@type' => 'Country', 'name' => 'Belgique'],
-        ['@type' => 'Country', 'name' => 'Suisse'],
-        ['@type' => 'Country', 'name' => 'Canada'],
-    ],
-    'provider'   => ['@type' => 'Person', 'name' => $fullName, 'url' => $portfolioUrl],
-    'priceRange' => '$$',
-];
-if ($safeAvatarPath)                    $serviceSchema['image']     = $portfolioUrl . '/uploads/' . $safeAvatarPath;
-if ($contactInfo['email_public'] ?? '') $serviceSchema['email']     = $contactInfo['email_public'];
-if ($contactInfo['phone']        ?? '') $serviceSchema['telephone'] = $contactInfo['phone'];
-if ($contactInfo['city']         ?? '') {
-    $serviceSchema['address'] = [
-        '@type'           => 'PostalAddress',
-        'addressLocality' => $contactInfo['city']    ?? '',
-        'addressCountry'  => $contactInfo['country'] ?? 'BJ',
-    ];
-}
-if ($contactInfo['google_maps_url'] ?? '') $serviceSchema['hasMap'] = $contactInfo['google_maps_url'];
-// Horaires, 7j/7 (20/08/2026).
-// ATTENTION : les horaires qui s'affichent dans le Local Pack Google viennent de
-// la fiche Google Business, PAS d'ici. Ce balisage sert la coherence de l'entite
-// et les moteurs generatifs ; il doit dire la meme chose que la fiche Google.
-$serviceSchema['openingHoursSpecification'] = [[
-    '@type'     => 'OpeningHoursSpecification',
-    'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    'opens'     => '07:00',
-    'closes'    => '20:00',
-]];
-// Note agregee, calculee depuis les avis REELS de la table testimonials
-// (20/08/2026). Ces avis sont deja affiches plus bas dans la page par le
-// template : la regle Google "le balisage doit refleter un contenu visible"
-// est donc respectee.
-//
-// A SAVOIR : Google n'affiche PAS d'etoiles pour un avis qu'une entreprise
-// heberge sur son propre site ("self-serving review") quand le type est
-// LocalBusiness ou Organization. Les etoiles du Local Pack viennent de la
-// fiche Google Business, pas d'ici. Ce balisage sert la coherence de
-// l'entite et les moteurs generatifs, qui eux le lisent et le citent.
-try {
-    $stmtRating = $pdo->prepare(
-        "SELECT COUNT(*) AS n, AVG(rating) AS moyenne
-           FROM testimonials
-          WHERE user_id = ? AND rating IS NOT NULL AND rating BETWEEN 1 AND 5"
-    );
-    $stmtRating->execute([$userId]);
-    $ratingRow = $stmtRating->fetch(PDO::FETCH_ASSOC) ?: [];
-} catch (\Throwable $e) {
-    $ratingRow = [];
-}
-$ratingCount = (int) ($ratingRow['n'] ?? 0);
-// Seuil de 5 avis (20/08/2026). Au 20/08 la table n'en contient qu'UN :
-// publier "5,0 sur 1 avis" est un signal faible, invariablement parfait, et
-// typique de ce que les moteurs traitent comme auto-promotionnel. Le balisage
-// n'apparait qu'a partir de 5 avis, ou une moyenne commence a vouloir dire
-// quelque chose. Le seuil se leve tout seul des que les avis rentrent.
-if ($ratingCount >= 5) {
-    $serviceSchema['aggregateRating'] = [
-        '@type'       => 'AggregateRating',
-        'ratingValue' => (string) round((float) $ratingRow['moyenne'], 1),
-        'reviewCount' => (string) $ratingCount,
-        'bestRating'  => '5',
-        'worstRating' => '1',
-    ];
-}
-
-$serviceSchema['@id']                = $portfolioUrl . '/#service';
-$serviceSchema['provider']           = ['@id' => $idPerson];
-$serviceSchema['parentOrganization'] = ['@id' => $idOrg];
-
-// JSON-LD, Organization : declare la marque "Richard Technologies" comme entite
-// a part entiere et la rattache a la personne (founder <-> worksFor).
-$orgSchema = [
-    '@context' => 'https://schema.org',
-    '@type'    => 'Organization',
-    '@id'      => $idOrg,
-    'name'     => $orgName,
-    'url'      => $portfolioUrl,
-    'founder'  => ['@id' => $idPerson],
-    'employee' => ['@id' => $idPerson],
-    'areaServed' => $serviceSchema['areaServed'],
-    'knowsLanguage' => ['fr', 'en'],
-];
-$orgLogoPath = siteLogoUrl();
-if ($orgLogoPath !== '') {
-    $orgSchema['logo'] = ['@type' => 'ImageObject', 'url' => $portfolioUrl . $orgLogoPath];
-}
-if ($contactInfo['email_public'] ?? '') $orgSchema['email']     = $contactInfo['email_public'];
-if ($contactInfo['phone']        ?? '') $orgSchema['telephone'] = $contactInfo['phone'];
-if (!empty($jsonLd['address']))         $orgSchema['address']   = $jsonLd['address'];
-if (!empty($jsonLd['sameAs']))          $orgSchema['sameAs']    = $jsonLd['sameAs'];
-
-// JSON-LD, WebSite. Volontairement SANS SearchAction : la recherche du blog est
-// un filtre JavaScript cote client, sans URL de resultats. Declarer une
-// SearchAction sans point d'entree reel serait une fausse declaration.
-$websiteSchema = [
-    '@context'   => 'https://schema.org',
-    '@type'      => 'WebSite',
-    '@id'        => $idWebsite,
-    'url'        => $portfolioUrl,
-    'name'       => $orgName,
-    'inLanguage' => 'fr-BJ',
-    'publisher'  => ['@id' => $idOrg],
-];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -452,10 +286,7 @@ $websiteSchema = [
     </style>
 
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json"><?= json_encode($jsonLd, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
-    <script type="application/ld+json"><?= json_encode($orgSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
-    <script type="application/ld+json"><?= json_encode($websiteSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
-    <script type="application/ld+json"><?= json_encode($serviceSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
+    <?= schema_graphe($schemasAccueil) ?>
 
     <?php include __DIR__ . '/partials/tracking.php'; ?>
 </head>

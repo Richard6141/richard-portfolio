@@ -15,17 +15,11 @@ $ogImage = ($profile['avatar_url'] ?? '') ? $portfolioUrl . '/uploads/' . preg_r
 
 $pageSchemas = [
     [
-        '@context' => 'https://schema.org', '@type' => 'AboutPage',
+        '@type' => 'AboutPage', '@id' => $aboutUrl . '#webpage',
         'url' => $aboutUrl, 'name' => $pageTitle,
-        'mainEntity' => [
-            '@type' => 'Person', '@id' => $portfolioUrl . '/#person', 'name' => $fullName, 'jobTitle' => $profession,
-            'description' => $fullName . ', developpeur web et consultant en digitalisation d\'entreprise a ' . $h_city . ', Benin.',
-            'url' => $portfolioUrl, 'worksFor' => ['@type' => 'Organization', '@id' => $portfolioUrl . '/#organization', 'name' => 'Richard Technologies'],
-            'address' => ['@type' => 'PostalAddress', 'addressLocality' => $h_city, 'addressCountry' => 'BJ'],
-            'knowsAbout' => ['Developpement web', 'Referencement naturel (SEO)', 'Automatisation', 'Intelligence artificielle', 'Digitalisation d\'entreprise'],
-            'sameAs' => ['https://www.linkedin.com/in/richard-salanon/', 'https://github.com/Richard6141'],
-        ],
+        'mainEntity' => ['@id' => SITE_URL . '/#person'],
     ],
+    schema_personne(faits(), SITE_URL, true),
     [
         '@context' => 'https://schema.org', '@type' => 'BreadcrumbList',
         'itemListElement' => [

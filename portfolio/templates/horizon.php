@@ -428,10 +428,9 @@ $h_logo = siteLogoUrl();
     <h2>Ce qu'on me demande souvent.</h2>
   </div>
   <div class="faq stg">
-    <details><summary>Combien coûte un site web au Bénin ?</summary><p>Une vitrine démarre autour de 300 000 FCFA ; un e-commerce ou une application sur-mesure davantage. Je vous remets un devis clair après le cadrage, gratuit et sans engagement.</p></details>
-    <details><summary>Quels sont les délais de réalisation ?</summary><p>Un site vitrine : 1 à 3 semaines. Une application sur-mesure : 1 à 3 mois selon la complexité. Le planning précis est fixé ensemble dès le cadrage.</p></details>
-    <details><summary>Comment se passe le paiement ?</summary><p>Par Mobile Money (MTN / Moov), carte bancaire, PayPal, virement ou espèces, en plusieurs tranches liées aux étapes du projet.</p></details>
-    <details><summary>Assurez-vous la maintenance après livraison ?</summary><p>Oui : mises à jour, corrections, sauvegardes et améliorations sont disponibles en forfait de maintenance, ou à la demande.</p></details>
+    <?php foreach ((require __DIR__ . '/horizon-faq.php') as $qr): ?>
+    <details><summary><?= sanitize($qr['q']) ?></summary><p><?= sanitize($qr['r']) ?></p></details>
+    <?php endforeach; ?>
   </div>
 </div></section>
 
@@ -445,17 +444,6 @@ $h_logo = siteLogoUrl();
 </main>
 
 <!-- FOOTER -->
-<?php
-$pv2FaqSchema = [
-  '@context' => 'https://schema.org',
-  '@type' => 'FAQPage',
-  'mainEntity' => [
-    ['@type'=>'Question','name'=>'Combien coûte un site web au Bénin ?','acceptedAnswer'=>['@type'=>'Answer','text'=>'Une vitrine démarre autour de 300 000 FCFA ; un e-commerce ou une application sur-mesure davantage. Devis clair après le cadrage, gratuit et sans engagement.']],
-    ['@type'=>'Question','name'=>'Quels sont les délais de réalisation ?','acceptedAnswer'=>['@type'=>'Answer','text'=>'Un site vitrine : 1 à 3 semaines. Une application sur-mesure : 1 à 3 mois selon la complexité.']],
-    ['@type'=>'Question','name'=>'Comment se passe le paiement ?','acceptedAnswer'=>['@type'=>'Answer','text'=>'Par Mobile Money (MTN / Moov), carte bancaire, PayPal, virement ou espèces, en plusieurs tranches.']],
-    ['@type'=>'Question','name'=>'Assurez-vous la maintenance après livraison ?','acceptedAnswer'=>['@type'=>'Answer','text'=>'Oui : mises à jour, corrections, sauvegardes et améliorations en forfait de maintenance ou à la demande.']],
-  ],
-];
-?>
-<script type="application/ld+json"><?= json_encode($pv2FaqSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
+<?php /* Nœud FAQPage déplacé le 03/10/2026 dans le graphe unique du <head>
+         (portfolio/index.php), depuis horizon-faq.php : texte identique au visible. */ ?>
 <?php $navHome = ''; include __DIR__ . '/../partials/pv2-footer.php'; ?>

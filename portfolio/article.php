@@ -122,8 +122,8 @@ $blogPosting = [
     'description' => $post['summary'] ?: mb_substr(strip_tags($post['content'] ?? ''), 0, 300),
     // @id : relie l'auteur et l'editeur aux entites declarees sur l'accueil,
     // au lieu de recreer deux entites anonymes a chaque article (20/08/2026).
-    'author' => ['@type' => 'Person', '@id' => $portfolioUrl . '/#person', 'name' => $fullName, 'url' => $portfolioUrl],
-    'publisher' => ['@type' => 'Organization', '@id' => $portfolioUrl . '/#organization', 'name' => 'Richard Technologies', 'url' => $portfolioUrl],
+    'author'    => ['@id' => $portfolioUrl . '/#person'],
+    'publisher' => ['@id' => $portfolioUrl . '/#person'],
     'isPartOf' => ['@id' => $portfolioUrl . '/#website'],
     'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => $pageUrl],
 ];

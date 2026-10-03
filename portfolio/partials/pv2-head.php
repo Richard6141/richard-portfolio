@@ -76,9 +76,9 @@ $pv2FontUrl = 'https://fonts.googleapis.com/css2?family=' . implode('&family=', 
 <link rel="preload" as="style" href="/assets/css/portfolio-v2.css?v=<?= $cssV ?>">
 <link rel="stylesheet" href="/assets/css/portfolio-v2.css?v=<?= $cssV ?>">
 
-<?php foreach ($pageSchemas as $schema): ?>
-<script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
-<?php endforeach; ?>
+<?php /* Graphe JSON-LD unique (03/10/2026, spec 5.3) : Person, WebSite et
+         ProfessionalService sur chaque page, plus les nœuds propres à la page. */ ?>
+<?= schema_graphe(array_merge(schema_noeuds_base(faits(), SITE_URL), $pageSchemas)) ?>
 
 <?php include __DIR__ . '/tracking.php'; ?>
 </head>

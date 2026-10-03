@@ -991,8 +991,9 @@ function test_schema_echappe_les_chevrons_et_esperluettes(): void
 {
     $html = schema_graphe([['@type' => 'Thing', 'name' => 'A <b>gras</b> & co']]);
     assert_not_contains('<b>', $html);
-    assert_contains('<', $html);
-    assert_contains('&', $html);
+    assert_contains('\\u003C', $html);
+    assert_contains('\\u0026', $html);
+    assert_not_contains(' & ', $html);
 }
 
 function test_schema_retire_les_valeurs_vides(): void
