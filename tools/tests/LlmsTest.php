@@ -70,3 +70,15 @@ function test_llms_servi_en_local_meme_sans_base(): void
     assert_same(200, $r['code']);
     assert_contains('## Pages locales', $r['corps']);
 }
+
+function test_llms_registres_par_type_matrice_en_version_complete(): void
+{
+    require_once racine('helpers/functions.php');
+    $r = racine('tools/tests/fixtures/registres');
+    $court = llms_registres('https://richardsalanon.com', false, $r, '2026-10-03');
+    assert_same('https://richardsalanon.com/comparatifs/a-vs-b', $court['Comparatifs'][0]['url']);
+    assert_true(!isset($court['Pages par pays']));
+    $long = llms_registres('https://richardsalanon.com', true, $r, '2026-10-03');
+    assert_contains('/services/site-test/benin', implode(' ', array_column($long['Pages par pays'], 'url')));
+    assert_not_contains('site-futur', json_encode($long));
+}
