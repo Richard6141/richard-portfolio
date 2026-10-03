@@ -16,22 +16,22 @@ Valeurs actuellement publiées, à confirmer ou corriger :
 - [ ] Intitulé : **Consultant en digitalisation et développement logiciel**
 - [ ] Ville : **Cotonou** (déménagement d'Abomey-Calavi noté le 03/10/2026)
 - [ ] Quartier de Cotonou à afficher (facultatif, utile pour Google Maps) : ______
-- [ ] Adresse postale publiable ? oui / non. Si oui : ______
+- [ ] Adresse postale publiable ? oui / non. Si oui :Non__
 - [ ] Téléphone et WhatsApp : **+229 01 61 41 31 77**
-- [ ] E-mail public : **richardsomasse@gmail.com** (une adresse @richardsalanon.com serait plus crédible : en créer une ?)
+- [ ] E-mail public : **richardsomasse@gmail.com** (une adresse @richardsalanon.com serait plus crédible : en créer une ?) tu peux utiliser aussi contact@richardsalanon.com
 - [ ] Expérience : **plus de 6 ans** de développement
-- [ ] Horaires : **7 jours sur 7, de 7 h à 20 h** (doit être identique à ta fiche Google)
-- [ ] Formation : **EPITECH** (année, diplôme exact : ______)
+- [ ] Horaires : **7 jours sur 7, de 7 h à 20 h** (doit être identique à ta fiche Google) oui
+- [ ] Formation : **EPITECH** (année, diplôme exact : 2022)
 - [ ] Langues : **français, anglais** (autres : ______)
-- [ ] Mention publique « co-fondateur d'Audyxa » : oui / non
-- [ ] Mention publique de Wapy comme ton produit : oui / non
+- [ ] Mention publique « co-fondateur d'Audyxa » : oui 
+- [ ] Mention publique de Wapy comme ton produit : oui
 
 Chiffres que je n'affiche pas tant que tu ne les confirmes pas :
 
-- Nombre de projets livrés : ______
-- Nombre de clients : ______
-- Nombre de personnes formées : ______
-- Pays où tu as réellement travaillé (sur place ou à distance) : ______
+- Nombre de projets livrés : 50+
+- Nombre de clients : 100+
+- Nombre de personnes formées : 200+
+- Pays où tu as réellement travaillé (sur place ou à distance) : Bénin, Cote d'ivoire, togo, Gabon, Congo RDC, Niger, Burkina faso, Mali, France, Canada, Belgique, Suisse romande, Sénégal, Tchad
 
 Profils officiels à relier à ton site (laisser vide si inexistant) :
 
@@ -42,8 +42,8 @@ Profils officiels à relier à ton site (laisser vide si inexistant) :
 - ComeUp ou Codeur : ______
 - YouTube : ______
 - X / Twitter : ______
-- Instagram : ______
-- Fiche Google Business Profile (lien) : ______
+- Instagram : [richard.salanon](https://www.instagram.com/richard.salanon?stkn=NWg1MWxoN21mejh4)
+- Fiche Google Business Profile (lien) : https://share.google/gt6twMV8EgUWdB8FG
 
 Mentions légales (page obligatoire) : numéro RCCM ______, IFU ______, statut (auto-entrepreneur,
 entreprise individuelle, société) ______.
