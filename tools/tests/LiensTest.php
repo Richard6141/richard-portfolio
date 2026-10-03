@@ -24,7 +24,9 @@ function test_liens_aucun_lien_mort_ou_obsolete_dans_les_pages(): void
 
 function test_liens_pied_de_page_vers_les_vraies_pages_d_expertise(): void
 {
-    $pied = (string) file_get_contents(racine('portfolio/partials/pv2-footer.php'));
+    // Depuis la vague 0B, le pied est généré depuis le registre de navigation :
+    // on vérifie le rendu (pied_rendre, défini dans PiedTest.php).
+    $pied = pied_rendre();
     assert_not_contains('/a-propos/#expertise', $pied);
     foreach (['/services/application-web-sur-mesure', '/services/automatisation-ia', '/services/referencement-naturel-seo', '/consultant-digitalisation', '/formations/'] as $url) {
         assert_contains('href="' . $url . '"', $pied);
