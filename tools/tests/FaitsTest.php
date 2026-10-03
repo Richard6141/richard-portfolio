@@ -10,6 +10,22 @@ function test_faits_la_fiche_du_site_se_charge(): void
     assert_same('BJ', $f['pays_code']);
 }
 
+function test_faits_richard_vit_a_cotonou(): void
+{
+    // Déménagement signalé par Richard le 03/10/2026 : Cotonou, plus Abomey-Calavi.
+    $f = faits_depuis(racine('portfolio/data/faits.php'));
+    assert_same('Cotonou', $f['ville']);
+    assert_contains('basé à Cotonou', $f['phrase_entite']);
+    assert_not_contains('Abomey-Calavi', $f['phrase_entite']);
+}
+
+function test_faits_les_gabarits_ne_lisent_plus_la_ville_en_base(): void
+{
+    foreach (['portfolio/partials/pv2-bootstrap.php', 'portfolio/article.php', 'portfolio/templates/horizon.php', 'portfolio/index.php'] as $fichier) {
+        assert_not_contains("\$contactInfo['city']", (string) file_get_contents(racine($fichier)), $fichier);
+    }
+}
+
 function test_faits_aucun_tiret_cadratin_ni_fleche_dans_les_textes(): void
 {
     $f = faits_depuis(racine('portfolio/data/faits.php'));

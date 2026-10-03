@@ -18,11 +18,13 @@ return [
 
     // Phrase d'entité : reprise à l'identique sur l'accueil, l'à-propos,
     // les pages pays et dans llms.txt (spec 5.5, règle 5).
-    'phrase_entite' => 'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Abomey-Calavi, dans l\'agglomération de Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
+    'phrase_entite' => 'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
     'description_courte' => 'Consultant en digitalisation et développeur logiciel au Bénin : sites, applications, automatisation, IA, Odoo, Dolibarr et formations, Afrique et Europe.',
 
-    // Ville publiée par Richard dans son tableau de bord (contact_info.city).
-    'ville'         => 'Abomey-Calavi',
+    // Richard vit à Cotonou depuis son déménagement (signalé le 03/10/2026) ;
+    // le tableau de bord indiquait encore Abomey-Calavi. Les gabarits lisent
+    // cette valeur, plus contact_info.city.
+    'ville'         => 'Cotonou',
     'agglomeration' => 'Cotonou',
     'pays'          => 'Bénin',
     'pays_code'     => 'BJ',

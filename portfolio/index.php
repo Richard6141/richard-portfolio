@@ -124,7 +124,7 @@ $animSpeed = match($appearance['animation_speed'] ?? 'normal') {
 
 // Données locales pour enrichir les fallbacks SEO (mots-clés géo)
 $seoProfession = $profile['profession'] ?? 'Développeur web freelance';
-$seoCity       = $contactInfo['city'] ?? ($profile['city'] ?? 'Cotonou');
+$seoCity       = fait('ville'); // fiche de faits (03/10/2026), plus contact_info.city
 $rawCountry    = $contactInfo['country'] ?? ($profile['country'] ?? 'Bénin');
 $seoCountry    = ($rawCountry === 'BJ') ? 'Bénin' : $rawCountry;
 
@@ -227,7 +227,7 @@ if (($profile['template'] ?? 'starter') === 'horizon') {
 
     <!-- Ciblage local Bénin (l'international sera ajouté en Phase 4) -->
     <meta name="geo.region" content="BJ">
-    <meta name="geo.placename" content="<?= sanitize($contactInfo['city'] ?? 'Cotonou, Bénin') ?>">
+    <meta name="geo.placename" content="<?= sanitize(fait('ville') . ', ' . fait('pays')) ?>">
     <meta http-equiv="content-language" content="fr">
 
     <?php if ($seo['google_site_verification'] ?? ''): ?>

@@ -26,7 +26,7 @@ $h_recent = $stmt->fetchAll();
 
 $h_email = $contactInfo['email_public'] ?? '';
 $h_phone = $contactInfo['phone'] ?? '';
-$h_city  = $contactInfo['city'] ?? 'Cotonou';
+$h_city  = fait('ville'); // fiche de faits (03/10/2026), plus contact_info.city
 $h_mailto = $h_email ? 'mailto:' . rawurlencode($h_email) . '?subject=' . rawurlencode('Demande de devis') : '#contact';
 $h_lead  = $profile['bio_short'] ?? "Je conçois des sites, applications et automatisations qui font gagner du temps et des clients aux entreprises, du cadrage à la mise en ligne.";
 $h_svcCount = max(count($h_services), 8);
