@@ -97,6 +97,7 @@ $horaires = fait('horaires');
 
   <div class="pied__bas">
     <p>© <?= date('Y') ?> <?= sanitize(fait('nom')) ?>. Tous droits réservés.</p>
+    <p><a href="/mentions-legales">Mentions légales</a> · <a href="/confidentialite">Confidentialité</a></p>
     <p><?= sanitize(fait('intitule')) ?>, <?= sanitize(fait('ville')) ?>.</p>
   </div>
 </footer>

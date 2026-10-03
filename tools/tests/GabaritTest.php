@@ -50,5 +50,5 @@ function test_gabarit_hub_liste_les_pages_publiees(): void
 
 function test_gabarit_page_noindex_respectee(): void
 {
-    assert_contains('content="noindex, nofollow"', gabarit_rendre('page', 'page-legale-test'));
+    assert_contains('content="noindex, follow"', gabarit_rendre('page', 'page-legale-test'));
 }

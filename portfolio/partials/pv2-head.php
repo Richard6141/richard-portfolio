@@ -27,7 +27,7 @@ $cssV = @filemtime(__DIR__ . '/../../assets/css/portfolio-v2.css') ?: '1';
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= sanitize($pageTitle) ?></title>
 <meta name="description" content="<?= sanitize($pageDesc) ?>">
-<meta name="robots" content="<?= $pageRobots === 'noindex' ? 'noindex, nofollow' : 'index, follow' ?>">
+<meta name="robots" content="<?= $pageRobots === 'noindex' ? 'noindex, follow' : 'index, follow' ?>">
 <link rel="canonical" href="<?= sanitize($pageCanonical) ?>">
 <link rel="alternate" hreflang="fr" href="<?= sanitize($pageCanonical) ?>">
 <link rel="alternate" hreflang="x-default" href="<?= sanitize($pageCanonical) ?>">

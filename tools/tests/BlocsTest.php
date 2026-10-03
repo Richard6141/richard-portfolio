@@ -118,3 +118,11 @@ function test_blocs_galerie_dimensions_et_sources_locales_seulement(): void
     assert_contains('loading="lazy"', $html);
     assert_not_contains('evil.example', $html);
 }
+
+function test_blocs_liens_mailto_seulement_vers_une_adresse(): void
+{
+    assert_contains('<a href="mailto:richardsomasse@gmail.com">', bloc_texte('<a href="mailto:richardsomasse@gmail.com">écrire</a>'));
+    assert_same('mailto:richardsomasse@gmail.com', bloc_href('mailto:richardsomasse@gmail.com'));
+    assert_same(null, bloc_href('mailto:javascript'));
+    assert_not_contains('<a href=', bloc_texte('<a href="mailto:pas-une-adresse">x</a>'));
+}
