@@ -85,3 +85,37 @@ function test_accueil_regressions_visuelles_relevees_en_recette(): void
     assert_true((bool) preg_match('#\.pv2 \.faq summary::after\{content:"";position:static;#', $css), 'chevron de FAQ dans le flux');
     assert_true((bool) preg_match('#\.pv2 \.barre-mobile\{[^}]*grid-template-columns:repeat\(2,minmax\(0,1fr\)\)#', $css), 'barre mobile en colonnes compressibles');
 }
+
+function test_accueil_sections_de_la_base_rendues_et_echappees(): void
+{
+    // En production la base alimente réalisations, avis et articles ; en local
+    // elle est absente. Lignes fictives : slug vide, image absente, contenu hostile.
+    require_once racine('helpers/functions.php');
+    require_once racine('helpers/blocs.php');
+    $nav     = require racine('portfolio/data/navigation.php');
+    $clients = [];
+    $faq     = require racine('portfolio/templates/horizon-faq.php');
+    $portraitSrcset = '/assets/img/richard-salanon-400.webp 400w'; $portraitSizes = '90vw';
+    $h_projects = [
+        ['title' => 'Site <b>KossKoss</b>', 'slug' => 'kosskoss', 'image_url' => 'p.webp', 'category' => 'E-commerce', 'description_short' => 'Boutique'],
+        ['title' => 'Projet sans page', 'slug' => '', 'image_url' => '', 'category' => null, 'description_short' => null],
+    ];
+    $h_testimonials = [['content' => '<script>alert(1)</script>Merci', 'author_name' => 'Awa', 'author_role' => 'Gérante', 'author_company' => '', 'rating' => 5]];
+    $h_recent = [['title' => 'Article', 'slug' => 'article-test', 'cover_image' => null, 'category' => '', 'published_at' => null]];
+    set_error_handler(static function (int $n, string $m): bool { throw new ErrorException($m, 0, $n); });
+    try {
+        ob_start();
+        include racine('portfolio/templates/accueil.php');
+        $html = (string) ob_get_clean();
+    } finally {
+        restore_error_handler();
+    }
+    assert_contains('href="/realisations/kosskoss"', $html);
+    assert_contains('src="/uploads/p.webp"', $html);
+    assert_contains('Site &lt;b&gt;KossKoss&lt;/b&gt;', $html);
+    assert_contains('<article class="carte-projet', $html, 'projet sans slug rendu sans lien');
+    assert_not_contains('<script>alert(1)</script>', $html);
+    assert_contains('href="/blog/article-test"', $html);
+    assert_not_contains('Vérifié', $html);
+    assert_not_contains('★', $html, 'aucune note affichée sans preuve');
+}
