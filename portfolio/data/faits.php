@@ -35,11 +35,19 @@ return [
 
     // « Plus de six ans », confirmé par Richard le 20/08/2026.
     'experience_ans'    => 6,
-    'projets_livres'    => null, // à valider
-    'clients'           => null, // à valider
-    'personnes_formees' => null, // à valider
+    // Chiffres donnés par Richard dans le questionnaire du 03/10/2026.
+    'projets_livres'    => '50+',
+    'clients'           => '100+',
+    'personnes_formees' => '200+',
 
-    'formation' => ['nom' => 'EPITECH', 'url' => 'https://www.epitech.eu'],
+    // Pays où Richard a réellement travaillé, sur place ou à distance
+    // (questionnaire du 03/10/2026). Distinct de « zones », la zone servie.
+    'pays_travailles' => [
+        'Bénin', 'Côte d\'Ivoire', 'Togo', 'Sénégal', 'Burkina Faso', 'Mali', 'Niger', 'Tchad',
+        'Gabon', 'RD Congo', 'France', 'Belgique', 'Suisse', 'Canada',
+    ],
+
+    'formation' => ['nom' => 'EPITECH', 'url' => 'https://www.epitech.eu', 'annee' => 2022],
     'langues'   => ['fr' => 'Français', 'en' => 'Anglais'],
 
     'competences' => [
@@ -65,6 +73,9 @@ return [
         'https://www.linkedin.com/in/richard-salanon/',
         'https://github.com/Richard6141',
         'https://facebook.com/somasse.richard.salanon',
+        'https://www.instagram.com/richard.salanon',
+        // Fiche Google Business Profile (identifiant du Knowledge Graph).
+        'https://www.google.com/search?kgmid=/g/11njzjmv6s',
     ],
 
     'produits' => [

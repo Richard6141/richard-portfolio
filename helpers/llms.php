@@ -30,6 +30,18 @@ function llms_contenu(array $f, string $base, array $sections, bool $complet): s
     if (!empty($f['projets_livres'])) {
         $reperes[] = 'Projets livrés : ' . $f['projets_livres'] . '.';
     }
+    if (!empty($f['clients'])) {
+        $reperes[] = 'Clients : ' . $f['clients'] . '.';
+    }
+    if (!empty($f['personnes_formees'])) {
+        $reperes[] = 'Personnes formées : ' . $f['personnes_formees'] . '.';
+    }
+    if (!empty($f['pays_travailles'])) {
+        $reperes[] = 'Pays où il a déjà travaillé : ' . implode(', ', $f['pays_travailles']) . '.';
+    }
+    if (!empty($f['formation']['nom'])) {
+        $reperes[] = 'Formation : ' . $f['formation']['nom'] . (!empty($f['formation']['annee']) ? ' (' . $f['formation']['annee'] . ')' : '') . '.';
+    }
     if (!empty($f['tarifs_depart'])) {
         $tarifs = [];
         foreach ($f['tarifs_depart'] as $offre => $prix) {

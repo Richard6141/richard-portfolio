@@ -31,6 +31,16 @@ function test_llms_omet_les_sections_vides_et_les_faits_inconnus(): void
     assert_not_contains('projets livrés', $txt);
 }
 
+function test_llms_reprend_les_chiffres_valides_par_richard(): void
+{
+    $txt = llms_contenu(faits_depuis(racine('portfolio/data/faits.php')), 'https://richardsalanon.com', llms_test_sections(), false);
+    assert_contains('- Projets livrés : 50+.', $txt);
+    assert_contains('- Clients : 100+.', $txt);
+    assert_contains('- Personnes formées : 200+.', $txt);
+    assert_contains('- Pays où il a déjà travaillé : Bénin, ', $txt);
+    assert_contains('EPITECH (2022)', $txt);
+}
+
 function test_llms_est_accentue_et_sans_ancienne_marque(): void
 {
     $txt = llms_contenu(faits_depuis(racine('portfolio/data/faits.php')), 'https://richardsalanon.com', llms_test_sections(), true);

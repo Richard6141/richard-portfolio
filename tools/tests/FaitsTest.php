@@ -19,6 +19,21 @@ function test_faits_richard_vit_a_cotonou(): void
     assert_not_contains('Abomey-Calavi', $f['phrase_entite']);
 }
 
+function test_faits_reponses_du_questionnaire_du_03_10_2026(): void
+{
+    $f = faits_depuis(racine('portfolio/data/faits.php'));
+    assert_same('50+', $f['projets_livres']);
+    assert_same('100+', $f['clients']);
+    assert_same('200+', $f['personnes_formees']);
+    assert_same(2022, $f['formation']['annee']);
+    assert_same(14, count($f['pays_travailles']));
+    foreach (['Tchad', 'Suisse', 'RD Congo', 'Côte d\'Ivoire'] as $pays) {
+        assert_true(in_array($pays, $f['pays_travailles'], true), "pays travaillé absent : {$pays}");
+    }
+    assert_true(in_array('https://www.instagram.com/richard.salanon', $f['profils'], true), 'Instagram absent');
+    assert_true(in_array('https://www.google.com/search?kgmid=/g/11njzjmv6s', $f['profils'], true), 'fiche Google absente');
+}
+
 function test_faits_les_gabarits_ne_lisent_plus_la_ville_en_base(): void
 {
     foreach (['portfolio/partials/pv2-bootstrap.php', 'portfolio/article.php', 'portfolio/templates/horizon.php', 'portfolio/index.php'] as $fichier) {
