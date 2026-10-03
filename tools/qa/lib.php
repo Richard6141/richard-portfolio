@@ -239,3 +239,72 @@ function qa_part_propre(array $a, array $autres): float
     }
     return (float) (count($propres) / count($a));
 }
+
+/** Rendu en mémoire d'une page de registre (même gabarit que le site, date ignorée). */
+function qa_rendre_registre(array $page, string $racine = REGISTRES_RACINE): string
+{
+    $registreRacine = $racine;
+    $pdo = null; $userId = 0; $profile = []; $contactInfo = []; $socialLinks = [];
+    $fullName = fait('nom'); $h_city = fait('ville'); $h_phone = fait('telephone'); $h_email = fait('email');
+    $h_mailto = '/contact'; $h_logo = siteLogoUrl(); $portfolioUrl = SITE_URL;
+    ob_start();
+    include __DIR__ . '/../../portfolio/' . (in_array($page['type'], ['hub', 'domaine'], true) ? 'registre-hub.php' : 'registre.php');
+    return (string) ob_get_clean();
+}
+
+/** Devise conforme (spec 6.4) : jamais de franc CFA hors d'Afrique, prix africain en devise locale. */
+function qa_devise_conforme(string $texte, string $devise): bool
+{
+    $cfa  = (bool) preg_match('/\b(?:F\s?CFA|FCFA|XOF|XAF)\b/u', $texte);
+    $euro = (bool) preg_match('/€|\bEUR\b|\beuros?\b/u', $texte);
+    if (in_array($devise, ['EUR', 'CHF', 'CAD'], true)) {
+        return !$cfa;
+    }
+    if (in_array($devise, ['XOF', 'XAF'], true) && $euro) {
+        return $cfa;
+    }
+    return true;
+}
+
+/** Le FAQPage reprend exactement les questions visibles du bloc FAQ. */
+function qa_faq_conforme(string $html): bool
+{
+    $visibles = 0;
+    if (preg_match('#<section class="bloc bloc--faq"[^>]*>(.*?)</section>#s', $html, $m)) {
+        $visibles = substr_count($m[1], '<details');
+    }
+    $declarees = 0;
+    if (preg_match('#<script type="application/ld\+json">(.*?)</script>#s', $html, $j)) {
+        foreach ((json_decode($j[1], true)['@graph'] ?? []) as $n) {
+            if (($n['@type'] ?? '') === 'FAQPage') {
+                $declarees = count($n['mainEntity'] ?? []);
+            }
+        }
+    }
+    return $visibles === $declarees;
+}
+
+/** Échecs de la section 8 pour une page rendue. */
+function qa_controle_page(array $page, string $html): array
+{
+    $echecs = [];
+    $texte  = qa_texte_principal($html);
+    $meta   = qa_meta($html);
+    $index  = ($page['robots'] ?? 'index') === 'index';
+    if ($index && qa_compter_mots($texte) < 3200) {
+        $echecs[] = 'mots (' . qa_compter_mots($texte) . ')';
+    }
+    $lt = mb_strlen(html_entity_decode($meta['title'], ENT_QUOTES | ENT_HTML5, 'UTF-8'));
+    $ld = mb_strlen(html_entity_decode($meta['description'], ENT_QUOTES | ENT_HTML5, 'UTF-8'));
+    if ($lt < 50 || $lt > 60) { $echecs[] = "title ({$lt})"; }
+    if ($ld < 140 || $ld > 155) { $echecs[] = "meta ({$ld})"; }
+    if ($meta['h1'] !== 1) { $echecs[] = 'h1'; }
+    $ld_json = qa_jsonld($html);
+    if ($ld_json['balises'] !== 1 || $ld_json['erreurs'] || array_intersect($ld_json['types'], QA_TYPES_INTERDITS)) { $echecs[] = 'schema'; }
+    if (!qa_faq_conforme($html)) { $echecs[] = 'faq'; }
+    if ($t = qa_texte_interdit($texte)) { $echecs[] = 'texte (' . implode(', ', $t) . ')'; }
+    if ($f = qa_faits_incoherents($texte, faits())) { $echecs[] = 'faits (' . implode(', ', $f) . ')'; }
+    $cle = str_ends_with($page['type'], '-pays') ? basename($page['slug']) : ($page['type'] === 'pays' ? $page['slug'] : null);
+    if ($cle !== null && !qa_devise_conforme($texte, pays_liste()[$cle]['devise'])) { $echecs[] = 'prix'; }
+    return $echecs;
+}

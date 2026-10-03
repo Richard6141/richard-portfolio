@@ -54,3 +54,17 @@ function test_maillage_ariane_hub_seulement_s_il_est_publie(): void
     assert_same(['Services', '/services/'], $sp[1]);
     assert_same('/services/site-test', $sp[2][1]);
 }
+
+function test_maillage_page_pays_vers_ses_villes_sans_avertissement(): void
+{
+    // Recette 0C : data/villes.php, chargé dans maillage_liens(), écrasait ses variables locales.
+    set_error_handler(static function (int $n, string $m): bool { throw new ErrorException($m, 0, $n); });
+    try {
+        $g = maillage_liens(maillage_fixture('pays', 'benin'), racine('tools/tests/fixtures/registres'), '2026-10-03');
+    } finally {
+        restore_error_handler();
+    }
+    $liens = [];
+    foreach ($g as $groupe) { foreach ($groupe['liens'] as $l) { $liens[$l[1]] = $l[0]; } }
+    assert_same('Développeur web à Cotonou', $liens['/developpeur-web-cotonou'] ?? null);
+}

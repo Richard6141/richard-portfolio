@@ -60,6 +60,13 @@ function maillage_ariane(array $p, string $racine = REGISTRES_RACINE, ?string $a
     return $miettes;
 }
 
+/** Villes historiques (data/villes.php), chargées dans leur propre portée : le fichier définit ses variables. */
+function maillage_villes(): array
+{
+    static $villes = null;
+    return $villes ??= (array) require __DIR__ . '/../portfolio/data/villes.php';
+}
+
 function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): array
 {
     $groupes = [];
@@ -97,7 +104,7 @@ function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $au
                 static fn(array $q): bool => basename($q['slug']) === $p['slug']));
             $ajouter('Pays voisins', array_map(static fn(string $v): ?array => maillage_page('pays', $v, $racine, $aujourdhui), $pays[$p['slug']]['voisins']));
             $villes = [];
-            foreach ((array) (require __DIR__ . '/../portfolio/data/villes.php') as $v) {
+            foreach (maillage_villes() as $v) {
                 if (($v['pays_slug'] ?? '') === $p['slug']) {
                     $villes[] = ['titre' => 'Développeur web à ' . $v['nom'], 'url' => '/developpeur-web-' . $v['slug']];
                 }
