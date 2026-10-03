@@ -50,6 +50,12 @@ function test_qa_texte_interdit_detecte_tirets_gabarits_et_mots_sans_accent(): v
     assert_same([], qa_texte_interdit('Le développement à Cotonou, dès le lendemain.'));
 }
 
+function test_qa_texte_interdit_ignore_les_mots_contenant_une_lettre_accentuee(): void
+{
+    // « kilomètres » contient « tres » après un « è » : ce n'est pas une faute.
+    assert_same([], qa_texte_interdit('À trente kilomètres, au centre des paramètres.'));
+}
+
 function test_qa_liens_classe_internes_interdits_et_whatsapp(): void
 {
     $html = '<a href="/services/site-e-commerce">a</a><a href="https://richardsalanon.com/contact">b</a>'

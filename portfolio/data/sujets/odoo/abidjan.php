@@ -151,7 +151,7 @@ return array (
         1 => 'Cela change la nature du projet : il ne s\'agit plus de combler un manque mais de tenir un niveau. Un ERP approximatif se remarque immédiatement, en interne comme chez les clients.',
         2 => 'La difficulté dominante à Abidjan est la consolidation multi-points. Un article disponible dans une boutique reste invisible pour les autres : le stock global existe mais personne ne peut l\'exploiter. C\'est le premier chantier dans la plupart des cas.',
         3 => 'Le second est l\'intégration des paiements. Wave et Orange Money ne sont pas des options sur ce marché : un parcours qui ne les propose pas perd le client au dernier écran, après tout le coût d\'acquisition.',
-        4 => 'La gestion multi-entrepôts et multi-sociétés d\'Odoo repond directement a la consolidation multi-points abidjanaise, sans developpement specifique. C\'est le cas ou son cout se justifie le plus clairement.',
+        4 => 'La gestion multi-entrepôts et multi-sociétés d\'Odoo répond directement à la consolidation multi-points abidjanaise, sans développement spécifique. C\'est le cas où son coût se justifie le plus clairement.',
       ),
     ),
     6 => 

@@ -151,7 +151,7 @@ return array (
         1 => 'Un ERP y réussit s\'il répond à deux questions : où est le dossier, et qui a validé quoi. Tout le reste, tableaux de bord, automatisations sophistiquées, vient après, et souvent ne vient jamais parce que le besoin réel était celui-là.',
         2 => 'Le paramétrage doit donc épouser le circuit obligatoire plutôt que de proposer un circuit idéal. Quand une procédure est imposée par une tutelle, l\'ERP la trace ; il ne la réforme pas.',
         3 => 'La production des états annuels est le second gain attendu. Les statistiques que vous reconstituez chaque fin d\'exercice deviennent consultables en continu, sans travail supplémentaire, c\'est souvent ce qui justifie le projet à lui seul.',
-        4 => 'L\'atout d\'Odoo a Porto-Novo est son moteur de validation : les circuits d\'approbation en cascade s\'y parametrent sans developpement. C\'est precisement ce qu\'attend une structure qui doit prouver qui a valide quoi.',
+        4 => 'L\'atout d\'Odoo à Porto-Novo est son moteur de validation : les circuits d\'approbation en cascade s\'y paramètrent sans développement. C\'est précisément ce qu\'attend une structure qui doit prouver qui a validé quoi.',
       ),
     ),
     6 => 

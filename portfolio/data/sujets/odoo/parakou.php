@@ -151,7 +151,7 @@ return array (
         1 => 'La saisie doit donc fonctionner sur téléphone, hors connexion, et se synchroniser seule au retour du réseau. Ce n\'est pas un confort : c\'est la condition pour que les données existent.',
         2 => 'Le suivi des avances producteurs vient ensuite. Qui a reçu quoi, qui a livré combien, ce qui reste dû : cette information vit aujourd\'hui dans plusieurs cahiers tenus par plusieurs personnes, et c\'est de là que naissent la quasi-totalité des litiges de fin de campagne.',
         3 => 'La saisonnalité, enfin, change le calcul de rentabilité. L\'outil se rentabilise sur une seule campagne s\'il évite les litiges d\'avances et permet de décider de vendre au bon moment. Hors saison, il ne coûte que son hébergement.',
-        4 => 'Odoo dispose d\'un mode hors connexion sur son point de vente, mais pas sur l\'ensemble de ses ecrans. Pour la collecte terrain, on lui adjoint donc une application de saisie legere qui alimente Odoo au retour du reseau, c\'est un poste de travail supplementaire a budgeter, et je le dis avant, pas après.',
+        4 => 'Odoo dispose d\'un mode hors connexion sur son point de vente, mais pas sur l\'ensemble de ses écrans. Pour la collecte terrain, on lui adjoint donc une application de saisie légère qui alimente Odoo au retour du réseau, c\'est un poste de travail supplémentaire à budgéter, et je le dis avant, pas après.',
       ),
     ),
     6 => 

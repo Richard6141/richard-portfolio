@@ -151,7 +151,7 @@ return array (
         1 => 'Le premier apport d\'un ERP y est la reprenabilité du dossier. Quand celui qui le suit est absent, il faut aujourd\'hui le reconstituer depuis les e-mails pendant que le client attend. Un dossier unique règle cela immédiatement.',
         2 => 'Le second est l\'alerte d\'échéance. Fin de franchise de magasinage, validité de document, délai de règlement : ces dépassements coûtent sans contrepartie et se répètent. C\'est la fonction qui se rentabilise le plus vite sur ce métier.',
         3 => 'Le troisième est la marge par dossier, aujourd\'hui connue au mieux une fois tout soldé. La calculer en continu change les décisions commerciales pendant l\'opération, pas après.',
-        4 => 'Odoo permet de modeliser un dossier de transit comme un projet portant ses propres couts et echeances. La fonctionnalite existe ; c\'est le parametrage qui demande du soin, pas le developpement.',
+        4 => 'Odoo permet de modéliser un dossier de transit comme un projet portant ses propres coûts et échéances. La fonctionnalité existe ; c\'est le paramétrage qui demande du soin, pas le développement.',
       ),
     ),
     6 => 

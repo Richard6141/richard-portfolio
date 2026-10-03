@@ -114,7 +114,8 @@ function qa_texte_interdit(string $texte): array
             $problemes[] = $nom;
         }
     }
-    if (preg_match_all('/\b(' . implode('|', QA_MOTS_SANS_ACCENT) . ')\b/i', $texte, $m) > 0) {
+    // Frontières en lettres Unicode : avec \b, « kilomètres » donnait « tres ».
+    if (preg_match_all('/(?<!\p{L})(' . implode('|', QA_MOTS_SANS_ACCENT) . ')(?!\p{L})/iu', $texte, $m) > 0) {
         foreach (array_unique(array_map('strtolower', $m[1])) as $mot) {
             $problemes[] = 'sans accent : ' . $mot;
         }
