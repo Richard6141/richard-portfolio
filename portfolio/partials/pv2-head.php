@@ -17,18 +17,6 @@ if (empty($ogImage) && !empty($profile['avatar_url']) && !empty($portfolioUrl)) 
 
 $cssV = @filemtime(__DIR__ . '/../../assets/css/portfolio-v2.css') ?: '1';
 
-// Polices, declarees ici depuis le 20/08/2026 (l'@import de portfolio-v2.css a
-// ete retire : il bloquait le rendu 560 ms). Graisses identiques a l'ancien
-// import : aucun changement visuel.
-// Fraunces et Lora ne servent qu'aux pages editoriales (.art-*, .blog-hero) :
-// les pages services et a-propos ne les telechargent plus (~40 Ko economises).
-// $pv2EditorialFonts est mis a true par article.php et blog-index.php.
-$pv2Fonts = ['Roboto:wght@400;500;700;900', 'Roboto+Mono:wght@500'];
-if (!empty($pv2EditorialFonts)) {
-    $pv2Fonts[] = 'Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500';
-    $pv2Fonts[] = 'Lora:ital,wght@0,400;0,500;0,600;1,400;1,500';
-}
-$pv2FontUrl = 'https://fonts.googleapis.com/css2?family=' . implode('&family=', $pv2Fonts) . '&display=swap';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -65,11 +53,7 @@ $pv2FontUrl = 'https://fonts.googleapis.com/css2?family=' . implode('&family=', 
 <meta name="geo.placename" content="<?= sanitize($h_city) ?>">
 <meta http-equiv="content-language" content="fr">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="<?= $pv2FontUrl ?>">
-<link href="<?= $pv2FontUrl ?>" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="<?= $pv2FontUrl ?>" rel="stylesheet"></noscript>
+<?php include __DIR__ . '/polices.php'; ?>
 
 <link rel="preload" as="style" href="/assets/css/portfolio-v2.css?v=<?= $cssV ?>">
 <link rel="stylesheet" href="/assets/css/portfolio-v2.css?v=<?= $cssV ?>">
