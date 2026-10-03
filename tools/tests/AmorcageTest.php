@@ -22,3 +22,18 @@ function test_amorcage_pages_de_base_repondent_503_proprement(): void
         assert_not_contains('Fatal error', $r['corps'], $chemin);
     }
 }
+
+function test_amorcage_revue_mode_maintenance_du_tableau_de_bord(): void
+{
+    // Revue finale 0B : l'ancien accueil honorait « maintenance » ; le nouveau non.
+    // Rétabli dans l'amorçage commun, donc pour tout le site, en 503.
+    require_once racine('helpers/functions.php');
+    assert_same(null, page_maintenance(['is_maintenance' => 0]));
+    assert_same(null, page_maintenance([]));
+    $html = (string) page_maintenance(['is_maintenance' => 1, 'maintenance_message' => '<b>Retour</b> demain']);
+    assert_contains('&lt;b&gt;Retour&lt;/b&gt; demain', $html);
+    assert_contains('noindex', $html);
+    $src = (string) file_get_contents(racine('portfolio/partials/pv2-bootstrap.php'));
+    assert_contains('page_maintenance($profile)', $src);
+    assert_contains('http_response_code(503)', $src);
+}

@@ -31,6 +31,25 @@ function exiger_base(?PDO $pdo): void
 }
 
 /**
+ * Page de maintenance si le tableau de bord l'active (profiles.is_maintenance), sinon null.
+ * L'amorçage commun la sert en 503 avec Retry-After : Google garde alors la page
+ * indexée, là où l'ancien accueil répondait 200 avec noindex.
+ */
+function page_maintenance(array $profile): ?string
+{
+    if (empty($profile['is_maintenance'])) {
+        return null;
+    }
+    $nom = htmlspecialchars((string) fait('nom'), ENT_QUOTES, 'UTF-8');
+    $msg = trim((string) ($profile['maintenance_message'] ?? '')) ?: 'Le site est en cours de mise à jour. Il revient dans quelques instants.';
+    return '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="robots" content="noindex">'
+         . '<meta name="viewport" content="width=device-width, initial-scale=1"><title>' . $nom . ', maintenance en cours</title></head>'
+         . '<body style="margin:0;min-height:100vh;display:grid;place-items:center;font-family:system-ui,sans-serif;background:#14161F;color:#fff;padding:2rem">'
+         . '<main style="max-width:32rem;text-align:center"><h1 style="margin:0 0 1rem">' . $nom . '</h1><p style="line-height:1.6;opacity:.85">'
+         . htmlspecialchars($msg, ENT_QUOTES, 'UTF-8') . '</p></main></body></html>';
+}
+
+/**
  * Envoie une reponse JSON de succes et arrete le script.
  *
  * @param mixed       $data    Donnees a retourner.

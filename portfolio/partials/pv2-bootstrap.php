@@ -35,6 +35,15 @@ if ($pdo !== null) {
     $stmt->execute([$userId]);
     $profile = $stmt->fetch() ?: [];
 
+    // Maintenance activée au tableau de bord : 503 pour tout le site.
+    if (($maintenance = page_maintenance($profile)) !== null) {
+        http_response_code(503);
+        header('Retry-After: 3600');
+        header('Content-Type: text/html; charset=UTF-8');
+        echo $maintenance;
+        exit;
+    }
+
     // Portfolio non publié : bloquer l'indexation
     if (empty($profile['is_published'])) {
         http_response_code(404);

@@ -30,7 +30,9 @@ $h_testimonials = $lire($pdo, 'SELECT * FROM testimonials WHERE user_id = ? ORDE
 $h_recent       = $lire($pdo, "SELECT title, slug, cover_image, category, published_at FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) ORDER BY published_at DESC LIMIT 3", [$userId]);
 
 $nav     = require __DIR__ . '/data/navigation.php';
+// Le bandeau ne montre que des projets clients : Wapy, produit de Richard, en sort.
 $clients = json_decode((string) @file_get_contents(__DIR__ . '/../assets/img/clients/clients.json'), true) ?: [];
+$clients = array_values(array_filter($clients, static fn (array $c): bool => empty($c['produit_propre'])));
 $faq     = require __DIR__ . '/templates/horizon-faq.php';
 
 $homeUrl       = SITE_URL . '/';

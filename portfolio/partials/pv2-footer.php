@@ -43,7 +43,7 @@ $reseaux = [
 ];
 $horaires = fait('horaires');
 ?>
-<footer class="pied">
+<footer class="pied" id="pied">
   <div class="pied__grille">
     <div class="pied__marque">
       <a href="/" class="pied__logo" aria-label="Richard SALANON, accueil"><img src="/assets/img/logo-rs-clair.svg" alt="Richard SALANON" width="232" height="48" loading="lazy" decoding="async"></a>

@@ -119,3 +119,34 @@ function test_accueil_sections_de_la_base_rendues_et_echappees(): void
     assert_not_contains('Vérifié', $html);
     assert_not_contains('★', $html, 'aucune note affichée sans preuve');
 }
+
+function test_accueil_revue_mots_tournants_en_json_valide(): void
+{
+    // Revue finale 0B : l'apostrophe de « Côte d'Ivoire » fermait l'attribut entre
+    // apostrophes ; JSON.parse échouait en silence et le H1 ne tournait jamais.
+    $html = http_local('/')['corps'];
+    $dom = new DOMDocument();
+    @$dom->loadHTML('<?xml encoding="UTF-8">' . $html);
+    $rot = $dom->getElementById('pv2-rot');
+    assert_true($rot !== null, 'rotateur absent');
+    $mots = json_decode($rot->getAttribute('data-words'), true);
+    assert_true(is_array($mots) && count($mots) >= 4, 'data-words illisible : ' . $rot->getAttribute('data-words'));
+    assert_true(in_array("en Côte d'Ivoire", $mots, true), 'mot avec apostrophe perdu');
+}
+
+function test_accueil_revue_logos_presentes_honnetement(): void
+{
+    // Sept projets sur dix ont été réalisés en sous-traitance pour Digital
+    // Développement ; Wapy est le produit de Richard, pas un client.
+    $html = http_local('/')['corps'];
+    assert_contains('sous-traitance pour Digital Développement', $html);
+    assert_not_contains('confié leur projet', $html);
+    assert_not_contains('/assets/img/clients/wapy.svg', $html);
+}
+
+function test_accueil_revue_bandeau_statique_en_mouvement_reduit(): void
+{
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    $bloc = substr($css, (int) strpos($css, 'Accueil : mouvement réduit'));
+    assert_contains('.pv2 .defilant__piste{flex:1 1 100%;min-width:0;', $bloc, 'piste encore large de 1 579 px');
+}

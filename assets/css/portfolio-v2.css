@@ -1333,6 +1333,7 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 
 /* ---------- Bande de logos ---------- */
 .pv2 .confiance{padding:2.5rem 0 3rem;border-bottom:1px solid var(--line)}
+.pv2 .confiance__note{margin:-1.1rem 0 1.5rem;text-align:center;font-size:.85rem;color:var(--muted)}
 .pv2 .confiance__titre{margin:0 0 1.5rem;text-align:center;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .pv2 .defilant{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .pv2 .defilant__piste{display:flex;align-items:center;gap:3.5rem;flex-shrink:0;margin:0;padding:0 3.5rem 0 0;list-style:none;animation:defile 45s linear infinite}
@@ -1451,9 +1452,22 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 /* ---------- Accueil : mouvement réduit ---------- */
 @media (prefers-reduced-motion: reduce){
   .pv2 .defilant{flex-wrap:wrap;justify-content:center;-webkit-mask-image:none;mask-image:none}
-  .pv2 .defilant__piste{flex-wrap:wrap;justify-content:center;gap:1.5rem 2.5rem;padding:0;animation:none!important}
+  .pv2 .defilant__piste{flex:1 1 100%;min-width:0;flex-wrap:wrap;justify-content:center;gap:1.5rem 2.5rem;padding:0;animation:none!important}
   .pv2 .defilant__piste[aria-hidden="true"]{display:none}
   .pv2 .plan-projet__piste span{animation:none!important;transform:scaleX(1)}
   .pv2 .plan-projet__pastille{animation:none!important;background:var(--link);color:#fff}
   .pv2 .point-vivant::after{animation:none!important}
 }
+
+/* Écrans de 400 px et moins (revue finale 0B) : le bouton de la bande d'appel
+   sortait du cadre à 320 px, celui de la barre mobile débordait de 4 px. */
+@media (max-width:400px){
+  .pv2 .cta-inner{padding-left:1.25rem;padding-right:1.25rem}
+  .pv2 .cta-inner .btn{white-space:normal;text-align:center;min-height:44px;height:auto;padding-top:.6rem;padding-bottom:.6rem}
+  .pv2 .barre-mobile{gap:.5rem;padding-left:12px;padding-right:12px}
+  .pv2 .barre-mobile .btn{padding:0 .4rem;gap:.3rem;font-size:.88rem}
+}
+
+/* Sans JavaScript : lien de secours vers le plan du pied de page (revue finale 0B). */
+.pv2 .entete__menu-secours{display:inline-grid;place-items:center;width:44px;height:44px;border:1px solid var(--line-strong);border-radius:var(--radius);background:#fff;color:var(--ink)}
+@media (min-width:1024px){.pv2 .entete__menu-secours{display:none}}

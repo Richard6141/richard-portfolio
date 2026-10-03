@@ -12,6 +12,8 @@ $chiffres = [
     ['n' => (int) fait('personnes_formees'), 'suffixe' => '+', 'l' => 'personnes formées'],
     ['n' => count(fait('zones')), 'suffixe' => '', 'l' => 'pays servis'],
 ];
+$motsTournants = ['au Bénin', "en Côte d'Ivoire", 'au Sénégal', 'au Togo', 'en France', 'au Canada'];
+$sousTraites = count(array_filter($clients, static fn (array $c): bool => !empty($c['sous_traitance'])));
 $planProjet = ['Cadrage gratuit', 'Maquette validée', 'Développement', 'Mise en ligne', 'Référencement'];
 $formats = [
     ['icone' => 'monitor', 'nom' => 'À distance', 'qui' => 'Entreprises hors du Bénin : Afrique, Europe, Canada.', 'comment' => 'Visioconférence, points d\'avancement réguliers, démonstrations en ligne.', 'retenir' => 'Le format le plus courant, sans surcoût de déplacement.'],
@@ -36,7 +38,7 @@ $etapes = [
   <div class="hero-accueil__grille">
     <div class="hero-accueil__texte">
       <span class="eyebrow"><span class="point-vivant" aria-hidden="true"></span><?= sanitize(fait('nom')) ?>, disponible pour vos projets</span>
-      <h1><?= sanitize(fait('intitule')) ?> <span class="hero-accueil__rot" id="pv2-rot" data-words='["au Bénin","en Côte d'Ivoire","au Sénégal","au Togo","en France","au Canada"]'>au Bénin</span></h1>
+      <h1><?= sanitize(fait('intitule')) ?> <span class="hero-accueil__rot" id="pv2-rot" data-words="<?= sanitize(json_encode($motsTournants, JSON_UNESCAPED_UNICODE)) ?>"><?= sanitize($motsTournants[0]) ?></span></h1>
       <p class="hero-accueil__chapeau">Sites, applications web et mobiles, automatisations et intégrations d'IA, ERP Odoo et Dolibarr, formations : je conçois les outils qui font gagner du temps et des clients aux entreprises d'Afrique francophone, d'Europe et du Canada.</p>
       <div class="hero-accueil__actions">
         <a class="btn btn--grand" href="/contact">Demander un devis</a>
@@ -65,7 +67,8 @@ $etapes = [
 <?php if ($clients): ?>
 <!-- CONFIANCE -->
 <section class="confiance" id="confiance" aria-labelledby="confiance-titre">
-  <p class="confiance__titre" id="confiance-titre">Ils m'ont confié leur projet</p>
+  <p class="confiance__titre" id="confiance-titre">Sites et applications que j'ai développés</p>
+  <?php if ($sousTraites > 0): ?><p class="confiance__note">Dont <?= $sousTraites ?> en sous-traitance pour Digital Développement.</p><?php endif; ?>
   <div class="defilant">
     <?php foreach ([false, true] as $copie): ?>
     <ul class="defilant__piste"<?= $copie ? ' aria-hidden="true"' : '' ?>>

@@ -107,6 +107,7 @@
         "largeur": 321,
         "hauteur": 96,
         "fond_sombre": false,
-        "sous_traitance": false
+        "sous_traitance": false,
+        "produit_propre": true
     }
 ]

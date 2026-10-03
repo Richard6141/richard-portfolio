@@ -92,15 +92,19 @@
       var premier = tiroir.querySelector('summary, a');
       if (premier) premier.focus();
     });
-    tiroir.addEventListener('keydown', function (e) {
-      if (e.key !== 'Tab') return;
-      var cibles = Array.prototype.filter.call(tiroir.querySelectorAll('summary, a, button'), function (el) { return el.offsetParent !== null; });
-      if (!cibles.length) return;
+    doc.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab' || tiroir.hidden) return;
+      // Le bouton de fermeture fait partie du cycle : sans lui, seul Échap refermait le tiroir.
+      var cibles = [burger].concat(Array.prototype.filter.call(tiroir.querySelectorAll('summary, a, button'), function (el) { return el.offsetParent !== null; }));
       var premier = cibles[0], dernier = cibles[cibles.length - 1];
       if (e.shiftKey && doc.activeElement === premier) { e.preventDefault(); dernier.focus(); }
       else if (!e.shiftKey && doc.activeElement === dernier) { e.preventDefault(); premier.focus(); }
     });
     tiroir.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { fermerTiroir(false); }); });
+    // Tablette tournée en paysage tiroir ouvert : le tiroir disparaît en CSS, le défilement doit revenir.
+    var bureau = window.matchMedia('(min-width: 64rem)');
+    var auBureau = function (m) { if (m.matches) fermerTiroir(false); };
+    if (bureau.addEventListener) bureau.addEventListener('change', auBureau); else bureau.addListener(auBureau);
   }
 
   /* ---------- Apparitions au défilement ---------- */

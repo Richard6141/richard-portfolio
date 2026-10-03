@@ -60,3 +60,29 @@ function test_composants_sans_javascript_rien_ne_reste_masque(): void
     }
     assert_true(count($m[2]) >= 2, 'règles .rv et .stg introuvables');
 }
+
+function test_composants_revue_tiroir_clavier_et_rotation_d_ecran(): void
+{
+    // Revue finale 0B : le bouton de fermeture sortait du cycle de tabulation ; une
+    // tablette tournée en paysage tiroir ouvert gardait le défilement bloqué.
+    $js = (string) file_get_contents(racine('assets/js/portfolio-v2.js'));
+    assert_contains('[burger].concat(', $js, 'bouton de fermeture dans le cycle');
+    assert_contains("matchMedia('(min-width: 64rem)')", $js);
+    assert_true((bool) preg_match('#bureau\.addEventListener\(\'change\'#', $js), 'fermeture au passage en largeur bureau');
+}
+
+function test_composants_revue_menu_mobile_sans_javascript(): void
+{
+    $html = http_local('/contact')['corps'];
+    assert_true((bool) preg_match('#<noscript>.*href="\#pied".*</noscript>#s', $html), 'lien de secours vers le pied');
+    assert_contains('<footer class="pied" id="pied">', $html);
+}
+
+function test_composants_revue_boutons_entiers_a_320_px(): void
+{
+    // Revue finale 0B : « Demander mon devis gratuit » sortait de la bande d'appel
+    // (overflow:hidden) à 320 px ; le bouton de la barre mobile débordait de 4 px.
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    assert_true((bool) preg_match('#@media \(max-width:400px\)\{[^@]*\.pv2 \.cta-inner\{padding-left:1\.25rem;padding-right:1\.25rem\}[^@]*\.pv2 \.cta-inner \.btn\{white-space:normal;#', $css), 'règle 320 px de la bande d\'appel');
+    assert_true((bool) preg_match('#@media \(max-width:400px\)\{[^@]*\.pv2 \.barre-mobile \.btn\{[^}]*font-size:\.88rem#', $css), 'règle 320 px de la barre mobile');
+}
