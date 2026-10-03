@@ -52,7 +52,7 @@ $horaires = fait('horaires');
         <li><?= icone('map-pin', 18) ?><span><?= sanitize(fait('ville')) ?>, <?= sanitize(fait('pays')) ?>. Interventions dans 34 pays, sur place ou à distance.</span></li>
         <li><?= icone('phone', 18) ?><a href="tel:<?= sanitize(fait('telephone')) ?>"><?= sanitize(fait('telephone')) ?></a></li>
         <li><?= icone('envelope-simple', 18) ?><a href="mailto:<?= sanitize(fait('email')) ?>"><?= sanitize(fait('email')) ?></a></li>
-        <?php if (!empty($horaires)): ?><li><?= icone('clock', 18) ?><span>7 jours sur 7, de <?= sanitize(str_replace(':', ' h ', $horaires['ouverture'])) ?> à <?= sanitize(str_replace(':', ' h ', $horaires['fermeture'])) ?></span></li><?php endif; ?>
+        <?php if (!empty($horaires)): ?><li><?= icone('clock', 18) ?><span><?= sanitize(horaires_texte($horaires)) ?></span></li><?php endif; ?>
       </ul>
       <ul class="pied__reseaux">
         <?php foreach (fait('profils') as $url): foreach ($reseaux as $domaine => [$icone, $nom]): if (str_contains($url, $domaine)): ?>

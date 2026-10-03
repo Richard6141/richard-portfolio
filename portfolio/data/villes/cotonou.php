@@ -2,7 +2,7 @@
 // Cotonou, capitale economique. Marche le plus concurrentiel du pays.
 return [
 'nom' => 'Cotonou', 'slug' => 'cotonou', 'pays' => 'Bénin', 'pays_slug' => 'benin',
-'region' => 'Littoral', 'distance_km' => 18, 'sur_place' => true,
+'region' => 'Littoral', 'distance_km' => 0, 'sur_place' => true,
 
 'accroche' => 'Sites, applications et automatisation pour les entreprises de la capitale économique',
 
@@ -54,9 +54,9 @@ return [
 
 'cas_type' => "Le cas le plus fréquent que je rencontre à Cotonou : une entreprise d'une dizaine de personnes, installée depuis des années, avec des clients fidèles et aucune présence en ligne. Les commandes arrivent par WhatsApp, les stocks se suivent sur un cahier, la facturation se fait sous Word. Le patron ne cherche pas « un site » : il veut arrêter de perdre des commandes et savoir où en est son stock. On commence donc rarement par la vitrine. On installe d'abord l'outil de gestion, on relie la fiche Google pour capter les recherches locales, et le site vient dans un second temps, une fois que l'organisation interne tient debout.",
 
-'pourquoi_moi' => "À Cotonou, l'offre ne manque pas : agences installées, prestataires occasionnels, étudiants en freelance. Ce qui manque, c'est le milieu, un interlocuteur qui reste joignable après la livraison, sans facturer des tarifs d'agence. Vous parlez directement à la personne qui écrit le code, sans commercial intermédiaire, avec un devis détaillé poste par poste. Et je suis à vingt minutes : quand il faut se voir, on se voit.",
+'pourquoi_moi' => "À Cotonou, l'offre ne manque pas : agences installées, prestataires occasionnels, étudiants en freelance. Ce qui manque, c'est le milieu, un interlocuteur qui reste joignable après la livraison, sans facturer des tarifs d'agence. Vous parlez directement à la personne qui écrit le code, sans commercial intermédiaire, avec un devis détaillé poste par poste. Et je suis sur place, à Cotonou : quand il faut se voir, on se voit.",
 
-'travailler' => "Cotonou est à une vingtaine de kilomètres de mon bureau d'Abomey-Calavi : les rendez-vous sur place sont possibles, à Ganhi, Cadjèhoun, Akpakpa ou Fidjrossè, généralement dans la même semaine. Le cadrage se fait souvent en présentiel, la suite à distance avec des points d'avancement réguliers.",
+'travailler' => "Je suis basé à Cotonou même : les rendez-vous sur place sont simples à organiser, à Ganhi, Cadjèhoun, Akpakpa ou Fidjrossè, généralement dans la même semaine. Le cadrage se fait souvent en présentiel, la suite à distance avec des points d'avancement réguliers.",
 
 'paiement' => "MTN Mobile Money, Moov Money, virement bancaire, carte, PayPal ou espèces.",
 
@@ -64,7 +64,7 @@ return [
 
 'faq' => [
     ["Combien coûte un site web à Cotonou ?", "Une vitrine professionnelle démarre autour de 300 000 FCFA, une landing page à partir de 150 000 FCFA, une boutique en ligne davantage selon le catalogue et les paiements à intégrer. Le devis est établi après un cadrage gratuit, poste par poste, sans engagement de votre part."],
-    ["Pouvez-vous vous déplacer dans mes locaux ?", "Oui. Cotonou est à une vingtaine de kilomètres d'Abomey-Calavi, où je suis basé. Un rendez-vous sur site est possible pour le cadrage initial et pour la formation à la livraison. Le reste du projet se mène à distance, avec des points d'avancement réguliers par téléphone."],
+    ["Pouvez-vous vous déplacer dans mes locaux ?", "Oui. Je suis basé à Cotonou, les déplacements dans vos locaux sont donc simples. Un rendez-vous sur site est possible pour le cadrage initial et pour la formation à la livraison. Le reste du projet se mène à distance, avec des points d'avancement réguliers par téléphone."],
     ["Combien de temps pour apparaître sur Google à Cotonou ?", "Le référencement local donne ses premiers effets en quatre à huit semaines, une fois la fiche Google Business optimisée et les avis lancés. Le référencement naturel classique demande trois à six mois sur des requêtes disputées comme celles de Cotonou, où la concurrence est déjà installée."],
     ["Puis-je être premier sur « création site web Cotonou » ?", "Pas rapidement, et je préfère le dire franchement. Cette requête est tenue depuis des années par des agences installées. La stratégie qui fonctionne consiste à viser d'abord votre métier et votre quartier, où les résultats sont pauvres, puis à élargir une fois cette base acquise."],
     ["Travaillez-vous avec les grossistes de Dantokpa ?", "Oui, et le besoin y est rarement un site. C'est d'abord un outil de gestion : savoir ce qui est en stock, ce qui a été livré, ce qui reste à encaisser, depuis un téléphone. La vitrine vient ensuite, quand l'organisation interne est stabilisée et que vous avez du temps pour elle."],

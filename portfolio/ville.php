@@ -114,7 +114,7 @@ include __DIR__ . '/partials/pv2-header.php';
       <?php if ($v['sur_place'] && $v['distance_km']): ?>
       <div class="vc-row">
         <span class="vc-k">Distance</span>
-        <span class="vc-v"><?= (int) $v['distance_km'] ?> km depuis Abomey-Calavi</span>
+        <span class="vc-v"><?= (int) $v['distance_km'] ?> km depuis Cotonou</span>
       </div>
       <?php endif; ?>
       <div class="vc-row">

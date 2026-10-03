@@ -10,7 +10,7 @@ return array (
   'pays' => 'Belgique',
   'titre' => 'Externaliser son développement web depuis Bruxelles',
   'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Bruxelles combine un tissu institutionnel exigeant sur la conformité et un réseau dense de petites structures aux budgets contraints. Ces deux mondes ont un point commun : ils veulent des livrables documentés et un prestataire capable de répondre à un questionnaire de conformité sans improviser. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises belges à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'intro' => 'Bruxelles combine un tissu institutionnel exigeant sur la conformité et un réseau dense de petites structures aux budgets contraints. Ces deux mondes ont un point commun : ils veulent des livrables documentés et un prestataire capable de répondre à un questionnaire de conformité sans improviser. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je travaille avec des entreprises belges à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
   'sections' => 
   array (
     0 => 

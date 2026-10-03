@@ -10,7 +10,7 @@ return array (
   'pays' => 'Canada',
   'titre' => 'Externaliser son développement web depuis Québec',
   'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'La ville de Québec a un tissu de PME solide et une culture d\'affaires où la relation compte autant que le prix. Y travailler à distance suppose d\'être irréprochable sur la régularité des points et la clarté des comptes rendus, ce qui, à cinq heures de décalage, ne s\'improvise pas. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises canadiennes à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'intro' => 'La ville de Québec a un tissu de PME solide et une culture d\'affaires où la relation compte autant que le prix. Y travailler à distance suppose d\'être irréprochable sur la régularité des points et la clarté des comptes rendus, ce qui, à cinq heures de décalage, ne s\'improvise pas. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je travaille avec des entreprises canadiennes à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
   'sections' => 
   array (
     0 => 

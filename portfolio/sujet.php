@@ -131,7 +131,7 @@ include __DIR__ . '/partials/pv2-header.php';
       <?php if (!empty($vRec['sur_place']) && !empty($vRec['distance_km'])): ?>
       <div class="vc-row">
         <span class="vc-k">Distance</span>
-        <span class="vc-v"><?= (int) $vRec['distance_km'] ?> km depuis Abomey-Calavi</span>
+        <span class="vc-v"><?= (int) $vRec['distance_km'] ?> km depuis Cotonou</span>
       </div>
       <?php endif; ?>
       <?php else: ?>

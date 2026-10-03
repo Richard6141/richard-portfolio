@@ -56,7 +56,7 @@ return [
 
 'pourquoi_moi' => "Je ne vends pas un site à quelqu'un dont le problème est la gestion. Le cadrage sert précisément à distinguer les deux, et il m'arrive régulièrement de recommander un budget plus petit que celui envisagé, ou de reporter la vitrine. Ce qui est livré ici est pensé pour le terrain : conçu pour le téléphone, en français simple, avec une formation en deux temps et une période de double saisie pour que l'outil soit réellement adopté et pas seulement installé.",
 
-'travailler' => "Bohicon est à environ 130 kilomètres d'Abomey-Calavi. Les projets s'y mènent principalement à distance ; un déplacement reste possible pour un cadrage important ou une formation sur site, à convenir au devis.",
+'travailler' => "Bohicon est à environ 130 kilomètres de Cotonou. Les projets s'y mènent principalement à distance ; un déplacement reste possible pour un cadrage important ou une formation sur site, à convenir au devis.",
 
 'paiement' => "MTN Mobile Money, Moov Money, virement bancaire, carte ou espèces.",
 
