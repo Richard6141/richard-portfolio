@@ -14,8 +14,9 @@ $contactUrl = $portfolioUrl . '/contact';
 
 $h_whatsapp = trim((string)($contactInfo['whatsapp'] ?? ''));
 $h_address  = trim((string)($contactInfo['address'] ?? ''));
-$h_country  = trim((string)($contactInfo['country'] ?? '')) ?: 'Bénin';
-if ($h_country === 'BJ') { $h_country = 'Bénin'; }
+// Pays lu dans la fiche de faits (03/10/2026) : contact_info.country valait
+// « Benin », sans accent, affiché tel quel sur la page.
+$h_country  = fait('pays');
 $h_maps     = trim((string)($contactInfo['google_maps_url'] ?? ''));
 $h_hours    = trim((string)($contactInfo['availability_hours'] ?? ''));
 $h_response = trim((string)($contactInfo['response_time'] ?? ''));
