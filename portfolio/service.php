@@ -24,9 +24,11 @@ $others  = array_values(array_filter($allServices, fn($s) => $s['id'] !== $svc['
 $svcUrl  = $portfolioUrl . '/services/' . $slug;
 $contentHtml = trim($svc['content_html'] ?? '');
 
-$pageTitle    = seoTitle($svc['title'] . ' à ' . $h_city . ', Bénin', $fullName);
+// Title sans ville (03/10/2026) : les 17 pages services étaient toutes
+// calées sur « à Abomey-Calavi, Bénin », à rebours de la cible internationale.
+$pageTitle    = seoTitle($svc['title'], $fullName);
 $descBase     = trim(($svc['description'] ?? '') . ($feats ? ' ' . implode(', ', array_slice($feats, 0, 3)) . '.' : ''));
-$pageDesc     = seoDescription($descBase ?: ($svc['title'] . ' au Bénin par ' . $fullName));
+$pageDesc     = seoDescription($descBase ?: ($svc['title'] . ' par ' . $fullName . ', en Afrique francophone, en Europe et au Canada.'));
 $pageCanonical = $svcUrl;
 $ogImage = ($profile['avatar_url'] ?? '') ? $portfolioUrl . '/uploads/' . preg_replace('/\.\.[\\/]/', '', $profile['avatar_url']) : '';
 
@@ -35,11 +37,8 @@ $pageSchemas = [
         '@context' => 'https://schema.org', '@type' => 'Service',
         'name' => $svc['title'], 'serviceType' => $svc['title'],
         'description' => $svc['description'] ?? '', 'url' => $svcUrl,
-        'areaServed' => [
-            ['@type' => 'City', 'name' => $h_city],
-            ['@type' => 'Country', 'name' => 'Bénin', 'sameAs' => 'https://www.wikidata.org/wiki/Q962'],
-        ],
-        'provider' => ['@type' => 'Person', 'name' => $fullName, 'url' => $portfolioUrl],
+        'areaServed'  => array_map(static fn(string $pays): array => ['@type' => 'Country', 'name' => $pays], fait('zones')),
+        'provider'    => ['@id' => SITE_URL . '/#person'],
         'offers' => ['@type' => 'Offer', 'priceCurrency' => 'XOF', 'description' => $svc['price'] ?: 'Sur devis'],
     ],
     [
