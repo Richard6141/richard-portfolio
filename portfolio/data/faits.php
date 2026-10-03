@@ -93,7 +93,13 @@ return [
     // Horaires publiés depuis le 20/08/2026 (à aligner sur la fiche Google Business).
     'horaires' => ['jours' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'ouverture' => '07:00', 'fermeture' => '20:00'],
 
-    'photo' => null, // portrait définitif posé en vague 0B
+    // Portrait fourni par Richard le 03/10/2026 (vague 0B).
+    'photo'    => '/assets/img/richard-salanon-800.webp',
+    'photo_og' => '/assets/img/richard-salanon-og.jpg',
+
+    // Mentions légales (questionnaire du 03/10/2026). RCCM : non communiqué.
+    'statut' => 'Auto-entrepreneur',
+    'ifu'    => '0202348994221',
 
     // Zones servies : les 34 pays de la spec (6.4), dans l'ordre des tranches.
     'zones' => [

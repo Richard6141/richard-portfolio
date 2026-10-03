@@ -1,0 +1,15 @@
+{
+  "name": "carte-pays",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Genere assets/img/carte-pays.svg, la carte statique des pays servis.",
+  "type": "module",
+  "scripts": {
+    "generer": "node generer-carte.mjs"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

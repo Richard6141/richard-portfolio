@@ -183,17 +183,12 @@ if (($profile['template'] ?? 'starter') === 'horizon') {
     */ ?>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.php">
-    <link rel="shortcut icon" href="/favicon.php">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 
     <!-- Open Graph -->
     <?php
-    $ogImage = '';
-    if ($profile['og_image_url'] ?? '') {
-        $ogImage = $portfolioUrl . '/uploads/' . $profile['og_image_url'];
-    } elseif ($profile['avatar_url'] ?? '') {
-        $ogImage = $portfolioUrl . '/uploads/' . $profile['avatar_url'];
-    }
+    // Visuel de partage 1200x630 de la nouvelle identité (vague 0B).
+    $ogImage = SITE_URL . fait('photo_og');
     ?>
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?= sanitize($ogTitle) ?>">

@@ -258,7 +258,8 @@ function normalizeProfileUrls(array $urls): array
 function siteLogoUrl(): string
 {
     $dir = dirname(__DIR__) . '/assets/img/';
-    foreach (['logo-rt.webp', 'logo-rt.png'] as $file) {
+    // Logo « RS » de la marque unique (vague 0B), puis les anciens en repli.
+    foreach (['logo-rs.svg', 'logo-rt.webp', 'logo-rt.png'] as $file) {
         if (file_exists($dir . $file)) {
             return '/assets/img/' . $file;
         }

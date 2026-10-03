@@ -10,9 +10,10 @@ $ogType      = $ogType ?? 'website';
 
 // og:image, repli ajoute le 20/08/2026. /blog/ et /services/ ne definissaient
 // aucune image : leurs partages sur les reseaux sociaux s'affichaient sans visuel.
-// On retombe sur l'avatar du profil, present sur toutes les pages pv2.
-if (empty($ogImage) && !empty($profile['avatar_url']) && !empty($portfolioUrl)) {
-    $ogImage = $portfolioUrl . '/uploads/' . preg_replace('/\.\.[\\/]/', '', (string) $profile['avatar_url']);
+// Depuis la vague 0B : le visuel de partage 1200x630 de la nouvelle identité,
+// plutôt que l'avatar du profil (qui pouvait manquer sans base).
+if (empty($ogImage)) {
+    $ogImage = SITE_URL . fait('photo_og');
 }
 
 $cssV = @filemtime(__DIR__ . '/../../assets/css/portfolio-v2.css') ?: '1';
@@ -29,7 +30,7 @@ $cssV = @filemtime(__DIR__ . '/../../assets/css/portfolio-v2.css') ?: '1';
 <link rel="canonical" href="<?= sanitize($pageCanonical) ?>">
 <link rel="alternate" hreflang="fr" href="<?= sanitize($pageCanonical) ?>">
 <link rel="alternate" hreflang="x-default" href="<?= sanitize($pageCanonical) ?>">
-<link rel="icon" type="image/svg+xml" href="/favicon.php">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 
 <meta property="og:type" content="<?= sanitize($ogType) ?>">
 <meta property="og:title" content="<?= sanitize($pageTitle) ?>">

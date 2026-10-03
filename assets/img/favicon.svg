@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<title>Richard SALANON</title>
+<style>
+@font-face{font-family:"RS Logo Sora";font-style:normal;font-weight:700;src:url(data:font/woff2;base64,d09GMgABAAAAAAJwAA8AAAAABHAAAAIXAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbZhwqBmA/U1RBVCoANBEICoFwgWsBNgIkAwwLCAAEIAVgByAbXAPILgps9xTBVhxhuOiSRiLhyviRNh76DvPP7Nx1SqNqECvVa/FozvJiEpGAhOMnmCXMNpqWE6vAESQhBP/mDVrH/+zeE5AMJylEN0FJjORHjriQ5r8+57rT209wvfj1ppe2KK2II0kwoAgijyDAQDRJJ/cOdAta9EVZ4u0nMAeEqIhg6qWL7jm6+4PvLSY/E3wWdIJ4TcjNBAcCYakRoy4s2KWAKn0QCmHBfjRQYgWASh86C1byiwYD9nMkLqAb1pAO/hH5c7DIl1/b/r+C+glrQEBu0DOwixExgjUEm+h7UnI+AVIghnQWQKJhDSNYw+IGZQnOO5x1/RsBIZ0DYQNDFE7AE4ACNCkWcR1uVm4W3lDukEzC3bgzQsqHt7m4CHfj4SHwcXDAFdNwdES4y/q2DAzk/UDHXsuPj+2ca9G/zdWw2YuyOQeHiIfjV/refCN+aDJ6bYK7xaiK+yrlVXeV0caOsGpDpzRfAR/n1Cr9MHitxNVaOqQ7tcm8/Nfr+K+MSVvW+HSO8oIYR9uEIkPfwFJTm1TndulmbTUV9mIJ+TnhfC+2EkP7SHtH5+RqEwBXCJLfz46rKH7zr2GYW+CvkooAlsvPCvL9ie7kK4YKgotSuzWEv4PQIa3FITDP+GYT5BE0PwwIKOXPpjgRQ3HtRhCYO6/GhvHwkyVXDF8JkhRIFyNXkAQpkiTLZytLungM0KOLAAAA) format("woff2")}
+</style>
+<rect width="64" height="64" rx="14" fill="#14161F"/>
+<text x="31" y="42.5" font-family="'RS Logo Sora', Sora, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" fill="#FFFFFF">RS</text>
+<circle cx="52" cy="52" r="5" fill="#C2502F"/>
+</svg>
