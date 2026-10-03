@@ -85,9 +85,8 @@ $contactInfo = $stmt->fetch();
 
 // Variables
 $fullName = trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? ''));
-// URL dynamique selon le sous-domaine actif (richardsalanon.com, etc.)
-$currentHost  = $_SERVER['HTTP_HOST'] ?? parse_url(BASE_URL, PHP_URL_HOST);
-$portfolioUrl = 'https://' . $currentHost;
+// URL canonique fixe (03/10/2026) : HTTP_HOST faisait de www un doublon complet.
+$portfolioUrl = SITE_URL;
 $fontHeading = $profile['font_heading'] ?? 'Inter';
 $fontBody = $profile['font_body'] ?? 'Inter';
 

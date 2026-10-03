@@ -36,8 +36,8 @@ $stmt->execute([$userId]);
 $socialLinks = $stmt->fetchAll();
 
 $fullName     = trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? '')) ?: ($user['slug'] ?? 'Richard Salanon');
-$currentHost  = $_SERVER['HTTP_HOST'] ?? parse_url(BASE_URL, PHP_URL_HOST);
-$portfolioUrl = 'https://' . $currentHost;
+// URL canonique fixe (03/10/2026) : HTTP_HOST faisait de www un doublon complet.
+$portfolioUrl = SITE_URL;
 
 $h_email = $contactInfo['email_public'] ?? '';
 $h_phone = $contactInfo['phone'] ?? '';

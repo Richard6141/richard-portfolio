@@ -26,8 +26,7 @@ if (($_GET['key'] ?? '') !== SITEMAP_GEN_KEY) {
     exit;
 }
 
-$host    = $_SERVER['HTTP_HOST'] ?? parse_url(BASE_URL, PHP_URL_HOST);
-$baseUrl = 'https://' . rtrim($host, '/');
+$baseUrl = SITE_URL;
 
 try {
     $xml  = buildSitemapXml(getPDO(), $baseUrl);

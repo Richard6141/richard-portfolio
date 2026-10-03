@@ -7,6 +7,8 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/../config/site.php';
+
 /**
  * Envoie une reponse JSON de succes et arrete le script.
  *

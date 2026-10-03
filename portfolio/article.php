@@ -78,8 +78,7 @@ $related = $stmt->fetchAll();
 
 // Variables marque (pour header/footer partials)
 $fullName     = trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? '')) ?: $user['slug'];
-$host         = $_SERVER['HTTP_HOST'] ?? parse_url(BASE_URL, PHP_URL_HOST);
-$portfolioUrl = 'https://' . $host;
+$portfolioUrl = SITE_URL;
 $pageUrl      = $portfolioUrl . '/blog/' . $post['slug'];
 $h_email = $contactInfo['email_public'] ?? '';
 $h_phone = $contactInfo['phone'] ?? '';

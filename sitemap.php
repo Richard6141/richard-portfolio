@@ -12,9 +12,7 @@ ob_start();
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/helpers/functions.php';
 
-$host     = $_SERVER['HTTP_HOST'] ?? 'richardsalanon.com';
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$baseUrl  = $protocol . '://' . rtrim($host, '/');
+$baseUrl = SITE_URL;
 
 try {
     $xml = buildSitemapXml(getPDO(), $baseUrl);

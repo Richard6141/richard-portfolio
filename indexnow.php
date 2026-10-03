@@ -22,8 +22,8 @@ if (($_GET['key'] ?? '') !== INDEXNOW_KEY) {
     exit;
 }
 
-$host    = $_SERVER['HTTP_HOST'] ?? parse_url(BASE_URL, PHP_URL_HOST);
-$baseUrl = 'https://' . $host;
+$baseUrl = SITE_URL;
+$host    = (string) parse_url(SITE_URL, PHP_URL_HOST);
 
 try {
     $pdo = getPDO();
