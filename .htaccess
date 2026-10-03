@@ -55,6 +55,9 @@ RewriteRule ^[a-z0-9-]+\.php$ - [L]
 # Fichiers SEO — servis par PHP dynamiquement
 # ----------------------------------------------------------
 RewriteRule ^robots\.txt$  /robots.php  [L]
+# llms.txt et llms-full.txt générés (03/10/2026, spec 5.4).
+RewriteRule ^llms\.txt$ /llms.php [L]
+RewriteRule ^llms-full\.txt$ /llms.php?complet=1 [L]
 # sitemap.xml — modifie le 01/09/2026.
 # Avant : le fichier STATIQUE etait servi s'il existait, et sitemap.php ne
 # servait que de secours. Or Search Console lit sitemap.php sans probleme
