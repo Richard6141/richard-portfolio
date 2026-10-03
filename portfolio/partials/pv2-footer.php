@@ -89,7 +89,9 @@ $horaires = fait('horaires');
       <ul>
         <li><a href="<?= sanitize(url_finale('/realisations/')) ?>">Réalisations</a></li>
         <li><a href="/comparatifs/">Comparatifs</a></li>
+        <li><a href="/histoires/">Histoires de transformation</a></li>
         <li><a href="/blog/">Blog</a></li>
+        <li><a href="/richard-salanon">Qui est Richard SALANON ?</a></li>
         <li><a href="/a-propos/">À propos</a></li>
         <li><a href="/contact">Contact et devis</a></li>
       </ul>

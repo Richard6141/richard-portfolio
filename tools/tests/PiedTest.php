@@ -42,3 +42,12 @@ function test_pied_barre_mobile_et_script(): void
     assert_contains('class="barre-mobile"', $html);
     assert_contains('/assets/js/portfolio-v2.js', $html);
 }
+
+function test_pied_relie_la_page_auteur_et_les_histoires(): void
+{
+    // Vague 1A : la page entité /richard-salanon et le hub /histoires/ ne restent pas orphelins.
+    $html = pied_rendre();
+    assert_contains('href="/richard-salanon"', $html);
+    assert_contains('href="/histoires/"', $html);
+    assert_contains('href="/comparatifs/"', $html);
+}
