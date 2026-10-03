@@ -64,7 +64,7 @@ if (!function_exists('zoneLien')) {
 <footer><div class="wrap">
   <div class="foot-grid">
     <div class="foot-brand">
-      <a href="/" class="logo foot-logo"><?php if (!empty($h_logo)): ?><img src="<?= $h_logo ?>" alt="Richard Technologies" width="113" height="60" loading="lazy" decoding="async"><?php else: ?><span class="dot"></span><?= sanitize($fullName) ?><?php endif; ?></a>
+      <a href="/" class="logo foot-logo"><?php if (!empty($h_logo)): ?><img src="<?= $h_logo ?>" alt="Richard SALANON" width="113" height="60" loading="lazy" decoding="async"><?php else: ?><span class="dot"></span><?= sanitize($fullName) ?><?php endif; ?></a>
       <p class="foot-sub">Développeur web, mobile &amp; automatisation · Expert n8n / Make</p>
       <p>J'aide les entreprises et entrepreneurs à créer des solutions numériques performantes et à gagner en visibilité sur Google. Basé à <?= sanitize($h_city) ?>, Bénin · disponible à distance partout.</p>
       <?php if ($mapsUrl): ?>
@@ -128,7 +128,7 @@ if (!function_exists('zoneLien')) {
   </div>
 
   <div class="foot-bot">
-    <span>© 2026 <?= sanitize($fullName) ?> · Richard Technologies. Tous droits réservés.</span>
+    <span>© <?= date('Y') ?> <?= sanitize(fait('nom')) ?>. Tous droits réservés.</span>
     <span class="mono" style="color:#8595bd">Mentions légales · Confidentialité</span>
   </div>
 </div></footer>

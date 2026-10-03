@@ -25,7 +25,7 @@ $hdrColIcons = ['Sites & e-commerce' => 'site web', 'Applications & automatisati
 $hasMega = array_filter($hdrCols);
 ?>
 <header id="pv2-hdr"><div class="wrap nav">
-  <a href="/" class="logo" aria-label="Richard Technologies"><?php if (!empty($h_logo)): ?><img src="<?= $h_logo ?>" alt="Richard Technologies" width="113" height="60" fetchpriority="high"><?php else: ?><span class="dot"></span><?= sanitize($fullName) ?><?php endif; ?></a>
+  <a href="/" class="logo" aria-label="Richard SALANON, accueil"><?php if (!empty($h_logo)): ?><img src="<?= $h_logo ?>" alt="Richard SALANON" width="113" height="60" fetchpriority="high"><?php else: ?><span class="dot"></span><?= sanitize($fullName) ?><?php endif; ?></a>
 
   <nav class="nav-links" aria-label="Navigation principale">
     <a href="/">Accueil</a>
