@@ -10,7 +10,7 @@ return array (
   'pays' => 'Suisse',
   'titre' => 'Externaliser son développement web depuis Lausanne',
   'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Lausanne et l\'Arc lémanique concentrent un écosystème de startups technologiques dont les budgets de développement sont serrés avant la première levée. C\'est le profil pour lequel un renfort externe francophone fait la différence entre un produit livré et un produit reporté. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises suisses à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'intro' => 'Lausanne et l\'Arc lémanique concentrent un écosystème de startups technologiques dont les budgets de développement sont serrés avant la première levée. C\'est le profil pour lequel un renfort externe francophone fait la différence entre un produit livré et un produit reporté. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je travaille avec des entreprises suisses à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
   'sections' => 
   array (
     0 => 

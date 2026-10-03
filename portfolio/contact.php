@@ -18,7 +18,6 @@ $h_address  = trim((string)($contactInfo['address'] ?? ''));
 // « Benin », sans accent, affiché tel quel sur la page.
 $h_country  = fait('pays');
 $h_maps     = trim((string)($contactInfo['google_maps_url'] ?? ''));
-$h_hours    = trim((string)($contactInfo['availability_hours'] ?? ''));
 $h_response = trim((string)($contactInfo['response_time'] ?? ''));
 $formOn     = !empty($contactInfo['form_enabled']);
 
@@ -120,7 +119,7 @@ include __DIR__ . '/partials/pv2-header.php';
       <div class="ct-card">
         <h3>Téléphone</h3>
         <p><a href="tel:+<?= sanitize($phoneDigits) ?>"><?= sanitize($h_phone) ?></a></p>
-        <small>Du lundi au dimanche<?= $h_hours !== '' ? ', ' . sanitize($h_hours) : ', de 8 h à 19 h' ?></small>
+        <small><?= sanitize(ucfirst(horaires_texte(fait('horaires')))) ?></small>
       </div>
       <?php endif; ?>
 

@@ -10,7 +10,7 @@ return array (
   'pays' => 'Suisse',
   'titre' => 'Externaliser son développement web depuis Genève',
   'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Genève est l\'un des marchés les plus chers d\'Europe pour le développement logiciel. L\'écart tarifaire avec un prestataire basé en Afrique de l\'Ouest y est le plus marqué que je connaisse, ce qui rend d\'autant plus important de ne pas décider sur ce seul critère. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises suisses à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'intro' => 'Genève est l\'un des marchés les plus chers d\'Europe pour le développement logiciel. L\'écart tarifaire avec un prestataire basé en Afrique de l\'Ouest y est le plus marqué que je connaisse, ce qui rend d\'autant plus important de ne pas décider sur ce seul critère. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je travaille avec des entreprises suisses à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
   'sections' => 
   array (
     0 => 

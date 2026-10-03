@@ -3,6 +3,7 @@
 // services-index.php · Index des services (URL /services/)
 // ============================================================
 require __DIR__ . '/partials/pv2-bootstrap.php';
+exiger_base($pdo);
 
 $stmt = $pdo->prepare("SELECT * FROM services WHERE user_id = ? ORDER BY is_featured DESC, sort_order ASC");
 $stmt->execute([$userId]);

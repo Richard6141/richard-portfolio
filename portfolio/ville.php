@@ -30,10 +30,12 @@ $v       = $villes[$slug];
 $villeUrl = $portfolioUrl . '/developpeur-web-' . $slug;
 
 // Services reellement presents en base, pour ne lier que des pages existantes.
-$stmt = $pdo->prepare("SELECT title FROM services WHERE user_id = ? ORDER BY sort_order ASC");
-$stmt->execute([$userId]);
 $slugsServices = [];
-foreach ($stmt->fetchAll() as $s) { $slugsServices[generateSlug($s['title'])] = $s['title']; }
+if ($pdo !== null) { // base facultative (vague 0B)
+    $stmt = $pdo->prepare("SELECT title FROM services WHERE user_id = ? ORDER BY sort_order ASC");
+    $stmt->execute([$userId]);
+    foreach ($stmt->fetchAll() as $s) { $slugsServices[generateSlug($s['title'])] = $s['title']; }
+}
 
 $pageTitle     = seoTitle('Développeur web à ' . $v['nom'] . ' (' . $v['pays'] . ')', $fullName);
 $pageDesc      = seoDescription('Création de sites web, applications et automatisation à ' . $v['nom'] . '. ' . $v['accroche'] . '. Devis gratuit sous 24 h.');
@@ -112,7 +114,7 @@ include __DIR__ . '/partials/pv2-header.php';
       <?php if ($v['sur_place'] && $v['distance_km']): ?>
       <div class="vc-row">
         <span class="vc-k">Distance</span>
-        <span class="vc-v"><?= (int) $v['distance_km'] ?> km depuis Abomey-Calavi</span>
+        <span class="vc-v"><?= (int) $v['distance_km'] ?> km depuis Cotonou</span>
       </div>
       <?php endif; ?>
       <div class="vc-row">

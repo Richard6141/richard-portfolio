@@ -47,3 +47,6 @@ node_modules/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Graphe de code local (graphify), regenerable via `graphify extract . --code-only`.
+graphify-out/

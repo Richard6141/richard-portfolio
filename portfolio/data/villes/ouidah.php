@@ -56,7 +56,7 @@ return [
 
 'pourquoi_moi' => "Le tourisme a des contraintes que peu de prestataires locaux intègrent : bilinguisme, encaissement depuis l'étranger, saisonnalité, dépendance aux plateformes. Ce sont exactement les points traités ici, avec un renforcement du support avant les périodes de forte demande. Ouidah est à quarante kilomètres de mon bureau : je peux venir voir le lieu, ce qui n'est pas un détail, on ne présente pas correctement un hébergement qu'on n'a jamais visité.",
 
-'travailler' => "Ouidah est à une quarantaine de kilomètres d'Abomey-Calavi : les rendez-vous sur place sont possibles, ce qui est utile pour les projets d'hébergement où il faut voir le lieu avant d'en parler correctement.",
+'travailler' => "Ouidah est à une quarantaine de kilomètres de Cotonou, où je suis basé : les rendez-vous sur place sont possibles, ce qui est utile pour les projets d'hébergement où il faut voir le lieu avant d'en parler correctement.",
 
 'paiement' => "MTN Mobile Money, Moov Money, virement bancaire, carte ou PayPal, utile pour encaisser des acomptes depuis l'étranger.",
 

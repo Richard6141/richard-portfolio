@@ -183,17 +183,12 @@ if (($profile['template'] ?? 'starter') === 'horizon') {
     */ ?>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.php">
-    <link rel="shortcut icon" href="/favicon.php">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 
     <!-- Open Graph -->
     <?php
-    $ogImage = '';
-    if ($profile['og_image_url'] ?? '') {
-        $ogImage = $portfolioUrl . '/uploads/' . $profile['og_image_url'];
-    } elseif ($profile['avatar_url'] ?? '') {
-        $ogImage = $portfolioUrl . '/uploads/' . $profile['avatar_url'];
-    }
+    // Visuel de partage 1200x630 de la nouvelle identité (vague 0B).
+    $ogImage = SITE_URL . fait('photo_og');
     ?>
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?= sanitize($ogTitle) ?>">
@@ -233,26 +228,9 @@ if (($profile['template'] ?? 'starter') === 'horizon') {
     <meta name="google-site-verification" content="<?= sanitize($seo['google_site_verification']) ?>">
     <?php endif; ?>
 
-    <!-- Google Fonts, 3 poids max, chargement non-bloquant -->
-    <?php
-    if (($profile['template'] ?? 'starter') === 'horizon') {
-        // Le template horizon est rendu par portfolio-v2.css, qui n'utilise que
-        // Roboto (--body) et Roboto Mono (--mono). La police "body" du theme
-        // (Poppins) n'y apparait pas une seule fois : on ne la telecharge plus.
-        // Fraunces et Lora ne servent qu'aux pages editoriales (.art-*) : pas ici.
-        // Graisses identiques a l'ancien @import de portfolio-v2.css.
-        $fontUrl = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500&display=swap';
-    } else {
-        $fonts = array_unique([$fontHeading, $fontBody]);
-        $fontQuery = implode('&family=', array_map(fn($f) => urlencode($f) . ':wght@400;600;700', $fonts));
-        $fontUrl = 'https://fonts.googleapis.com/css2?family=' . $fontQuery . '&display=swap';
-    }
-    ?>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="<?= $fontUrl ?>">
-    <link href="<?= $fontUrl ?>" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="<?= $fontUrl ?>" rel="stylesheet"></noscript>
+    <?php /* Polices auto-hébergées (vague 0B, 03/10/2026) : Sora et Plus Jakarta Sans.
+             Les gabarits inactifs (creative, developer) retombent sur les polices système. */ ?>
+    <?php include __DIR__ . '/partials/polices.php'; ?>
 
     <!-- CSS -->
     <?php if (($profile['template'] ?? 'starter') === 'horizon'): $pv2cssV = @filemtime(__DIR__ . '/../assets/css/portfolio-v2.css') ?: '1'; ?>

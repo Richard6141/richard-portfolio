@@ -41,3 +41,22 @@ function fait(string $cle): mixed
 {
     return faits()[$cle] ?? null;
 }
+
+/**
+ * Horaires de la fiche en clair : « 7 jours sur 7, de 07 h 00 à 20 h 00 »,
+ * ou « du lundi au vendredi, de ... » pour une semaine continue plus courte.
+ */
+function horaires_texte(array $h): string
+{
+    $noms  = ['Monday' => 'lundi', 'Tuesday' => 'mardi', 'Wednesday' => 'mercredi', 'Thursday' => 'jeudi', 'Friday' => 'vendredi', 'Saturday' => 'samedi', 'Sunday' => 'dimanche'];
+    $jours = array_values(array_intersect(array_keys($noms), $h['jours'] ?? []));
+    $heure = static fn (string $t): string => str_replace(':', ' h ', $t);
+    $plage = 'de ' . $heure((string) ($h['ouverture'] ?? '')) . ' à ' . $heure((string) ($h['fermeture'] ?? ''));
+    if ($jours === []) {
+        return $plage;
+    }
+    if (count($jours) === 7) {
+        return '7 jours sur 7, ' . $plage;
+    }
+    return 'du ' . $noms[$jours[0]] . ' au ' . $noms[end($jours)] . ', ' . $plage;
+}

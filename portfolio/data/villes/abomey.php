@@ -140,7 +140,7 @@ return array (
   'delais' => '2 à 4 semaines pour un site vitrine, 5 à 8 semaines pour une boutique en ligne. Le délai dépend presque toujours de la disponibilité des photos et des textes, rarement du développement.',
   'rythme' => 'Un point hebdomadaire et des livraisons testables régulières, avec possibilité de séances sur site aux étapes clés.',
   'cas_type' => 'Le cas le plus fréquent à Abomey est celui d\'un artisan dont le travail intéresse une clientèle internationale, mais qui n\'a aucune présence en ligne : ses ventes dépendent entièrement des visiteurs de passage. Un site avec galerie et contact international ouvre un canal qui n\'existait pas.',
-  'pourquoi_moi' => 'Abomey est à environ 140 km d\'Abomey-Calavi, ce qui rend un déplacement possible pour le cadrage ou les prises de vue. Sur un projet touristique ou artisanal, voir le lieu et les pièces change réellement la qualité du résultat.',
+  'pourquoi_moi' => 'Abomey est à environ 140 km de Cotonou, ce qui rend un déplacement possible pour le cadrage ou les prises de vue. Sur un projet touristique ou artisanal, voir le lieu et les pièces change réellement la qualité du résultat.',
   'travailler' => 'Un cadrage sur place quand le projet le justifie, puis un fonctionnement à distance avec des points réguliers et des comptes rendus écrits.',
   'paiement' => 'Mobile Money MTN et Moov, virement, carte bancaire ou espèces, en plusieurs tranches.',
   'demarrer' => 'Un premier échange gratuit pour cerner le besoin et dire franchement si un site ou une boutique se justifie dans votre situation.',

@@ -38,7 +38,7 @@ return array (
         3 => 
         array (
           'titre' => 'Zones couvertes',
-          'texte' => 'J\'interviens pour les entreprises de Ouidah centre, la route des Pêches, Djègbadji et Pahou. Je suis basé à Abomey-Calavi : un déplacement à Ouidah pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
+          'texte' => 'J\'interviens pour les entreprises de Ouidah centre, la route des Pêches, Djègbadji et Pahou. Je suis basé à Cotonou, à une quarantaine de kilomètres : un déplacement à Ouidah pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
         ),
       ),
     ),
@@ -193,7 +193,7 @@ return array (
     4 => 
     array (
       'q' => 'Intervenez-vous sur place à Ouidah ?',
-      'r' => 'Je suis basé à Abomey-Calavi : un déplacement à Ouidah pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
+      'r' => 'Je suis basé à Cotonou, à une quarantaine de kilomètres : un déplacement à Ouidah pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
     ),
     5 => 
     array (

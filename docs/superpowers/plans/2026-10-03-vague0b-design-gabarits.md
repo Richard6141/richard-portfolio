@@ -12,7 +12,7 @@
 
 ## Global Constraints
 
-- Jetons exacts (spec 10.1) : encre `#14161F`, terracotta `#C2502F` (survol `#A8401F`), sarcelle `#0F6B6B` (survol `#0B5454`), ocre `#E0A43A`, sable `#F5EEE6`, fond `#FBF8F4`, ligne `#E8E1D8`, ligne forte `#D5CBBE`, texte doux `#343846`, discret `#626676`. Courbe unique `cubic-bezier(.22,1,.36,1)`.
+- Jetons exacts (spec 10.1) : encre `#14161F`, terracotta `#C2502F` (survol `#A8401F`), sarcelle `#0F6B6B` (survol `#0B5454`), ocre `#E0A43A`, sable `#F5EEE6`, fond `#FFFFFF` (blanc, choix de Richard du 03/10/2026), ligne `#E8E1D8`, ligne forte `#D5CBBE`, texte doux `#343846`, discret `#626676`. Courbe unique `cubic-bezier(.22,1,.36,1)`.
 - Contraste AA (4,5:1) pour tout texte normal : vérifié par test.
 - Polices auto-hébergées, `font-display: swap`, préchargement des deux fichiers latins du premier écran ; plus aucun appel à fonts.googleapis.com sur les pages publiques.
 - Aucune animation au-dessus de la ligne de flottaison ; le H1 n'est jamais animé ; tout est neutralisé sous `prefers-reduced-motion`.

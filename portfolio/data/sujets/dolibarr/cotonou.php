@@ -38,7 +38,7 @@ return array (
         3 => 
         array (
           'titre' => 'Zones couvertes',
-          'texte' => 'J\'interviens pour les entreprises de Ganhi, Akpakpa, Dantokpa, Cadjèhoun, Fidjrossè, Godomey et la zone portuaire. Je suis basé à Abomey-Calavi : un déplacement à Cotonou pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
+          'texte' => 'J\'interviens pour les entreprises de Ganhi, Akpakpa, Dantokpa, Cadjèhoun, Fidjrossè, Godomey et la zone portuaire. Je suis basé à Cotonou : un rendez-vous dans vos locaux pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
         ),
       ),
     ),
@@ -193,7 +193,7 @@ return array (
     4 => 
     array (
       'q' => 'Intervenez-vous sur place à Cotonou ?',
-      'r' => 'Je suis basé à Abomey-Calavi : un déplacement à Cotonou pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
+      'r' => 'Je suis basé à Cotonou : un rendez-vous dans vos locaux pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
     ),
     5 => 
     array (

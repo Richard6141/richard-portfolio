@@ -72,9 +72,9 @@ RewriteRule ^llms-full\.txt$ /llms.php?complet=1 [L]
 # Le fichier statique reste genere : il sert de secours si PHP tombe, et
 # la bascule inverse tient en une ligne.
 RewriteRule ^sitemap\.xml$ /sitemap.php [L]
-# favicon.ico n'existait pas (404 relevé par l'audit du 03/10/2026) : on sert
-# le favicon SVG existant. Remplacé par le logo définitif en vague 0B.
-RewriteRule ^favicon\.ico$ /favicon.php [L]
+# favicon.ico n'existait pas (404 relevé par l'audit du 03/10/2026). Depuis la
+# vague 0B : le monogramme « RS » statique (mis en cache un an, sans base).
+RewriteRule ^favicon\.ico$ /assets/img/favicon.svg [L]
 
 # ----------------------------------------------------------
 # Canonicalisation des URL — ajoute le 20/08/2026
@@ -142,7 +142,7 @@ RewriteRule \.(txt|xml|ico|png|jpe?g|gif|svg|webp|avif|pdf|woff2?|css|js)$ - [L]
 # ----------------------------------------------------------
 # Racine du site → portfolio public (mono-utilisateur)
 # ----------------------------------------------------------
-RewriteRule ^$ /portfolio/index.php [QSA,L]
+RewriteRule ^$ /portfolio/accueil.php [QSA,L]
 
 # ----------------------------------------------------------
 # Vrai 404 — corrige le 20/08/2026

@@ -2,7 +2,7 @@
 // Porto-Novo, capitale politique. Tissu institutionnel, patrimoine, frontiere nigeriane.
 return [
 'nom' => 'Porto-Novo', 'slug' => 'porto-novo', 'pays' => 'Bénin', 'pays_slug' => 'benin',
-'region' => 'Ouémé', 'distance_km' => 45, 'sur_place' => true,
+'region' => 'Ouémé', 'distance_km' => 30, 'sur_place' => true,
 
 'accroche' => 'Sites et outils numériques pour la capitale administrative',
 
@@ -56,7 +56,7 @@ return [
 
 'pourquoi_moi' => "Travailler avec une institution, une association ou un organisme public suppose de comprendre des contraintes que le privé ne connaît pas : validation collective, cycle budgétaire, rotation des équipes, obligation de continuité. Le devis est détaillé pour être défendable en commission, le planning tient compte des délais d'engagement, et la formation vise l'équipe plutôt qu'une personne. Porto-Novo est à moins d'une heure de route : les rendez-vous de cadrage et de livraison se font sur place.",
 
-'travailler' => "Porto-Novo est à environ 45 kilomètres d'Abomey-Calavi, soit moins d'une heure de route. Les rendez-vous sur place sont possibles pour le cadrage et la livraison ; le développement se mène à distance, avec des points d'avancement réguliers.",
+'travailler' => "Porto-Novo est à une trentaine de kilomètres de Cotonou, soit moins d'une heure de route. Les rendez-vous sur place sont possibles pour le cadrage et la livraison ; le développement se mène à distance, avec des points d'avancement réguliers.",
 
 'paiement' => "MTN Mobile Money, Moov Money, virement bancaire, carte, PayPal ou espèces.",
 
@@ -65,7 +65,7 @@ return [
 'faq' => [
     ["Travaillez-vous avec des institutions et des associations ?", "Oui. Ces structures ont des contraintes propres : documents à publier, formulaires officiels, langage mesuré, budgets validés en commission. Le devis est établi de façon détaillée poste par poste pour être présentable en interne, et le calendrier tient compte des délais de validation."],
     ["Est-il plus facile de bien se référencer à Porto-Novo qu'à Cotonou ?", "Oui, nettement. La concurrence en ligne y est beaucoup moins installée : sur de nombreuses requêtes locales, une fiche Google Business correctement remplie et quelques pages bien construites suffisent à atteindre les premières positions en quelques semaines, là où Cotonou demande souvent plusieurs mois d'efforts soutenus pour le même résultat."],
-    ["Vous déplacez-vous à Porto-Novo ?", "Oui, la ville est à moins d'une heure de route d'Abomey-Calavi. Je me déplace pour le cadrage initial et pour la formation à la livraison. Les échanges intermédiaires se font par téléphone et visioconférence, ce qui évite des allers-retours inutiles et ne pèse pas sur le budget."],
+    ["Vous déplacez-vous à Porto-Novo ?", "Oui, la ville est à moins d'une heure de route de Cotonou, où je suis basé. Je me déplace pour le cadrage initial et pour la formation à la livraison. Les échanges intermédiaires se font par téléphone et visioconférence, ce qui évite des allers-retours inutiles et ne pèse pas sur le budget."],
     ["Faut-il une version anglaise du site ?", "Pour tout ce qui touche au commerce transfrontalier ou au tourisme, oui. Porto-Novo est à une demi-heure du Nigeria et une part de la clientèle est anglophone. Traduire les pages clés coûte peu si c'est prévu dès le cadrage, et beaucoup plus si on l'ajoute après coup."],
     ["Que se passe-t-il si la personne qui gère le site change de poste ?", "C'est prévu. Je forme au minimum deux personnes et je laisse un mode d'emploi écrit avec captures d'écran. Les accès sont enregistrés au nom de la structure, jamais d'un individu, ce qui évite qu'un départ emporte les mots de passe avec lui."],
     ["Notre budget doit être validé, le devis reste-t-il valable ?", "Oui, trois mois. Je sais que l'engagement d'une dépense prend du temps dans une structure publique ou associative. Le planning ne démarre qu'à votre feu vert, sans que le délai de validation ne réduise le temps consacré au projet ni n'entraîne de révision de prix."],

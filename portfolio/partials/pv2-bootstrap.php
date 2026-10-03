@@ -10,32 +10,60 @@ require_once __DIR__ . '/../../config/db.php';
 require_once __DIR__ . '/../../helpers/functions.php';
 require_once __DIR__ . '/../../helpers/icons.php';
 
-$pdo = getPDO();
-
-$stmt = $pdo->query("SELECT id, slug, email FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1");
-$user = $stmt->fetch();
-if (!$user) { header('Location: /auth/register.php'); exit; }
-$userId = (int) $user['id'];
-
-$stmt = $pdo->prepare("SELECT * FROM profiles WHERE user_id = ?");
-$stmt->execute([$userId]);
-$profile = $stmt->fetch() ?: [];
-
-// Portfolio non publié : bloquer l'indexation
-if (empty($profile['is_published'])) {
-    http_response_code(404);
-    header('X-Robots-Tag: noindex');
+// Base facultative (03/10/2026, vague 0B) : les pages servies depuis des
+// fichiers (villes, sujets, formations, zones, à-propos, contact) doivent
+// s'afficher même base arrêtée, avec les données de la fiche de faits.
+$pdo = null;
+try {
+    $pdo = getPDO();
+} catch (\Throwable $e) {
+    error_log('pv2-bootstrap : base indisponible : ' . $e->getMessage());
 }
 
-$stmt = $pdo->prepare("SELECT * FROM contact_info WHERE user_id = ?");
-$stmt->execute([$userId]);
-$contactInfo = $stmt->fetch() ?: [];
+$userId      = 0;
+$profile     = [];
+$contactInfo = [];
+$socialLinks = [];
 
-$stmt = $pdo->prepare("SELECT * FROM social_links WHERE user_id = ? ORDER BY sort_order ASC");
-$stmt->execute([$userId]);
-$socialLinks = $stmt->fetchAll();
+if ($pdo !== null) {
+    $stmt = $pdo->query("SELECT id, slug, email FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1");
+    $user = $stmt->fetch();
+    if (!$user) { header('Location: /auth/register.php'); exit; }
+    $userId = (int) $user['id'];
 
-$fullName     = trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? '')) ?: ($user['slug'] ?? 'Richard Salanon');
+    $stmt = $pdo->prepare("SELECT * FROM profiles WHERE user_id = ?");
+    $stmt->execute([$userId]);
+    $profile = $stmt->fetch() ?: [];
+
+    // Maintenance activée au tableau de bord : 503 pour tout le site.
+    if (($maintenance = page_maintenance($profile)) !== null) {
+        http_response_code(503);
+        header('Retry-After: 3600');
+        header('Content-Type: text/html; charset=UTF-8');
+        echo $maintenance;
+        exit;
+    }
+
+    // Portfolio non publié : bloquer l'indexation
+    if (empty($profile['is_published'])) {
+        http_response_code(404);
+        header('X-Robots-Tag: noindex');
+    }
+
+    $stmt = $pdo->prepare("SELECT * FROM contact_info WHERE user_id = ?");
+    $stmt->execute([$userId]);
+    $contactInfo = $stmt->fetch() ?: [];
+
+    $stmt = $pdo->prepare("SELECT * FROM social_links WHERE user_id = ? ORDER BY sort_order ASC");
+    $stmt->execute([$userId]);
+    $socialLinks = $stmt->fetchAll();
+}
+
+// Coordonnées de repli depuis la fiche de faits.
+$contactInfo += ['email_public' => fait('email'), 'phone' => fait('telephone'), 'city' => fait('ville'), 'country' => fait('pays')];
+
+// Nom affiché : la fiche de faits fait foi (marque unique, spec 2).
+$fullName     = fait('nom');
 // URL canonique fixe (03/10/2026) : HTTP_HOST faisait de www un doublon complet.
 $portfolioUrl = SITE_URL;
 

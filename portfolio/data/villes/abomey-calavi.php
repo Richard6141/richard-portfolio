@@ -1,12 +1,12 @@
 <?php
-// Abomey-Calavi, ville de residence. Commune la plus peuplee du Benin.
+// Abomey-Calavi, voisine de Cotonou (18 km). Commune la plus peuplee du Benin.
 return [
 'nom' => 'Abomey-Calavi', 'slug' => 'abomey-calavi', 'pays' => 'Bénin', 'pays_slug' => 'benin',
-'region' => 'Atlantique', 'distance_km' => 0, 'sur_place' => true,
+'region' => 'Atlantique', 'distance_km' => 18, 'sur_place' => true,
 
-'accroche' => 'Votre développeur web est installé ici, pas à l\'autre bout du pays',
+'accroche' => 'Votre développeur web est à une vingtaine de kilomètres, pas à l\'autre bout du pays',
 
-'intro' => "Abomey-Calavi est la commune la plus peuplée du Bénin et l'une des plus jeunes : la population y a explosé en deux décennies, portée par l'université d'Abomey-Calavi et par l'étalement urbain depuis Cotonou. C'est aussi la ville où je vis et travaille. Un projet lancé ici se traite en direct, sans intermédiaire et sans décalage.",
+'intro' => "Abomey-Calavi est la commune la plus peuplée du Bénin et l'une des plus jeunes : la population y a explosé en deux décennies, portée par l'université d'Abomey-Calavi et par l'étalement urbain depuis Cotonou. Je suis basé à Cotonou, à une vingtaine de kilomètres : un projet lancé ici se traite en direct, sans intermédiaire et sans décalage.",
 
 'contexte' => "Le tissu local est fait de très petites structures en croissance rapide : écoles privées, cliniques de quartier, quincailleries, restaurants, agences immobilières. Beaucoup se créent chaque année, et la plupart démarrent sans aucune présence en ligne. La proximité de l'université alimente une demande particulière : jeunes entrepreneurs, prestataires indépendants, projets à budget serré qui ont besoin d'un premier site sérieux plutôt que d'une usine à gaz. Autre spécificité : une part importante des habitants travaille à Cotonou et vit ici. Les commerces de proximité captent donc une clientèle qui cherche le soir et le week-end, sur téléphone, souvent en déplacement, ce qui change la façon de concevoir un site.",
 
@@ -54,16 +54,16 @@ return [
 
 'cas_type' => "Le profil que je croise le plus souvent ici : une école primaire ou un collège privé d'une centaine d'élèves, tenu par son fondateur, avec une page Facebook et un numéro WhatsApp. Les inscriptions se font sur place, sur registre papier, et chaque rentrée provoque les mêmes files d'attente et les mêmes dossiers incomplets. Le besoin exprimé est « un site », mais le vrai problème est ailleurs : les parents ne trouvent pas l'établissement sur Google quand ils cherchent une école du quartier, et l'équipe perd des journées entières sur des inscriptions manuelles. On traite donc les deux : la fiche Google et une vitrine pour être trouvé, un formulaire d'inscription en ligne pour arrêter l'engorgement de la rentrée.",
 
-'pourquoi_moi' => "Je vis ici. Ce n'est pas une page de couverture géographique remplie pour capter une recherche : c'est ma commune, et je connais les contraintes locales, les coupures, les connexions inégales selon les quartiers, les budgets réels des structures qui démarrent. Vous parlez directement à la personne qui écrit le code, un rendez-vous se cale sous 48 heures, et aucun frais de déplacement n'est facturé.",
+'pourquoi_moi' => "Je travaille depuis Cotonou, à une vingtaine de kilomètres d'ici. Ce n'est pas une page de couverture géographique remplie pour capter une recherche : je connais la commune, ses contraintes locales, les coupures, les connexions inégales selon les quartiers, les budgets réels des structures qui démarrent. Vous parlez directement à la personne qui écrit le code, un rendez-vous se cale sous 48 heures, et aucun frais de déplacement n'est facturé.",
 
-'travailler' => "Je suis basé à Abomey-Calavi. Un rendez-vous se cale en général sous 48 heures, sur place ou dans vos locaux. C'est la ville où le suivi est le plus direct : pour une mise en ligne, une formation ou un dépannage, je peux passer.",
+'travailler' => "Je suis basé à Cotonou, à une vingtaine de kilomètres. Un rendez-vous se cale en général sous 48 heures, sur place ou dans vos locaux. C'est l'une des villes où le suivi est le plus direct : pour une mise en ligne, une formation ou un dépannage, je peux passer.",
 
 'paiement' => "MTN Mobile Money, Moov Money, virement bancaire, carte, PayPal ou espèces.",
 
 'demarrer' => "Ici, le premier rendez-vous se fait presque toujours chez vous, et il se cale sous 48 heures. Une heure suffit à cerner l'essentiel : ce que vous vendez, à qui, ce qui marche déjà et ce qui vous coûte du temps. Pour une école, une clinique ou un commerce de Calavi, cette conversation débouche souvent sur un constat inattendu, le problème n'est pas l'absence de site mais l'absence de fiche Google, qui se crée gratuitement en une heure et change immédiatement la donne. Il m'arrive donc de repartir en recommandant une dépense bien plus faible que celle envisagée, voire aucune dépense dans l'immédiat. Si un projet se justifie, vous recevez un devis détaillé poste par poste, avec une version minimale et une version complète, pour que vous puissiez choisir en connaissance de cause plutôt que de vous engager sur un chiffre global. Le travail démarre ensuite par un entretien d'une heure dont je tire les textes du site : c'est plus rapide que de vous demander de rédiger, et le résultat sonne juste parce que ce sont vos mots.",
 
 'faq' => [
-    ["Êtes-vous vraiment basé à Abomey-Calavi ?", "Oui, c'est là que je vis et que je travaille. Ce n'est pas une page de couverture géographique : les rendez-vous sur place se calent sous 48 heures en général, et les interventions de formation ou de dépannage peuvent se faire dans vos locaux sans frais de déplacement."],
+    ["Vous déplacez-vous à Abomey-Calavi ?", "Oui. Je suis basé à Cotonou, à une vingtaine de kilomètres, et je viens sur place pour le cadrage comme pour la formation. Ce n'est pas une page de couverture géographique : les rendez-vous sur place se calent sous 48 heures en général, et les interventions de formation ou de dépannage peuvent se faire dans vos locaux sans frais de déplacement."],
     ["Travaillez-vous avec de petites structures ?", "Oui, une grande partie des projets menés ici concerne des entreprises de quelques personnes. Le budget se cale sur le besoin réel : une landing page à partir de 150 000 FCFA suffit souvent à démarrer, quitte à faire évoluer l'outil ensuite par étapes."],
     ["Puis-je payer en plusieurs fois ?", "Oui. Le règlement se fait par tranches liées à l'avancement : une avance au démarrage, des versements à la validation de chaque étape, le solde à la mise en ligne. Mobile Money MTN et Moov, virement, carte, PayPal ou espèces sont acceptés."],
     ["Ma page Facebook ne suffit-elle pas ?", "Non, et c'est l'erreur la plus fréquente ici. Une page Facebook ne se référence pas sur Google, ne vous appartient pas et disparaît si le compte est suspendu. Elle reste utile en complément, mais un site que vous possédez est votre seul actif numérique durable."],

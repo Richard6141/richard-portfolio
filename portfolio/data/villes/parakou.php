@@ -56,7 +56,7 @@ return [
 
 'pourquoi_moi' => "La distance ne change ni le prix ni le suivi : aucun frais de déplacement n'est facturé, et une grande partie de mes projets se mène déjà entièrement à distance, y compris hors du Bénin. Ce que vous obtenez est un interlocuteur unique, joignable par WhatsApp, qui parle français et connaît le contexte béninois, pas un prestataire étranger qui découvrira que le Mobile Money existe. Et le nord reste un terrain où quelques semaines de travail suffisent encore à prendre des positions durables.",
 
-'travailler' => "Parakou est à plus de 400 kilomètres d'Abomey-Calavi : les projets s'y mènent à distance, par téléphone, WhatsApp et visioconférence. C'est la façon dont travaille déjà une grande partie de mes clients, y compris hors du Bénin, la distance ne change ni le prix ni le suivi.",
+'travailler' => "Parakou est à plus de 400 kilomètres de Cotonou : les projets s'y mènent à distance, par téléphone, WhatsApp et visioconférence. C'est la façon dont travaille déjà une grande partie de mes clients, y compris hors du Bénin, la distance ne change ni le prix ni le suivi.",
 
 'paiement' => "MTN Mobile Money, Moov Money, virement bancaire, carte ou PayPal.",
 

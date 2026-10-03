@@ -73,7 +73,7 @@ return array (
     0 => 
     array (
       'q' => 'Nous sommes à 20 minutes de Cotonou, cela change quelque chose ?',
-      'r' => 'Sur le plan pratique, oui : je suis basé à Abomey-Calavi, donc les réunions sur place ne posent aucun problème. Sur le plan technique, non, l\'essentiel du travail se fait à distance de toute façon.',
+      'r' => 'Sur le plan pratique, oui : je suis basé à Cotonou, à une vingtaine de kilomètres, donc les réunions sur place ne posent aucun problème. Sur le plan technique, non, l\'essentiel du travail se fait à distance de toute façon.',
     ),
     1 => 
     array (

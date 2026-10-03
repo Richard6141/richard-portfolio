@@ -3,6 +3,7 @@
 // blog-index.php, Liste des articles (URL /blog/)
 // ============================================================
 require __DIR__ . '/partials/pv2-bootstrap.php';
+exiger_base($pdo);
 
 $perPage = 8;
 $page = max(1, (int)($_GET['p'] ?? 1));

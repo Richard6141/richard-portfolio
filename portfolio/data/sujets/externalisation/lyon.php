@@ -10,7 +10,7 @@ return array (
   'pays' => 'France',
   'titre' => 'Externaliser son développement web depuis Lyon',
   'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Lyon a un tissu industriel et de services dense, avec beaucoup d\'entreprises de taille intermédiaire qui gèrent encore des processus sur tableur. Le besoin y est moins la vitrine que l\'automatisation de flux internes : précisément le terrain où un prestataire externe apporte le plus. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises françaises à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'intro' => 'Lyon a un tissu industriel et de services dense, avec beaucoup d\'entreprises de taille intermédiaire qui gèrent encore des processus sur tableur. Le besoin y est moins la vitrine que l\'automatisation de flux internes : précisément le terrain où un prestataire externe apporte le plus. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je travaille avec des entreprises françaises à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
   'sections' => 
   array (
     0 => 

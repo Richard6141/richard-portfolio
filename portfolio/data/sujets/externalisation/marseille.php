@@ -10,7 +10,7 @@ return array (
   'pays' => 'France',
   'titre' => 'Externaliser son développement web depuis Marseille',
   'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Marseille partage avec Cotonou une réalité que peu de villes françaises connaissent : une économie structurée autour d\'un port, avec des flux d\'import-export, du transit et de la logistique. Les problématiques métier m\'y sont familières, ce qui raccourcit sensiblement la phase de cadrage. Je suis développeur et consultant en automatisation, basé à Abomey-Calavi au Bénin, et je travaille avec des entreprises françaises à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'intro' => 'Marseille partage avec Cotonou une réalité que peu de villes françaises connaissent : une économie structurée autour d\'un port, avec des flux d\'import-export, du transit et de la logistique. Les problématiques métier m\'y sont familières, ce qui raccourcit sensiblement la phase de cadrage. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je travaille avec des entreprises françaises à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
   'sections' => 
   array (
     0 => 

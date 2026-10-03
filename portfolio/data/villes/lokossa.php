@@ -140,7 +140,7 @@ return array (
   'delais' => '1 à 3 semaines pour un site, 4 à 8 semaines pour un outil de gestion, en tenant compte des délais de validation propres aux structures administratives.',
   'rythme' => 'Un point hebdomadaire, des livraisons testables toutes les deux semaines, et la possibilité de séances sur site aux moments clés.',
   'cas_type' => 'Le cas le plus fréquent à Lokossa est celui d\'une structure qui met une demi-heure à retrouver un dossier de l\'exercice précédent, et qui reconstitue ses statistiques annuelles à la main. Centraliser les dossiers et tracer les validations règle les deux problèmes d\'un coup.',
-  'pourquoi_moi' => 'Lokossa est à une centaine de kilomètres d\'Abomey-Calavi : un déplacement pour le cadrage ou la formation ne pose aucune difficulté, contrairement aux villes du nord. C\'est un avantage concret pour un projet qui demande de l\'observation de terrain.',
+  'pourquoi_moi' => 'Lokossa est à une centaine de kilomètres de Cotonou : un déplacement pour le cadrage ou la formation ne pose aucune difficulté, contrairement aux villes du nord. C\'est un avantage concret pour un projet qui demande de l\'observation de terrain.',
   'travailler' => 'Un cadrage sur place quand le projet le justifie, puis un fonctionnement à distance avec des points réguliers. La proximité permet de combiner les deux sans surcoût.',
   'paiement' => 'Mobile Money MTN et Moov, virement, carte bancaire ou espèces, en plusieurs tranches.',
   'demarrer' => 'Un premier échange gratuit, en visioconférence ou sur place, pour cerner le besoin et dire si un projet se justifie.',
@@ -149,7 +149,7 @@ return array (
     0 => 
     array (
       0 => 'Pouvez-vous venir à Lokossa ?',
-      1 => 'Oui, sans difficulté. La ville est à environ 110 km d\'Abomey-Calavi, ce qui rend un déplacement pour le cadrage initial ou la formation des équipes tout à fait raisonnable.',
+      1 => 'Oui, sans difficulté. La ville est à environ 110 km de Cotonou, ce qui rend un déplacement pour le cadrage initial ou la formation des équipes tout à fait raisonnable.',
     ),
     1 => 
     array (
