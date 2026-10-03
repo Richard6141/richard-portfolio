@@ -58,7 +58,7 @@ $controles = [
     "accueil : un seul JSON-LD, Person présente, pas d'ancienne marque" => static function () use ($base): bool {
         $r = smoke_get($base . '/');
         return $r['code'] === 200 && substr_count($r['corps'], 'application/ld+json') === 1
-            && str_contains($r['corps'], '/#person') && !str_contains($r['corps'], 'Richard Technologies');
+            && str_contains($r['corps'], '"https://richardsalanon.com/#person"') && !str_contains($r['corps'], 'Richard Technologies');
     },
     'à-propos : un seul JSON-LD' => static function () use ($base): bool {
         $r = smoke_get($base . '/a-propos/');
