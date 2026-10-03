@@ -661,7 +661,7 @@ reproduit le comportement et les proportions ; on écrit notre propre CSS, avec 
 
 ```css
 :root{
-  --bg:#FBF8F4; --surface:#F5EEE6; --surface-2:#EEF4F3; --card:#FFFFFF;
+  --bg:#FFFFFF; --surface:#F5EEE6;   /* fond blanc : choix de Richard du 03/10/2026 */ --surface-2:#EEF4F3; --card:#FFFFFF;
   --ink:#14161F; --ink-soft:#343846; --muted:#626676;
   --line:#E8E1D8; --line-strong:#D5CBBE;
   --brand:#C2502F; --brand-hover:#A8401F;          /* boutons d'action, texte blanc */

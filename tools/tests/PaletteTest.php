@@ -34,7 +34,7 @@ function palette_jeton(string $nom): string
 
 function test_palette_jetons_de_la_spec(): void
 {
-    $attendus = ['ink' => '#14161F', 'brand' => '#C2502F', 'link' => '#0F6B6B', 'accent' => '#E0A43A', 'surface' => '#F5EEE6', 'bg' => '#FBF8F4', 'line' => '#E8E1D8'];
+    $attendus = ['ink' => '#14161F', 'brand' => '#C2502F', 'link' => '#0F6B6B', 'accent' => '#E0A43A', 'surface' => '#F5EEE6', 'bg' => '#FFFFFF', 'line' => '#E8E1D8'];
     foreach ($attendus as $nom => $valeur) {
         assert_same($valeur, palette_jeton($nom), "--{$nom}");
     }

@@ -83,7 +83,7 @@ $cta = $nav['carte_cta'];
       <a class="btn-icone btn-icone--wa" href="<?= sanitize($waLien) ?>" rel="noopener" target="_blank"><?= icone('whatsapp-logo', 20, 'ic', 'Écrire sur WhatsApp') ?></a>
       <a class="btn btn--action entete__devis" href="/contact">Demander un devis</a>
       <button class="entete__burger" type="button" aria-expanded="false" aria-controls="tiroir">
-        <span class="visuellement-cache">Ouvrir le menu</span><?= icone('list', 24) ?>
+        <span class="visuellement-cache">Ouvrir le menu</span><?= icone('list', 24, 'ic ic-liste') ?><?= icone('x', 24, 'ic ic-fermer') ?>
       </button>
     </div>
   </div>
