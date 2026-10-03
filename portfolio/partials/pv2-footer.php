@@ -83,11 +83,12 @@ if (!function_exists('zoneLien')) {
 
     <div class="foot-col">
       <h2>Expertises</h2>
-      <a href="/a-propos/#expertise">Développement full-stack</a>
-      <a href="/a-propos/#expertise">Applications & mobile</a>
-      <a href="/a-propos/#expertise">Automatisation n8n / Make</a>
-      <a href="/a-propos/#expertise">Référencement (SEO)</a>
-      <a href="/a-propos/#expertise">Conseil & digitalisation</a>
+      <a href="/services/application-web-sur-mesure">Développement full-stack</a>
+      <a href="/services/application-mobile-android-ios">Applications & mobile</a>
+      <a href="/services/automatisation-ia">Automatisation n8n / Make</a>
+      <a href="/services/referencement-naturel-seo">Référencement (SEO)</a>
+      <a href="/consultant-digitalisation">Conseil & digitalisation</a>
+      <a href="/formations/">Formations IA et numérique</a>
     </div>
 
     <div class="foot-col">

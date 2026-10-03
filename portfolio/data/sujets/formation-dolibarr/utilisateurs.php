@@ -129,7 +129,7 @@ return [
             'etiquette' => 'Aller plus loin',
             'titre'     => 'Formations et services liés.',
             'items'     => [
-                ['url' => '/dolibarr-cotonou', 'titre' => 'Intégration Dolibarr', 'texte' => 'L\'installation et la configuration elles-mêmes, quand l\'outil n\'est pas encore en place.'],
+                ['url' => '/integration-dolibarr-cotonou', 'titre' => 'Intégration Dolibarr', 'texte' => 'L\'installation et la configuration elles-mêmes, quand l\'outil n\'est pas encore en place.'],
                 ['url' => '/formation-odoo', 'titre' => 'Formation Odoo', 'texte' => 'Le même travail d\'adoption pour les structures équipées d\'Odoo.'],
                 ['url' => '/formations/', 'titre' => 'Toutes les formations', 'texte' => 'IA, vibecoding, automatisation, web : le catalogue complet.'],
             ],
