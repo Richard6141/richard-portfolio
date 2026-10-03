@@ -56,6 +56,9 @@ function llms_contenu(array $f, string $base, array $sections, bool $complet): s
         }
         $reperes[] = 'Délais : ' . implode(' ; ', $delais) . '.';
     }
+    if (!empty($f['delai_reponse'])) {
+        $reperes[] = 'Délai de réponse : ' . $f['delai_reponse'] . '.';
+    }
     if (!empty($f['paiements'])) {
         $reperes[] = 'Paiement : ' . implode(', ', $f['paiements']) . '.';
     }

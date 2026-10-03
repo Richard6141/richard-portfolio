@@ -75,7 +75,7 @@ return [
     'carte_cta' => [
         'eyebrow' => 'Premier échange gratuit',
         'titre'   => 'Un projet, une formation, une question ?',
-        'texte'   => 'Décrivez votre besoin : réponse sous 24 heures et devis détaillé après un cadrage gratuit.',
+        'texte'   => 'Décrivez votre besoin : réponse sous ' . fait('delai_reponse') . ' et devis détaillé après un cadrage gratuit.',
         'bouton'  => 'Demander un devis',
         'url'     => '/contact',
     ],

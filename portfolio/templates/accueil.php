@@ -281,7 +281,7 @@ $etapes = [
 <section class="appel-final" id="contact">
   <div class="conteneur"><div class="appel-final__corps" data-reveal>
     <h2>Parlons de votre projet</h2>
-    <p>Un site, une application, une automatisation, une formation ou une idée à cadrer : décrivez votre besoin, je reviens vers vous avec une première recommandation.</p>
+    <p>Un site, une application, une automatisation, une formation ou une idée à cadrer : décrivez votre besoin, je vous réponds sous <?= sanitize((string) fait('delai_reponse')) ?> avec une première recommandation.</p>
     <div class="rangee-actions rangee-actions--centree">
       <a class="btn btn--blanc btn--grand" href="/contact">Demander un devis</a>
       <a class="btn btn--contour-clair btn--grand" href="https://wa.me/<?= sanitize((string) fait('whatsapp')) ?>" rel="noopener" target="_blank"><?= icone('whatsapp-logo', 18) ?>WhatsApp</a>

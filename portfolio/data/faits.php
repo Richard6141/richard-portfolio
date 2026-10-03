@@ -88,6 +88,8 @@ return [
 
     'paiements'     => ['Mobile Money (MTN, Moov)', 'carte bancaire', 'PayPal', 'virement', 'espèces'],
     'delais'        => ['Site vitrine' => '1 à 3 semaines', 'Application sur mesure' => '1 à 3 mois'],
+    // Confirmé par Richard le 03/10/2026 (« Réponse sous 24h, oui »).
+    'delai_reponse' => '24 heures',
     'tarifs_depart' => ['Landing page' => '150 000 FCFA', 'Site vitrine' => '300 000 FCFA', 'Référencement naturel' => '75 000 FCFA'],
 
     // Horaires publiés depuis le 20/08/2026 (à aligner sur la fiche Google Business).

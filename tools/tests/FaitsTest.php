@@ -124,3 +124,13 @@ function test_faits_horaires_du_contact_identiques_a_la_fiche(): void
     assert_contains(horaires_texte(fait('horaires')), $corps);
     assert_not_contains('8 h à 19 h', $corps);
 }
+
+function test_faits_delai_de_reponse_confirme_et_affiche(): void
+{
+    // Confirmé par Richard le 03/10/2026 : « Réponse sous 24h, oui ».
+    $f = faits_depuis(racine('portfolio/data/faits.php'));
+    assert_same('24 heures', $f['delai_reponse']);
+    assert_contains('je vous réponds sous 24 heures', http_local('/')['corps']);
+    require_once racine('helpers/llms.php');
+    assert_contains('Délai de réponse : 24 heures', llms_contenu($f, 'https://richardsalanon.com', [], false));
+}
