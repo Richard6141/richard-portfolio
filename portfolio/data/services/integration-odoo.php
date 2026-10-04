@@ -15,8 +15,8 @@ return [
     'title'   => 'Intégration et déploiement d\'Odoo | Richard SALANON',
     'meta'    => 'Intégration Odoo Community ou Enterprise : cadrage, ventes, stock, comptabilité SYSCOHADA, reprise des données, WhatsApp, formation et montées de version.',
     'en_bref' => 'Déploiement d\'Odoo Community ou Enterprise, sur Odoo Online, Odoo.sh ou votre propre serveur : choix de l\'édition, paramétrage des ventes, des achats, du stock, de la comptabilité SYSCOHADA, du point de vente et du CRM, reprise des données, raccordement à WhatsApp et au mobile money, formation des équipes, support et montées de version. Pour les PME, distributeurs, commerces, ateliers et ONG d\'Afrique francophone, d\'Europe et du Canada qui ont dépassé le tableur. Comptez 4 à 8 semaines pour un premier module en production, formation comprise, puis quelques mois par paliers pour les suivants. Le prix est fixé sur devis après le cadrage.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'ERP et gestion',
     'matrice' => true,
 

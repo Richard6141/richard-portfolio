@@ -13,8 +13,8 @@ return [
     'title'   => 'Application web et logiciel sur mesure | Richard SALANON',
     'meta'    => 'Logiciel de gestion, stocks, facturation, espace client ou tableau de bord : application web sur mesure en Laravel, Vue ou React, livrée en 1 à 3 mois.',
     'en_bref' => 'Conception et développement d\'applications web sur mesure : logiciel de gestion, suivi des stocks, facturation, espace client, tableau de bord ou outil interne, en Laravel, Node.js, Vue ou React. Pour les PME, commerces, écoles, cliniques, ONG et startups d\'Afrique francophone, d\'Europe et du Canada dont les tableurs et les logiciels du marché ne suivent plus l\'activité. Une première version utilisable arrive en quelques semaines, l\'application complète en 1 à 3 mois selon son périmètre. Le prix est fixé sur devis après le cadrage.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Applications et IA',
     'matrice' => true,
 

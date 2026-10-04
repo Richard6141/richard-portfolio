@@ -13,8 +13,8 @@ return [
     'title'   => 'Création de landing page haute conversion | Richard SALANON',
     'meta'    => 'Landing page pour campagne Facebook ou Google Ads, lancement ou formation : promesse, preuves, formulaire ou WhatsApp, suivi GA4 et Meta, dès 150 000 FCFA.',
     'en_bref' => 'Une landing page haute conversion est une page unique, construite pour une seule offre et une seule action : demander un devis, s\'inscrire à une formation, écrire sur WhatsApp, réserver ou payer. Elle sert les entreprises qui lancent un produit, achètent de la publicité sur Facebook, Instagram ou Google, remplissent une session de formation ou collectent des prospects, en Afrique francophone comme en Europe. Elle se réalise en quelques jours de travail, selon les contenus à préparer et le suivi à installer, à partir de 150 000 FCFA, le montant exact étant fixé sur devis.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Sites et boutiques',
     'matrice' => false,
 

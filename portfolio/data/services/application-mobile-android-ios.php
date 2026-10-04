@@ -14,8 +14,8 @@ return [
     'title'   => 'Application mobile Android et iOS | Richard SALANON',
     'meta'    => 'Application mobile Android et iOS en Flutter, natif ou PWA : mode hors ligne, mobile money, publication sur Google Play et l\'App Store, maintenance.',
     'en_bref' => 'Je conçois, développe et publie des applications mobiles Android et iOS, le plus souvent en Flutter, en natif ou en application web installable quand c\'est plus juste. Elles s\'adressent aux entreprises, commerces, ONG et équipes terrain d\'Afrique francophone et d\'Europe qui ont un usage régulier à servir. Une première version publiée demande en général 1 à 3 mois ; le prix est établi sur devis après cadrage, hors frais des magasins : 25 USD une seule fois chez Google Play et 99 USD par an chez Apple, selon leurs pages officielles consultées le 3 octobre 2026.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Applications et IA',
     'matrice' => true,
 

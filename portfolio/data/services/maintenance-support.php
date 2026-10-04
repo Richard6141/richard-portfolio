@@ -14,8 +14,8 @@ return [
     'title'   => 'Maintenance de site, application et ERP | Richard SALANON',
     'meta'    => 'Maintenance de sites, boutiques, applications et ERP : mises à jour PHP, WordPress, Laravel, Odoo, sauvegardes testées, surveillance, forfait mensuel.',
     'en_bref' => 'La maintenance garde votre site, votre boutique, votre application ou votre ERP (Odoo, Dolibarr) à jour, sauvegardé hors de son serveur, surveillé et réparé quand il le faut, avec un interlocuteur qui répond sous 24 heures. Elle s\'adresse aux PME, commerces en ligne, écoles, ONG et entreprises d\'Afrique francophone, d\'Europe et du Canada, que l\'outil ait été construit par Richard SALANON ou par un autre prestataire. Tout commence par un état des lieux de quelques jours, puis le suivi se fait chaque mois au forfait, ou intervention par intervention à la demande. Le prix est fixé sur devis, selon la technologie, le volume et le niveau de réactivité attendu.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Sites et boutiques',
     'matrice' => true,
 

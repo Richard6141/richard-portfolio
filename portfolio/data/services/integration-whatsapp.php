@@ -15,8 +15,8 @@ return [
     'title'   => 'Intégration WhatsApp à Odoo, Dolibarr, CRM | Richard SALANON',
     'meta'    => 'Devis, factures, relances et rendez-vous envoyés sur WhatsApp depuis Odoo, Dolibarr, un CRM ou un site, par l\'API officielle de Meta, avec consentement.',
     'en_bref' => 'Richard SALANON relie WhatsApp à Odoo, à Dolibarr, à un CRM ou à un site web pour que devis, factures, rappels de paiement, confirmations de commande et de rendez-vous partent sur WhatsApp au bon moment, et que chaque échange soit rangé dans la fiche du client. Le service s\'adresse aux PME, commerces, cabinets et prestataires d\'Afrique francophone et d\'Europe qui suivent leurs clients dans un logiciel mais les joignent surtout par WhatsApp. Comptez en général 2 à 6 semaines, validations de Meta comprises ; la prestation est chiffrée sur devis, et les messages facturés par Meta s\'ajoutent selon sa grille officielle.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Applications et IA',
     'matrice' => false,
 

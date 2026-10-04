@@ -17,8 +17,8 @@ return [
     'title'   => 'Intégration de l\'IA dans vos logiciels | Richard SALANON',
     'meta'    => 'Odoo, Dolibarr, CRM, courriels, documents : l\'IA intégrée à vos logiciels pour lire les factures, résumer, chercher, avec coûts et confidentialité.',
     'en_bref' => 'Intégration de l\'intelligence artificielle dans les logiciels que vous utilisez déjà : Odoo, Dolibarr, CRM, messagerie, gestion documentaire et comptabilité SYSCOHADA, pour lire les factures fournisseurs, résumer les dossiers, interroger vos documents internes, préparer des réponses et trier les courriels. Pour les PME, cabinets, ONG et directions administratives d\'Afrique francophone, d\'Europe et du Canada qui veulent gagner du temps sans laisser fuir leurs données. Un premier usage est mis en service en quelques semaines après le cadrage, un déploiement sur plusieurs processus prend 1 à 3 mois. Le prix est fixé sur devis ; les jetons consommés sont facturés directement par le fournisseur du modèle.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Applications et IA',
     'matrice' => true,
 

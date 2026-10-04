@@ -15,8 +15,8 @@ return [
     'title'   => 'Automatisation n8n et Make pour PME | Richard SALANON',
     'meta'    => 'Relances de factures, stocks synchronisés, commandes WhatsApp, rapports : automatisation n8n et Make reliée à Sheets, Odoo, Dolibarr et à votre CRM.',
     'en_bref' => 'Conception et mise en service d\'automatisations avec n8n et Make : relances de factures, synchronisation des stocks, traitement des commandes reçues sur WhatsApp, rapports envoyés à heure fixe, liaison entre Google Sheets, Odoo, Dolibarr et votre CRM, avec l\'intelligence artificielle pour lire, classer et rédiger. Pour les PME, commerces, cabinets, écoles et ONG d\'Afrique francophone, d\'Europe et du Canada qui perdent des heures en copier-coller. Un premier workflow tourne en 1 à 2 semaines, un lot de plusieurs automatisations en 3 à 6 semaines ; le prix est fixé sur devis après l\'inventaire de vos tâches.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Applications et IA',
     'matrice' => true,
 

@@ -15,8 +15,8 @@ return [
     'title'   => 'Intégration et déploiement Dolibarr | Richard SALANON',
     'meta'    => 'Dolibarr installé, paramétré et relié à vos outils : devis, factures, stocks, comptabilité OHADA, API, migration et formation, en Afrique et en Europe.',
     'en_bref' => 'Installation, paramétrage et intégration de Dolibarr, l\'ERP et CRM libre : tiers, devis, commandes, factures, stocks, comptabilité en partie double sur le plan SYSCOHADA, banques, projets et ressources humaines, sur votre propre hébergement ou chez DoliCloud, avec reprise des données, connexions par API et formation. Pour les PME, commerces, cabinets et associations d\'Afrique francophone, d\'Europe et du Canada qui veulent un outil de gestion sobre, sans licence par utilisateur. Un premier module tourne en production en 4 à 8 semaines, formation comprise, puis les suivants arrivent par paliers ; le prix est fixé sur devis après le cadrage.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'ERP et gestion',
     'matrice' => true,
 

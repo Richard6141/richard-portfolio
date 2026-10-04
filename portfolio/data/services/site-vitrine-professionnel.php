@@ -12,8 +12,8 @@ return [
     'title'   => 'Création de site vitrine professionnel | Richard SALANON',
     'meta'    => 'Votre site vitrine professionnel est livré en 1 à 3 semaines : pages, textes, SEO de base, domaine, hébergement, formulaire et WhatsApp, dès 300 000 FCFA.',
     'en_bref' => 'Un site vitrine professionnel présente votre activité en quatre à six pages le plus souvent : design sur mesure lisible sur téléphone, textes rédigés ou réécrits, bases du référencement, nom de domaine, hébergement, formulaire de contact et bouton WhatsApp, avec une formation pour le mettre à jour vous-même. Il s\'adresse aux PME, artisans, cabinets, écoles, ONG et indépendants d\'Afrique francophone, d\'Europe et du Canada. Comptez 1 à 3 semaines selon le nombre de pages et la disponibilité de vos contenus, à partir de 300 000 FCFA, le montant exact étant fixé sur devis.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Sites et boutiques',
     'matrice' => true,
 

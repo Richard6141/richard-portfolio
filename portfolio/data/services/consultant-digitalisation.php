@@ -14,8 +14,8 @@ return [
     'title'   => 'Consultant en digitalisation en Afrique | Richard SALANON',
     'meta'    => 'Consultant en digitalisation : diagnostic, schéma directeur, choix d\'outils et de prestataires, cahier des charges, AMOA. Réponse sous 24 h, devis gratuit.',
     'en_bref' => 'Un consultant en digitalisation vous aide à décider avant de dépenser : diagnostic de vos processus, feuille de route chiffrée, choix des outils et des prestataires, cahier des charges, puis assistance à maîtrise d\'ouvrage pendant le projet si vous le souhaitez. La mission s\'adresse aux dirigeants de PME, d\'ONG, d\'écoles et de structures publiques d\'Afrique francophone, d\'Europe et du Canada. Une mission courte dure deux à trois semaines pour une PME de moins de vingt personnes. Les honoraires sont fixés sur devis, au forfait, après un premier entretien gratuit.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Visibilité et conseil',
     'matrice' => false,
 

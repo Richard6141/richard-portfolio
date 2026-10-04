@@ -14,8 +14,8 @@ return [
     'title'   => 'Agent IA et chatbot WhatsApp d\'entreprise | Richard SALANON',
     'meta'    => 'Agent IA sur WhatsApp : commandes, rendez-vous, service client et relais humain sur l\'API officielle de Meta, avec ses tarifs 2026 expliqués.',
     'en_bref' => 'Conception et mise en service d\'agents IA et de chatbots WhatsApp qui prennent les commandes, répondent au service client, fixent les rendez-vous et qualifient les prospects, à partir de votre propre base de connaissances, avec un passage de main à un humain pour tout ce qui sort du cadre. Pour les commerces, restaurants, cliniques, écoles, agences et PME de services d\'Afrique francophone, d\'Europe et du Canada qui reçoivent leurs demandes sur WhatsApp. Un premier agent tourne en production en 2 à 6 semaines selon les branchements. Le prix est fixé sur devis, hors frais de messages facturés par Meta.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Applications et IA',
     'matrice' => true,
 

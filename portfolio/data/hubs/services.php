@@ -18,8 +18,8 @@ return [
     'title'   => 'Services : sites, applications, IA et ERP | Richard SALANON',
     'meta'    => 'Sites, applications, IA, automatisation, Odoo, Dolibarr et conseil : 27 services en 4 familles, une même méthode, des prix clairs, une réponse sous 24 h.',
     'en_bref' => 'Richard SALANON, consultant en digitalisation et développeur logiciel à Cotonou, propose 27 services réunis en quatre familles : sites et boutiques, applications et IA, visibilité et conseil, ERP et gestion. Ils s\'adressent aux indépendants, TPE, PME, écoles, cabinets et ONG d\'Afrique francophone, d\'Europe et du Canada, sur place au Bénin ou à distance dans 34 pays. Un site vitrine se livre en ' . $delais['Site vitrine'] . ', une application sur mesure en ' . $delais['Application sur mesure'] . '. Les tarifs de départ publiés vont de ' . $tarifs['Référencement naturel'] . ' à ' . $tarifs['Site vitrine'] . ' ; tout le reste est chiffré sur devis gratuit, avec une réponse sous 24 heures.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'faits_hero' => [
         ['l' => 'Familles', 'v' => 'Sites et boutiques, applications et IA, visibilité et conseil, ERP et gestion'],
         ['l' => 'Pour qui', 'v' => 'Indépendants, TPE, PME, écoles, cabinets et ONG'],

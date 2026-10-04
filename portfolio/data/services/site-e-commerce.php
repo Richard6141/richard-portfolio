@@ -13,8 +13,8 @@ return [
     'title'   => 'Site e-commerce avec paiement mobile money | Richard SALANON',
     'meta'    => 'Boutique WooCommerce, Shopify ou sur mesure : paiement mobile money et carte, livraison, stock, commandes WhatsApp et SEO produit, en Afrique et en Europe.',
     'en_bref' => 'Richard SALANON crée des boutiques en ligne sous WooCommerce, sous Shopify ou en développement sur mesure, avec paiement mobile money et carte bancaire (FedaPay, KkiaPay, CinetPay, Stripe ou PayPal), catalogue, stock, livraison et commandes relayées sur WhatsApp. Le service vise les commerçants, marques, artisans et PME d\'Afrique francophone et d\'Europe qui veulent vendre au-delà de leur magasin ou de leurs réseaux sociaux. Comptez en général 3 à 6 semaines pour une boutique WooCommerce ou Shopify, 1 à 3 mois pour une plateforme sur mesure. Le prix est établi sur devis, selon le catalogue, les paiements et les intégrations.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Sites et boutiques',
     'matrice' => true,
 

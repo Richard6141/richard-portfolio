@@ -15,8 +15,8 @@ return [
     'title'   => 'Référencement IA GEO : être cité par l\'IA | Richard SALANON',
     'meta'    => 'Référencement IA (GEO) : robots autorisés, données structurées, fiche d\'entité et contenus sourcés pour être cité par ChatGPT, Gemini et Perplexity.',
     'en_bref' => 'Le référencement IA, ou GEO, rend votre entreprise lisible et citable par les assistants qui répondent à la place d\'un moteur : accès des robots d\'OpenAI, de Google, de Perplexity, d\'Anthropic et de Microsoft, données structurées, fiche d\'entité unique, contenus de référence sourcés et datés, puis mesure des citations. Il s\'adresse aux PME, cabinets, écoles, commerces et organisations d\'Afrique francophone et d\'Europe dont le site est indexé, ou en passe de l\'être. Comptez trois à six semaines pour l\'état des lieux et la mise en place, puis un suivi mensuel ; le prix est fixé sur devis, et personne ne peut garantir une citation.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Visibilité et conseil',
     'matrice' => true,
 

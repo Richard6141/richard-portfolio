@@ -13,8 +13,8 @@ return [
     'title'   => 'Référencement naturel SEO, audit et suivi | Richard SALANON',
     'meta'    => 'Référencement naturel SEO : audit technique, contenus, maillage, liens éthiques et suivi Search Console pour être trouvé sur Google, dès 75 000 FCFA.',
     'en_bref' => 'Le référencement naturel place vos pages parmi les réponses gratuites de Google : audit technique, contenus qui répondent aux recherches de vos clients, maillage interne, liens obtenus proprement et suivi mensuel dans la Search Console. Il s\'adresse aux PME, commerces, cabinets et organisations d\'Afrique francophone et d\'Europe dont le site existe mais n\'apporte pas assez de demandes. Les premiers signaux apparaissent en général en deux à trois mois, les positions solides se construisent en quatre à six mois. L\'accompagnement démarre à 75 000 FCFA ; le périmètre exact se fixe sur devis après l\'audit.',
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Visibilité et conseil',
     'matrice' => true,
 

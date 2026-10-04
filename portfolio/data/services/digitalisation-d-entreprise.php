@@ -15,8 +15,8 @@ return [
     'title'   => "Digitalisation d'entreprise pour PME | Richard SALANON",
     'meta'    => "Digitaliser votre PME de bout en bout : diagnostic des processus, ERP, CRM, mobile money, facture normalisée, formation et feuille de route de 6 à 18 mois.",
     'en_bref' => "La digitalisation d'entreprise de bout en bout part de vos processus réels (ventes, stock, facturation, encaissements, relances, archives), les classe par gain et par effort, choisit les outils adaptés (site, ERP, CRM, automatisation, paiement mobile money, facture normalisée, archivage), les met en service et forme les équipes jusqu'à ce qu'elles les utilisent vraiment. Elle s'adresse aux PME, commerces, cabinets, écoles, cliniques et ONG d'Afrique francophone, d'Europe et du Canada. Un premier chantier se livre en 2 à 5 semaines et la feuille de route complète s'étale sur 6 à 18 mois, par paliers mesurés. Le prix est fixé sur devis, chantier par chantier.",
-    'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
     'famille' => 'Visibilité et conseil',
     'matrice' => true,
 
