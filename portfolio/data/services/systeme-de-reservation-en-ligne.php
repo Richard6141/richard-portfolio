@@ -1,0 +1,328 @@
+<?php
+// ============================================================
+// data/services/systeme-de-reservation-en-ligne.php · Pilier « Système de
+// réservation en ligne » (vague 1A). Le slug existait déjà en base : la fiche
+// en production (consultée le 04/10/2026) reste sur devis, sans délai publié ;
+// ses fonctions (calendrier, acompte en Mobile Money, carte ou PayPal, rappels,
+// disponibilités, multi-services, historique client, réservation sans compte,
+// intégration au site existant ou page dédiée) sont reprises et développées.
+// Délai : 1 à 3 mois pour le sur mesure (fait('delais')) ; pour un outil du
+// marché ou Odoo, ordre de grandeur à confirmer au cadrage.
+// Faits externes relevés sur les pages officielles d'Odoo, Calendly, Google,
+// Stripe, FedaPay, KkiaPay, CinetPay, Airbnb, Booking.com, Meta, du SGG du
+// Bénin, de la CNIL et de service-public.gouv.fr (sources datées du 04/10/2026).
+// ============================================================
+declare(strict_types=1);
+
+return [
+    'titre'   => 'Système de réservation en ligne : vos clients choisissent un créneau, versent un acompte et reçoivent leur rappel sans un seul appel',
+    'title'   => 'Système de réservation en ligne sur mesure | Richard SALANON',
+    'meta'    => 'Réservation en ligne pour hôtels, cliniques, salons, auto-écoles et loueurs : créneaux, acompte en mobile money ou carte, rappels et Google Agenda.',
+    'en_bref' => 'Un système de réservation en ligne laisse vos clients réserver et payer seuls, à toute heure : calendrier des disponibilités, créneaux par salle, praticien ou véhicule, acompte en mobile money, par carte ou PayPal, confirmations et rappels par SMS, e-mail ou WhatsApp, annulation, liste d\'attente et tableau de bord. Il s\'adresse aux hôtels, maisons d\'hôtes, restaurants, cliniques, cabinets, salons, auto-écoles, loueurs et organisateurs d\'Afrique francophone et d\'Europe. Un développement sur mesure demande 1 à 3 mois ; le paramétrage d\'un outil du marché ou d\'Odoo est plus court, avec un délai fixé au cadrage. Le prix est établi sur devis.',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
+    'famille' => 'ERP et gestion',
+    'matrice' => false,
+
+    'faits_hero' => [
+        ['l' => 'Délai', 'v' => '1 à 3 mois en sur mesure ; outil du marché ou Odoo : délai fixé au cadrage'],
+        ['l' => 'Pour qui', 'v' => 'Hôtels, restaurants, cliniques, salons, auto-écoles, loueurs, transporteurs, événements'],
+        ['l' => 'Livrables', 'v' => 'Module de réservation en ligne, paiements et rappels branchés, tableau de bord, équipe formée'],
+        ['l' => 'Réponse', 'v' => 'sous 24 heures'],
+    ],
+
+    'sections' => [
+        [
+            'type'        => 'prose',
+            'titre'       => 'Que recouvre un système de réservation en ligne, et qu\'est-ce qu\'il ne fait pas ?',
+            'paragraphes' => [
+                'Un système de réservation en ligne remplace le cahier de rendez-vous, le standard téléphonique et les allers-retours de messages par une page où le client voit les créneaux réellement libres, choisit le sien, paie un acompte ou la totalité, puis reçoit sa confirmation. Le créneau se bloque à l\'instant où il est pris : deux personnes ne peuvent plus réserver la même chambre, le même praticien ou le même véhicule. La veille, un rappel part tout seul. Vous, vous ouvrez un tableau de bord qui montre la journée, les encaissements et les absences.',
+                'Le service couvre la chaîne entière : cadrage de vos prestations, de leurs durées, de vos horaires et de vos règles d\'acompte et d\'annulation ; choix entre un outil du marché, l\'application Rendez-vous d\'Odoo ou un module développé pour vous ; parcours de réservation sur téléphone ; branchement du paiement mobile money et carte ; messages de confirmation et de rappel ; synchronisation avec Google Agenda ou les plateformes où vous êtes déjà référencé ; tableau de bord ; tests sur de vraies réservations ; mise en ligne et formation de la personne qui pilotera l\'agenda.',
+                'Le module peut s\'intégrer à votre site actuel, sous forme de bouton ou de page, ou vivre sur une page dédiée si vous n\'avez pas encore de site. La réservation peut se faire sans création de compte : un nom, un numéro de téléphone et, si besoin, une adresse e-mail suffisent pour la plupart des activités. Le compte client ne se justifie que lorsque les clients reviennent souvent et veulent retrouver leur historique, leurs forfaits ou leurs reçus.',
+                'Ce service ne remplace pas votre logiciel de gestion hôtelière, votre dossier patient ou votre comptabilité. Il s\'y raccorde quand c\'est utile. Si le besoin dépasse la réservation, par exemple un portail client complet avec contrats et documents, il relève d\'une <a href="/services/application-web-sur-mesure">application web sur mesure</a> ; si votre activité repose déjà sur Odoo, l\'<a href="/services/integration-odoo">intégration Odoo</a> traite l\'ensemble de la base. Et si vous vendez des produits livrés plutôt que des créneaux, c\'est un <a href="/services/site-e-commerce">site e-commerce</a> qu\'il vous faut.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'À quels signes voit-on qu\'il est temps de passer à la réservation en ligne ?',
+            'intro' => 'La question n\'est pas de savoir si la réservation en ligne est moderne, mais si elle vous rend du temps et de l\'argent. Les signes suivants reviennent dans les demandes reçues de cliniques, de salons, d\'hôtels ou d\'écoles de conduite. Deux ou trois d\'entre eux suffisent à ouvrir un cadrage.',
+            'items' => [
+                ['titre' => 'Le téléphone sonne pendant que vous travaillez', 'texte' => 'La coiffeuse pose le séchoir pour noter un rendez-vous, le praticien décroche entre deux patients, la réception de l\'hôtel répond aux mêmes questions de disponibilité toute la journée. Chaque appel interrompt un client qui, lui, est déjà là.'],
+                ['titre' => 'Des clients réservent sans venir', 'texte' => 'Un créneau perdu ne se rattrape pas : la chambre reste vide, le moniteur attend dans la voiture, le fauteuil reste libre. Sans acompte ni rappel, rien n\'engage le client, et rien ne vous prévient à temps pour proposer la place à quelqu\'un d\'autre.'],
+                ['titre' => 'Deux personnes ont réservé la même chose', 'texte' => 'Le cahier de l\'accueil, le téléphone du gérant et les messages WhatsApp de la secrétaire ne se parlent pas. Une même salle se retrouve promise deux fois, et le conflit éclate devant le client.'],
+                ['titre' => 'Vous refusez des demandes en dehors des heures d\'ouverture', 'texte' => 'Les gens cherchent un rendez-vous le soir, le dimanche ou depuis l\'étranger, quand personne ne répond. Une page qui affiche vos créneaux libres prend la réservation à votre place, à toute heure.'],
+                ['titre' => 'Vous gérez plusieurs ressources à la fois', 'texte' => 'Trois praticiens, cinq véhicules, deux salles de réunion ou douze chambres de catégories différentes : au-delà de quelques ressources, l\'agenda papier ne dit plus qui est libre, ni quand.'],
+                ['titre' => 'Les encaissements d\'acompte se perdent', 'texte' => 'Le client envoie un transfert mobile money, puis une capture d\'écran sur WhatsApp, et quelqu\'un doit relier ce paiement à la bonne réservation. Au bout d\'un mois, plus personne ne sait quel acompte correspond à quel séjour.'],
+                ['titre' => 'Vous ne savez pas ce qui se vend vraiment', 'texte' => 'Quels créneaux sont pleins, quelles prestations rapportent, combien de clients ne viennent pas : sans historique, ces chiffres restent des impressions, et les décisions de recrutement ou d\'horaires se prennent au jugé.'],
+                ['titre' => 'Les contre-signaux', 'texte' => 'Si vous recevez quelques rendez-vous par semaine, tous pris par des habitués qui vous appellent, un agenda partagé gratuit suffit. Si vos tarifs et vos durées changent à chaque client, fixez d\'abord une grille simple : un logiciel ne décide pas à votre place de ce que dure une prestation.'],
+            ],
+        ],
+        [
+            'type'     => 'comparaison',
+            'titre'    => 'Outil du marché, plateforme de réservation, Odoo Rendez-vous ou module sur mesure : que choisir ?',
+            'options'  => ['Outil d\'agenda du marché (type Calendly)', 'Plateforme de réservation (type Booking.com, Airbnb)', 'Odoo Rendez-vous', 'Module sur mesure'],
+            'criteres' => [
+                ['critere' => 'Ce que vous payez', 'valeurs' => ['Un abonnement par utilisateur ; offre gratuite limitée', 'Une commission sur chaque réservation reçue', 'L\'abonnement Odoo Enterprise, plus le paramétrage', 'Le développement, puis l\'hébergement et la maintenance']],
+                ['critere' => 'Clients apportés', 'valeurs' => ['Aucun : vous partagez votre lien', 'Oui, c\'est sa raison d\'être', 'Aucun, sauf via Google Reserve', 'Aucun : le trafic vient de votre site et de Google']],
+                ['critere' => 'Mobile money', 'valeurs' => ['Non : paiements via Stripe et PayPal', 'Selon les moyens proposés par la plateforme', 'Par un module tiers ou une automatisation', 'Oui : FedaPay, KkiaPay, CinetPay ou autre, au choix']],
+                ['critere' => 'Ressources (salles, véhicules, chambres)', 'valeurs' => ['Pensé d\'abord pour des personnes', 'Chambres et logements', 'Utilisateurs ou ressources, avec capacité', 'Tout modèle : véhicule, siège, salle, praticien']],
+                ['critere' => 'Règles propres à votre métier', 'valeurs' => ['Celles prévues par l\'outil', 'Celles de la plateforme', 'Larges en standard, extensibles par module', 'Toutes, écrites pour vous']],
+                ['critere' => 'Données clients', 'valeurs' => ['Chez l\'éditeur', 'Chez la plateforme, qui garde la relation', 'Dans votre base Odoo', 'Sur votre serveur, à votre nom']],
+                ['critere' => 'Mise en service', 'valeurs' => ['Rapide', 'Rapide, puis validation de l\'annonce', 'Courte si Odoo est déjà en place', '1 à 3 mois']],
+                ['critere' => 'Profil typique', 'valeurs' => ['Consultant, coach, rendez-vous d\'une personne', 'Hôtel ou maison d\'hôtes qui cherche de la visibilité', 'Entreprise déjà sous Odoo ou qui va l\'adopter', 'Activité à ressources multiples, mobile money, règles fines']],
+            ],
+            'verdict'  => 'La plupart des établissements combinent deux options : une plateforme pour être trouvé, et un moteur à soi pour les clients qui reviennent sans commission. Le bon choix dépend de trois questions : vos clients paient-ils en mobile money, réservez-vous des ressources plutôt que des personnes, et utilisez-vous déjà un ERP ? Pour ce dernier point, le <a href="/comparatifs/odoo-vs-dolibarr">comparatif Odoo ou Dolibarr</a> aide à trancher.',
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Dans quels cas chacune de ces options est-elle la bonne ?',
+            'paragraphes' => [
+                'L\'outil d\'agenda du marché convient au rendez-vous simple entre une personne et un client. Sur sa <a href="https://calendly.com/pricing">page tarifs</a>, consultée le 4 octobre 2026, Calendly propose une offre gratuite limitée à un type d\'événement et à un calendrier connecté, puis l\'offre Standard à 10 dollars par siège et par mois en facturation annuelle, et Teams à 16 dollars. L\'encaissement à la réservation, via Stripe et PayPal, commence à l\'offre Standard. Or la <a href="https://stripe.com/global">page de disponibilité de Stripe</a> ne liste, ce même jour, ni le Bénin, ni le Sénégal, ni le Togo, ni le Cameroun : pour une entreprise de ces pays, cet encaissement intégré reste limité.',
+                'La plateforme de réservation apporte des clients que vous n\'auriez pas eus. En contrepartie, elle garde la relation et se rémunère sur chaque réservation : selon le <a href="https://partner.booking.com/en-us/help/commission-invoices-tax/commission/understanding-our-commission">centre d\'aide partenaires de Booking.com</a>, consulté le 4 octobre 2026, la commission porte sur le prix de la réservation et les frais ajoutés au moment de réserver, hors taxes locales comme la taxe de séjour, son taux varie selon le pays et le type d\'établissement, et elle est facturée chaque début de mois. Pour un hôtel, elle reste un canal d\'acquisition ; le moteur de réservation de votre propre site sert à fidéliser sans commission.',
+                'L\'application Rendez-vous d\'Odoo est un outil de planification en libre-service, selon sa <a href="https://www.odoo.com/documentation/20.0/applications/productivity/appointments.html">documentation 20.0</a>. Elle répartit les créneaux selon la disponibilité des utilisateurs ou de ressources partagées, comme des salles ou du matériel, avec une gestion des capacités, un paiement à l\'avance, des rappels par e-mail ou SMS, une confirmation manuelle et des questions posées à la réservation. La <a href="https://www.odoo.com/fr_FR/page/editions">page des éditions</a> la range dans Enterprise seulement. Elle devient le bon choix quand vos ventes, votre facturation ou votre CRM vivent déjà dans Odoo, parce que chaque rendez-vous y rejoint directement la fiche du client.',
+                'Le module sur mesure se justifie quand les trois autres options vous obligent à tordre votre métier. Une auto-école qui affecte un moniteur et une voiture à chaque leçon, un loueur qui bloque un véhicule plusieurs jours avec une caution, une compagnie de transport qui vend des sièges sur un trajet, une clinique qui distingue la salle, le praticien et l\'appareil d\'examen : ces règles s\'écrivent mieux qu\'elles ne se contournent. Le sur mesure permet aussi de choisir librement l\'agrégateur de mobile money, de garder les données sur un serveur à votre nom et de ne payer aucune commission par réservation.',
+            ],
+        ],
+        [
+            'type'  => 'etapes',
+            'titre' => 'Comment se déroule la mise en place, du premier échange au suivi ?',
+            'items' => [
+                ['titre' => 'Premier échange', 'duree' => 'Réponse sous 24 heures', 'texte' => 'Vous décrivez votre activité, ce que vos clients réservent, comment ils paient et ce qui coince aujourd\'hui. L\'échange, à Cotonou ou en visioconférence, sert à dire franchement si un outil existant suffit avant de parler de développement.'],
+                ['titre' => 'Cadrage des règles', 'duree' => 'Ordre de grandeur : une à deux semaines, selon la complexité', 'texte' => 'On fixe les prestations et leurs durées, les ressources (personnes, salles, véhicules, chambres), les horaires et les fermetures, le temps de préparation entre deux clients, le délai minimum pour réserver, le montant de l\'acompte, les règles d\'annulation et de remboursement, les messages à envoyer. Ce document décide ensuite du choix de l\'outil.'],
+                ['titre' => 'Choix de l\'option et ouverture des comptes', 'duree' => 'En parallèle du cadrage', 'texte' => 'Outil du marché, Odoo Rendez-vous ou module sur mesure. Les comptes de paiement (agrégateur de mobile money, Stripe ou PayPal selon le pays) et, si besoin, le compte de la plateforme WhatsApp Business s\'ouvrent à votre nom dès cette étape, car leur validation prend parfois plusieurs jours.'],
+                ['titre' => 'Parcours de réservation', 'duree' => 'Quelques jours', 'texte' => 'Maquette du parcours sur téléphone : choix de la prestation, du créneau, de la ressource si le client peut la choisir, saisie des coordonnées, paiement, confirmation. Chaque écran supprimé est un client de moins qui abandonne en route.'],
+                ['titre' => 'Paramétrage ou développement', 'duree' => 'Outil du marché ou Odoo : délai fixé au cadrage ; sur mesure : la majeure partie des 1 à 3 mois', 'texte' => 'Création des prestations, des ressources et des disponibilités, ou développement du module : calendrier, blocage des créneaux, acompte, annulation, liste d\'attente, tableau de bord. Le travail avance par lots que vous pouvez essayer au fur et à mesure.'],
+                ['titre' => 'Paiements, rappels et synchronisations', 'duree' => 'Inclus dans l\'étape précédente', 'texte' => 'Branchement de l\'agrégateur en mode test, vérification serveur de chaque paiement, modèles de confirmation et de rappel par e-mail, SMS ou WhatsApp, synchronisation avec Google Agenda ou avec le calendrier des plateformes.'],
+                ['titre' => 'Recette sur de vrais scénarios', 'duree' => 'Environ une semaine', 'texte' => 'Réserver, payer, annuler, se faire rembourser, réserver un créneau déjà pris depuis deux téléphones, payer puis fermer l\'application avant le retour : chaque scénario est joué, puis rejoué après correction.'],
+                ['titre' => 'Mise en ligne et formation', 'duree' => 'Un à deux jours', 'texte' => 'Activation des clés de production, premier paiement réel de faible montant, puis formation de la personne qui pilotera l\'agenda : ajuster les disponibilités, bloquer un congé, rembourser, lire le tableau de bord. L\'objectif est que vous soyez autonome.'],
+                ['titre' => 'Premières semaines et évolutions', 'duree' => 'Selon le contrat', 'texte' => 'Les premières semaines révèlent des réglages à reprendre : durée d\'une prestation, heure du rappel, montant de l\'acompte. Le suivi au-delà, correctifs et évolutions, relève de la <a href="/services/maintenance-support">maintenance</a>, dont la durée et le contenu se fixent dans le devis.'],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Que recevez-vous concrètement à la fin du projet ?',
+            'legende' => 'Livrables d\'un projet de réservation en ligne ; la liste exacte dépend de l\'option retenue et figure dans le devis.',
+            'entetes' => ['Livrable', 'Contenu', 'Ce qu\'il vous apporte'],
+            'lignes'  => [
+                ['Document de règles', 'Prestations, durées, ressources, horaires, acompte, annulation, remboursement, messages', 'Une référence écrite, utile pour former un nouvel employé ou changer d\'outil'],
+                ['Module de réservation en ligne', 'Calendrier des disponibilités, créneaux bloqués à la réservation, multi-services, réservation sans compte obligatoire', 'Des réservations prises à toute heure, sans double réservation'],
+                ['Intégration au site', 'Bouton, page ou widget sur votre site actuel, ou page dédiée à votre nom de domaine', 'Le client réserve là où il vous trouve'],
+                ['Paiement branché', 'Acompte ou montant complet en mobile money, par carte ou PayPal, vérification serveur, références de rapprochement', 'Un encaissement relié à la bonne réservation, sans capture d\'écran'],
+                ['Confirmations et rappels', 'Modèles d\'e-mail, de SMS ou de WhatsApp, heure d\'envoi, lien d\'annulation ou de report', 'Moins d\'oublis, et des places libérées à temps'],
+                ['Tableau de bord', 'Réservations du jour et de la semaine, encaissements, absences, historique par client, export', 'Piloter vos horaires et vos effectifs sur des chiffres'],
+                ['Synchronisations', 'Google Agenda des praticiens ou du personnel, calendriers des plateformes si vous y êtes référencé', 'Un seul état des disponibilités, quel que soit le canal'],
+                ['Accès et code à votre nom', 'Comptes administrateur, comptes de paiement, nom de domaine ; pour le sur mesure, code dans un dépôt Git à votre nom', 'Aucune dépendance envers le prestataire'],
+                ['Guide et formation', 'Guide court pour l\'accueil et le gérant, séance de prise en main', 'Une équipe qui gère seule les cas courants'],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quelles fonctions prévoir, et quelle règle faut-il trancher pour chacune ?',
+            'legende' => 'Fonctions courantes d\'un système de réservation ; chaque règle se décide au cadrage, avec la personne qui gère l\'agenda au quotidien.',
+            'entetes' => ['Fonction', 'Ce qu\'elle fait', 'La décision à prendre'],
+            'lignes'  => [
+                ['Calendrier des disponibilités', 'Affiche les seuls créneaux réellement libres, jours fériés et congés exclus', 'Jusqu\'à quand peut-on réserver à l\'avance, et combien de temps avant au minimum ?'],
+                ['Créneaux et durées', 'Découpe la journée selon la durée de chaque prestation', 'Faut-il un temps de préparation ou de nettoyage entre deux clients ?'],
+                ['Ressources', 'Affecte une salle, un praticien, un moniteur, un véhicule ou une chambre', 'Le client choisit-il la ressource, ou le système l\'attribue-t-il ?'],
+                ['Capacité', 'Accepte plusieurs personnes sur un même créneau : cours, visite, table, siège', 'Combien de places par créneau, et réserve-t-on par personne ou par groupe ?'],
+                ['Acompte ou paiement complet', 'Encaisse tout ou partie du prix au moment de réserver', 'Quel montant, et la réservation est-elle confirmée avant ou après le paiement ?'],
+                ['Confirmation', 'Envoie un récapitulatif avec date, lieu, prix et lien de gestion', 'Confirmation automatique, ou validation manuelle par l\'établissement ?'],
+                ['Rappels', 'Relance le client avant le rendez-vous', 'Par quel canal, combien de temps avant, et avec quel lien pour annuler ?'],
+                ['Annulation et report', 'Libère le créneau et applique la règle de remboursement', 'Jusqu\'à quand l\'annulation est-elle gratuite, et que devient l\'acompte après ?'],
+                ['Liste d\'attente', 'Propose une place libérée au premier client inscrit', 'Combien de temps le client a-t-il pour confirmer avant de passer au suivant ?'],
+                ['Absences', 'Marque les clients qui ne viennent pas', 'Combien d\'absences avant d\'exiger un paiement complet à la réservation ?'],
+                ['Tableau de bord', 'Montre l\'activité, les encaissements, les annulations et l\'historique par client', 'Qui voit quoi : gérant, accueil, praticien ?'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment encaisser un acompte en mobile money ou par carte, et rembourser une annulation ?',
+            'paragraphes' => [
+                'En Afrique de l\'Ouest, l\'acompte se paie d\'abord en mobile money. Sur la <a href="https://www.fedapay.com/pricing">page tarifs de FedaPay</a>, consultée le 4 octobre 2026, la commission publiée au Bénin est de 1,8 % pour MTN, Moov et Celtiis, et de 3,6 % pour Visa et Mastercard ; le retrait vers un compte mobile money est gratuit, celui vers une banque coûte 3 500 FCFA. La <a href="https://kkiapay.me/faq/">FAQ de KkiaPay</a> annonce le Bénin, la Côte d\'Ivoire, le Togo et le Sénégal, avec MTN, Moov, Celtiis, Orange Money, Free Money, T-Money, Wave, Visa et Mastercard. Le détail des frais et des délais de versement figure dans le <a href="/comparatifs/fedapay-vs-kkiapay-vs-cinetpay">comparatif FedaPay, KkiaPay et CinetPay</a>.',
+                'Le remboursement mérite plus d\'attention que l\'encaissement, car c\'est lui qui fâche les clients. La <a href="https://docs.fedapay.com/fr/dashboard/refunds">documentation des remboursements de FedaPay</a> ne permet de rembourser qu\'une transaction au statut approuvé ou transféré, et précise que le remboursement n\'est possible que via MTN Mobile Money. Un client qui a payé avec un autre opérateur devra donc être remboursé autrement, par un transfert depuis votre solde par exemple. KkiaPay indique que les remboursements se font depuis son tableau de bord. Votre politique d\'annulation doit tenir compte de ces contraintes avant d\'être affichée.',
+                'Pour CinetPay, le <a href="https://github.com/cinetpay/cinetpay-php-sdk">SDK PHP officiel</a> énumère une quinzaine de pays, de la Côte d\'Ivoire au Cameroun et au Gabon, tout en prévenant que la présence d\'un pays dans la liste ne garantit pas qu\'un opérateur soit activé sur votre compte. Vérifiez donc vos opérateurs par écrit avant de construire. Quel que soit l\'agrégateur, la règle technique ne change pas : la réservation ne passe à l\'état « confirmée » qu\'après une vérification du paiement par votre serveur, jamais sur la seule page de retour que voit le client.',
+                'En Europe et au Canada, la carte domine. Stripe y est disponible, et sa <a href="https://docs.stripe.com/payments/place-a-hold-on-a-payment-method">documentation sur la mise en réserve des fonds</a> décrit exactement le besoin d\'un hôtel : autoriser le montant avant l\'arrivée, puis le capturer au départ. Une autorisation de paiement par carte en ligne reste en général valable sept jours ; une capture partielle libère automatiquement le reste. C\'est une alternative élégante à l\'acompte, mais seulement pour des séjours ou des locations proches. PayPal, accepté par Richard SALANON pour ses propres prestations, complète utilement la carte pour la diaspora.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment synchroniser les réservations avec Google Agenda et les plateformes ?',
+            'paragraphes' => [
+                'Beaucoup de praticiens et de gérants tiennent déjà leur vie sur Google Agenda. Le système de réservation doit donc lire leurs indisponibilités et y écrire chaque rendez-vous. L\'<a href="https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query">API Google Calendar</a> fournit pour cela une méthode qui renvoie les plages occupées d\'un ensemble de calendriers sur une période donnée, cinquante calendriers au plus par requête. Les rendez-vous personnels du praticien bloquent alors les créneaux sans que leur contenu soit jamais exposé au client.',
+                'Pour être prévenu d\'un changement sans interroger Google en permanence, l\'API propose des <a href="https://developers.google.com/workspace/calendar/api/guides/push">notifications push</a>. La documentation pose trois conditions pratiques : l\'adresse de réception doit être en HTTPS avec un certificat valide, la notification ne contient pas le détail du changement, et le canal expire sans renouvellement automatique, ce qui impose de le remplacer avant échéance. Le détail se récupère ensuite par la <a href="https://developers.google.com/workspace/calendar/api/guides/sync">synchronisation incrémentale</a>, avec un jeton qui, s\'il est invalidé, renvoie une erreur 410 et oblige à tout resynchroniser. Une intégration sérieuse traite ces trois cas.',
+                'Côté hébergement, la synchronisation avec les plateformes passe souvent par des calendriers iCal. Selon l\'<a href="https://www.airbnb.com/help/article/99">aide d\'Airbnb</a>, consultée le 4 octobre 2026, on importe un lien se terminant par .ics, Airbnb importe jusqu\'à deux ans de données, et le calendrier se met à jour automatiquement toutes les trois heures. Ce délai suffit pour une maison d\'hôtes qui reçoit quelques réservations par semaine ; il devient risqué pour un établissement très demandé, qui a intérêt à passer par un gestionnaire de canaux connecté aux plateformes.',
+                'Les entreprises sous Odoo disposent d\'une autre porte d\'entrée. La <a href="https://www.odoo.com/documentation/20.0/applications/productivity/appointments/google_reserve.html">documentation de l\'intégration Google Reserve</a> explique qu\'elle permet de réserver un rendez-vous directement depuis la recherche Google, Google Maps et l\'Assistant, que l\'adresse déclarée doit correspondre exactement à celle de Google Maps, et que la première synchronisation peut prendre jusqu\'à 24 heures. Une fiche Google Business tenue à jour devient alors un guichet de réservation : c\'est l\'objet du <a href="/services/seo-local-google-business">SEO local et Google Business</a>.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quelles technologies sont utilisées, et pour quelles raisons ?',
+            'legende' => 'Choix de départ, ajustés au cadrage selon l\'option retenue, vos outils actuels et l\'équipe qui maintiendra le système.',
+            'entetes' => ['Brique', 'Choix', 'Pourquoi', 'Ce qu\'il faut savoir'],
+            'lignes'  => [
+                ['Moteur de réservation sur mesure', 'Laravel (PHP)', 'Files d\'attente pour les rappels, tâches planifiées, verrous en base contre les doubles réservations', 'Hébergement PHP courant, y compris chez les hébergeurs de la sous-région'],
+                ['Interface de réservation', 'Vue ou React', 'Calendrier fluide sur téléphone, mise à jour des créneaux sans recharger la page', 'Pages légères, pensées pour une connexion mobile'],
+                ['Services temps réel', 'Node.js', 'Disponibilités affichées en direct quand plusieurs clients réservent en même temps', 'Utile pour la vente de sièges ou de billets ; superflu pour un cabinet'],
+                ['Base de données', 'MySQL ou PostgreSQL', 'Contraintes d\'unicité sur la ressource et le créneau, transactions', 'C\'est la base, pas l\'interface, qui garantit l\'absence de doublon'],
+                ['Application mobile', 'Flutter', 'Une seule base de code pour Android et iOS, pour les clients fidèles ou le personnel', 'Rarement nécessaire au départ : une page web bien faite suffit'],
+                ['Site existant', 'WordPress', 'Bouton ou page de réservation intégrés à un site déjà en place', 'Vérifier la compatibilité de l\'extension avec votre agrégateur de paiement'],
+                ['ERP', '<a href="/services/integration-odoo">Odoo</a> Rendez-vous', 'Rendez-vous reliés au CRM, aux ventes et à la facturation', 'Application réservée à l\'édition Enterprise'],
+                ['Automatisations', '<a href="/services/automatisation-ia">n8n ou Make</a>', 'Relier un outil du marché à WhatsApp, à un tableur ou à la comptabilité sans module', 'Le <a href="/comparatifs/n8n-vs-make-vs-zapier">comparatif n8n, Make et Zapier</a> aide à choisir'],
+                ['Messages', 'E-mail transactionnel, SMS, plateforme WhatsApp Business', 'Le canal que lit réellement votre clientèle', 'Les modèles WhatsApp passent par l\'approbation de Meta'],
+                ['Paiement', 'FedaPay, KkiaPay, CinetPay, Stripe, PayPal', 'Selon le pays de l\'entreprise et les opérateurs des clients', 'Clés secrètes côté serveur uniquement'],
+            ],
+        ],
+        [
+            'type'  => 'cas',
+            'titre' => 'À quoi ressemble un système de réservation selon votre secteur ?',
+            'items' => [
+                ['secteur' => 'Maison d\'hôtes ou petit hôtel, côte béninoise ou togolaise', 'probleme' => 'Les chambres sont vendues sur une plateforme, par WhatsApp et au téléphone, et l\'acompte arrive par transfert mobile money sans référence.', 'solution' => 'Moteur de réservation sur le site avec acompte en mobile money ou par carte, calendriers iCal échangés avec la plateforme, et règle d\'annulation affichée avant le paiement. Les clients fidèles réservent en direct, sans commission.'],
+                ['secteur' => 'Clinique ou cabinet médical, Abidjan ou Cotonou', 'probleme' => 'Trois praticiens, une salle d\'échographie partagée, et des patients qui attendent des heures faute de créneaux tenus.', 'solution' => 'Créneaux par praticien et par appareil, rappel la veille par SMS ou WhatsApp sans motif médical dans le message, motif de consultation demandé seulement quand l\'examen exige une préparation, accès au planning limité par rôle.'],
+                ['secteur' => 'Salon de coiffure ou institut de beauté, Dakar', 'probleme' => 'Les rendez-vous arrivent en messages vocaux pendant les prestations, et les absences du samedi coûtent la meilleure journée.', 'solution' => 'Prestations avec durées réelles, choix de la coiffeuse, acompte demandé seulement pour les prestations longues ou le samedi, liste d\'attente qui propose les places libérées.'],
+                ['secteur' => 'Auto-école, Lomé ou Ouagadougou', 'probleme' => 'Chaque leçon mobilise un moniteur et un véhicule, et les forfaits payés d\'avance se suivent sur un cahier.', 'solution' => 'Réservation de la leçon avec affectation automatique du couple moniteur et véhicule, décompte du forfait à chaque leçon, rappel la veille, et tableau de bord des heures restantes par élève.'],
+                ['secteur' => 'Location de véhicules ou de salles, Cotonou ou Libreville', 'probleme' => 'Une voiture est promise pour des dates qui chevauchent une autre location, et la caution se négocie au comptoir.', 'solution' => 'Réservation sur plusieurs jours avec blocage de la ressource, acompte en ligne, caution traitée selon le moyen de paiement, état des lieux joint à la réservation.'],
+                ['secteur' => 'Transport interurbain ou navette, Afrique de l\'Ouest', 'probleme' => 'Les places se vendent en gare, et les cars partent à moitié vides ou surchargés.', 'solution' => 'Vente de sièges par trajet et par horaire, paiement mobile money, billet envoyé par WhatsApp avec un code à présenter, et liste des passagers sur le téléphone du chef de gare.'],
+                ['secteur' => 'Restaurant ou salle d\'événements, Bruxelles ou Lyon', 'probleme' => 'Les grandes tables réservées un vendredi ne viennent pas, et la salle privatisée se gère par courriels.', 'solution' => 'Réservation par tranche horaire avec capacité, mise en réserve de la carte pour les groupes, rappel la veille, et formulaire de devis pour les privatisations.'],
+                ['secteur' => 'Cabinet de kinésithérapie ou de psychologie, France ou Suisse', 'probleme' => 'Le secrétariat téléphonique coûte cher, et l\'outil grand public envisagé stocke des données de santé hors de tout cadre.', 'solution' => 'Module de rendez-vous sur un hébergement adapté aux données de santé, contrat de sous-traitance, aucune donnée médicale dans les rappels, synchronisation avec l\'agenda du praticien.'],
+            ],
+        ],
+        [
+            'type'       => 'prix',
+            'titre'      => 'Combien coûte un système de réservation en ligne, et qu\'est-ce qui fait varier le devis ?',
+            'intro'      => 'Aucun forfait n\'est publié pour ce service : les seuls tarifs de départ affichés sur ce site concernent la landing page, le site vitrine et le référencement naturel. Le système de réservation se chiffre sur devis, après le cadrage, selon l\'option retenue. Les abonnements des outils du marché, de l\'agrégateur de paiement, de l\'édition Enterprise d\'Odoo ou des messages WhatsApp et SMS restent à votre nom et se paient à part. La prestation se règle par Mobile Money (MTN, Moov), carte bancaire, PayPal, virement ou espèces.',
+            'items'      => [
+                ['offre' => 'Cadrage et choix de l\'outil', 'prix' => 'Sur devis', 'inclus' => ['Inventaire des prestations, des ressources et des règles', 'Comparaison argumentée des options pour votre cas', 'Choix de l\'agrégateur de paiement selon vos pays', 'Document de règles remis à la fin']],
+                ['offre' => 'Paramétrage d\'un outil existant ou d\'Odoo Rendez-vous', 'prix' => 'Sur devis', 'inclus' => ['Prestations, ressources et disponibilités configurées', 'Paiement et rappels branchés', 'Intégration au site existant', 'Formation de la personne qui gère l\'agenda']],
+                ['offre' => 'Module de réservation sur mesure', 'prix' => 'Sur devis', 'inclus' => ['Parcours de réservation sur téléphone', 'Acompte en mobile money et carte, annulation, liste d\'attente', 'Synchronisation Google Agenda ou iCal', 'Tableau de bord, code et accès à votre nom']],
+                ['offre' => 'Évolutions et maintenance', 'prix' => 'Sur devis', 'inclus' => ['Correctifs et mises à jour de sécurité', 'Nouvelles prestations ou nouveaux sites', 'Suivi des changements des agrégateurs et des API', 'Contenu et durée fixés dans le contrat']],
+            ],
+            'variations' => [
+                'L\'option retenue : paramétrer un outil existant coûte bien moins que développer un module.',
+                'Le nombre de ressources et la finesse des règles : un praticien seul, ou dix véhicules avec cautions et kilométrage.',
+                'Le paiement : un agrégateur dans un pays, ou plusieurs pays et la carte pour l\'Europe.',
+                'Les canaux de rappel : e-mail seul, ou SMS et WhatsApp avec modèles à faire approuver.',
+                'Les synchronisations : Google Agenda, calendriers iCal des plateformes, ERP ou logiciel métier.',
+                'Les exigences liées aux données : un salon de coiffure n\'a pas les obligations d\'une clinique.',
+                'Le nombre de sites, de langues et de personnes à former.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Quelles erreurs font échouer un projet de réservation en ligne ?',
+            'intro' => 'Un système de réservation échoue rarement à cause du code. Il échoue parce qu\'une règle n\'a pas été décidée, ou parce que le client abandonne avant de payer. Voici les erreurs qui reviennent le plus souvent.',
+            'items' => [
+                ['titre' => 'Confirmer sur la page de retour du paiement', 'texte' => 'La page qui s\'affiche après le paiement peut être ouverte par n\'importe qui. Une réservation ne se confirme qu\'après une vérification du paiement par le serveur auprès de l\'agrégateur.'],
+                ['titre' => 'Bloquer le créneau seulement après le paiement', 'texte' => 'Le paiement mobile money demande une validation sur le téléphone, parfois plusieurs minutes. Sans réservation provisoire limitée dans le temps, un autre client prend la place pendant ce délai.'],
+                ['titre' => 'Exiger un compte avant de réserver', 'texte' => 'Mot de passe, validation d\'adresse, formulaire long : chaque étape fait partir des clients. Un nom et un numéro suffisent dans la plupart des cas.'],
+                ['titre' => 'Publier une règle d\'annulation impossible à appliquer', 'texte' => 'Promettre un remboursement intégral et automatique, alors que l\'agrégateur ne rembourse que certains opérateurs, crée des litiges. La règle s\'écrit après avoir vérifié ce que le moyen de paiement permet.'],
+                ['titre' => 'Oublier les fuseaux horaires', 'texte' => 'Un client de la diaspora qui réserve depuis Paris ou Montréal doit voir l\'heure de l\'établissement, clairement indiquée. Sinon, il arrive avec une ou plusieurs heures d\'écart.'],
+                ['titre' => 'Mettre trop d\'informations dans les rappels', 'texte' => 'Un SMS ou un WhatsApp peut être lu par un proche. Pour une clinique, le rappel mentionne la date, l\'heure et le lieu, pas la spécialité ni le motif.'],
+                ['titre' => 'Laisser plusieurs agendas vivre en parallèle', 'texte' => 'Si l\'accueil continue de noter sur le cahier, les doubles réservations reviennent. Le jour du démarrage, il ne reste qu\'un seul agenda de référence.'],
+                ['titre' => 'Ouvrir les comptes au nom du prestataire', 'texte' => 'Compte de paiement, nom de domaine, compte WhatsApp, outil du marché : tout doit être à votre nom, sinon chaque changement de prestataire bloque vos encaissements.'],
+            ],
+        ],
+        [
+            'type'  => 'vigilance',
+            'titre' => 'Pourquoi la synchronisation par calendrier iCal peut-elle produire une double réservation ?',
+            'texte' => 'Un calendrier iCal n\'est pas mis à jour en temps réel : selon son aide, Airbnb rafraîchit un calendrier importé toutes les trois heures. Une chambre vendue sur votre site peut donc rester ouverte quelques heures sur une plateforme, et y être réservée une seconde fois. Pour un établissement très demandé, prévoyez un gestionnaire de canaux connecté aux plateformes, ou une marge de sécurité, et gardez une règle écrite pour reloger le client en cas de conflit.',
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Cliniques et cabinets : quelles précautions pour les données de santé ?',
+            'paragraphes' => [
+                'Une clinique ou un cabinet qui prend des rendez-vous en ligne traite des données de santé, même sans le vouloir. Le <a href="https://www.cnil.fr/sites/default/files/atoms/files/guide-cnom-cnil.pdf">guide pratique publié en juin 2018 par la CNIL et l\'Ordre des médecins</a> le dit simplement : consulter régulièrement un cardiologue renseigne déjà sur l\'état de santé. Le praticien reste responsable du traitement, que les rendez-vous soient pris par son cabinet ou par une plateforme, laquelle agit comme sous-traitant. Si la consultation n\'exige aucune préparation, le motif n\'a pas à être renseigné, et les données de rendez-vous peuvent être supprimées dès qu\'elles ne sont plus nécessaires.',
+                'Au Bénin, l\'article 394 de la <a href="https://sgg.gouv.bj/doc/loi-2017-20/">loi n° 2017-20 portant code du numérique</a> interdit en principe le traitement des données concernant la santé. Il prévoit des exceptions, dont le consentement explicite de la personne pour des finalités précises, ou les traitements nécessaires aux diagnostics et à l\'administration de soins, effectués sous la surveillance d\'un professionnel de santé. L\'article 405 soumet tout traitement à une déclaration préalable auprès de l\'Autorité de protection des données, ou à l\'inscription dans un registre. L\'article 407 exige une autorisation préalable pour les données visées à l\'article 394, comme pour un transfert vers un État tiers, et l\'article 412 laisse 60 jours à l\'Autorité pour se prononcer.',
+                'Concrètement, un cabinet béninois qui veut un module de rendez-vous doit inscrire cette démarche dans son calendrier, avant la mise en ligne et non après. Si l\'outil stocke les données hors du pays, chez un éditeur américain ou sur un serveur européen, le transfert entre lui aussi dans le champ de l\'autorisation. Collecter le strict nécessaire, limiter l\'accès au planning selon les rôles et envoyer des rappels sans aucune mention médicale réduisent l\'exposition. Ces choix se valident avec un juriste ou avec l\'Autorité elle-même : cette page décrit le cadre, elle ne remplace pas un avis juridique.',
+                'En Europe, l\'article 9 du RGPD, présenté par la <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2">CNIL</a>, pose la même interdiction de principe, levée notamment par le consentement explicite ou pour des diagnostics et une prise en charge sanitaire, à condition que les données soient traitées par un professionnel soumis au secret ou sous sa responsabilité. En France, le guide de la CNIL et de l\'Ordre ajoute qu\'un prestataire qui héberge des données de santé issues de la prise de rendez-vous doit faire appel à un hébergeur agréé ou certifié, en application de l\'article L.1111-8 du code de la santé publique. L\'<a href="https://esante.gouv.fr/faq/quel-est-lobjectif-du-regime-juridique-de-lhebergement-de-donnees-de-sante-fixe-larticle-l1111-8-du-code-de-la-sante-publique">Agence du numérique en santé</a> détaille ce régime, dit HDS.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Mobile money, rappels, annulation, langue : que change le contexte local ?',
+            'paragraphes' => [
+                'Le parcours se conçoit d\'abord pour un téléphone et une connexion mobile irrégulière : pages légères, peu d\'étapes, et un écran « paiement en attente » pendant que le client valide l\'opération sur son appareil. Le paiement doit couvrir les opérateurs de vos clients, pas ceux qui arrangent le prestataire : MTN, Moov et Celtiis au Bénin, Orange Money, Free Money ou Wave au Sénégal et en Côte d\'Ivoire, selon les agrégateurs. Pour la diaspora qui réserve un séjour, une leçon ou une consultation pour un parent resté au pays, la carte et PayPal complètent l\'offre.',
+                'Le canal du rappel compte autant que son heure. Depuis le 1er juillet 2025, selon la <a href="https://developers.facebook.com/docs/whatsapp/pricing">page tarifs de la plateforme WhatsApp Business</a> de Meta, seuls les modèles de message livrés sont facturés, et un modèle utilitaire livré dans une fenêtre de service client ouverte est gratuit. Une confirmation envoyée juste après un échange avec le client ne coûte donc rien, alors qu\'un rappel parti la veille, hors fenêtre, est facturé. Le SMS reste utile pour les clients sans WhatsApp, l\'e-mail pour la clientèle européenne. Le paramétrage du compte et des modèles relève de l\'<a href="/services/integration-whatsapp">intégration WhatsApp</a>.',
+                'En France, la <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F10485">fiche de service-public.gouv.fr sur le droit de rétractation</a>, mise à jour le 1er janvier 2026, exclut de ce droit l\'hébergement, la location de voitures, la restauration et les activités de loisirs fournis à une date déterminée. Pour ces activités, c\'est votre propre politique d\'annulation qui s\'applique : elle doit être claire et lisible avant le paiement. Les montants s\'affichent en francs CFA sans décimales en Afrique, en euros ou en francs suisses en Europe, en dollars canadiens au Canada. Les messages se rédigent en français, avec l\'anglais si votre clientèle le demande, et les données des clients européens relèvent du RGPD, même quand le prestataire travaille depuis Cotonou.',
+            ],
+        ],
+        [
+            'type'  => 'chiffres',
+            'titre' => 'Quels repères officiels garder en tête avant de lancer votre projet ?',
+            'items' => [
+                ['valeur' => '1,8 %', 'libelle' => 'Commission publiée par FedaPay sur un paiement MTN, Moov ou Celtiis au Bénin (3,6 % par carte Visa ou Mastercard)', 'source' => 'FedaPay, page tarifs, 4 octobre 2026', 'url' => 'https://www.fedapay.com/pricing'],
+                ['valeur' => '7 jours', 'libelle' => 'Durée de validité habituelle d\'une autorisation de paiement par carte en ligne avant capture', 'source' => 'Stripe, documentation sur la mise en réserve des fonds', 'url' => 'https://docs.stripe.com/payments/place-a-hold-on-a-payment-method'],
+                ['valeur' => '3 heures', 'libelle' => 'Fréquence de mise à jour automatique d\'un calendrier importé dans Airbnb', 'source' => 'Airbnb, centre d\'aide, article 99', 'url' => 'https://www.airbnb.com/help/article/99'],
+                ['valeur' => '24 heures', 'libelle' => 'Délai possible de la première synchronisation d\'Odoo Rendez-vous avec Google Reserve', 'source' => 'Documentation Odoo 20.0, intégration Google Reserve', 'url' => 'https://www.odoo.com/documentation/20.0/applications/productivity/appointments/google_reserve.html'],
+                ['valeur' => '50', 'libelle' => 'Nombre maximal de calendriers interrogés en une requête de disponibilités de l\'API Google Calendar', 'source' => 'Google, référence de la méthode freebusy.query', 'url' => 'https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query'],
+                ['valeur' => '60 jours', 'libelle' => 'Délai dont dispose l\'Autorité de protection des données du Bénin pour répondre à une demande d\'avis, de déclaration ou d\'autorisation', 'source' => 'Loi n° 2017-20 portant code du numérique, article 412', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi confier votre système de réservation à Richard SALANON ?',
+            'paragraphes' => [
+                fait('phrase_entite'),
+                'Formé à EPITECH (2022), il compte plus de 6 ans d\'expérience, plus de 50 projets livrés et plus de 100 clients. Ses missions, sur place ou à distance, l\'ont conduit du Bénin, de la Côte d\'Ivoire, du Togo et du Sénégal au Burkina Faso, au Mali, au Niger, au Tchad, au Gabon et en RD Congo, ainsi qu\'en France, en Belgique, en Suisse et au Canada. Une réservation en ligne touche à la fois au site, au paiement, aux messages et parfois à l\'ERP : parce qu\'il pratique ces quatre métiers, il peut vous conseiller un outil existant quand il suffit, plutôt qu\'un développement.',
+                'Il développe aussi ses propres produits : <a href="https://wapy.pro">Wapy</a>, un assistant WhatsApp à intelligence artificielle pour les entreprises d\'Afrique francophone, et il est co-fondateur d\'<a href="https://audyxa.com">Audyxa</a>. Ce travail de produit relève du même terrain que les confirmations et rappels de réservation : la messagerie que vos clients ouvrent vraiment, et les moyens de paiement qu\'ils utilisent au quotidien.',
+                'Sa façon de travailler se vérifie à chaque étape : des règles écrites avant toute configuration, l\'option la plus simple qui couvre votre besoin, des comptes de paiement, un nom de domaine et un code à votre nom, des essais avec de vrais paiements de faible montant avant l\'ouverture, et une réponse sous 24 heures. Il a formé plus de 200 personnes au numérique ; la prise en main de l\'agenda par votre équipe fait partie du projet. Son parcours complet figure sur la page <a href="/richard-salanon">Richard SALANON</a>.',
+            ],
+        ],
+        [
+            'type'  => 'lecon',
+            'titre' => 'Que retenir avant de mettre vos réservations en ligne ?',
+            'texte' => 'Écrivez vos règles avant de choisir l\'outil, choisissez l\'agrégateur selon les opérateurs de vos clients, ne confirmez une réservation qu\'après vérification du paiement par le serveur, alignez votre politique d\'annulation sur ce que votre moyen de paiement sait rembourser, et ne gardez qu\'un seul agenda de référence.',
+        ],
+        [
+            'type'   => 'cta',
+            'titre'  => 'Vous voulez que vos clients réservent et paient seuls, à toute heure ?',
+            'texte'  => 'Indiquez votre activité, ce que vos clients réservent (créneau, chambre, véhicule, siège), leurs moyens de paiement et vos outils actuels : vous recevez une réponse sous 24 heures et, après un premier échange, une recommandation d\'option avec un devis détaillé.',
+            'bouton' => ['url' => '/contact', 'texte' => 'Présenter mon projet de réservation'],
+        ],
+    ],
+
+    'faq' => [
+        ['q' => 'Combien de temps faut-il pour mettre en place un système de réservation en ligne ?', 'r' => 'Un module développé sur mesure demande 1 à 3 mois, comme toute application sur mesure, selon le nombre de ressources, de règles et de synchronisations. Le paramétrage d\'un outil du marché ou de l\'application Rendez-vous d\'Odoo est plus court ; son délai exact se fixe au cadrage, car il dépend surtout de la validation des comptes de paiement et des modèles de messages.'],
+        ['q' => 'Combien coûte un système de réservation en ligne ?', 'r' => 'Le prix est fixé sur devis, après le cadrage. Il dépend de l\'option retenue, du nombre de ressources, des moyens de paiement, des canaux de rappel et des synchronisations. Les abonnements des outils du marché, de l\'agrégateur de paiement, d\'Odoo Enterprise ou des messages WhatsApp et SMS se paient à part, à votre nom.'],
+        ['q' => 'Puis-je encaisser un acompte au moment de la réservation ?', 'r' => 'Oui. Vous pouvez demander un acompte ou le paiement complet, en mobile money, par carte bancaire ou par PayPal selon votre pays. Le montant, le moment où la réservation devient ferme et ce que devient l\'acompte en cas d\'annulation se décident au cadrage, puis s\'affichent au client avant qu\'il paie.'],
+        ['q' => 'Le système peut-il s\'intégrer à mon site actuel ?', 'r' => 'Oui. Il peut prendre la forme d\'un bouton ou d\'une page intégrés à votre site existant, ou fonctionner sur une page dédiée si vous n\'avez pas encore de site. Le choix dépend de votre outil actuel et de l\'endroit où vos clients vous trouvent.'],
+        ['q' => 'Mes clients devront-ils créer un compte pour réserver ?', 'r' => 'Pas forcément. Pour la plupart des activités, un nom, un numéro de téléphone et éventuellement une adresse e-mail suffisent, ce qui évite de perdre des clients en route. Un compte ne se justifie que pour les clients réguliers qui veulent retrouver leurs forfaits, leurs reçus ou leur historique.'],
+        ['q' => 'Calendly ou Booking.com ne suffisent-ils pas ?', 'r' => 'Parfois, si. Calendly convient aux rendez-vous d\'une personne, mais son encaissement passe par Stripe et PayPal, et Stripe n\'était pas listé au Bénin, au Sénégal ni au Togo le 4 octobre 2026. Booking.com apporte des clients en échange d\'une commission sur chaque réservation. Un moteur à vous devient utile pour le mobile money, les ressources multiples et les clients qui reviennent.'],
+        ['q' => 'L\'application Rendez-vous d\'Odoo est-elle incluse dans Odoo Community ?', 'r' => 'Non. La page des éditions d\'Odoo la réserve à Enterprise. Elle gère des créneaux par utilisateur ou par ressource, avec capacité, paiement à l\'avance et rappels par e-mail ou SMS. Selon la documentation 20.0, la capacité affichée sur le site est limitée à 12 par défaut, et un paramètre système permet d\'aller au-delà.'],
+        ['q' => 'Peut-on synchroniser les réservations avec Google Agenda ?', 'r' => 'Oui. L\'API Google Calendar permet de lire les plages occupées des agendas des praticiens et d\'y inscrire chaque rendez-vous. Une intégration solide gère aussi les notifications de changement, qui exigent une adresse HTTPS valide et un canal à renouveler, et la resynchronisation complète quand Google invalide le jeton de synchronisation.'],
+        ['q' => 'Comment éviter les doubles réservations ?', 'r' => 'Par une seule source de vérité : la base de données refuse qu\'une même ressource soit prise deux fois sur le même créneau, et le créneau est réservé provisoirement pendant le paiement. Avec les plateformes, la synchronisation iCal n\'est pas instantanée : Airbnb rafraîchit un calendrier importé toutes les trois heures, d\'où l\'intérêt d\'une marge ou d\'un gestionnaire de canaux.'],
+        ['q' => 'Les rappels par WhatsApp sont-ils payants ?', 'r' => 'Cela dépend du moment. Selon Meta, seuls les modèles livrés sont facturés depuis le 1er juillet 2025, et un modèle utilitaire livré pendant une fenêtre de service client ouverte est gratuit. Un rappel envoyé la veille, hors de cette fenêtre, est facturé selon le pays du destinataire. Le SMS et l\'e-mail restent des solutions de repli.'],
+        ['q' => 'Comment rembourser une annulation payée en mobile money ?', 'r' => 'Cela dépend de l\'agrégateur. La documentation de FedaPay ne permet de rembourser qu\'une transaction approuvée, et seulement via MTN Mobile Money ; KkiaPay indique que les remboursements se font depuis son tableau de bord. Votre politique d\'annulation doit donc être écrite après avoir vérifié ce que votre moyen de paiement permet.'],
+        ['q' => 'Une clinique peut-elle prendre ses rendez-vous en ligne au Bénin ?', 'r' => 'Oui, avec des précautions. La loi n° 2017-20 interdit en principe le traitement des données de santé, sauf exceptions comme le consentement explicite ou les soins sous la surveillance d\'un professionnel de santé, et soumet ces traitements à l\'autorisation préalable de l\'Autorité de protection des données. Collectez le strict nécessaire, et faites valider le dispositif avant la mise en ligne.'],
+    ],
+
+    'sources' => [
+        ['titre' => 'Calendly, tarifs des offres Free, Standard, Teams et Enterprise', 'url' => 'https://calendly.com/pricing', 'date' => '2026-10-04'],
+        ['titre' => 'Booking.com, centre d\'aide partenaires : comprendre notre commission', 'url' => 'https://partner.booking.com/en-us/help/commission-invoices-tax/commission/understanding-our-commission', 'date' => '2026-10-04'],
+        ['titre' => 'Airbnb, centre d\'aide : synchroniser votre calendrier avec d\'autres sites (article 99)', 'url' => 'https://www.airbnb.com/help/article/99', 'date' => '2026-10-04'],
+        ['titre' => 'Documentation Odoo 20.0, application Rendez-vous', 'url' => 'https://www.odoo.com/documentation/20.0/applications/productivity/appointments.html', 'date' => '2026-10-04'],
+        ['titre' => 'Documentation Odoo 20.0, types de rendez-vous (ressources, capacité, paiement, rappels)', 'url' => 'https://www.odoo.com/documentation/20.0/applications/productivity/appointments/appointment_types.html', 'date' => '2026-10-04'],
+        ['titre' => 'Documentation Odoo 20.0, intégration Google Reserve', 'url' => 'https://www.odoo.com/documentation/20.0/applications/productivity/appointments/google_reserve.html', 'date' => '2026-10-04'],
+        ['titre' => 'Odoo, comparaison des éditions Community et Enterprise', 'url' => 'https://www.odoo.com/fr_FR/page/editions', 'date' => '2026-10-04'],
+        ['titre' => 'Google, API Google Calendar : méthode freebusy.query', 'url' => 'https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query', 'date' => '2026-10-04'],
+        ['titre' => 'Google, API Google Calendar : notifications push', 'url' => 'https://developers.google.com/workspace/calendar/api/guides/push', 'date' => '2026-10-04'],
+        ['titre' => 'Google, API Google Calendar : synchronisation incrémentale', 'url' => 'https://developers.google.com/workspace/calendar/api/guides/sync', 'date' => '2026-10-04'],
+        ['titre' => 'Stripe, pays où le service est disponible', 'url' => 'https://stripe.com/global', 'date' => '2026-10-04'],
+        ['titre' => 'Stripe, documentation : bloquer une somme sur un moyen de paiement', 'url' => 'https://docs.stripe.com/payments/place-a-hold-on-a-payment-method', 'date' => '2026-10-04'],
+        ['titre' => 'FedaPay, page tarifs (frais par opérateur au Bénin, retraits)', 'url' => 'https://www.fedapay.com/pricing', 'date' => '2026-10-04'],
+        ['titre' => 'FedaPay, documentation : remboursements', 'url' => 'https://docs.fedapay.com/fr/dashboard/refunds', 'date' => '2026-10-04'],
+        ['titre' => 'KkiaPay, foire aux questions (pays, moyens de paiement, remboursements)', 'url' => 'https://kkiapay.me/faq/', 'date' => '2026-10-04'],
+        ['titre' => 'CinetPay, SDK PHP officiel (pays et opérateurs)', 'url' => 'https://github.com/cinetpay/cinetpay-php-sdk', 'date' => '2026-10-04'],
+        ['titre' => 'Meta, tarification de la plateforme WhatsApp Business', 'url' => 'https://developers.facebook.com/docs/whatsapp/pricing', 'date' => '2026-10-04'],
+        ['titre' => 'Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 portant code du numérique (articles 394, 405, 407 et 412)', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-04'],
+        ['titre' => 'CNIL, RGPD chapitre II (article 9, catégories particulières de données)', 'url' => 'https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2', 'date' => '2026-10-04'],
+        ['titre' => 'CNIL et Conseil national de l\'Ordre des médecins, guide pratique sur la protection des données personnelles (juin 2018), fiche 2 sur la prise de rendez-vous', 'url' => 'https://www.cnil.fr/sites/default/files/atoms/files/guide-cnom-cnil.pdf', 'date' => '2026-10-04'],
+        ['titre' => 'Agence du numérique en santé, objectif du régime d\'hébergement des données de santé (article L.1111-8 du code de la santé publique)', 'url' => 'https://esante.gouv.fr/faq/quel-est-lobjectif-du-regime-juridique-de-lhebergement-de-donnees-de-sante-fixe-larticle-l1111-8-du-code-de-la-sante-publique', 'date' => '2026-10-04'],
+        ['titre' => 'Service-public.gouv.fr, droit de rétractation pour un achat à distance (exceptions)', 'url' => 'https://www.service-public.gouv.fr/particuliers/vosdroits/F10485', 'date' => '2026-10-04'],
+    ],
+
+    'liens' => [
+        'services'    => ['application-web-sur-mesure', 'integration-odoo', 'integration-whatsapp', 'site-vitrine-professionnel', 'automatisation-ia', 'seo-local-google-business'],
+        'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
+    ],
+
+];

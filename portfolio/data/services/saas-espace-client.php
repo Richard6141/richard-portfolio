@@ -1,0 +1,377 @@
+<?php
+// ============================================================
+// data/services/saas-espace-client.php · Pilier « SaaS et espace client »
+// (vague 1A). Le slug existait : la fiche en production ne publiait aucun
+// délai et un tarif « sur devis » ; on garde ses livrables (comptes et
+// abonnements, espace client sécurisé, paiement récurrent, tableau de bord,
+// plateforme évolutive), la démarche par première version et la propriété
+// du code, et l'on reprend le délai de la fiche de faits (1 à 3 mois).
+// Faits externes relevés le 04/10/2026 sur les pages officielles de Stripe,
+// Laravel, FedaPay, KkiaPay, CinetPay, OWASP, CNIL, NIST, IETF, PostgreSQL,
+// SGG du Bénin, Légifrance, economie.gouv.fr et de la Commission européenne.
+// Ne paraphrase pas application-web-sur-mesure (logiciel métier en général).
+// ============================================================
+declare(strict_types=1);
+
+return [
+    'titre'   => 'SaaS et espace client : un portail sécurisé pour vos clients, ou un logiciel vendu par abonnement, conçu pour durer',
+    'title'   => 'Création de SaaS et d\'espace client | Richard SALANON',
+    'meta'    => 'Espace client ou SaaS par abonnement : comptes sécurisés, données isolées par client, mobile money et carte, essai gratuit, rôles et journal d\'activité.',
+    'en_bref' => 'Conception et développement d\'espaces clients (suivi de dossiers, factures, documents, tickets, rendez-vous) et de logiciels SaaS vendus par abonnement : inscription, essai gratuit, données isolées par client, facturation récurrente, paiement par carte et par mobile money, rôles, journal d\'activité et console d\'administration. Pour les entreprises qui veulent libérer leurs équipes des demandes répétitives, et pour les fondateurs qui veulent vendre un service en ligne, en Afrique francophone, en Europe et au Canada. Comptez 1 à 3 mois selon le périmètre, avec une première version mise entre les mains de vrais utilisateurs avant d\'aller plus loin. Le prix est fixé sur devis, gratuit et sans engagement.',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
+    'famille' => 'Applications et IA',
+    'matrice' => false,
+
+    'faits_hero' => [
+        ['l' => 'Délai', 'v' => '1 à 3 mois selon le périmètre, par versions successives'],
+        ['l' => 'Pour qui', 'v' => 'Entreprises qui servent des clients récurrents, fondateurs de logiciels en ligne'],
+        ['l' => 'Livrables', 'v' => 'Espace client ou SaaS en ligne, abonnements, console d\'administration, code à votre nom'],
+        ['l' => 'Réponse', 'v' => 'sous 24 heures'],
+    ],
+
+    'sections' => [
+        [
+            'type'        => 'prose',
+            'titre'       => 'Espace client, SaaS : de quoi parle-t-on exactement, et qu\'est-ce que ce service exclut ?',
+            'paragraphes' => [
+                'Deux besoins voisins se cachent derrière ces mots. Le premier est l\'espace client, parfois appelé extranet ou portail : une entreprise qui existe déjà ouvre à ses propres clients un accès protégé où ils suivent leur dossier, téléchargent leurs factures et leurs documents, ouvrent un ticket, prennent rendez-vous et reçoivent des notifications. Le client ne paie pas l\'outil ; il paie le service habituel, et l\'outil lui évite d\'appeler pour savoir où en est sa demande.',
+                'Le second est le SaaS, pour « logiciel en tant que service » : un produit que vous vendez à d\'autres organisations, qui s\'inscrivent, l\'essaient, puis paient un abonnement pour s\'en servir depuis leur navigateur, sans rien installer. Ici, l\'outil est le produit. Il doit accueillir des dizaines ou des centaines de clients dans la même plateforme, chacun avec ses utilisateurs, ses données, sa formule et ses factures, sans que l\'un ne voie jamais les informations de l\'autre.',
+                'Les deux partagent un socle : comptes et connexion sécurisés, rôles et droits, tableau de bord, notifications, journal d\'activité, sauvegardes, conformité. Le SaaS y ajoute trois briques lourdes : l\'isolation entre clients, que l\'on appelle multi-locataire, la facturation récurrente, et le parcours d\'inscription avec essai gratuit. Le service couvre les deux, du cadrage à l\'exploitation, et la page qui suit distingue à chaque étape ce qui vaut pour l\'un, pour l\'autre ou pour les deux.',
+                'Il ne couvre pas tout. Un outil interne réservé à vos équipes, sans accès client ni abonnement, relève de l\'<a href="/services/application-web-sur-mesure">application web sur mesure</a>. Une boutique qui vend des produits à l\'unité relève du <a href="/services/site-e-commerce">site e-commerce</a>, et un agenda de prise de rendez-vous seul, du <a href="/services/systeme-de-reservation-en-ligne">système de réservation en ligne</a>. Si votre ERP propose déjà un portail client, mieux vaut souvent l\'activer : c\'est le cas d\'Odoo, présenté dans l\'<a href="/services/integration-odoo">intégration Odoo</a>. Enfin, la rédaction juridique de vos conditions générales revient à un juriste ; la plateforme, elle, les affiche, les fait accepter et en garde la trace.',
+            ],
+        ],
+        [
+            'type'     => 'comparaison',
+            'titre'    => 'Espace client ou SaaS vendu par abonnement : en quoi les deux projets diffèrent-ils vraiment ?',
+            'options'  => ['Espace client d\'une entreprise existante', 'SaaS vendu par abonnement'],
+            'criteres' => [
+                ['critere' => 'Qui paie l\'outil', 'valeurs' => ['Votre entreprise, comme un outil de service', 'Vos clients, chaque mois ou chaque année']],
+                ['critere' => 'Qui s\'y connecte', 'valeurs' => ['Vos clients, invités par vos équipes', 'Des organisations qui s\'inscrivent seules, puis invitent leurs collaborateurs']],
+                ['critere' => 'Source des données', 'valeurs' => ['Souvent votre logiciel existant (ERP, comptabilité, base métier), relié par API', 'La plateforme elle-même, qui devient le logiciel principal de vos clients']],
+                ['critere' => 'Isolation des données', 'valeurs' => ['Par client final : chacun ne voit que son dossier', 'Par organisation cliente, puis par utilisateur et par rôle à l\'intérieur de chacune']],
+                ['critere' => 'Facturation', 'valeurs' => ['Vos factures habituelles, rendues consultables et payables en ligne', 'Abonnements, essais, changements de formule, relances et suspensions automatisés']],
+                ['critere' => 'Rôle au regard des données personnelles', 'valeurs' => ['Vous êtes responsable du traitement', 'Vous êtes en général sous-traitant de vos clients pour les données qu\'ils y déposent']],
+                ['critere' => 'Risque principal', 'valeurs' => ['Un outil que personne n\'adopte, faute d\'informations à jour', 'Un produit que personne n\'achète, ou une fuite entre clients']],
+                ['critere' => 'Indicateur de réussite', 'valeurs' => ['Moins d\'appels et d\'e-mails de suivi, documents retrouvés sans aide', 'Revenu récurrent mensuel, essais convertis, abonnés qui restent']],
+            ],
+            'verdict'  => 'Un espace client réussit quand il reflète fidèlement ce que vos équipes savent déjà ; le travail porte sur la connexion avec vos outils existants. Un SaaS réussit quand des inconnus l\'adoptent et paient sans vous parler ; le travail porte sur l\'inscription, l\'isolation des données et la facturation. Beaucoup de projets commencent par le premier et deviennent le second, ce qui se prépare dès l\'architecture.',
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'À quels signes voit-on qu\'un espace client ou un SaaS est mûr ?',
+            'intro' => 'Ces signaux reviennent dans les demandes d\'entreprises et de fondateurs. Les quatre premiers concernent plutôt l\'espace client, les quatre suivants le SaaS ; le dernier vaut pour les deux.',
+            'items' => [
+                ['titre' => 'Le téléphone sonne pour des questions d\'état', 'texte' => 'Où en est mon dossier, ma commande, mon colis, mon sinistre, mon inscription ? Quand une part visible de la journée de vos équipes sert à répéter une information qui existe déjà dans vos fichiers, un accès en libre-service la leur rend.'],
+                ['titre' => 'Les documents voyagent par WhatsApp et par e-mail', 'texte' => 'Factures, attestations, contrats, bulletins ou résultats envoyés à la main, renvoyés parce que perdus, réclamés en fin d\'année : un espace où chaque client retrouve ses pièces, classées et datées, supprime ce va-et-vient.'],
+                ['titre' => 'Vos clients signent, valident ou déposent des pièces', 'texte' => 'Validation d\'un devis, dépôt d\'une pièce justificative, réponse à un questionnaire : ces échanges gagnent à laisser une trace horodatée, consultable par les deux parties, plutôt qu\'un fil de messages.'],
+                ['titre' => 'Votre ERP ou votre logiciel métier ne s\'ouvre pas aux clients', 'texte' => 'Les informations sont justes en interne, mais aucun accès externe n\'est prévu, ou il coûte une licence par utilisateur. Un portail relié par API publie ce qu\'il faut, à qui il faut, sans ouvrir le logiciel lui-même.'],
+                ['titre' => 'Vous faites déjà le service à la main pour plusieurs clients', 'texte' => 'Un tableur, une méthode, un modèle de rapport que vous refaites chaque mois pour chacun : le meilleur point de départ d\'un SaaS est un service que des clients paient déjà, et dont on automatise la partie répétitive.'],
+                ['titre' => 'Des clients demandent l\'outil, pas le service', 'texte' => 'Quand des prospects vous demandent s\'ils peuvent utiliser votre outil eux-mêmes, avec leur équipe, le besoin est exprimé par le marché et non supposé par vous. Notez leurs demandes exactes : elles forment la première version.'],
+                ['titre' => 'Un logiciel du marché existe, mais pas pour votre pays', 'texte' => 'Paiement en francs CFA, mobile money, facturation locale, langue, usage au téléphone : un produit pensé pour l\'Europe ou l\'Amérique laisse souvent de côté exactement ce qui compte pour une clientèle d\'Afrique francophone.'],
+                ['titre' => 'Vous pouvez financer plusieurs mois d\'exploitation', 'texte' => 'Un SaaS ne s\'arrête pas au lancement : hébergement, support, corrections, évolutions et acquisition de clients continuent avant que les abonnements ne couvrent les coûts. Prévoyez ce budget avant de signer le développement.'],
+                ['titre' => 'Le contre-signal', 'texte' => 'Si vous ne savez pas encore qui paiera ni pour quel problème précis, ou si vos clients ne se connectent jamais à rien, commencez par tester l\'idée : une <a href="/services/landing-page-haute-conversion">landing page</a> avec liste d\'attente, un prototype en <a href="/services/vibe-coding">vibe coding</a>, ou un <a href="/services/audit-etude-de-projet">audit et étude de projet</a>.'],
+            ],
+        ],
+        [
+            'type'  => 'etapes',
+            'titre' => 'Comment se déroule le projet, du premier échange à l\'exploitation du service ?',
+            'items' => [
+                ['titre' => 'Premier échange', 'duree' => 'Réponse sous 24 heures', 'texte' => 'Vous décrivez qui se connectera, pour faire quoi, et qui paiera. Pour un espace client, on part de vos outils actuels et des questions que vos clients posent le plus ; pour un SaaS, de la cible, du problème résolu et de la manière dont vous comptez vendre. L\'échange se fait à Cotonou ou en visioconférence, et le devis qui suit est gratuit et sans engagement.'],
+                ['titre' => 'Cadrage du produit', 'duree' => '1 à 2 semaines', 'texte' => 'On fixe les rôles, les parcours essentiels, les données exposées et leur source, les formules d\'abonnement s\'il y en a, les moyens de paiement par pays, les notifications, et la liste de ce qui attendra la version suivante. Pour un SaaS, on décide aussi du modèle d\'isolation entre clients, choix difficile à défaire plus tard.'],
+                ['titre' => 'Maquettes des parcours clés', 'duree' => '1 à 2 semaines, en parallèle', 'texte' => 'Inscription, première connexion, tableau de bord, paiement, invitation d\'un collègue, résiliation : chaque parcours est dessiné puis testé par quelques futurs utilisateurs, sur téléphone autant que sur ordinateur. On mesure le nombre d\'écrans avant la première action utile, et on le réduit.'],
+                ['titre' => 'Socle technique', 'duree' => '1 à 2 semaines', 'texte' => 'Authentification, comptes et organisations, rôles, isolation des données, journal d\'activité, envoi d\'e-mails et de notifications, sauvegardes, serveur de recette et dépôt Git ouvert à votre nom. Ce socle est le même quel que soit le métier ; il se construit avant les écrans, parce que tout le reste repose dessus.'],
+                ['titre' => 'Fonctions métier par lots', 'duree' => 'Lots de 1 à 2 semaines', 'texte' => 'Suivi de dossiers, documents, tickets, rendez-vous ou fonctions propres à votre produit arrivent par lots, chacun présenté sur le serveur de recette. Pour un espace client, le raccordement à votre logiciel existant est traité dans le premier lot : c\'est lui qui décide si les informations affichées seront justes.'],
+                ['titre' => 'Abonnements et paiements', 'duree' => '1 à 2 semaines', 'texte' => 'Formules, essai gratuit, passerelle de paiement par pays, factures, relances, suspension en cas d\'impayé et réactivation, avec un scénario de test pour chaque cas : paiement réussi, refusé, abandonné, en double, notification reçue en retard. Les paiements réels ne sont activés qu\'après ces essais.'],
+                ['titre' => 'Contrôles de sécurité et d\'isolation', 'duree' => 'Environ 1 semaine', 'texte' => 'Tentatives d\'accès croisé entre deux comptes de test, vérification de chaque droit par rôle, test de restauration d\'une sauvegarde, revue des dépendances. Un SaaS dont un client peut lire les données d\'un autre ne doit pas ouvrir, quelle que soit la date promise.'],
+                ['titre' => 'Version pilote', 'duree' => '2 à 4 semaines', 'texte' => 'Quelques clients réels utilisent la plateforme, avec un suivi rapproché : où ils bloquent, ce qu\'ils ne trouvent pas, ce qu\'ils demandent. Les corrections sont livrées en continu. C\'est la première version qui délivre déjà de la valeur, et que l\'on enrichit sur du concret.'],
+                ['titre' => 'Ouverture et exploitation', 'duree' => 'Après le pilote, puis en continu', 'texte' => 'Ouverture à tous les clients ou des inscriptions publiques, surveillance, support, mises à jour de sécurité et évolutions par lots. La <a href="/services/maintenance-support">maintenance</a> prend le relais avec un calendrier connu, parce qu\'un service en ligne vit tant qu\'il a des abonnés.'],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Que contient concrètement la livraison ?',
+            'legende' => 'Livrables d\'un projet d\'espace client ou de SaaS ; la liste exacte figure dans le devis, selon le périmètre retenu.',
+            'entetes' => ['Livrable', 'Espace client', 'SaaS', 'Ce que vous en faites'],
+            'lignes'  => [
+                ['Plateforme en ligne accessible depuis n\'importe quel navigateur', 'Oui', 'Oui', 'Vos clients s\'en servent sans rien installer, sur ordinateur comme sur téléphone'],
+                ['Comptes utilisateurs sécurisés', 'Invitation par vos équipes, lien magique ou mot de passe', 'Inscription libre, vérification de l\'adresse, second facteur proposé', 'Chaque personne a son propre accès, et chaque action lui est attribuée'],
+                ['Organisations et isolation des données', 'Un dossier par client final', 'Un espace par organisation cliente, avec ses membres', 'Aucun client ne voit les informations d\'un autre'],
+                ['Rôles et droits', 'Client, collaborateur interne, administrateur', 'Propriétaire, administrateur, membre, lecture seule, plus vos propres rôles d\'exploitation', 'Chacun voit et fait seulement ce que son rôle autorise'],
+                ['Abonnements et paiement récurrent', 'Paiement en ligne des factures existantes', 'Formules, essai gratuit, renouvellement, relances, suspension, réactivation', 'Encaisser sans relancer chaque client à la main'],
+                ['Tableau de bord client', 'État des dossiers, documents, factures, tickets, rendez-vous', 'Fonctions du produit, consommation, factures, réglages de l\'organisation', 'Le client trouve seul ce qu\'il venait chercher'],
+                ['Console d\'administration', 'Gestion des clients, des documents publiés et des tickets', 'Organisations, formules, paiements, support, indicateurs', 'Piloter le service sans passer par le développeur'],
+                ['Journal d\'activité', 'Connexions, consultations et téléchargements sensibles', 'Toutes les actions sensibles, par organisation', 'Répondre à une contestation ou à un incident avec des faits'],
+                ['Notifications', 'E-mail, et SMS ou WhatsApp si retenus', 'E-mail, notifications dans l\'application, rappels de paiement', 'Prévenir au lieu d\'attendre que le client se connecte'],
+                ['Code, accès et documentation', 'Dépôt Git, hébergement et comptes à votre nom', 'Les mêmes, plus la procédure de mise en production', 'Rester propriétaire de la plateforme et libre de changer de prestataire'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Mots de passe, second facteur, lien magique : comment protéger les comptes sans décourager les utilisateurs ?',
+            'paragraphes' => [
+                'Le mot de passe n\'est jamais stocké, seulement son empreinte. La <a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">fiche de l\'OWASP sur le stockage des mots de passe</a>, consultée le 4 octobre 2026, place en premier l\'algorithme Argon2id, avec au minimum 19 Mio de mémoire, 2 itérations et un degré de parallélisme ; bcrypt n\'y figure que pour les systèmes existants, avec un facteur de coût d\'au moins 10 et une limite de 72 octets par mot de passe. La plateforme hache donc avec Argon2id, et réévalue l\'empreinte à la connexion suivante quand les paramètres évoluent.',
+                'Pour la longueur, les références ont changé. La CNIL, dans sa <a href="https://www.cnil.fr/fr/mots-de-passe-une-nouvelle-recommandation-pour-maitriser-sa-securite">délibération n° 2022-100 du 21 juillet 2022</a>, donne comme exemples 12 caractères mêlant majuscules, minuscules, chiffres et caractères spéciaux, ou une phrase de passe d\'au moins 7 mots, et admet moins quand l\'accès est temporisé ou bloqué après 10 échecs. Le <a href="https://pages.nist.gov/800-63-4/sp800-63b.html">guide SP 800-63B-4 du NIST</a>, publié en août 2025, demande 15 caractères au moins pour un mot de passe seul, 8 avec un second facteur, interdit d\'imposer des règles de composition et un changement périodique, et exige de refuser les mots de passe connus pour avoir fuité.',
+                'Le second facteur se règle selon le public. Les applications d\'authentification reposent sur le code temporaire décrit par la <a href="https://datatracker.ietf.org/doc/html/rfc6238">RFC 6238</a> de mai 2011, qui recommande un pas de 30 secondes et interdit d\'accepter deux fois le même code. Il est imposé aux comptes d\'administration, de votre côté comme chez vos clients, et proposé aux autres. Pour une clientèle peu habituée à ces applications, un code envoyé par e-mail ou par SMS reste un progrès, avec des codes de secours imprimables pour le jour où le téléphone est perdu.',
+                'Le lien magique supprime le mot de passe : l\'utilisateur saisit son adresse, reçoit un lien à usage unique valable quelques minutes, et se connecte en le touchant. Pour un espace client consulté deux fois par an, c\'est souvent le meilleur choix, car personne n\'oublie un mot de passe qu\'il n\'a jamais eu. Ses conditions : un jeton aléatoire long, stocké haché, invalidé dès la première utilisation, une réponse identique que l\'adresse existe ou non, et un nombre de demandes limité par adresse et par heure.',
+            ],
+        ],
+        [
+            'type'     => 'comparaison',
+            'titre'    => 'Base partagée, schéma ou base par client : comment isoler les données des clients d\'un SaaS ?',
+            'options'  => ['Base partagée, identifiant d\'organisation sur chaque ligne', 'Un schéma par organisation', 'Une base de données par organisation'],
+            'criteres' => [
+                ['critere' => 'Coût d\'hébergement', 'valeurs' => ['Le plus bas : une seule base à faire tourner', 'Moyen', 'Le plus élevé dès que les clients sont nombreux']],
+                ['critere' => 'Force de l\'isolation', 'valeurs' => ['Repose sur le code et, idéalement, sur les règles de la base elle-même', 'Bonne, si chaque connexion pointe vers le bon schéma', 'La plus forte : une erreur de requête ne peut pas franchir la frontière']],
+                ['critere' => 'Restaurer un seul client', 'valeurs' => ['Délicat : il faut extraire ses lignes d\'une sauvegarde globale', 'Possible schéma par schéma', 'Simple : on restaure sa base']],
+                ['critere' => 'Évolutions de la structure', 'valeurs' => ['Une seule migration pour tous', 'Une migration à rejouer sur chaque schéma', 'Une migration à rejouer sur chaque base, à orchestrer']],
+                ['critere' => 'Statistiques entre clients', 'valeurs' => ['Immédiates', 'Possibles, au prix de requêtes plus longues', 'À consolider dans un entrepôt séparé']],
+                ['critere' => 'Profil typique', 'valeurs' => ['Beaucoup de petits clients aux besoins proches', 'Quelques dizaines de clients moyens', 'Peu de grands comptes, données sensibles, exigences contractuelles d\'isolation']],
+            ],
+            'verdict'  => 'Pour un premier SaaS destiné à des PME, la base partagée avec un identifiant d\'organisation est presque toujours le bon départ, à condition que l\'isolation soit garantie à deux niveaux : dans le code de l\'application et dans la base elle-même. Un grand compte qui exige sa propre base peut être servi plus tard par un hébergement dédié, sans réécrire le produit.',
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment garantir qu\'un client ne verra jamais les données d\'un autre ?',
+            'paragraphes' => [
+                'La première ligne de défense est dans le code : chaque requête est filtrée par l\'organisation de l\'utilisateur connecté, de façon automatique, sans compter sur la vigilance du développeur à chaque écran. Les identifiants exposés dans les adresses ne sont pas des numéros qui se suivent, pour qu\'on ne puisse pas deviner le dossier voisin en changeant un chiffre. Les fichiers déposés sont rangés par organisation et servis par des liens signés qui expirent, jamais par une adresse publique permanente.',
+                'La seconde ligne de défense est dans la base. Avec PostgreSQL, la sécurité au niveau des lignes ajoute à chaque table une règle qui ne laisse voir que les lignes de l\'organisation courante. La <a href="https://www.postgresql.org/docs/current/ddl-rowsecurity.html">documentation de PostgreSQL 18</a>, consultée le 4 octobre 2026, précise deux points qui comptent : une table où la règle est activée sans politique n\'affiche aucune ligne, et le propriétaire de la table échappe normalement aux règles, sauf si l\'on active l\'option qui l\'y soumet. L\'application se connecte donc avec un rôle qui n\'est ni propriétaire ni dispensé.',
+                'La troisième ligne de défense est le test. Avant chaque mise en production, des tests automatisés créent deux organisations fictives et vérifient, écran par écran et route par route, que la première ne peut ni lire, ni modifier, ni supprimer, ni exporter ce qui appartient à la seconde. Ces tests restent dans le projet : chaque évolution future les rejoue, ce qui protège contre l\'erreur d\'un développeur qui reprendrait le code dans deux ans.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Essai gratuit, renouvellement, impayé, résiliation : comment fonctionne la facturation récurrente ?',
+            'paragraphes' => [
+                'Un abonnement passe par des états qu\'il faut tous prévoir : en essai, actif, en retard de paiement, suspendu, résilié, réactivé. La <a href="https://docs.stripe.com/billing/subscriptions/trials">documentation des offres d\'essai de Stripe</a>, consultée le 4 octobre 2026, illustre les choix à faire. À la fin d\'un essai sans moyen de paiement, l\'abonnement peut produire une facture qui passera en retard si elle reste impayée, être annulé, ou être mis en pause jusqu\'à reprise. Un événement prévient votre application par défaut 3 jours avant la fin de l\'essai, et les rappels envoyés par Stripe partent 7 jours avant.',
+                'Les échecs de paiement par carte sont fréquents et souvent temporaires : plafond atteint, carte expirée, contrôle de la banque. La <a href="https://docs.stripe.com/billing/revenue-recovery/smart-retries">page de Stripe sur les relances automatiques</a> recommande par défaut 8 tentatives en 2 semaines, puis laisse choisir l\'issue : annuler l\'abonnement, le marquer comme impayé, le laisser en retard ou le suspendre. Ce choix est une décision commerciale, pas technique : on le fixe au cadrage, formule par formule, et on l\'écrit dans les conditions générales.',
+                'Côté code, la plateforme ne réinvente pas ce que les bibliothèques éprouvées font bien. Avec Laravel, la <a href="https://laravel.com/docs/13.x/billing">documentation de Cashier</a> prend en charge les abonnements Stripe, les coupons, les changements de formule, les quantités, les factures en PDF, les essais avec ou sans carte enregistrée, et un délai de grâce : un abonné qui résilie garde l\'accès jusqu\'à la fin de la période payée. Elle installe aussi la réception des notifications de Stripe, que l\'on complète par les règles propres à votre produit.',
+                'Les montants exigent la même rigueur que dans une comptabilité. Chaque changement de formule en cours de mois se calcule au prorata ou à l\'échéance suivante, selon une règle annoncée à l\'avance. Chaque facture garde la formule, le prix, la devise et les taxes du jour où elle a été émise, même si la grille change ensuite. Une remise accordée à un client se trace, avec sa durée, plutôt que de modifier son prix à la main dans la base.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Carte bancaire ou mobile money : quelle passerelle pour encaisser des abonnements selon les pays ?',
+            'legende' => 'Disponibilités et fonctions relevées le 4 octobre 2026 sur les pages officielles de Stripe, de FedaPay, de KkiaPay et sur le SDK PHP officiel de CinetPay. Les frais de chaque passerelle sont comparés dans le comparatif FedaPay, KkiaPay et CinetPay.',
+            'entetes' => ['Passerelle', 'Où elle est disponible pour le marchand', 'Ce qui existe pour le récurrent', 'Ce qu\'il faut prévoir'],
+            'lignes'  => [
+                ['Stripe', 'France, Belgique, Suisse et Canada notamment ; Côte d\'Ivoire au titre du « réseau étendu » ; Bénin, Sénégal, Togo et Cameroun absents de la page de disponibilité', 'Abonnements, essais, relances automatiques, portail client, prélèvement SEPA en Europe', 'Une entité juridique dans un pays couvert pour ouvrir le compte'],
+                ['FedaPay', 'Afrique de l\'Ouest francophone, mobile money et cartes', 'Fiches clients dans l\'API ; aucune page de la documentation consacrée aux abonnements, et la FAQ de son extension WooCommerce répond « Not yet! » aux paiements récurrents', 'Une facture et un lien de paiement à chaque échéance'],
+                ['KkiaPay', 'Afrique de l\'Ouest francophone, mobile money et cartes', 'Notifications transaction.success et transaction.failed, signées dans l\'en-tête x-kkiapay-secret, renvoyées 5 fois en cas d\'échec ; rien sur le récurrent dans la page consultée', 'Le même principe de paiement à l\'échéance, confirmé par la notification'],
+                ['CinetPay', 'Pays des zones XOF et XAF, Guinée et RD Congo selon le SDK, qui précise qu\'un pays listé ne garantit pas qu\'un opérateur soit activé sur votre compte', 'Rien sur le récurrent dans le SDK ; il rappelle qu\'une notification invite seulement à vérifier la transaction', 'Vérifier chaque paiement auprès de l\'API avant d\'ouvrir l\'accès'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment encaisser un abonnement en mobile money quand aucun prélèvement automatique n\'existe ?',
+            'paragraphes' => [
+                'Une carte enregistrée peut être débitée chaque mois sans action du client ; un portefeuille mobile money, dans les documentations consultées, demande au client de valider chaque paiement sur son téléphone. Le SaaS vendu en Afrique francophone se conçoit donc autour d\'un renouvellement actif : quelques jours avant l\'échéance, la plateforme émet la facture et envoie un lien de paiement par e-mail, SMS ou WhatsApp ; le client valide en quelques secondes ; l\'abonnement est prolongé dès que le paiement est confirmé.',
+                'Plusieurs réglages rendent ce modèle confortable. Proposer des périodes trimestrielles ou annuelles, souvent avec une remise, réduit le nombre de validations. Un délai de grâce de quelques jours après l\'échéance évite de couper un client fidèle pour un oubli. Un solde prépayé, rechargé par mobile money et consommé chaque mois, convient aux formules à l\'usage. La carte reste proposée à ceux qui en ont une, pour qu\'ils profitent du renouvellement automatique.',
+                'La règle technique ne change pas d\'une passerelle à l\'autre : l\'accès s\'ouvre sur la confirmation du serveur, jamais sur la page de retour affichée au client. Le SDK officiel de CinetPay le formule nettement : une notification n\'est qu\'un signal qui invite votre serveur à vérifier la transaction, et l\'on ne débloque jamais une commande sur le seul statut reçu. On vérifie donc la signature, on interroge l\'API, on ignore les doublons, puis on prolonge l\'abonnement. Le choix de l\'agrégateur se fait avec le <a href="/comparatifs/fedapay-vs-kkiapay-vs-cinetpay">comparatif FedaPay, KkiaPay et CinetPay</a>.',
+            ],
+        ],
+        [
+            'type'  => 'vigilance',
+            'titre' => 'Peut-on promettre à ses abonnés un prélèvement automatique sur leur compte mobile money ?',
+            'texte' => 'Pas sans preuve écrite de la passerelle. Le 4 octobre 2026, ni la documentation de FedaPay, ni la page des notifications de KkiaPay, ni le SDK PHP de CinetPay ne décrivaient de débit récurrent sans validation du client, et l\'extension WooCommerce de FedaPay répondait « Not yet! » à la question. Construire une offre ou une grille tarifaire sur cette promesse, c\'est découvrir au premier renouvellement que chaque abonné doit payer à la main. Concevez le renouvellement actif dès le départ, et ajoutez le prélèvement le jour où votre passerelle le confirme par écrit.',
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Rôles, journal d\'activité, console d\'administration : que faut-il prévoir dès la première version ?',
+            'paragraphes' => [
+                'Les rôles se pensent à deux étages. À l\'intérieur de chaque organisation cliente : un propriétaire qui gère l\'abonnement et ne peut pas être supprimé par erreur, des administrateurs qui invitent et retirent des membres, des membres qui travaillent, des accès en lecture seule pour un comptable ou un auditeur. De votre côté : le support, qui consulte un compte pour aider, et l\'administration, qui gère les formules et les paiements. Chaque droit est vérifié côté serveur ; masquer un bouton ne protège rien.',
+                'Le journal d\'activité répond à la question « qui a fait quoi, quand et depuis où ». Il enregistre les connexions et leurs échecs, les changements de rôle, les exports, les suppressions, les modifications de paiement et chaque accès du support à un compte client, avec la valeur avant et après quand une donnée sensible change. Il est en ajout seul : personne, pas même un administrateur, ne peut effacer une ligne depuis l\'application. Chaque organisation consulte la part qui la concerne.',
+                'La console d\'administration est l\'outil du quotidien de celui qui exploite le service : liste des organisations avec leur formule et leur état de paiement, fiche de chaque client, factures, relances, tickets, indicateurs. Elle doit permettre de prolonger un essai, d\'accorder une remise, de suspendre ou de réactiver un compte sans écrire une ligne de code. Si chaque geste commercial passe par le développeur, le service coûte vite plus cher à faire tourner qu\'à construire.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Sauvegardes, disponibilité, montée en charge : comment la plateforme suit-elle la croissance ?',
+            'paragraphes' => [
+                'Une sauvegarde ne compte que si l\'on a déjà réussi à la restaurer. La base et les fichiers déposés sont sauvegardés chaque jour, chiffrés, copiés hors du serveur principal, et une restauration complète est essayée avant l\'ouverture puis à intervalles réguliers. Pour un SaaS, on vérifie aussi la restauration d\'une seule organisation : le client qui a supprimé son dossier par erreur ne veut pas que toute la plateforme revienne trois jours en arrière.',
+                'La montée en charge se prépare sans se payer d\'avance. Une première version tient souvent sur un seul serveur, à condition que les traitements lourds, comme l\'envoi de centaines de rappels, la génération de factures ou l\'import d\'un fichier, passent par une file d\'attente au lieu de bloquer les pages. Quand le volume grandit, on sépare la base de données, on ajoute des serveurs de traitement, puis un cache et une réplique en lecture. Le code est écrit dès le départ pour permettre ces étapes, ce qui évite de tout reconstruire.',
+                'La disponibilité se surveille de l\'extérieur. Une sonde vérifie chaque minute que la page de connexion répond, qu\'une file d\'attente ne s\'accumule pas et que les notifications de paiement arrivent ; une alerte part au premier écart. Les mises à jour se déploient sans couper le service quand c\'est possible, et une page d\'état prévient les abonnés lors d\'une intervention planifiée. Ce sont ces habitudes, plus que la puissance du serveur, qui font qu\'un client renouvelle.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quelles technologies portent un espace client ou un SaaS, et pourquoi celles-là ?',
+            'legende' => 'Choix de départ, ajustés au cadrage ; versions et fonctions relevées le 4 octobre 2026 dans les documentations de Laravel, de PostgreSQL et de Stripe.',
+            'entetes' => ['Brique', 'Choix', 'Raison', 'Point d\'attention'],
+            'lignes'  => [
+                ['Serveur et logique métier', 'Laravel, en PHP', 'Authentification, files d\'attente, tâches planifiées, notifications et tests intégrés ; Cashier pour la facturation par Stripe', 'Les passerelles africaines se raccordent par leurs propres SDK, à côté de Cashier'],
+                ['Temps réel', 'Node.js, si le besoin existe', 'Messagerie entre client et équipe, suivi en direct, tableau qui se met à jour seul', 'Un service de plus à maintenir : on ne l\'ajoute que pour une fonction qui l\'exige'],
+                ['Interface', 'Vue.js ou React', 'Tableaux de bord riches, formulaires dynamiques, écrans qui restent rapides sur téléphone', 'Une interface légère compte plus qu\'une animation pour un client en 3G'],
+                ['Base de données', 'PostgreSQL, ou MySQL selon l\'hébergement', 'PostgreSQL permet l\'isolation des lignes par organisation au niveau de la base', 'L\'application ne se connecte jamais avec le rôle propriétaire des tables'],
+                ['Fichiers', 'Stockage objet, rangé par organisation', 'Volumes importants, liens signés et temporaires, sauvegarde séparée de la base', 'Aucun document client à une adresse publique permanente'],
+                ['Paiement', 'Stripe en Europe et au Canada ; FedaPay, KkiaPay ou CinetPay en Afrique de l\'Ouest et centrale', 'Chaque passerelle là où elle est disponible et utilisée par vos clients', 'Une couche commune dans le code, pour pouvoir changer de passerelle ou en ajouter une'],
+                ['Notifications et automatisations', 'E-mail transactionnel, SMS, WhatsApp, n8n', 'Rappels d\'échéance, alertes de dossier, relances, synchronisation avec vos autres outils', 'Le canal WhatsApp suit les règles de Meta, détaillées dans l\'<a href="/services/integration-whatsapp">intégration WhatsApp</a>'],
+                ['Application mobile', 'Flutter, quand le navigateur ne suffit plus', 'Notifications natives, appareil photo, usage hors connexion, publication sur les magasins', 'Le même serveur et la même API servent le web et le mobile, décrits dans l\'<a href="/services/application-mobile-android-ios">application mobile</a>'],
+                ['Échanges avec vos logiciels', 'API documentée', 'Relier l\'espace client à un ERP, une comptabilité ou un CRM, ou ouvrir votre SaaS à ses clients', 'Le détail des contrats d\'API relève de l\'<a href="/services/api-rest-integrations">API REST et intégrations</a>'],
+            ],
+        ],
+        [
+            'type'  => 'cas',
+            'titre' => 'À quoi ressemble un espace client ou un SaaS selon le secteur ?',
+            'items' => [
+                ['secteur' => 'Cabinet comptable ou fiscal, Cotonou ou Lomé', 'probleme' => 'Les clients envoient leurs pièces par WhatsApp en fin de mois, demandent leurs déclarations par téléphone et réclament les mêmes attestations plusieurs fois par an.', 'solution' => 'Un espace client où chaque entreprise dépose ses pièces par mois et par catégorie, suit l\'état de ses déclarations, télécharge ses états et ses attestations, et reçoit un rappel avant chaque échéance. Le cabinet voit d\'un coup d\'œil les dossiers incomplets.'],
+                ['secteur' => 'Transit et logistique, Abidjan ou Dakar', 'probleme' => 'Les importateurs appellent plusieurs fois par jour pour connaître l\'étape de leur conteneur, et les documents de dédouanement circulent par e-mail.', 'solution' => 'Un portail relié au logiciel d\'exploitation, qui affiche chaque dossier, son étape, ses documents et ses factures, et envoie une notification à chaque changement d\'étape. Les factures se règlent en ligne par mobile money ou par carte.'],
+                ['secteur' => 'Éducation et formation, Afrique de l\'Ouest', 'probleme' => 'Un éditeur veut vendre aux écoles privées un logiciel de gestion des élèves, des notes et des frais de scolarité, chaque école payant un abonnement.', 'solution' => 'Un SaaS multi-locataire : une organisation par école, avec ses rôles (direction, secrétariat, enseignants, parents), un abonnement annuel ou trimestriel payé par mobile money avec renouvellement actif, et un espace parent pour les bulletins et le paiement des frais.'],
+                ['secteur' => 'Santé et laboratoires', 'probleme' => 'Les patients reviennent chercher leurs résultats sur papier, ou les reçoivent par messagerie sans aucune protection.', 'solution' => 'Un espace patient avec connexion par lien magique ou code, résultats publiés après validation du biologiste, téléchargement tracé dans le journal, et durée de conservation définie. Les données de santé imposent un hébergement et des accès choisis avec un soin particulier.'],
+                ['secteur' => 'Gestion locative et syndic', 'probleme' => 'Les locataires et copropriétaires demandent leurs quittances, signalent des pannes au téléphone et paient en espèces.', 'solution' => 'Un espace par locataire et par propriétaire : quittances, appels de fonds, tickets d\'intervention avec photos, rendez-vous avec le technicien, paiement en ligne et relances automatiques. Le propriétaire suit ses encaissements sans appeler l\'agence.'],
+                ['secteur' => 'SaaS B2B, France, Belgique ou Canada', 'probleme' => 'Un fondateur veut lancer un logiciel pour les artisans, avec essai gratuit, trois formules et paiement par carte, mais aussi des clients en Afrique francophone.', 'solution' => 'Stripe pour la clientèle européenne et canadienne, avec renouvellement automatique et relances ; une passerelle mobile money pour l\'Afrique, avec renouvellement actif ; une seule console pour suivre les deux. Conditions générales, résiliation en ligne et export des données conformes aux règles du pays de chaque client.'],
+            ],
+        ],
+        [
+            'type'       => 'prix',
+            'titre'      => 'Combien coûte un espace client ou un SaaS, et qu\'est-ce qui fait varier le devis ?',
+            'intro'      => 'Aucun forfait n\'est publié pour ce service : les seuls tarifs de départ affichés sur ce site concernent la landing page, le site vitrine et le référencement naturel. Le prix est fixé sur devis, gratuit et sans engagement, après le premier échange ou le cadrage, version par version. Les frais des passerelles de paiement, l\'hébergement et les envois de SMS ou de messages restent à votre charge et sont estimés dans le devis. La prestation se règle par Mobile Money (MTN, Moov), carte bancaire, PayPal, virement ou espèces.',
+            'items'      => [
+                ['offre' => 'Cadrage et maquettes', 'prix' => 'Sur devis', 'inclus' => ['Rôles, parcours et données exposées', 'Formules d\'abonnement et passerelles par pays', 'Maquettes testées par de futurs utilisateurs', 'Périmètre de la première version et de la suivante']],
+                ['offre' => 'Espace client', 'prix' => 'Sur devis', 'inclus' => ['Comptes, connexion par lien magique ou mot de passe', 'Dossiers, documents, factures, tickets ou rendez-vous', 'Raccordement à votre logiciel existant', 'Notifications et journal d\'activité']],
+                ['offre' => 'SaaS, première version', 'prix' => 'Sur devis', 'inclus' => ['Inscription, essai gratuit et organisations isolées', 'Abonnements, paiement par carte ou mobile money, relances', 'Console d\'administration et indicateurs', 'Version pilote avec de vrais clients']],
+                ['offre' => 'Exploitation et évolutions', 'prix' => 'Sur devis', 'inclus' => ['Surveillance, sauvegardes et restaurations testées', 'Mises à jour de sécurité', 'Support à vos équipes', 'Nouvelles fonctions livrées par lots']],
+            ],
+            'variations' => [
+                'Le nombre de rôles, de parcours et d\'écrans de la première version.',
+                'Le raccordement à des logiciels existants : ERP, comptabilité, logiciel métier, avec ou sans API.',
+                'Le nombre de passerelles de paiement et de pays, et la complexité des formules (par utilisateur, à l\'usage, avec options).',
+                'Le modèle d\'isolation des données entre clients et le niveau de sensibilité des données (santé, finances, enfants).',
+                'Les canaux de notification : e-mail seul, ou aussi SMS et WhatsApp.',
+                'Le besoin d\'une application mobile en plus du navigateur.',
+                'Les langues et les devises de l\'interface et des factures.',
+                'Le niveau de support et de surveillance attendu après l\'ouverture.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Quelles erreurs font échouer un espace client ou un SaaS ?',
+            'intro' => 'Ces erreurs coûtent cher parce qu\'elles apparaissent tard, souvent après les premiers abonnés. Presque toutes se corrigent au cadrage.',
+            'items' => [
+                ['titre' => 'Construire six mois avant de montrer', 'texte' => 'Un produit développé en chambre fige des choix que personne n\'a testés. Une première version réduite, utilisée par quelques clients réels, dit plus en un mois que tous les ateliers de conception.'],
+                ['titre' => 'Ajouter l\'isolation entre clients après coup', 'texte' => 'Une application écrite pour une seule entreprise puis ouverte à plusieurs garde des requêtes qui ignorent l\'organisation. Les retrouver toutes est long, et une seule oubliée suffit à exposer un client.'],
+                ['titre' => 'Promettre un prélèvement mobile money', 'texte' => 'Si la passerelle ne le permet pas, chaque renouvellement devient une relance manuelle. Le parcours de paiement à l\'échéance se conçoit dès le départ, et le prélèvement s\'ajoute s\'il devient disponible.'],
+                ['titre' => 'Ouvrir l\'accès sur la page de retour du paiement', 'texte' => 'La page de retour peut être affichée sans paiement réel, ou ne jamais s\'afficher alors que le client a payé. Seule la confirmation vérifiée côté serveur ouvre ou prolonge l\'accès.'],
+                ['titre' => 'Un espace client qui affiche des informations périmées', 'texte' => 'Si l\'état d\'un dossier est mis à jour à la main une fois par semaine, les clients rappellent quand même, et ne reviennent plus. La synchronisation avec l\'outil source fait partie du premier lot.'],
+                ['titre' => 'Cacher la résiliation', 'texte' => 'Une résiliation introuvable produit des contestations de paiement, des avis négatifs et, en France, une infraction. Un bouton clair et une confirmation écrite coûtent moins cher qu\'un abonné retenu contre son gré.'],
+                ['titre' => 'Aucun outil d\'administration', 'texte' => 'Prolonger un essai, rembourser, changer une formule : si chaque geste passe par une requête dans la base, le fondateur dépend du développeur pour vendre.'],
+                ['titre' => 'Garder le code et les comptes chez le prestataire', 'texte' => 'Dépôt, hébergement, compte de passerelle, nom de domaine : tout est ouvert à votre nom. Vous restez propriétaire de la plateforme et libre de la faire évoluer avec qui vous voulez.'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Conditions générales, résiliation, sortie des données : quelles règles encadrent un abonnement ?',
+            'paragraphes' => [
+                'Les conditions générales d\'un SaaS fixent les formules, la durée, le renouvellement, le traitement des impayés, la suspension, la résiliation, le sort des données à la fin du contrat et le niveau de service promis. Leur rédaction revient à un juriste du pays où vous vendez. La plateforme, elle, garde la version acceptée par chaque client, la date et l\'auteur de l\'acceptation, et redemande l\'accord quand une nouvelle version entre en vigueur.',
+                'En France, la vente aux consommateurs impose une résiliation aussi simple que la souscription. L\'<a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000046190107">article L215-1-1 du code de la consommation</a>, en vigueur depuis le 1er juin 2023, oblige le professionnel qui permet de conclure un contrat en ligne à offrir une fonctionnalité gratuite pour le résilier en ligne, puis à confirmer la réception et à indiquer, sur un support durable, la date de fin et les effets de la résiliation. Le <a href="https://presse.economie.gouv.fr/01062023-cp-entree-en-vigueur-de-la-resiliation-en-ligne-des-contrats-en-trois-clics/">ministère de l\'Économie</a> la décrit comme identifiable, facile d\'accès, directe et permanente.',
+                'Entre entreprises, en Europe, le règlement sur les données change aussi la sortie. Selon la <a href="https://digital-strategy.ec.europa.eu/fr/policies/data-act">Commission européenne</a>, il est applicable depuis le 12 septembre 2025 et organise le changement de fournisseur de services de traitement de données. Le <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R2854">texte publié sur EUR-Lex</a> limite le préavis à deux mois, impose une période de transition d\'au moins 30 jours civils et interdit les frais de changement à partir du 12 janvier 2027. Un export complet et documenté des données de chaque client se prévoit donc dans le produit.',
+                'Au Bénin comme dans la plupart des pays de la zone, aucune règle équivalente n\'impose ce bouton, mais le même principe sert la confiance : un client qui sait qu\'il peut partir avec ses données s\'engage plus volontiers. Une page de résiliation claire, un export en un clic, une date de fin confirmée par e-mail et une durée de conservation annoncée après la résiliation font partie du cahier des charges, quel que soit le pays.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Données personnelles : quelles obligations pour un espace client ou un SaaS, au Bénin et en Europe ?',
+            'paragraphes' => [
+                'Un SaaS change votre rôle. Pour les données que vos clients y déposent sur leurs propres clients ou salariés, vous agissez pour leur compte : la <a href="https://sgg.gouv.bj/doc/loi-2017-20/">loi n° 2017-20 portant code du numérique</a>, consultée le 4 octobre 2026, vous qualifie alors de sous-traitant à son article 386. Celui-ci impose au responsable du traitement de choisir un sous-traitant offrant des garanties suffisantes et de fixer par contrat ses obligations de sécurité et de confidentialité, et prévoit que le sous-traitant n\'agit que sur instruction. L\'article 435 lui demande en outre de tenir son propre registre des traitements effectués pour chaque client.',
+                'Les droits des personnes passent par l\'interface. L\'article 437 de la même loi ouvre à chacun un droit d\'accès à ses données, avec une copie remise au plus tard dans les 60 jours de la demande. En Europe, le <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3">chapitre III du RGPD publié par la CNIL</a> fixe un mois, prolongeable de deux, pour répondre, consacre l\'effacement « dans les meilleurs délais » à l\'article 17, et la portabilité dans un format « structuré, couramment utilisé et lisible par machine » à l\'article 20. Un export et une suppression de compte en libre-service règlent l\'essentiel.',
+                'Le contrat avec vos clients européens suit l\'article 28 du RGPD, présenté par la <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4">CNIL</a> : vous ne recrutez pas d\'autre sous-traitant, hébergeur ou service d\'envoi d\'e-mails par exemple, sans leur autorisation écrite, et vous supprimez ou rendez leurs données à la fin du service, à leur choix. La plateforme tient donc à jour la liste de ses propres prestataires, et la procédure de fin de contrat efface réellement les données, sauvegardes comprises, à l\'issue de la durée annoncée.',
+                'Pour un espace client, vous restez responsable du traitement, avec les obligations de déclaration et de sécurité détaillées dans l\'<a href="/services/application-web-sur-mesure">application web sur mesure</a>. Dans les deux cas, le pays d\'hébergement se choisit avant l\'ouverture, parce qu\'il commande les règles de transfert de données hors du Bénin ou hors de l\'Union européenne.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Connexion, langue, facturation : que change le contexte local pour un service en ligne ?',
+            'paragraphes' => [
+                'Une grande partie des utilisateurs d\'Afrique francophone se connecte depuis un téléphone, avec un forfait compté et un réseau qui varie dans la journée. L\'espace client doit donc s\'ouvrir vite sur un Android d\'entrée de gamme : pages légères, tableaux paginés, documents compressés, et une session qui ne se perd pas à la première coupure. Les rappels importants partent aussi par SMS ou WhatsApp, pour toucher le client qui ne s\'est pas connecté depuis des semaines.',
+                'La langue est le français, avec les mots de votre métier ; l\'anglais s\'ajoute pour une clientèle au Cameroun, au Canada ou à l\'international, si les textes ont été séparés du code dès le départ. Les montants s\'affichent en francs CFA sans décimales pour l\'Afrique de l\'Ouest et centrale, en euros ou en dollars canadiens ailleurs, et chaque facture garde sa devise. Les heures se stockent dans un fuseau de référence et s\'affichent dans celui de chaque utilisateur.',
+                'La facturation suit les règles du pays du vendeur. Une entreprise béninoise assujettie à la TVA émet des factures normalisées ; une entreprise française entre dans la facturation électronique obligatoire. Ces obligations sont détaillées dans l\'<a href="/services/application-web-sur-mesure">application web sur mesure</a> ; pour un SaaS, elles se traduisent par un module de facturation qui produit le bon document pour chaque pays où vous vendez, ou qui transmet les ventes au logiciel de facturation déjà conforme.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'MRR, churn, conversion d\'essai : quels indicateurs suivre, et comment les calculer ?',
+            'paragraphes' => [
+                'Le revenu récurrent mensuel, ou MRR, est la somme des abonnements en cours ramenés à un mois. La <a href="https://docs.stripe.com/billing/subscriptions/analytics">documentation des analyses de Stripe</a>, consultée le 4 octobre 2026, le définit comme la valeur mensualisée des abonnements actifs ou en retard de paiement, hors taxes, hors offres gratuites et hors essais ; un abonnement annuel compte pour un douzième de son prix. Un abonnement annulé ou marqué impayé sort du MRR et entre dans l\'attrition.',
+                'L\'attrition, le churn en anglais, se mesure de deux façons. Le taux d\'attrition des abonnés rapporte, chez Stripe, le nombre d\'abonnés perdus sur 30 jours au nombre d\'abonnés actifs au début de la période augmenté des nouveaux abonnés. L\'attrition en revenu additionne le MRR perdu par les résiliations et celui perdu par les passages à une formule moins chère. Le revenu moyen par abonné divise le MRR par le nombre d\'abonnés actifs, et le taux de conversion des essais rapporte les essais devenus payants aux essais terminés.',
+                'Ces indicateurs n\'ont de sens que si la plateforme les calcule à partir de ses propres événements, et non d\'un tableur rempli à la main : chaque souscription, changement de formule, échec, relance et résiliation est enregistré avec sa date. Pour un abonnement payé par mobile money à chaque échéance, la date de renouvellement attendue et la date du paiement réel sont gardées toutes les deux, ce qui distingue un client perdu d\'un client simplement en retard.',
+            ],
+        ],
+        [
+            'type'  => 'chiffres',
+            'titre' => 'Quels repères officiels garder en tête avant de lancer un SaaS ?',
+            'items' => [
+                ['valeur' => '19 Mio', 'libelle' => 'Mémoire minimale recommandée pour hacher un mot de passe avec Argon2id, avec 2 itérations', 'source' => 'OWASP, fiche sur le stockage des mots de passe, consultée le 4 octobre 2026', 'url' => 'https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html'],
+                ['valeur' => '30 secondes', 'libelle' => 'Durée de validité recommandée d\'un code temporaire de second facteur', 'source' => 'IETF, RFC 6238, mai 2011', 'url' => 'https://datatracker.ietf.org/doc/html/rfc6238'],
+                ['valeur' => '8 tentatives', 'libelle' => 'Relances de paiement par carte recommandées par défaut, réparties sur 2 semaines', 'source' => 'Stripe, relances automatiques, consultée le 4 octobre 2026', 'url' => 'https://docs.stripe.com/billing/revenue-recovery/smart-retries'],
+                ['valeur' => '60 jours', 'libelle' => 'Délai maximal pour remettre à une personne la copie de ses données, au Bénin', 'source' => 'Loi n° 2017-20 portant code du numérique, article 437', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/'],
+                ['valeur' => '1er juin 2023', 'libelle' => 'Entrée en vigueur en France de la résiliation en ligne des contrats souscrits par voie électronique', 'source' => 'Légifrance, article L215-1-1 du code de la consommation', 'url' => 'https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000046190107'],
+                ['valeur' => '12 janvier 2027', 'libelle' => 'Date à partir de laquelle les frais de changement de fournisseur de services de données sont interdits dans l\'Union', 'source' => 'EUR-Lex, règlement (UE) 2023/2854, article 29', 'url' => 'https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R2854'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi confier votre espace client ou votre SaaS à Richard SALANON ?',
+            'paragraphes' => [
+                fait('phrase_entite'),
+                'Avec plus de 6 ans d\'expérience, une formation à EPITECH (2022), plus de 50 projets livrés et plus de 100 clients, il a travaillé pour des organisations au Bénin, en Côte d\'Ivoire, au Togo, au Sénégal, au Burkina Faso, au Mali, au Niger, au Tchad, au Gabon, en RD Congo, en France, en Belgique, en Suisse et au Canada. Il connaît donc les deux mondes de paiement qu\'un SaaS doit souvent réunir : la carte et le prélèvement en Europe, le mobile money en Afrique.',
+                'Il a aussi construit son propre produit, <a href="https://wapy.pro">Wapy</a>, un assistant WhatsApp à intelligence artificielle pour les entreprises d\'Afrique francophone, et il est co-fondateur d\'<a href="https://audyxa.com">Audyxa</a>. Ce rôle de fondateur change la manière d\'aborder votre projet : il pose les questions de celui qui doit faire vivre le service chaque jour, et pas seulement de celui qui le livre, sur ce qu\'il faut lancer d\'abord, ce qui peut attendre et ce que coûtera l\'exploitation.',
+                'Sa façon de travailler tient en engagements vérifiables : une première version mise entre les mains de vrais utilisateurs avant d\'aller plus loin, un serveur de recette où vous suivez l\'avancement, un code, des comptes et un hébergement à votre nom, une documentation remise à la livraison, et une réponse sous 24 heures. Il a formé plus de 200 personnes au numérique ; vos développeurs peuvent suivre la <a href="/formation-developpement-web">formation au développement web</a> pour reprendre la plateforme. Son parcours figure sur la page <a href="/richard-salanon">Richard SALANON</a>.',
+            ],
+        ],
+        [
+            'type'  => 'lecon',
+            'titre' => 'Que retenir avant de lancer un espace client ou un SaaS ?',
+            'texte' => 'Partez d\'un service que des clients utilisent ou paient déjà, isolez les données de chaque client dès la première ligne de code, concevez le renouvellement par mobile money comme un paiement actif à chaque échéance, rendez la résiliation et l\'export aussi simples que l\'inscription, et gardez le code et tous les comptes à votre nom.',
+        ],
+        [
+            'type'   => 'cta',
+            'titre'  => 'Vous voulez ouvrir un espace à vos clients, ou lancer votre propre logiciel par abonnement ?',
+            'texte'  => 'Décrivez qui se connectera, ce qu\'ils doivent y trouver, qui paiera et dans quels pays : vous recevez une réponse sous 24 heures puis, après un premier échange, un devis gratuit et sans engagement pour une première version.',
+            'bouton' => ['url' => '/contact', 'texte' => 'Présenter mon projet de plateforme'],
+        ],
+    ],
+
+    'faq' => [
+        ['q' => 'Puis-je lancer une première version simple avant d\'investir davantage ?', 'r' => 'Oui, et c\'est la démarche conseillée. La première version couvre le parcours essentiel, un seul type de client et un seul moyen de paiement si possible, puis elle est testée par quelques utilisateurs réels. Les versions suivantes s\'appuient sur ce qu\'ils font vraiment, ce qui limite le risque et le budget engagés avant d\'avoir des preuves.'],
+        ['q' => 'Combien de temps faut-il pour créer un espace client ou un SaaS ?', 'r' => 'Comptez 1 à 3 mois selon le périmètre : 1 à 2 semaines de cadrage et de maquettes, 1 à 2 semaines de socle technique, puis des lots de fonctions de 1 à 2 semaines, les paiements, les contrôles de sécurité et une version pilote. Un espace client branché sur un logiciel qui a déjà une API se situe en général dans le bas de cette fourchette.'],
+        ['q' => 'Combien coûte un SaaS ou un espace client ?', 'r' => 'Le prix est fixé sur devis, gratuit et sans engagement, après un premier échange. Il dépend surtout du nombre de rôles et d\'écrans, du raccordement à vos logiciels existants, du nombre de passerelles de paiement et de pays, et de la sensibilité des données. L\'hébergement, les frais de paiement et les envois de SMS ou de messages s\'ajoutent chaque mois.'],
+        ['q' => 'La plateforme pourra-t-elle accueillir beaucoup d\'utilisateurs ?', 'r' => 'Oui, si elle est conçue pour : traitements lourds en file d\'attente, base de données séparable, serveurs de traitement ajoutés au besoin, cache et réplique en lecture ensuite. Une première version tient souvent sur un seul serveur, et le code est écrit pour franchir ces étapes sans reconstruction. On ne paie la capacité qu\'au moment où le volume la justifie.'],
+        ['q' => 'Serai-je propriétaire du code et de la plateforme ?', 'r' => 'Oui. Le dépôt Git, l\'hébergement, le nom de domaine et les comptes des passerelles de paiement sont ouverts à votre nom dès le départ, avec les droits d\'administration. Vous restez libre de faire évoluer la plateforme avec un autre développeur ou une équipe interne, sans dépendre d\'un prestataire.'],
+        ['q' => 'Peut-on prélever automatiquement un abonnement sur un compte mobile money ?', 'r' => 'Pas avec les documentations consultées le 4 octobre 2026 : ni FedaPay, ni KkiaPay, ni CinetPay n\'y décrivaient de débit récurrent sans validation du client. On conçoit donc un renouvellement actif, avec une facture et un lien de paiement envoyés avant l\'échéance, un délai de grâce et des formules trimestrielles ou annuelles. La carte bancaire, elle, permet le renouvellement automatique.'],
+        ['q' => 'Stripe fonctionne-t-il au Bénin ou au Sénégal ?', 'r' => 'Le 4 octobre 2026, la page de disponibilité de Stripe ne listait ni le Bénin, ni le Sénégal, ni le Togo, ni le Cameroun, et classait la Côte d\'Ivoire dans son « réseau étendu ». Pour ouvrir un compte Stripe, il faut une entité dans un pays couvert, comme la France, la Belgique, la Suisse ou le Canada. En Afrique de l\'Ouest, on passe par FedaPay, KkiaPay ou CinetPay.'],
+        ['q' => 'Comment sont protégées les données de chaque client d\'un SaaS ?', 'r' => 'À trois niveaux : chaque requête du code est filtrée par organisation, la base de données applique ses propres règles d\'isolation par ligne quand on utilise PostgreSQL, et des tests automatisés vérifient qu\'une organisation ne peut ni lire ni modifier les données d\'une autre. Les fichiers sont servis par des liens signés et temporaires, et chaque accès sensible est inscrit au journal d\'activité.'],
+        ['q' => 'Faut-il un mot de passe pour se connecter à l\'espace client ?', 'r' => 'Pas forcément. Pour un espace consulté de temps en temps, la connexion par lien magique, reçu par e-mail et valable quelques minutes, évite les mots de passe oubliés. Pour un usage quotidien, le mot de passe haché avec Argon2id et un second facteur restent la norme, imposés aux comptes d\'administration et proposés aux autres utilisateurs.'],
+        ['q' => 'Peut-on relier l\'espace client à notre ERP ou à notre logiciel actuel ?', 'r' => 'Oui, et c\'est souvent le cœur du projet : l\'espace client affiche ce que votre logiciel sait déjà. Le raccordement passe par l\'API du logiciel quand elle existe, ou par un échange de fichiers planifié sinon. Si votre ERP propose déjà un portail client, comme Odoo, on commence par vérifier s\'il suffit avant de développer.'],
+        ['q' => 'Que se passe-t-il quand un abonné résilie ou ne paie plus ?', 'r' => 'Les règles sont fixées au cadrage et écrites dans les conditions générales. En général, l\'abonné qui résilie garde l\'accès jusqu\'à la fin de la période payée ; celui qui ne paie plus reçoit des relances, passe en délai de grâce, puis voit son compte suspendu sans perte de données. Il peut exporter ses données, et la plateforme les efface après la durée de conservation annoncée.'],
+        ['q' => 'Intervenez-vous hors du Bénin ?', 'r' => 'Oui. Richard SALANON a travaillé dans dix pays d\'Afrique francophone ainsi qu\'en France, en Belgique, en Suisse et au Canada. Le cadrage se fait à Cotonou ou en visioconférence, le développement à distance, avec un serveur de recette accessible partout. Les clients hors d\'Afrique règlent par carte bancaire, PayPal ou virement.'],
+    ],
+
+    'sources' => [
+        ['titre' => 'Stripe, configurer des offres d\'essai sur les abonnements (fin d\'essai, événements, moyen de paiement manquant)', 'url' => 'https://docs.stripe.com/billing/subscriptions/trials', 'date' => '2026-10-04'],
+        ['titre' => 'Stripe, automatiser les relances de paiement (Smart Retries, issue des impayés)', 'url' => 'https://docs.stripe.com/billing/revenue-recovery/smart-retries', 'date' => '2026-10-04'],
+        ['titre' => 'Stripe, disponibilité mondiale par pays', 'url' => 'https://stripe.com/fr/global', 'date' => '2026-10-04'],
+        ['titre' => 'Stripe, analyses Billing (définitions du MRR, de l\'attrition, de l\'ARPU et de la conversion des essais)', 'url' => 'https://docs.stripe.com/billing/subscriptions/analytics', 'date' => '2026-10-04'],
+        ['titre' => 'Laravel 13, Cashier (Stripe) : abonnements, essais, délai de grâce, webhooks', 'url' => 'https://laravel.com/docs/13.x/billing', 'date' => '2026-10-04'],
+        ['titre' => 'FedaPay, documentation : gestion des clients', 'url' => 'https://docs.fedapay.com/fr/integration-api/customer-management', 'date' => '2026-10-04'],
+        ['titre' => 'WordPress.org, FedaPay Gateway for WooCommerce (FAQ sur les paiements récurrents)', 'url' => 'https://wordpress.org/plugins/woo-gateway-fedapay/', 'date' => '2026-10-04'],
+        ['titre' => 'KkiaPay, documentation : webhook', 'url' => 'https://docs.kkiapay.me/v1/tableau-de-bord/webhook', 'date' => '2026-10-04'],
+        ['titre' => 'CinetPay, SDK PHP officiel (pays, devises, notifications et vérification)', 'url' => 'https://github.com/cinetpay/cinetpay-php-sdk', 'date' => '2026-10-04'],
+        ['titre' => 'OWASP, Password Storage Cheat Sheet', 'url' => 'https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html', 'date' => '2026-10-04'],
+        ['titre' => 'CNIL, mots de passe : la recommandation de la délibération n° 2022-100 du 21 juillet 2022', 'url' => 'https://www.cnil.fr/fr/mots-de-passe-une-nouvelle-recommandation-pour-maitriser-sa-securite', 'date' => '2026-10-04'],
+        ['titre' => 'NIST, SP 800-63B-4, Authentication and Authenticator Management', 'url' => 'https://pages.nist.gov/800-63-4/sp800-63b.html', 'date' => '2026-10-04'],
+        ['titre' => 'IETF, RFC 6238, TOTP: Time-Based One-Time Password Algorithm', 'url' => 'https://datatracker.ietf.org/doc/html/rfc6238', 'date' => '2026-10-04'],
+        ['titre' => 'PostgreSQL 18, Row Security Policies', 'url' => 'https://www.postgresql.org/docs/current/ddl-rowsecurity.html', 'date' => '2026-10-04'],
+        ['titre' => 'Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 portant code du numérique (articles 386, 435 et 437)', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-04'],
+        ['titre' => 'CNIL, RGPD chapitre III (articles 12, 17 et 20)', 'url' => 'https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3', 'date' => '2026-10-04'],
+        ['titre' => 'CNIL, RGPD chapitre IV (article 28, sous-traitant)', 'url' => 'https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4', 'date' => '2026-10-04'],
+        ['titre' => 'Légifrance, article L215-1-1 du code de la consommation', 'url' => 'https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000046190107', 'date' => '2026-10-04'],
+        ['titre' => 'Ministère de l\'Économie, entrée en vigueur de la résiliation en ligne des contrats en trois clics (1er juin 2023)', 'url' => 'https://presse.economie.gouv.fr/01062023-cp-entree-en-vigueur-de-la-resiliation-en-ligne-des-contrats-en-trois-clics/', 'date' => '2026-10-04'],
+        ['titre' => 'Commission européenne, règlement sur les données (Data Act)', 'url' => 'https://digital-strategy.ec.europa.eu/fr/policies/data-act', 'date' => '2026-10-04'],
+        ['titre' => 'EUR-Lex, règlement (UE) 2023/2854 sur les données (articles 25 et 29)', 'url' => 'https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R2854', 'date' => '2026-10-04'],
+    ],
+
+    'liens' => [
+        'services'    => ['application-web-sur-mesure', 'api-rest-integrations', 'application-mobile-android-ios', 'integration-whatsapp', 'maintenance-support', 'audit-etude-de-projet'],
+        'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay'],
+    ],
+];
