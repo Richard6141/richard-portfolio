@@ -24,6 +24,8 @@ foreach ([
     '/services/application-mobile-android-ios', '/services/automatisation-ia', '/services/referencement-naturel-seo',
     '/services/seo-local-google-business', '/consultant-digitalisation',
 ] as $url) {
+    // La navigation est déjà réécrite vers l'URL finale (redirections actives).
+    $url = url_finale($url);
     if (isset($libellesServices[$url])) {
         $piedServices[] = [$libellesServices[$url], $url];
     }
