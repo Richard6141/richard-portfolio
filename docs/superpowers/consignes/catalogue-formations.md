@@ -121,3 +121,4 @@ Histoires : knight-capital, thomas-cook, tsb-migration, hertz-accenture, maersk-
 ## Faits déjà vérifiés (à reprendre tels quels)
 
 - **Tarifs WhatsApp de Meta** (page de tarification lue dans un navigateur le 2026-10-05) : facturation par message depuis le 1er juillet 2025 ; depuis le 1er octobre 2026, chaque numéro professionnel a un quota mensuel de 1 000 messages de service gratuits, non reportable, facturés au-delà ; un compte sans moyen de paiement cesse d'envoyer ses messages de service une fois le quota épuisé ; les organisations gouvernementales et à but non lucratif éligibles restent gratuites au-delà du quota jusqu'au 31 décembre 2027. WebFetch renvoie une version anglaise périmée de cette page (« sans plafond ») : ne pas s'y fier.
+- **Gratuité** : le premier échange, le cadrage et le devis sont gratuits (hub des services publié). Aucune autre gratuité (séance d'essai, suivi offert) n'est annoncée.
