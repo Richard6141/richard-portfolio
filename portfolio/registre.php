@@ -24,6 +24,11 @@ if (in_array($rp['type'], ['histoire', 'comparatif', 'guide'], true)) {
     $ogModifiedTime  = $rp['maj'];
 }
 
+// Vague 1B : une section « programme » sans jours reçoit le programme de la fiche, à sa place.
+$sectionsRendues = array_map(static fn(array $b): array => ($b['type'] ?? '') === 'programme' && !isset($b['jours'])
+    ? $b + ['jours' => (array) ($rp['programme'] ?? [])] : $b, (array) $rp['sections']);
+$programmePlace = in_array('programme', array_column($sectionsRendues, 'type'), true);
+
 // Typographie française appliquée à la page rendue (helpers/blocs.php).
 ob_start();
 include __DIR__ . '/partials/pv2-head.php';
@@ -34,8 +39,8 @@ include __DIR__ . '/partials/pv2-header.php';
   <div class="registre__corps conteneur">
     <?php include __DIR__ . '/partials/registre/sommaire.php'; ?>
     <article class="registre__article">
-      <?= blocs_rendre($rp['sections']) ?>
-      <?php if (!empty($rp['programme'])): ?><?= bloc_rendre(['type' => 'programme', 'titre' => 'Programme détaillé', 'jours' => $rp['programme']]) ?><?php endif; ?>
+      <?= blocs_rendre($sectionsRendues) ?>
+      <?php if (!$programmePlace && !empty($rp['programme'])): ?><?= bloc_rendre(['type' => 'programme', 'titre' => 'Programme détaillé', 'jours' => $rp['programme']]) ?><?php endif; ?>
       <?php if (!empty($rp['faq'])): ?><?= bloc_rendre(['type' => 'faq', 'titre' => 'Questions fréquentes', 'items' => $rp['faq']]) ?><?php endif; ?>
       <?php if (!empty($rp['sources'])): ?><?= bloc_rendre(['type' => 'sources', 'titre' => 'Sources', 'items' => $rp['sources']]) ?><?php endif; ?>
       <?php if ($editorial) { include __DIR__ . '/partials/boite-auteur.php'; } ?>

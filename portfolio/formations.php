@@ -11,6 +11,12 @@
 // ============================================================
 require __DIR__ . '/partials/pv2-bootstrap.php';
 
+// Vague 1B : le hub rédigé dans data/hubs/formations.php remplace le catalogue codé en dur.
+if (($page = route_resoudre('formations/')) !== null) {
+    require __DIR__ . '/registre-hub.php';
+    exit;
+}
+
 $url = $portfolioUrl . '/formations/';
 
 // Le catalogue. Les slugs pointent vers les pages du registre : toute

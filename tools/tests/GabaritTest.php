@@ -83,3 +83,27 @@ function test_gabarit_un_seul_header_celui_du_site(): void
         assert_same(1, substr_count(gabarit_rendre($type, $slug), '<header'), "{$type} : un seul <header>");
     }
 }
+
+function test_gabarit_programme_place_par_le_redacteur_une_seule_fois(): void
+{
+    // Vague 1B : une section « programme » sans jours reçoit le programme de la fiche, à sa place.
+    $html = gabarit_rendre('formation', 'ia-test');
+    assert_same(1, substr_count($html, 'bloc--programme'), 'programme rendu une fois');
+    assert_contains('Quel est le programme', $html);
+    assert_true(strpos($html, 'bloc--programme') < strpos($html, 'bloc--faq'), 'avant la FAQ');
+    assert_contains('Point.', $html);
+}
+
+function test_gabarit_hub_formations_groupe_par_domaine(): void
+{
+    // Vague 1B : le hub des formations range les fiches par domaine (ordre de REGISTRES_DOMAINES_NOMS).
+    $html = http_local('/formations/')['corps'];
+    $pos  = [];
+    foreach (REGISTRES_DOMAINES_NOMS as $slug => $nom) {
+        $pos[$slug] = strpos($html, '<h2 class="liste-hub__famille">' . sanitize($nom) . '</h2>');
+        assert_true($pos[$slug] !== false, "domaine {$nom}");
+    }
+    $tri = $pos;
+    sort($tri);
+    assert_same($tri, array_values($pos), 'domaines dans l\'ordre du registre');
+}

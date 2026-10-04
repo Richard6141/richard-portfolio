@@ -52,3 +52,10 @@ function test_route_hub_services_prefere_le_registre(): void
     $p = strpos($src, "route_resoudre('services/')");
     assert_true($p !== false && $p < strpos($src, 'exiger_base($pdo)'), 'registre avant la base');
 }
+
+function test_route_hub_formations_prefere_le_registre(): void
+{
+    $src = (string) file_get_contents(racine('portfolio/formations.php'));
+    assert_true(strpos($src, "route_resoudre('formations/')") !== false, 'registre consulté');
+    assert_true(strpos($src, "route_resoudre('formations/')") < strpos($src, '$familles'), 'registre avant le catalogue codé en dur');
+}

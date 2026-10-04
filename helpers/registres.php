@@ -46,6 +46,18 @@ const REGISTRES_CHAMPS_TYPE = [
 /** Domaines de formation (spec 6.3). */
 const REGISTRES_DOMAINES = ['intelligence-artificielle', 'automatisation', 'developpement', 'erp-gestion', 'marketing-visibilite', 'cybersecurite-it', 'transformation-digitale', 'ia-systemes-existants'];
 
+/** Libellés des domaines, dans l'ordre d'affichage (spec 6.3, vague 1B). */
+const REGISTRES_DOMAINES_NOMS = [
+    'intelligence-artificielle' => 'Intelligence artificielle',
+    'automatisation'            => 'Automatisation',
+    'developpement'             => 'Développement',
+    'erp-gestion'               => 'ERP et outils de gestion',
+    'marketing-visibilite'      => 'Marketing et visibilité',
+    'cybersecurite-it'          => 'Cybersécurité et IT',
+    'transformation-digitale'   => 'Transformation digitale',
+    'ia-systemes-existants'     => 'IA dans vos systèmes existants',
+];
+
 /** Familles de services (registre de navigation). */
 const REGISTRES_FAMILLES = ['Sites et boutiques', 'Applications et IA', 'Visibilité et conseil', 'ERP et gestion'];
 
