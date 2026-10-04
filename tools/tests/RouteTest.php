@@ -35,7 +35,7 @@ function test_route_htaccess_envoie_les_registres_au_routeur(): void
 
 function test_route_http_404_franc_et_historique_intact(): void
 {
-    assert_same(404, http_local('/histoires/')['code'], 'hub non publié');
+    assert_same(404, http_local('/glossaire/')['code'], 'hub non publié');
     assert_same(404, http_local('/zones/benin')['code']);
     assert_same(404, http_local('/formations/ia-en-entreprise/benin/x')['code']);
     assert_same(301, http_local('/guides')['code']);
