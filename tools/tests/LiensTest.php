@@ -28,7 +28,8 @@ function test_liens_pied_de_page_vers_les_vraies_pages_d_expertise(): void
     // on vérifie le rendu (pied_rendre, défini dans PiedTest.php).
     $pied = pied_rendre();
     assert_not_contains('/a-propos/#expertise', $pied);
-    foreach (['/services/application-web-sur-mesure', '/services/automatisation-ia', '/services/referencement-naturel-seo', '/consultant-digitalisation', '/formations/'] as $url) {
+    // Vague 1A : le pilier publié remplace /consultant-digitalisation (301), le pied pointe sur l'URL finale.
+    foreach (['/services/application-web-sur-mesure', '/services/automatisation-ia', '/services/referencement-naturel-seo', '/services/consultant-digitalisation', '/formations/'] as $url) {
         assert_contains('href="' . $url . '"', $pied);
     }
 }

@@ -1,0 +1,346 @@
+<?php
+// ============================================================
+// data/services/referencement-ia-geo.php · Pilier « Référencement IA
+// (GEO) » (vague 1A, lot 2). Nouveau slug, aucune fiche en base.
+// Faits externes relevés le 03/10/2026 sur la documentation d'OpenAI,
+// de Google Search Central, de Perplexity, d'Anthropic, de Microsoft Bing,
+// sur llmstxt.org, schema.org, Wikidata, l'UIT, le SGG du Bénin et la CNIL.
+// Faits sur richardsalanon.com vérifiés en production le même jour
+// (robots.txt, llms.txt, graphe JSON-LD). À revérifier à chaque mise à jour.
+// ============================================================
+declare(strict_types=1);
+
+return [
+    'titre'   => 'Référencement IA (GEO) : être cité par ChatGPT, Gemini, Perplexity, Claude et Copilot',
+    'title'   => 'Référencement IA GEO : être cité par l\'IA | Richard SALANON',
+    'meta'    => 'Référencement IA (GEO) : robots autorisés, données structurées, fiche d\'entité et contenus sourcés pour être cité par ChatGPT, Gemini et Perplexity.',
+    'en_bref' => 'Le référencement IA, ou GEO, rend votre entreprise lisible et citable par les assistants qui répondent à la place d\'un moteur : accès des robots d\'OpenAI, de Google, de Perplexity, d\'Anthropic et de Microsoft, données structurées, fiche d\'entité unique, contenus de référence sourcés et datés, puis mesure des citations. Il s\'adresse aux PME, cabinets, écoles, commerces et organisations d\'Afrique francophone et d\'Europe dont le site est indexé, ou en passe de l\'être. Comptez trois à six semaines pour l\'état des lieux et la mise en place, puis un suivi mensuel ; le prix est fixé sur devis, et personne ne peut garantir une citation.',
+    'publie'  => '2026-10-04',
+    'maj'     => '2026-10-04',
+    'famille' => 'Visibilité et conseil',
+    'matrice' => true,
+
+    'faits_hero' => [
+        ['l' => 'Délai', 'v' => 'État des lieux et mise en place en 3 à 6 semaines, puis suivi mensuel'],
+        ['l' => 'Pour qui', 'v' => 'PME, cabinets, écoles, commerces et organisations dont les clients interrogent déjà les assistants'],
+        ['l' => 'Livrables', 'v' => 'Panel de questions, audit d\'accès des robots, graphe JSON-LD, llms.txt, pages de référence, mesure mensuelle'],
+        ['l' => 'Réponse', 'v' => 'sous 24 heures'],
+    ],
+
+    'sections' => [
+        [
+            'type'        => 'prose',
+            'titre'       => 'Que recouvre le référencement IA (GEO), et où s\'arrête-t-il ?',
+            'paragraphes' => [
+                'Un nombre croissant de clients ne tapent plus quelques mots dans Google : ils posent une question entière à ChatGPT, à Gemini, à Perplexity, à Claude ou à Copilot, du type « quel cabinet peut m\'accompagner pour créer une SARL à Cotonou ? » ou « quel logiciel de caisse accepte MTN MoMo ? ». L\'assistant cherche, lit quelques pages, rédige une synthèse et cite certaines sources. Le référencement IA, que l\'on appelle aussi GEO pour <em>Generative Engine Optimization</em>, consiste à faire partie de ces sources, et à ce que ce qui est dit de vous soit exact.',
+                'Le travail porte sur cinq leviers : laisser entrer les bons robots, décrire votre entreprise sans ambiguïté dans des données structurées, tenir une fiche d\'entité unique que toutes vos pages et tous vos profils reprennent, publier des contenus de référence sourcés et datés, puis mesurer, question par question, si les assistants vous citent. Microsoft le résume dans ses consignes aux webmasters : le SEO améliore la qualité technique et la clarté d\'un site, le GEO s\'occupe de son éligibilité à servir d\'appui et de référence dans les réponses de l\'IA.',
+                'Ce service ne remplace pas le <a href="/services/referencement-naturel-seo">référencement naturel</a>, il s\'appuie dessus. Google l\'écrit dans sa documentation sur les fonctionnalités d\'IA : une page doit être indexée et pouvoir s\'afficher avec un extrait pour servir de lien dans les aperçus IA ou le mode IA. Si votre site est lent, mal indexé ou bâti en JavaScript illisible, on commence par là. Cette page traite de ce qui vient en plus : les robots propres à chaque assistant, l\'identité de l\'entreprise, la forme des contenus et la mesure des citations.',
+                'Le GEO ne recouvre pas non plus la création d\'un assistant conversationnel sur votre site ou sur WhatsApp, qui relève des <a href="/services/agents-ia-chatbot-whatsapp">agents IA et chatbots WhatsApp</a>, ni les annonces payantes affichées dans certains assistants. Il ne consiste pas davantage à « nourrir » les modèles de textes trompeurs : Microsoft range explicitement l\'injection d\'instructions destinées aux modèles de langage parmi les pratiques qui réduisent la visibilité, voire retirent un site de ses résultats.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Comment chaque assistant trouve-t-il et cite-t-il ses sources ?',
+            'legende' => 'Synthèse des documentations officielles d\'OpenAI, de Google, de Perplexity, d\'Anthropic et de Microsoft, consultées le 3 octobre 2026. Les noms de robots sont ceux à écrire dans le fichier robots.txt.',
+            'entetes' => ['Assistant', 'Ce qui alimente les réponses citées', 'Robot d\'entraînement, distinct', 'Visite à la demande d\'un utilisateur', 'Ce que précise l\'éditeur'],
+            'lignes'  => [
+                ['ChatGPT (OpenAI)', 'OAI-SearchBot, qui fait apparaître les sites dans la recherche de ChatGPT', 'GPTBot', 'ChatGPT-User, auquel les règles du robots.txt peuvent ne pas s\'appliquer', 'Un site qui bloque OAI-SearchBot n\'apparaît plus dans les réponses de recherche, sauf comme simple lien de navigation ; prise en compte d\'un changement en 24 heures environ'],
+                ['Aperçus IA et mode IA (Google)', 'L\'index de la recherche Google, exploré par Googlebot', 'Pas de robot séparé : le jeton Google-Extended contrôle l\'usage pour Gemini', 'Aucun robot spécifique documenté', 'Aucune exigence technique supplémentaire : page indexée et éligible à un extrait'],
+                ['Gemini (application)', 'L\'index de Google, avec un ancrage dans la recherche au moment de la question', 'Jeton Google-Extended, sans agent HTTP distinct', 'Non documenté séparément', 'Google-Extended règle l\'entraînement et l\'ancrage dans les applications Gemini, sans effet sur la recherche Google'],
+                ['Perplexity', 'PerplexityBot, conçu pour faire apparaître et lier les sites dans ses résultats', 'Aucun : PerplexityBot n\'alimente pas l\'entraînement des modèles', 'Perplexity-User, qui ignore en général le robots.txt', 'Changements pris en compte en 24 heures au plus ; adresses IP publiées pour les pare-feu'],
+                ['Claude (Anthropic)', 'Claude-SearchBot, qui indexe pour la qualité des réponses de recherche', 'ClaudeBot', 'Claude-User', 'Bloquer Claude-SearchBot ou Claude-User peut réduire votre visibilité dans les réponses ; Crawl-delay accepté'],
+                ['Copilot (Microsoft)', 'L\'index de Bing, exploré par Bingbot', 'Non distingué dans les consignes', 'Non documenté séparément', 'Mêmes fondations que la recherche Bing ; NOARCHIVE exclut le contenu des réponses de Copilot, NOCACHE le réduit au titre, à l\'adresse et à l\'extrait'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi faut-il distinguer robots de recherche, robots d\'entraînement et visites à la demande ?',
+            'paragraphes' => [
+                'Beaucoup d\'entreprises ont bloqué « les IA » d\'un bloc en 2024 ou 2025, souvent sur le conseil d\'un hébergeur ou d\'une extension WordPress, puis s\'étonnent de n\'être jamais citées. Or les éditeurs séparent désormais trois usages. Le robot de recherche construit l\'index dans lequel l\'assistant puise ses sources citées. Le robot d\'entraînement collecte des pages qui pourraient servir à entraîner de futurs modèles. Le visiteur à la demande ouvre une page parce qu\'un utilisateur l\'a demandé, au moment de la conversation.',
+                'Cette séparation permet une décision nuancée : refuser l\'entraînement et accepter la recherche. OpenAI documente GPTBot pour l\'entraînement et OAI-SearchBot pour la recherche, Anthropic sépare ClaudeBot de Claude-SearchBot, Perplexity précise que PerplexityBot ne sert pas à entraîner des modèles. Un robots.txt qui interdit GPTBot et ClaudeBot mais autorise OAI-SearchBot, Claude-SearchBot et PerplexityBot garde vos chances d\'être cité tout en exprimant un refus d\'entraînement. C\'est un choix d\'entreprise, qui se documente et se revoit chaque année.',
+                'Google suit une logique différente. Sa documentation sur les fonctionnalités d\'IA explique que l\'IA fait partie intégrante de la recherche : ce sont les règles écrites pour Googlebot qui gouvernent l\'exploration, et les commandes nosnippet, data-nosnippet, max-snippet ou noindex qui limitent ce qui s\'affiche. Le jeton Google-Extended, lui, décide si les pages explorées peuvent entraîner les modèles Gemini et servir d\'ancrage dans l\'application Gemini. Le bloquer ne vous retire pas des aperçus IA, mais peut vous retirer des réponses ancrées de l\'application Gemini.',
+                'Reste le cas des visites à la demande. ChatGPT-User, Perplexity-User et Claude-User agissent pour un utilisateur précis ; OpenAI et Perplexity indiquent que les règles du robots.txt peuvent ne pas s\'y appliquer. Pour une page qui ne doit apparaître nulle part, la protection par mot de passe reste la seule barrière sûre. Pour une page publique, le plus simple est de ne pas gêner ces visites : elles ont lieu quand un prospect parle de vous à un assistant.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'À quels signes voit-on qu\'il est temps de travailler votre présence dans les réponses des IA ?',
+            'intro' => 'Le besoin devient concret quand vos clients consultent un assistant avant de vous appeler. Ces situations reviennent dans les premiers échanges.',
+            'items' => [
+                ['titre' => 'Un prospect cite une réponse de ChatGPT', 'texte' => 'Il arrive au rendez-vous avec une comparaison de prestataires obtenue dans un assistant, et votre entreprise n\'y figure pas, ou y figure avec un tarif, une adresse ou une offre qui ne sont plus les vôtres.'],
+                ['titre' => 'L\'assistant décrit mal votre activité', 'texte' => 'Interrogé sur votre nom, il vous confond avec une homonyme, vous situe dans la mauvaise ville ou résume un service abandonné il y a trois ans. Le problème vient en général d\'informations contradictoires publiées à plusieurs endroits.'],
+                ['titre' => 'Vos concurrents sont cités, pas vous', 'texte' => 'Sur les questions de votre métier, les mêmes deux ou trois noms reviennent dans les réponses. Leur site n\'est pas forcément meilleur, mais il répond explicitement aux questions posées, avec des faits datés.'],
+                ['titre' => 'Le robots.txt bloque des robots sans que personne l\'ait décidé', 'texte' => 'Une extension de sécurité, un réglage de l\'hébergeur ou un pare-feu applicatif refuse GPTBot, OAI-SearchBot ou PerplexityBot. Personne dans l\'entreprise ne sait qui l\'a activé, ni pourquoi.'],
+                ['titre' => 'Le site est indexé mais ne contient aucune réponse nette', 'texte' => 'Les pages parlent de valeurs et de passion, jamais de délais, de prix, de zones couvertes, de moyens de paiement ou de conditions. Un assistant n\'a rien de précis à reprendre.'],
+                ['titre' => 'Vos profils externes se contredisent', 'texte' => 'La fiche Google, LinkedIn, Facebook, les annuaires et le site affichent des intitulés, des téléphones ou des adresses différents. Pour un système qui recoupe les sources, c\'est le signe d\'une entité mal identifiée.'],
+                ['titre' => 'Des visites arrivent de chatgpt.com sans que vous sachiez lesquelles', 'texte' => 'Les statistiques montrent quelques visites venues d\'assistants, mais personne ne sait quelles pages sont citées ni sur quelles questions. Sans mesure, impossible de renforcer ce qui fonctionne.'],
+            ],
+        ],
+        [
+            'type'  => 'etapes',
+            'titre' => 'Comment se déroule la mission, du panel de questions au suivi mensuel ?',
+            'items' => [
+                ['titre' => 'Cadrage et panel de questions', 'duree' => '2 à 4 jours', 'texte' => 'On dresse la liste des questions que vos clients posent réellement, telles qu\'ils les formulent : « qui peut installer Odoo à Abidjan ? », « combien coûte une formation en comptabilité à Dakar ? ». Trente à soixante questions, en français et en anglais si votre clientèle l\'exige, classées par service et par pays. Ce panel devient l\'instrument de mesure de toute la mission : il se repose à l\'identique chaque mois.'],
+                ['titre' => 'État des lieux des réponses', 'duree' => '1 semaine', 'texte' => 'Chaque question est posée à ChatGPT, Gemini, Perplexity, Claude et Copilot, depuis des sessions neuves sans historique. On note qui est cité, quelles pages, ce qui est dit de vous et les erreurs factuelles. Le relevé, daté, sert de point zéro. Il montre souvent que les assistants citent des annuaires, des articles de presse ou des concurrents plutôt que votre site.'],
+                ['titre' => 'Audit d\'accès des robots', 'duree' => '2 à 5 jours', 'texte' => 'Lecture du robots.txt, des réglages du pare-feu et du CDN, des balises noindex, nosnippet et des en-têtes envoyés aux robots ; contrôle que le texte principal existe dans le HTML sans exécuter JavaScript ; vérification du sitemap, des dates de mise à jour et des propriétés Search Console et Bing Webmaster Tools. Un robot autorisé dans le robots.txt mais refoulé par le pare-feu reste un robot bloqué.'],
+                ['titre' => 'Fiche d\'entité et graphe JSON-LD', 'duree' => '1 à 2 semaines', 'texte' => 'Rédaction d\'une fiche de faits unique (nom, activité, ville, pays servis, offres, prix de départ, moyens de paiement, profils officiels) et d\'une phrase d\'entité stable. Le site en tire un seul graphe de données structurées par page, avec un identifiant permanent pour l\'entreprise ou la personne, et des liens sameAs vers les profils vérifiables. Les profils externes sont ensuite alignés sur la fiche.'],
+                ['titre' => 'Pages de référence', 'duree' => '2 à 6 semaines selon le volume', 'texte' => 'Pour chaque groupe de questions du panel, une page répond d\'abord, puis détaille : définition, conditions, délais, prix ou critères, tableau comparatif, sources citées, date de mise à jour et auteur identifié. Les pages existantes sont reprises quand c\'est possible ; les nouvelles ne sont créées que pour des questions sans réponse sur le site.'],
+                ['titre' => 'llms.txt et versions lisibles', 'duree' => '1 à 3 jours', 'texte' => 'Publication d\'un fichier llms.txt généré depuis la même fiche de faits que le site, pour qu\'il ne diverge jamais des pages, et, si votre plateforme le permet, de versions texte des pages clés. Ce volet est léger et présenté pour ce qu\'il est : une proposition utile, pas un passage obligé.'],
+                ['titre' => 'Mentions externes', 'duree' => 'À partir du deuxième mois, en continu', 'texte' => 'Mise à jour des fiches d\'annuaires professionnels, des pages partenaires, des associations sectorielles et des profils publics, puis démarches auprès de médias et d\'organisations qui citent déjà des entreprises de votre secteur. Aucune mention achetée ni article déguisé : ce sont précisément les pratiques que Microsoft et Google pénalisent.'],
+                ['titre' => 'Mesure et rapport mensuel', 'duree' => 'Chaque mois', 'texte' => 'Le panel est reposé dans les mêmes conditions ; on compare citations, exactitude des réponses et pages citées avec le mois précédent. S\'y ajoutent le rapport AI Performance de Bing Webmaster Tools, la Search Console, les visites marquées utm_source=chatgpt.com dans vos statistiques et les passages des robots dans les journaux du serveur.'],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Que recevez-vous concrètement à la fin de la mise en place ?',
+            'legende' => 'Livrables de la mission de référencement IA. Les corrections de fond du référencement classique sont chiffrées à part si l\'audit les juge nécessaires.',
+            'entetes' => ['Livrable', 'Contenu', 'Forme'],
+            'lignes'  => [
+                ['Panel de questions', 'Trente à soixante questions de clients, par service, par pays et par langue', 'Tableur partagé, réutilisé chaque mois'],
+                ['Relevé initial des réponses', 'Pour chaque question et chaque assistant : sources citées, présence ou absence, erreurs factuelles', 'Tableur daté avec captures d\'écran'],
+                ['Rapport d\'accès des robots', 'Robots autorisés et bloqués, pare-feu, balises, rendu sans JavaScript, sitemap, comptes Search Console et Bing', 'Rapport commenté, corrections priorisées'],
+                ['robots.txt documenté', 'Règles par robot, avec la décision prise pour l\'entraînement et la recherche', 'Fichier en production et note de décision'],
+                ['Fiche d\'entité', 'Faits de référence de l\'entreprise et phrase d\'entité à reprendre mot pour mot', 'Document source unique, transmis à votre équipe'],
+                ['Graphe JSON-LD', 'Un seul bloc par page : entreprise ou personne, site, page, service, fil d\'Ariane, questions fréquentes visibles', 'Intégré aux gabarits du site, validé'],
+                ['llms.txt', 'Résumé de l\'entité et liens vers les pages essentielles, généré depuis la fiche', 'Fichier à la racine du site'],
+                ['Pages de référence', 'Réponses sourcées et datées aux questions du panel', 'Pages publiées sur votre site'],
+                ['Plan de mentions externes', 'Profils à aligner, annuaires, partenaires, médias visés, état des démarches', 'Tableur partagé'],
+                ['Rapport mensuel', 'Citations, exactitude, pages citées, visites venues des assistants, actions du mois suivant', 'Rapport écrit et point d\'échange'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Que changent vraiment les données structurées schema.org pour les assistants ?',
+            'paragraphes' => [
+                'Elles décrivent votre entreprise dans une forme qu\'une machine lit sans interpréter : qui vous êtes, où, ce que vous proposez, quels profils vous appartiennent. Elles ne sont pas une formule magique, et les éditeurs le disent. Google écrit qu\'il n\'est pas nécessaire d\'ajouter des données structurées schema.org particulières pour apparaître dans les aperçus IA ou le mode IA. Les consignes de Bing précisent qu\'elles peuvent faciliter un ancrage plus clair, sans garantir ni visibilité ni trafic.',
+                'Leur valeur tient à la désambiguïsation. Selon la documentation de Google sur les données structurées Organization, elles l\'aident à comprendre les informations administratives d\'une organisation et à la distinguer des autres dans les résultats. La propriété sameAs, définie par schema.org comme l\'adresse d\'une page de référence qui indique sans ambiguïté l\'identité de l\'élément, relie votre site à vos profils LinkedIn, Google Business Profile ou GitHub. C\'est ce qui permet de dire : ces cinq pages parlent de la même entité.',
+                'La pratique qui fait la différence est le graphe unique. Beaucoup de sites empilent trois ou quatre blocs JSON-LD, ajoutés par le thème, une extension SEO et un module d\'avis, qui décrivent l\'entreprise trois fois avec des noms différents. Un seul bloc par page, où chaque nœud porte un identifiant permanent (par exemple l\'adresse du site suivie de #organisation) et où la page, le service et le fil d\'Ariane renvoient à ce même nœud, donne une description cohérente d\'une page à l\'autre.',
+                'Deux règles évitent les ennuis. Tout ce qui est balisé doit être visible sur la page : Google le demande dans ses conseils pour les expériences d\'IA, Bing classe les données structurées trompeuses parmi les pratiques qui font perdre la confiance. Et aucun type ne doit inventer ce qui n\'existe pas : pas de note moyenne sans avis réels, pas d\'adresse de boutique pour une activité exercée à distance.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'llms.txt : que vaut réellement ce fichier en 2026 ?',
+            'paragraphes' => [
+                'Le fichier llms.txt est une proposition publiée le 3 septembre 2024 par Jeremy Howard sur llmstxt.org, modifiée depuis, et non une norme. Le site du projet se présente comme une proposition de standardisation : un fichier Markdown placé à la racine du site, avec un titre, un court résumé en citation, puis des sections de liens vers les pages utiles ; la seule partie obligatoire est le titre. La même proposition suggère d\'offrir des versions Markdown des pages importantes, à la même adresse suivie de .md.',
+                'Son statut réel doit être dit honnêtement. Google écrit noir sur blanc qu\'il n\'est pas nécessaire de créer de fichiers lisibles par une machine ni de fichiers textuels destinés à l\'IA pour apparaître dans ses fonctionnalités d\'IA. Les pages consultées d\'OpenAI, de Perplexity et d\'Anthropic sur leurs robots n\'annoncent pas que ceux-ci lisent llms.txt chez les autres sites. Signe que l\'usage se répand malgré tout, la documentation d\'OpenAI et celle de Perplexity publient chacune leur propre llms.txt pour les agents qui lisent leurs pages.',
+                'Conclusion pratique : llms.txt coûte peu, rend service aux agents et aux outils qui le lisent, et ne remplace rien. On le publie quand il peut être généré automatiquement depuis la même source que le site, pour qu\'il ne contredise jamais les pages. Un llms.txt écrit à la main, oublié au bout de six mois, qui annonce encore d\'anciens tarifs, fait plus de tort qu\'aucun fichier. Il ne se vend jamais comme une garantie de citation.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi une fiche d\'entité unique pèse-t-elle autant ?',
+            'paragraphes' => [
+                'Un assistant qui répond sur votre entreprise recoupe des sources : votre site, votre fiche Google, LinkedIn, un annuaire, un article de presse. Si ces sources donnent trois intitulés d\'activité, deux villes et quatre numéros, il hésite, mélange ou choisit la version la plus ancienne. La fiche d\'entité règle ce problème à la racine : un document unique qui fixe le nom exact, l\'activité en une phrase, la ville, les pays servis, les offres, les prix de départ, les moyens de paiement et la liste des profils officiels.',
+                'Tout part ensuite de cette fiche. La phrase d\'entité est reprise mot pour mot sur l\'accueil, la page à propos, les profils et le llms.txt ; les gabarits du site lisent les faits au lieu de les recopier ; le graphe JSON-LD liste dans sameAs les seuls profils vérifiables. Quand un fait change, on le modifie à un endroit, puis on aligne les profils externes dans la semaine. La cohérence n\'est pas un effet de style : c\'est ce qui permet à une machine de conclure que toutes ces pages désignent la même entreprise.',
+                'Une précision évite de fausses attentes. Wikidata, base de connaissances libre très lue par les systèmes automatiques, n\'accepte un élément que s\'il a un lien vers une page Wikimédia, s\'il décrit une entité clairement identifiable à l\'aide de références sérieuses et publiques, ou s\'il répond à un besoin structurel. Une PME récente sans couverture de presse n\'y a pas sa place, et créer une fiche de complaisance finit supprimé. Le travail utile consiste d\'abord à obtenir ces références publiques.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Qu\'est-ce qu\'un contenu de référence, celui que les assistants reprennent ?',
+            'intro' => 'Google demande des contenus uniques, non génériques ; Bing écrit que les réponses ancrées dépendent de contenus qu\'il peut interpréter et vérifier. Concrètement, une page de référence réunit les traits suivants.',
+            'items' => [
+                ['titre' => 'Elle répond d\'abord, explique ensuite', 'texte' => 'La première phrase sous chaque titre donne la réponse : un délai, un prix de départ, une condition, une définition. Le détail suit. Un assistant qui cherche un passage à citer trouve une phrase autonome, compréhensible hors de la page.'],
+                ['titre' => 'Ses titres sont des questions réelles', 'texte' => 'Les intertitres reprennent les questions du panel, dans les mots des clients. Ils servent au lecteur pressé et correspondent à la manière dont les assistants découpent une demande en sous-questions avant de chercher.'],
+                ['titre' => 'Chaque chiffre a sa date et sa source', 'texte' => 'Un tarif, un délai légal ou une statistique sans date ni origine ne vaut rien pour un système qui recoupe. « Selon tel organisme, au 3 octobre 2026 » rend le fait vérifiable, donc citable, et montre quand la page doit être revue.'],
+                ['titre' => 'Elle porte une date de mise à jour et un auteur', 'texte' => 'La date de publication, la date de dernière révision et l\'auteur identifié figurent sur la page et dans les données structurées. Bing recommande aussi des valeurs lastmod exactes dans le sitemap pour repérer les changements.'],
+                ['titre' => 'Les comparaisons sont en tableau', 'texte' => 'Offres, critères, pays, délais : un tableau HTML se lit sans ambiguïté, là où trois paragraphes de prose obligent à interpréter. Les images de tableaux, elles, ne se lisent pas : Bing rappelle que l\'information ne doit pas dépendre d\'une image seule.'],
+                ['titre' => 'Elle apporte ce qu\'on ne trouve pas ailleurs', 'texte' => 'Vos conditions, vos zones, vos délais constatés, vos questions de clients, vos retours de terrain. Bing qualifie de recopie une réécriture légère de contenus existants, et Google privilégie l\'apport propre ; une synthèse de ce que tout le monde dit n\'a aucune raison d\'être citée.'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment obtenir des mentions externes sans tomber dans la manipulation ?',
+            'paragraphes' => [
+                'Les assistants ne citent pas seulement votre site. Pour une question comme « quels prestataires pour digitaliser une pharmacie à Lomé ? », ils s\'appuient volontiers sur des listes, des annuaires, des articles et des pages d\'associations. Être présent, avec des informations exactes, sur les sources qu\'ils consultent déjà pour votre métier compte autant qu\'une nouvelle page sur votre propre site. Le relevé initial le montre : il liste les domaines cités pour chaque question du panel.',
+                'Les mentions utiles sont celles qu\'un client pourrait consulter : la fiche de la chambre de commerce ou de votre ordre professionnel, la page partenaires d\'un éditeur de logiciel, un annuaire sectoriel réellement consulté, l\'article d\'un média local sur un événement que vous organisez, une intervention dans une école. Chacune reprend votre nom exact et votre phrase d\'entité, et pointe vers la page qui traite le sujet plutôt que vers l\'accueil.',
+                'Les raccourcis se paient. Les consignes de Bing rangent parmi les pratiques sanctionnées l\'achat de liens, les réseaux privés, la promotion sociale artificielle, la recopie de contenus et le texte conçu pour déclencher des citations ou des réponses d\'IA. Les avis inventés, les communiqués sans information et les pages de « top 10 » où l\'auteur se classe premier relèvent de la même famille. Ils peuvent produire une citation passagère, puis une perte de confiance durable.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quelles technologies et quels choix techniques retenir selon votre site ?',
+            'legende' => 'Plateformes et outils que Richard pratique, avec ce qu\'ils impliquent pour la lisibilité par les assistants. La documentation de Google demande que les contenus importants existent sous forme de texte.',
+            'entetes' => ['Technologie', 'Ce qui aide', 'Le piège fréquent', 'Choix retenu'],
+            'lignes'  => [
+                ['Laravel et PHP sur mesure', 'HTML rendu côté serveur, gabarits qui lisent une source de faits unique', 'Données structurées codées page par page, qui finissent par diverger', 'Graphe JSON-LD, llms.txt et sitemap générés depuis la même fiche de faits'],
+                ['WordPress', 'Publication facile par votre équipe, extensions SEO répandues', 'Plusieurs extensions qui émettent chacune leur JSON-LD, extension de sécurité qui bloque les robots d\'IA', 'Une seule source de données structurées, robots.txt et pare-feu relus après chaque mise à jour d\'extension'],
+                ['Vue.js et React', 'Interfaces riches pour les espaces clients', 'Texte construit dans le navigateur, invisible pour un robot qui n\'exécute pas JavaScript', 'Rendu côté serveur avec Node.js ou prérendu des pages publiques'],
+                ['Flask (Python)', 'Petits outils de mesure : relevé du panel, analyse des journaux du serveur', 'Scripts lancés à la main puis oubliés', 'Tâches planifiées, résultats versés dans le tableur du suivi'],
+                ['n8n et Make', 'Automatisation du suivi : interrogation programmée d\'assistants dotés de la recherche web, alertes, notification IndexNow', 'Coûts d\'appels non surveillés, réponses comparées sans tenir compte de leur variabilité', 'Panel limité, fréquence mensuelle, journal des réponses brutes conservé'],
+                ['Odoo Website', 'Fiches produits et services branchées sur l\'ERP', 'Descriptions vides ou identiques d\'une fiche à l\'autre', 'Fiches rédigées avec conditions, délais et moyens de paiement en texte'],
+            ],
+        ],
+        [
+            'type'  => 'chiffres',
+            'titre' => 'Quels chiffres officiels montrent que ces réponses pèsent déjà ?',
+            'items' => [
+                ['valeur' => '1,2 milliard', 'libelle' => 'Utilisateurs hebdomadaires cumulés annoncés par OpenAI dans le récapitulatif de son DevDay, publié le 2 octobre 2026', 'source' => 'OpenAI, récapitulatif du DevDay 2026', 'url' => 'https://openai.com/index/devday-2026-recap/'],
+                ['valeur' => '1 milliard', 'libelle' => 'Utilisateurs actifs mensuels du mode IA de Google, dépassés selon Sundar Pichai le 22 juillet 2026', 'source' => 'Google, résultats du deuxième trimestre 2026', 'url' => 'https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/'],
+                ['valeur' => '950 millions', 'libelle' => 'Utilisateurs actifs mensuels de l\'application Gemini à la même date', 'source' => 'Google, résultats du deuxième trimestre 2026', 'url' => 'https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/'],
+                ['valeur' => '24 heures', 'libelle' => 'Délai annoncé par OpenAI (environ) et par Perplexity (au plus) pour prendre en compte une modification du robots.txt', 'source' => 'OpenAI et Perplexity, pages sur leurs robots', 'url' => 'https://developers.openai.com/api/docs/bots'],
+                ['valeur' => '10 février 2026', 'libelle' => 'Lancement du rapport AI Performance de Bing Webmaster Tools, qui compte les citations dans Copilot', 'source' => 'Blog Bing Webmaster', 'url' => 'https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview'],
+                ['valeur' => '36 %', 'libelle' => 'Part de la population africaine qui utilise Internet en 2025, contre 74 % dans le monde', 'source' => 'UIT, Facts and Figures 2025', 'url' => 'https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-internet-use/'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi la visibilité dans les assistants est-elle si difficile à mesurer ?',
+            'paragraphes' => [
+                'Une réponse d\'assistant n\'est pas une page de résultats stable. La même question, posée deux fois, peut citer des sources différentes ; la réponse varie selon le modèle, le pays, la langue, l\'historique de l\'utilisateur et le moment. Google explique aussi que ses aperçus IA et son mode IA peuvent lancer plusieurs recherches associées sur des sous-thèmes avant de répondre, et que les aperçus IA ne s\'affichent que lorsqu\'ils apportent une valeur ajoutée, donc pas souvent. Une capture d\'écran isolée ne prouve rien, dans un sens comme dans l\'autre.',
+                'La méthode retenue combine donc plusieurs sources, chacune avec ses angles morts. Le panel de questions donne une tendance, à condition de le reposer dans les mêmes conditions et de noter les réponses brutes. Les outils des éditeurs donnent des chiffres officiels mais partiels. Les statistiques du site montrent les visites, pas les citations sans clic. Les journaux du serveur montrent quels robots lisent quelles pages. Le rapport mensuel croise ces signaux et dit clairement ce qu\'ils ne permettent pas de conclure.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Avec quels outils mesure-t-on les citations, et que montrent-ils vraiment ?',
+            'legende' => 'Outils et signaux utilisés dans le suivi mensuel, d\'après les documentations de Google, de Microsoft et d\'OpenAI consultées le 3 octobre 2026.',
+            'entetes' => ['Outil ou signal', 'Ce qu\'il montre', 'Ce qu\'il ne montre pas'],
+            'lignes'  => [
+                ['Panel de questions reposé chaque mois', 'Présence, sources citées et exactitude des réponses sur vos questions clés, pour les cinq assistants', 'Le volume réel de ces questions chez vos clients'],
+                ['Search Console (Google)', 'Les apparitions dans les aperçus IA et le mode IA, comptées avec le reste du trafic dans le type de recherche « Web »', 'Un rapport séparé pour les fonctionnalités d\'IA'],
+                ['AI Performance (Bing Webmaster Tools)', 'Total des citations dans Copilot et les résumés de Bing, pages citées, requêtes d\'ancrage utilisées par l\'IA', 'Le classement, l\'autorité ou les clics, que Microsoft exclut explicitement de ces mesures'],
+                ['Statistiques du site', 'Les visites marquées utm_source=chatgpt.com, que ChatGPT ajoute aux liens de sa recherche, et les autres référents d\'assistants', 'Les réponses où vous êtes cité sans que personne ne clique'],
+                ['Journaux du serveur', 'Les passages d\'OAI-SearchBot, PerplexityBot, Claude-SearchBot, Bingbot ou Googlebot, page par page', 'L\'usage fait ensuite des pages lues'],
+                ['Demandes de contact', 'La question « comment nous avez-vous connus ? », avec l\'assistant comme réponse possible', 'Une mesure exhaustive : beaucoup de clients ne s\'en souviennent pas'],
+            ],
+        ],
+        [
+            'type'  => 'cas',
+            'titre' => 'Selon votre secteur, quelles questions les assistants reçoivent-ils et que faut-il publier ?',
+            'items' => [
+                ['secteur' => 'Cabinet comptable ou juridique, zone OHADA', 'probleme' => 'Les assistants répondent aux questions de création de société ou de déclaration fiscale en citant des portails généralistes ; le cabinet n\'apparaît jamais, même sur sa ville.', 'solution' => 'Pages de référence datées sur chaque démarche réellement traitée (étapes, pièces, délais constatés, honoraires de départ ou critères), auteur identifié, fiche d\'entité alignée sur l\'ordre professionnel et la fiche Google, puis suivi des questions du panel ville par ville.'],
+                ['secteur' => 'École, centre de formation professionnelle', 'probleme' => 'Les programmes sont des PDF scannés ; interrogé, l\'assistant donne des dates de rentrée et des frais de l\'année précédente.', 'solution' => 'Une page HTML par programme avec dates, durée, prérequis, frais et modes de paiement en texte, date de mise à jour visible, données structurées cohérentes, et une alerte de révision avant chaque période d\'inscription.', 'lien' => ['url' => '/formation-seo-visibilite-google', 'texte' => 'Former votre équipe à la visibilité sur Google']],
+                ['secteur' => 'Hôtel, agence de tourisme, loisirs', 'probleme' => 'Une clientèle européenne et de la diaspora prépare son séjour dans un assistant, qui recommande les établissements les plus cités par les plateformes de réservation.', 'solution' => 'Pages en français et en anglais qui répondent aux questions de voyage (accès depuis l\'aéroport, saison, paiement par carte ou mobile money, conditions d\'annulation), profils alignés sur les plateformes, mentions dans les guides et offices de tourisme.'],
+                ['secteur' => 'Éditeur de logiciel ou startup', 'probleme' => 'Sur les questions de comparaison, l\'assistant cite des concurrents internationaux et ignore une solution pensée pour le mobile money et le SYSCOHADA.', 'solution' => 'Pages de cas d\'usage et de comparaison honnêtes, documentation publique lisible sans connexion, rendu côté serveur, llms.txt généré depuis la documentation, et présence dans les annuaires de logiciels de la région.', 'lien' => ['url' => '/services/saas-espace-client', 'texte' => 'Voir le développement SaaS et espace client']],
+                ['secteur' => 'PME de services en France, en Belgique ou en Suisse', 'probleme' => 'L\'entreprise est bien classée sur Google, mais Copilot et ChatGPT la décrivent avec une ancienne raison sociale et un service abandonné.', 'solution' => 'Fiche d\'entité, alignement des annuaires et des profils, demande de mise à jour auprès des sites qui reprennent l\'ancienne version, notification IndexNow des pages modifiées et contrôle mensuel des réponses.'],
+                ['secteur' => 'ONG, association, institution', 'probleme' => 'Les rapports d\'activité et les appels à projets ne sont publiés qu\'en PDF ; l\'assistant attribue les programmes à une autre organisation.', 'solution' => 'Pages HTML par programme et par rapport, avec dates, zones, partenaires et chiffres sourcés, graphe JSON-LD de l\'organisation avec ses profils officiels, et mentions sur les sites des bailleurs et partenaires.'],
+            ],
+        ],
+        [
+            'type'       => 'prix',
+            'titre'      => 'Comment se chiffre une mission de référencement IA ?',
+            'intro'      => 'Le référencement IA n\'a pas de tarif de départ publié : chaque mission est chiffrée sur devis, après un premier échange ou l\'état des lieux, avec un périmètre, une durée et des livrables écrits. Quand le socle de référencement naturel manque, il se traite d\'abord, à partir du tarif de départ publié pour ce service. Moyens de paiement acceptés : Mobile Money (MTN, Moov), carte bancaire, PayPal, virement et espèces.',
+            'items'      => [
+                ['offre' => 'État des lieux de la visibilité IA', 'prix' => 'Sur devis', 'inclus' => ['Panel de questions et relevé initial sur cinq assistants', 'Audit d\'accès des robots, du pare-feu et du rendu', 'Rapport priorisé et échange de restitution']],
+                ['offre' => 'Mise en place', 'prix' => 'Sur devis', 'inclus' => ['Fiche d\'entité et alignement des profils', 'Graphe JSON-LD unique, robots.txt documenté, llms.txt généré', 'Pages de référence selon le volume convenu']],
+                ['offre' => 'Suivi mensuel', 'prix' => 'Sur devis', 'inclus' => ['Panel reposé chaque mois, rapport et point d\'échange', 'Mentions externes et mises à jour des pages', 'Durée conseillée de quatre à six mois']],
+                ['offre' => 'Socle SEO à reprendre d\'abord', 'prix' => 'Référencement naturel dès 75 000 FCFA', 'inclus' => ['Quand l\'audit montre un site mal indexé ou trop lent', 'Corrections techniques et contenus de base', 'Voir la page <a href="/services/referencement-naturel-seo">référencement naturel SEO</a>']],
+            ],
+            'variations' => [
+                'Le nombre de questions du panel, de services et de pays à couvrir.',
+                'Le nombre de langues : chaque langue demande ses propres pages et ses propres relevés.',
+                'L\'état de départ : robots bloqués, pare-feu à régler, site rendu en JavaScript ou plusieurs blocs JSON-LD contradictoires.',
+                'La plateforme : un site sur mesure se corrige dans le code, un constructeur fermé limite les réglages possibles.',
+                'Le volume de pages de référence à rédiger ou à reprendre, et la part de recherche documentaire qu\'elles demandent.',
+                'L\'étendue des mentions externes à obtenir et la durée du suivi.',
+                'Le nombre d\'assistants suivis : les cinq principaux par défaut, davantage si votre marché en utilise d\'autres.',
+            ],
+        ],
+        [
+            'type'  => 'vigilance',
+            'titre' => 'Peut-on garantir d\'être cité par ChatGPT, Gemini ou Perplexity ?',
+            'texte' => 'Non, et aucun éditeur ne le promet. Google précise que respecter toutes ses exigences ne garantit ni l\'exploration, ni l\'indexation, ni l\'affichage ; Bing écrit que les données structurées et les sitemaps ne garantissent pas la visibilité ; OpenAI ne décrit aucun moyen d\'acheter ou d\'imposer une place dans les réponses de sa recherche. Méfiez-vous des offres qui vendent un nombre de citations, une « soumission » aux assistants ou un fichier miracle. Ce qui peut être garanti, c\'est une méthode conforme aux règles des éditeurs, un relevé honnête chaque mois et des corrections documentées.',
+        ],
+        [
+            'type'  => 'checklist',
+            'titre' => 'Quelles erreurs font disparaître une entreprise des réponses des IA ?',
+            'items' => [
+                'Bloquer tous les robots d\'IA d\'un coup, y compris OAI-SearchBot, PerplexityBot et Claude-SearchBot, alors que seul l\'entraînement posait question.',
+                'Autoriser les robots dans le robots.txt mais laisser le pare-feu ou le CDN de l\'hébergeur les refouler avec une page de défi.',
+                'Bloquer Google-Extended en pensant sortir des aperçus IA, puis disparaître des réponses ancrées de l\'application Gemini sans quitter les aperçus.',
+                'Publier un site dont le texte n\'existe qu\'après exécution de JavaScript, ou dont les prix et conditions sont des images.',
+                'Laisser trois extensions émettre trois descriptions JSON-LD différentes de la même entreprise.',
+                'Afficher des intitulés, adresses et numéros différents sur le site, la fiche Google, LinkedIn et les annuaires.',
+                'Écrire un llms.txt à la main, puis oublier de le mettre à jour quand les offres changent.',
+                'Publier des pages sans date ni source, que personne ne peut vérifier ni dater.',
+                'Glisser dans les pages des instructions cachées adressées aux modèles, ce que Bing sanctionne explicitement.',
+                'Juger le travail sur une seule capture d\'écran d\'une seule réponse, sans panel reposé dans les mêmes conditions.',
+                'Confier à un assistant, pour tester, des données de clients ou des documents internes.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Connexion, mobile money, données personnelles, langue : en quoi le contexte local change-t-il la méthode ?',
+            'paragraphes' => [
+                'La connexion d\'abord. Selon les chiffres « Facts and Figures 2025 » de l\'Union internationale des télécommunications, publiés le 15 octobre 2025, 36 % de la population africaine utilise Internet, contre 74 % dans le monde. Pour un client qui paie ses données au mégaoctet, un assistant qui résume plusieurs sites en une réponse est commode, et la page qu\'il ouvre ensuite doit être légère. Les pages de référence sont donc écrites pour se lire vite sur un téléphone, avec la réponse en haut.',
+                'Le mobile money ensuite. Une question fréquente aux assistants porte sur les moyens de paiement : « ce prestataire accepte-t-il MTN MoMo ? », « peut-on payer en espèces ? ». Si votre site ne l\'écrit nulle part en texte, l\'assistant devine ou se tait. La fiche d\'entité liste donc les moyens de paiement réellement acceptés, et les pages de prix les reprennent, avec la devise de chaque marché : francs CFA pour l\'Afrique de l\'Ouest et centrale, euros ou francs suisses pour l\'Europe, pour qu\'un tarif ne soit jamais cité dans la mauvaise monnaie.',
+                'Les données personnelles comptent à deux niveaux. Tout ce que vous publiez peut être repris par un assistant : noms, photos et numéros directs des employés ne figurent sur le site qu\'avec leur accord. Au Bénin, la <a href="https://sgg.gouv.bj/doc/loi-2017-20/">loi n° 2017-20 du 20 avril 2018 portant code du numérique</a> encadre ces traitements ; en Europe s\'applique le RGPD, le règlement (UE) 2016/679, présenté par la CNIL. Le suivi des visites venues des assistants reste soumis aux règles de consentement du pays visé, et les tests du panel ne contiennent jamais de données de clients.',
+                'La facturation et la langue ferment la liste. Les assistants reprennent volontiers des conditions commerciales : mentionnez qui facture, dans quelle devise, avec quels documents, et datez ces informations. Côté langue, la majorité de vos clients interrogent les assistants en français, une partie en anglais pour l\'export, le tourisme ou les bailleurs. Une page de référence en anglais, relue par un humain, vaut mieux qu\'une traduction automatique de tout le site, et le panel de questions comporte les deux langues quand votre marché l\'exige.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Que fait déjà richardsalanon.com, et qu\'est-ce que cela prouve ?',
+            'paragraphes' => [
+                'Ce site applique la méthode décrite sur cette page, et chacun peut le vérifier. Son fichier robots.txt nomme un par un vingt robots d\'assistants et de moteurs, dont GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, Google-Extended et Bingbot, et les autorise tous, seules les zones d\'administration restant fermées. Un fichier llms.txt est publié à l\'adresse richardsalanon.com/llms.txt ; il est généré depuis la même fiche de faits que les pages et reprend mot pour mot la phrase d\'entité.',
+                'Chaque page publie un seul bloc de données structurées, sous forme de graphe : la personne, avec l\'identifiant permanent richardsalanon.com/#person, le site, le service professionnel et la page y sont reliés, et la propriété sameAs pointe vers les cinq profils listés dans la fiche de faits, dont LinkedIn, GitHub et la fiche Google Business Profile. Un contrôle qualité automatique refuse toute page qui en porterait deux. Ces constats ont été relevés en production le 3 octobre 2026.',
+                'Ce que cela prouve est limité, et il faut le dire. Ces réglages montrent une méthode appliquée à soi-même, pas un résultat : ils ne garantissent pas que ce site soit cité, et aucune statistique de citation n\'est avancée ici. Ils permettent en revanche de vous montrer, sur un cas réel et consultable, à quoi ressemblent un robots.txt documenté, un llms.txt généré et un graphe unique, avant de les adapter à votre propre site.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi travailler avec Richard SALANON sur votre visibilité dans les IA ?',
+            'paragraphes' => [
+                'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
+                'Le référencement IA se joue à la frontière du code, du contenu et de l\'intelligence artificielle. Richard règle lui-même un robots.txt, un pare-feu ou un rendu côté serveur, génère un graphe JSON-LD depuis une source de faits, écrit les pages de référence avec vous, et automatise le relevé mensuel avec n8n ou Make. Il travaille au quotidien avec les assistants qu\'il s\'agit de convaincre, dans ses propres intégrations d\'IA, ce qui l\'aide à distinguer ce que disent les documentations officielles de ce qui circule sur les réseaux.',
+                'Formé à EPITECH, dont il est sorti en 2022, Richard cumule plus de 6 ans d\'expérience dans le numérique. Il a travaillé, sur place ou à distance, pour des structures implantées au Bénin, en Côte d\'Ivoire, au Togo, au Sénégal, au Burkina Faso, au Mali, au Niger, au Tchad, au Gabon et en RD Congo, ainsi qu\'en France, en Belgique, en Suisse et au Canada. Il est l\'un des co-fondateurs d\'<a href="https://audyxa.com">Audyxa</a> et le créateur de Wapy, assistant WhatsApp à intelligence artificielle destiné aux entreprises d\'Afrique francophone.',
+                'Dans une mission de référencement IA, cela se traduit par des règles simples : on ne vous vend ni citation ni mention, le panel de questions reste votre propriété, les comptes Search Console et Bing Webmaster Tools sont ouverts à votre nom, chaque changement fait sur le site est consigné, et toute demande reçoit une réponse sous 24 heures. Pour son parcours complet, lisez la page <a href="/richard-salanon">Richard SALANON</a> ; pour choisir l\'assistant qui convient à votre équipe, le <a href="/comparatifs/chatgpt-vs-claude-vs-gemini">comparatif ChatGPT, Claude et Gemini</a> ; pour les pays couverts, les <a href="/zones/">zones d\'intervention</a>.',
+            ],
+        ],
+        [
+            'type'  => 'lecon',
+            'titre' => 'Qu\'est-ce qui décide, au fond, d\'une citation par un assistant ?',
+            'texte' => 'Être cité par un assistant suppose d\'abord d\'être lisible par ses robots, puis d\'être identifié sans ambiguïté, puis d\'avoir publié la réponse la plus nette et la mieux sourcée à la question posée ; le reste, fichiers à la mode compris, ne compte qu\'une fois ces trois conditions réunies, et se mesure chaque mois sans jamais se garantir.',
+        ],
+        [
+            'type'   => 'cta',
+            'titre'  => 'Que disent aujourd\'hui les assistants de votre entreprise ?',
+            'texte'  => 'Envoyez le nom de votre entreprise, l\'adresse de votre site et cinq questions que vos clients posent avant de vous contacter. Richard revient vers vous sous 24 heures avec un premier aperçu de ce que les assistants disent de vous, puis vous propose un état des lieux chiffré, au périmètre fixé par écrit.',
+            'bouton' => ['url' => '/contact', 'texte' => 'Demander un état des lieux'],
+        ],
+    ],
+
+    'faq' => [
+        ['q' => 'Quelle différence entre le référencement naturel et le référencement IA ?', 'r' => 'Le référencement naturel vise les résultats classiques de Google ; le référencement IA vise les réponses rédigées par les assistants et les sources qu\'ils citent. Le second repose sur le premier : Google exige qu\'une page soit indexée et éligible à un extrait pour servir de lien dans ses aperçus IA. Il ajoute le réglage des robots propres à chaque assistant, la fiche d\'entité, des contenus de référence et une mesure des citations.'],
+        ['q' => 'Faut-il autoriser GPTBot pour apparaître dans ChatGPT ?', 'r' => 'Non. Selon la documentation d\'OpenAI consultée le 3 octobre 2026, c\'est OAI-SearchBot qui fait apparaître les sites dans la recherche de ChatGPT ; GPTBot sert à l\'entraînement des modèles. Vous pouvez bloquer GPTBot et autoriser OAI-SearchBot. Un site qui bloque OAI-SearchBot n\'apparaît plus dans les réponses de recherche, sauf comme simple lien de navigation.'],
+        ['q' => 'Bloquer Google-Extended me retire-t-il des aperçus IA de Google ?', 'r' => 'Non. Google indique que Google-Extended n\'a aucune incidence sur l\'inclusion dans la recherche Google ; les aperçus IA et le mode IA dépendent des règles écrites pour Googlebot et des commandes nosnippet, max-snippet ou noindex. Google-Extended décide en revanche de l\'entraînement des modèles Gemini et de l\'ancrage dans l\'application Gemini, ce qui peut vous en retirer.'],
+        ['q' => 'Le fichier llms.txt est-il obligatoire ?', 'r' => 'Non. C\'est une proposition publiée en septembre 2024 sur llmstxt.org, pas une norme. Google écrit qu\'aucun fichier textuel destiné à l\'IA n\'est nécessaire pour ses fonctionnalités d\'IA, et les pages consultées d\'OpenAI, de Perplexity et d\'Anthropic sur leurs robots n\'annoncent pas qu\'ils le lisent. Il reste utile et peu coûteux s\'il est généré automatiquement depuis la même source que le site.'],
+        ['q' => 'Faut-il ajouter des données structurées spéciales pour l\'IA ?', 'r' => 'Il n\'existe pas de balisage réservé à l\'IA : Google précise qu\'aucune donnée structurée schema.org particulière n\'est requise pour ses fonctionnalités d\'IA. Les données structurées classiques restent utiles pour lever les ambiguïtés sur votre identité, à condition de former un seul graphe par page, de décrire uniquement ce qui est visible et de relier vos profils officiels par sameAs.'],
+        ['q' => 'Combien de temps faut-il pour être cité par les assistants ?', 'r' => 'Les réglages d\'accès sont pris en compte vite : environ 24 heures selon OpenAI, 24 heures au plus selon Perplexity. Les citations elles-mêmes dépendent de l\'exploration, de la concurrence sur vos questions et de la qualité des pages. Il faut compter plusieurs mois de suivi pour dégager une tendance fiable, sans garantie de résultat.'],
+        ['q' => 'Comment savoir si ChatGPT m\'envoie des visites ?', 'r' => 'OpenAI indique que ChatGPT ajoute le paramètre utm_source=chatgpt.com aux liens de sa recherche : ces visites apparaissent dans Google Analytics ou tout autre outil de statistiques. Elles ne montrent pas les réponses où vous êtes cité sans clic ; le panel de questions reposé chaque mois complète cette mesure.'],
+        ['q' => 'Comment mesurer les citations dans Copilot ?', 'r' => 'Avec le rapport AI Performance de Bing Webmaster Tools, lancé en préversion publique le 10 février 2026. Il compte les citations dans Microsoft Copilot, les résumés générés de Bing et certaines intégrations partenaires, liste les pages citées et les requêtes d\'ancrage. Microsoft précise qu\'il n\'indique ni classement, ni autorité, ni clics.'],
+        ['q' => 'Un assistant donne de fausses informations sur mon entreprise : que faire ?', 'r' => 'Chercher d\'abord la source de l\'erreur : ancienne page de votre site, annuaire périmé, profil abandonné, homonyme. On corrige la fiche d\'entité, on aligne tous les profils, on demande la mise à jour des pages tierces, puis on signale les pages modifiées par IndexNow et dans les outils pour webmasters. La correction apparaît au fil des nouvelles explorations, pas instantanément.'],
+        ['q' => 'Mes données de clients risquent-elles quelque chose pendant la mission ?', 'r' => 'Non. Le panel ne contient que des questions publiques, sans nom ni donnée de client, et aucun document interne n\'est confié à un assistant. Le suivi des visites respecte la loi n° 2017-20 au Bénin, le RGPD en Europe et les règles de consentement du pays visé. Les accès aux outils restent à votre nom.'],
+        ['q' => 'Le service est-il possible pour une entreprise en Europe ou au Canada ?', 'r' => 'Oui. La mission se mène entièrement à distance pour des entreprises d\'Afrique francophone, d\'Europe et du Canada : accès partagés, échanges en visioconférence, rapport mensuel écrit. Le panel de questions est construit pour chaque pays visé, car les assistants ne citent pas les mêmes sources à Dakar, à Bruxelles ou à Montréal.'],
+        ['q' => 'Combien coûte une mission de référencement IA ?', 'r' => 'Elle est chiffrée sur devis, selon le nombre de questions, de services, de pays et de langues, l\'état technique du site et le volume de pages à rédiger. Si le référencement naturel de base manque, il se traite d\'abord, à partir de 75 000 FCFA. Le paiement se fait par Mobile Money (MTN, Moov), carte bancaire, PayPal, virement ou espèces.'],
+    ],
+
+    'sources' => [
+        ['titre' => 'OpenAI, robots d\'exploration d\'OpenAI (OAI-SearchBot, GPTBot, ChatGPT-User)', 'url' => 'https://developers.openai.com/api/docs/bots', 'date' => '2026-10-03'],
+        ['titre' => 'OpenAI, centre d\'aide, FAQ des éditeurs et des développeurs', 'url' => 'https://help.openai.com/en/articles/12627856-publishers-and-developers-faq', 'date' => '2026-10-03'],
+        ['titre' => 'OpenAI, récapitulatif du DevDay 2026', 'url' => 'https://openai.com/index/devday-2026-recap/', 'date' => '2026-10-03'],
+        ['titre' => 'Google Search Central, fonctionnalités d\'IA et votre site Web', 'url' => 'https://developers.google.com/search/docs/appearance/ai-features', 'date' => '2026-10-03'],
+        ['titre' => 'Google Search Central, robots d\'exploration courants de Google (Google-Extended)', 'url' => 'https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers', 'date' => '2026-10-03'],
+        ['titre' => 'Google Search Central Blog, meilleurs moyens de garantir de bonnes performances dans les expériences d\'IA (21 mai 2025)', 'url' => 'https://developers.google.com/search/blog/2025/05/succeeding-in-ai-search', 'date' => '2026-10-03'],
+        ['titre' => 'Google Search Central, données structurées Organization', 'url' => 'https://developers.google.com/search/docs/appearance/structured-data/organization', 'date' => '2026-10-03'],
+        ['titre' => 'Google AI for Developers, ancrage avec la recherche Google', 'url' => 'https://ai.google.dev/gemini-api/docs/google-search', 'date' => '2026-10-03'],
+        ['titre' => 'Google, résultats du deuxième trimestre 2026, propos du PDG', 'url' => 'https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/', 'date' => '2026-10-03'],
+        ['titre' => 'Perplexity, robots d\'exploration (PerplexityBot et Perplexity-User)', 'url' => 'https://docs.perplexity.ai/docs/resources/perplexity-crawlers', 'date' => '2026-10-03'],
+        ['titre' => 'Anthropic, centre d\'aide Claude, robots d\'Anthropic et blocage par robots.txt', 'url' => 'https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler', 'date' => '2026-10-03'],
+        ['titre' => 'Microsoft Bing, consignes aux webmasters (Bing, Copilot et ancrage)', 'url' => 'https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a', 'date' => '2026-10-03'],
+        ['titre' => 'Blog Bing Webmaster, AI Performance dans Bing Webmaster Tools (10 février 2026)', 'url' => 'https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview', 'date' => '2026-10-03'],
+        ['titre' => 'llmstxt.org, proposition du fichier llms.txt', 'url' => 'https://llmstxt.org/', 'date' => '2026-10-03'],
+        ['titre' => 'schema.org, propriété sameAs', 'url' => 'https://schema.org/sameAs', 'date' => '2026-10-03'],
+        ['titre' => 'Wikidata, critères d\'admissibilité des éléments', 'url' => 'https://www.wikidata.org/wiki/Wikidata:Notability', 'date' => '2026-10-03'],
+        ['titre' => 'UIT, Facts and Figures 2025, utilisation d\'Internet', 'url' => 'https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-internet-use/', 'date' => '2026-10-03'],
+        ['titre' => 'Secrétariat général du gouvernement du Bénin, loi n° 2017-20 portant code du numérique', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-03'],
+        ['titre' => 'CNIL, règlement général sur la protection des données (RGPD)', 'url' => 'https://www.cnil.fr/fr/reglement-europeen-protection-donnees', 'date' => '2026-10-03'],
+    ],
+
+    'liens' => [
+        'services'    => ['referencement-naturel-seo', 'audit-seo-complet', 'seo-local-google-business', 'refonte-migration-de-site', 'integration-ia-entreprise'],
+        'comparatifs' => ['chatgpt-vs-claude-vs-gemini'],
+    ],
+];

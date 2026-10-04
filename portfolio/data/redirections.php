@@ -25,9 +25,6 @@ foreach (['abidjan', 'abomey-calavi', 'bohicon', 'cotonou', 'dakar', 'lome', 'ou
 foreach (['paris', 'lyon', 'marseille', 'bruxelles', 'geneve', 'lausanne', 'montreal', 'quebec'] as $ville) {
     $r['/externaliser-developpement-web-' . $ville] = '/services/externalisation-developpement/' . $paysDesVilles[$ville];
 }
-foreach (['obaprodc', 'toure-distribution', 'api-decoupage-benin', 'maho-multiservices', 'myrmasbio', 'portfolio-prudence'] as $slug) {
-    $r['/realisations/' . $slug] = '/histoires/' . $slug;
-}
 
 return $r + [
     '/formation-ia-entreprise'              => '/formations/ia-en-entreprise',
@@ -42,6 +39,5 @@ return $r + [
     '/formation-whatsapp-business'          => '/formations/whatsapp-business',
     '/consultant-digitalisation'            => '/services/consultant-digitalisation',
     '/expert-digitalisation-entreprise'     => '/services/digitalisation-d-entreprise',
-    '/realisations/'                        => '/histoires/',
     '/blog/n8n-vs-zapier-vs-make-2026'       => '/comparatifs/n8n-vs-make-vs-zapier',
 ];

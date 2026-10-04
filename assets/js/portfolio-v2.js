@@ -193,6 +193,20 @@
     });
   }
 
+  /* ---------- Filtre des réalisations (liens réels, filtre en plus) ---------- */
+  var filtres = doc.querySelectorAll('.filtre-projet[data-filtre]');
+  if (filtres.length) {
+    var projetsGrille = doc.querySelectorAll('.grille-projets .projet');
+    filtres.forEach(function (f) {
+      f.addEventListener('click', function (e) {
+        e.preventDefault();
+        var cle = f.getAttribute('data-filtre');
+        filtres.forEach(function (x) { x.classList.toggle('est-actif', x === f); if (x === f) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
+        projetsGrille.forEach(function (p) { p.hidden = cle !== 'tous' && p.getAttribute('data-famille') !== cle; });
+      });
+    });
+  }
+
   /* ---------- Recherche du blog ---------- */
   var recherche = doc.getElementById('blog-search-input');
   if (recherche) {

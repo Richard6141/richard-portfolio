@@ -23,6 +23,24 @@ function test_entete_registre_de_navigation_complet(): void
     assert_same(['Afrique francophone', 'Europe et Canada'], array_keys($nav['pays']));
 }
 
+function test_entete_services_ranges_par_familles_vers_les_piliers(): void
+{
+    // Vague 1A, Task 10 : quatre cartes de six liens au plus, chaque lien vise
+    // un pilier publié de la même famille, servi en 200.
+    $nav = navigation_chargee();
+    assert_same(REGISTRES_FAMILLES, array_keys($nav['services']));
+    foreach ($nav['services'] as $famille => $g) {
+        assert_true(count($g['liens']) <= 6, "{$famille} : plus de six liens");
+        foreach ($g['liens'] as [$libelle, $url]) {
+            assert_true((bool) preg_match('#^/services/([a-z0-9-]+)$#', $url, $m), "{$libelle} : {$url} n'est pas un pilier");
+            $p = registre_lire('service', $m[1]);
+            assert_true($p !== null && registre_publiee($p), "{$url} : pilier absent ou non publié");
+            assert_same($famille, $p['famille'], "{$url} : famille");
+            assert_same(200, http_local($url)['code'], $url);
+        }
+    }
+}
+
 function test_entete_trois_mega_menus_accessibles(): void
 {
     $html = entete_rendre();
@@ -42,4 +60,19 @@ function test_entete_identite_et_contact(): void
     assert_contains('aria-controls="tiroir"', $html);
     assert_not_contains('Richard Technologies', $html);
     assert_not_contains('<h1', $html);
+}
+
+function test_entete_ne_modifie_aucune_variable_de_la_page(): void
+{
+    // Recette du 04/10/2026 : la boucle des pays de l'en-tête réutilisait $p et
+    // effaçait le projet de realisation.php (H1 vide en production).
+    require_once racine('helpers/functions.php');
+    $p = ['title' => 'Projet témoin'];
+    $page = ['titre' => 'Page témoin'];
+    $pdo = null; $fullName = fait('nom'); $h_logo = siteLogoUrl();
+    ob_start();
+    include racine('portfolio/partials/pv2-header.php');
+    ob_end_clean();
+    assert_same(['title' => 'Projet témoin'], $p);
+    assert_same(['titre' => 'Page témoin'], $page);
 }

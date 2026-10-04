@@ -24,6 +24,8 @@ foreach ([
     '/services/application-mobile-android-ios', '/services/automatisation-ia', '/services/referencement-naturel-seo',
     '/services/seo-local-google-business', '/consultant-digitalisation',
 ] as $url) {
+    // La navigation est déjà réécrite vers l'URL finale (redirections actives).
+    $url = url_finale($url);
     if (isset($libellesServices[$url])) {
         $piedServices[] = [$libellesServices[$url], $url];
     }
@@ -89,7 +91,9 @@ $horaires = fait('horaires');
       <ul>
         <li><a href="<?= sanitize(url_finale('/realisations/')) ?>">Réalisations</a></li>
         <li><a href="/comparatifs/">Comparatifs</a></li>
+        <li><a href="/histoires/">Histoires de transformation</a></li>
         <li><a href="/blog/">Blog</a></li>
+        <li><a href="/richard-salanon">Qui est Richard SALANON ?</a></li>
         <li><a href="/a-propos/">À propos</a></li>
         <li><a href="/contact">Contact et devis</a></li>
       </ul>

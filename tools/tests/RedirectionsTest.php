@@ -8,7 +8,7 @@ require_once racine('helpers/functions.php');
 function test_redirections_table_conforme_a_la_spec(): void
 {
     $t = redirections_table();
-    assert_true(count($t) >= 66, count($t) . ' entrées');
+    assert_true(count($t) >= 60, count($t) . ' entrées');
     foreach ($t as $de => $vers) {
         assert_true(str_starts_with($de, '/') && str_starts_with($vers, '/'), $de);
         assert_true(!isset($t[$vers]), "chaîne : {$de} vers {$vers}");
@@ -19,7 +19,8 @@ function test_redirections_table_conforme_a_la_spec(): void
     assert_same('/formations/ia-en-entreprise/benin', $t['/formation-ia-entreprise-natitingou']);
     assert_same('/services/externalisation-developpement/canada', $t['/externaliser-developpement-web-quebec']);
     assert_same('/services/integration-odoo/cote-d-ivoire', $t['/integration-odoo-abidjan']);
-    assert_same('/histoires/', $t['/realisations/']);
+    // Richard a demandé le 03/10/2026 une page Réalisations refaite : elle reste, sans redirection vers /histoires/.
+    assert_true(!isset($t['/realisations/']) && !isset($t['/realisations/obaprodc']), 'réalisations conservées');
 }
 
 function test_redirections_actives_seulement_vers_une_cible_publiee(): void

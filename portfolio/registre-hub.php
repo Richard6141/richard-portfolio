@@ -13,6 +13,16 @@ if ($rp['type'] === 'domaine') {
     $elements = array_filter($elements, static fn(array $q): bool => ($q['domaine'] ?? '') === $rp['slug']);
 }
 uasort($elements, static fn(array $a, array $b): int => strcmp((string) $b['publie'], (string) $a['publie']));
+// Hub des services : les piliers partagent une date ; on les range par famille.
+$hubFamilles = [];
+if ($listeType === 'service') {
+    foreach (REGISTRES_FAMILLES as $hubFamille) {
+        $hubFamilles[$hubFamille] = array_filter($elements, static fn(array $q): bool => ($q['famille'] ?? '') === $hubFamille);
+    }
+    $hubFamilles = array_filter($hubFamilles);
+    // Le schéma ItemList suit l'ordre affiché.
+    $elements = array_merge(...array_values($hubFamilles));
+}
 $miettes = maillage_ariane($rp, $racineReg);
 $groupes = maillage_liens($rp, $racineReg);
 
@@ -25,13 +35,27 @@ $pageSchemas   = array_merge(
     schema_page_registre($rp, $miettes, SITE_URL)
 );
 
+// Typographie française appliquée à la page rendue (helpers/blocs.php).
+ob_start();
 include __DIR__ . '/partials/pv2-head.php';
 include __DIR__ . '/partials/pv2-header.php';
 ?>
 <main id="main-content" class="registre registre--hub">
   <?php include __DIR__ . '/partials/registre/hero.php'; ?>
   <div class="conteneur">
-    <?php if ($elements): ?>
+    <?php if ($hubFamilles): ?>
+    <?php foreach ($hubFamilles as $hubFamille => $hubPiliers): ?>
+    <h2 class="liste-hub__famille"><?= sanitize($hubFamille) ?></h2>
+    <ul class="grille-cartes liste-hub">
+      <?php foreach ($hubPiliers as $q): ?>
+      <li><a class="carte-hub carte-halo" href="<?= sanitize($q['url']) ?>">
+        <h3><?= sanitize($q['titre']) ?></h3>
+        <p><?= sanitize($q['meta']) ?></p>
+      </a></li>
+      <?php endforeach; ?>
+    </ul>
+    <?php endforeach; ?>
+    <?php elseif ($elements): ?>
     <ul class="grille-cartes liste-hub">
       <?php foreach ($elements as $q): ?>
       <li><a class="carte-hub carte-halo" href="<?= sanitize($q['url']) ?>">
@@ -53,3 +77,4 @@ include __DIR__ . '/partials/pv2-header.php';
 <?php include __DIR__ . '/partials/pv2-footer.php'; ?>
 </body>
 </html>
+<?php echo typo_fr_html((string) ob_get_clean());

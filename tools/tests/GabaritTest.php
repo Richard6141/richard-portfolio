@@ -48,6 +48,28 @@ function test_gabarit_hub_liste_les_pages_publiees(): void
     assert_same(1, substr_count($html, '<h1'));
 }
 
+function test_gabarit_hub_services_groupe_par_famille(): void
+{
+    // Vague 1A : les 27 piliers partagent une date de publication ; le hub les
+    // range par famille (ordre de REGISTRES_FAMILLES) au lieu de les trier par date.
+    $html = http_local('/services/')['corps'];
+    $pos  = [];
+    foreach (REGISTRES_FAMILLES as $famille) {
+        $pos[$famille] = strpos($html, '<h2 class="liste-hub__famille">' . sanitize($famille) . '</h2>');
+        assert_true($pos[$famille] !== false, "titre de famille {$famille}");
+    }
+    $tri = $pos;
+    sort($tri);
+    assert_same($tri, array_values($pos), 'familles dans l\'ordre du registre');
+    $carte = static fn(string $slug): int|false => strpos($html, 'class="carte-hub carte-halo" href="/services/' . $slug . '"');
+    assert_true($carte('site-vitrine-professionnel') < $pos['Applications et IA'], 'vitrine dans Sites et boutiques');
+    assert_true($carte('integration-odoo') > $pos['ERP et gestion'], 'Odoo dans ERP et gestion');
+    assert_contains('<h3>', substr($html, (int) $pos['Sites et boutiques'], 2000), 'cartes en H3 sous le titre de famille');
+    preg_match('#<script type="application/ld\+json">(.*?)</script>#s', $html, $m);
+    $ld = $m[1] ?? '';
+    assert_true(strpos($ld, '/services/site-vitrine-professionnel') < strpos($ld, '/services/integration-odoo'), 'ItemList dans l\'ordre affiché');
+}
+
 function test_gabarit_page_noindex_respectee(): void
 {
     assert_contains('content="noindex, follow"', gabarit_rendre('page', 'page-legale-test'));

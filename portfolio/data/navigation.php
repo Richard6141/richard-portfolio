@@ -2,40 +2,45 @@
 // ============================================================
 // data/navigation.php · Registre de navigation (vague 0B, 03/10/2026).
 // Alimente les méga-menus de l'en-tête, le tiroir mobile et le pied de page.
-// Les liens visent des pages qui existent aujourd'hui ; la vague 0C les
-// réoriente vers les nouvelles pages (piliers, fiches formation, pays).
-// Les slugs de services sont ceux de la base (generateSlug du titre).
+// Les liens visent des pages qui existent aujourd'hui ; navigation_chargee()
+// les réécrit vers l'URL finale quand une redirection est active.
+// Services : piliers de portfolio/data/services/ (vague 1A).
 // ============================================================
 declare(strict_types=1);
 
 return [
+    // Vague 1A : une carte par famille de piliers (REGISTRES_FAMILLES), six
+    // liens au plus ; les autres piliers sont listés par le hub /services/.
     'services' => [
         'Sites et boutiques' => ['icone' => 'browser', 'liens' => [
             ['Site vitrine professionnel', '/services/site-vitrine-professionnel'],
             ['Site e-commerce', '/services/site-e-commerce'],
             ['Landing page', '/services/landing-page-haute-conversion'],
             ['Refonte et migration', '/services/refonte-migration-de-site'],
+            ['Développeur web freelance', '/services/developpeur-web-freelance'],
             ['Maintenance et support', '/services/maintenance-support'],
         ]],
         'Applications et IA' => ['icone' => 'robot', 'liens' => [
-            ['Automatisation et IA', '/services/automatisation-ia'],
             ['Application web sur mesure', '/services/application-web-sur-mesure'],
             ['Application mobile', '/services/application-mobile-android-ios'],
+            ['Automatisation n8n et Make', '/services/automatisation-ia'],
+            ['Agents IA et chatbot WhatsApp', '/services/agents-ia-chatbot-whatsapp'],
+            ['Intégration de l\'IA', '/services/integration-ia-entreprise'],
             ['SaaS et espace client', '/services/saas-espace-client'],
-            ['API et intégrations', '/services/api-rest-integrations'],
         ]],
         'Visibilité et conseil' => ['icone' => 'trend-up', 'liens' => [
             ['Référencement naturel SEO', '/services/referencement-naturel-seo'],
+            ['Référencement IA (GEO)', '/services/referencement-ia-geo'],
             ['SEO local et Google Business', '/services/seo-local-google-business'],
             ['Audit SEO complet', '/services/audit-seo-complet'],
             ['Digitalisation d\'entreprise', '/services/digitalisation-d-entreprise'],
-            ['Consultant en digitalisation', '/consultant-digitalisation'],
+            ['Consultant en digitalisation', '/services/consultant-digitalisation'],
         ]],
         'ERP et gestion' => ['icone' => 'stack', 'liens' => [
-            ['Intégration Odoo', '/integration-odoo-cotonou'],
-            ['Intégration Dolibarr', '/integration-dolibarr-cotonou'],
-            ['Audit et étude de projet', '/services/audit-etude-de-projet'],
+            ['Intégration Odoo', '/services/integration-odoo'],
+            ['Intégration Dolibarr', '/services/integration-dolibarr'],
             ['Réservation en ligne', '/services/systeme-de-reservation-en-ligne'],
+            ['Audit et étude de projet', '/services/audit-etude-de-projet'],
         ]],
     ],
 

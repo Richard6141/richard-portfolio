@@ -134,3 +134,22 @@ function test_blocs_liens_internes_vers_l_url_finale(): void
     assert_contains('href="/contact"', $html);
     assert_contains('url_finale(', (string) file_get_contents(racine('helpers/blocs.php')));
 }
+
+function test_blocs_typo_fr_espace_insecable_dans_le_texte_seulement(): void
+{
+    // Recette 1A : « : » et « ? » tombaient en début de ligne, jusque dans les H1.
+    $html = '<h1>Services : sites ?</h1><a title="a : b" href="/x">« Oui » !</a>'
+        . '<script>var a = b ? c : d;</script><style>p{margin : 0}</style>';
+    $out = typo_fr_html($html);
+    assert_contains("Services\u{00A0}: sites\u{00A0}?", $out);
+    assert_contains("«\u{00A0}Oui\u{00A0}»\u{00A0}!", $out);
+    assert_contains('title="a : b"', $out, 'attributs intacts');
+    assert_contains('var a = b ? c : d;', $out, 'scripts intacts');
+    assert_contains('p{margin : 0}', $out, 'styles intacts');
+}
+
+function test_blocs_typo_fr_appliquee_aux_pages_de_registre(): void
+{
+    assert_contains("Richard SALANON\u{00A0}: sites", http_local('/services/')['corps']);
+    assert_contains("\u{00A0}?", http_local('/services/vibe-coding')['corps']);
+}
