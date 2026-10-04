@@ -1,0 +1,345 @@
+<?php
+// ============================================================
+// data/services/maintenance-support.php · Pilier service « Maintenance et
+// support » (vague 1A). Reprend la fiche en base (forfait mensuel ou à la
+// demande, mises à jour, sauvegardes, corrections, surveillance, support,
+// reprise d'un site existant après état des lieux) et la fiche de faits ;
+// versions, cycles de support et chiffres externes relevés sur les pages
+// officielles le 03/10/2026, à revérifier à chaque mise à jour.
+// ============================================================
+declare(strict_types=1);
+
+return [
+    'titre'   => 'Maintenance et support de sites, boutiques, applications et ERP : un outil à jour, sauvegardé et surveillé',
+    'title'   => 'Maintenance de site, application et ERP | Richard SALANON',
+    'meta'    => 'Maintenance de sites, boutiques, applications et ERP : mises à jour PHP, WordPress, Laravel, Odoo, sauvegardes testées, surveillance, forfait mensuel.',
+    'en_bref' => 'La maintenance garde votre site, votre boutique, votre application ou votre ERP (Odoo, Dolibarr) à jour, sauvegardé hors de son serveur, surveillé et réparé quand il le faut, avec un interlocuteur qui répond sous 24 heures. Elle s\'adresse aux PME, commerces en ligne, écoles, ONG et entreprises d\'Afrique francophone, d\'Europe et du Canada, que l\'outil ait été construit par Richard SALANON ou par un autre prestataire. Tout commence par un état des lieux de quelques jours, puis le suivi se fait chaque mois au forfait, ou intervention par intervention à la demande. Le prix est fixé sur devis, selon la technologie, le volume et le niveau de réactivité attendu.',
+    'publie'  => '2026-10-03',
+    'maj'     => '2026-10-03',
+    'famille' => 'Sites et boutiques',
+    'matrice' => true,
+
+    'faits_hero' => [
+        ['l' => 'Délai', 'v' => 'État des lieux en quelques jours, puis suivi chaque mois ou à la demande'],
+        ['l' => 'Pour qui', 'v' => 'PME, boutiques en ligne, écoles, ONG, éditeurs d\'applications et utilisateurs d\'ERP'],
+        ['l' => 'Livrables', 'v' => 'Mises à jour, sauvegardes hors site testées, surveillance, correctifs, rapport mensuel'],
+        ['l' => 'Réponse', 'v' => 'sous 24 heures'],
+    ],
+
+    'sections' => [
+        [
+            'type'        => 'prose',
+            'titre'       => 'Que recouvre un contrat de maintenance et de support, et que ne recouvre-t-il pas ?',
+            'paragraphes' => [
+                'Un site, une boutique, une application ou un progiciel de gestion ne s\'usent pas comme une machine, mais ils vieillissent quand même. Le langage qui les fait tourner cesse d\'être corrigé, une extension publie un correctif de sécurité, un certificat expire, un disque se remplit, un module de paiement change d\'interface. Rien de tout cela ne se voit le jour où l\'outil est livré. Tout finit par se voir le jour où le formulaire n\'envoie plus rien, où la caisse refuse les paiements Mobile Money ou où Google affiche un avertissement devant votre adresse.',
+                'La maintenance est le travail régulier qui empêche ces pannes ou les répare vite. Elle couvre cinq familles de tâches : appliquer les mises à jour (PHP, WordPress, Laravel, Odoo, Dolibarr, bibliothèques et modules), faire des sauvegardes conservées hors du serveur et vérifier qu\'elles se restaurent, surveiller la disponibilité, le certificat HTTPS et le nom de domaine, corriger les anomalies, et réaliser les petites évolutions que la vie de l\'entreprise demande : un champ à ajouter, une page à créer, un taux de taxe à modifier.',
+                'Le support est l\'autre moitié du contrat : un interlocuteur identifié, joignable par WhatsApp, téléphone ou courriel, qui répond sous 24 heures, qualifie la demande et dit ce qui sera fait et quand. Les deux s\'achètent au forfait mensuel, quand l\'outil est central pour l\'activité, ou à la demande, intervention par intervention, quand il change peu et que vous préférez payer à l\'usage.',
+                'Ce que la maintenance ne couvre pas doit être écrit avant de signer. Une refonte graphique complète ou un changement de technologie relève d\'une <a href="/services/refonte-migration-de-site">refonte avec migration</a>. Une nouvelle fonction importante, un espace client ou une application mobile sont des projets à part, chiffrés comme tels, par exemple en <a href="/services/application-web-sur-mesure">application web sur mesure</a>. La production de contenus et le travail de positionnement relèvent du <a href="/services/referencement-naturel-seo">référencement naturel</a>. Et la maintenance ne rattrape pas un outil mal conçu : elle le stabilise, puis l\'état des lieux dit honnêtement s\'il vaut mieux le reprendre.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Qui a besoin d\'un contrat de maintenance, et à quels signes voit-on que le moment est venu ?',
+            'intro' => 'La maintenance concerne toute structure dont un outil en ligne fait rentrer de l\'argent, des inscriptions ou des demandes. Voici les situations qui, dans la pratique, déclenchent l\'appel.',
+            'items' => [
+                ['titre' => 'Personne ne sait plus qui a les accès', 'texte' => 'Le développeur d\'origine est parti, le compte de l\'hébergeur est au nom d\'un ancien salarié, le mot de passe de l\'administration circule sur un groupe WhatsApp. Avant toute panne, il faut reprendre la main : retrouver les accès, les mettre au nom de l\'entreprise et les ranger dans un coffre de mots de passe.'],
+                ['titre' => 'Le tableau de bord affiche des mises à jour en attente', 'texte' => 'Une pastille rouge sur WordPress, un bandeau qui annonce une nouvelle version de Dolibarr, un hébergeur qui prévient que la version de PHP sera bientôt retirée : chaque mois sans action allonge la liste et rend la mise à jour suivante plus risquée.'],
+                ['titre' => 'Vous découvrez les pannes par vos clients', 'texte' => 'Un client écrit que le site ne s\'ouvre plus, qu\'un paiement a échoué ou qu\'un courriel de confirmation n\'est jamais arrivé. Si personne ne surveille, la panne dure jusqu\'à ce qu\'un client prenne la peine de la signaler, et beaucoup ne le font pas.'],
+                ['titre' => 'Vous ne savez pas si une sauvegarde existe', 'texte' => 'Demandez où se trouve la dernière copie complète du site ou de la base de l\'ERP, de quand elle date et qui l\'a restaurée pour la dernière fois. Si la réponse est « chez l\'hébergeur, je crois », le besoin est mûr.'],
+                ['titre' => 'L\'outil est devenu central', 'texte' => 'La boutique fait une part réelle du chiffre d\'affaires, les inscriptions de l\'école passent par le formulaire, la facturation sort d\'Odoo ou de Dolibarr. Une journée d\'arrêt coûte alors plus cher qu\'un mois de maintenance.'],
+                ['titre' => 'Les petites demandes s\'accumulent', 'texte' => 'Un prix à modifier, un nouveau moyen de paiement, un rapport à ajouter dans l\'ERP, une page de recrutement : sans prestataire attitré, chaque demande devient une recherche de prestataire, un devis et une attente.'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi un site ou une application qu\'on ne touche plus devient-il dangereux ?',
+            'paragraphes' => [
+                'Parce que tout ce qui le compose a une date de péremption publiée. La <a href="https://www.php.net/supported-versions.php">page des versions prises en charge de PHP</a>, consultée le 3 octobre 2026, fixe la règle : chaque branche reçoit deux ans de corrections complètes, puis deux ans de correctifs de sécurité critiques seulement. À cette date, seules les branches 8.2, 8.3, 8.4 et 8.5 sont maintenues, et la 8.2 ne le sera plus après le 31 décembre 2026. Un site resté en PHP 7.4 ou 8.0 tourne sur un moteur que plus personne ne corrige.',
+                'Ce n\'est pas un cas rare. Selon <a href="https://w3techs.com/technologies/details/pl-php">W3Techs</a>, au 3 octobre 2026, PHP équipe 69,8 % des sites dont le langage serveur est connu ; parmi eux, 27,7 % utilisent encore PHP 7 et 7,8 % PHP 5, deux générations sans aucun correctif. Et parmi les sites en PHP 8, la <a href="https://w3techs.com/technologies/details/pl-php/8">même source</a> compte 15,8 % en version 8.1 et 6,1 % en 8.0, elles aussi sorties du support.',
+                'Les cadres et logiciels construits sur PHP suivent leur propre calendrier. La <a href="https://laravel.com/docs/13.x/releases">politique de support de Laravel</a> accorde 18 mois de corrections de bogues et 2 ans de correctifs de sécurité à chaque version majeure : Laravel 12 n\'en recevra plus après le 24 février 2027, Laravel 13, publié le 17 mars 2026, jusqu\'au 17 mars 2028. Pour WordPress, <a href="https://endoflife.date/wordpress">endoflife.date</a> rappelle que seule la dernière version est officiellement maintenue ; les correctifs sont reportés sur les anciennes branches quand c\'est possible, sans garantie.',
+                'Le danger vient surtout des extensions. Le <a href="https://patchstack.com/whitepaper/state-of-wordpress-security-in-2026/">rapport 2026 de Patchstack</a>, publié le 25 février 2026, recense 11 334 nouvelles vulnérabilités dans l\'écosystème WordPress en 2025, dont 91 % dans les extensions et 6 seulement dans le cœur ; 46 % n\'étaient pas corrigées au moment de leur publication, et le délai médian avant exploitation massive des plus visées était de cinq heures. Un site qui attend la visite mensuelle pour appliquer un correctif critique laisse donc une fenêtre bien trop large.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quelles versions sont encore maintenues, et jusqu\'à quand ?',
+            'legende' => 'Situation relevée le 3 octobre 2026 sur php.net, la documentation de Laravel, wordpress.org et endoflife.date, la documentation d\'Odoo et le dépôt public de Dolibarr. Les dates de fin de support sont celles publiées par chaque projet.',
+            'entetes' => ['Technologie', 'Versions maintenues au 3 octobre 2026', 'Règle de support publiée', 'Ce que cela implique pour la maintenance'],
+            'lignes'  => [
+                ['PHP', '8.2 (sécurité jusqu\'au 31 décembre 2026), 8.3 (jusqu\'au 31 décembre 2027), 8.4 (jusqu\'au 31 décembre 2028), 8.5 (jusqu\'au 31 décembre 2029)', 'Deux ans de corrections complètes, puis deux ans de correctifs de sécurité critiques', 'Planifier le passage d\'une branche à la suivante avant sa fin de support, après test du site sur la nouvelle version'],
+                ['Laravel', '12 (sécurité jusqu\'au 24 février 2027) et 13 (jusqu\'au 17 mars 2028)', 'Une version majeure par an ; 18 mois de corrections de bogues, 2 ans de correctifs de sécurité', 'Mettre à jour les dépendances chaque mois, monter de version majeure une fois par an environ'],
+                ['WordPress', '7.1, sortie le 19 août 2026, en version 7.1.2 depuis le 22 septembre 2026', 'Seule la dernière version est officiellement maintenue ; correctifs reportés sur les anciennes branches quand c\'est possible', 'Appliquer les versions de sécurité dès leur sortie, suivre de près extensions et thème'],
+                ['Odoo', 'Chaque version majeure, dont la 20.0', 'Trois ans de support par version majeure, puis deux ans pour terminer la montée de version', 'Prévoir une montée de version au moins tous les trois ans, modules spécifiques compris'],
+                ['Dolibarr', 'Branche 24 (24.0.1 publiée le 7 septembre 2026), avec des correctifs encore publiés sur les branches 23, 22 et 18', 'Versions fréquentes, maintenues en parallèle sur plusieurs branches', 'Suivre les versions correctives, vérifier les modules externes avant chaque montée de version'],
+            ],
+        ],
+        [
+            'type'  => 'etapes',
+            'titre' => 'Comment se déroule la prise en charge, de l\'état des lieux au suivi mensuel ?',
+            'items' => [
+                ['titre' => 'Premier échange', 'duree' => 'Réponse sous 24 heures', 'texte' => 'Vous décrivez l\'outil (site, boutique, application, Odoo ou Dolibarr), qui l\'a construit, où il est hébergé, ce qui vous inquiète et ce qu\'une journée d\'arrêt vous coûterait. Cela suffit pour proposer un état des lieux et en annoncer le prix, avant tout engagement.'],
+                ['titre' => 'Récupération des accès', 'duree' => '1 à 3 jours, selon la réactivité des anciens prestataires', 'texte' => 'Hébergeur, bureau d\'enregistrement du nom de domaine, administration du site ou de l\'ERP, dépôt du code, compte du fournisseur de paiement, console de Google : chaque accès est vérifié, mis au nom de l\'entreprise quand il ne l\'est pas, et consigné dans un inventaire que vous conservez.'],
+                ['titre' => 'Sauvegarde zéro', 'duree' => 'Le premier jour d\'accès', 'texte' => 'Avant de toucher à quoi que ce soit, une copie complète des fichiers et de la base de données est faite et rangée hors du serveur. C\'est le filet de sécurité de toute la suite : si une mise à jour tourne mal, on revient à cet état.'],
+                ['titre' => 'État des lieux technique', 'duree' => '2 à 5 jours selon la taille de l\'outil', 'texte' => 'Versions de PHP, du cadre ou du logiciel, des extensions et modules, comptes administrateurs inutiles, traces d\'intrusion, certificat, vitesse, erreurs dans les journaux, espace disque, sauvegardes existantes. Vous recevez un rapport écrit qui classe les problèmes par gravité et propose un plan : ce qui doit être fait tout de suite, ce qui peut attendre, ce qui ne vaut plus la peine.'],
+                ['titre' => 'Remise à niveau', 'duree' => 'Quelques jours à quelques semaines, selon le retard accumulé', 'texte' => 'Les urgences passent d\'abord : faille connue, version abandonnée, accès compromis. Chaque mise à jour importante est testée sur une copie de l\'outil avant la production, puis appliquée à un moment creux, avec un retour arrière préparé. Un site resté plusieurs années sans entretien peut demander une montée de version par étapes.'],
+                ['titre' => 'Mise en place de la surveillance', 'duree' => '1 jour', 'texte' => 'Sondes de disponibilité depuis l\'extérieur, alerte avant l\'expiration du certificat et du nom de domaine, sauvegardes automatiques envoyées hors site, alertes d\'erreurs de l\'application. Les alertes arrivent chez le mainteneur, et chez vous si vous le souhaitez.'],
+                ['titre' => 'Cycle mensuel', 'duree' => 'Chaque mois', 'texte' => 'Mises à jour de routine, contrôle des sauvegardes, revue des alertes et des journaux, traitement des demandes du mois, puis un rapport court : ce qui a été fait, ce qui a été vu, ce qui est à prévoir. Les correctifs de sécurité critiques, eux, n\'attendent pas le cycle et sont appliqués dès leur publication.'],
+                ['titre' => 'Revue annuelle', 'duree' => 'Une fois par an', 'texte' => 'Test de restauration complet, revue des accès et des comptes, calendrier des fins de support de l\'année suivante (PHP, Laravel, Odoo, Dolibarr), budget des montées de version à venir et ajustement du forfait si l\'usage a changé.'],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Que comprend concrètement le suivi, et que recevez-vous ?',
+            'legende' => 'Contenu type d\'un forfait mensuel ; le contrat précise la fréquence retenue pour chaque tâche, le nombre d\'heures d\'évolution compris et les canaux de support.',
+            'entetes' => ['Tâche', 'Fréquence habituelle', 'Ce que vous recevez'],
+            'lignes'  => [
+                ['Mises à jour de sécurité (PHP, cœur, extensions, modules, bibliothèques)', 'Dès la publication pour les failles critiques ; sinon chaque mois, après test', 'La liste des versions appliquées dans le rapport mensuel'],
+                ['Sauvegardes des fichiers et de la base', 'Quotidienne ou hebdomadaire selon l\'activité, copie conservée hors du serveur', 'Le lieu, la fréquence et la durée de conservation, écrits noir sur blanc'],
+                ['Test de restauration', 'Au moins une fois par an, et après tout changement d\'hébergement', 'Un compte rendu daté : sauvegarde utilisée, durée de la restauration, anomalies'],
+                ['Surveillance de la disponibilité', 'En continu, par une sonde extérieure', 'Les incidents du mois, leur durée et leur cause'],
+                ['Certificat HTTPS et nom de domaine', 'Contrôle automatique des dates d\'expiration', 'Une alerte bien avant l\'échéance, et le renouvellement vérifié'],
+                ['Correction des anomalies', 'À la demande, selon la gravité', 'La description du problème, de la cause et de la correction'],
+                ['Petites évolutions', 'Dans la limite d\'heures prévue au contrat', 'Un devis séparé au-delà de cette limite, avant tout travail'],
+                ['Support', 'Réponse sous 24 heures par WhatsApp, téléphone ou courriel', 'Un interlocuteur unique qui connaît votre outil'],
+                ['Rapport mensuel', 'Chaque mois', 'Une page lisible, sans jargon : fait, constaté, à prévoir'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Qu\'est-ce qu\'une sauvegarde utile, et pourquoi celle de l\'hébergeur ne suffit-elle pas ?',
+            'paragraphes' => [
+                'Une sauvegarde n\'a de valeur que le jour où on la restaure. Pour un site WordPress ou Laravel, elle comprend deux éléments indissociables : les fichiers (code, images, documents téléversés, configuration) et la base de données. Pour Odoo, il faut la base PostgreSQL et le dossier des pièces jointes ; pour Dolibarr, la base et le répertoire des documents, que son <a href="https://wiki.dolibarr.org/index.php/Installation_-_Mise_%C3%A0_jour">wiki de mise à jour</a> demande justement de sauvegarder avant toute montée de version. Une copie de la base sans les fichiers, ou l\'inverse, ne remet rien en service.',
+                'Les recommandations publiques convergent. La fiche de <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/sauvegardes">Cybermalveillance.gouv.fr sur les sauvegardes</a>, mise à jour le 14 septembre 2026, demande de les planifier, de garder une copie dans un lieu différent, de déconnecter le support après usage et de vérifier régulièrement qu\'elles fonctionnent. Le <a href="https://www.cisa.gov/stopransomware/ransomware-guide">guide de l\'agence américaine CISA contre les rançongiciels</a>, dans sa version de septembre 2023, va dans le même sens : des copies hors ligne et chiffrées, dont on teste régulièrement la disponibilité et l\'intégrité dans un scénario de reprise.',
+                'Les sauvegardes de l\'hébergeur sont utiles, mais elles ne remplissent pas ce rôle à elles seules. Sur sa page d\'offres consultée le 3 octobre 2026, Hostinger annonce par exemple des sauvegardes hebdomadaires sur sa formule Premium et quotidiennes sur les formules supérieures : une semaine de commandes peut donc séparer deux copies. Surtout, ces copies vivent chez le même fournisseur, dans le même compte : un mot de passe volé, un compte suspendu pour impayé ou un rançongiciel qui chiffre tout ce qu\'il atteint les emportent avec le site.',
+                'La règle appliquée en maintenance est donc simple : au moins une copie automatique, chiffrée, envoyée chaque jour ou chaque semaine vers un stockage indépendant de l\'hébergeur, conservée sur plusieurs générations pour pouvoir revenir avant une infection passée inaperçue, et un test de restauration complet sur un serveur de test au moins une fois par an. Le rapport de ce test dit combien de temps la remise en service a pris : c\'est ce chiffre, et non la promesse d\'une sauvegarde, qui mesure votre capacité à repartir.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Que coûte un piratage découvert trop tard ?',
+            'paragraphes' => [
+                'Le coût le plus visible n\'est pas technique. Quand Google détecte qu\'un site a été piraté ou distribue un logiciel malveillant, son <a href="https://support.google.com/webmasters/answer/9044101?hl=fr">rapport sur les problèmes de sécurité</a> l\'indique dans la Search Console, et les pages concernées peuvent être accompagnées d\'un avertissement dans les résultats de recherche, ou d\'une page d\'alerte affichée par le navigateur. Une fois le site nettoyé, il faut demander un examen, qui prend selon Google plusieurs jours, voire plusieurs semaines.',
+                'Pendant ce temps, les visiteurs fuient, les campagnes publicitaires s\'arrêtent et les courriels envoyés depuis le domaine finissent parfois en indésirables. Le nettoyage lui-même coûte plus cher qu\'une prévention, parce qu\'il faut retrouver toutes les portes dérobées laissées par l\'attaquant, et pas seulement la faille d\'entrée. D\'où l\'intérêt d\'une console de Google reliée au site et surveillée : elle signale souvent un problème avant que les clients ne le voient.',
+                'Le risque ne vient pas seulement de votre propre code. L\'<a href="https://top10.owasp.org/2025">OWASP</a>, référence mondiale de la sécurité des applications web, a placé dans son classement 2025 les défaillances de la chaîne d\'approvisionnement logicielle au troisième rang des risques, et les erreurs de configuration au deuxième. Bibliothèques, extensions, modules et thèmes forment cette chaîne : les inventorier, les mettre à jour et retirer ceux qui ne servent plus est le cœur du métier de mainteneur.',
+            ],
+        ],
+        [
+            'type'  => 'vigilance',
+            'titre' => 'Quel piège fait perdre le plus de données ?',
+            'texte' => 'Croire qu\'une sauvegarde existe parce que l\'hébergeur en mentionne une. Le jour de l\'incident, on découvre qu\'elle date de six jours, qu\'elle ne couvre pas la base de données, qu\'elle a été écrasée par la copie du site déjà infecté, ou qu\'elle a disparu avec le compte. Exigez de savoir où se trouve la dernière copie hors site, de quand elle date, et la date du dernier test de restauration réussi.',
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi les certificats HTTPS demandent-ils désormais une surveillance permanente ?',
+            'paragraphes' => [
+                'Un certificat expiré ne casse pas le site : il le rend inaccessible en pratique, puisque les navigateurs affichent une alerte plein écran que presque personne ne franchit. Or la durée de vie des certificats raccourcit. Le CA/Browser Forum, qui fixe les règles communes aux autorités de certification et aux navigateurs, a adopté le 11 avril 2025 le <a href="https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/">vote SC-081</a> : la durée maximale d\'un certificat public passe de 398 jours à 47 jours, par paliers, entre mars 2026 et mars 2029.',
+                'Let\'s Encrypt, qui délivre les certificats gratuits utilisés par la plupart des hébergements, va plus loin. Selon son <a href="https://letsencrypt.org/2025/12/02/from-90-to-45/">annonce du 2 décembre 2025</a>, ses certificats de 90 jours passeront à 64 jours le 10 février 2027, puis à 45 jours le 16 février 2028. L\'organisme recommande un renouvellement automatique qui s\'appuie sur les informations de renouvellement qu\'il publie (ARI), ou, à défaut, aux deux tiers de la durée de vie du certificat.',
+                'Il a aussi cessé, le 4 juin 2025, d\'envoyer les courriels qui prévenaient de l\'expiration, comme l\'indique son <a href="https://letsencrypt.org/2025/01/22/ending-expiration-emails/">annonce du 22 janvier 2025</a>, en conseillant de passer par un service de surveillance. Concrètement, plus personne ne vous prévient si le renouvellement automatique échoue après un changement de serveur ou de zone DNS. La maintenance ajoute donc une sonde qui lit la date d\'expiration réelle du certificat servi, et pas seulement celle prévue par l\'hébergeur, et une alerte sur l\'échéance du nom de domaine, dont l\'oubli coupe à la fois le site et les adresses électroniques.',
+            ],
+        ],
+        [
+            'type'     => 'comparaison',
+            'titre'    => 'Que demande la maintenance selon la technologie de votre outil ?',
+            'options'  => ['WordPress et WooCommerce', 'Laravel, PHP, Node.js, Vue ou React', 'Odoo', 'Dolibarr'],
+            'criteres' => [
+                ['critere' => 'Ce qui se met à jour', 'valeurs' => ['Cœur, thème, extensions, PHP', 'Cadre, dépendances Composer et npm, PHP ou Node.js', 'Version mineure, version majeure, modules spécifiques et tiers', 'Version corrective, version majeure, modules externes']],
+                ['critere' => 'Rythme constaté en 2026', 'valeurs' => ['Quatre versions de sécurité entre le 6 août et le 22 septembre 2026', 'Une version majeure de Laravel par an, correctifs possibles chaque semaine', 'Versions mineures environ tous les deux mois sur Odoo Online', 'Huit publications entre le 2 avril et le 7 septembre 2026, sur quatre branches']],
+                ['critere' => 'Point le plus sensible', 'valeurs' => ['Les extensions, abandonnées ou mal codées', 'Les dépendances qui exigent une version de PHP plus récente', 'Les modules spécifiques à porter à chaque version majeure', 'Les modules externes à vérifier avant chaque montée']],
+                ['critere' => 'Mises à jour automatiques', 'valeurs' => ['Versions mineures du cœur automatiques, majeures aussi sur les installations faites depuis la 5.6 ; extensions et thèmes non, sauf cas décidés par l\'équipe de sécurité', 'Aucune : chaque mise à jour passe par le code et les tests', 'Automatiques sur Odoo Online ; à organiser soi-même en auto-hébergement', 'Aucune : assistant de migration à lancer après sauvegarde']],
+                ['critere' => 'Montée de version majeure', 'valeurs' => ['Souvent simple, sauf extensions incompatibles', 'Laravel dit s\'efforcer de la rendre faisable en un jour au plus ; tout dépend du code et des paquets ajoutés', 'Obligatoire tous les deux ans sur Odoo Online ; trois ans de support par version', 'Une version à la fois, sans sauter de version intermédiaire']],
+            ],
+            'verdict'  => 'Plus l\'outil dépend de composants tiers, plus la maintenance doit être fréquente ; plus il contient de code spécifique, plus chaque montée de version doit être testée sur une copie avant la production.',
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Faut-il activer les mises à jour automatiques ou tout tester avant ?',
+            'paragraphes' => [
+                'Les deux, selon ce qui se met à jour. Le 22 septembre 2026, la <a href="https://wordpress.org/news/2026/09/wordpress-7-1-2-release/">version 7.1.2 de WordPress</a> a corrigé une faille critique : un attaquant non authentifié pouvait, dans certaines conditions, faire exécuter un fichier PHP du serveur et aller jusqu\'à exécuter son propre code. Le correctif a été reporté sur toutes les branches éligibles, jusqu\'à la 4.7, et les sites qui acceptent les mises à jour automatiques en arrière-plan l\'ont reçu sans intervention. Cinq jours plus tôt, la <a href="https://wordpress.org/news/2026/09/wordpress-7-1-1-maintenance-and-security-release/">version 7.1.1</a> apportait déjà 11 correctifs de sécurité.',
+                'Pour ce type de correctif, l\'automatisme est le bon choix : le risque d\'une faille ouverte dépasse de loin celui d\'une incompatibilité. La <a href="https://developer.wordpress.org/advanced-administration/upgrade/upgrading/">documentation d\'administration de WordPress</a> précise toutefois que les extensions et les thèmes ne se mettent pas à jour seuls par défaut, sauf cas décidés par l\'équipe de sécurité, et recommande de sauvegarder le site avant toute mise à jour. C\'est là que se loge l\'essentiel du risque, et c\'est là que la maintenance travaille.',
+                'Les changements plus lourds se testent d\'abord : version majeure d\'une extension de boutique, passage à une nouvelle branche de PHP, nouvelle version de Laravel, d\'Odoo ou de Dolibarr. Ils sont appliqués sur une copie de l\'outil, avec vos données, puis vérifiés sur les parcours qui comptent (commande, paiement, formulaire, facture, rapport), avant d\'être déployés en production à une heure creuse, sauvegarde fraîche à l\'appui. Pour Odoo, la <a href="https://www.odoo.com/documentation/20.0/administration/upgrade.html">documentation des montées de version</a> rappelle que chaque version majeure est suivie trois ans et qu\'une base hébergée sur Odoo Online doit monter de version majeure tous les deux ans.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quels délais d\'intervention prévoir selon la gravité d\'un incident ?',
+            'legende' => 'Classement utilisé pour qualifier chaque demande. Les délais d\'intervention propres à votre outil sont écrits dans le contrat ; la réponse à une demande, elle, arrive sous 24 heures dans tous les cas.',
+            'entetes' => ['Niveau', 'Exemples', 'Traitement'],
+            'lignes'  => [
+                ['Critique', 'Site ou ERP inaccessible, piratage, paiements refusés, données exposées, certificat expiré', 'Prioritaire sur toute autre tâche : remise en service d\'abord, par correctif ou par restauration, analyse de la cause ensuite'],
+                ['Majeur', 'Une fonction importante en panne : formulaire, envoi des courriels, calcul d\'un prix, export comptable', 'Planifié au plus tôt, avec une solution de contournement indiquée en attendant'],
+                ['Mineur', 'Affichage décalé sur un téléphone, faute dans un texte, lien cassé, lenteur ponctuelle', 'Regroupé avec les autres demandes et traité dans le cycle en cours'],
+                ['Évolution', 'Nouvelle page, nouveau champ, nouveau moyen de paiement, rapport supplémentaire', 'Décomptée des heures d\'évolution du forfait, ou chiffrée sur devis au-delà'],
+            ],
+        ],
+        [
+            'type'  => 'cas',
+            'titre' => 'À quoi sert la maintenance selon votre secteur d\'activité ?',
+            'items' => [
+                ['secteur' => 'Boutique en ligne avec paiement Mobile Money, Afrique de l\'Ouest', 'probleme' => 'Le module de paiement change d\'interface ou d\'extension, et les commandes restent bloquées au statut « en attente » sans que personne ne le remarque.', 'solution' => 'Une commande de test passée chaque mois et après chaque mise à jour, une alerte sur les paiements en échec, une surveillance du tunnel de commande. Le <a href="/comparatifs/fedapay-vs-kkiapay-vs-cinetpay">comparatif FedaPay, Kkiapay et CinetPay</a> aide à choisir l\'agrégateur ; la maintenance garde la liaison en état.'],
+                ['secteur' => 'École privée ou centre de formation', 'probleme' => 'Le formulaire d\'inscription tombe en panne pendant la rentrée, au moment exact où il reçoit le plus de demandes.', 'solution' => 'Les mises à jour lourdes sont faites avant la période d\'inscriptions, jamais pendant ; la surveillance est renforcée sur ces semaines, et les données des élèves sont sauvegardées et protégées comme des données personnelles sensibles.'],
+                ['secteur' => 'PME sur Odoo ou Dolibarr', 'probleme' => 'La facturation dépend de l\'ERP, mais personne ne prépare la fin de support de la version installée ni la compatibilité des modules ajoutés.', 'solution' => 'Sauvegarde quotidienne de la base et des documents hors site, suivi des versions correctives, montée de version préparée sur une copie, validation par le comptable avant la bascule. Les pages <a href="/services/integration-odoo">intégration Odoo</a> et <a href="/services/integration-dolibarr">intégration Dolibarr</a> décrivent le déploiement initial.'],
+                ['secteur' => 'ONG, association, projet financé', 'probleme' => 'Le site a été financé par un projet terminé, plus personne ne le suit, et il sert encore de vitrine auprès des bailleurs.', 'solution' => 'Un forfait léger : mises à jour, sauvegardes, renouvellement du domaine et du certificat, et quelques heures par an pour publier les rapports d\'activité. Le site reste propre et sûr sans mobiliser l\'équipe.'],
+                ['secteur' => 'Cabinet ou PME en France, en Belgique ou en Suisse', 'probleme' => 'Le site collecte des données de clients européens, et le RGPD exige des mesures de sécurité et la capacité de notifier une violation rapidement.', 'solution' => 'Contrat de sous-traitance écrit, journal des interventions, procédure en cas d\'incident, sauvegardes chiffrées. Le mainteneur travaille à distance, avec des accès nominatifs que vous pouvez retirer à tout moment.'],
+                ['secteur' => 'Éditeur d\'application web ou mobile', 'probleme' => 'L\'application Laravel ou Node.js et son interface Vue, React ou Flutter accumulent des dépendances qui vieillissent, et les boutiques d\'applications imposent leurs propres exigences.', 'solution' => 'Mise à jour planifiée des dépendances, journal d\'erreurs surveillé, montée de version annuelle du cadre, publication des correctifs sur les boutiques d\'applications. Voir aussi <a href="/services/application-mobile-android-ios">application mobile Android et iOS</a>.'],
+            ],
+        ],
+        [
+            'type'       => 'prix',
+            'titre'      => 'Combien coûte la maintenance, et qu\'est-ce qui fait varier le prix ?',
+            'intro'      => 'La maintenance n\'a pas de tarif de départ publié : chaque outil est différent, et le prix est fixé sur devis après l\'état des lieux. Vous savez avant de signer ce que couvre le forfait, ce qui est facturé en plus et à quel moment.',
+            'items'      => [
+                ['offre' => 'État des lieux technique', 'prix' => 'Sur devis', 'inclus' => ['Récupération et inventaire des accès', 'Sauvegarde complète hors site', 'Rapport écrit classé par gravité', 'Plan de remise à niveau chiffré', 'Utile seul, même sans contrat ensuite']],
+                ['offre' => 'Forfait mensuel', 'prix' => 'Sur devis', 'inclus' => ['Mises à jour de sécurité et de routine', 'Sauvegardes hors site et test annuel de restauration', 'Surveillance de la disponibilité, du certificat et du domaine', 'Correction des anomalies', 'Heures d\'évolution comprises, selon la formule', 'Rapport mensuel et réponse sous 24 heures']],
+                ['offre' => 'Intervention à la demande', 'prix' => 'Sur devis', 'inclus' => ['Dépannage ponctuel ou restauration', 'Mise à jour ou montée de version isolée', 'Petite évolution', 'Devis avant intervention, sauf urgence convenue']],
+                ['offre' => 'Montée de version majeure', 'prix' => 'Sur devis', 'inclus' => ['PHP, Laravel, Odoo ou Dolibarr', 'Test complet sur une copie de l\'outil', 'Bascule à une heure creuse avec retour arrière préparé', 'Portage des modules spécifiques si nécessaire']],
+            ],
+            'variations' => [
+                'La technologie : un site statique demande moins de suivi qu\'un WordPress chargé d\'extensions, lui-même moins qu\'un ERP avec des modules spécifiques.',
+                'Le retard accumulé : un outil resté des années sans mise à jour demande une remise à niveau, parfois par étapes, avant le suivi régulier.',
+                'Le volume : nombre de sites, de bases, d\'utilisateurs et de modules, et taille des données à sauvegarder.',
+                'Le niveau de réactivité attendu, en particulier en dehors des jours ouvrés et pendant vos périodes de pointe.',
+                'Le nombre d\'heures d\'évolution incluses chaque mois.',
+                'L\'hébergement : serveur dédié ou virtuel à administrer, ou hébergement géré où l\'hébergeur assure une partie du travail.',
+                'Le code dont on hérite : sans documentation ni sources, la reprise demande plus de temps d\'analyse.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment se règle un forfait de maintenance, depuis l\'Afrique ou l\'Europe ?',
+            'paragraphes' => [
+                'Les moyens de paiement acceptés sont le Mobile Money (MTN et Moov), la carte bancaire, PayPal, le virement et les espèces. Un forfait mensuel se règle donc depuis le téléphone pour un client de Cotonou ou d\'Abidjan, par virement, carte ou PayPal pour un client de Lyon, de Genève ou de Montréal. Le contrat précise l\'échéance, la devise convenue et ce qui se passe en cas de retard, pour qu\'aucune interruption de service ne vienne d\'un malentendu de facturation.',
+                'Le devis sépare ce que vous payez au mainteneur de ce que vous payez à des tiers : hébergement, nom de domaine, licences Odoo Enterprise, extensions WordPress payantes, modules DoliStore, crédits d\'envoi de SMS ou de messages WhatsApp. Ces abonnements restent à votre nom et sur votre moyen de paiement chaque fois que c\'est possible : si le mainteneur change, rien ne s\'éteint. Chaque intervention à la demande fait l\'objet d\'une facture qui reprend la description du travail réalisé.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Quelles erreurs coûtent le plus cher, et comment les éviter ?',
+            'intro' => 'Les incidents graves viennent rarement d\'une attaque sophistiquée. Ils viennent d\'habitudes ordinaires que personne n\'a remises en cause.',
+            'items' => [
+                ['titre' => 'Laisser un prestataire seul détenteur des accès', 'texte' => 'Domaine, hébergeur, dépôt de code et administration enregistrés au nom du prestataire : le jour où il disparaît ou se fâche, l\'entreprise ne peut plus rien faire. Les comptes doivent être à votre nom, avec des accès délégués au mainteneur.'],
+                ['titre' => 'Partager un seul compte administrateur', 'texte' => 'Un mot de passe commun, jamais changé, connu d\'anciens salariés et d\'anciens prestataires. Chaque intervenant doit avoir son propre compte, avec les seuls droits utiles, retiré à la fin de sa mission.'],
+                ['titre' => 'Ne jamais surveiller les scripts de la page de paiement', 'texte' => 'L\'<a href="/histoires/british-airways-piratage">histoire du piratage de British Airways</a> montre ce qu\'un seul fichier JavaScript modifié sur une page de paiement peut coûter : quinze jours de cartes copiées, puis une amende de 20 millions de livres. Une boutique doit savoir détecter seule qu\'un fichier a changé.'],
+                ['titre' => 'Basculer d\'un coup sans retour arrière', 'texte' => 'Une montée de version ou un changement de serveur fait en une seule fois, un vendredi soir, sans copie testée ni plan de retour : l\'<a href="/histoires/tsb-migration">histoire de la migration de TSB</a> montre, à l\'échelle d\'une banque, ce que coûte une bascule sans chemin de retour. La même règle vaut pour une PME : copie testée, heure creuse, retour arrière prêt.'],
+                ['titre' => 'Accumuler les extensions', 'texte' => 'Chaque extension WordPress ou module ajouté est un code de plus à mettre à jour, et une porte de plus. Celles qui ne servent plus sont supprimées, pas seulement désactivées ; celles qui ne sont plus maintenues par leur éditeur sont remplacées.'],
+                ['titre' => 'Modifier directement en production', 'texte' => 'Corriger un fichier sur le serveur sans copie ni historique, c\'est perdre la correction à la prochaine mise à jour et ne plus savoir ce qui a changé. Le code vit dans un dépôt versionné, les changements passent par une copie de test.'],
+                ['titre' => 'Confondre maintenance et refonte permanente', 'texte' => 'Un forfait de maintenance qui sert à financer, mois après mois, des chantiers jamais cadrés ne protège plus rien. Les évolutions importantes ont leur propre devis et leur propre calendrier.'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Connexion, données personnelles, langue : que change le contexte local ?',
+            'paragraphes' => [
+                'La connexion pèse sur la maintenance elle-même. Quand le réseau du bureau est instable, une surveillance installée sur place ne voit rien : les sondes doivent interroger le site depuis l\'extérieur, et les sauvegardes partir du serveur vers un stockage distant, pas transiter par l\'ordinateur de quelqu\'un. Pour un ERP installé au bureau, Odoo ou Dolibarr, l\'onduleur, la copie nocturne hors site et la vérification de l\'espace disque font partie du contrat au même titre que les mises à jour.',
+                'Au Bénin, la <a href="https://sgg.gouv.bj/doc/loi-2017-20/">loi n° 2017-20 du 20 avril 2018 portant code du numérique</a> impose au responsable du traitement et à son sous-traitant, à l\'article 426, des mesures techniques et d\'organisation appropriées : le texte cite le chiffrement, des moyens de rétablir l\'accès aux données dans des délais appropriés après un incident physique ou technique, et une procédure pour tester régulièrement l\'efficacité de ces mesures. Des sauvegardes testées et un journal des interventions répondent directement à cette exigence.',
+                'L\'article 427 de la même loi oblige le responsable du traitement à notifier sans délai à l\'Autorité de protection des données et à la personne concernée toute atteinte à la sécurité de leurs données, et le sous-traitant à prévenir sans délai le responsable du traitement. Le mainteneur est précisément ce sous-traitant : le contrat doit dire comment il vous alerte, et avec quelles informations (nature de l\'incident, données et personnes touchées, mesures prises).',
+                'En Europe, le RGPD fixe une règle voisine. La <a href="https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles">page de la CNIL sur la notification des violations</a> demande de notifier dans les meilleurs délais et, si possible, dans les 72 heures après en avoir pris connaissance, d\'informer les personnes en cas de risque élevé et de documenter toutes les violations en interne, même celles qui ne sont pas notifiées. Pour un site qui vise des clients en France, en Belgique ou en Suisse, cette procédure s\'écrit avant l\'incident, pas pendant.',
+                'Reste la langue : rapports, alertes et échanges se font en français, et en anglais si votre équipe ou votre maison mère le demande. Un rapport mensuel que le dirigeant ne comprend pas ne sert à rien ; il doit dire en quelques lignes si l\'outil est sain, ce qui a été fait et ce qu\'il faudra budgéter.',
+            ],
+        ],
+        [
+            'type'  => 'chiffres',
+            'titre' => 'Quels chiffres officiels justifient un suivi régulier ?',
+            'items' => [
+                ['valeur' => '4 ans', 'libelle' => 'Durée de vie totale d\'une branche de PHP : deux ans de corrections complètes, puis deux ans de sécurité seulement', 'source' => 'php.net, versions prises en charge', 'url' => 'https://www.php.net/supported-versions.php'],
+                ['valeur' => '35,6 %', 'libelle' => 'Part des sites en PHP qui tournent encore sur PHP 7, 5 ou 4, toutes versions sans correctif, au 3 octobre 2026', 'source' => 'W3Techs', 'url' => 'https://w3techs.com/technologies/details/pl-php'],
+                ['valeur' => '11 334', 'libelle' => 'Nouvelles vulnérabilités recensées dans l\'écosystème WordPress en 2025, dont 91 % dans les extensions', 'source' => 'Patchstack, rapport 2026', 'url' => 'https://patchstack.com/whitepaper/state-of-wordpress-security-in-2026/'],
+                ['valeur' => '5 heures', 'libelle' => 'Délai médian avant exploitation massive des failles WordPress les plus visées en 2025', 'source' => 'Patchstack, rapport 2026', 'url' => 'https://patchstack.com/whitepaper/state-of-wordpress-security-in-2026/'],
+                ['valeur' => '45 jours', 'libelle' => 'Durée de vie des certificats Let\'s Encrypt à partir du 16 février 2028, contre 90 jours aujourd\'hui', 'source' => 'Let\'s Encrypt', 'url' => 'https://letsencrypt.org/2025/12/02/from-90-to-45/'],
+                ['valeur' => '2 ans', 'libelle' => 'Durée des correctifs de sécurité pour chaque version majeure de Laravel', 'source' => 'Documentation Laravel 13.x', 'url' => 'https://laravel.com/docs/13.x/releases'],
+                ['valeur' => '72 heures', 'libelle' => 'Délai à viser pour notifier une violation de données à la CNIL sous le RGPD', 'source' => 'CNIL', 'url' => 'https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Réversibilité et accès : comment changer de mainteneur sans tout perdre ?',
+            'paragraphes' => [
+                'Un bon contrat de maintenance se juge aussi à la façon dont il se termine. La réversibilité, c\'est la garantie que vous pouvez confier l\'outil à quelqu\'un d\'autre, ou le reprendre en interne, du jour au lendemain. Elle repose sur trois principes : les comptes sont à votre nom, le code et les données vous appartiennent, et tout ce que le mainteneur a appris de votre outil est écrit quelque part où vous y avez accès.',
+                'Concrètement, vous restez titulaire du nom de domaine, du compte d\'hébergement, des licences et des comptes de paiement ; le mainteneur y accède par des accès délégués, nominatifs, que vous pouvez retirer. Le code des développements spécifiques est dans un dépôt dont vous êtes propriétaire. Les sauvegardes sont lisibles sans outil propriétaire du prestataire. Et un document d\'exploitation décrit l\'architecture, les tâches planifiées, les mots de passe à changer et les procédures de restauration.',
+                'À la fin du contrat, quelle qu\'en soit la raison, la passation comprend une sauvegarde complète et récente, l\'inventaire des accès, la remise du document d\'exploitation à jour et le retrait des accès du mainteneur sortant. Si un prestataire refuse de vous rendre les accès ou le code, la question n\'est plus technique : c\'est un signal à prendre au sérieux bien avant la fin du contrat.',
+            ],
+        ],
+        [
+            'type'  => 'checklist',
+            'titre' => 'Que vérifier dans un contrat de maintenance avant de le signer ?',
+            'items' => [
+                'La liste des outils couverts (sites, bases, ERP, applications) et leurs versions au jour de la signature.',
+                'La fréquence des mises à jour et la règle pour les correctifs de sécurité critiques, appliqués dès leur publication.',
+                'Le lieu, la fréquence, le chiffrement et la durée de conservation des sauvegardes, et la date du test de restauration.',
+                'Ce que surveille la sonde : disponibilité, certificat, nom de domaine, erreurs de l\'application, espace disque.',
+                'Les niveaux de gravité, le délai de réponse et la façon de joindre le mainteneur en urgence.',
+                'Le nombre d\'heures d\'évolution compris chaque mois, et le mode de calcul au-delà.',
+                'La procédure en cas de violation de données : qui prévient qui, sous quel délai, avec quelles informations.',
+                'La propriété des comptes, du code et des données, et la liste des éléments remis en fin de contrat.',
+                'Le contenu du rapport mensuel et la personne qui le reçoit dans votre entreprise.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi confier la maintenance de votre outil à Richard SALANON ?',
+            'paragraphes' => [
+                'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
+                'Maintenir un outil demande de connaître la façon dont on le construit. Avec plus de 6 ans d\'expérience dans le numérique et une formation à EPITECH, Richard travaille au quotidien avec les technologies qu\'il maintient : PHP et Laravel, Node.js, Vue et React, Flutter pour le mobile, WordPress, Odoo et Dolibarr, n8n et Make pour les automatisations. Il a créé <a href="https://wapy.pro">Wapy</a>, un assistant WhatsApp à intelligence artificielle pour les entreprises d\'Afrique francophone, et il est co-fondateur d\'<a href="https://audyxa.com">Audyxa</a>. Côté produit comme côté client, la question reste la même : un service en ligne ne s\'arrête pas à sa mise en production.',
+                'Il est intervenu pour des clients au Bénin, en Côte d\'Ivoire, au Togo, au Sénégal, au Burkina Faso, au Mali, au Niger, au Tchad, au Gabon, en RD Congo, en France, en Belgique, en Suisse et au Canada, sur place ou à distance. Sa façon de travailler tient en quelques règles : une réponse sous 24 heures, un état des lieux écrit avant tout forfait, des comptes laissés à votre nom, aucune mise à jour majeure sans copie de test, et un rapport mensuel lisible par un dirigeant. Son parcours est détaillé sur la page <a href="/richard-salanon">Richard SALANON</a>.',
+                'Si vous préférez qu\'une personne de votre équipe assure les tâches courantes, la <a href="/formation-developpement-web">formation au développement web</a>, la <a href="/formation-odoo">formation Odoo</a> et la <a href="/formation-dolibarr">formation Dolibarr</a> lui donnent les bases ; la maintenance garde alors les montées de version, la sécurité et les urgences. Les pays servis sont listés sur la page <a href="/zones/">zones d\'intervention</a>.',
+            ],
+        ],
+        [
+            'type'  => 'lecon',
+            'titre' => 'Que retenir avant de choisir une formule de maintenance ?',
+            'texte' => 'Un outil bien maintenu se reconnaît à trois preuves que vous pouvez demander à tout moment : la liste de ses versions, toutes encore suivies par leur éditeur ; la date du dernier test de restauration réussi depuis une copie hors site ; et des comptes qui sont tous à votre nom.',
+        ],
+        [
+            'type'   => 'cta',
+            'titre'  => 'Voulez-vous faire le point sur votre site, votre application ou votre ERP ?',
+            'texte'  => 'Indiquez l\'adresse de l\'outil, sa technologie si vous la connaissez, son hébergeur et ce qui vous inquiète : vous recevez une réponse sous 24 heures, puis une proposition d\'état des lieux et un devis de maintenance adapté.',
+            'bouton' => ['url' => '/contact', 'texte' => 'Demander un état des lieux'],
+        ],
+    ],
+
+    'faq' => [
+        ['q' => 'Combien coûte la maintenance d\'un site ou d\'une application ?', 'r' => 'Le prix est fixé sur devis, après un état des lieux, car il dépend de la technologie, du retard de mises à jour accumulé, du volume, du niveau de réactivité attendu et des heures d\'évolution incluses. Le devis sépare ce qui revient au mainteneur de ce que vous payez à des tiers (hébergement, domaine, licences), qui reste à votre nom.'],
+        ['q' => 'Quelle différence entre le forfait mensuel et l\'intervention à la demande ?', 'r' => 'Le forfait couvre chaque mois les mises à jour, les sauvegardes, la surveillance, les corrections et un volume d\'heures d\'évolution, avec un rapport mensuel. L\'intervention à la demande se paie à l\'acte, sur devis : elle convient à un outil qui change peu, mais personne ne surveille ni ne met à jour entre deux interventions.'],
+        ['q' => 'Pouvez-vous maintenir un site que vous n\'avez pas créé ?', 'r' => 'Oui, dans la plupart des cas. La reprise commence par la récupération des accès, une sauvegarde complète et un état des lieux écrit. S\'il révèle qu\'une remise à niveau coûterait plus cher qu\'une reconstruction, le rapport le dit et propose les deux options chiffrées.'],
+        ['q' => 'Maintenez-vous aussi Odoo, Dolibarr et les applications mobiles ?', 'r' => 'Oui. Pour Odoo et Dolibarr, la maintenance couvre les sauvegardes de la base et des documents, les versions correctives, la compatibilité des modules et la préparation des montées de version sur une copie. Pour une application mobile, elle couvre les dépendances, l\'interface de programmation côté serveur et la publication des correctifs.'],
+        ['q' => 'À quelle fréquence faut-il mettre à jour WordPress ?', 'r' => 'Les versions de sécurité s\'appliquent dès leur sortie : WordPress en a publié quatre entre le 6 août et le 22 septembre 2026, dont une faille critique corrigée le 22 septembre. Les extensions et le thème se contrôlent au moins chaque mois, plus souvent quand une faille est annoncée, et les mises à jour majeures se testent d\'abord sur une copie.'],
+        ['q' => 'Mon hébergeur fait déjà des sauvegardes : est-ce suffisant ?', 'r' => 'Non. Elles sont utiles, mais elles restent chez le même fournisseur et dans le même compte, et leur fréquence peut être hebdomadaire selon la formule. Il faut au moins une copie chiffrée hors de l\'hébergeur, sur plusieurs générations, et un test de restauration réussi au moins une fois par an.'],
+        ['q' => 'Que se passe-t-il si mon site est piraté ?', 'r' => 'Le site est d\'abord isolé et remis en service à partir d\'une sauvegarde saine, ou nettoyé ; les mots de passe et accès sont changés, la faille est corrigée, puis la cause est analysée et consignée. Si des données personnelles sont touchées, vous êtes prévenu sans délai pour les notifications imposées par la loi béninoise ou par le RGPD.'],
+        ['q' => 'Quels sont les délais d\'intervention ?', 'r' => 'Chaque demande reçoit une réponse sous 24 heures. Les délais d\'intervention dépendent ensuite de la gravité : un incident critique (site inaccessible, piratage, paiements bloqués) passe avant toute autre tâche, une anomalie mineure est traitée dans le cycle en cours. Les délais propres à votre outil sont écrits dans le contrat.'],
+        ['q' => 'Faut-il changer de version de PHP régulièrement ?', 'r' => 'Oui. Selon php.net, chaque branche reçoit deux ans de corrections complètes, puis deux ans de correctifs de sécurité seulement. Au 3 octobre 2026, seules les branches 8.2 à 8.5 sont maintenues, et la 8.2 cesse de l\'être après le 31 décembre 2026. Le passage se teste sur une copie, car extensions et code ancien peuvent ne pas suivre.'],
+        ['q' => 'Que garantit la réversibilité si je change de prestataire ?', 'r' => 'Que vous gardez tout : nom de domaine, hébergement, licences et comptes de paiement à votre nom, code des développements dans un dépôt qui vous appartient, sauvegardes lisibles sans outil du prestataire et document d\'exploitation à jour. En fin de contrat, vous recevez une sauvegarde récente et l\'inventaire des accès, et ceux du mainteneur sortant sont retirés.'],
+        ['q' => 'Travaillez-vous à distance avec des entreprises en Europe et au Canada ?', 'r' => 'Oui. La maintenance se fait presque entièrement à distance, avec des accès nominatifs que vous pouvez retirer. Richard SALANON a travaillé pour des clients en France, en Belgique, en Suisse et au Canada ; le paiement se fait alors par virement, carte bancaire ou PayPal, et le contrat intègre les obligations du RGPD.'],
+        ['q' => 'Quels moyens de paiement sont acceptés ?', 'r' => 'Le Mobile Money (MTN et Moov), la carte bancaire, PayPal, le virement et les espèces. L\'échéance du forfait, la devise et les modalités sont écrites dans le contrat avant signature.'],
+    ],
+
+    'sources' => [
+        ['titre' => 'php.net, versions de PHP prises en charge et politique de support', 'url' => 'https://www.php.net/supported-versions.php', 'date' => '2026-10-03'],
+        ['titre' => 'W3Techs, usage de PHP et répartition par version', 'url' => 'https://w3techs.com/technologies/details/pl-php', 'date' => '2026-10-03'],
+        ['titre' => 'W3Techs, répartition des sous-versions de PHP 8', 'url' => 'https://w3techs.com/technologies/details/pl-php/8', 'date' => '2026-10-03'],
+        ['titre' => 'Documentation Laravel 13.x, notes de version et politique de support', 'url' => 'https://laravel.com/docs/13.x/releases', 'date' => '2026-10-03'],
+        ['titre' => 'endoflife.date, cycles de support de WordPress', 'url' => 'https://endoflife.date/wordpress', 'date' => '2026-10-03'],
+        ['titre' => 'endoflife.date, cycles de support de PHP', 'url' => 'https://endoflife.date/php', 'date' => '2026-10-03'],
+        ['titre' => 'WordPress.org, version 7.1.2 (correctif de sécurité du 22 septembre 2026)', 'url' => 'https://wordpress.org/news/2026/09/wordpress-7-1-2-release/', 'date' => '2026-10-03'],
+        ['titre' => 'WordPress.org, version de maintenance et de sécurité 7.1.1', 'url' => 'https://wordpress.org/news/2026/09/wordpress-7-1-1-maintenance-and-security-release/', 'date' => '2026-10-03'],
+        ['titre' => 'WordPress.org, prérequis d\'hébergement recommandés', 'url' => 'https://wordpress.org/about/requirements/', 'date' => '2026-10-03'],
+        ['titre' => 'WordPress Developer Resources, mise à jour de WordPress et mises à jour automatiques', 'url' => 'https://developer.wordpress.org/advanced-administration/upgrade/upgrading/', 'date' => '2026-10-03'],
+        ['titre' => 'Patchstack, état de la sécurité de WordPress en 2026', 'url' => 'https://patchstack.com/whitepaper/state-of-wordpress-security-in-2026/', 'date' => '2026-10-03'],
+        ['titre' => 'Documentation Odoo 20.0, montées de version', 'url' => 'https://www.odoo.com/documentation/20.0/administration/upgrade.html', 'date' => '2026-10-03'],
+        ['titre' => 'Dépôt public de Dolibarr, publications et notes de version', 'url' => 'https://github.com/Dolibarr/dolibarr/releases', 'date' => '2026-10-03'],
+        ['titre' => 'Wiki Dolibarr, mise à jour d\'une installation', 'url' => 'https://wiki.dolibarr.org/index.php/Installation_-_Mise_%C3%A0_jour', 'date' => '2026-10-03'],
+        ['titre' => 'Let\'s Encrypt, passage des certificats de 90 à 45 jours', 'url' => 'https://letsencrypt.org/2025/12/02/from-90-to-45/', 'date' => '2026-10-03'],
+        ['titre' => 'Let\'s Encrypt, fin des courriels d\'avertissement d\'expiration', 'url' => 'https://letsencrypt.org/2025/01/22/ending-expiration-emails/', 'date' => '2026-10-03'],
+        ['titre' => 'CA/Browser Forum, vote SC-081v3 sur la réduction de la durée des certificats', 'url' => 'https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/', 'date' => '2026-10-03'],
+        ['titre' => 'Cybermalveillance.gouv.fr, bonnes pratiques de sauvegarde', 'url' => 'https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/sauvegardes', 'date' => '2026-10-03'],
+        ['titre' => 'CISA, guide #StopRansomware', 'url' => 'https://www.cisa.gov/stopransomware/ransomware-guide', 'date' => '2026-10-03'],
+        ['titre' => 'Hostinger, offres d\'hébergement web et sauvegardes incluses', 'url' => 'https://www.hostinger.com/web-hosting', 'date' => '2026-10-03'],
+        ['titre' => 'Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 du 20 avril 2018 portant code du numérique', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-03'],
+        ['titre' => 'CNIL, notifier une violation de données personnelles', 'url' => 'https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles', 'date' => '2026-10-03'],
+        ['titre' => 'OWASP, Top 10 des risques de sécurité des applications web, édition 2025', 'url' => 'https://top10.owasp.org/2025', 'date' => '2026-10-03'],
+        ['titre' => 'Aide Google Search Console, rapport sur les problèmes de sécurité', 'url' => 'https://support.google.com/webmasters/answer/9044101?hl=fr', 'date' => '2026-10-03'],
+    ],
+
+    'liens' => [
+        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'refonte-migration-de-site', 'application-web-sur-mesure', 'integration-odoo', 'integration-dolibarr'],
+        'comparatifs' => ['odoo-vs-dolibarr', 'fedapay-vs-kkiapay-vs-cinetpay'],
+    ],
+];
