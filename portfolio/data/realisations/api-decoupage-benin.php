@@ -1,5 +1,6 @@
 <?php
-// API Decoupage Administratif du Benin, API REST publique (PHP, MySQL, JSON).
+// API Decoupage Administratif du Benin, API REST publique (Laravel 10, MySQL, JSON ;
+// stack verifiee sur le depot github.com/Richard6141/bj-decoupage le 04/10/2026).
 // Projet sans client tiers : les complements portent sur la conception d'API.
 declare(strict_types=1);
 
@@ -22,7 +23,7 @@ return [
             ['titre' => "Des ressources REST calquées sur la hiérarchie réelle", 'texte' => "Départements, communes, arrondissements : chaque niveau est une ressource, et la relation parent-enfant s'exprime dans le chemin de l'URL. Un développeur qui découvre l'API en devine la structure sans documentation, parce qu'elle reproduit l'organisation administrative qu'il connaît déjà. Une API dont on doit lire la documentation pour comprendre l'organisation des ressources a raté sa conception."],
             ['titre' => "JSON avec une enveloppe de réponse constante", 'texte' => "Toutes les réponses partagent la même forme, succès comme erreur. Le code client n'a donc qu'un seul schéma à traiter, et une erreur ne casse pas le parsing. C'est un détail qui ne se remarque pas quand tout fonctionne, et qui économise des heures de débogage quand ce n'est pas le cas."],
             ['titre' => "Des codes HTTP réellement respectés", 'texte' => "200 quand ça marche, 404 quand la ressource n'existe pas, 400 quand la requête est mal formée. Beaucoup d'API renvoient 200 avec un message d'erreur dans le corps, ce qui oblige chaque client à inspecter la réponse pour savoir si elle a réussi. Respecter les codes permet aux bibliothèques HTTP standard de faire leur travail sans code supplémentaire."],
-            ['titre' => "PHP et MySQL sans dépendance lourde", 'texte' => "Les données de référence changent rarement et le volume est modeste : quelques milliers d'entrées au total. Un framework complet n'apporterait rien ici, tout en ajoutant une surface de maintenance et des mises à jour à suivre. Du PHP structuré sur un hébergement mutualisé standard suffit largement, et garantit que l'API reste en ligne sans intervention pendant des années."],
+            ['titre' => "Laravel et MySQL, des routes en lecture seule", 'texte' => "L'API est écrite avec Laravel 10 et une base MySQL, comme le montre le dépôt public bj-decoupage sur GitHub. Le framework apporte le routage, les contrôleurs et l'accès aux données sans code à réinventer, et les routes publiques restent en lecture seule : des départements jusqu'aux quartiers, chaque niveau se consulte sans compte. Les données de référence changent rarement et le volume est modeste, quelques milliers d'entrées au total : un hébergement PHP standard suffit pour la servir."],
             ['titre' => "Des index sur les colonnes de filtrage", 'texte' => "Le cas d'usage dominant est le filtrage par entité parente, les communes d'un département donné. Ces colonnes sont indexées, ce qui rend la réponse quasi instantanée quelle que soit la façon dont l'API est interrogée. Sur un volume modeste, cela peut sembler superflu ; c'est surtout ce qui permet de ne pas s'inquiéter du jour où l'usage augmente."],
         ],
     ],
