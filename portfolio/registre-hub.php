@@ -20,6 +20,8 @@ if ($listeType === 'service') {
         $hubFamilles[$hubFamille] = array_filter($elements, static fn(array $q): bool => ($q['famille'] ?? '') === $hubFamille);
     }
     $hubFamilles = array_filter($hubFamilles);
+    // Le schéma ItemList suit l'ordre affiché.
+    $elements = array_merge(...array_values($hubFamilles));
 }
 $miettes = maillage_ariane($rp, $racineReg);
 $groupes = maillage_liens($rp, $racineReg);

@@ -65,6 +65,9 @@ function test_gabarit_hub_services_groupe_par_famille(): void
     assert_true($carte('site-vitrine-professionnel') < $pos['Applications et IA'], 'vitrine dans Sites et boutiques');
     assert_true($carte('integration-odoo') > $pos['ERP et gestion'], 'Odoo dans ERP et gestion');
     assert_contains('<h3>', substr($html, (int) $pos['Sites et boutiques'], 2000), 'cartes en H3 sous le titre de famille');
+    preg_match('#<script type="application/ld\+json">(.*?)</script>#s', $html, $m);
+    $ld = $m[1] ?? '';
+    assert_true(strpos($ld, '/services/site-vitrine-professionnel') < strpos($ld, '/services/integration-odoo'), 'ItemList dans l\'ordre affiché');
 }
 
 function test_gabarit_page_noindex_respectee(): void
