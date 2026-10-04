@@ -23,6 +23,24 @@ function test_entete_registre_de_navigation_complet(): void
     assert_same(['Afrique francophone', 'Europe et Canada'], array_keys($nav['pays']));
 }
 
+function test_entete_services_ranges_par_familles_vers_les_piliers(): void
+{
+    // Vague 1A, Task 10 : quatre cartes de six liens au plus, chaque lien vise
+    // un pilier publié de la même famille, servi en 200.
+    $nav = navigation_chargee();
+    assert_same(REGISTRES_FAMILLES, array_keys($nav['services']));
+    foreach ($nav['services'] as $famille => $g) {
+        assert_true(count($g['liens']) <= 6, "{$famille} : plus de six liens");
+        foreach ($g['liens'] as [$libelle, $url]) {
+            assert_true((bool) preg_match('#^/services/([a-z0-9-]+)$#', $url, $m), "{$libelle} : {$url} n'est pas un pilier");
+            $p = registre_lire('service', $m[1]);
+            assert_true($p !== null && registre_publiee($p), "{$url} : pilier absent ou non publié");
+            assert_same($famille, $p['famille'], "{$url} : famille");
+            assert_same(200, http_local($url)['code'], $url);
+        }
+    }
+}
+
 function test_entete_trois_mega_menus_accessibles(): void
 {
     $html = entete_rendre();
