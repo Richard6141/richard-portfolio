@@ -33,6 +33,8 @@ $pageSchemas   = array_merge(
     schema_page_registre($rp, $miettes, SITE_URL)
 );
 
+// Typographie française appliquée à la page rendue (helpers/blocs.php).
+ob_start();
 include __DIR__ . '/partials/pv2-head.php';
 include __DIR__ . '/partials/pv2-header.php';
 ?>
@@ -73,3 +75,4 @@ include __DIR__ . '/partials/pv2-header.php';
 <?php include __DIR__ . '/partials/pv2-footer.php'; ?>
 </body>
 </html>
+<?php echo typo_fr_html((string) ob_get_clean());

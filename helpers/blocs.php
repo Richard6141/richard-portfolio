@@ -13,6 +13,27 @@ const BLOCS_TYPES = [
     'frise', 'vigilance', 'lecon', 'citation', 'checklist', 'faq', 'sources', 'cta', 'programme', 'galerie',
 ];
 
+/**
+ * Typographie française d'une page rendue : espace insécable avant « : ; ? ! »
+ * et dans les guillemets, pour qu'aucun signe ne tombe seul en début de ligne.
+ * Seul le texte entre les balises change ; balises, attributs, scripts et
+ * styles restent intacts.
+ */
+function typo_fr_html(string $html): string
+{
+    $parts = preg_split('#(<script\b.*?</script>|<style\b.*?</style>|<[^>]*>)#is', $html, -1, PREG_SPLIT_DELIM_CAPTURE);
+    if ($parts === false) {
+        return $html;
+    }
+    foreach ($parts as $i => $part) {
+        if ($part === '' || $part[0] === '<') {
+            continue;
+        }
+        $parts[$i] = (string) preg_replace(['/ (?=[:;?!»])/u', '/« /u'], ["\u{00A0}", "«\u{00A0}"], $part);
+    }
+    return implode('', $parts);
+}
+
 /** Texte échappé, avec les seules balises autorisées restaurées. */
 function bloc_texte(string $texte): string
 {
