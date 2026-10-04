@@ -45,3 +45,13 @@ function test_htaccess_texte_brut_annonce_utf8(): void
     assert_same(200, $r['code']);
     assert_contains('charset=utf-8', $r['type']);
 }
+
+function test_workflow_quotidien_regenere_le_sitemap(): void
+{
+    // Vague 1B : une page dont la date « publie » arrive entre deux déploiements entre dans le sitemap le matin même.
+    $y = (string) @file_get_contents(racine('.github/workflows/quotidien.yml'));
+    assert_contains('schedule:', $y);
+    assert_contains("cron: '15 6 * * *'", $y);
+    assert_contains('generate-sitemap.php?key=${{ secrets.SITEMAP_KEY }}', $y);
+    assert_contains('https://api.indexnow.org/IndexNow', $y);
+}

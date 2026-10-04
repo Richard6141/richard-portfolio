@@ -1,0 +1,49 @@
+name: Sitemap et IndexNow quotidiens
+
+# Publication etalee (spec 11.3, vague 1B, 05/10/2026) : une page de registre
+# n'est servie qu'a partir de sa date « publie ». Le sitemap etant un fichier
+# STATIQUE regenere au deploiement, une page qui arrive a sa date entre deux
+# deploiements n'y entrerait pas. Ce workflow le regenere chaque matin
+# (6 h 15 UTC, 7 h 15 a Cotonou) et signale les URL a IndexNow, avec les memes
+# etapes que deploy.yml, sans checkout ni SSH.
+on:
+  schedule:
+    - cron: '15 6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: deploiement-production
+  cancel-in-progress: false
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Regenerer le sitemap
+        run: |
+          curl --fail --silent --show-error --max-time 60 \
+            "https://richardsalanon.com/generate-sitemap.php?key=${{ secrets.SITEMAP_KEY }}"
+
+      # IndexNow concerne Bing, Yandex, Seznam et Naver, pas Google.
+      - name: Signaler les URL a IndexNow
+        continue-on-error: true
+        run: |
+          cle=a7f3c9e21b6d4f08a5c2e9d7b4f16a83
+          curl --silent --show-error --max-time 60 \
+            "https://richardsalanon.com/sitemap.xml" \
+            | grep -o '<loc>[^<]*' | sed 's/<loc>//' > urls.txt
+          echo "URL a signaler : $(wc -l < urls.txt)"
+          python3 - "$cle" < urls.txt > payload.json <<'PY'
+          import sys, json
+          urls = [l.strip() for l in sys.stdin if l.strip()]
+          print(json.dumps({
+              "host": "richardsalanon.com",
+              "key": sys.argv[1],
+              "keyLocation": "https://richardsalanon.com/%s.txt" % sys.argv[1],
+              "urlList": urls[:10000],
+          }))
+          PY
+          code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 60 \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data @payload.json https://api.indexnow.org/IndexNow)
+          echo "IndexNow : HTTP $code (200 ou 202 = accepte)"
