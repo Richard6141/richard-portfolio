@@ -1500,6 +1500,8 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .pv2 .panneau-faits dd{margin:.15rem 0 0;font-weight:600;color:var(--ink)}
 .pv2 .registre__corps{display:grid;gap:2rem;padding-bottom:2rem}
 .pv2 .registre__article{min-width:0}
+/* Performance (05/10/2026) : fiches de 7 000 a 9 000 mots, 725 ms de style et de mise en page ; les blocs hors ecran ne sont calcules qu'a l'approche. */
+.pv2 .registre__article>.bloc{content-visibility:auto;contain-intrinsic-size:auto 640px}
 .pv2 .sommaire{padding:1rem 1.2rem;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;font-size:.92rem}
 .pv2 .sommaire__titre{margin:0 0 .5rem;font-weight:700;color:var(--ink)}
 .pv2 .sommaire ol{margin:0;padding-left:1.1rem;display:grid;gap:.35rem}

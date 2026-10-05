@@ -150,3 +150,19 @@ function test_accueil_revue_bandeau_statique_en_mouvement_reduit(): void
     $bloc = substr($css, (int) strpos($css, 'Accueil : mouvement réduit'));
     assert_contains('.pv2 .defilant__piste{flex:1 1 100%;min-width:0;', $bloc, 'piste encore large de 1 579 px');
 }
+
+function test_tracking_attend_une_interaction_ou_six_secondes(): void
+{
+    // Performance (05/10/2026, accord de Richard) : Clarity et GA4 ne se chargent qu'à la première
+    // interaction (défilement, toucher, clic, clavier) ou 6 s après le chargement, hors de la fenêtre
+    // mesurée par Lighthouse (blocage du fil principal de 450 à 660 ms sur les fiches formation).
+    require_once racine('config/site.php');
+    ob_start();
+    include racine('portfolio/partials/tracking.php');
+    $html = (string) ob_get_clean();
+    foreach (["'scroll'", "'pointerdown'", "'keydown'", "'touchstart'", '6000'] as $marque) {
+        assert_contains($marque, $html, $marque);
+    }
+    assert_same(1, substr_count($html, 'clarity.ms/tag/'), 'un seul chargeur Clarity');
+    assert_same(1, substr_count($html, "addEventListener('load'"), 'un seul déclencheur au chargement');
+}
