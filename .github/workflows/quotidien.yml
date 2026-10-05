@@ -1,18 +1,21 @@
 name: Sitemap et IndexNow quotidiens
 
 # Publication etalee (spec 11.3, vague 1B, 05/10/2026) : une page de registre
-# n'est servie qu'a partir de sa date « publie ». Le sitemap etant un fichier
-# STATIQUE regenere au deploiement, une page qui arrive a sa date entre deux
-# deploiements n'y entrerait pas. Ce workflow le regenere chaque matin
-# (6 h 15 UTC, 7 h 15 a Cotonou) et signale les URL a IndexNow, avec les memes
-# etapes que deploy.yml, sans checkout ni SSH.
+# n'est servie qu'a partir de sa date « publie ». /sitemap.xml est servi par
+# sitemap.php (dynamique, .htaccess) et suit donc deja cette date ; le fichier
+# statique sitemap.xml, secours si PHP tombe, n'est regenere qu'au deploiement.
+# Ce workflow le regenere chaque matin (6 h 15 UTC, 7 h 15 a Cotonou) et
+# signale les URL a IndexNow le jour ou une page arrive a sa date, avec les
+# memes etapes que deploy.yml, sans checkout ni SSH.
 on:
   schedule:
     - cron: '15 6 * * *'
   workflow_dispatch:
 
+# Groupe propre : partager celui du deploiement ferait annuler un deploiement
+# en attente par ce run planifie (un seul run en attente par groupe).
 concurrency:
-  group: deploiement-production
+  group: quotidien-sitemap
   cancel-in-progress: false
 
 jobs:

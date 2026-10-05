@@ -104,3 +104,11 @@ function test_composants_dettes_0b_soldees(): void
     assert_contains('.pv2 .crumb a{color:var(--link);text-decoration:underline;text-underline-offset:3px}', $css);
     assert_contains('.pv2 .defilant.est-en-pause .defilant__piste,.pv2 .defilant:focus-within .defilant__piste{animation-play-state:paused}', $css);
 }
+
+function test_composants_bouton_long_passe_a_la_ligne_sur_mobile(): void
+{
+    // Vague 1B : « Demander la formation IA et droit OHADA » débordait à 320 et 390 px (white-space:nowrap).
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    assert_contains('.pv2 .btn{max-width:100%}', $css);
+    assert_contains('@media (max-width:640px){.pv2 .btn{white-space:normal;', $css);
+}

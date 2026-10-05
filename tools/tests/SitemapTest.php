@@ -28,7 +28,7 @@ function test_sitemap_sans_base_liste_encore_les_pages_de_fichiers(): void
     $xml = buildSitemapXml(null, 'https://richardsalanon.com');
     assert_true(simplexml_load_string($xml) !== false, 'XML invalide');
     assert_contains('<loc>https://richardsalanon.com/developpeur-web-cotonou</loc>', $xml);
-    assert_contains('<loc>https://richardsalanon.com/formation-vibecoding</loc>', $xml);
+    assert_contains('<loc>https://richardsalanon.com/formation-ia-entreprise-cotonou</loc>', $xml);
     assert_contains('<loc>https://richardsalanon.com/formations/</loc>', $xml);
     assert_not_contains('://www.richardsalanon', $xml);
     assert_true(substr_count($xml, '<loc>') >= 90, 'moins de 90 URL de fichiers (97 au 03/10/2026)');

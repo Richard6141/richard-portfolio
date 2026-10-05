@@ -17,8 +17,8 @@
 // et API Gemini, Sclar et al. (ICLR 2024), Liu et al. (TACL), Work Trend
 // Index 2024, UIT, Commission européenne (article 4, fait vérifié du
 // catalogue), SGG du Bénin, FDFP, 3FPT, France Compétences. Aucune
-// certification ni aucun agrément attribué à Richard. Publication du lot B
-// reportée ensuite : 'publie' reste au 2026-10-05 pendant la rédaction.
+// certification ni aucun agrément attribué à Richard. Fiche du lot B,
+// publiée le 2026-10-12 (spec 11.3).
 // ============================================================
 declare(strict_types=1);
 
