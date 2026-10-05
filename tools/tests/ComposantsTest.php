@@ -120,3 +120,11 @@ function test_composants_fil_ariane_sur_une_ligne_en_mobile(): void
     $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
     assert_contains('@media (max-width:640px){.pv2 .crumb{white-space:nowrap;overflow-x:auto;', $css);
 }
+
+function test_composants_blocs_hors_ecran_rendus_a_la_demande(): void
+{
+    // Performance (05/10/2026) : les fiches de 7 000 à 9 000 mots coûtaient 725 ms de style et de mise
+    // en page ; les blocs hors écran ne sont calculés qu'à l'approche (content-visibility).
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    assert_contains('.pv2 .registre__article>.bloc{content-visibility:auto;contain-intrinsic-size:auto 640px}', $css);
+}
