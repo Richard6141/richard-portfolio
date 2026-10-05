@@ -237,8 +237,8 @@ return [
             'entetes' => ['Formule de l\'éditeur', 'Prix affiché', 'Ce qu\'elle comprend selon l\'éditeur', 'Incidence sur la formation'],
             'lignes'  => [
                 ['Une application gratuite', '0 €', "Une seule application, utilisateurs illimités, sur Odoo Online.", "Formation limitée au parcours de cette application, souvent les ventes ou la facturation."],
-                ['Standard', "19,90 € par utilisateur et par mois en paiement annuel, 24,90 € en paiement mensuel", "Toutes les applications, hébergement sur Odoo Online.", "Chaque participant a besoin de son propre compte : le nombre de comptes se prévoit avant la formation."],
-                ['Personnalisé', "35,90 € par utilisateur et par mois en paiement annuel, 44,90 € en paiement mensuel", "Toutes les applications, multi-société, Studio, accès à l'API, hébergement au choix.", "Les écrans modifiés par Studio sont intégrés aux fiches réflexes."],
+                ['Standard', "19,90 € par utilisateur et par mois en paiement annuel les 12 premiers mois, puis 24,90 € ; 24,90 € en paiement mensuel les 12 premiers mois, puis 31,10 €", "Toutes les applications, hébergement sur Odoo Online.", "Chaque participant a besoin de son propre compte : le nombre de comptes se prévoit avant la formation."],
+                ['Personnalisé', "35,90 € par utilisateur et par mois en paiement annuel les 12 premiers mois, puis 44,90 € ; 44,90 € en paiement mensuel les 12 premiers mois, puis 56,90 €", "Toutes les applications, multi-société, Studio, accès à l'API, hébergement au choix.", "Les écrans modifiés par Studio sont intégrés aux fiches réflexes."],
                 ['Utilisateur léger', "7,90 € par utilisateur et par mois, sur demande auprès d'un conseiller Odoo", "Accès limité aux fonctions essentielles, sans les applications de ventes, d'achats ni de comptabilité selon la documentation des droits d'accès.", "Ne convient pas aux postes formés ici, sauf pour la caisse ou la lecture de codes-barres."],
             ],
         ],
