@@ -76,3 +76,19 @@ function test_entete_ne_modifie_aucune_variable_de_la_page(): void
     assert_same(['title' => 'Projet témoin'], $p);
     assert_same(['titre' => 'Page témoin'], $page);
 }
+
+function test_entete_formations_vers_les_fiches_publiees(): void
+{
+    // Vague 1B : quatre cartes de six liens au plus, chaque lien vise une fiche publiée servie en 200.
+    $nav = navigation_chargee();
+    assert_same(4, count($nav['formations']));
+    foreach ($nav['formations'] as $groupe => $g) {
+        assert_true(count($g['liens']) <= 6, "{$groupe} : plus de six liens");
+        foreach ($g['liens'] as [$libelle, $url]) {
+            assert_true((bool) preg_match('#^/formations/([a-z0-9-]+)$#', $url, $m), "{$libelle} : {$url}");
+            $p = registre_lire('formation', $m[1]);
+            assert_true($p !== null && registre_publiee($p), "{$url} : fiche absente ou non publiée");
+            assert_same(200, http_local($url)['code'], $url);
+        }
+    }
+}

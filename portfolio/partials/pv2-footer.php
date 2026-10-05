@@ -74,9 +74,10 @@ $horaires = fait('horaires');
     <nav class="pied__colonne" aria-label="Formations">
       <p class="pied__titre">Formations</p>
       <ul>
-        <?php foreach ($nav['formations'] as $famille => $g): ?><li><a href="<?= sanitize($g['liens'][0][1]) ?>"><?= sanitize($famille) ?></a></li><?php endforeach; ?>
-        <li><a href="<?= sanitize(url_finale('/formation-vibecoding')) ?>">Vibecoding</a></li>
-        <li><a href="<?= sanitize(url_finale('/formation-whatsapp-business')) ?>">WhatsApp Business</a></li>
+        <?php // Vague 1B : formations principales du catalogue (spec 9).
+        foreach ([['IA en entreprise', '/formations/ia-en-entreprise'], ['n8n et automatisation', '/formations/n8n'], ['Vibecoding', '/formations/vibecoding'],
+                  ['Odoo pour vos équipes', '/formations/odoo-utilisateurs'], ['Visibilité Google', '/formations/visibilite-google'],
+                  ['WhatsApp Business', '/formations/whatsapp-business']] as [$libelle, $url]): ?><li><a href="<?= sanitize(url_finale($url)) ?>"><?= sanitize($libelle) ?></a></li><?php endforeach; ?>
         <li><a href="/formations/">Toutes les formations</a></li>
       </ul>
     </nav>

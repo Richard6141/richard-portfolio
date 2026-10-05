@@ -51,3 +51,13 @@ function test_pied_relie_la_page_auteur_et_les_histoires(): void
     assert_contains('href="/histoires/"', $html);
     assert_contains('href="/comparatifs/"', $html);
 }
+
+function test_pied_formations_vers_les_fiches(): void
+{
+    // Vague 1B : la colonne Formations vise les fiches du catalogue, plus les anciennes pages.
+    $html = pied_rendre();
+    foreach (['/formations/ia-en-entreprise', '/formations/n8n', '/formations/vibecoding', '/formations/odoo-utilisateurs', '/formations/visibilite-google', '/formations/whatsapp-business', '/formations/'] as $url) {
+        assert_contains('href="' . $url . '"', $html, $url);
+    }
+    assert_not_contains('href="/formation-', $html);
+}

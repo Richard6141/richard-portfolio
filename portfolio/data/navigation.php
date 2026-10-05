@@ -45,20 +45,36 @@ return [
     ],
 
     'formations' => [
+        // Vague 1B : quatre cartes vers les fiches fortes du catalogue (spec 6.3), les autres via « Toutes les formations ».
         'Intelligence artificielle' => ['icone' => 'brain', 'liens' => [
-            ['IA en entreprise', '/formation-ia-entreprise'],
-            ['Vibecoding', '/formation-vibecoding'],
-            ['Automatisation n8n et Make', '/formation-automatisation'],
+            ['IA en entreprise', '/formations/ia-en-entreprise'],
+            ['IA générative pour dirigeants', '/formations/ia-generative-dirigeants'],
+            ['IA pour comptables (SYSCOHADA)', '/formations/ia-comptables-syscohada'],
+            ['IA et droit OHADA', '/formations/ia-droit-ohada'],
+            ['Intégrer l\'IA dans ses logiciels', '/formations/integrer-ia-logiciels-existants'],
+            ['Gouverner l\'IA', '/formations/gouvernance-ia'],
         ]],
-        'Outils de gestion' => ['icone' => 'stack', 'liens' => [
-            ['Odoo pour vos équipes', '/formation-odoo'],
-            ['Dolibarr pour vos équipes', '/formation-dolibarr'],
-            ['Outils numériques et bureautique', '/formation-outils-numeriques'],
+        'Automatisation et développement' => ['icone' => 'robot', 'liens' => [
+            ['n8n de zéro à l\'autonomie', '/formations/n8n'],
+            ['WhatsApp Business pour vendre', '/formations/whatsapp-business'],
+            ['WhatsApp relié aux ERP et au CRM', '/formations/whatsapp-odoo-dolibarr-crm'],
+            ['Vibecoding', '/formations/vibecoding'],
+            ['Développement web', '/formations/developpement-web'],
         ]],
-        'Web et visibilité' => ['icone' => 'megaphone', 'liens' => [
-            ['Développement web', '/formation-developpement-web'],
-            ['WhatsApp Business', '/formation-whatsapp-business'],
-            ['Visibilité Google', '/formation-seo-visibilite-google'],
+        'ERP et gestion' => ['icone' => 'stack', 'liens' => [
+            ['Odoo pour vos équipes', '/formations/odoo-utilisateurs'],
+            ['Odoo comptabilité SYSCOHADA', '/formations/odoo-comptabilite-syscohada'],
+            ['Odoo et IA', '/formations/odoo-ia'],
+            ['Dolibarr pour vos équipes', '/formations/dolibarr-utilisateurs'],
+            ['Excel et Google Sheets', '/formations/excel-google-sheets'],
+        ]],
+        'Visibilité et transformation' => ['icone' => 'megaphone', 'liens' => [
+            ['Visibilité Google', '/formations/visibilite-google'],
+            ['Référencement IA (GEO)', '/formations/referencement-ia-geo'],
+            ['Marketing digital B2B', '/formations/marketing-digital-b2b'],
+            ['Vendre en ligne', '/formations/e-commerce'],
+            ['Stratégie de transformation digitale', '/formations/strategie-transformation-digitale'],
+            ['Cybersécurité pour les employés', '/formations/cybersecurite-employes'],
         ]],
     ],
 
