@@ -112,3 +112,11 @@ function test_composants_bouton_long_passe_a_la_ligne_sur_mobile(): void
     assert_contains('.pv2 .btn{max-width:100%}', $css);
     assert_contains('@media (max-width:640px){.pv2 .btn{white-space:normal;', $css);
 }
+
+function test_composants_fil_ariane_sur_une_ligne_en_mobile(): void
+{
+    // Vague 1B : sur les fiches formation (4 niveaux, titres longs), le fil d'Ariane passait sur
+    // plusieurs lignes au chargement de la police et décalait le hero (CLS 0,177 mesuré par Lighthouse).
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    assert_contains('@media (max-width:640px){.pv2 .crumb{white-space:nowrap;overflow-x:auto;', $css);
+}
