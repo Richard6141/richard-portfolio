@@ -105,3 +105,11 @@ function test_registres_famille_de_service_connue(): void
     assert_same([], registre_valider('service', 'site-test', $base));
     assert_contains('famille inconnue', implode(' ', registre_valider('service', 'x', ['famille' => 'Divers'] + $base)));
 }
+
+function test_registres_univers_de_metier_connu(): void
+{
+    // Vague 1C : univers des pages métier (spec 6.3 bis).
+    $base = require fixtures() . '/metiers/test-metier.php';
+    assert_same([], registre_valider('metier', 'test-metier', $base));
+    assert_contains('univers inconnu', implode(' ', registre_valider('metier', 'x', ['univers' => 'Divers'] + $base)));
+}

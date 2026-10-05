@@ -33,6 +33,15 @@ if ($listeType === 'formation' && $rp['type'] === 'hub') {
         $elements = array_merge(...array_values($hubFamilles));
     }
 }
+// Vague 1C : les pages métier publiées, par univers, sous les fiches du hub des formations.
+$hubMetiers = [];
+if ($listeType === 'formation' && $rp['type'] === 'hub') {
+    $metiersPublies = registre_publiees('metier', $racineReg);
+    foreach (REGISTRES_UNIVERS as $hubUnivers) {
+        $hubMetiers[$hubUnivers] = array_filter($metiersPublies, static fn(array $q): bool => ($q['univers'] ?? '') === $hubUnivers);
+    }
+    $hubMetiers = array_filter($hubMetiers);
+}
 $miettes = maillage_ariane($rp, $racineReg);
 $groupes = maillage_liens($rp, $racineReg);
 
@@ -75,6 +84,17 @@ include __DIR__ . '/partials/pv2-header.php';
       </a></li>
       <?php endforeach; ?>
     </ul>
+    <?php endif; ?>
+    <?php if ($hubMetiers): ?>
+    <section id="metiers" class="liste-hub__metiers">
+      <h2 class="liste-hub__famille">Formations par métier</h2>
+      <?php foreach ($hubMetiers as $hubUnivers => $hubMetiersUnivers): ?>
+      <h3><?= sanitize($hubUnivers) ?></h3>
+      <ul class="liste-liens">
+        <?php foreach ($hubMetiersUnivers as $q): ?><li><a href="<?= sanitize($q['url']) ?>"><?= sanitize($q['titre']) ?></a></li><?php endforeach; ?>
+      </ul>
+      <?php endforeach; ?>
+    </section>
     <?php endif; ?>
     <div class="registre__article registre__article--hub">
       <?= blocs_rendre($rp['sections']) ?>

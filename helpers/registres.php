@@ -58,6 +58,9 @@ const REGISTRES_DOMAINES_NOMS = [
     'ia-systemes-existants'     => 'IA dans vos systèmes existants',
 ];
 
+/** Univers des pages métier, dans l'ordre d'affichage (spec 6.3 bis, vague 1C). */
+const REGISTRES_UNIVERS = ['Droit et justice', 'Chiffre et finance', 'Direction et gestion', 'Commerce et communication', 'Santé et social', 'Secteur public et éducation', 'Technique et terrain'];
+
 /** Familles de services (registre de navigation). */
 const REGISTRES_FAMILLES = ['Sites et boutiques', 'Applications et IA', 'Visibilité et conseil', 'ERP et gestion'];
 
@@ -147,6 +150,9 @@ function registre_valider(string $type, string $slug, array $p): array
     }
     if ($type === 'formation' && isset($p['domaine']) && !in_array($p['domaine'], REGISTRES_DOMAINES, true)) {
         $e[] = 'domaine inconnu : ' . $p['domaine'];
+    }
+    if ($type === 'metier' && isset($p['univers']) && !in_array($p['univers'], REGISTRES_UNIVERS, true)) {
+        $e[] = 'univers inconnu : ' . $p['univers'];
     }
     if ($type === 'histoire' && isset($p['relation']) && !in_array($p['relation'], ['direct', 'sous-traitance', 'produit', 'externe'], true)) {
         $e[] = 'relation : direct, sous-traitance, produit ou externe';

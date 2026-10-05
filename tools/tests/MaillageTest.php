@@ -68,3 +68,14 @@ function test_maillage_page_pays_vers_ses_villes_sans_avertissement(): void
     foreach ($g as $groupe) { foreach ($groupe['liens'] as $l) { $liens[$l[1]] = $l[0]; } }
     assert_same('Développeur web à Cotonou', $liens['/developpeur-web-cotonou'] ?? null);
 }
+
+function test_maillage_fiche_formation_propose_ses_metiers(): void
+{
+    // Vague 1C : une fiche formation renvoie vers les pages métier qui la citent, une fois publiées.
+    $racine = racine('tools/tests/fixtures/registres');
+    $p = registre_lire('formation', 'ia-test', $racine);
+    $apres = array_column(maillage_liens($p, $racine, '2026-06-01'), 'titre');
+    assert_contains('Formations par métier', implode('|', $apres));
+    $avant = array_column(maillage_liens($p, $racine, '2025-12-31'), 'titre');
+    assert_not_contains('Formations par métier', implode('|', $avant), 'métier non publié : aucun lien');
+}
