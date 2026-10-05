@@ -165,7 +165,7 @@ return [
             'legende' => 'Offres et versions relevées le 5 octobre 2026 sur la page tarifs de n8n et dans sa documentation. Prix de l\'éditeur hors taxes, payés à n8n et non à Richard SALANON ; conversion au taux fixe de 655,957 FCFA pour un euro publié par la BCEAO.',
             'entetes' => ['Élément', 'Ce que publie l\'éditeur', 'Ce que cela change pour la formation'],
             'lignes'  => [
-                ['Version enseignée', 'n8n 2.40, publiée le 15 septembre 2026 selon les notes de version.', 'Les écrans de la formation sont ceux de la version installée chez vous ; une instance très ancienne est mise à jour ou remplacée par l\'essai Cloud pendant la session.'],
+                ['Version enseignée', 'n8n 2.41, publiée le 22 septembre 2026 selon les notes de version.', 'Les écrans de la formation sont ceux de la version installée chez vous ; une instance très ancienne est mise à jour ou remplacée par l\'essai Cloud pendant la session.'],
                 ['n8n 3.0', 'Annoncée pour octobre 2026 ; les installations auto-hébergées devront passer par Docker, sans npm ni npx.', 'Sans effet pour un débutant sur n8n Cloud. Une équipe qui a installé n8n avec npm doit prévoir sa migration, traitée dans la fiche n8n avancé.'],
                 ['Essai de n8n Cloud', '14 jours sans carte bancaire, limités à 1 000 exécutions, 5 exécutions simultanées et 180 secondes par exécution.', 'Suffisant pour les deux jours de formation et les premières semaines de pratique, si aucun flux n\'est déjà installé chez vous.'],
                 ['n8n Cloud Starter', '20 € par mois en paiement annuel (environ 13 119 FCFA), 2 500 exécutions par mois, étapes illimitées, 5 exécutions simultanées.', 'Le premier abonnement payant d\'une petite équipe ; la formation apprend à estimer avant de souscrire si 2 500 exécutions suffisent.'],
@@ -318,7 +318,7 @@ return [
         ['titre' => 'n8n Docs, Understand n8n\'s data structure (items et traitement par élément)', 'url' => 'https://docs.n8n.io/build/work-with-data/understand-n8ns-data-structure', 'date' => '2026-10-05'],
         ['titre' => 'n8n Docs, Pin and mock data (données épinglées en développement)', 'url' => 'https://docs.n8n.io/build/work-with-data/pin-and-mock-data', 'date' => '2026-10-05'],
         ['titre' => 'n8n Docs, Configure workflow settings (flux d\'erreur, fuseau horaire par défaut)', 'url' => 'https://docs.n8n.io/build/manage-workflows/configure-workflow-settings', 'date' => '2026-10-05'],
-        ['titre' => 'n8n Docs, Release notes (n8n 2.40, 15 septembre 2026)', 'url' => 'https://docs.n8n.io/changelog/release-notes', 'date' => '2026-10-05'],
+        ['titre' => 'n8n Docs, Release notes (n8n 2.41, 22 septembre 2026)', 'url' => 'https://docs.n8n.io/changelog/release-notes', 'date' => '2026-10-05'],
         ['titre' => 'n8n Docs, v3.0 Breaking changes (n8n 3.0 prévu en octobre 2026)', 'url' => 'https://docs.n8n.io/changelog/v30-breaking-changes', 'date' => '2026-10-05'],
         ['titre' => 'n8n Docs, Choose how to use n8n (Cloud ou auto-hébergement)', 'url' => 'https://docs.n8n.io/choose-how-to-use-n8n', 'date' => '2026-10-05'],
         ['titre' => 'n8n Docs, License FAQ (licence communautaire, usage interne et formation)', 'url' => 'https://docs.n8n.io/n8n-community-license/community-license/license-faq', 'date' => '2026-10-05'],
