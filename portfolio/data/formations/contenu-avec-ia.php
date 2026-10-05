@@ -22,7 +22,7 @@
 // economie.gouv.fr (influence commerciale), CNIL, Eurostat, UIT, loi
 // béninoise n° 2017-20 (articles 383, 384, 389, 390), FDFP, 3FPT, France
 // Compétences. Aucune certification ni aucun agrément attribué à Richard.
-// Publication du lot B reportée ensuite : 'publie' reste au 2026-10-05.
+// Fiche du lot B, publiée le 2026-10-12 (spec 11.3).
 // ============================================================
 declare(strict_types=1);
 
