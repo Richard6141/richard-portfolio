@@ -15,7 +15,7 @@ return [
     'meta'    => 'Agent IA sur WhatsApp : commandes, rendez-vous, service client et relais humain sur l\'API officielle de Meta, avec ses tarifs 2026 expliqués.',
     'en_bref' => 'Conception et mise en service d\'agents IA et de chatbots WhatsApp qui prennent les commandes, répondent au service client, fixent les rendez-vous et qualifient les prospects, à partir de votre propre base de connaissances, avec un passage de main à un humain pour tout ce qui sort du cadre. Pour les commerces, restaurants, cliniques, écoles, agences et PME de services d\'Afrique francophone, d\'Europe et du Canada qui reçoivent leurs demandes sur WhatsApp. Un premier agent tourne en production en 2 à 6 semaines selon les branchements. Le prix est fixé sur devis, hors frais de messages facturés par Meta.',
     'publie'  => '2026-10-04',
-    'maj'     => '2026-10-04',
+    'maj'     => '2026-10-05',
     'famille' => 'Applications et IA',
     'matrice' => true,
 
@@ -115,7 +115,7 @@ return [
                 ['Authentification', '0,0033 euro (0,004 dollar)', '0,0248 euro (0,03 dollar)', '0,0142 euro (0,0171 dollar)', '0,0028 euro (0,0034 dollar)'],
                 ['Service (réponses libres), 1 000 premiers par numéro et par mois', 'Gratuit', 'Gratuit', 'Gratuit', 'Gratuit'],
                 ['Service au-delà de 1 000 par numéro et par mois', '0,0033 euro (0,004 dollar)', '0,0248 euro (0,03 dollar)', '0,0142 euro (0,0171 dollar)', '0,0028 euro (0,0034 dollar)'],
-                ['Tout message dans une fenêtre d\'entrée gratuite de 72 heures', 'Gratuit', 'Gratuit', 'Gratuit', 'Gratuit'],
+                ['Tout message dans une fenêtre d\'entrée gratuite, ouverte jusqu\'à 7 jours', 'Gratuit', 'Gratuit', 'Gratuit', 'Gratuit'],
                 ['Réponses produites par Meta Business Agent', '2 dollars par million de jetons', '2 dollars par million de jetons', '2 dollars par million de jetons', '2 dollars par million de jetons'],
             ],
         ],
@@ -123,7 +123,7 @@ return [
             'type'        => 'prose',
             'titre'       => 'Comment lire cette grille, et combien coûte un mois type ?',
             'paragraphes' => [
-                'Depuis le 1er juillet 2025, Meta ne facture plus par conversation mais par modèle de message délivré. Les réponses libres de l\'agent, appelées messages de service, étaient gratuites depuis le 1er novembre 2024 ; la <a href="https://developers.facebook.com/docs/whatsapp/pricing">page de tarification de Meta</a>, consultée le 3 octobre 2026, indique que Meta les facture à nouveau depuis le 1er octobre 2026, au-delà de 1 000 messages gratuits par numéro et par mois, quota non reportable. Autre exception utile : quand un client arrive par une publicité « cliquer pour WhatsApp » ou le bouton d\'une page Facebook et que vous répondez sous 24 heures, tous les messages sont gratuits pendant 72 heures.',
+                'Depuis le 1er juillet 2025, Meta ne facture plus par conversation mais par modèle de message délivré. Les réponses libres de l\'agent, appelées messages de service, étaient gratuites depuis le 1er novembre 2024 ; la <a href="https://developers.facebook.com/docs/whatsapp/pricing">page de tarification de Meta</a>, consultée le 3 octobre 2026, indique que Meta les facture à nouveau depuis le 1er octobre 2026, au-delà de 1 000 messages gratuits par numéro et par mois, quota non reportable. Autre exception utile : quand un client arrive par une publicité « cliquer pour WhatsApp » depuis l\'application mobile et que vous répondez dans la fenêtre de 24 heures, Meta ne facture plus vos messages pendant une fenêtre qui peut rester ouverte jusqu\'à 7 jours, sauf ceux du Meta Business Agent.',
                 'Prenons une boutique de Cotonou sur un mois : 3 000 réponses de l\'agent sur un seul numéro, 500 confirmations de commande envoyées hors fenêtre et 2 000 messages promotionnels à des clients qui ont donné leur accord. Les 2 000 réponses au-delà du quota coûtent 6,60 euros, les confirmations 1,65 euro, la promotion 37,20 euros : 45,45 euros, soit environ 29 813 FCFA au taux fixe de 655,957 francs CFA pour un euro publié par la BCEAO. Meta ne publiant aucune grille en francs CFA, la conversion part de la grille en euros.',
                 'La même activité avec des clients en France coûte 204,40 euros, dont 142,40 pour la seule promotion. Deux enseignements en ressortent. D\'abord, ce sont les messages marketing qui pèsent, pas les réponses de l\'agent : un agent qui répond bien coûte peu en frais Meta. Ensuite, la facture de Meta n\'est qu\'une partie du coût d\'exploitation : le modèle d\'IA qui rédige les réponses, l\'hébergement et la maintenance s\'y ajoutent, détaillés plus bas.',
             ],
@@ -220,7 +220,7 @@ return [
             'items' => [
                 ['valeur' => '24 heures', 'libelle' => 'Durée de la fenêtre de service client ouverte par chaque message d\'un client, seule période où l\'agent répond librement', 'source' => 'Meta, tarification de la plateforme WhatsApp Business', 'url' => 'https://developers.facebook.com/docs/whatsapp/pricing'],
                 ['valeur' => '1 000', 'libelle' => 'Messages de service gratuits par numéro et par mois depuis le 1er octobre 2026, facturés au-delà', 'source' => 'Meta, tarification de la plateforme WhatsApp Business', 'url' => 'https://developers.facebook.com/docs/whatsapp/pricing'],
-                ['valeur' => '72 heures', 'libelle' => 'Fenêtre de gratuité totale quand le client arrive par une publicité « cliquer pour WhatsApp » et reçoit une réponse sous 24 heures', 'source' => 'Meta, tarification de la plateforme WhatsApp Business', 'url' => 'https://developers.facebook.com/docs/whatsapp/pricing'],
+                ['valeur' => 'Jusqu\'à 7 jours', 'libelle' => 'Fenêtre de gratuité totale quand le client arrive par une publicité « cliquer pour WhatsApp » et reçoit une réponse sous 24 heures', 'source' => 'Meta, tarification de la plateforme WhatsApp Business', 'url' => 'https://developers.facebook.com/docs/whatsapp/pricing'],
                 ['valeur' => '250', 'libelle' => 'Destinataires uniques joignables hors fenêtre en 24 heures par un nouveau portefeuille, avant vérification', 'source' => 'Meta, limites d\'envoi de messages', 'url' => 'https://developers.facebook.com/docs/whatsapp/messaging-limits'],
                 ['valeur' => '812,02 CAD', 'libelle' => 'Somme mise à la charge d\'Air Canada pour une information erronée donnée par son chatbot (14 février 2024)', 'source' => 'Civil Resolution Tribunal, Moffatt v. Air Canada, 2024 BCCRT 149', 'url' => 'https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do'],
                 ['valeur' => '248 millions', 'libelle' => 'Comptes de monnaie électronique dans l\'UEMOA en 2024, contre 209 millions en 2023', 'source' => 'BCEAO, services financiers numériques dans l\'UEMOA, 2024', 'url' => 'https://www.bceao.int/fr/publications/rapport-annuel-sur-les-services-financiers-numeriques-dans-luemoa-2024'],
@@ -347,7 +347,7 @@ return [
     ],
 
     'sources' => [
-        ['titre' => 'Meta, tarification de la plateforme WhatsApp Business (grilles en vigueur au 1er octobre 2026, quota de messages de service, fenêtres de 24 et 72 heures)', 'url' => 'https://developers.facebook.com/docs/whatsapp/pricing', 'date' => '2026-10-03'],
+        ['titre' => 'Meta, tarification de la plateforme WhatsApp Business (grilles en vigueur au 1er octobre 2026, quota de messages de service, fenêtre de 24 heures et fenêtre avec point d\'entrée gratuit)', 'url' => 'https://developers.facebook.com/docs/whatsapp/pricing', 'date' => '2026-10-05'],
         ['titre' => 'Meta, politique tarifaire pour les fournisseurs d\'IA sur la plateforme WhatsApp Business', 'url' => 'https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/ai-providers', 'date' => '2026-10-03'],
         ['titre' => 'Meta, limites d\'envoi de messages de la plateforme WhatsApp Business', 'url' => 'https://developers.facebook.com/docs/whatsapp/messaging-limits', 'date' => '2026-10-03'],
         ['titre' => 'Meta, présentation de la Cloud API (débit par défaut)', 'url' => 'https://developers.facebook.com/docs/whatsapp/cloud-api/overview', 'date' => '2026-10-03'],
