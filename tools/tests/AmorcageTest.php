@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 function test_amorcage_pages_de_fichiers_rendues_sans_base(): void
 {
-    foreach (['/developpeur-web-cotonou', '/formation-vibecoding', '/a-propos/', '/contact'] as $chemin) {
+    foreach (['/developpeur-web-cotonou', '/formation-ia-entreprise-cotonou', '/a-propos/', '/contact'] as $chemin) {
         $r = http_local($chemin);
         assert_same(200, $r['code'], $chemin);
         assert_not_contains('Fatal error', $r['corps'], $chemin);

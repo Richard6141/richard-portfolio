@@ -38,8 +38,13 @@ return array (
         0 => 'Texte de test.',
       ),
     ),
+    1 =>
+    array (
+      'type' => 'programme',
+      'titre' => 'Quel est le programme ?',
+    ),
   ),
-  'faq' => 
+  'faq' =>
   array (
     0 => 
     array (

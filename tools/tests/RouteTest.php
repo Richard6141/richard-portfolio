@@ -41,7 +41,7 @@ function test_route_http_404_franc_et_historique_intact(): void
     assert_same(301, http_local('/guides')['code']);
     assert_same('/guides/', parse_url((string) http_local('/guides')['location'], PHP_URL_PATH));
     assert_same(301, http_local('/formations/ia-en-entreprise/')['code']);
-    assert_same(200, http_local('/formation-vibecoding')['code'], 'page historique');
+    assert_same(200, http_local('/formation-ia-entreprise-cotonou')['code'], 'page historique');
     assert_same(200, http_local('/developpeur-web-cotonou')['code']);
     assert_same(404, http_local('/n-existe-pas')['code']);
 }
@@ -51,4 +51,12 @@ function test_route_hub_services_prefere_le_registre(): void
     $src = (string) file_get_contents(racine('portfolio/services-index.php'));
     $p = strpos($src, "route_resoudre('services/')");
     assert_true($p !== false && $p < strpos($src, 'exiger_base($pdo)'), 'registre avant la base');
+}
+
+function test_route_hub_formations_prefere_le_registre(): void
+{
+    $src = (string) file_get_contents(racine('portfolio/formations.php'));
+    assert_true(strpos($src, "route_resoudre('formations/')") !== false, 'registre consulté');
+    assert_true(strpos($src, "route_resoudre('formations/')") < strpos($src, 'route_404()'), 'registre, sinon 404 franc');
+    assert_not_contains('FCFA', $src, 'plus de grille tarifaire codée en dur');
 }

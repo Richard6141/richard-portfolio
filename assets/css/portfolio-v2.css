@@ -1044,6 +1044,9 @@ html{scroll-padding-top:5.5rem}
 
 /* ---------- Boutons ---------- */
 .pv2 .btn,.pv2 .btn--action{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;padding:0 1.4rem;border-radius:var(--radius);border:2px solid var(--brand);background:var(--brand);color:#fff;font-family:var(--body);font-weight:600;font-size:.98rem;line-height:1.2;white-space:nowrap;cursor:pointer;transition:background var(--fast) var(--ease),border-color var(--fast) var(--ease),transform var(--fast) var(--ease),box-shadow var(--fast) var(--ease),color var(--fast) var(--ease)}
+/* Vague 1B : un bouton au libellé long passe à la ligne au lieu de déborder sur mobile. */
+.pv2 .btn{max-width:100%}
+@media (max-width:640px){.pv2 .btn{white-space:normal;text-align:center;padding-top:.55rem;padding-bottom:.55rem}}
 .pv2 .btn:hover,.pv2 .btn--action:hover{background:var(--brand-hover);border-color:var(--brand-hover);color:#fff;transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(194,80,47,.55)}
 .pv2 .btn:active{transform:translateY(1px)}
 .pv2 .btn-ghost,.pv2 .btn.btn-ghost,.pv2 .btn--contour{background:#fff;color:var(--ink);border:2px solid var(--line-strong)}

@@ -23,6 +23,16 @@ if ($listeType === 'service') {
     // Le schéma ItemList suit l'ordre affiché.
     $elements = array_merge(...array_values($hubFamilles));
 }
+// Vague 1B : hub des formations rangé par domaine, comme les services par famille.
+if ($listeType === 'formation' && $rp['type'] === 'hub') {
+    foreach (REGISTRES_DOMAINES_NOMS as $hubSlug => $hubNom) {
+        $hubFamilles[$hubNom] = array_filter($elements, static fn(array $q): bool => ($q['domaine'] ?? '') === $hubSlug);
+    }
+    $hubFamilles = array_filter($hubFamilles);
+    if ($hubFamilles) {
+        $elements = array_merge(...array_values($hubFamilles));
+    }
+}
 $miettes = maillage_ariane($rp, $racineReg);
 $groupes = maillage_liens($rp, $racineReg);
 

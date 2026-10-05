@@ -61,3 +61,17 @@ function test_redirections_revue_articles_de_blog_rediriges_retires_des_listes()
         assert_contains('blog_sans_rediriges(', (string) file_get_contents(racine($f)), $f);
     }
 }
+
+function test_redirections_anciennes_formations_vers_leur_fiche_en_un_saut(): void
+{
+    // Vague 1B : les 9 anciennes pages formation (et l'ancienne fiche en base) pointent sur leur fiche.
+    foreach (['/formation-ia-entreprise' => '/formations/ia-en-entreprise', '/formation-odoo' => '/formations/odoo-utilisateurs',
+              '/formation-outils-numeriques' => '/formations/excel-google-sheets', '/formation-automatisation' => '/formations/n8n',
+              '/services/formation-en-programmation' => '/formations/developpement-web'] as $ancienne => $cible) {
+        $r = http_local($ancienne);
+        assert_same(301, $r['code'], $ancienne);
+        assert_same($cible, parse_url((string) $r['location'], PHP_URL_PATH), $ancienne);
+        assert_same(200, http_local($cible)['code'], $cible);
+    }
+    assert_same(200, http_local('/formation-ia-entreprise-cotonou')['code'], 'page de ville conservée');
+}
