@@ -1267,6 +1267,7 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 
 /* Fil d'Ariane : la règle .crumb écrasait la marge latérale de .wrap (texte collé au bord) */
 .pv2 .crumb{padding:calc(var(--header-h) + 1.5rem) 26px 0;font-family:var(--body);font-size:.88rem;letter-spacing:0;color:var(--muted)}
+/* Vague 1B : sur mobile, le fil d'Ariane tient sur une ligne (défilement horizontal) : sa hauteur ne dépend plus de la police (CLS). */@media (max-width:640px){.pv2 .crumb{white-space:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.pv2 .crumb::-webkit-scrollbar{display:none}}
 .pv2 .crumb .sep{color:var(--line-strong)}
 
 /* Tiroir ouvert : backdrop-filter sur l'en-tête crée un repère qui enfermait
