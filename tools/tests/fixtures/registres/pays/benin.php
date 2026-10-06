@@ -10,6 +10,16 @@ return array (
       'source' => 'https://example.org/',
       'date' => '2026-01-01',
     ),
+    'operateurs' => 
+    array (
+      'v' => 
+      array (
+        0 => 'MTN MoMo',
+        1 => 'Moov Money',
+      ),
+      'source' => 'https://example.org/paiement',
+      'date' => '2026-01-01',
+    ),
   ),
   'title' => 'Création de site test à Cotonou | Richard SALANON',
   'meta' => 'Page de test du registre des services : elle sert uniquement aux tests automatiques et n\'est jamais servie sur le site public de Richard.',
@@ -26,6 +36,11 @@ return array (
       array (
         0 => 'Texte de test.',
       ),
+    ),
+    1 => 
+    array (
+      'type' => 'fiche',
+      'titre' => 'Quels repères retenir sur le pays ?',
     ),
   ),
   'faq' => 

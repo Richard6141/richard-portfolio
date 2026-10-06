@@ -120,3 +120,28 @@ function test_registres_univers_de_metier_connu(): void
     assert_same([], registre_valider('metier', 'test-metier', $base));
     assert_contains('univers inconnu', implode(' ', registre_valider('metier', 'x', ['univers' => 'Divers'] + $base)));
 }
+
+function test_registres_fiche_pays_valide(): void
+{
+    // Vague 1D : chaque valeur de fiche porte sa source https et sa date (spec 6.5).
+    $base = require fixtures() . '/pays/benin.php';
+    assert_same([], registre_valider('pays', 'benin', $base));
+    $erreurs = static fn($fiche): string => implode(' ', registre_valider('pays', 'benin', ['fiche' => $fiche] + $base));
+    assert_contains('clé inconnue « operateur »', $erreurs(['operateur' => ['v' => 'MTN', 'source' => 'https://x.org/', 'date' => '2026-01-01']]));
+    assert_contains('fiche[capitale]', $erreurs(['capitale' => ['v' => '', 'source' => 'https://x.org/', 'date' => '2026-01-01']]));
+    assert_contains('fiche[capitale]', $erreurs(['capitale' => ['v' => 'Porto-Novo', 'source' => 'http://x.org/', 'date' => '2026-01-01']]));
+    assert_contains('fiche[capitale]', $erreurs(['capitale' => ['v' => 'Porto-Novo', 'source' => 'https://x.org/']]));
+    assert_contains('fiche[operateurs]', $erreurs(['operateurs' => ['v' => ['', ' '], 'source' => 'https://x.org/', 'date' => '2026-01-01']]));
+    assert_contains('fiche : tableau attendu', $erreurs('Porto-Novo'));
+}
+
+function test_registres_fiche_pays_groupee_dans_l_ordre(): void
+{
+    $groupes = registre_fiche_groupes([
+        'operateurs' => ['v' => ['MTN MoMo', 'Moov Money'], 'source' => 'https://example.org/p', 'date' => '2026-01-01'],
+        'capitale'   => ['v' => 'Porto-Novo', 'source' => 'https://example.org/', 'date' => '2026-01-02'],
+    ]);
+    assert_same(['Identité', 'Paiement'], array_keys($groupes), 'ordre de REGISTRES_FICHE_PAYS, groupes vides retirés');
+    assert_same(['libelle' => 'Opérateurs de mobile money', 'valeur' => 'MTN MoMo, Moov Money', 'source' => 'https://example.org/p', 'date' => '2026-01-01'], $groupes['Paiement'][0]);
+    assert_same([], registre_fiche_groupes([]));
+}
