@@ -78,4 +78,7 @@ function test_maillage_fiche_formation_propose_ses_metiers(): void
     assert_contains('Formations par métier', implode('|', $apres));
     $avant = array_column(maillage_liens($p, $racine, '2025-12-31'), 'titre');
     assert_not_contains('Formations par métier', implode('|', $avant), 'métier non publié : aucun lien');
+    // Libellé court (le title sans la marque), pas le H1 de deux lignes.
+    $groupe = array_values(array_filter(maillage_liens($p, $racine, '2026-06-01'), static fn(array $g): bool => $g['titre'] === 'Formations par métier'))[0];
+    assert_same([['Formation IA de test pour les testeurs', '/formations/metier/test-metier']], $groupe['liens']);
 }

@@ -114,5 +114,5 @@ function test_gabarit_hub_formations_liste_les_metiers_par_univers(): void
     $html = gabarit_rendre('hub', 'formations-test');
     assert_contains('id="metiers"', $html);
     assert_contains('<h3>Droit et justice</h3>', $html);
-    assert_contains('href="/formations/metier/test-metier"', $html);
+    assert_contains('href="/formations/metier/test-metier">Formation IA de test pour les testeurs</a>', $html);
 }

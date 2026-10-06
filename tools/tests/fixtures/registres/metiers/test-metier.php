@@ -13,7 +13,7 @@ return array (
       ),
     ),
   ),
-  'title' => 'Création de site test à Cotonou | Richard SALANON',
+  'title' => 'Formation IA de test pour les testeurs | Richard SALANON',
   'meta' => 'Page de test du registre des services : elle sert uniquement aux tests automatiques et n\'est jamais servie sur le site public de Richard.',
   'en_bref' => 'Page de test.',
   'publie' => '2026-01-01',

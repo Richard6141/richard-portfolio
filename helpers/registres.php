@@ -211,6 +211,12 @@ function registre_tous(string $type, string $racine = REGISTRES_RACINE): array
     return $cache[$cle];
 }
 
+/** Libellé court d'une page dans une liste de liens : son title sans la marque, à défaut son H1. */
+function registre_libelle(array $p): string
+{
+    return trim((string) preg_replace('/\s*\|\s*Richard SALANON$/u', '', (string) ($p['title'] ?? $p['titre'])));
+}
+
 function registre_publiee(array $p, ?string $aujourdhui = null): bool
 {
     $publie = $p['publie'] ?? null;

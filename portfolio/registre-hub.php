@@ -91,7 +91,7 @@ include __DIR__ . '/partials/pv2-header.php';
       <?php foreach ($hubMetiers as $hubUnivers => $hubMetiersUnivers): ?>
       <h3><?= sanitize($hubUnivers) ?></h3>
       <ul class="liste-liens">
-        <?php foreach ($hubMetiersUnivers as $q): ?><li><a href="<?= sanitize($q['url']) ?>"><?= sanitize($q['titre']) ?></a></li><?php endforeach; ?>
+        <?php foreach ($hubMetiersUnivers as $q): ?><li><a href="<?= sanitize($q['url']) ?>"><?= sanitize(registre_libelle($q)) ?></a></li><?php endforeach; ?>
       </ul>
       <?php endforeach; ?>
     </section>
