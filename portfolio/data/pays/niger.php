@@ -14,7 +14,7 @@ return [
     'titre'   => "Des logiciels, des automatisations et des paiements Airtel Money pour les entreprises nigériennes, pilotés à distance depuis Cotonou, sans décalage horaire",
     'title'   => "Développeur et consultant digital au Niger | Richard SALANON",
     'meta'    => "Sites, applications, automatisation, IA, Odoo et Dolibarr pour les entreprises du Niger : Airtel Money, facture certifiée SECeF, HAPDP, devis en FCFA.",
-    'en_bref' => "Richard SALANON conçoit pour les entreprises du Niger des sites, des applications, des automatisations et des intégrations d'IA, déploie Odoo ou Dolibarr et forme les équipes. Il travaille à distance depuis Cotonou, à la même heure qu'à Niamey, en français et avec des devis en FCFA. Les paiements s'appuient sur Airtel Money et les autres monnaies électroniques agréées par la BCEAO, la facturation sur le système certifié SECeF de la DGI et la protection des données sur la loi de 2022 contrôlée par la HAPDP.",
+    'en_bref' => "Richard SALANON accompagne les sociétés nigériennes, de Niamey à Zinder, pour leurs sites web, leurs logiciels sur mesure, l'automatisation, l'intelligence artificielle, la mise en service d'Odoo ou de Dolibarr et la formation de leurs équipes. Le travail se fait par visioconférence depuis Cotonou, sans écart d'horloge avec Niamey, en français, et chaque devis est établi en FCFA. Les paiements s'appuient sur Airtel Money et les autres monnaies électroniques agréées par la BCEAO, la facturation sur le système certifié SECeF de la DGI et la protection des données sur la loi de 2022 contrôlée par la HAPDP.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
 
@@ -48,9 +48,9 @@ return [
     'sections' => [
         [
             'type'        => 'prose',
-            'titre'       => 'Où en est le numérique au Niger, et que change-t-il pour un projet ?',
+            'titre'       => 'Que change l\'état du numérique nigérien pour un projet ?',
             'paragraphes' => [
-                "Le Niger compte 28,1 millions d'habitants fin 2025 selon DataReportal, mais seulement 17,5 % d'entre eux vivent en ville. Dans un pays aussi rural, le numérique passe d'abord par le téléphone : l'Autorité de régulation des communications électroniques et de la poste, l'ARCEP, a dénombré 17 737 818 lignes mobiles à la fin du troisième trimestre 2025, soit 62,93 % de la population de 28 184 991 habitants estimée par l'Institut national de la statistique. Quatre opérateurs détiennent une licence mobile : Celtel Niger, c'est-à-dire Airtel, en tête avec 46,68 % du parc, Moov Africa Niger avec 24,50 %, Zamani Com avec 23,41 % et Niger Telecoms avec 5,41 %.",
+                "Fin 2025, DataReportal estime la population du Niger à 28,1 millions de personnes, dont seulement 17,5 % vivent en ville. Dans un pays aussi rural, le numérique passe d'abord par le téléphone : l'Autorité de régulation des communications électroniques et de la poste, l'ARCEP, a dénombré 17 737 818 lignes mobiles à la fin du troisième trimestre 2025, soit 62,93 % de la population de 28 184 991 habitants estimée par l'Institut national de la statistique. Quatre opérateurs détiennent une licence mobile : Celtel Niger, c'est-à-dire Airtel, en tête avec 46,68 % du parc, Moov Africa Niger avec 24,50 %, Zamani Com avec 23,41 % et Niger Telecoms avec 5,41 %.",
                 "Le haut débit reste encore le point faible. L'ARCEP compte 8 488 371 abonnés à l'internet mobile, soit 30,12 % de la population, mais seulement 57 936 abonnés à l'internet fixe chez les fournisseurs d'accès, dont 63 % chez Niger Telecoms. Une application ou un site destiné à des Nigériens se conçoit donc pour un téléphone, souvent sur une connexion lente : pages légères, images compressées, formulaires courts, et un usage hors ligne partiel lorsque le métier s'y prête, par exemple une saisie sur le terrain envoyée plus tard.",
             ],
         ],
@@ -68,7 +68,7 @@ return [
         ],
         [
             'type'        => 'prose',
-            'titre'       => 'Quels moyens de paiement intégrer pour encaisser au Niger ?',
+            'titre'       => 'Quels opérateurs brancher à une boutique ou à un service nigérien ?',
             'paragraphes' => [
                 "La liste officielle des établissements de monnaie électronique de la BCEAO, arrêtée au 28 février 2026, recense neuf services au Niger : un établissement de monnaie électronique, Airtel Niger avec Airtel Money, et huit partenariats entre une banque et un opérateur. On y trouve Orange Money, avec BOA Niger, Moov Flooz, avec Banque Atlantique Niger et Atlantique Telecom, Wave, qui apparaît deux fois, avec Ecobank Niger et avec BIA Niger, Coris Money, MyNITA, avec NITA et 2iSoft, Amanata et Al Izza Business Pay.",
                 "Pour l'intégration, ce qui compte est la diversité de l'offre, bien plus fragmentée qu'un duopole : un client de Niamey peut préférer Airtel Money, un autre Orange Money, un troisième garder l'espèce.",
@@ -76,30 +76,30 @@ return [
         ],
         [
             'type'   => 'points',
-            'titre'  => 'Comment choisir entre un contrat direct, un prestataire de paiement, le paiement à la livraison et le virement ?',
+            'titre'  => 'Contrat direct, prestataire multi-opérateurs, espèces ou virement : quel montage retenir ?',
             'intro'  => 'Le bon montage dépend de ce que vous vendez, de votre clientèle et de votre capacité à administrer des comptes marchands. Voici les options, avec leur logique propre au Niger.',
             'items'  => [
                 ['titre' => 'Un contrat direct avec Airtel Money', 'texte' => "Airtel Niger est le seul établissement de monnaie électronique de la liste de la BCEAO et le premier opérateur du pays, avec 46,68 % du parc mobile. Un compte marchand Airtel Money couvre donc la plus grande part de la clientèle mobile, et c'est un bon premier choix pour une boutique ou un service d'abonnement. Les frais et les plafonds se lisent dans le contrat de l'opérateur, pas dans un article de blog."],
                 ['titre' => 'Orange Money, Moov Flooz et Wave en complément', 'texte' => "Ces trois services reposent sur un partenariat avec une banque (BOA Niger, Banque Atlantique Niger, Ecobank Niger, BIA Niger). Chacun suppose un dossier et une interface propres : on les ajoute un par un, selon ce que vos clients utilisent vraiment, plutôt que tous dès le départ."],
                 ['titre' => 'Un prestataire de paiement multi-services', 'texte' => "Un prestataire qui regroupe plusieurs opérateurs peut simplifier l'intégration. Demandez-lui la liste écrite des opérateurs nigériens qu'il couvre, ses frais et son délai de reversement avant de bâtir votre catalogue autour de lui."],
-                ['titre' => 'Le paiement à la livraison et le virement', 'texte' => "Pour des produits chers ou des clients qui se méfient du paiement en ligne, le paiement à la réception reste le plus courant dans le commerce de détail. Il demande un suivi : le logiciel sait marquer une commande comme livrée, encaissée par le livreur, puis versée à l'entreprise. Le virement convient aux ventes entre entreprises, avec une facture certifiée."],
+                ['titre' => 'Le paiement à la livraison et le virement', 'texte' => "Beaucoup d'acheteurs préfèrent encore régler en main propre à la réception, surtout pour un article coûteux ou chez un vendeur qu'ils ne connaissent pas. Le commerçant garde alors un circuit à surveiller : chaque colis doit être suivi jusqu'à l'argent réellement reversé par le livreur. Le virement bancaire convient mieux aux ventes entre sociétés, accompagnées d'une facture certifiée."],
             ],
         ],
         [
             'type'  => 'etapes',
-            'titre' => 'Comment se déroule l\'intégration d\'un paiement mobile, du cahier des charges à la mise en production ?',
+            'titre' => 'De quelles phases se compose un branchement Airtel Money, Orange Money ou Flooz, jusqu\'aux premiers encaissements ?',
             'items' => [
-                ['titre' => 'Choisir l\'opérateur d\'abord', 'texte' => "Le point de départ est votre clientèle : combien paient en Airtel Money, en Orange Money, en Flooz, en espèces. Si la majorité est chez Airtel, on commence par lui et on documente les autres pour plus tard.", 'duree' => '2 à 3 jours'],
-                ['titre' => 'Ouvrir le compte marchand', 'texte' => "L'ouverture dépend de l'opérateur ou de la banque partenaire et de vos pièces d'entreprise ; son délai ne dépend pas de Richard, qui prépare avec vous le dossier pour éviter les allers-retours entre Niamey et l'agence.", 'duree' => 'selon l\'opérateur'],
-                ['titre' => 'Développer et tester en bac à sable', 'texte' => "Création du paiement, retour de l'opérateur, notification serveur et page de confirmation. Les cas d'échec sont testés autant que le succès : délai dépassé, solde insuffisant, coupure du réseau en cours de paiement, double clic.", 'duree' => '1 à 2 semaines'],
-                ['titre' => 'Rapprocher et mettre en production', 'texte' => "Chaque paiement reçu est rapproché de sa commande et de sa facture dans votre logiciel. Une série d'essais réels de faible montant précède la bascule en production, suivie d'un suivi des premiers jours.", 'duree' => '2 à 4 jours'],
+                ['titre' => 'Arrêter l\'opérateur de départ', 'texte' => "On compte d'abord comment vos clients règlent aujourd'hui : Airtel Money, Orange Money, Flooz, espèces. Si Airtel pèse le plus lourd, il passe en premier et les autres restent notés pour une étape ultérieure.", 'duree' => '2 à 3 jours'],
+                ['titre' => 'Obtenir l\'accès marchand', 'texte' => "L'accès est accordé par l'opérateur ou par sa banque partenaire, au vu des documents de votre société. Cette durée échappe à Richard, qui monte le dossier avec vous afin d'éviter des visites répétées à l'agence de Niamey.", 'duree' => 'selon l\'opérateur'],
+                ['titre' => 'Construire et essayer hors production', 'texte' => "Le développement couvre la demande de paiement, la réponse de l'opérateur, l'avis envoyé au serveur et l'écran de confirmation. Les scénarios qui tournent mal sont rejoués avec le même soin : délai expiré, solde trop bas, réseau coupé en pleine opération, clic en double.", 'duree' => '1 à 2 semaines'],
+                ['titre' => 'Valider les encaissements puis ouvrir au public', 'texte' => "Chaque somme reçue doit retrouver sa commande et sa facture dans votre outil de gestion. Quelques opérations réelles de petit montant servent de répétition avant l'ouverture, puis les premiers jours sont surveillés de près.", 'duree' => '2 à 4 jours'],
             ],
         ],
         [
             'type'        => 'prose',
-            'titre'       => 'Quelles obligations légales changent un projet numérique au Niger ?',
+            'titre'       => 'Quel cadre juridique encadre un projet numérique mené au Niger ?',
             'paragraphes' => [
-                "Quatre textes pèsent sur un projet. La loi n° 2022-59 du 16 décembre 2022 encadre les données personnelles, et la loi n° 2023-31 du 4 juillet 2023 en a réécrit plusieurs articles, notamment ceux qui créent l'autorité de contrôle. La loi n° 2019-03 du 30 avril 2019 porte sur les transactions électroniques. Les règles fiscales de la Direction générale des impôts, la DGI, imposent la facture certifiée. Enfin le Niger est membre de l'OHADA : le traité y est en vigueur depuis le 18 septembre 1995, ce qui impose aux entreprises le droit des affaires et le plan comptable SYSCOHADA communs aux États membres.",
+                "Quatre textes pèsent sur un projet. La loi n° 2022-59 du 16 décembre 2022 encadre les données personnelles, et la loi n° 2023-31 du 4 juillet 2023 en a réécrit plusieurs articles, notamment ceux qui créent l'autorité de contrôle. La loi n° 2019-03 du 30 avril 2019 porte sur les transactions électroniques. Les règles fiscales de la Direction générale des impôts, la DGI, imposent la facture certifiée. Enfin le Niger est membre de l'OHADA : le traité y est en vigueur depuis le 18 septembre 1995, d'où un droit des affaires et un plan comptable SYSCOHADA identiques à ceux des autres États membres.",
                 "Côté données, l'autorité est la Haute Autorité de Protection des Données à caractère Personnel, la HAPDP. Selon les articles 6 et 7 de la loi de 2023, elle est rattachée à la Présidence de la République, reste une autorité administrative indépendante, compte onze membres et peut ouvrir des antennes dans le pays. Le texte prévoit parmi ses ressources les frais de délivrance des autorisations et des récépissés aux responsables de traitement : un traitement passe donc, selon sa nature, par une déclaration suivie d'un récépissé ou par une autorisation. Le détail des cas relève de la HAPDP : demandez-lui la procédure actuelle avant la mise en ligne d'une application qui collecte des données de clients.",
             ],
         ],
@@ -108,7 +108,7 @@ return [
             'titre'       => 'Où doivent être hébergées les données personnelles des Nigériens ?',
             'paragraphes' => [
                 "Le lieu d'hébergement des données de clients nigériens mérite d'être traité dès le cadrage, parce que la loi de 2022 a déjà été modifiée en juillet 2023 et que les exigences de conservation et de transfert relèvent de la HAPDP.",
-                "Concrètement, pour une application qui collecte des données de clients nigériens, Richard documente où chaque donnée est stockée, sépare les données personnelles des autres pour pouvoir les déplacer, et prévoit des sauvegardes exportables et un journal des accès. Ce travail ne coûte presque rien au départ et évite une migration lourde le jour où une obligation précise tombe. Pour le transfert hors du pays, faites vérifier la base juridique retenue avec la HAPDP ou un avocat avant d'ouvrir le service.",
+                "Dans la pratique, pour une application qui recueille des informations sur des clients nigériens, Richard note l'emplacement de chaque donnée, isole les informations personnelles pour pouvoir les transférer, et prévoit des copies de sauvegarde exportables ainsi qu'un journal des accès. Ce travail ne coûte presque rien au départ et évite une migration lourde le jour où une obligation précise tombe. Pour le transfert hors du pays, faites vérifier la base juridique retenue avec la HAPDP ou un avocat avant d'ouvrir le service.",
             ],
         ],
         [
@@ -121,11 +121,11 @@ return [
         ],
         [
             'type'    => 'tableau',
-            'titre'   => 'Facture certifiée, TVA, conservation : que doit prévoir un logiciel pour une entreprise nigérienne ?',
-            'legende' => 'Points de conformité fiscale à traiter dans un logiciel de gestion ou de vente au Niger, état au 6 octobre 2026',
-            'entetes' => ['Sujet', 'Ce que disent les sources', 'Ce que cela change dans le logiciel'],
+            'titre'   => 'Que doit gérer un outil de facturation pour rester en règle devant la DGI ?',
+            'legende' => 'Exigences fiscales à intégrer dans un outil de gestion ou de vente utilisé au Niger, situation au 6 octobre 2026',
+            'entetes' => ['Thème', 'Ce que les sources indiquent', 'Conséquence pour le logiciel'],
             'lignes'  => [
-                ['Facture certifiée SECeF', "Obligatoire depuis le 1er septembre 2021 pour les assujettis à la TVA ; code SECeF/DGI et code QR sur chaque facture (EDICOM).", "Le logiciel de gestion ne doit pas émettre de simple PDF : il passe par un SFE et un MCF agréés, ou il envoie la facture à e-SECeF et reprend le code renvoyé."],
+                ['Facture SECeF', "Obligatoire depuis le 1er septembre 2021 pour les assujettis à la TVA ; code SECeF/DGI et code QR sur chaque facture (EDICOM).", "Le logiciel de gestion ne doit pas émettre de simple PDF : il passe par un SFE et un MCF agréés, ou il envoie la facture à e-SECeF et reprend le code renvoyé."],
                 ['Plateforme e-SECeF', "Service gratuit en ligne lancé en 2023, sans matériel à acheter.", "Une intégration par interface de programmation peut éviter la double saisie. Richard vérifie avec vous la documentation disponible avant de la promettre."],
                 ['TVA courante', "Taux normal de 19 % sur la plupart des biens et services, selon Tax Atlas ; les produits de première nécessité sont exonérés et les exportations taxées à taux zéro.", "Le plan de taxes de l'ERP est paramétré selon le régime de l'entreprise ; le choix du taux d'une ligne se valide avec l'expert-comptable."],
                 ['Conservation', "Dix ans pour les pièces comptables et les factures, selon l'article cité par EDICOM.", "Sauvegardes versionnées et exportables, avec un journal des modifications."],
@@ -133,26 +133,26 @@ return [
         ],
         [
             'type'    => 'tableau',
-            'titre'   => 'Quels services pour les entreprises nigériennes, selon leur besoin ?',
-            'legende' => 'Besoins fréquents des entreprises du Niger, et le service qui y répond',
-            'entetes' => ['Besoin typique au Niger', 'Service', 'Page'],
+            'titre'   => 'Quel service choisir quand on dirige une société au Niger ?',
+            'legende' => 'Situations rencontrées par les sociétés nigériennes et prestation correspondante',
+            'entetes' => ['Situation de départ', 'Prestation', 'Détail'],
             'lignes'  => [
-                ['Vendre en ligne et encaisser par Airtel Money, Orange Money ou Flooz', 'Boutique en ligne', '<a href="/services/site-e-commerce">Site e-commerce</a>'],
+                ['Ouvrir un point de vente sur internet payable par Airtel Money, Orange Money ou Flooz', 'Boutique en ligne', '<a href="/services/site-e-commerce">Site e-commerce</a>'],
                 ['Se présenter à un bailleur, à un partenaire étranger ou à un appel d\'offres depuis Niamey', 'Site vitrine professionnel', '<a href="/services/site-vitrine-professionnel">Site vitrine professionnel</a>'],
-                ['Émettre des factures certifiées SECeF et tenir une comptabilité SYSCOHADA', 'ERP complet', '<a href="/services/integration-odoo">Intégration d\'Odoo</a>'],
-                ['Équiper une PME avec un ERP plus léger, sur votre propre serveur', 'ERP modulaire', '<a href="/services/integration-dolibarr">Intégration de Dolibarr</a>'],
+                ['Sortir des factures SECeF et suivre la comptabilité au format SYSCOHADA', 'ERP complet', '<a href="/services/integration-odoo">Intégration d\'Odoo</a>'],
+                ['Doter une petite structure d\'un ERP allégé hébergé chez vous', 'ERP modulaire', '<a href="/services/integration-dolibarr">Intégration de Dolibarr</a>'],
                 ['Répondre aux clients qui écrivent sur WhatsApp, dans la langue de leur choix, à tester avant la mise en service', 'Assistant conversationnel', '<a href="/services/agents-ia-chatbot-whatsapp">Agents IA et chatbot WhatsApp</a>'],
                 ['Relier le logiciel, le site et les opérateurs de paiement', 'Interfaces de programmation', '<a href="/services/api-rest-integrations">API REST et intégrations</a>'],
                 ['Automatiser les relances et les confirmations de paiement sans ressaisie', 'Automatisation', '<a href="/services/automatisation-ia">Automatisation et IA</a>'],
                 ['Suivre des livraisons, des collectes ou des visites de terrain avec saisie hors ligne', 'Application sur mesure', '<a href="/services/application-web-sur-mesure">Application web sur mesure</a>'],
                 ['Apparaître sur Google quand on cherche un prestataire à Niamey', 'Référencement local', '<a href="/services/seo-local-google-business">SEO local et fiche Google</a>'],
-                ['Choisir par où commencer la digitalisation', 'Cadrage', '<a href="/services/digitalisation-d-entreprise">Digitalisation d\'entreprise</a>'],
-                ['Former les équipes aux nouveaux outils', 'Formation', '<a href="/services/formation-en-entreprise">Formation en entreprise</a>'],
+                ['Savoir quel chantier numérique ouvrir en premier', 'Cadrage', '<a href="/services/digitalisation-d-entreprise">Digitalisation d\'entreprise</a>'],
+                ['Apprendre aux salariés à se servir des nouveaux outils', 'Formation', '<a href="/services/formation-en-entreprise">Formation en entreprise</a>'],
             ],
         ],
         [
             'type'  => 'cas',
-            'titre' => 'À quoi ressemble un projet numérique dans les secteurs porteurs du Niger ?',
+            'titre' => 'Que donne le numérique dans les filières qui font vivre l\'économie nigérienne ?',
             'items' => [
                 [
                     'secteur'  => 'Pétrole et sous-traitance autour de l\'oléoduc vers Sèmè',
@@ -169,11 +169,11 @@ return [
                 [
                     'secteur'  => 'Commerce de détail et vente en ligne',
                     'probleme' => 'Un commerçant de Niamey vend déjà par message, reçoit une capture d\'écran de transfert Airtel Money et vérifie chaque paiement à la main avant de livrer.',
-                    'solution' => 'Une boutique légère, pensée pour la 3G, avec paiement mobile intégré : la commande n\'est confirmée qu\'après la notification de l\'opérateur, le reçu part seul, et le paiement à la livraison reste possible pour les clients qui préfèrent.',
+                    'solution' => 'Une boutique allégée, conçue pour les connexions lentes, où le règlement par téléphone valide la commande dès que l\'opérateur confirme, le justificatif étant adressé automatiquement. Les clients qui préfèrent régler à la remise du colis conservent cette possibilité.',
                     'lien'     => ['url' => '/services/site-e-commerce', 'texte' => 'Boutique en ligne'],
                 ],
                 [
-                    'secteur'  => 'Entreprises assujetties à la TVA qui doivent émettre des factures SECeF',
+                    'secteur'  => 'Sociétés soumises à la TVA et tenues d\'émettre des factures SECeF',
                     'probleme' => 'Une PME facture dans un tableur, puis ressaisit chaque facture sur e-SECeF : double saisie, erreurs de numéro et retard de déclaration.',
                     'solution' => 'Un logiciel de facturation relié au système certifié : la facture part du devis accepté, reçoit son code SECeF et son QR code, et alimente la comptabilité SYSCOHADA sans ressaisie. Les pièces sont sauvegardées pour la durée de conservation exigée.',
                     'lien'     => ['url' => '/services/integration-dolibarr', 'texte' => 'Intégration de Dolibarr'],
@@ -181,7 +181,7 @@ return [
                 [
                     'secteur'  => 'Services payés par mobile money : écoles, cliniques, prestataires',
                     'probleme' => 'Un établissement privé encaisse des frais échelonnés par transfert mobile, et le comptable passe des heures à rattacher chaque versement au bon dossier.',
-                    'solution' => 'Un espace où chaque famille ou patient voit son solde, paie par l\'opérateur de son choix et reçoit un reçu ; le versement est rattaché au dossier par la notification de l\'opérateur, puis transmis à la comptabilité.',
+                    'solution' => 'Un portail où chaque famille ou patient consulte ce qu\'il doit, règle avec l\'opérateur qui lui convient et obtient son justificatif ; l\'avis de l\'opérateur classe le versement dans le bon dossier avant son envoi vers la comptabilité.',
                     'lien'     => ['url' => '/services/api-rest-integrations', 'texte' => 'API et intégrations'],
                 ],
             ],
@@ -190,17 +190,17 @@ return [
             'type'        => 'prose',
             'titre'       => 'Comment former les équipes nigériennes, et comment financer la formation ?',
             'paragraphes' => [
-                "Les formations se donnent à distance, en visioconférence, avec des exercices sur vos propres données et un suivi par message entre les séances. Elles se tiennent entièrement à distance. Un groupe de cinq à douze personnes, une demi-journée par module, laisse le temps de pratiquer sur l'outil réel de l'entreprise. Prévoyez un support léger : une séance de deux heures supporte mal une connexion instable, d'où des supports téléchargeables à l'avance et des enregistrements à revoir.",
+                "Les sessions se déroulent par visioconférence, autour de cas tirés de vos propres dossiers, avec des échanges par message entre deux séances. Un groupe de cinq à douze personnes, une demi-journée par module, laisse le temps de pratiquer sur l'outil réel de l'entreprise. Prévoyez un support léger : une séance de deux heures supporte mal une connexion instable, d'où des supports téléchargeables à l'avance et des enregistrements à revoir.",
                 "Pour le financement, le Fonds d'appui à la formation professionnelle et à l'apprentissage, le FAFPA, est l'organisme public à solliciter en premier : contactez-le directement pour connaître les conditions d'accès à un financement de formation en entreprise avant de budgéter.",
-                "Quelques parcours adaptés au contexte nigérien : <a href=\"/formations/odoo-comptabilite-syscohada\">Odoo et la comptabilité SYSCOHADA</a> pour les équipes financières, <a href=\"/formations/whatsapp-business\">WhatsApp Business</a> pour la relation client, <a href=\"/formations/ia-en-entreprise\">l'IA en entreprise</a> pour les dirigeants et <a href=\"/formations/securite-donnees-dirigeants\">la sécurité des données</a>, utile depuis la création de la HAPDP. Le catalogue complet est sur <a href=\"/formations/\">la page des formations</a>.",
+                "Parmi les parcours qui servent le plus au Niger : <a href=\"/formations/odoo-comptabilite-syscohada\">Odoo et la comptabilité SYSCOHADA</a> pour les services financiers, <a href=\"/formations/whatsapp-business\">WhatsApp Business</a> pour suivre les clients, <a href=\"/formations/ia-en-entreprise\">l'IA en entreprise</a> pour la direction, et <a href=\"/formations/securite-donnees-dirigeants\">la sécurité des données</a>, pertinente depuis l'arrivée de la HAPDP. Retrouvez l'ensemble des sujets sur <a href=\"/formations/\">la page des formations</a>.",
             ],
         ],
         [
             'type'        => 'prose',
-            'titre'       => 'Comment se passe une collaboration avec Richard depuis Cotonou ?',
+            'titre'       => 'Comment travailler avec Richard quand on est à Niamey ou ailleurs au Niger ?',
             'paragraphes' => [
-                "Niamey et Cotonou sont toutes les deux à UTC+1 toute l'année, sans heure d'été : il n'y a aucun décalage, et les plages de réponse de Richard, de 7 h à 20 h, sont les vôtres. La collaboration se fait à distance, sans déplacement. La Charte de la refondation de 2025 a fait du haoussa la langue nationale et du français une langue de travail ; Richard travaille en français, à l'écrit comme à l'oral, ce qui convient aux documents d'une entreprise, aux contrats et aux interfaces des logiciels de gestion.",
-                "Les devis sont libellés en FCFA, la monnaie de l'UEMOA que le Niger partage avec le Bénin : aucune conversion, aucun écart de change. Le règlement se fixe au devis. Les échanges se font par appel vocal, visioconférence et message, et toute demande reçoit une réponse sous 24 heures. Si la connexion de votre bureau est coupée, un point par appel vocal et un résumé écrit suffisent.",
+                "Les deux villes suivent UTC+1 en toute saison et ne changent jamais d'heure : vos matinées et vos fins de journée coïncident avec celles de Richard, joignable entre 7 h et 20 h. La collaboration se fait à distance, sans déplacement. La Charte de la refondation de 2025 a fait du haoussa la langue nationale et du français une langue de travail ; Richard travaille en français, à l'écrit comme à l'oral, ce qui convient aux documents d'une entreprise, aux contrats et aux interfaces des logiciels de gestion.",
+                "Les devis s'expriment en FCFA, monnaie commune au Niger et au Bénin au sein de l'UEMOA, si bien que rien n'est converti et que le change n'entre pas en jeu. Le règlement se fixe au devis. Les échanges se font par appel vocal, visioconférence et message, et toute demande reçoit une réponse sous 24 heures. Si la connexion de votre bureau est coupée, un point par appel vocal et un résumé écrit suffisent.",
             ],
         ],
         [
@@ -216,10 +216,10 @@ return [
         ],
         [
             'type'        => 'prose',
-            'titre'       => 'Qu\'est-ce qui fait varier le prix d\'un projet au Niger ?',
+            'titre'       => 'Pourquoi le coût final diffère-t-il d\'un projet nigérien à l\'autre ?',
             'paragraphes' => [
-                "Au-delà de ces prix de départ, tout autre projet est chiffré sur devis, en FCFA, après un cadrage. Plusieurs éléments propres au Niger font varier le montant. Le raccordement à la facture certifiée : un logiciel qui doit parler à un SFE et à un MCF agréés, ou à e-SECeF, demande plus de travail qu'un modèle de document. Le nombre de moyens de paiement : Airtel Money seul coûte moins que Airtel, Orange Money et Flooz plus le paiement à la livraison.",
-                "Pèsent aussi la tolérance aux coupures de réseau, qui oblige à une saisie hors ligne avec synchronisation, l'hébergement des données personnelles, les données à reprendre d'anciens fichiers et la formation. Les frais des opérateurs de monnaie électronique ne font pas partie du devis de Richard : ils se règlent avec chaque opérateur, et Richard conseille de les faire figurer par écrit dans votre contrat avant de bâtir un modèle économique sur eux.",
+                "Hors de ces tarifs d'appel, chaque projet reçoit un devis en FCFA une fois le besoin cadré. Plusieurs critères locaux déplacent le montant. D'abord le raccordement à la facture certifiée : un logiciel qui doit parler à un SFE et à un MCF agréés, ou à e-SECeF, demande plus de travail qu'un modèle de document. Le nombre de moyens de paiement : Airtel Money seul coûte moins que Airtel, Orange Money et Flooz plus le paiement à la livraison.",
+                "Pèsent aussi la tolérance aux coupures de réseau, qui oblige à une saisie hors ligne avec synchronisation, l'hébergement des données personnelles, les données à reprendre d'anciens fichiers et la formation. Les frais des opérateurs de monnaie électronique ne font pas partie du devis de Richard : ils se règlent avec chaque opérateur, et il vaut mieux les exiger noir sur blanc dans votre contrat avant d'en faire la base de votre rentabilité.",
             ],
         ],
         [
@@ -229,15 +229,15 @@ return [
         ],
         [
             'type'   => 'points',
-            'titre'  => 'Quelles erreurs voit-on le plus souvent dans les projets numériques au Niger ?',
-            'intro'  => 'Ces erreurs viennent des particularités nigériennes décrites plus haut ; chacune se prévient dès le cadrage.',
+            'titre'  => 'Quels faux pas reviennent dans les chantiers numériques nigériens ?',
+            'intro'  => 'Ces faux pas découlent des réalités nigériennes évoquées plus haut ; on les évite en les traitant au cadrage.',
             'items'  => [
                 ['titre' => 'Émettre des factures sans passer par le système certifié', 'texte' => "Un PDF produit par le logiciel de gestion ne remplace pas une facture portant le code SECeF/DGI et le code QR pour une entreprise assujettie à la TVA. Branchez la facturation sur SECeF dès le premier module."],
                 ['titre' => 'Concevoir pour le haut débit', 'texte' => "Avec 57 936 abonnés à l'internet fixe et 30,12 % de pénétration de l'internet mobile fin septembre 2025, un site lourd perd ses visiteurs. Les images se compressent et les pages restent légères."],
                 ['titre' => 'Confondre lignes mobiles et internautes', 'texte' => "62,93 % de lignes mobiles ne signifie pas que 62,93 % des habitants sont en ligne : DataReportal compte 23,2 % d'internautes fin 2025. Dimensionner une clientèle sur le premier taux la surestime."],
                 ['titre' => 'Ne prévoir qu\'un seul moyen de paiement mobile', 'texte' => "Airtel domine avec 46,68 % du parc mobile, mais Moov Africa et Zamani Com en détiennent environ un quart chacun. Une boutique qui n'accepte qu'un opérateur écarte une part de ses clients ; le paiement à la livraison reste une soupape."],
                 ['titre' => 'Compter sur un agrégateur sans le vérifier', 'texte' => "Demandez par écrit à tout prestataire qui regroupe plusieurs opérateurs la liste de ceux qu'il couvre au Niger, ses frais et son délai de reversement, et ne bâtissez pas votre modèle sur un prospectus."],
-                ['titre' => 'Chiffrer en euros une offre pour une entreprise du Niger', 'texte' => "Les clients nigériens raisonnent en FCFA. Un devis en euros les expose à une conversion inutile : l'équivalent en euros se donne seulement à titre indicatif."],
+                ['titre' => 'Chiffrer en euros une offre pour une entreprise du Niger', 'texte' => "Les sociétés du Niger comptent en FCFA. Une proposition en euros les oblige à convertir pour rien ; la contre-valeur en euros n'est donnée qu'à titre d'information."],
             ],
         ],
         [
@@ -255,8 +255,8 @@ return [
             'entetes' => ['Question', 'Réponse'],
             'lignes'  => [
                 ['Déjà travaillé', 'oui : Richard a déjà travaillé avec des entreprises au Niger.'],
-                ['Réalisations', 'Les projets de Richard sont présentés sur <a href="/realisations/">la page des réalisations</a>.'],
-                ['Mode de travail', 'À distance depuis Cotonou, en français, à la même heure qu\'à Niamey, avec des devis en FCFA.'],
+                ['Réalisations', 'Ses travaux se consultent dans <a href="/realisations/">les réalisations</a>.'],
+                ['Mode de travail', 'Par visioconférence depuis Cotonou, en langue française, sur la même heure légale que Niamey, devis chiffrés en FCFA.'],
                 ['Pour aller plus loin', '<a href="/richard-salanon">Le parcours de Richard</a> et <a href="/a-propos/">la page À propos</a>.'],
             ],
         ],
@@ -269,17 +269,17 @@ return [
     ],
 
     'faq' => [
-        ['q' => 'Richard intervient-il sur place à Niamey ?', 'r' => "L'intervention se fait à distance, depuis Cotonou. Les points se font en visioconférence, par appel vocal et par message, sans décalage horaire. Cela convient à presque tous les projets de logiciel, d'automatisation et de formation."],
-        ['q' => 'Quels moyens de paiement mobile fonctionnent au Niger ?', 'r' => "La liste de la BCEAO du 28 février 2026 recense Airtel Money, Orange Money, Moov Flooz, Wave, Coris Money, MyNITA, Amanata et Al Izza Business Pay. Airtel Niger est le seul établissement de monnaie électronique ; les autres reposent sur un partenariat avec une banque."],
+        ['q' => 'Richard intervient-il sur place à Niamey ?', 'r' => "Non, tout se déroule depuis Cotonou, par visioconférence, appel vocal ou message, avec la même heure qu'à Niamey. Ce mode suffit pour la plupart des chantiers de développement, d'automatisation et de formation."],
+        ['q' => 'Quels services de monnaie électronique sont agréés au Niger ?', 'r' => "La liste de la BCEAO du 28 février 2026 recense Airtel Money, Orange Money, Moov Flooz, Wave, Coris Money, MyNITA, Amanata et Al Izza Business Pay. Airtel Niger est le seul établissement de monnaie électronique ; les autres reposent sur un partenariat avec une banque."],
         ['q' => 'Quel opérateur mobile domine au Niger ?', 'r' => "Celtel Niger, c'est-à-dire Airtel, détient 46,68 % du parc mobile fin septembre 2025 selon l'ARCEP, devant Moov Africa Niger (24,50 %), Zamani Com (23,41 %) et Niger Telecoms (5,41 %)."],
         ['q' => 'Faut-il déclarer son site ou son application à la HAPDP ?', 'r' => "La loi n° 2022-59, modifiée par la loi n° 2023-31, a créé la HAPDP, qui délivre des autorisations et des récépissés aux responsables de traitement. La procédure applicable à votre traitement dépend de sa nature : confirmez-la auprès de la HAPDP avant la mise en ligne."],
         ['q' => 'Les données personnelles doivent-elles rester au Niger ?', 'r' => "L'hébergement se confirme auprès de la HAPDP dès le cadrage. Un projet doit documenter où sont stockées les données et rester capable de les déplacer, au cas où une obligation serait publiée."],
         ['q' => 'La facture électronique est-elle obligatoire au Niger ?', 'r' => "Oui pour les entreprises assujetties à la TVA : la facture certifiée SECeF, avec un code SECeF/DGI et un code QR, est obligatoire depuis le 1er septembre 2021, selon EDICOM. Les entreprises peuvent aussi utiliser la plateforme gratuite e-SECeF lancée en 2023."],
-        ['q' => 'Le Niger applique-t-il l\'OHADA et le SYSCOHADA ?', 'r' => "Oui. Le Niger a ratifié le traité de l'OHADA le 5 juin 1995 et il y est en vigueur depuis le 18 septembre 1995. Les entreprises nigériennes tiennent donc leur comptabilité selon le SYSCOHADA, ce qui conditionne la localisation comptable choisie dans Odoo ou Dolibarr."],
+        ['q' => 'Le SYSCOHADA s\'impose-t-il aux comptes d\'une société nigérienne ?', 'r' => "Oui, puisque le Niger a ratifié le traité de l'OHADA le 5 juin 1995, entré en vigueur le 18 septembre 1995. Le plan comptable SYSCOHADA régit donc la tenue des comptes, ce qui détermine le paramétrage comptable à choisir dans Odoo ou Dolibarr."],
         ['q' => 'Le Niger utilise-t-il toujours le franc CFA après sa sortie de la CEDEAO ?', 'r' => "Oui à la date de rédaction. Le retrait de la CEDEAO a pris effet le 29 janvier 2025, mais le franc CFA émis par la BCEAO reste la monnaie du Niger, dont la liste de février 2026 recense les services de monnaie électronique. Les devis sont libellés en FCFA ; vérifiez toute évolution avant de signer."],
-        ['q' => 'Quel est le décalage horaire entre Cotonou et Niamey ?', 'r' => "Aucun : Niamey et Cotonou sont à UTC+1 toute l'année, sans heure d'été. Les plages de réponse de Richard, de 7 h à 20 h heure de Cotonou, sont les mêmes à Niamey."],
+        ['q' => 'Quel est le décalage horaire entre Cotonou et Niamey ?', 'r' => "Il n'y en a pas : Niamey et Cotonou restent à UTC+1 sans passage à l'heure d'été, et la disponibilité de Richard, de 7 h à 20 h, s'applique à l'identique à Niamey."],
         ['q' => 'Comment financer une formation au numérique au Niger ?', 'r' => "Le Fonds d'appui à la formation professionnelle et à l'apprentissage (FAFPA) est l'organisme public à contacter pour connaître les conditions d'un financement de formation en entreprise : renseignez-vous directement avant de budgéter."],
-        ['q' => 'En quelle monnaie sont établis les devis pour le Niger ?', 'r' => "En FCFA. Les prix de départ publiés sont de 150 000 FCFA pour une page d'atterrissage, 300 000 FCFA pour un site vitrine et 75 000 FCFA pour le référencement naturel. Les autres projets se chiffrent sur devis."],
+        ['q' => 'Dans quelle devise Richard facture-t-il une entreprise du Niger ?', 'r' => "Toujours en FCFA, sans conversion. Une page d'atterrissage démarre à 150 000 FCFA, un site vitrine à 300 000 FCFA et le référencement naturel à 75 000 FCFA ; tout autre besoin donne lieu à un devis."],
     ],
 
     'sources' => [
