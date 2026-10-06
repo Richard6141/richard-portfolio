@@ -204,6 +204,8 @@ function registre_valider(string $type, string $slug, array $p): array
     if ($type === 'pays' && array_key_exists('fiche', $p)) {
         if (!is_array($p['fiche'])) {
             $e[] = 'fiche : tableau attendu';
+        } elseif ($p['fiche'] === []) {
+            $e[] = 'fiche : au moins une valeur';
         } else {
             $cles = array_merge(...array_values(array_map('array_keys', REGISTRES_FICHE_PAYS)));
             foreach ($p['fiche'] as $cle => $f) {
@@ -213,7 +215,11 @@ function registre_valider(string $type, string $slug, array $p): array
                 }
                 $v = $f['v'] ?? '';
                 $plein = is_array($v) ? array_filter($v, static fn($x): bool => trim((string) $x) !== '') !== [] : trim((string) $v) !== '';
-                if (!$plein || !preg_match('#^https://#', (string) ($f['source'] ?? '')) || !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) ($f['date'] ?? ''))) {
+                // Source liable par le bloc (hôte, ni espace ni guillemet) et date de calendrier réelle.
+                $src = (string) ($f['source'] ?? '');
+                $source_ok = preg_match('#^https://[^\s"\'<>]+$#', $src) === 1 && (string) parse_url($src, PHP_URL_HOST) !== '';
+                $date_ok = preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', (string) ($f['date'] ?? ''), $d) === 1 && checkdate((int) $d[2], (int) $d[3], (int) $d[1]);
+                if (!$plein || !$source_ok || !$date_ok) {
                     $e[] = "fiche[{$cle}] : v, source https et date attendus";
                 }
             }

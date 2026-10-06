@@ -133,6 +133,11 @@ function test_registres_fiche_pays_valide(): void
     assert_contains('fiche[capitale]', $erreurs(['capitale' => ['v' => 'Porto-Novo', 'source' => 'https://x.org/']]));
     assert_contains('fiche[operateurs]', $erreurs(['operateurs' => ['v' => ['', ' '], 'source' => 'https://x.org/', 'date' => '2026-01-01']]));
     assert_contains('fiche : tableau attendu', $erreurs('Porto-Novo'));
+    // Revue finale : le validateur refuse ce que le rendu ne saurait pas lier ou dater.
+    assert_contains('fiche[capitale]', $erreurs(['capitale' => ['v' => 'Porto-Novo', 'source' => 'https://', 'date' => '2026-01-01']]));
+    assert_contains('fiche[capitale]', $erreurs(['capitale' => ['v' => 'Porto-Novo', 'source' => 'https://x.org/a b', 'date' => '2026-01-01']]));
+    assert_contains('fiche[capitale]', $erreurs(['capitale' => ['v' => 'Porto-Novo', 'source' => 'https://x.org/', 'date' => '2026-13-45']]));
+    assert_contains('fiche : au moins une valeur', $erreurs([]));
 }
 
 function test_registres_fiche_pays_groupee_dans_l_ordre(): void

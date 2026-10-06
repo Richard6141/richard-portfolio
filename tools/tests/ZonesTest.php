@@ -84,6 +84,20 @@ function test_zones_url_de_la_page_pays_seulement_publiee(): void
     assert_same(null, pays_url('Atlantide', $fx));
 }
 
+function test_zones_pages_pays_reelles_liees_a_leur_date(): void
+{
+    // Revue finale 1D, sur les vraies pages : aucun lien pays avant le 29/10, les 12 pays des
+    // tranches 1 et 2 ce jour-là, les 34 le 12/11 (une fiche invalide ferait baisser le compte).
+    $n = static fn(string $jour): int => count(array_filter(
+        array_keys(pays_liste()),
+        static fn(string $s): bool => pays_url($s, REGISTRES_RACINE, $jour) !== null
+    ));
+    assert_same(0, $n('2026-10-28'));
+    assert_same(12, $n('2026-10-29'));
+    assert_same(12, $n('2026-11-11'));
+    assert_same(34, $n('2026-11-12'));
+}
+
 function test_zones_fil_des_pages_ville_vers_le_pays_publie(): void
 {
     $h = http_local('/developpeur-web-cotonou')['corps'];
