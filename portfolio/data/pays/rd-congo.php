@@ -19,8 +19,8 @@ return [
     'fiche' => [
         'capitale' => ['v' => 'Kinshasa', 'source' => 'https://fr.wikipedia.org/wiki/République_démocratique_du_Congo', 'date' => '2026-10-06'],
         'villes' => ['v' => ['Lubumbashi', 'Mbuji-Mayi', 'Kisangani', 'Goma'], 'source' => 'https://fr.wikipedia.org/wiki/République_démocratique_du_Congo', 'date' => '2026-10-06'],
-        'fuseau' => ['v' => 'Deux fuseaux, sans heure d\'été : UTC+1 à Kinshasa (comme Cotonou), UTC+2 à Lubumbashi, Mbuji-Mayi et Kananga', 'source' => 'https://www.zeitverschiebung.net/fr/country/cd', 'date' => '2026-10-06'],
-        'indicatif' => ['v' => '+243', 'source' => 'https://arptc.gouv.cd', 'date' => '2026-10-06'],
+        'fuseau' => ['v' => 'Deux fuseaux, sans heure d\'été : UTC+1 à Kinshasa (comme Cotonou), UTC+2 à Lubumbashi, Mbuji-Mayi et Kananga', 'source' => 'https://data.iana.org/time-zones/tzdb/africa', 'date' => '2026-10-06'],
+        'indicatif' => ['v' => '+243', 'source' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
         'langues' => ['v' => ['Français (langue officielle)', 'Lingala, kikongo ya leta (kituba), swahili et tshiluba (langues nationales)'], 'source' => 'https://fr.wikipedia.org/wiki/République_démocratique_du_Congo', 'date' => '2026-10-06'],
         'population' => ['v' => '114 millions d\'habitants en octobre 2025 selon les Nations unies, dont 48,8 % en milieu urbain', 'source' => 'https://datareportal.com/reports/digital-2026-democratic-republic-of-the-congo', 'date' => '2026-10-06'],
         'internet' => ['v' => '34,7 millions d\'internautes, soit 30,5 % des habitants, fin 2025', 'source' => 'https://datareportal.com/reports/digital-2026-democratic-republic-of-the-congo', 'date' => '2026-10-06'],
@@ -30,13 +30,13 @@ return [
         'devise' => ['v' => 'Franc congolais (CDF), monnaie nationale ; la Banque centrale du Congo (BCC) publie le taux officiel (2 267,73 CDF pour 1 USD le 6 octobre 2026)', 'source' => 'https://www.bcc.cd', 'date' => '2026-10-06'],
         'operateurs' => ['v' => ['M-Pesa (Vodacom)', 'Orange Money', 'Airtel Money'], 'source' => 'https://docs.pawapay.io/v2/docs/providers', 'date' => '2026-10-06'],
         'agregateurs' => ['v' => ['PawaPay (M-Pesa, Airtel Money et Orange Money, en francs congolais et en dollars américains)'], 'source' => 'https://docs.pawapay.io/v2/docs/providers', 'date' => '2026-10-06'],
-        'donnees' => ['v' => 'Ordonnance-loi n° 23/010 du 13 mars 2023 portant Code du numérique, dont le livre III traite de la protection des données personnelles', 'source' => 'https://droitnumerique.cd/code-du-numerique-congolais/', 'date' => '2026-10-06'],
+        'donnees' => ['v' => 'Ordonnance-loi n° 23/010 du 13 mars 2023 portant Code du numérique, dont le titre III du livre III traite des données personnelles', 'source' => 'https://droitnumerique.cd/code-du-numerique-congolais/', 'date' => '2026-10-06'],
         'autorite' => ['v' => 'Autorité de protection des données prévue par le Code mais pas encore mise en place ; ses missions sont confiées à l\'ARPTC depuis l\'arrêté ministériel du 17 août 2024', 'source' => 'https://droitnumerique.cd/autorite-de-protection-des-donnees/', 'date' => '2026-10-06'],
         'facturation' => ['v' => 'Facture normalisée émise par un dispositif électronique fiscal (DEF), dont la version en ligne e-DEF ; moratoire levé le 15 mai 2026, déduction de TVA conditionnée à cette facture', 'source' => 'https://lookuptax.com/tax-changes/congo-kinshasa/normalised-invoice-moratorium-end-2026', 'date' => '2026-10-06'],
         'ohada' => ['v' => 'Membre : traité ratifié le 27 juin 2012, en vigueur en RD Congo depuis le 12 septembre 2012', 'source' => 'https://www.ohada.com/etats-membres/rdc.html', 'date' => '2026-10-06'],
         'tva' => ['v' => 'Taux normal de 16 %, fixé par l\'ordonnance-loi n° 10/001 du 20 août 2010', 'source' => 'https://www.droitcongolais.info/EN/files/631.08.10-Ordonnace-loi-du-20-aout-2010_Taxe-sur-la-valeur-ajoutee.pdf', 'date' => '2026-10-06'],
         'ecommerce' => ['v' => 'Commerce électronique (contrats, rétractation, publicité) régi par le Code du numérique de 2023', 'source' => 'https://droitnumerique.cd/code-du-numerique-congolais/', 'date' => '2026-10-06'],
-        'financement' => ['v' => 'Institut national de préparation professionnelle (INPP) : formation continue en modules courts sur catalogue, ou formation sur mesure en entreprise', 'source' => 'https://inpp.cd/offres-de-formation/', 'date' => '2026-10-06'],
+        'financement' => ['v' => 'Institut national de préparation professionnelle (INPP) : formation continue en modules courts, avec un catalogue de formations dans les centres de chaque province', 'source' => 'https://inpp.cd/offres-de-formation/', 'date' => '2026-10-06'],
     ],
 
     'faits_hero' => [
@@ -193,7 +193,7 @@ return [
             'titre'       => 'Former une équipe congolaise à distance : quel format, et quel appui de l\'INPP ?',
             'paragraphes' => [
                 "Richard forme à distance, en visioconférence, sur les outils réels de l'entreprise : Odoo, WhatsApp Business, tableurs, outils d'IA. Le découpage en courtes sessions tient compte d'une connexion parfois capricieuse hors de Kinshasa : supports envoyés la veille, exercices réalisables hors ligne, enregistrement pour les absents.",
-                "Côté financement, l'Institut national de préparation professionnelle (INPP) est l'organisme public de référence. Créé par l'ordonnance-loi n° 206 du 29 juin 1964 et érigé en établissement public par le décret n° 09/55 du 3 décembre 2009, sous la tutelle du ministère de l'Emploi, du Travail et de la Prévoyance sociale, il organise de la formation continue en modules courts pour les personnes en emploi et peut aussi étudier une réponse sur mesure, dans l'entreprise. Il publie un catalogue de formations dans ses centres de chaque province. Ses pages publiques ne détaillent pas les conditions de prise en charge d'une formation numérique : demandez-les à l'institut avant de budgéter.",
+                "Côté financement, l'Institut national de préparation professionnelle (INPP) est l'organisme public de référence. Créé par l'ordonnance-loi n° 206 du 29 juin 1964 et érigé en établissement public par le décret n° 09/55 du 3 décembre 2009, sous la tutelle du ministère de l'Emploi, du Travail et de la Prévoyance sociale, il organise de la formation continue en modules courts pour les personnes en emploi. Il publie un catalogue de formations dans ses centres de chaque province. Les conditions de prise en charge d'une formation numérique se demandent à l'institut avant de budgéter.",
                 "Pour une équipe congolaise, quatre parcours se détachent : <a href=\"/formations/odoo-comptabilite-syscohada\">Odoo et la comptabilité SYSCOHADA</a> pour les comptables, <a href=\"/formations/whatsapp-business\">WhatsApp Business</a> pour les ventes, <a href=\"/formations/ia-en-entreprise\">l'IA en entreprise</a> pour la direction et <a href=\"/formations/securite-donnees-dirigeants\">la sécurité des données</a>, précieuse tant que l'autorité de protection reste à créer. Tous les modules figurent dans <a href=\"/formations/\">le catalogue des formations</a>.",
             ],
         ],
@@ -202,7 +202,7 @@ return [
             'titre'       => 'Comment travaille-t-on avec Richard entre Cotonou et la RD Congo ?',
             'paragraphes' => [
                 "Le Bénin et Kinshasa partagent le même fuseau, UTC+1, sans heure d'été : il est la même heure à Cotonou et dans la capitale. La RD Congo compte deux fuseaux : à Lubumbashi, Mbuji-Mayi ou Kananga, il est UTC+2, soit une heure de plus. Richard répond de 7 h à 20 h heure de Cotonou, soit les mêmes heures à Kinshasa et de 8 h à 21 h à Lubumbashi. Le français, langue officielle du pays, sert de langue de travail pour les échanges comme pour les documents.",
-                "Les devis sont libellés en euros : avec le franc congolais et le dollar en circulation, un montant fixe en euros évite de réécrire le devis chaque fois que le taux de la Banque centrale du Congo bouge. Le mode de règlement se choisit au devis : virement, carte, PayPal ou Mobile Money. WhatsApp et la visioconférence rythment le suivi, et chaque message reçoit sa réponse en moins de 24 heures.",
+                "Les devis sont libellés en euros : avec le franc congolais et le dollar en circulation, un montant fixe en euros évite de réécrire le devis chaque fois que le taux de la Banque centrale du Congo bouge. Le mode de règlement se choisit au devis : virement, carte, PayPal ou Mobile Money. WhatsApp et la visioconférence peuvent rythmer le suivi, et chaque message reçoit sa réponse en moins de 24 heures.",
             ],
         ],
         [
@@ -275,7 +275,7 @@ return [
         ['q' => 'La RD Congo applique-t-elle l\'OHADA et le SYSCOHADA ?', 'r' => "Oui : ratifié le 27 juin 2012, le traité est en vigueur depuis le 12 septembre 2012. Le plan comptable SYSCOHADA détermine donc le paramétrage comptable d'Odoo ou de Dolibarr."],
         ['q' => 'Quel est le décalage horaire entre Cotonou et la RD Congo ?', 'r' => "Aucun avec Kinshasa (UTC+1 des deux côtés). À Lubumbashi, Mbuji-Mayi et Kananga, il est UTC+2, soit une heure de plus. Richard répond de 7 h à 20 h heure de Cotonou, donc jusqu'à 21 h à Lubumbashi."],
         ['q' => 'Dans quelle devise Richard chiffre-t-il un projet congolais ?', 'r' => "En euros, sur devis, après un échange de cadrage qui fixe les livrables et les échéances."],
-        ['q' => 'Comment financer une formation au numérique en RD Congo ?', 'r' => "L'INPP, établissement public sous la tutelle du ministère de l'Emploi, du Travail et de la Prévoyance sociale, propose des modules courts de formation continue sur catalogue et des solutions sur mesure en entreprise. Ses conditions de prise en charge se demandent à l'institut avant de budgéter."],
+        ['q' => 'Comment financer une formation au numérique en RD Congo ?', 'r' => "L'INPP, établissement public sous la tutelle du ministère de l'Emploi, du Travail et de la Prévoyance sociale, propose des modules courts de formation continue sur catalogue. Ses conditions de prise en charge se demandent à l'institut avant de budgéter."],
     ],
 
     'sources' => [
@@ -300,7 +300,8 @@ return [
         ['titre' => 'INPP, notre histoire', 'url' => 'https://inpp.cd/historique/', 'date' => '2026-10-06'],
         ['titre' => 'USGS, Mineral Commodity Summaries 2026 : cobalt', 'url' => 'https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-cobalt.pdf', 'date' => '2026-10-06'],
         ['titre' => 'Ordonnance-loi n° 10/001 du 20 août 2010 relative à la taxe sur la valeur ajoutée (taux de 16 %)', 'url' => 'https://www.droitcongolais.info/EN/files/631.08.10-Ordonnace-loi-du-20-aout-2010_Taxe-sur-la-valeur-ajoutee.pdf', 'date' => '2026-10-06'],
-        ['titre' => 'Fuseaux horaires de la RD Congo', 'url' => 'https://www.zeitverschiebung.net/fr/country/cd', 'date' => '2026-10-06'],
+        ['titre' => 'IANA, base de données des fuseaux horaires : Afrique (zones Kinshasa et Lubumbashi)', 'url' => 'https://data.iana.org/time-zones/tzdb/africa', 'date' => '2026-10-06'],
+        ['titre' => 'UIT, plan de numérotation E.164 : codes de pays (+243)', 'url' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
         ['titre' => 'Wikipédia, République démocratique du Congo (capitale, villes, langues)', 'url' => 'https://fr.wikipedia.org/wiki/République_démocratique_du_Congo', 'date' => '2026-10-06'],
     ],
 

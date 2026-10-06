@@ -19,10 +19,10 @@ return [
     'maj'     => '2026-10-29',
 
     'fiche' => [
-        'capitale' => ['v' => 'Niamey', 'source' => 'https://www.zeitverschiebung.net/fr/timezone/africa--niamey', 'date' => '2026-10-06'],
+        'capitale' => ['v' => 'Niamey', 'source' => 'https://www.bceao.int/fr/etats-membres/niger', 'date' => '2026-10-06'],
         'villes' => ['v' => ['Niamey : 1 401 149 habitants', 'Zinder : 740 218', 'Maradi : 666 205', 'Tahoua : 342 253', 'Agadez : 335 322 (estimations ONU 2025)'], 'source' => 'https://www.worldometers.info/fr/population/plus-grandes-villes-en-niger/', 'date' => '2026-10-06'],
-        'fuseau' => ['v' => 'UTC+1 toute l\'année, sans heure d\'été : la même heure qu\'à Cotonou', 'source' => 'https://www.zeitverschiebung.net/fr/timezone/africa--niamey', 'date' => '2026-10-06'],
-        'indicatif' => ['v' => '+227', 'source' => 'https://www.worldometers.info/fr/indicatifs-pays/niger-indicatif-pays/', 'date' => '2026-10-06'],
+        'fuseau' => ['v' => 'UTC+1 toute l\'année, sans heure d\'été : la même heure qu\'à Cotonou', 'source' => 'https://data.iana.org/time-zones/tzdb/backward', 'date' => '2026-10-06'],
+        'indicatif' => ['v' => '+227', 'source' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
         'langues' => ['v' => ['Haoussa, langue nationale depuis la Charte de la refondation de 2025', 'Français, langue de travail'], 'source' => 'https://fr.wikipedia.org/wiki/Langues_au_Niger', 'date' => '2026-10-06'],
         'population' => ['v' => '28,1 millions d\'habitants fin 2025, dont 17,5 % en milieu urbain', 'source' => 'https://datareportal.com/reports/digital-2026-niger', 'date' => '2026-10-06'],
         'internet' => ['v' => '6,52 millions d\'internautes, soit 23,2 % des habitants, fin 2025', 'source' => 'https://datareportal.com/reports/digital-2026-niger', 'date' => '2026-10-06'],
@@ -89,10 +89,10 @@ return [
             'type'  => 'etapes',
             'titre' => 'De quelles phases se compose un branchement Airtel Money, Orange Money ou Flooz, jusqu\'aux premiers encaissements ?',
             'items' => [
-                ['titre' => 'Arrêter l\'opérateur de départ', 'texte' => "On compte d'abord comment vos clients règlent aujourd'hui : Airtel Money, Orange Money, Flooz, espèces. Si Airtel pèse le plus lourd, il passe en premier et les autres restent notés pour une étape ultérieure.", 'duree' => '2 à 3 jours'],
-                ['titre' => 'Obtenir l\'accès marchand', 'texte' => "L'accès est accordé par l'opérateur ou par sa banque partenaire, au vu des documents de votre société. Cette durée échappe à Richard, qui monte le dossier avec vous afin d'éviter des visites répétées à l'agence de Niamey.", 'duree' => 'selon l\'opérateur'],
-                ['titre' => 'Construire et essayer hors production', 'texte' => "Le développement couvre la demande de paiement, la réponse de l'opérateur, l'avis envoyé au serveur et l'écran de confirmation. Les scénarios qui tournent mal sont rejoués avec le même soin : délai expiré, solde trop bas, réseau coupé en pleine opération, clic en double.", 'duree' => '1 à 2 semaines'],
-                ['titre' => 'Valider les encaissements puis ouvrir au public', 'texte' => "Chaque somme reçue doit retrouver sa commande et sa facture dans votre outil de gestion. Quelques opérations réelles de petit montant servent de répétition avant l'ouverture, puis les premiers jours sont surveillés de près.", 'duree' => '2 à 4 jours'],
+                ['titre' => 'Arrêter l\'opérateur de départ', 'texte' => "On compte d'abord comment vos clients règlent aujourd'hui : Airtel Money, Orange Money, Flooz, espèces. Si Airtel pèse le plus lourd, il passe en premier et les autres restent notés pour une étape ultérieure.", 'duree' => 'Selon le projet'],
+                ['titre' => 'Obtenir l\'accès marchand', 'texte' => "L'accès est accordé par l'opérateur ou par sa banque partenaire, au vu des documents de votre société. Cette durée échappe à Richard, qui peut monter le dossier avec vous afin d'éviter des visites répétées à l'agence de Niamey.", 'duree' => 'selon l\'opérateur'],
+                ['titre' => 'Construire et essayer hors production', 'texte' => "Le développement couvre la demande de paiement, la réponse de l'opérateur, l'avis envoyé au serveur et l'écran de confirmation. Les scénarios qui tournent mal peuvent être rejoués avec le même soin : délai expiré, solde trop bas, réseau coupé en pleine opération, clic en double.", 'duree' => 'Selon le projet'],
+                ['titre' => 'Valider les encaissements puis ouvrir au public', 'texte' => "Chaque somme reçue doit retrouver sa commande et sa facture dans votre outil de gestion. Quelques opérations réelles de petit montant peuvent servir de répétition avant l'ouverture, puis les premiers jours peuvent être suivis de près.", 'duree' => 'Selon le projet'],
             ],
         ],
         [
@@ -100,7 +100,7 @@ return [
             'titre'       => 'Quel cadre juridique encadre un projet numérique mené au Niger ?',
             'paragraphes' => [
                 "Quatre textes pèsent sur un projet. La loi n° 2022-59 du 16 décembre 2022 encadre les données personnelles, et la loi n° 2023-31 du 4 juillet 2023 en a réécrit plusieurs articles, notamment ceux qui créent l'autorité de contrôle. La loi n° 2019-03 du 30 avril 2019 porte sur les transactions électroniques. Les règles fiscales de la Direction générale des impôts, la DGI, imposent la facture certifiée. Enfin le Niger est membre de l'OHADA : le traité y est en vigueur depuis le 18 septembre 1995, d'où un droit des affaires et un plan comptable SYSCOHADA identiques à ceux des autres États membres.",
-                "Côté données, l'autorité est la Haute Autorité de Protection des Données à caractère Personnel, la HAPDP. Selon les articles 6 et 7 de la loi de 2023, elle est rattachée à la Présidence de la République, reste une autorité administrative indépendante, compte onze membres et peut ouvrir des antennes dans le pays. Le texte prévoit parmi ses ressources les frais de délivrance des autorisations et des récépissés aux responsables de traitement : un traitement passe donc, selon sa nature, par une déclaration suivie d'un récépissé ou par une autorisation. Le détail des cas relève de la HAPDP : demandez-lui la procédure actuelle avant la mise en ligne d'une application qui collecte des données de clients.",
+                "Côté données, l'autorité est la Haute Autorité de Protection des Données à caractère Personnel, la HAPDP. Selon les articles 6 et 7 de la loi de 2023, elle est rattachée à la Présidence de la République, reste une autorité administrative indépendante, compte onze membres et peut ouvrir des antennes dans le pays. Le texte prévoit parmi ses ressources les frais de délivrance des autorisations et des récépissés aux responsables de traitement : un traitement passe donc, selon sa nature, par une déclaration suivie d'un récépissé ou par une autorisation. Le détail des cas relève de la HAPDP : demandez-lui la procédure en vigueur avant la mise en ligne d'une application qui collecte des données de clients.",
             ],
         ],
         [
@@ -200,7 +200,7 @@ return [
             'titre'       => 'Comment travailler avec Richard quand on est à Niamey ou ailleurs au Niger ?',
             'paragraphes' => [
                 "Les deux villes suivent UTC+1 en toute saison et ne changent jamais d'heure : vos matinées et vos fins de journée coïncident avec celles de Richard, joignable entre 7 h et 20 h. La collaboration se fait à distance, sans déplacement. La Charte de la refondation de 2025 a fait du haoussa la langue nationale et du français une langue de travail ; Richard travaille en français, à l'écrit comme à l'oral, ce qui convient aux documents d'une entreprise, aux contrats et aux interfaces des logiciels de gestion.",
-                "Les devis s'expriment en FCFA, monnaie commune au Niger et au Bénin au sein de l'UEMOA, si bien que rien n'est converti et que le change n'entre pas en jeu. Le règlement se fixe au devis. Les échanges se font par appel vocal, visioconférence et message, et toute demande reçoit une réponse sous 24 heures. Si la connexion de votre bureau est coupée, un point par appel vocal et un résumé écrit suffisent.",
+                "Les devis s'expriment en FCFA, monnaie commune au Niger et au Bénin au sein de l'UEMOA, si bien que rien n'est converti et que le change n'entre pas en jeu. Le règlement se fixe au devis. Les échanges peuvent se faire par appel vocal, visioconférence et message, et toute demande reçoit une réponse sous 24 heures. Si la connexion de votre bureau est coupée, un point par appel vocal et un résumé écrit peuvent suffire.",
             ],
         ],
         [
@@ -297,8 +297,8 @@ return [
         ['titre' => 'Banque mondiale, l\'économie du Niger rebondit en 2024 grâce aux exportations de pétrole', 'url' => 'https://www.banquemondiale.org/fr/news/press-release/2025/06/12/niger-economy-rebounds-in-2024-thanks-to-large-scale-oil-exports-and-a-good-agricultural-season', 'date' => '2026-10-06'],
         ['titre' => 'Wikipédia, oléoduc Niger-Bénin (exportations depuis mai 2024, terminal de Sèmè)', 'url' => 'https://en.wikipedia.org/wiki/Niger–Benin_Oil_Pipeline', 'date' => '2026-10-06'],
         ['titre' => 'Worldometer, plus grandes villes du Niger (ONU, perspectives d\'urbanisation 2025)', 'url' => 'https://www.worldometers.info/fr/population/plus-grandes-villes-en-niger/', 'date' => '2026-10-06'],
-        ['titre' => 'Worldometer, indicatif téléphonique du Niger', 'url' => 'https://www.worldometers.info/fr/indicatifs-pays/niger-indicatif-pays/', 'date' => '2026-10-06'],
-        ['titre' => 'Fuseau horaire de Niamey', 'url' => 'https://www.zeitverschiebung.net/fr/timezone/africa--niamey', 'date' => '2026-10-06'],
+        ['titre' => 'UIT, liste des indicatifs téléphoniques nationaux (recommandation E.164)', 'url' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
+        ['titre' => 'IANA, base des fuseaux horaires : liens de zones (Africa/Niamey)', 'url' => 'https://data.iana.org/time-zones/tzdb/backward', 'date' => '2026-10-06'],
     ],
 
     'liens' => [

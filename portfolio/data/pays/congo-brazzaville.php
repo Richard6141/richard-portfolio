@@ -21,17 +21,17 @@ return [
     'fiche' => [
         'capitale' => ['v' => 'Brazzaville (capitale politique) ; Pointe-Noire est la capitale économique', 'source' => 'https://www.tresor.economie.gouv.fr/Pays/CG/la-situation-economique-du-congo', 'date' => '2026-10-06'],
         'villes' => ['v' => ['Brazzaville : 2 145 783 habitants en 2023', 'Pointe-Noire : 1 420 612 habitants en 2023'], 'source' => 'https://www.tresor.economie.gouv.fr/Pays/CG/recensement-2023-au-congo-brazzaville', 'date' => '2026-10-06'],
-        'fuseau' => ['v' => 'UTC+1 (heure d\'Afrique de l\'Ouest), sans heure d\'été : la même heure qu\'à Cotonou', 'source' => 'https://www.zeitverschiebung.net/fr/timezone/africa--brazzaville', 'date' => '2026-10-06'],
-        'indicatif' => ['v' => '+242', 'source' => 'https://fr.wikipedia.org/wiki/Congo-Brazzaville', 'date' => '2026-10-06'],
+        'fuseau' => ['v' => 'UTC+1 (heure d\'Afrique de l\'Ouest), sans heure d\'été : la même heure qu\'à Cotonou', 'source' => 'https://data.iana.org/time-zones/tzdb/africa', 'date' => '2026-10-06'],
+        'indicatif' => ['v' => '+242', 'source' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
         'langues' => ['v' => ['Français (langue officielle)', 'Lingala et kituba (langues nationales)'], 'source' => 'https://fr.wikipedia.org/wiki/Congo-Brazzaville', 'date' => '2026-10-06'],
         'population' => ['v' => '6 142 180 habitants au recensement de mai 2023, dont 58,1 % à Brazzaville et Pointe-Noire', 'source' => 'https://www.tresor.economie.gouv.fr/Pays/CG/recensement-2023-au-congo-brazzaville', 'date' => '2026-10-06'],
         'internet' => ['v' => '2,50 millions d\'internautes, soit 38,4 % des habitants, fin 2025', 'source' => 'https://datareportal.com/reports/digital-2026-republic-of-the-congo', 'date' => '2026-10-06'],
         'mobile' => ['v' => 'Environ 5,87 millions d\'abonnés mobiles au deuxième trimestre 2025, en baisse de 1,7 % sur un an, selon l\'ARPCE', 'source' => 'https://www.digitalbusiness.africa/congo-au-t2-2025-la-telephonie-mobile-genere-30371-milliards-de-fcfa-linternet-mobile-17032-milliards/', 'date' => '2026-10-06'],
         'mobile_money' => ['v' => 'Plus de 238 milliards de FCFA de transactions et plus de 79 millions d\'opérations en janvier 2024', 'source' => 'https://www.tresor.economie.gouv.fr/Pays/CG/le-secteur-du-numerique', 'date' => '2026-10-06'],
         'secteurs' => ['v' => ['Pétrole et gaz : la moitié du PIB en 2024', 'Port en eau profonde de Pointe-Noire et transport', 'Commerce, hôtels, restauration, banques, BTP'], 'source' => 'https://www.tresor.economie.gouv.fr/Pays/CG/la-situation-economique-du-congo', 'date' => '2026-10-06'],
-        'devise' => ['v' => 'Franc CFA d\'Afrique centrale (XAF), géré par la BEAC pour la CEMAC ; 1 euro vaut 655,957 XAF', 'source' => 'https://fr.wikipedia.org/wiki/Franc_CFA', 'date' => '2026-10-06'],
+        'devise' => ['v' => 'Franc CFA d\'Afrique centrale (XAF), monnaie de la BEAC ; 1 euro vaut 655,957 XAF', 'source' => 'https://www.beac.int', 'date' => '2026-10-06'],
         'operateurs' => ['v' => ['MTN Congo (MTN MoMo)', 'Airtel Congo (Airtel Money)'], 'source' => 'https://docs.pawapay.io/v2/docs/providers', 'date' => '2026-10-06'],
-        'agregateurs' => ['v' => ['PawaPay (MTN MoMo et Airtel en XAF)', 'Yabetoo (Congo indiqué « en service »)'], 'source' => 'https://yabetoo.com/', 'date' => '2026-10-06'],
+        'agregateurs' => ['v' => ['PawaPay (MTN MoMo et Airtel en XAF)', 'Yabetoo (disponible au Congo)'], 'source' => 'https://yabetoo.com/', 'date' => '2026-10-06'],
         'donnees' => ['v' => 'Loi n° 29-2019 du 10 octobre 2019 portant protection des données à caractère personnel', 'source' => 'https://www.sgg.cg/JO/2019/congo-jo-2019-45.pdf', 'date' => '2026-10-06'],
         'autorite' => ['v' => 'Commission nationale de protection des données personnelles (CNPD), dont la mise en place est annoncée en janvier 2026 selon ITWeb Africa', 'source' => 'https://itweb.africa/article/congo-brazzaville-intros-data-protection-commission/nWJadvbNzxkvbjO1', 'date' => '2026-10-06'],
         'facturation' => ['v' => 'Facture électronique certifiée (SFEC) obligatoire depuis le 1er août 2026 pour les grandes et moyennes unités ; très petites unités dès le 1er décembre 2026 (décret n° 2026-101 du 31 mars 2026)', 'source' => 'https://lookuptax.com/tax-changes/congo-brazzaville/sfec-august-commencement-2026', 'date' => '2026-10-06'],
@@ -195,7 +195,7 @@ return [
             'titre'       => 'Comment travailler avec Richard depuis Cotonou quand on est à Brazzaville ?',
             'paragraphes' => [
                 "Brazzaville et Cotonou sont toutes deux à UTC+1, sans heure d'été : il n'y a aucun décalage. Vos échanges se tiennent donc en journée, à la même heure des deux côtés. Le français, langue officielle du Congo, sert de langue de travail pour les messages comme pour les livrables ; le lingala et le kituba, langues nationales, ne servent que si votre application doit parler à vos clients dans leur langue, ce qui se chiffre à part.",
-                "Les devis sont libellés en FCFA : le franc CFA d'Afrique centrale (XAF) du Congo et le franc CFA d'Afrique de l'Ouest (XOF) du Bénin ont la même parité avec l'euro, 655,957 pour 1 euro, mais ne sont pas interchangeables, car ils sont émis par deux banques centrales différentes, la BEAC et la BCEAO. Les modes de règlement se fixent au devis parmi ceux qu'accepte Richard : virement, mobile money, carte, PayPal. Le suivi se fait par WhatsApp et par des points en visioconférence ; chaque demande reçoit une réponse sous 24 heures.",
+                "Les devis sont libellés en FCFA : le franc CFA d'Afrique centrale (XAF) du Congo et le franc CFA d'Afrique de l'Ouest (XOF) du Bénin ont la même parité avec l'euro, 655,957 pour 1 euro, mais ne sont pas interchangeables, car ils sont émis par deux banques centrales différentes, la BEAC et la BCEAO. Les modes de règlement se fixent au devis parmi ceux qu'accepte Richard : virement, mobile money, carte, PayPal. Le suivi peut se faire par WhatsApp et par des points en visioconférence ; chaque demande reçoit une réponse sous 24 heures.",
             ],
         ],
         [
@@ -239,7 +239,7 @@ return [
             'titre'       => 'Pourquoi confier son projet numérique congolais à Richard SALANON ?',
             'paragraphes' => [
                 "Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d'Afrique francophone, d'Europe et du Canada.",
-                "Avec plus de six ans d'expérience, une formation à EPITECH suivie en 2022 et la co-fondation d'Audyxa, Richard a aussi conçu Wapy, assistant WhatsApp à IA pour les sociétés d'Afrique francophone. Il a déjà travaillé avec des entreprises du Gabon, de la RD Congo et du Tchad, voisins du Congo en Afrique centrale. Le tableau suivant résume son offre pour le Congo-Brazzaville.",
+                "Avec plus de six ans d'expérience, une formation à EPITECH suivie en 2022 et la co-fondation d'Audyxa, Richard a aussi conçu Wapy, assistant WhatsApp à IA pour les sociétés d'Afrique francophone. Des entreprises du Gabon, de la RD Congo et du Tchad, voisins du Congo en Afrique centrale, font partie des pays où il intervient. Le tableau suivant résume son offre pour le Congo-Brazzaville.",
             ],
         ],
         [
@@ -289,13 +289,14 @@ return [
         ['titre' => 'Comarch, facture électronique certifiée et TVA sur les services numériques au Congo', 'url' => 'https://www.comarch.com/trade-and-services/data-management/legal-regulation-changes/republic-of-the-congo-rolls-out-certified-e-invoicing-and-digital-services-vat-rules/', 'date' => '2026-10-06'],
         ['titre' => 'VAT Update, facture certifiée obligatoire au Congo dès le 1er août 2026', 'url' => 'https://www.vatupdate.com/2026/08/05/certified-e-invoicing-mandatory-from-1-august-2026/', 'date' => '2026-10-06'],
         ['titre' => 'OHADA, le Congo', 'url' => 'https://www.ohada.com/etats-membres/congo.html', 'date' => '2026-10-06'],
-        ['titre' => 'Wikipédia, franc CFA (XAF et XOF)', 'url' => 'https://fr.wikipedia.org/wiki/Franc_CFA', 'date' => '2026-10-06'],
+        ['titre' => 'BEAC, taux indicatifs de change (EUR/XAF)', 'url' => 'https://www.beac.int', 'date' => '2026-10-06'],
         ['titre' => 'PawaPay, opérateurs de mobile money disponibles (Congo, MTN et Airtel en XAF)', 'url' => 'https://docs.pawapay.io/v2/docs/providers', 'date' => '2026-10-06'],
         ['titre' => 'Yabetoo, plateforme de paiement', 'url' => 'https://yabetoo.com/', 'date' => '2026-10-06'],
         ['titre' => 'FONEA, missions du Fonds national d\'appui à l\'employabilité et à l\'apprentissage', 'url' => 'https://fonea.cg/missions', 'date' => '2026-10-06'],
         ['titre' => 'FONEA, accueil et conditions des offres de formation', 'url' => 'https://fonea.cg/', 'date' => '2026-10-06'],
-        ['titre' => 'Wikipédia, Congo-Brazzaville (indicatif, langues)', 'url' => 'https://fr.wikipedia.org/wiki/Congo-Brazzaville', 'date' => '2026-10-06'],
-        ['titre' => 'Fuseau horaire de Brazzaville', 'url' => 'https://www.zeitverschiebung.net/fr/timezone/africa--brazzaville', 'date' => '2026-10-06'],
+        ['titre' => 'Wikipédia, Congo-Brazzaville (langues)', 'url' => 'https://fr.wikipedia.org/wiki/Congo-Brazzaville', 'date' => '2026-10-06'],
+        ['titre' => 'IANA, base de données des fuseaux horaires : Afrique (zone Brazzaville)', 'url' => 'https://data.iana.org/time-zones/tzdb/africa', 'date' => '2026-10-06'],
+        ['titre' => 'UIT, plan de numérotation E.164 : codes de pays (+242)', 'url' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
     ],
 
     'liens' => [

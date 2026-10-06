@@ -18,9 +18,9 @@ return [
     'maj'     => '2026-10-29',
 
     'fiche' => [
-        'capitale' => ['v' => 'Conakry', 'source' => 'https://www.zeitverschiebung.net/fr/country/gn', 'date' => '2026-10-06'],
+        'capitale' => ['v' => 'Conakry', 'source' => 'https://guineenews.org/2026/03/08/rgph-4-le-president-mamadi-doumbouya-officialise-les-resultats-preliminaires-de-17-521-167-decret/', 'date' => '2026-10-06'],
         'villes' => ['v' => ['Conakry : 3 407 327 habitants (RGPH-4, 2025)', 'Régions de Kankan, Nzérékoré, Kindia, Boké, Faranah, Labé et Mamou'], 'source' => 'https://guineenews.org/2026/03/08/rgph-4-le-president-mamadi-doumbouya-officialise-les-resultats-preliminaires-de-17-521-167-decret/', 'date' => '2026-10-06'],
-        'fuseau' => ['v' => 'UTC+0 toute l\'année, sans heure d\'été : une heure de moins qu\'à Cotonou', 'source' => 'https://www.zeitverschiebung.net/fr/country/gn', 'date' => '2026-10-06'],
+        'fuseau' => ['v' => 'UTC+0 toute l\'année, sans heure d\'été : une heure de moins qu\'à Cotonou', 'source' => 'https://data.iana.org/time-zones/tzdb/backward', 'date' => '2026-10-06'],
         'indicatif' => ['v' => '+224', 'source' => 'https://www.itu.int/oth/t0202', 'date' => '2026-10-06'],
         'langues' => ['v' => ['Français', 'Langues nationales placées au même rang que le français par la nouvelle Constitution, selon le président du CNT (juin 2025)'], 'source' => 'https://guineenews.org/2025/06/30/dansa-kourouma-les-langues-nationales-ont-desormais-la-meme-valeur-que-le-francais/', 'date' => '2026-10-06'],
         'population' => ['v' => '17 521 167 habitants au recensement de juillet 2025 (résultats préliminaires officialisés le 6 mars 2026)', 'source' => 'https://guineenews.org/2026/03/08/rgph-4-le-president-mamadi-doumbouya-officialise-les-resultats-preliminaires-de-17-521-167-decret/', 'date' => '2026-10-06'],
@@ -92,10 +92,10 @@ return [
             'type'  => 'etapes',
             'titre' => 'Quelles étapes mènent d\'un projet de paiement mobile à son lancement ?',
             'items' => [
-                ['titre' => 'Fixer les services à accepter', 'texte' => "Richard part de vos clients réels : combien paient par Orange Money, combien par MTN MoMo, combien par virement. Dans la plupart des cas, on commence par Orange Money puis on ajoute MTN MoMo.", 'duree' => '2 à 3 jours'],
-                ['titre' => 'Constituer le dossier marchand', 'texte' => "Orange, MTN ou l'agrégateur retenu instruisent la demande à partir des pièces de votre entreprise. Les délais sont ceux de l'opérateur ; Richard monte le dossier à vos côtés pour limiter les demandes de complément.", 'duree' => 'selon l\'opérateur'],
-                ['titre' => 'Construire et éprouver en environnement de test', 'texte' => "Le parcours complet est bâti : lancement du paiement, réponse de l'opérateur, message reçu par le serveur, page de confirmation. On éprouve les ratés comme les réussites : mauvais code, temps écoulé, solde trop bas, réseau coupé au milieu de l'opération, cas courant hors de Conakry.", 'duree' => '1 à 2 semaines'],
-                ['titre' => 'Rapprocher en franc guinéen et mettre en production', 'texte' => "Chaque paiement est rapproché de sa commande et de sa facture en GNF dans votre logiciel. Des essais réels de faible montant précèdent la bascule, puis les premiers jours en production sont surveillés de près.", 'duree' => '2 à 4 jours'],
+                ['titre' => 'Fixer les services à accepter', 'texte' => "Le projet peut partir de vos clients réels : combien paient par Orange Money, combien par MTN MoMo, combien par virement. Orange Money détient 92 % des abonnés aux services financiers mobiles fin juin 2025, ce qui peut justifier de commencer par lui puis d'ajouter MTN MoMo.", 'duree' => 'Selon le projet'],
+                ['titre' => 'Constituer le dossier marchand', 'texte' => "Orange, MTN ou l'agrégateur retenu instruisent la demande à partir des pièces de votre entreprise. Les délais sont ceux de l'opérateur ; Richard peut monter le dossier à vos côtés pour limiter les demandes de complément.", 'duree' => 'selon l\'opérateur'],
+                ['titre' => 'Construire et éprouver en environnement de test', 'texte' => "Le parcours complet est bâti : lancement du paiement, réponse de l'opérateur, message reçu par le serveur, page de confirmation. Les ratés peuvent être éprouvés comme les réussites : mauvais code, temps écoulé, solde trop bas, réseau coupé au milieu de l'opération, cas courant hors de Conakry.", 'duree' => 'Selon le projet'],
+                ['titre' => 'Rapprocher en franc guinéen et mettre en production', 'texte' => "Chaque paiement est rapproché de sa commande et de sa facture en GNF dans votre logiciel. Des essais réels de faible montant peuvent précéder la bascule, puis les premiers jours en production peuvent être suivis de près.", 'duree' => 'Selon le projet'],
             ],
         ],
         [
@@ -186,7 +186,7 @@ return [
             'type'        => 'prose',
             'titre'       => 'Former les équipes en Guinée : quel format, quel financement ?',
             'paragraphes' => [
-                "Les sessions se tiennent en visioconférence, sur les dossiers et les outils réels de l'entreprise, avec des exercices tirés de son quotidien ; les séances se calent sur le débit disponible, avec des supports qu'on peut télécharger la veille plutôt que de les charger en direct. Aucun déplacement à Conakry n'est prévu : le format à distance évite un voyage et convient à des équipes réparties entre la capitale et les régions minières.",
+                "Les sessions se tiennent en visioconférence, sur les dossiers et les outils réels de l'entreprise, avec des exercices tirés de son quotidien ; les séances se calent sur le débit disponible, avec des supports qu'on peut télécharger la veille plutôt que de les charger en direct. Le format à distance évite un voyage et convient à des équipes réparties entre la capitale et les régions minières.",
                 "Pour le financement, l'Office national de formation et de perfectionnement professionnels, l'ONFPP, est un établissement public à caractère administratif basé à Conakry, chargé de mettre en œuvre la politique de formation continue, notamment dans les entreprises. Le 25 mars 2026, il a validé avec Enabel et l'Union européenne le manuel de la Facilité de développement des compétences : trois ans, un pilote à Conakry, Kindia et Mamou, 800 bénéficiaires visés, et en priorité les entreprises de moins de 30 salariés. Les conditions précises d'accès pour une entreprise donnée ne figurent pas dans le communiqué de validation : renseignez-vous auprès de l'office avant de budgéter.",
                 "Quatre parcours collent à la situation guinéenne. <a href=\"/formations/securite-donnees-dirigeants\">La sécurité des données</a> pèse d'autant plus que l'autorité de protection n'est pas confirmée et que la responsabilité retombe sur l'entreprise. <a href=\"/formations/odoo-comptabilite-syscohada\">Odoo et la comptabilité SYSCOHADA</a> sert les équipes financières, <a href=\"/formations/whatsapp-business\">WhatsApp Business</a> la relation client, et <a href=\"/formations/ia-en-entreprise\">l'IA en entreprise</a> les dirigeants. Tout le catalogue se trouve sur <a href=\"/formations/\">la page des formations</a>.",
             ],
@@ -196,7 +196,7 @@ return [
             'titre'       => 'Comment travaille Richard avec une entreprise de Guinée, depuis Cotonou ?',
             'paragraphes' => [
                 "Plusieurs frontières séparent Conakry de Cotonou : tout se fait à distance. Le fuseau guinéen, UTC+0 sans changement d'heure, retarde d'une heure sur le Bénin (UTC+1) : 9 h à Conakry, c'est 10 h à Cotonou. Richard répond de 7 h à 20 h, heure de Cotonou, soit de 6 h à 19 h chez vous, ce qui recouvre la journée de travail. Échanges et documents sont rédigés en français.",
-                "La Guinée n'appartient pas à la zone franc : sa monnaie est le franc guinéen. Les devis sont donc établis en euros, sur demande, ce qui évite de les exposer aux variations du change entre le GNF et le FCFA. Le mode de règlement se fixe au devis parmi ceux que Richard accepte, dont le virement. Le travail avance par messages WhatsApp et par réunions vidéo ; chaque demande obtient une réponse en moins de 24 heures.",
+                "La Guinée n'appartient pas à la zone franc : sa monnaie est le franc guinéen. Les devis sont donc établis en euros, sur demande, ce qui évite de les exposer aux variations du change entre le GNF et le FCFA. Le mode de règlement se fixe au devis parmi ceux que Richard accepte, dont le virement. Le travail peut avancer par messages WhatsApp et par réunions vidéo ; chaque demande obtient une réponse en moins de 24 heures.",
             ],
         ],
         [
@@ -253,11 +253,11 @@ return [
     ],
 
     'faq' => [
-        ['q' => 'Richard se déplace-t-il à Conakry pour un projet ?', 'r' => "Pas pour le moment : le travail se fait à distance, depuis Cotonou, avec une heure de décalage. Réunions vidéo et messages suffisent à la grande majorité des chantiers de logiciel, d'automatisation et de formation."],
+        ['q' => 'Richard se déplace-t-il à Conakry pour un projet ?', 'r' => "Pas pour le moment : le travail se fait à distance, depuis Cotonou, avec une heure de décalage. Réunions vidéo et messages suffisent généralement pour des chantiers de logiciel, d'automatisation et de formation."],
         ['q' => 'Quels portefeuilles mobiles les clients guinéens utilisent-ils ?', 'r' => "Orange Money, qui détenait 92 % des 3,2 millions d'abonnés aux services financiers mobiles fin juin 2025 selon l'ARPT, et MTN MoMo, avec 8 %. Coris Money, lancé par Coris Bank International Guinée le 16 février 2026, s'y ajoute."],
         ['q' => 'En quelle monnaie sont établis les devis pour la Guinée ?', 'r' => "En euros. La Guinée est hors zone franc : sa monnaie est le franc guinéen, émis par la Banque centrale de la République de Guinée. Le devis se prépare après un premier échange sur votre besoin."],
         ['q' => 'La Guinée a-t-elle une autorité de protection des données ?', 'r' => "La loi L/2016/037/AN prévoit son installation par voie réglementaire, mais au 6 octobre 2026, aucune installation n'est confirmée. La déclaration préalable et l'autorisation des transferts restent prévues par la loi : vérifiez l'état actuel avant un grand traitement."],
-        ['q' => 'Les données personnelles doivent-elles rester en Guinée ?', 'r' => "Les synthèses juridiques consultées (DLA Piper, Data Protection Africa) ne mentionnent aucune obligation d'hébergement local. La loi de 2016 soumet en revanche le transfert vers un pays tiers à l'autorisation de l'autorité, sous condition d'un niveau de protection équivalent. Mieux vaut donc consigner par écrit où se trouvent les données."],
+        ['q' => 'Les données personnelles doivent-elles rester en Guinée ?', 'r' => "Les synthèses juridiques de DLA Piper et de Data Protection Africa ne mentionnent aucune obligation d'hébergement local. La loi de 2016 soumet en revanche le transfert vers un pays tiers à l'autorisation de l'autorité, sous condition d'un niveau de protection équivalent. Mieux vaut donc consigner par écrit où se trouvent les données."],
         ['q' => 'Faut-il déjà émettre des factures électroniques en Guinée ?', 'r' => "Le ministère du Budget indique que la réforme est inscrite au Code général des impôts depuis sa présentation de décembre 2021. Au 6 octobre 2026, aucune plateforme nationale en service ni aucun calendrier n'est annoncé : les règles de numérotation et de mentions restent la référence."],
         ['q' => 'Quel est le taux de TVA en Guinée ?', 'r' => "Le taux normal est de 18 %. Selon un guide fiscal tiers, une franchise s'applique sous 1 milliard de GNF de chiffre d'affaires de l'année précédente, et les administrations, mines, hydrocarbures et télécoms retiennent 50 % de la TVA sur leurs paiements. Validez votre cas avec un expert-comptable."],
         ['q' => 'La Guinée applique-t-elle l\'OHADA et le SYSCOHADA ?', 'r' => "Oui. Le traité de l'OHADA a été ratifié par la Guinée le 5 mai 2000 et y est entré en vigueur le 21 novembre 2000. Les entreprises guinéennes tiennent donc leur comptabilité selon le SYSCOHADA, ce qui conditionne la localisation choisie dans Odoo ou Dolibarr."],
@@ -288,7 +288,7 @@ return [
         ['titre' => 'Guinéenews, Simandou : premier chargement de minerai (octobre 2025)', 'url' => 'https://guineenews.org/2025/10/17/simandou-rio-tinto-lance-le-premier-chargement-de-minerai-vers-le-port-de-moribaya/', 'date' => '2026-10-06'],
         ['titre' => 'Burkina24, CinetPay disponible au Burkina Faso et dans huit pays dont la Guinée Conakry', 'url' => 'https://burkina24.com/?p=226112', 'date' => '2026-10-06'],
         ['titre' => 'Guinéenews, les langues nationales ont désormais la même valeur que le français', 'url' => 'https://guineenews.org/2025/06/30/dansa-kourouma-les-langues-nationales-ont-desormais-la-meme-valeur-que-le-francais/', 'date' => '2026-10-06'],
-        ['titre' => 'Fuseau horaire de la Guinée', 'url' => 'https://www.zeitverschiebung.net/fr/country/gn', 'date' => '2026-10-06'],
+        ['titre' => 'IANA, base des fuseaux horaires : liens de zones (Africa/Conakry)', 'url' => 'https://data.iana.org/time-zones/tzdb/backward', 'date' => '2026-10-06'],
         ['titre' => 'UIT, indicatifs téléphoniques des pays', 'url' => 'https://www.itu.int/oth/t0202', 'date' => '2026-10-06'],
     ],
 

@@ -22,14 +22,14 @@ return [
         'capitale' => ['v' => 'Ottawa, dans la région de la capitale nationale', 'source' => 'https://fr.wikipedia.org/wiki/Ottawa', 'date' => '2026-10-06'],
         'villes' => ['v' => ['Montréal', 'Québec', 'Toronto', 'Vancouver'], 'source' => 'https://www150.statcan.gc.ca/n1/daily-quotidien/260114/dq260114a-fra.htm', 'date' => '2026-10-06'],
         'fuseau' => ['v' => 'Montréal et Québec : UTC-5 en hiver, UTC-4 du deuxième dimanche de mars au premier dimanche de novembre ; Cotonou : UTC+1', 'source' => 'https://data.iana.org/time-zones/tzdb/northamerica', 'date' => '2026-10-06'],
-        'indicatif' => ['v' => '+1', 'source' => 'https://fr.wikipedia.org/wiki/Plan_de_num%C3%A9rotation_nord-am%C3%A9ricain', 'date' => '2026-10-06'],
+        'indicatif' => ['v' => '+1', 'source' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
         'langues' => ['v' => ['Français et anglais (langues officielles du Canada)'], 'source' => 'https://laws-lois.justice.gc.ca/fra/lois/o-3.01/page-1.html', 'date' => '2026-10-06'],
         'population' => ['v' => '41 651 653 habitants au 1er juillet 2025', 'source' => 'https://www150.statcan.gc.ca/n1/daily-quotidien/250924/dq250924a-fra.htm', 'date' => '2026-10-06'],
         'internet' => ['v' => '38,2 millions d\'internautes, soit 95,1 % de la population, fin 2025', 'source' => 'https://datareportal.com/reports/digital-2026-canada', 'date' => '2026-10-06'],
         'mobile' => ['v' => '42,4 millions de connexions mobiles actives fin 2025, soit 106 % de la population', 'source' => 'https://datareportal.com/reports/digital-2026-canada', 'date' => '2026-10-06'],
         'secteurs' => ['v' => ['Intelligence artificielle à Montréal : plus de 1 400 chercheurs et experts à Mila, 60 000 travailleurs aux compétences liées à l\'IA'], 'source' => 'https://www.montrealinternational.com/fr/secteurs/intelligence-artificielle/', 'date' => '2026-10-06'],
         'devise' => ['v' => 'Dollar canadien (CAD)', 'source' => 'https://www.banqueducanada.ca/taux/taux-de-change/', 'date' => '2026-10-06'],
-        'operateurs' => ['v' => ['Débit Interac : 6,6 milliards d\'opérations en 2024', 'Virement Interac : 1,4 milliard d\'opérations en 2024'], 'source' => 'https://www.interac.ca/fr/', 'date' => '2026-10-06'],
+        'operateurs' => ['v' => ['Débit Interac : 6,5 milliards d\'opérations en 2023', 'Virement Interac : 1,16 milliard d\'opérations en 2023'], 'source' => 'https://www.interac.ca/en/content/business/interac-by-the-numbers/', 'date' => '2026-10-06'],
         'donnees' => ['v' => 'Fédéral : LPRPDE ; Québec, Alberta et Colombie-Britannique : lois du secteur privé essentiellement similaires', 'source' => 'https://www.priv.gc.ca/fr/sujets-lies-a-la-protection-de-la-vie-privee/lois-sur-la-protection-des-renseignements-personnels-au-canada/02_05_d_15/', 'date' => '2026-10-06'],
         'autorite' => ['v' => 'Commission d\'accès à l\'information du Québec ; Commissariat à la protection de la vie privée du Canada pour le fédéral', 'source' => 'https://www.priv.gc.ca/fr/a-propos-du-commissariat/ce-que-nous-faisons/collaboration-avec-les-provinces-et-les-territoires/lois-et-organismes-de-surveillance-provinciaux-et-territoriaux-en-matiere-de-protection-de-la-vie-privee/', 'date' => '2026-10-06'],
         'tva' => ['v' => 'TPS fédérale et TVQ ; un service acquis d\'un non-résident non inscrit pour une utilisation commerciale à 90 % ou plus n\'entraîne ni TPS ni TVQ à verser', 'source' => 'https://www.revenuquebec.ca/fr/entreprises/taxes/tpstvh-et-tvq/situations-particulieres-liees-a-la-tpstvh-et-a-la-tvq/importations/achat-de-services-ou-de-biens-meubles-incorporels-a-lexterieur-du-canada/', 'date' => '2026-10-06'],
@@ -68,7 +68,7 @@ return [
             'type'        => 'prose',
             'titre'       => 'Comment un site canadien encaisse-t-il ses clients, et que faut-il brancher ?',
             'paragraphes' => [
-                "Au Canada, l'essentiel des paiements se règle par carte, par Débit Interac et par Virement Interac. Interac publie, pour 2024, 6,6 milliards d'opérations par Débit Interac et 1,4 milliard par Virement Interac. Le client attend de pouvoir payer avec sa carte, son compte bancaire ou un portefeuille sur son téléphone, sans créer de compte supplémentaire.",
+                "Au Canada, l'essentiel des paiements se règle par carte, par Débit Interac et par Virement Interac. Interac publie, pour 2023, 6,5 milliards d'opérations par Débit Interac et 1,16 milliard par Virement Interac. Le client attend de pouvoir payer avec sa carte, son compte bancaire ou un portefeuille sur son téléphone, sans créer de compte supplémentaire.",
                 "Pour un site marchand, le travail consiste à brancher une passerelle de paiement par carte, à proposer le virement ou le débit lorsque le fournisseur le permet, et à rapprocher chaque encaissement de sa commande et de sa facture. Les frais et les délais de versement dépendent de chaque fournisseur et figurent dans son contrat : ils ne se déduisent pas d'une page de présentation. Richard prépare le dossier technique, teste en environnement d'essai et vérifie les cas d'échec avant la mise en ligne.",
             ],
         ],
@@ -199,7 +199,7 @@ return [
                 [
                     'secteur'  => 'Entreprises québécoises assujetties à la loi du 1 %',
                     'probleme' => 'Une entreprise dont la masse salariale dépasse 2 000 000 $ doit consacrer l\'équivalent de 1 % à la formation admissible, et ses équipes n\'ont jamais reçu de formation structurée sur l\'IA ou l\'automatisation.',
-                    'solution' => 'Un parcours à distance, avec des exercices sur les outils de l\'entreprise, une attestation de présence et un contenu décrit assez précisément pour être déclaré. L\'admissibilité de la dépense se confirme avec le comptable avant le premier atelier.',
+                    'solution' => 'Un parcours à distance, avec des exercices sur les outils de l\'entreprise, une attestation de présence à prévoir et un contenu décrit assez précisément pour être déclaré. L\'admissibilité de la dépense se confirme avec le comptable avant le premier atelier.',
                     'lien'     => ['url' => '/formation-ia-entreprise-quebec', 'texte' => 'Formation IA à Québec'],
                 ],
                 [
@@ -226,7 +226,7 @@ return [
             'paragraphes' => [
                 "Le décalage dépend de la saison. Cotonou est à UTC+1 toute l'année. Montréal et Québec sont à UTC-4 de la mi-mars au début de novembre, puis à UTC-5 : l'écart est de cinq heures pendant l'heure d'été et de six heures pendant l'heure normale. En 2026, l'heure d'été se termine le dimanche 1er novembre ; elle reprendra le dimanche 14 mars 2027. Un rendez-vous fixé à 9 h à Montréal tombe donc à 14 h à Cotonou en été, à 15 h en hiver.",
                 "Les plages de Richard vont de 7 h à 20 h heure de Cotonou, soit de 2 h à 15 h à Montréal en été et de 1 h à 14 h en hiver. La matinée québécoise est la meilleure fenêtre de travail commun : les points d'équipe se placent entre 9 h et 12 h, heure de Montréal, et le reste de la journée du client sert à relire ce que Richard a livré en fin de soirée à Cotonou. Une partie de la Côte-Nord et les Îles-de-la-Madeleine suivent un autre fuseau : précisez-le au cadrage.",
-                "La langue de travail est le français, y compris pour la documentation, les interfaces et les contrats. Les devis sont libellés en dollars canadiens, ce qui évite de raisonner en devise étrangère. Le suivi passe par des visioconférences, un tableau de tâches partagé et des comptes rendus écrits, et toute demande reçoit une réponse sous 24 heures. Un contrat de service signé avant le premier accès aux données fixe le périmètre, la confidentialité, la propriété du code et la clause de protection décrite plus haut.",
+                "La langue de travail est le français, y compris pour la documentation, les interfaces et les contrats. Les devis sont libellés en dollars canadiens, ce qui évite de raisonner en devise étrangère. Le suivi peut passer par des visioconférences, un tableau de tâches partagé et des comptes rendus écrits, et toute demande reçoit une réponse sous 24 heures. Un contrat de service signé avant le premier accès aux données fixe le périmètre, la confidentialité, la propriété du code et la clause de protection décrite plus haut.",
             ],
         ],
         [
@@ -319,14 +319,14 @@ return [
         ['titre' => 'Statistique Canada, estimations de la population : régions infraprovinciales, 2025', 'url' => 'https://www150.statcan.gc.ca/n1/daily-quotidien/260114/dq260114a-fra.htm', 'date' => '2026-10-06'],
         ['titre' => 'DataReportal, rapport Digital 2026 sur le Canada (chiffres de fin 2025)', 'url' => 'https://datareportal.com/reports/digital-2026-canada', 'date' => '2026-10-06'],
         ['titre' => 'Montréal International, intelligence artificielle', 'url' => 'https://www.montrealinternational.com/fr/secteurs/intelligence-artificielle/', 'date' => '2026-10-06'],
-        ['titre' => 'Interac, page d\'accueil (volumes d\'opérations 2024)', 'url' => 'https://www.interac.ca/fr/', 'date' => '2026-10-06'],
+        ['titre' => 'Interac, chiffres clés (volumes d\'opérations 2023)', 'url' => 'https://www.interac.ca/en/content/business/interac-by-the-numbers/', 'date' => '2026-10-06'],
         ['titre' => 'Justice Canada, Loi sur les langues officielles', 'url' => 'https://laws-lois.justice.gc.ca/fra/lois/o-3.01/page-1.html', 'date' => '2026-10-06'],
         ['titre' => 'Wikipédia, Ottawa (capitale du Canada)', 'url' => 'https://fr.wikipedia.org/wiki/Ottawa', 'date' => '2026-10-06'],
-        ['titre' => 'Wikipédia, Plan de numérotation nord-américain (indicatif 1)', 'url' => 'https://fr.wikipedia.org/wiki/Plan_de_num%C3%A9rotation_nord-am%C3%A9ricain', 'date' => '2026-10-06'],
+        ['titre' => 'UIT, plan de numérotation E.164 : codes de pays (+1)', 'url' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
         ['titre' => 'Infobref, assouplissement de la loi du 1 % en avril 2026', 'url' => 'https://infobref.com/assouplissement-loi-formation-2026-04/', 'date' => '2026-10-06'],
         ['titre' => 'IANA, base de données des fuseaux horaires (Amérique du Nord)', 'url' => 'https://data.iana.org/time-zones/tzdb/northamerica', 'date' => '2026-10-06'],
         ['titre' => 'Banque du Canada, taux de change', 'url' => 'https://www.banqueducanada.ca/taux/taux-de-change/', 'date' => '2026-10-06'],
-        ['titre' => 'Fuseau horaire de Porto-Novo (Bénin)', 'url' => 'https://www.zeitverschiebung.net/fr/timezone/africa--porto-novo', 'date' => '2026-10-06'],
+        ['titre' => 'IANA, base de données des fuseaux horaires : Afrique (Cotonou, zone Africa/Lagos)', 'url' => 'https://data.iana.org/time-zones/tzdb/africa', 'date' => '2026-10-06'],
     ],
 
     'liens' => [

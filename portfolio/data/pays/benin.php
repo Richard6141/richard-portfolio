@@ -71,8 +71,8 @@ return [
             'date' => '2026-10-06',
         ],
         'devise' => [
-            'v' => 'Franc CFA (XOF), à parité fixe avec l\'euro : 655,957 FCFA pour 1 euro (cours BCEAO du 6 octobre 2026).',
-            'source' => 'https://www.bceao.int/fr/',
+            'v' => 'Franc CFA (XOF), à parité fixe avec l\'euro : 655,957 FCFA pour 1 euro.',
+            'source' => 'https://www.bceao.int/fr/content/histoire-du-franc-cfa',
             'date' => '2026-10-06',
         ],
         'operateurs' => [
@@ -96,7 +96,7 @@ return [
             'date' => '2026-10-06',
         ],
         'facturation' => [
-            'v' => 'Facture normalisée émise par une machine ou un système homologué par la DGI (e-MECeF), obligatoire notamment pour les assujettis à la TVA (articles 481 et 482 du Code général des impôts).',
+            'v' => 'Facture normalisée émise par une machine électronique certifiée ou un système homologué par la DGI, pour les opérations des assujettis à la TVA, à l\'impôt sur les sociétés, aux bénéfices d\'affaires ou à la taxe professionnelle synthétique (articles 481 et 482 du Code général des impôts).',
             'source' => 'https://sgg.gouv.bj/doc/loi-2021-15/download',
             'date' => '2026-10-06',
         ],
@@ -183,7 +183,7 @@ return [
                 ],
                 [
                     'titre' => 'Facture normalisée et e-MECeF',
-                    'texte' => 'Selon l\'article 481 du <a href="https://sgg.gouv.bj/doc/loi-2021-15/download">Code général des impôts</a>, toute opération d\'une personne soumise à l\'impôt sur les sociétés, à l\'impôt sur les bénéfices d\'affaires, à la taxe professionnelle synthétique ou à la TVA fait l\'objet d\'une facture normalisée, qui porte le numéro d\'identification de la machine électronique certifiée, une signature et un code électronique. L\'article 482 exige une machine ou un système homologué par la DGI : un ERP qui édite des factures doit donc être homologué et dialoguer avec e-MECeF.',
+                    'texte' => 'Selon l\'article 481 du <a href="https://sgg.gouv.bj/doc/loi-2021-15/download">Code général des impôts</a>, toute opération d\'une personne soumise à l\'impôt sur les sociétés, à l\'impôt sur les bénéfices d\'affaires, à la taxe professionnelle synthétique ou à la TVA fait l\'objet d\'une facture normalisée, qui porte le numéro d\'identification de la machine électronique certifiée, une signature et un code électronique. L\'article 482 exige une machine ou un système homologué par la DGI : un ERP qui édite des factures doit donc être homologué et dialoguer avec <a href="https://edicomgroup.com/blog/electronic-invoicing-benin-facture-normalisee">e-MECeF, le système en ligne de facturation électronique certifiée</a>.',
                 ],
                 [
                     'titre' => 'TVA et plateformes numériques',
@@ -288,7 +288,7 @@ return [
             'titre'       => 'Comment se passe une collaboration avec Richard depuis Cotonou ?',
             'paragraphes' => [
                 'Richard SALANON vit à Cotonou : le Bénin est l\'heure de référence de la collaboration. Selon la base des fuseaux horaires de l\'IANA, le pays est à UTC+1 toute l\'année, sans heure d\'été. Un appel avec Parakou, Lokossa ou Natitingou n\'a aucun décalage, et le travail avec une filiale en Europe reste dans les heures de bureau. La langue du travail est le français ; l\'anglais est possible pour les échanges avec des partenaires. Les devis sont rédigés en FCFA.',
-                'Les réponses arrivent sous 24 heures, et les horaires publiés vont de 7 h à 20 h, tous les jours. Un premier échange sert à comprendre l\'activité, pas à vendre : qui saisit quoi, sur quel téléphone, avec quel réseau, quelles factures sont émises et comment elles sont payées. Le suivi se fait par messagerie et par visioconférence.',
+                'Les réponses arrivent sous 24 heures, et les horaires publiés vont de 7 h à 20 h, tous les jours. Un premier échange sert à comprendre l\'activité, pas à vendre : qui saisit quoi, sur quel téléphone, avec quel réseau, quelles factures sont émises et comment elles sont payées. Le suivi peut se faire par messagerie et par visioconférence.',
                 'Le paiement se règle par Mobile Money (MTN, Moov), carte bancaire, PayPal, virement ou espèces, au choix. Pour un projet à Cotonou, une réunion sur place est simple à organiser. Hors de Cotonou, la décision entre déplacement et visioconférence se prend au cadrage, selon l\'utilité d\'être sur le terrain : un atelier de formation ou un relevé de processus en entrepôt justifie un déplacement ; une recette d\'écran, rarement.',
             ],
         ],
@@ -297,10 +297,10 @@ return [
             'titre'  => 'Comment se déroule un projet béninois, du premier message à la mise en service ?',
             'items'  => [
                 ['titre' => 'Premier échange et cadrage', 'texte' => 'Un appel ou un message WhatsApp pour fixer le besoin, les utilisateurs, les paiements et les obligations qui s\'appliquent : APDP, e-MECeF, TVA, OHADA. Vous recevez un devis en FCFA.', 'duree' => 'Réponse sous 24 heures'],
-                ['titre' => 'Maquette ou prototype', 'texte' => 'Vous validez les écrans sur votre téléphone, pas seulement sur un ordinateur, avant le développement.', 'duree' => 'Selon le projet'],
-                ['titre' => 'Développement et paiement de test', 'texte' => 'Réalisation par paliers, avec des paiements d\'essai sur FedaPay ou KKiaPay avant tout paiement réel.', 'duree' => 'Site vitrine : 1 à 3 semaines ; application : 1 à 3 mois'],
-                ['titre' => 'Formation et mise en service', 'texte' => 'Les équipes utilisent l\'outil sur des cas réels ; sur place si le projet est au Bénin, à distance sinon.', 'duree' => 'Fixée au devis'],
-                ['titre' => 'Suivi après livraison', 'texte' => 'Corrections, évolutions et maintenance, avec un interlocuteur qui connaît le terrain et le projet.', 'duree' => 'Continu'],
+                ['titre' => 'Maquette ou prototype', 'texte' => 'Les écrans peuvent être validés sur votre téléphone, pas seulement sur un ordinateur, avant le développement.', 'duree' => 'Selon le projet'],
+                ['titre' => 'Développement et paiement de test', 'texte' => 'Le projet peut être réalisé par paliers, avec des paiements d\'essai sur FedaPay ou KKiaPay avant tout paiement réel.', 'duree' => 'Site vitrine : 1 à 3 semaines ; application : 1 à 3 mois'],
+                ['titre' => 'Formation et mise en service', 'texte' => 'Les équipes peuvent utiliser l\'outil sur des cas réels ; sur place si le projet est au Bénin, à distance sinon.', 'duree' => 'Fixée au devis'],
+                ['titre' => 'Suivi après livraison', 'texte' => 'Corrections, évolutions et maintenance peuvent être prévues au devis, avec un interlocuteur qui connaît le terrain et le projet.', 'duree' => 'Continu'],
             ],
         ],
         [
@@ -392,6 +392,7 @@ return [
         ['titre' => 'ARCEP Bénin, interconnexion des plateformes de mobile money', 'url' => 'https://arcep.bj/interconnexion-des-plateformes-mobile-money-aux-reseaux-des-operateurs-mobiles/', 'date' => '2026-10-06'],
         ['titre' => 'BCEAO, établissements de monnaie électronique au Bénin', 'url' => 'https://www.bceao.int/fr/content/etablissements-de-monnaie-electronique', 'date' => '2026-10-06'],
         ['titre' => 'Loi n° 2017-20 du 20 avril 2018 portant Code du numérique (Secrétariat général du gouvernement)', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/download', 'date' => '2026-10-06'],
+        ['titre' => 'Edicom, la facture normalisée au Bénin et le système e-MECeF', 'url' => 'https://edicomgroup.com/blog/electronic-invoicing-benin-facture-normalisee', 'date' => '2026-10-06'],
         ['titre' => 'DLA Piper, Data protection laws of the world : Bénin', 'url' => 'https://www.dlapiperdataprotection.com/index.html?c=BJ&t=law', 'date' => '2026-10-06'],
         ['titre' => 'Banouto, huit décrets d\'application du Code du numérique (2 juillet 2025)', 'url' => 'https://www.banouto.bj/societe/article/20250702-code-du-numerique-au-benin-le-gouvernement-adopte-08-decrets-d-application-de-la-loi', 'date' => '2026-10-06'],
         ['titre' => 'CIO Mag, protection des données personnelles et APDP', 'url' => 'https://cio-mag.com/benin-comment-exercer-ses-droits-en-cas-de-vol-de-donnees-personnelles', 'date' => '2026-10-06'],
@@ -404,7 +405,7 @@ return [
         ['titre' => 'FedaPay, tarifs pour le Bénin', 'url' => 'https://www.fedapay.com/pricing', 'date' => '2026-10-06'],
         ['titre' => 'KKiaPay, tarifs pour le Bénin', 'url' => 'https://kkiapay.me/tarifs/', 'date' => '2026-10-06'],
         ['titre' => 'ARCEP Bénin, passage des numéros à dix chiffres le 30 novembre 2024', 'url' => 'https://arcep.bj/a-partir-de-30-novembre-2024-les-numeros-de-telephone-au-benin-passent-de-08-a-10-chiffres/', 'date' => '2026-10-06'],
-        ['titre' => 'BCEAO, cours des devises du 6 octobre 2026', 'url' => 'https://www.bceao.int/fr/', 'date' => '2026-10-06'],
+        ['titre' => 'BCEAO, histoire du franc CFA et parité avec l\'euro', 'url' => 'https://www.bceao.int/fr/content/histoire-du-franc-cfa', 'date' => '2026-10-06'],
         ['titre' => 'IANA, base des fuseaux horaires (Afrique)', 'url' => 'https://data.iana.org/time-zones/tzdb/africa', 'date' => '2026-10-06'],
         ['titre' => 'OHADA, États membres', 'url' => 'https://www.ohada.org/les-etats-membres-de-lohada/', 'date' => '2026-10-06'],
     ],
