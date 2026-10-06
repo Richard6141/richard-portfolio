@@ -92,3 +92,15 @@ function test_entete_formations_vers_les_fiches_publiees(): void
         }
     }
 }
+
+function test_entete_pays_vers_la_page_pays_une_fois_publiee(): void
+{
+    // Vague 1D : le méga-menu vise la page pays publiée, sinon la page ville historique.
+    $html = entete_rendre();
+    $nav = require racine('portfolio/data/navigation.php');
+    foreach ($nav['pays'] as $liste) {
+        foreach ($liste as $eP) {
+            assert_contains('href="' . (pays_url($eP['nom']) ?? $eP['url']) . '"', $html, $eP['nom']);
+        }
+    }
+}

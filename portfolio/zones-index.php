@@ -106,8 +106,7 @@ include __DIR__ . '/partials/pv2-header.php';
         <h3 class="zones-region"><?= sanitize($region) ?></h3>
         <ul class="liste-pays">
           <?php foreach ($liste as $slug => $p):
-            $fiche = registre_lire('pays', $slug);
-            $lien  = ($fiche !== null && registre_publiee($fiche)) ? $fiche['url'] : null; ?>
+            $lien = pays_url($slug); ?>
           <li><?= drapeau($slug) ?><?php if ($lien): ?><a href="<?= sanitize($lien) ?>"><?= sanitize($p['nom']) ?></a><?php else: ?><?= sanitize($p['nom']) ?><?php endif; ?></li>
           <?php endforeach; ?>
         </ul>

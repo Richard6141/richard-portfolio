@@ -139,3 +139,23 @@ function test_gabarit_hero_et_fil_d_ariane_affichent_les_titres_longs(): void
     assert_contains('.pv2 .registre-hero h1 .titre-suite{display:block;', $css);
     assert_contains('.pv2 .crumb a,.pv2 .crumb [aria-current]{display:inline-block;max-width:', $css);
 }
+
+function test_gabarit_pays_fiche_a_sa_place_ou_avant_la_faq(): void
+{
+    // Vague 1D : la section « fiche » placée par le rédacteur reçoit la fiche ; sinon elle s'ajoute avant la FAQ.
+    $html = gabarit_rendre('pays', 'benin');
+    assert_same(1, substr_count($html, 'bloc--fiche'));
+    assert_contains('Quels repères retenir sur le pays', $html, 'titre du rédacteur (espace insécable avant « ? »)');
+    assert_contains('MTN MoMo, Moov Money', $html);
+    assert_true(strpos($html, 'bloc--fiche') < strpos($html, 'bloc--faq'));
+    assert_contains('"Service"', $html);
+    $togo = gabarit_rendre('pays', 'togo');
+    assert_same(1, substr_count($togo, 'bloc--fiche'));
+    assert_contains('<th scope="row">Capitale</th><td>Lomé</td>', $togo);
+    assert_true(strpos($togo, 'bloc--fiche') < strpos($togo, 'bloc--faq'));
+}
+
+function test_gabarit_pays_drapeau_dans_le_hero(): void
+{
+    assert_contains('<span class="eyebrow"><img class="drapeau" src="/assets/drapeaux/bj.svg"', gabarit_rendre('pays', 'benin'));
+}

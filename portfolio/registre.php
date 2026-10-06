@@ -25,9 +25,14 @@ if (in_array($rp['type'], ['histoire', 'comparatif', 'guide'], true)) {
 }
 
 // Vague 1B : une section « programme » sans jours reçoit le programme de la fiche, à sa place.
-$sectionsRendues = array_map(static fn(array $b): array => ($b['type'] ?? '') === 'programme' && !isset($b['jours'])
-    ? $b + ['jours' => (array) ($rp['programme'] ?? [])] : $b, (array) $rp['sections']);
+// Vague 1D : une section « fiche » sans faits reçoit la fiche du pays, à sa place.
+$sectionsRendues = array_map(static fn(array $b): array => match (true) {
+    ($b['type'] ?? '') === 'programme' && !isset($b['jours']) => $b + ['jours' => (array) ($rp['programme'] ?? [])],
+    ($b['type'] ?? '') === 'fiche' && !isset($b['faits'])     => $b + ['faits' => (array) ($rp['fiche'] ?? [])],
+    default => $b,
+}, (array) $rp['sections']);
 $programmePlace = in_array('programme', array_column($sectionsRendues, 'type'), true);
+$fichePlacee    = in_array('fiche', array_column($sectionsRendues, 'type'), true);
 
 // Typographie française appliquée à la page rendue (helpers/blocs.php).
 ob_start();
@@ -41,6 +46,7 @@ include __DIR__ . '/partials/pv2-header.php';
     <article class="registre__article">
       <?= blocs_rendre($sectionsRendues) ?>
       <?php if (!$programmePlace && !empty($rp['programme'])): ?><?= bloc_rendre(['type' => 'programme', 'titre' => 'Programme détaillé', 'jours' => $rp['programme']]) ?><?php endif; ?>
+      <?php if (!$fichePlacee && !empty($rp['fiche'])): ?><?= bloc_rendre(['type' => 'fiche', 'titre' => 'Quels repères retenir ' . pays_liste()[$rp['slug']]['dans'] . ' ?', 'faits' => $rp['fiche']]) ?><?php endif; ?>
       <?php if (!empty($rp['faq'])): ?><?= bloc_rendre(['type' => 'faq', 'titre' => 'Questions fréquentes', 'items' => $rp['faq']]) ?><?php endif; ?>
       <?php if (!empty($rp['sources'])): ?><?= bloc_rendre(['type' => 'sources', 'titre' => 'Sources', 'items' => $rp['sources']]) ?><?php endif; ?>
       <?php if ($editorial) { include __DIR__ . '/partials/boite-auteur.php'; } ?>

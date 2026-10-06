@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 const BLOCS_TYPES = [
     'prose', 'points', 'etapes', 'tableau', 'comparaison', 'chiffres', 'cas', 'prix',
-    'frise', 'vigilance', 'lecon', 'citation', 'checklist', 'faq', 'sources', 'cta', 'programme', 'galerie',
+    'frise', 'vigilance', 'lecon', 'citation', 'checklist', 'faq', 'sources', 'cta', 'programme', 'galerie', 'fiche',
 ];
 
 /**

@@ -64,11 +64,58 @@ const REGISTRES_UNIVERS = ['Droit et justice', 'Chiffre et finance', 'Direction 
 /** Familles de services (registre de navigation). */
 const REGISTRES_FAMILLES = ['Sites et boutiques', 'Applications et IA', 'Visibilité et conseil', 'ERP et gestion'];
 
+/** Fiche pays (spec 6.5, vague 1D) : groupe => [clé => libellé], dans l'ordre d'affichage. */
+const REGISTRES_FICHE_PAYS = [
+    'Identité' => ['capitale' => 'Capitale', 'villes' => 'Villes principales', 'fuseau' => 'Fuseau horaire',
+                   'indicatif' => 'Indicatif téléphonique', 'langues' => 'Langues'],
+    'Économie numérique' => ['population' => 'Population', 'internet' => 'Accès à internet', 'mobile' => 'Téléphonie mobile',
+                             'mobile_money' => 'Mobile money', 'secteurs' => 'Secteurs porteurs'],
+    'Paiement' => ['devise' => 'Devise', 'operateurs' => 'Opérateurs de mobile money', 'agregateurs' => 'Agrégateurs de paiement'],
+    'Cadre légal' => ['donnees' => 'Loi sur les données personnelles', 'autorite' => 'Autorité de protection des données',
+                      'facturation' => 'Facturation électronique ou normalisée', 'tva' => 'TVA', 'ohada' => 'OHADA',
+                      'ecommerce' => 'Commerce électronique'],
+    'Formation' => ['financement' => 'Financement de la formation'],
+];
+
+/** Groupes non vides d'une fiche pays, lignes prêtes à afficher (valeur en liste jointe par des virgules). */
+function registre_fiche_groupes(array $fiche): array
+{
+    $groupes = [];
+    foreach (REGISTRES_FICHE_PAYS as $groupe => $cles) {
+        foreach ($cles as $cle => $libelle) {
+            if (!isset($fiche[$cle])) {
+                continue;
+            }
+            $f = $fiche[$cle];
+            $groupes[$groupe][] = ['libelle' => $libelle, 'valeur' => is_array($f['v']) ? implode(', ', $f['v']) : (string) $f['v'],
+                                   'source' => (string) $f['source'], 'date' => (string) $f['date']];
+        }
+    }
+    return $groupes;
+}
+
 /** Les 34 pays, chargés une fois. */
 function pays_liste(): array
 {
     static $liste = null;
     return $liste ??= require __DIR__ . '/../portfolio/data/pays-liste.php';
+}
+
+/** Slug d'un pays depuis son slug ou son nom affiché, ou null. */
+function pays_slug(string $pays): ?string
+{
+    static $parNom = null;
+    $liste = pays_liste();
+    $parNom ??= array_column(array_map(static fn(string $s, array $p): array => [$p['nom'], $s], array_keys($liste), $liste), 1, 0);
+    return isset($liste[$pays]) ? $pays : ($parNom[$pays] ?? null);
+}
+
+/** URL de la page pays publiée (vague 1D), ou null : aucun lien vers une page en 404. */
+function pays_url(string $pays, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): ?string
+{
+    $slug = pays_slug($pays);
+    $p = $slug !== null ? registre_lire('pays', $slug, $racine) : null;
+    return ($p !== null && registre_publiee($p, $aujourdhui)) ? $p['url'] : null;
 }
 
 /**
@@ -77,10 +124,8 @@ function pays_liste(): array
  */
 function drapeau(string $pays, int $largeur = 20): string
 {
-    static $parNom = null;
     $liste = pays_liste();
-    $parNom ??= array_column(array_map(static fn(string $s, array $p): array => [$p['nom'], $s], array_keys($liste), $liste), 1, 0);
-    $slug = isset($liste[$pays]) ? $pays : ($parNom[$pays] ?? null);
+    $slug = pays_slug($pays);
     if ($slug === null || empty($liste[$slug]['iso'])) {
         return '';
     }
@@ -155,6 +200,30 @@ function registre_valider(string $type, string $slug, array $p): array
     }
     if ($type === 'pays' && !isset(pays_liste()[$slug])) {
         $e[] = 'pays inconnu : ' . $slug;
+    }
+    if ($type === 'pays' && array_key_exists('fiche', $p)) {
+        if (!is_array($p['fiche'])) {
+            $e[] = 'fiche : tableau attendu';
+        } elseif ($p['fiche'] === []) {
+            $e[] = 'fiche : au moins une valeur';
+        } else {
+            $cles = array_merge(...array_values(array_map('array_keys', REGISTRES_FICHE_PAYS)));
+            foreach ($p['fiche'] as $cle => $f) {
+                if (!in_array($cle, $cles, true)) {
+                    $e[] = "fiche : clé inconnue « {$cle} »";
+                    continue;
+                }
+                $v = $f['v'] ?? '';
+                $plein = is_array($v) ? array_filter($v, static fn($x): bool => trim((string) $x) !== '') !== [] : trim((string) $v) !== '';
+                // Source liable par le bloc (hôte, ni espace ni guillemet) et date de calendrier réelle.
+                $src = (string) ($f['source'] ?? '');
+                $source_ok = preg_match('#^https://[^\s"\'<>]+$#', $src) === 1 && (string) parse_url($src, PHP_URL_HOST) !== '';
+                $date_ok = preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', (string) ($f['date'] ?? ''), $d) === 1 && checkdate((int) $d[2], (int) $d[3], (int) $d[1]);
+                if (!$plein || !$source_ok || !$date_ok) {
+                    $e[] = "fiche[{$cle}] : v, source https et date attendus";
+                }
+            }
+        }
     }
     if (str_ends_with($type, '-pays') && !isset(pays_liste()[basename($slug)])) {
         $e[] = 'pays inconnu : ' . basename($slug);

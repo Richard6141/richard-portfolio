@@ -45,8 +45,9 @@ function test_blocs_chaque_type_rend_sa_section_et_son_titre(): void
         ['type' => 'cta', 'titre' => 'Parlons-en', 'texte' => 'Devis gratuit.', 'bouton' => ['texte' => 'Demander un devis', 'url' => '/contact']],
         ['type' => 'programme', 'titre' => 'Programme', 'jours' => [['titre' => 'Jour 1', 'points' => ['Prompts']]]],
         ['type' => 'galerie', 'titre' => 'Captures', 'images' => [['src' => '/assets/img/x.webp', 'alt' => 'x', 'largeur' => 10, 'hauteur' => 10]]],
+        ['type' => 'fiche', 'titre' => 'Repères', 'faits' => ['capitale' => ['v' => 'Porto-Novo', 'source' => 'https://example.org/', 'date' => '2026-01-01']]],
     ];
-    assert_same(18, count(BLOCS_TYPES));
+    assert_same(19, count(BLOCS_TYPES));
     foreach ($exemples as $bloc) {
         $html = bloc_rendre($bloc);
         assert_contains('class="bloc bloc--' . $bloc['type'], $html, $bloc['type']);
@@ -152,4 +153,17 @@ function test_blocs_typo_fr_appliquee_aux_pages_de_registre(): void
 {
     assert_contains("Richard SALANON\u{00A0}: sites", http_local('/services/')['corps']);
     assert_contains("\u{00A0}?", http_local('/services/vibe-coding')['corps']);
+}
+
+function test_bloc_fiche_tableaux_par_groupe_avec_sources(): void
+{
+    $html = bloc_rendre(['type' => 'fiche', 'titre' => 'Quels repères retenir ?', 'faits' => [
+        'capitale' => ['v' => 'Porto-Novo', 'source' => 'https://www.example.org/page', 'date' => '2026-01-02'],
+    ]]);
+    assert_contains('<h2 class="bloc__titre"', $html);
+    assert_contains('<caption>Identité</caption>', $html);
+    assert_contains('<th scope="row">Capitale</th><td>Porto-Novo</td>', $html);
+    assert_contains('<a href="https://www.example.org/page" rel="noopener" target="_blank">example.org</a>, consulté le <time datetime="2026-01-02">02/01/2026</time>', $html);
+    assert_not_contains('Économie numérique', $html, 'groupe vide masqué');
+    assert_same('', trim(bloc_rendre(['type' => 'fiche', 'titre' => 'Rien ?', 'faits' => []])), 'fiche vide : aucun bloc');
 }

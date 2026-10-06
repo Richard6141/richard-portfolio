@@ -1277,6 +1277,12 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
   .rr .bloc--etapes.is-in .etapes::before{clip-path:inset(0)}
 }
 .pv2 .bloc--tableau .tableau-defilant,.pv2 .bloc--comparaison .tableau-defilant{margin-top:.5rem;box-shadow:var(--shadow-card)}
+.pv2 .bloc--fiche .tableau-defilant{margin-top:.5rem;box-shadow:var(--shadow-card)}
+.pv2 .bloc--fiche .tableau-defilant+.tableau-defilant{margin-top:1.25rem}
+.pv2 .bloc--fiche caption{text-align:left;font-weight:700;padding:.75rem 1rem}
+.pv2 .bloc--fiche th[scope="row"]{width:30%}
+.pv2 .fiche__source{font-size:.85rem;color:var(--muted);white-space:nowrap}
+/* Revue 1D : sous 640 px, chaque fait de la fiche s'empile (libellé, valeur, source) au lieu de défiler de côté. */@media (max-width:640px){.pv2 .bloc--fiche .tableau-defilant table{min-width:0}.pv2 .bloc--fiche tr{display:block;border-top:1px solid var(--line);padding:.6rem 0}.pv2 .bloc--fiche th[scope="row"],.pv2 .bloc--fiche td{display:block;width:auto;border-top:0;padding:.15rem 1rem}.pv2 .fiche__source{white-space:normal}}
 .pv2 .bloc--chiffres .cartes-chiffres{grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
 
 /* Fil d'Ariane : la règle .crumb écrasait la marge latérale de .wrap (texte collé au bord) */
