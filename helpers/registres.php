@@ -188,6 +188,10 @@ function registre_lire(string $type, string $slug, string $racine = REGISTRES_RA
         error_log("registre {$type}/{$slug} invalide : " . implode(' ; ', $erreurs));
         return null;
     }
+    // Page rédigée avant sa date de publication : « mis à jour » et dateModified jamais antérieurs à la sortie.
+    if (isset($p['maj'], $p['publie']) && is_string($p['publie']) && $p['maj'] < $p['publie']) {
+        $p['maj'] = $p['publie'];
+    }
     return ['type' => $type, 'slug' => $slug, 'url' => registre_url($type, $slug)] + $p + ['robots' => 'index'];
 }
 
