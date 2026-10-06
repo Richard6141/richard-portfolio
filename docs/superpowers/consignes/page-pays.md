@@ -22,6 +22,8 @@ PLAN TYPE (chaque H2 est une vraie question, écrite pour ce pays) :
 11. Pourquoi Richard : la phrase d'entité MOT POUR MOT (fait('phrase_entite')) ; colonne « Déjà travaillé » = oui : « Richard a déjà travaillé avec des entreprises LOCUTION » ; non : « Richard peut accompagner à distance les entreprises LOCUTION », jamais « a travaillé » ; projets de portfolio/data/projets-clients.php situés dans ce pays, avec leur description et la mention « réalisé en sous-traitance pour Digital Développement » quand relation vaut sous-traitance, lien /realisations/ (jamais le site du client ; jamais QueenK Beauty).
 12. Bloc cta final vers /contact.
 
+VOIX : la page parle de Richard à la troisième personne (« Richard », « il »), jamais « je » hors citation. Aucune trace de ta recherche dans le texte (« je n'ai pas trouvé », « je n'ai pas pu lire », « aucune source consultée ») : un fait non établi se retire, ou se dit comme une limite utile au lecteur (« aucun calendrier n'est publié : à confirmer auprès de l'administration fiscale »).
+
 UNICITÉ : les 33 autres pages pays sont écrites en parallèle et comparées à la tienne (40 % de ressemblance au plus, noms de lieux neutralisés). N'écris aucune phrase passe-partout qu'on pourrait poser dans un autre pays : chaque paragraphe s'appuie sur un fait, une loi, un opérateur, un secteur ou un usage de CE pays.
 
 LIENS AUTORISÉS dans le texte : /contact, /richard-salanon, /a-propos/, /realisations/, /zones/, /services/{27 piliers}, /formations/, /formations/{fiches du catalogue}, /formations/domaine/{8 domaines}, /formations/metier/{34 métiers}, /comparatifs/ et ses 4 pages, /histoires/ et ses 7 histoires, les pages locales de ta ligne. JAMAIS /zones/{un pays} : le maillage s'en charge.
