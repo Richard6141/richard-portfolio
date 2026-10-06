@@ -12,7 +12,7 @@ if ($rp['type'] === 'histoire' && ($rp['relation'] ?? '') === 'externe') { $etiq
 <div class="registre-hero">
   <div class="registre-hero__grille conteneur">
     <div>
-      <?php if ($etiquette !== ''): ?><span class="eyebrow"><?= sanitize($etiquette) ?></span><?php endif; ?>
+      <?php if ($etiquette !== ''): ?><span class="eyebrow"><?= $rp['type'] === 'pays' ? drapeau($rp['slug']) : '' ?><?= sanitize($etiquette) ?></span><?php endif; ?>
       <h1><?= registre_titre_html((string) $rp['titre']) ?></h1>
       <p class="registre-hero__bref"><strong>En bref.</strong> <?= bloc_texte((string) $rp['en_bref']) ?></p>
       <?php if ($rp['type'] === 'histoire' && ($rp['relation'] ?? '') === 'sous-traitance'): ?><p class="registre-hero__mention">Réalisé en sous-traitance pour Digital Développement.</p><?php endif; ?>

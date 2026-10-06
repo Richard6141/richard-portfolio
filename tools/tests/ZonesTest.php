@@ -70,3 +70,26 @@ function test_zones_listes_de_pays_avec_drapeaux(): void
     assert_contains('src="/assets/drapeaux/fr.svg"', $entete, 'méga-menu et tiroir mobile');
     assert_not_contains('pastille-iso', $entete, 'le drapeau remplace la pastille ISO');
 }
+
+function test_zones_url_de_la_page_pays_seulement_publiee(): void
+{
+    // Vague 1D : un lien vers une page pays n'existe que si la page est publiée (jamais de 404).
+    $fx = racine('tools/tests/fixtures/registres');
+    assert_same('benin', pays_slug('Bénin'));
+    assert_same('benin', pays_slug('benin'));
+    assert_same(null, pays_slug('Atlantide'));
+    assert_same('/zones/benin', pays_url('Bénin', $fx, '2026-06-01'));
+    assert_same(null, pays_url('benin', $fx, '2025-12-31'), 'avant sa date');
+    assert_same(null, pays_url('senegal', $fx), 'sans page');
+    assert_same(null, pays_url('Atlantide', $fx));
+}
+
+function test_zones_fil_des_pages_ville_vers_le_pays_publie(): void
+{
+    $h = http_local('/developpeur-web-cotonou')['corps'];
+    $url = pays_url('benin');
+    $attendu = $url === null
+        ? '<a href="/zones/">Zones desservies</a><span class="sep">/</span>Cotonou'
+        : '<a href="' . $url . '">Bénin</a><span class="sep">/</span>Cotonou';
+    assert_contains($attendu, $h, 'pays dans le fil seulement une fois sa page publiée');
+}

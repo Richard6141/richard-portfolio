@@ -42,6 +42,14 @@ $pageDesc      = seoDescription('Création de sites web, applications et automat
 $pageCanonical = $villeUrl;
 $ogImage = ($profile['avatar_url'] ?? '') ? $portfolioUrl . '/uploads/' . preg_replace('/\.\.[\\/]/', '', $profile['avatar_url']) : '';
 
+$paysUrl  = pays_url((string) $v['pays']);
+$filVille = array_values(array_filter([
+    ['Accueil', $portfolioUrl . '/'],
+    ['Zones desservies', $portfolioUrl . '/zones/'],
+    $paysUrl !== null ? [$v['pays'], $portfolioUrl . $paysUrl] : null,
+    [$v['nom'], $villeUrl],
+]));
+
 $pageSchemas = [
     [
         '@context'    => 'https://schema.org',
@@ -62,9 +70,8 @@ $pageSchemas = [
         '@context'        => 'https://schema.org',
         '@type'           => 'BreadcrumbList',
         'itemListElement' => [
-            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Accueil',  'item' => $portfolioUrl . '/'],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Zones desservies', 'item' => $portfolioUrl . '/zones/'],
-            ['@type' => 'ListItem', 'position' => 3, 'name' => $v['nom'], 'item' => $villeUrl],
+            ...array_map(static fn(int $i, array $m): array => ['@type' => 'ListItem', 'position' => $i + 1, 'name' => $m[0], 'item' => $m[1]],
+                array_keys($filVille), $filVille),
         ],
     ],
     [
@@ -85,7 +92,7 @@ include __DIR__ . '/partials/pv2-head.php';
 include __DIR__ . '/partials/pv2-header.php';
 ?>
 <main id="main-content">
-  <div class="wrap crumb"><a href="/">Accueil</a><span class="sep">/</span><a href="/zones/">Zones desservies</a><span class="sep">/</span><?= sanitize($v['nom']) ?></div>
+  <div class="wrap crumb"><a href="/">Accueil</a><span class="sep">/</span><a href="/zones/">Zones desservies</a><span class="sep">/</span><?php if ($paysUrl !== null): ?><a href="<?= sanitize($paysUrl) ?>"><?= sanitize($v['pays']) ?></a><span class="sep">/</span><?php endif; ?><?= sanitize($v['nom']) ?></div>
 
   <?php
   // Hero refait le 21/08/2026. L'ancien empilait un titre, une phrase et deux

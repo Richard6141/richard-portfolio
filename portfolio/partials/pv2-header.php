@@ -44,7 +44,7 @@ $eCta = $nav['carte_cta'];
                     <p class="mega__titre-groupe"><?= sanitize($eGroupe) ?></p>
                     <ul class="mega__pays">
                       <?php foreach ($ePays as $eP): ?>
-                      <li><a href="<?= sanitize($eP['url']) ?>"><?= drapeau($eP['nom'], 28) ?><span><strong><?= sanitize($eP['nom']) ?></strong><small><?= sanitize($eP['villes']) ?></small></span></a></li>
+                      <li><a href="<?= sanitize(pays_url($eP['nom']) ?? $eP['url']) ?>"><?= drapeau($eP['nom'], 28) ?><span><strong><?= sanitize($eP['nom']) ?></strong><small><?= sanitize($eP['villes']) ?></small></span></a></li>
                       <?php endforeach; ?>
                     </ul>
                   </div>
@@ -100,7 +100,7 @@ $eCta = $nav['carte_cta'];
           <li><a href="<?= $eM['hub'] ?>"><strong><?= $eM['tout'] ?></strong></a></li>
           <?php if ($eM['id'] === 'pays'): ?>
             <?php foreach ($nav['pays'] as $ePays): foreach ($ePays as $eP): ?>
-            <li><a href="<?= sanitize($eP['url']) ?>"><?= drapeau($eP['nom']) ?><?= sanitize($eP['nom']) ?></a></li>
+            <li><a href="<?= sanitize(pays_url($eP['nom']) ?? $eP['url']) ?>"><?= drapeau($eP['nom']) ?><?= sanitize($eP['nom']) ?></a></li>
             <?php endforeach; endforeach; ?>
           <?php else: ?>
             <?php foreach ($nav[$eM['id']] as $eG): foreach ($eG['liens'] as [$eLibelle, $eUrl]): ?>

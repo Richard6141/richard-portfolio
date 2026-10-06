@@ -154,3 +154,8 @@ function test_gabarit_pays_fiche_a_sa_place_ou_avant_la_faq(): void
     assert_contains('<th scope="row">Capitale</th><td>Lomé</td>', $togo);
     assert_true(strpos($togo, 'bloc--fiche') < strpos($togo, 'bloc--faq'));
 }
+
+function test_gabarit_pays_drapeau_dans_le_hero(): void
+{
+    assert_contains('<span class="eyebrow"><img class="drapeau" src="/assets/drapeaux/bj.svg"', gabarit_rendre('pays', 'benin'));
+}

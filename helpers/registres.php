@@ -101,16 +101,31 @@ function pays_liste(): array
     return $liste ??= require __DIR__ . '/../portfolio/data/pays-liste.php';
 }
 
+/** Slug d'un pays depuis son slug ou son nom affiché, ou null. */
+function pays_slug(string $pays): ?string
+{
+    static $parNom = null;
+    $liste = pays_liste();
+    $parNom ??= array_column(array_map(static fn(string $s, array $p): array => [$p['nom'], $s], array_keys($liste), $liste), 1, 0);
+    return isset($liste[$pays]) ? $pays : ($parNom[$pays] ?? null);
+}
+
+/** URL de la page pays publiée (vague 1D), ou null : aucun lien vers une page en 404. */
+function pays_url(string $pays, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): ?string
+{
+    $slug = pays_slug($pays);
+    $p = $slug !== null ? registre_lire('pays', $slug, $racine) : null;
+    return ($p !== null && registre_publiee($p, $aujourdhui)) ? $p['url'] : null;
+}
+
 /**
  * Drapeau d'un pays (slug ou nom affiché), décoratif : le nom l'accompagne toujours, d'où alt="".
  * SVG de flag-icons (MIT) dans assets/drapeaux ; chaîne vide pour un pays inconnu (06/10/2026).
  */
 function drapeau(string $pays, int $largeur = 20): string
 {
-    static $parNom = null;
     $liste = pays_liste();
-    $parNom ??= array_column(array_map(static fn(string $s, array $p): array => [$p['nom'], $s], array_keys($liste), $liste), 1, 0);
-    $slug = isset($liste[$pays]) ? $pays : ($parNom[$pays] ?? null);
+    $slug = pays_slug($pays);
     if ($slug === null || empty($liste[$slug]['iso'])) {
         return '';
     }
