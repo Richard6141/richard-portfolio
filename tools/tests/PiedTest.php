@@ -61,3 +61,10 @@ function test_pied_formations_vers_les_fiches(): void
     }
     assert_not_contains('href="/formation-', $html);
 }
+
+function test_pied_lien_cookies_rouvre_le_bandeau(): void
+{
+    // Consentement (06/10/2026) : retirer son accord doit être aussi simple que le donner.
+    $html = pied_rendre();
+    assert_contains('<button type="button" class="pied__cookies" data-cookies>Cookies</button>', $html);
+}
