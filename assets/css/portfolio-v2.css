@@ -1183,6 +1183,18 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .pv2 .barre-mobile .btn{width:100%;padding:0 .6rem;gap:.35rem;font-size:.95rem}
 @media (max-width:767px){body.pv2{padding-bottom:4.6rem}}
 @media (min-width:768px){.pv2 .barre-mobile{display:none}}
+/* Bandeau de consentement aux cookies de mesure (06/10/2026) : superposé en bas d'écran, il ne décale
+   rien (aucun CLS) ; au-dessus de la barre mobile, sous l'en-tête et ses menus. */
+.pv2 .cookies{position:fixed;left:var(--gutter);right:var(--gutter);bottom:calc(1rem + env(safe-area-inset-bottom));z-index:95;max-width:46rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.2rem;padding:1rem 1.2rem;background:var(--ink);color:var(--on-dark);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-lg);box-shadow:0 18px 40px -18px rgba(20,22,31,.55);font-size:.92rem;line-height:1.5}
+.pv2 .cookies[hidden]{display:none}
+.pv2 .cookies__texte{flex:1 1 20rem;margin:0}
+.pv2 .cookies__texte a{color:var(--on-dark);text-decoration:underline;text-underline-offset:2px}
+.pv2 .cookies__actions{display:flex;flex:1 0 auto;justify-content:flex-end;gap:.6rem}
+.pv2 .cookies__choix{flex:1 1 0;min-width:7.5rem}
+@media (max-width:767px){.pv2 .cookies{bottom:calc(5.2rem + env(safe-area-inset-bottom))}}
+.pv2 .pied__cookies{padding:0;border:0;background:none;font:inherit;color:var(--on-dark-soft);cursor:pointer}
+.pv2 .pied__cookies:hover{color:#fff}
+.pv2 .pied__cookies:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* ---------- Apparitions au défilement (classe .rr posée par le script) ---------- */
 .rr [data-reveal]{transition:opacity 900ms var(--ease),translate 900ms var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
