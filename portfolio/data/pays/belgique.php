@@ -1,0 +1,327 @@
+<?php
+// ============================================================
+// data/pays/belgique.php · Page pays « Belgique » (vague 1D, tranche 3).
+// Faits externes relevés le 06/10/2026 sur les pages citées dans 'fiche' et 'sources'.
+// Clés de fiche absentes : villes (aucune page statistique officielle lisible), mobile_money
+// (pas de monnaie mobile en usage courant), ohada (pays non membre).
+// Devis en euros, aucun montant chiffré pour les prestations de Richard.
+// ============================================================
+declare(strict_types=1);
+
+return [
+    'titre'   => 'Facture XML sur Peppol, Bancontact et données hors Union : ce que Richard SALANON apporte aux sociétés wallonnes et bruxelloises',
+    'title'   => 'Développement, IA et Odoo en Belgique | Richard SALANON',
+    'meta'    => 'Développement, automatisation, IA, Odoo et formation pour les entreprises de Bruxelles et de Wallonie : Peppol, RGPD, TVA autoliquidée et devis en euros.',
+    'en_bref' => 'Richard SALANON travaille à distance depuis Cotonou pour les entreprises belges francophones de Bruxelles et de Wallonie : développement web et sur mesure, automatisations, intégrations d\'intelligence artificielle, déploiement d\'Odoo et de Dolibarr, et formation des équipes. Il cadre le contrat, le RGPD et les transferts de données hors Union européenne dès le départ. Les échanges se font en français, avec une heure d\'avance à Bruxelles l\'été, et les devis sont établis en euros. Il a déjà travaillé avec des entreprises en Belgique.',
+    'publie'  => '2026-11-12',
+    'maj'     => '2026-11-12',
+
+    'fiche' => [
+        'capitale'   => ['v' => 'Bruxelles : l\'article 194 de la Constitution fait de la ville de Bruxelles la capitale et le siège du gouvernement fédéral', 'source' => 'https://www.senate.be/doc/const_fr.html', 'date' => '2026-10-06'],
+        'fuseau'     => ['v' => 'Heure d\'Europe centrale (UTC+1), heure d\'été (UTC+2) du dernier dimanche de mars au dernier dimanche d\'octobre : même heure qu\'à Cotonou l\'hiver, une heure d\'avance l\'été', 'source' => 'https://data.iana.org/time-zones/tzdb/europe', 'date' => '2026-10-06'],
+        'indicatif'  => ['v' => '+32', 'source' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2009-PDF-E.pdf', 'date' => '2026-10-06'],
+        'langues'    => ['v' => 'Néerlandais, français et allemand ; quatre régions linguistiques, dont Bruxelles-Capitale, bilingue', 'source' => 'https://www.senate.be/doc/const_fr.html', 'date' => '2026-10-06'],
+        'population' => ['v' => 'Environ 11,87 millions d\'habitants au 1er janvier 2026, dont 6,89 millions en Flandre, 3,71 millions en Wallonie et 1,26 million à Bruxelles', 'source' => 'https://www.lavenir.net/actu/societe/2026/06/10/plus-de-deces-que-de-naissances-pour-la-quatrieme-dannee-consecutive-en-belgique-limmigration-internationale-seul-moteur-de-croissance-SNONZ44HNBG3FPYKAI5FBLVZGQ/', 'date' => '2026-10-06'],
+        'internet'   => ['v' => 'En 2024, 96 % des Bruxellois, 93 % des Flamands et 91 % des Wallons de 16 à 89 ans ont utilisé internet dans les trois derniers mois', 'source' => 'https://ibsa.brussels/sites/default/files/publication/documents/TIC_Menages_2025v2.pdf', 'date' => '2026-10-06'],
+        'mobile'     => ['v' => 'Réseau 5G disponible pour plus de 95 % des ménages à l\'extérieur et 86 % à l\'intérieur (mesures de janvier 2025) ; trois opérateurs : Proximus, Orange et Telenet', 'source' => 'https://www.bipt.be/index.php/file/cc73d96153bbd5448a56f19d925d05b1379c7f21/dcd339267af31a7605de595aa2d9396580029117/cp-couverture-mobile-5g-2025-07-10.pdf', 'date' => '2026-10-06'],
+        'secteurs'   => ['v' => ['Aéronautique et spatial', 'agroalimentaire', 'numérique', 'mécanique', 'écotechnologies', 'sciences de la vie', 'transport et logistique'], 'source' => 'https://invest.walloniaexportinvestment.be/en/key-sectors/', 'date' => '2026-10-06'],
+        'devise'     => ['v' => 'Euro, adopté en 1999 (pièces et billets depuis le 1er janvier 2002) ; échange à 40,3399 francs belges pour 1 euro', 'source' => 'https://www.ecb.europa.eu/euro/intro/html/index.fr.html', 'date' => '2026-10-06'],
+        'operateurs' => ['v' => ['Bancontact (carte et application Bancontact Pay, ex-Payconiq by Bancontact)', 'Wero, distribué par Bancontact Company'], 'source' => 'https://bancontact-company.prezly.com/bancontact-payconiq-company-opens-a-new-chapter-for-belgian-payments-with-the-bancontact-pay-brand', 'date' => '2026-10-06'],
+        'agregateurs' => ['v' => ['Mollie (Bancontact en ligne, plus de vingt plateformes de boutique prises en charge)'], 'source' => 'https://www.mollie.com/fr/payments/bancontact', 'date' => '2026-10-06'],
+        'donnees'    => ['v' => 'Règlement général sur la protection des données (RGPD), appliqué en Belgique par l\'Autorité de protection des données', 'source' => 'https://www.autoriteprotectiondonnees.be/professionnel/rgpd-/registre-des-activites-de-traitement', 'date' => '2026-10-06'],
+        'autorite'   => ['v' => 'Autorité de protection des données (APD, en néerlandais GBA), créée par la loi du 3 décembre 2017 en remplacement de la Commission de la protection de la vie privée', 'source' => 'https://uvcw.be/data/actus/art-390', 'date' => '2026-10-06'],
+        'facturation' => ['v' => 'Facture électronique structurée obligatoire entre assujettis établis en Belgique depuis le 1er janvier 2026, via le réseau Peppol ; tolérance jusqu\'au 7 avril 2026', 'source' => 'https://efacture.belgium.be/fr', 'date' => '2026-10-06'],
+        'tva'        => ['v' => 'Services entre entreprises : TVA due dans le pays du client assujetti, qui l\'autoliquide ; règle décrite pour l\'Union, à faire confirmer par le comptable pour un prestataire hors Union', 'source' => 'https://europa.eu/youreurope/business/taxation/vat/cross-border-vat/index_fr.htm', 'date' => '2026-10-06'],
+        'ecommerce'  => ['v' => 'Achat en ligne auprès d\'une entreprise de l\'Union : droit de rétractation de 14 jours à partir de la réception du colis', 'source' => 'https://news.economie.fgov.be/264807-achats-en-ligne-voici-vos-droits/', 'date' => '2026-10-06'],
+        'financement' => ['v' => 'Chèques-formation wallons : 30 euros par heure de formation, gérés par le Forem, pour les PME et indépendants wallons', 'source' => 'https://wallonie.be/fr/demarches/former-ses-travailleurs-grace-aux-cheques-formation', 'date' => '2026-10-06'],
+    ],
+
+    'faits_hero' => [
+        ['l' => 'Intervention', 'v' => 'À distance'],
+        ['l' => 'Décalage avec Cotonou', 'v' => 'Même heure l\'hiver, une heure d\'avance à Bruxelles l\'été'],
+        ['l' => 'Devis', 'v' => 'En euros'],
+        ['l' => 'Réponse', 'v' => 'sous 24 heures'],
+    ],
+
+    'sections' => [
+        [
+            'type'        => 'prose',
+            'titre'       => 'Que pèse le numérique belge, et que change-t-il pour une entreprise qui confie un projet à Cotonou ?',
+            'paragraphes' => [
+                'Selon les chiffres de Statbel relayés par la presse, la Belgique comptait environ 11,87 millions d\'habitants au 1er janvier 2026 : 6,89 millions en Flandre, 3,71 millions en Wallonie et 1,26 million en Région de Bruxelles-Capitale. Trois régions, trois administrations, et un marché où la langue change d\'un côté à l\'autre de la frontière linguistique. Un projet pour une entreprise de Namur ou de Liège se pense donc en français, et celui d\'une société bruxelloise doit souvent prévoir le néerlandais ou l\'anglais pour une partie de ses clients.',
+                'L\'enquête de Statbel sur l\'usage des technologies dans les ménages, exploitée par l\'Institut bruxellois de statistique et d\'analyse, montre un pays très connecté. En 2024, 96 % des Bruxellois de 16 à 89 ans avaient utilisé internet dans les trois derniers mois, contre 93 % des Flamands et 91 % des Wallons. Pour les achats en ligne, la même enquête donne 65 % en Flandre, 58 % à Bruxelles et 54 % en Wallonie. L\'écart entre régions compte : une boutique wallonne s\'adresse à un public un peu moins habitué à commander en ligne que le public flamand.',
+                'Côté réseau, l\'Institut belge des services postaux et des télécommunications indique, dans son communiqué du 10 juin 2025, que la 5G couvre plus de 95 % des ménages belges à l\'extérieur et plus de 86 % à l\'intérieur, avec trois opérateurs, Proximus, Orange et Telenet. Il n\'y a donc pas de contrainte de connexion à prévoir : le vrai sujet d\'un projet belge est réglementaire, pas technique.',
+                'Ce cadre explique pourquoi une entreprise belge qui s\'adresse à un prestataire basé à Cotonou pose d\'abord des questions de conformité : où vont les données, qui facture et avec quelle TVA, quel format de facture son logiciel doit produire depuis le 1er janvier 2026, quelles obligations l\'intelligence artificielle ajoute. Le reste du travail, développer, automatiser, former, est le métier habituel de Richard ; ce qui change, c\'est le contrat et les garanties qui l\'entourent.',
+                'Autre donnée utile pour les projets d\'intelligence artificielle : la publication de l\'institut bruxellois relève que 31 % des Bruxellois de 16 à 89 ans utilisaient déjà des outils d\'IA générative en 2024. Une partie de vos clients et de vos équipes en a donc l\'habitude, ce qui raccourcit la formation mais impose de cadrer ce qu\'on leur permet d\'y saisir.',
+            ],
+        ],
+        [
+            'type'  => 'fiche',
+            'titre' => 'Quels faits connaître avant de lancer un projet avec Richard en Belgique ?',
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Quels moyens de paiement intégrer pour vendre ou encaisser en Belgique ?',
+            'paragraphes' => [
+                'En Belgique, le paiement en ligne se joue autour de Bancontact. Selon Bancontact Company, qui a enregistré 2,5 milliards de paiements en 2025, le nom Bancontact regroupe trois usages en ligne : Bancontact Pay pour le paiement mobile, Bancontact Card pour la carte de débit et Bancontact One Click pour les cartes préenregistrées. Une boutique belge qui ne propose que les cartes internationales se prive d\'une méthode que Mollie décrit comme la plus utilisée du pays.',
+                'Le portefeuille mobile change de nom en 2026. D\'après l\'annonce de Bancontact Payconiq Company du 6 novembre 2025, l\'application Payconiq by Bancontact devient Bancontact Pay au printemps 2026, et les autocollants Payconiq des commerces sont remplacés par un code QR qui mentionne Bancontact Pay et Wero, la solution européenne de paiement que la société distribue. Les prix actuels restent gelés jusqu\'à la fin de 2026. Pour un projet, cela veut dire : brancher un prestataire de paiement qui gère ces changements, plutôt que d\'écrire un lien direct avec chaque marque.',
+                'Ce prestataire de paiement est le plus souvent un agrégateur. Mollie présente Bancontact comme la méthode de paiement la plus utilisée du pays, avec environ 150 000 transactions par jour, et prend en charge plus de vingt plateformes de boutique, dont Shopify, WooCommerce, Magento et PrestaShop. Stripe, dans son guide des paiements en Belgique, ajoute pour le B2C les cartes, les portefeuilles, le virement et les paiements différés, et pour le B2B les cartes, les virements SEPA et des solutions de paiement à crédit.',
+                'Entre entreprises, Stripe cite le virement SEPA parmi les moyens de paiement courants. Depuis 2026, la facture elle-même circule par le réseau Peppol quand elle est émise par une entreprise établie en Belgique : le paiement et la facture se rejoignent dans le logiciel de gestion, qui doit rapprocher l\'un de l\'autre. Frais et délais de règlement varient selon le contrat que votre société signe avec l\'agrégateur : ils se lisent dans sa grille en vigueur, que le cadrage vérifie avant tout chiffrage. Côté vente en ligne aux particuliers, le SPF Économie rappelle un droit de rétractation de 14 jours à compter de la réception du colis, que la boutique et le parcours de remboursement doivent prévoir.',
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Comment se passe l\'intégration d\'un paiement belge, étape par étape ?',
+            'legende' => 'Étapes habituelles pour une boutique belge ; les délais d\'ouverture d\'un compte marchand dépendent de l\'agrégateur et de la banque.',
+            'entetes' => ['Étape', 'Ce qui se passe', 'Ce que vous apportez'],
+            'lignes'  => [
+                ['Choix de l\'agrégateur', 'Comparaison des méthodes acceptées (Bancontact, cartes, virement) et de la grille de frais en vigueur', 'Vos volumes mensuels attendus et votre mix de clients belges et étrangers'],
+                ['Ouverture du compte', 'Dossier d\'identification de la société et du compte bancaire de règlement, vérifié par l\'agrégateur', 'Numéro d\'entreprise, IBAN en euros, pièce d\'identité du dirigeant'],
+                ['Branchement du site', 'Module de la plateforme de boutique ou appel direct de l\'interface de paiement, avec pages de retour', 'Rien : Richard travaille sur l\'environnement d\'essai'],
+                ['Confirmation de paiement', 'Le site reçoit une notification signée et marque la commande payée, une seule fois', 'Un domaine en HTTPS joignable depuis l\'extérieur'],
+                ['Cas limites', 'Paiement abandonné, expiré, remboursé, rejeté par la banque, litige', 'Votre règle commerciale pour chacun'],
+                ['Mise en ligne', 'Essai en réel avec une petite somme, puis bascule vers les clés de production', 'Validation finale de la direction et du comptable'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Quelles règles de protection des données s\'appliquent quand un prestataire basé à Cotonou travaille pour une entreprise belge ?',
+            'paragraphes' => [
+                'La protection des données en Belgique repose sur le règlement général sur la protection des données, le RGPD, que l\'Autorité de protection des données fait appliquer. Cette autorité, créée par la loi du 3 décembre 2017, a succédé à la Commission de la protection de la vie privée. Une entreprise belge est responsable de traitement pour les données de ses clients et de ses salariés ; le prestataire qui développe ou maintient l\'outil agit comme sous-traitant, et un contrat doit encadrer cette relation.',
+                'Le point sensible est le transfert hors de l\'Union européenne. La Commission européenne tient la liste des pays dont le niveau de protection est reconnu adéquat : Andorre, Argentine, Brésil, Canada, Îles Féroé, Guernesey, Israël, île de Man, Japon, Jersey, Nouvelle-Zélande, Corée du Sud, Suisse, Royaume-Uni, États-Unis (pour les organisations certifiées), Uruguay et l\'Organisation européenne des brevets. Le Bénin n\'y figure pas. Rendre des données personnelles accessibles à un prestataire à Cotonou demande donc des garanties appropriées, les plus courantes étant les clauses contractuelles types adoptées par la Commission en juin 2021.',
+                'En pratique, un projet bien cadré limite le risque de trois façons. D\'abord, le développement se fait sur des données fictives ou anonymisées : une copie de la base de production n\'a pas de raison de voyager. Ensuite, l\'hébergement reste dans l\'Union, chez un fournisseur européen, et les accès de Richard sont nominatifs, limités dans le temps et journalisés. Enfin, le contrat de sous-traitance et les clauses types sont signés avant le premier accès, avec une analyse du transfert que votre délégué à la protection des données ou votre conseil valide.',
+                'L\'autorité belge fixe aussi des obligations courantes que le projet doit respecter. Une violation de données se notifie à l\'autorité au plus tard 72 heures après en avoir pris connaissance, sauf absence de risque, exclusivement par son portail en ligne : un courriel n\'est pas traité, et le dossier se rédige en néerlandais, en français ou en allemand. Le registre des activités de traitement doit être produit à la première demande de l\'autorité, et son absence peut être sanctionnée par une amende administrative pouvant atteindre 10 millions d\'euros ou, pour une entreprise, 2 % du chiffre d\'affaires mondial. Le tout se prépare au cadrage, pas après un incident.',
+                'Richard n\'est pas juriste et le dit : il fournit la description technique des traitements, des accès et de l\'hébergement, que votre conseil ou votre délégué à la protection des données intègre à ses documents. Les décisions juridiques, notamment le choix des clauses types et l\'analyse du transfert, restent les vôtres.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'La facture électronique est-elle obligatoire en Belgique depuis 2026, et que change-t-elle à vos logiciels ?',
+            'paragraphes' => [
+                'Oui entre entreprises établies en Belgique. Le portail officiel efacture.belgium.be l\'énonce : depuis le 1er janvier 2026, toutes les entreprises belges assujetties à la TVA doivent utiliser des factures électroniques structurées pour leurs opérations entre elles. Selon Forum for the Future, le cadre repose sur la loi du 6 février 2024 et sur l\'arrêté royal du 8 juillet 2025. Le réseau d\'échange est Peppol, au format Peppol BIS Billing 3.0 (UBL 2.1), une facture XML alignée sur la norme européenne EN 16931.',
+                'Une facture en PDF envoyée par courriel ne suffit donc plus entre assujettis établis en Belgique : le fichier XML est la facture, le PDF n\'en est qu\'une lecture pour l\'humain. Les factures aux particuliers restent en dehors du champ du mandat.',
+                'Le portail officiel place la fin de la période de tolérance au 7 avril 2026. Passé ce délai, des amendes de 1 500 euros pour une première infraction, 3 000 euros pour la deuxième et 5 000 euros à partir de la troisième sont prévues, avec un délai minimum de trois mois pour régulariser entre chacune, selon l\'Union des classes moyennes et Forum for the Future. Une transmission en temps quasi réel des données de facture, l\'e-reporting, est annoncée à partir du 1er janvier 2028.',
+                'Pour un projet de développement, la conséquence est concrète : tout logiciel de facturation, tout module d\'ERP et toute boutique qui émet des factures B2B doit produire du UBL conforme, se connecter à un point d\'accès Peppol et recevoir les factures des fournisseurs. Une numérisation faite pour le PDF seul se refait. Richard intègre le format et le raccordement au cadrage des projets de gestion, et vérifie avec votre comptable les identifiants d\'entreprise et de TVA qui servent d\'adresse sur le réseau.',
+                'Deux incitants financiers existent, selon l\'Union des classes moyennes : la déduction pour investissement numérique, portée à 20 % depuis le 1er janvier 2025, et une déduction majorée à 120 % pour les petites sociétés et indépendants qui souscrivent un abonnement de logiciel de facturation, jusqu\'en 2027. Votre comptable confirme ce qui s\'applique à votre société.',
+                'Une limite utile à connaître : le mandat vise les transactions entre entreprises assujetties à la TVA et établies en Belgique. Une facture émise depuis le Bénin n\'entre pas dans ce schéma tel que décrit, et la façon de l\'enregistrer dans votre comptabilité est à confirmer auprès de votre comptable ou du portail efacture.belgium.be avant la première facturation.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment la TVA s\'applique-t-elle à une prestation facturée depuis Cotonou à une société belge ?',
+            'paragraphes' => [
+                'Le principe européen, tel que Your Europe le décrit, est qu\'un prestataire qui vend un service à une entreprise d\'un autre pays n\'a normalement pas à facturer la TVA : le client assujetti la déclare lui-même, au taux de son pays, par la procédure d\'autoliquidation. Pour une société belge qui achète du développement à Richard, le schéma attendu est le même : la facture arrive sans TVA belge, et c\'est votre société qui la déclare dans sa déclaration périodique, pour la déduire ensuite si son activité lui en donne le droit.',
+                'Le texte décrit par Your Europe concerne les prestataires de l\'Union. Pour un prestataire établi hors Union, comme Richard à Cotonou, le raisonnement est le même dans les grandes lignes, mais la mention à porter sur la facture et la case de la déclaration relèvent du SPF Finances : faites-les confirmer par votre comptable avant le premier paiement.',
+                'Une société non assujettie à la TVA, par exemple une association ou une profession exemptée, peut devoir traiter la même facture autrement. Ce cas se règle dès le devis, avec les informations d\'identification de votre structure.',
+                'Le règlement suit le même principe de clarté : paiement en euros par virement SEPA à l\'échéance prévue, avec des jalons liés à des livrables. Les frais bancaires d\'un virement vers le Bénin sont à convenir par écrit, pour qu\'aucun écart ne soit découvert à la réception.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Que change le règlement européen sur l\'intelligence artificielle pour une entreprise belge qui déploie des outils d\'IA ?',
+            'paragraphes' => [
+                'Le règlement (UE) 2024/1689, l\'AI Act, s\'applique en Belgique comme dans toute l\'Union. L\'Autorité de protection des données précise sur sa page consacrée à l\'IA que les concepteurs et les exploitants de systèmes d\'IA doivent respecter les principes de protection des données, et que le RGPD et le nouveau règlement interagissent. Autrement dit, un assistant IA qui traite des données de clients doit satisfaire aux deux textes.',
+                'Le calendrier a bougé en 2026. Le règlement (UE) 2026/1744, dit « omnibus numérique sur l\'IA », en vigueur depuis le 27 juillet 2026, reporte les obligations des systèmes à haut risque de l\'annexe III (recrutement, évaluation de crédit, notation de salariés) au 2 décembre 2027, et celles des systèmes intégrés à des produits réglementés au 2 août 2028. Les obligations de transparence de l\'article 50 courent depuis le 2 août 2026 : informer l\'utilisateur qu\'il parle à une IA, signaler les contenus synthétiques. Pour les systèmes déjà commercialisés avant cette date, le marquage lisible par machine a jusqu\'au 2 décembre 2026.',
+                'Pour vos projets, trois conséquences. Un chatbot ou un agent vocal qui répond à vos clients doit se présenter comme une IA. Un outil qui trie des candidatures ou note des salariés appartient à la catégorie à haut risque, et se cadre avec votre conseil avant d\'être développé. Enfin, la maîtrise de l\'IA par les équipes (article 4, applicable depuis février 2025) a été assouplie par l\'omnibus : la Commission et les États membres en portent davantage la promotion, mais une formation documentée par un programme, des présences et des supports reste la preuve la plus simple.',
+                'Richard documente chaque intégration d\'IA : modèle utilisé, données envoyées, hébergement, cas où la décision reste humaine. Ce dossier sert votre délégué à la protection des données et votre direction ; la qualification juridique, y compris le niveau de risque, reste la vôtre.',
+            ],
+        ],
+        [
+            'type'   => 'vigilance',
+            'titre'  => 'Peut-on envoyer à un prestataire hors Union une copie de la base de production pour qu\'il travaille dessus ?',
+            'texte'  => 'Non, pas sans garanties. Une copie réelle contient des données personnelles, et leur accès depuis le Bénin est un transfert hors Union : il suppose le contrat de sous-traitance, les clauses contractuelles types et l\'analyse du transfert, signés avant le premier accès. La voie simple consiste à travailler sur des données fictives ou anonymisées et à garder la base réelle sur un hébergement européen, accessible à Richard par un compte nominatif et limité dans le temps.',
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quels services pour les entreprises belges, selon le besoin du moment ?',
+            'legende' => 'Besoins fréquents des sociétés de Bruxelles et de Wallonie qui externalisent ; chaque service a sa propre page.',
+            'entetes' => ['Besoin typique en Belgique', 'Service', 'Page'],
+            'lignes'  => [
+                ['Une équipe interne saturée qui veut une capacité de développement sans recruter, avec contrat et suivi', 'Externalisation du développement', '<a href="/services/externalisation-developpement">Externalisation du développement</a>'],
+                ['Un outil métier sur mesure, rédigé en français et hébergé dans l\'Union', 'Application web sur mesure', '<a href="/services/application-web-sur-mesure">Application web sur mesure</a>'],
+                ['Un logiciel de facturation qui produit du UBL et se raccorde à Peppol', 'Intégration d\'API', '<a href="/services/api-rest-integrations">API REST et intégrations</a>'],
+                ['Des relances, des rapprochements et des saisies encore faits à la main', 'Automatisation', '<a href="/services/automatisation-ia">Automatisation et IA</a>'],
+                ['Un assistant IA dans un logiciel existant, avec traçabilité des données envoyées', 'Intégration de l\'IA', '<a href="/services/integration-ia-entreprise">Intégration de l\'IA en entreprise</a>'],
+                ['Un assistant qui répond aux clients, avec mention claire qu\'il s\'agit d\'une IA', 'Chatbot et agents IA', '<a href="/services/agents-ia-chatbot-whatsapp">Agents IA et chatbot</a>'],
+                ['Un ERP qui tient stocks, ventes et comptabilité d\'une PME wallonne', 'Intégration Odoo', '<a href="/services/integration-odoo">Intégration Odoo</a>'],
+                ['Un logiciel de gestion plus léger pour une petite société ou une association', 'Intégration Dolibarr', '<a href="/services/integration-dolibarr">Intégration Dolibarr</a>'],
+                ['Un site ou une application à faire vivre après la livraison, avec correctifs de sécurité', 'Maintenance et support', '<a href="/services/maintenance-support">Maintenance et support</a>'],
+                ['Des équipes à former à l\'IA, avec supports et attestations de présence', 'Formation en entreprise', '<a href="/services/formation-en-entreprise">Formation en entreprise</a>'],
+            ],
+        ],
+        [
+            'type'   => 'cas',
+            'titre'  => 'Comment la digitalisation s\'applique-t-elle aux filières wallonnes et bruxelloises, du transport à l\'aéronautique ?',
+            'items'  => [
+                [
+                    'secteur'  => 'Transport et logistique',
+                    'probleme' => 'Un transporteur wallon émet ses factures depuis un tableur et les envoie en PDF, alors que ses clients, depuis 2026, attendent un fichier structuré par Peppol.',
+                    'solution' => 'Un module de facturation qui produit le fichier UBL, le transmet par un point d\'accès Peppol et rapproche les virements reçus, avec un suivi des livraisons partagé avec les clients.',
+                    'lien'     => ['url' => '/services/api-rest-integrations', 'texte' => 'API REST et intégrations'],
+                ],
+                [
+                    'secteur'  => 'Agroalimentaire',
+                    'probleme' => 'Une PME de transformation suit ses lots sur des fichiers séparés, et ne retrouve pas vite quels clients ont reçu quel lot en cas de rappel.',
+                    'solution' => 'Un ERP paramétré pour les achats, la traçabilité par lot, les stocks et les ventes, avec facturation conforme aux nouvelles règles belges et rapports par produit.',
+                    'lien'     => ['url' => '/services/integration-odoo', 'texte' => 'Intégration Odoo'],
+                ],
+                [
+                    'secteur'  => 'Numérique et sociétés de services',
+                    'probleme' => 'Une agence bruxelloise refuse des projets faute de développeurs disponibles, et hésite à recruter pour un pic d\'activité de quelques mois.',
+                    'solution' => 'Une capacité de développement externalisée, avec contrat, clauses de sous-traitance du RGPD, comptes nominatifs et livraisons par étapes, en français ou en anglais.',
+                    'lien'     => ['url' => '/externaliser-developpement-web-bruxelles', 'texte' => 'Externaliser son développement web à Bruxelles'],
+                ],
+                [
+                    'secteur'  => 'Sciences de la vie et santé',
+                    'probleme' => 'Une PME du secteur pharmaceutique ou des dispositifs médicaux rédige à la main des comptes rendus et des documents réglementaires, et ses équipes testent des outils d\'IA sans règle commune.',
+                    'solution' => 'Une charte d\'usage de l\'IA, des automatisations qui ne sortent aucune donnée sensible vers un service tiers, et une formation des équipes qui prépare la maîtrise de l\'IA visée par l\'article 4 de l\'AI Act.',
+                    'lien'     => ['url' => '/formations/gouvernance-ia', 'texte' => 'Gouvernance de l\'IA'],
+                ],
+                [
+                    'secteur'  => 'Aéronautique, spatial et mécanique',
+                    'probleme' => 'Un sous-traitant de rang deux échange ses certificats, ses plans et ses factures avec les donneurs d\'ordre par courriel et portails séparés.',
+                    'solution' => 'Un espace de dépôt de documents avec suivi des versions, des relances automatiques avant échéance, et un export des factures vers le format que ses donneurs d\'ordre exigent.',
+                    'lien'     => ['url' => '/services/automatisation-ia', 'texte' => 'Automatisation et IA'],
+                ],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment former les équipes belges, et qui peut financer la formation ?',
+            'paragraphes' => [
+                'Richard forme à distance, en visioconférence, sur les logiciels que vos équipes utilisent déjà et avec leurs propres documents. Un groupe de comptables et un groupe de commerciaux ne suivent pas le même parcours. Un dossier de formation comprend programme, durée, présences et supports, utile pour justifier la dépense auprès d\'un organisme financeur ou d\'un service des ressources humaines.',
+                'Le financement dépend de la région du siège de votre société. En Wallonie, les chèques-formation sont gérés par le Forem : chaque chèque vaut 30 euros et finance une heure de formation. Ils sont réservés aux petites et moyennes entreprises dont le siège est en Wallonie (moins de 250 travailleurs, chiffre d\'affaires d\'au plus 50 millions d\'euros ou total du bilan d\'au plus 43 millions) et aux indépendants, à utiliser auprès d\'un centre agréé. Avant de les prévoir au budget, demandez au Forem si la formation envisagée est éligible ; Richard fournit le programme et la durée utiles à cette vérification.',
+                'Les régions sont compétentes pour le congé-éducation payé depuis le 1er juillet 2014, indique le portail fédéral de l\'emploi. À Bruxelles, l\'incitant à la formation des travailleurs peu qualifiés ne porte que sur les formations qui ouvrent le droit au congé-éducation payé en Région de Bruxelles-Capitale, et la formation doit commencer et se terminer dans la période d\'activation. En Flandre, le congé de formation flamand a remplacé le congé-éducation en 2019. Depuis le 1er septembre 2026, le remboursement versé à l\'employeur est de 24,50 euros par heure, contre 14,91 euros en 2025-2026, selon vlaanderen.be ; le salarié dispose de 125 heures par an à son initiative, plus 125 heures à l\'initiative de l\'employeur, avec un emploi d\'au moins 50 % selon Securex.',
+                'Ces dispositifs reposent sur la reconnaissance de la formation par la commission ou l\'administration compétente, et non sur la seule qualité du contenu. Un programme de Richard peut donc être éligible ou non selon la région et le dispositif : le cadrage le dit avant de signer, avec les pièces à fournir.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Quelles formations choisir pour une équipe belge ?',
+            'intro' => 'Les fiches ci-dessous répondent aux besoins les plus fréquents des sociétés belges qui adoptent l\'IA et l\'automatisation ; chacune se règle selon votre secteur.',
+            'items' => [
+                ['titre' => 'IA en entreprise', 'texte' => 'Pour les équipes belges qui testent déjà des assistants génératifs : cadrer les saisies autorisées, relire les résultats et garder les données clients hors des outils grand public. <a href="/formations/ia-en-entreprise">Voir la formation</a>.'],
+                ['titre' => 'Gouvernance de l\'IA', 'texte' => 'Pour fixer les règles d\'usage, les rôles et les registres, au moment où l\'AI Act met en avant la maîtrise de l\'IA et impose la transparence. <a href="/formations/gouvernance-ia">Voir la formation</a>.'],
+                ['titre' => 'Éthique et conformité de l\'IA', 'texte' => 'Pour les juristes et les responsables conformité qui articulent RGPD et AI Act. <a href="/formations/ia-ethique-conformite">Voir la formation</a>.'],
+                ['titre' => 'Sécurité des données pour dirigeants', 'texte' => 'Pour comprendre les obligations de notification dans les 72 heures, le registre des traitements et les accès des prestataires. <a href="/formations/securite-donnees-dirigeants">Voir la formation</a>.'],
+                ['titre' => 'Automatisation avec n8n', 'texte' => 'Pour enchaîner sans code l\'envoi d\'un fichier de facture, la relance d\'un impayé et le rapprochement d\'un virement SEPA. <a href="/formations/n8n">Voir la formation</a>.'],
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Comment se passe une collaboration avec Richard depuis Cotonou ?',
+            'intro' => 'Le travail se fait à distance, ce qui place le contrat et le rythme des échanges au centre.',
+            'items' => [
+                ['titre' => 'Fuseau horaire', 'texte' => 'Cotonou reste à UTC+1 toute l\'année. Du dernier dimanche d\'octobre au dernier dimanche de mars, il est la même heure à Bruxelles ; le reste de l\'année, Bruxelles a une heure d\'avance. Un rendez-vous à 10 h à Bruxelles en été se tient à 9 h à Cotonou, et les journées de bureau se recoupent presque entièrement.'],
+                ['titre' => 'Langue', 'texte' => 'Réunions, documents et supports en français ; l\'anglais sert avec une équipe flamande ou un siège étranger.'],
+                ['titre' => 'Contrat', 'texte' => 'Un contrat de prestation écrit, avec périmètre, livrables, jalons, cession des droits sur le code livré, confidentialité et, quand des données personnelles sont en jeu, clauses de sous-traitance et clauses contractuelles types.'],
+                ['titre' => 'Devise des devis', 'texte' => 'L\'euro, sur devis : aucune conversion à votre charge, et un règlement par virement SEPA selon des jalons. Les frais bancaires éventuels se fixent par écrit.'],
+                ['titre' => 'Outils de suivi', 'texte' => 'Une messagerie d\'équipe pour les questions courantes, un compte rendu écrit après chaque décision, un point vidéo chaque semaine et une démonstration à chaque jalon payé.'],
+                ['titre' => 'Premier échange', 'texte' => 'Un message suffit pour décrire votre société et le blocage ; Richard répond sous 24 heures par une première lecture, puis propose un appel de cadrage si le sujet le demande.'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Combien coûte un projet pour une entreprise belge ?',
+            'paragraphes' => [
+                'Le prix dépend d\'abord de ce que le projet doit faire. En Belgique, quatre éléments pèsent en plus : le nombre de méthodes de paiement à raccorder, l\'exigence de factures structurées par Peppol, le volume de données personnelles qui suppose un contrat de sous-traitance et une analyse du transfert, et le niveau de documentation demandé pour l\'IA. Un site vitrine sans données et un outil de facturation raccordé à Peppol n\'ont rien à voir.',
+                'Chaque projet est chiffré après un échange de cadrage. Les devis sont établis en euros, sans montant public, et détaillent le périmètre, les jalons de paiement et ce qui est hors périmètre.',
+            ],
+        ],
+        [
+            'type'  => 'prix',
+            'titre' => 'Comment les projets belges sont-ils chiffrés ?',
+            'items' => [
+                ['offre' => 'Site vitrine bilingue ou page de campagne', 'prix' => 'Sur devis, en euros', 'inclus' => ['Version française et, au besoin, néerlandaise ou anglaise', 'Formulaire avec mention d\'information RGPD', 'Mise en ligne']],
+                ['offre' => 'Boutique en ligne avec Bancontact', 'prix' => 'Sur devis, en euros', 'inclus' => ['Raccordement à un agrégateur de paiement', 'Confirmation de paiement signée', 'Formation de l\'équipe']],
+                ['offre' => 'Application, ERP ou facturation raccordée à Peppol', 'prix' => 'Sur devis, en euros', 'inclus' => ['Cadrage', 'Développement par jalons', 'Documentation et passation']],
+                ['offre' => 'Intégration d\'IA ou automatisation', 'prix' => 'Sur devis, en euros', 'inclus' => ['Dossier des données envoyées', 'Cas où la décision reste humaine', 'Formation des utilisateurs']],
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Quelles erreurs voit-on souvent dans les projets numériques d\'entreprises belges ?',
+            'intro' => 'Ces erreurs se règlent au cadrage et coûtent cher quand elles apparaissent en production.',
+            'items' => [
+                ['titre' => 'Livrer une facture en PDF seulement', 'texte' => 'Depuis 2026, entre assujettis établis en Belgique, le fichier structuré est la facture légale. Un logiciel qui ne sait produire que du PDF se remplace plus tard, avec les amendes qui s\'ajoutent après la tolérance.'],
+                ['titre' => 'Oublier Bancontact', 'texte' => 'Une boutique qui n\'affiche que les cartes internationales se prive de la méthode la plus utilisée du pays. L\'agrégateur de paiement doit gérer Bancontact et suivre le passage de Payconiq à Bancontact Pay et à Wero.'],
+                ['titre' => 'Envoyer des données réelles à l\'étranger sans contrat', 'texte' => 'Le Bénin n\'est pas sur la liste des pays adéquats de la Commission. Sans contrat de sous-traitance et clauses types, l\'entreprise belge prend le risque.'],
+                ['titre' => 'Mal traiter la TVA d\'une prestation étrangère', 'texte' => 'Un prestataire hors Belgique facture sans TVA belge, et le client l\'autoliquide. Le comptable doit être prévenu avant la première facture, pas à la clôture.'],
+                ['titre' => 'Déployer un chatbot qui ne dit pas qu\'il est une IA', 'texte' => 'L\'article 50 de l\'AI Act impose d\'informer l\'utilisateur depuis le 2 août 2026 : la mention se prévoit dans l\'écran, pas dans les conditions générales.'],
+                ['titre' => 'Compter sur un chèque-formation sans vérifier l\'éligibilité', 'texte' => 'Le dispositif wallon vise les PME wallonnes et des opérateurs agréés ; à Bruxelles et en Flandre, les dispositifs reposent sur le congé-éducation et sur la reconnaissance de la formation.'],
+                ['titre' => 'Ignorer la dimension linguistique', 'texte' => 'Entre Bruxelles, la Wallonie et la Flandre, la langue d\'une interface ou d\'un message de facture change selon le client ; elle se prévoit dès la maquette.'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi confier un projet à Richard SALANON quand on est en Belgique ?',
+            'paragraphes' => [
+                'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
+                'Richard a déjà travaillé avec des entreprises en Belgique, comme en France, en Suisse, au Canada et dans dix autres pays dont le Bénin, la Côte d\'Ivoire et le Togo. Ses projets pour des clients d\'Afrique et d\'Europe figurent sur la page des <a href="/realisations/">réalisations</a>. Il intervient à distance, avec un contrat écrit, un suivi par jalons et un dossier de passation à chaque livraison.',
+                'Formé à EPITECH, Richard a conçu Wapy, un assistant WhatsApp à IA, et co-fonde Audyxa : son parcours complet se lit sur <a href="/richard-salanon">sa page personnelle</a> et sur <a href="/a-propos/">À propos</a>. Pour Bruxelles, deux pages locales vont plus loin : <a href="/externaliser-developpement-web-bruxelles">externaliser son développement web à Bruxelles</a> et <a href="/formation-ia-entreprise-bruxelles">la formation IA en entreprise à Bruxelles</a>.',
+            ],
+        ],
+        [
+            'type'   => 'cta',
+            'titre'  => 'Quel projet voulez-vous lancer en Belgique ?',
+            'texte'  => 'Racontez votre société, votre contrainte réglementaire et le résultat attendu. Richard répond sous 24 heures, puis chiffre en euros après un appel de cadrage.',
+            'bouton' => ['url' => '/contact', 'texte' => 'Demander un devis'],
+        ],
+    ],
+
+    'faq' => [
+        ['q' => 'Quelle autorité contrôle les données personnelles en Belgique ?', 'r' => 'L\'Autorité de protection des données (APD), créée par la loi du 3 décembre 2017 en remplacement de la Commission de la protection de la vie privée. Elle applique le RGPD et reçoit notamment les notifications de violations de données, uniquement par son portail en ligne.'],
+        ['q' => 'Une entreprise belge peut-elle confier des données personnelles à un prestataire au Bénin ?', 'r' => 'Oui, avec des garanties. Le Bénin ne figure pas sur la liste des pays reconnus adéquats par la Commission européenne : un contrat de sous-traitance, les clauses contractuelles types de juin 2021 et une analyse du transfert sont à signer avant le premier accès. Richard travaille sur des données fictives ou anonymisées quand c\'est possible.'],
+        ['q' => 'La facture électronique est-elle obligatoire en Belgique ?', 'r' => 'Oui depuis le 1er janvier 2026 entre assujettis à la TVA établis en Belgique, par le réseau Peppol, selon le portail efacture.belgium.be. La tolérance a couru jusqu\'au 7 avril 2026 ; l\'arrêté royal du 8 juillet 2025 prévoit ensuite des amendes de 1 500, 3 000 puis 5 000 euros.'],
+        ['q' => 'Une facture PDF reste-t-elle valable entre deux sociétés belges ?', 'r' => 'Pas comme facture légale entre assujettis établis en Belgique : le fichier XML structuré est la facture, le PDF n\'en est qu\'une lecture. Les factures aux particuliers ne sont pas concernées.'],
+        ['q' => 'Qui paie la TVA sur une prestation de développement facturée depuis le Bénin ?', 'r' => 'Le schéma attendu est l\'autoliquidation : la facture arrive sans TVA belge et la société belge assujettie déclare la taxe elle-même. Pour un prestataire hors Union, la mention et la case de déclaration se font confirmer par votre comptable avant le premier paiement.'],
+        ['q' => 'Faut-il accepter Bancontact sur une boutique belge ?', 'r' => 'Oui : Mollie le présente comme la méthode de paiement la plus utilisée du pays. L\'application Payconiq by Bancontact devient Bancontact Pay en 2026, et le code QR des commerces mentionne aussi Wero.'],
+        ['q' => 'Que change l\'AI Act pour un chatbot déployé en Belgique ?', 'r' => 'Il doit informer l\'utilisateur qu\'il s\'agit d\'une IA : l\'obligation de transparence de l\'article 50 s\'applique depuis le 2 août 2026. Les systèmes à haut risque de l\'annexe III, comme le tri de candidatures, sont reportés au 2 décembre 2027 par le règlement (UE) 2026/1744.'],
+        ['q' => 'Qui peut financer la formation de mon personnel en Belgique ?', 'r' => 'Cela dépend de la région : chèques-formation du Forem pour les PME wallonnes, congé-éducation payé à Bruxelles et en Wallonie, congé de formation flamand en Flandre (24,50 euros par heure remboursés à l\'employeur depuis le 1er septembre 2026). L\'éligibilité d\'un programme se vérifie auprès de l\'organisme compétent avant l\'inscription.'],
+        ['q' => 'Un chèque-formation wallon couvre-t-il une formation à l\'IA ?', 'r' => 'Un chèque vaut 30 euros par heure de formation et s\'utilise auprès d\'un opérateur agréé. Le Forem tranche l\'éligibilité de la formation ; Richard fournit programme et durée pour cette vérification.'],
+        ['q' => 'Y a-t-il un décalage horaire entre Bruxelles et Cotonou ?', 'r' => 'Du dernier dimanche d\'octobre au dernier dimanche de mars, il est la même heure. Le reste de l\'année, Bruxelles a une heure d\'avance sur Cotonou, qui reste à UTC+1.'],
+        ['q' => 'En quelle monnaie sont établis les devis pour la Belgique ?', 'r' => 'En euros, sur devis, sans montant public. Le règlement se fait par virement SEPA selon des jalons convenus au contrat.'],
+        ['q' => 'Richard SALANON se déplace-t-il en Belgique ?', 'r' => 'Le travail se fait à distance : cadrage, développement, recette et formation passent par la visioconférence et la messagerie, sans frais de déplacement ni de séjour à prévoir.'],
+    ],
+
+    'sources' => [
+        ['titre' => 'Sénat de Belgique, Constitution belge coordonnée (articles 2, 3, 4 et 194)', 'url' => 'https://www.senate.be/doc/const_fr.html', 'date' => '2026-10-06'],
+        ['titre' => 'IANA, base de fuseaux horaires : Europe/Brussels et règle européenne de l\'heure d\'été', 'url' => 'https://data.iana.org/time-zones/tzdb/europe', 'date' => '2026-10-06'],
+        ['titre' => 'UIT, liste des indicatifs de pays (E.164), Belgique : 32', 'url' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2009-PDF-E.pdf', 'date' => '2026-10-06'],
+        ['titre' => 'L\'Avenir, population de la Belgique au 1er janvier 2026 (Statbel)', 'url' => 'https://www.lavenir.net/actu/societe/2026/06/10/plus-de-deces-que-de-naissances-pour-la-quatrieme-dannee-consecutive-en-belgique-limmigration-internationale-seul-moteur-de-croissance-SNONZ44HNBG3FPYKAI5FBLVZGQ/', 'date' => '2026-10-06'],
+        ['titre' => 'IBSA, la population bruxelloise et le numérique, édition 2025 (enquête TIC de Statbel)', 'url' => 'https://ibsa.brussels/sites/default/files/publication/documents/TIC_Menages_2025v2.pdf', 'date' => '2026-10-06'],
+        ['titre' => 'IBPT, communiqué du 10 juin 2025 sur la couverture 5G', 'url' => 'https://www.bipt.be/index.php/file/cc73d96153bbd5448a56f19d925d05b1379c7f21/dcd339267af31a7605de595aa2d9396580029117/cp-couverture-mobile-5g-2025-07-10.pdf', 'date' => '2026-10-06'],
+        ['titre' => 'Wallonia Export-Investment Agency, secteurs clés de la Wallonie', 'url' => 'https://invest.walloniaexportinvestment.be/en/key-sectors/', 'date' => '2026-10-06'],
+        ['titre' => 'Banque centrale européenne, la Belgique et l\'euro', 'url' => 'https://www.ecb.europa.eu/euro/intro/html/index.fr.html', 'date' => '2026-10-06'],
+        ['titre' => 'Bancontact Company, de Bancontact Payconiq Company à Bancontact Pay (printemps 2026)', 'url' => 'https://bancontact-company.prezly.com/bancontact-payconiq-company-opens-a-new-chapter-for-belgian-payments-with-the-bancontact-pay-brand', 'date' => '2026-10-06'],
+        ['titre' => 'Mollie, paiement par Bancontact', 'url' => 'https://www.mollie.com/fr/payments/bancontact', 'date' => '2026-10-06'],
+        ['titre' => 'Stripe, guide des paiements en Belgique', 'url' => 'https://stripe.com/resources/more/payments-in-belgium', 'date' => '2026-10-06'],
+        ['titre' => 'Autorité de protection des données, présentation de l\'autorité (loi du 3 décembre 2017)', 'url' => 'https://www.autoriteprotectiondonnees.be/citoyen/l-autorite', 'date' => '2026-10-06'],
+        ['titre' => 'Autorité de protection des données, notification d\'une violation de données personnelles', 'url' => 'https://www.autoriteprotectiondonnees.be/professionnel/actions/violation-de-donnees-personnelles', 'date' => '2026-10-06'],
+        ['titre' => 'Autorité de protection des données, registre des activités de traitement', 'url' => 'https://www.autoriteprotectiondonnees.be/professionnel/rgpd-/registre-des-activites-de-traitement', 'date' => '2026-10-06'],
+        ['titre' => 'Autorité de protection des données, thème de l\'intelligence artificielle', 'url' => 'https://www.autoriteprotectiondonnees.be/professionnel/themes/intelligence-artificielle', 'date' => '2026-10-06'],
+        ['titre' => 'Commission européenne, décisions d\'adéquation (le Bénin n\'y figure pas)', 'url' => 'https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_fr', 'date' => '2026-10-06'],
+        ['titre' => 'Commission européenne, clauses contractuelles types du 4 juin 2021', 'url' => 'https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_fr', 'date' => '2026-10-06'],
+        ['titre' => 'Portail efacture.belgium.be, obligation de facturation électronique B2B', 'url' => 'https://efacture.belgium.be/fr', 'date' => '2026-10-06'],
+        ['titre' => 'Forum for the Future, arrêté royal du 8 juillet 2025 relatif à la facturation électronique', 'url' => 'https://blog.forumforthefuture.be/fr/article/focus-sur-larrete-royal-du-8-juillet-2025-relatif-a-la-facturation-electronique/28447', 'date' => '2026-10-06'],
+        ['titre' => 'Forum for the Future, mandat de facturation électronique 2026 : e-reporting 2028 et format', 'url' => 'https://blog.forumforthefuture.be/fr/article/mandat-de-facturation-electronique-2026-en-belgique-quavons-nous-appris-jusqua-present-/30899', 'date' => '2026-10-06'],
+        ['titre' => 'Union des classes moyennes, la facturation électronique obligatoire en 2026 (incitants fiscaux)', 'url' => 'https://www.ucm.be/actualites/facturation-electronique-il-est-temps-de-sy-preparer', 'date' => '2026-10-06'],
+        ['titre' => 'Your Europe, TVA sur les services entre entreprises de pays différents (autoliquidation)', 'url' => 'https://europa.eu/youreurope/business/taxation/vat/cross-border-vat/index_fr.htm', 'date' => '2026-10-06'],
+        ['titre' => 'Commission européenne, l\'omnibus sur l\'IA entre en vigueur (règlement (UE) 2026/1744)', 'url' => 'https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force', 'date' => '2026-10-06'],
+        ['titre' => 'UVCW, loi du 3 décembre 2017 portant création de l\'Autorité de protection des données', 'url' => 'https://uvcw.be/data/actus/art-390', 'date' => '2026-10-06'],
+        ['titre' => 'SPF Économie, achats en ligne : droit de rétractation de 14 jours', 'url' => 'https://news.economie.fgov.be/264807-achats-en-ligne-voici-vos-droits/', 'date' => '2026-10-06'],
+        ['titre' => 'Garrigues, publication de l\'omnibus numérique sur l\'IA et nouvelles échéances', 'url' => 'https://www.garrigues.com/en_GB/garrigues-digital/ai-digital-omnibus-regulation-has-been-published-redefining-deadlines-and', 'date' => '2026-10-06'],
+        ['titre' => 'Wallonie.be, former ses travailleurs grâce aux chèques-formation', 'url' => 'https://wallonie.be/fr/demarches/former-ses-travailleurs-grace-aux-cheques-formation', 'date' => '2026-10-06'],
+        ['titre' => 'SPF Emploi, reconnaissance des formations dans le cadre du congé-éducation payé', 'url' => 'https://emploi.belgique.be/fr/themes/formation/reconnaissance-des-formations-dans-le-cadre-du-conge-education-paye', 'date' => '2026-10-06'],
+        ['titre' => 'Vlaanderen.be, remboursement du congé de formation flamand pour l\'employeur (14,91 puis 24,50 euros par heure)', 'url' => 'https://www.vlaanderen.be/werken/opleiding-op-de-werkplek/als-werknemer-een-opleiding-volgen/vlaams-opleidingsverlof/aanvraag-vlaams-opleidingsverlof-en-terugbetaling-voor-werkgever', 'date' => '2026-10-06'],
+        ['titre' => 'Securex, nouvelles règles du congé de formation flamand au 1er septembre 2026', 'url' => 'https://www.securex.be/nl/lex4you/werkgever/nieuws/nieuwe-wijzigingen-vlaams-opleidingsverlof-vanaf-1-september-2026', 'date' => '2026-10-06'],
+        ['titre' => 'Securex, aides bruxelloises : formations qui entrent en considération', 'url' => 'https://www.securex.be/fr/lex4you/employeur/themes/optimiser-la-politique-salariale/aides-a-l%E2%80%99emploi-bruxelloises/quelles-formations-entrent-en-consideration', 'date' => '2026-10-06'],
+    ],
+
+    'liens' => [
+        'services'    => ['externalisation-developpement', 'application-web-sur-mesure', 'automatisation-ia', 'integration-ia-entreprise', 'api-rest-integrations', 'integration-odoo', 'integration-dolibarr', 'maintenance-support', 'formation-en-entreprise', 'agents-ia-chatbot-whatsapp'],
+        'formations'  => ['ia-en-entreprise', 'gouvernance-ia', 'ia-ethique-conformite', 'securite-donnees-dirigeants', 'n8n', 'integrer-ia-logiciels-existants'],
+        'comparatifs' => ['n8n-vs-make-vs-zapier', 'chatgpt-vs-claude-vs-gemini'],
+        'metiers'     => ['experts-comptables', 'juristes-entreprise', 'chefs-entreprise-dirigeants'],
+    ],
+];
