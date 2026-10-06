@@ -346,7 +346,7 @@ return [
             'titre'       => 'Pourquoi confier son projet numérique à Richard SALANON au Bénin ?',
             'paragraphes' => [
                 fait('phrase_entite'),
-                'Richard a déjà travaillé avec des entreprises au Bénin, son pays et celui où il habite. Il compte plus de six ans d\'expérience, il est passé par EPITECH à Cotonou, il a créé Wapy, son propre assistant WhatsApp à IA, et il co-fonde Audyxa. Il connaît donc les contraintes de ce marché de l\'intérieur : un client qui paie en mobile money, une facture à normaliser, un fichier à déclarer, un réseau qui s\'interrompt.',
+                'Richard a déjà travaillé avec des entreprises au Bénin, le pays où il est basé, à Cotonou. Il compte plus de six ans d\'expérience, il est passé par EPITECH à Cotonou, il a créé Wapy, son propre assistant WhatsApp à IA, et il co-fonde Audyxa. Il connaît donc les contraintes de ce marché de l\'intérieur : un client qui paie en mobile money, une facture à normaliser, un fichier à déclarer, un réseau qui s\'interrompt.',
                 'Il écrit en français et chiffre en FCFA. Les réalisations ci-dessous situent le travail déjà fait au Bénin ; la page <a href="/realisations/">réalisations</a> en détaille d\'autres, et la page <a href="/richard-salanon">Richard SALANON</a> présente son parcours.',
             ],
         ],
