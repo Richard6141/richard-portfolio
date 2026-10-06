@@ -13,7 +13,7 @@ return [
     'titre'   => "Des logiciels, des automatisations et des paiements Orange Money et MTN MoMo pour les entreprises guinéennes, pilotés à distance depuis Cotonou",
     'title'   => "Développeur et consultant en Guinée | Richard SALANON",
     'meta'    => "Sites, applications, automatisation, IA, Odoo et Dolibarr pour les entreprises de Guinée : Orange Money, MTN MoMo, loi de 2016, devis en euros.",
-    'en_bref' => "Richard SALANON conçoit pour les entreprises de Guinée des sites, des applications, des automatisations et des intégrations d'IA, déploie Odoo ou Dolibarr et forme les équipes. Il accompagne à distance depuis Cotonou, avec une heure d'écart sur Conakry, en français. La Guinée n'est pas dans la zone franc : les devis sont établis en euros, sur demande. Les paiements s'appuient sur Orange Money et MTN MoMo, et le cadre légal sur la loi de 2016 relative aux données personnelles.",
+    'en_bref' => "Pour une entreprise guinéenne, Richard SALANON bâtit des sites, des applications et des automatisations, branche l'IA sur les outils existants, installe Odoo ou Dolibarr et initie les équipes. Il travaille depuis Cotonou, par visioconférence et WhatsApp, en français, Conakry étant une heure en arrière. Le franc guinéen n'étant pas le franc CFA, ses devis sont libellés en euros, à la demande. L'encaissement passe par Orange Money et MTN MoMo ; la loi de 2016 fixe la règle pour les données personnelles.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
 
@@ -50,7 +50,7 @@ return [
     'sections' => [
         [
             'type'        => 'prose',
-            'titre'       => 'Où en est le numérique en Guinée, et que change-t-il pour un projet ?',
+            'titre'       => 'Que retenir du numérique guinéen avant de lancer un projet ?',
             'paragraphes' => [
                 "La Guinée compte 17 521 167 habitants selon les résultats préliminaires du quatrième recensement, réalisé en juillet 2025 et officialisés par décret le 6 mars 2026. La région de Kankan est la plus peuplée avec 4 110 215 habitants, devant Conakry (3 407 327), Nzérékoré (2 481 986) et Kindia (2 275 620). La population est donc répartie sur tout le territoire, et la capitale n'en représente qu'environ un cinquième : un service pensé uniquement pour Conakry laisse de côté la majorité des clients potentiels.",
                 "Le téléphone mobile est le canal dominant. Selon l'Autorité de régulation des postes et télécommunications, l'ARPT, le pays comptait 12,8 millions d'abonnés mobiles fin juin 2025, soit 89,1 % de pénétration, et 8,3 millions d'abonnements internet. Les mêmes sources rappellent que ces chiffres comptent des cartes SIM et non des personnes. Pour un projet, cela signifie qu'une application se conçoit d'abord pour un écran de téléphone, avec des pages légères et des formulaires courts.",
@@ -70,7 +70,7 @@ return [
         ],
         [
             'type'        => 'prose',
-            'titre'       => 'Quels moyens de paiement intégrer pour encaisser en Guinée ?',
+            'titre'       => 'Par quels moyens les clients guinéens règlent-ils en ligne ?',
             'paragraphes' => [
                 "En Guinée, encaisser en ligne veut dire accepter le mobile money, et d'abord Orange Money. L'ARPT dénombrait 3,2 millions d'abonnés aux services financiers mobiles fin juin 2025, contre 1,9 million en juin 2022, soit 68,4 % de plus en trois ans. Orange en détenait 92 % ; la part de MTN est tombée de 16 % en juin 2023 à 8 % en juin 2025. Un troisième service est apparu : Coris Bank International Guinée a lancé Coris Money le 16 février 2026, avec dépôts, retraits, transferts, paiement de factures et règlement des marchands.",
                 "Le contexte monétaire pèse sur le choix. Le 26 août 2025, la Banque centrale a réuni les établissements de monnaie électronique pour traiter ce qu'elle appelle une crise du cash : 94 % des billets émis restent hors du circuit bancaire, thésaurisés par les agents économiques. Pour une entreprise, accepter le paiement numérique n'est donc pas un confort : c'est une réponse à la rareté des espèces aux guichets et aux distributeurs, que le régulateur encourage lui-même.",
@@ -78,8 +78,8 @@ return [
         ],
         [
             'type'   => 'points',
-            'titre'  => 'Comment choisir entre Orange Money, MTN MoMo, un agrégateur et la carte ?',
-            'intro'  => 'Le bon montage dépend de ce que vous vendez, à qui, et de la devise dans laquelle vous voulez être réglé. Voici les options et leur logique pour une entreprise guinéenne.',
+            'titre'  => 'Orange Money, MTN MoMo, agrégateur ou carte : lequel retenir ?',
+            'intro'  => 'Le choix suit votre clientèle et la devise de règlement souhaitée. Chaque option ci-dessous a sa propre logique pour une entreprise établie en Guinée.',
             'items'  => [
                 ['titre' => 'Un contrat direct avec Orange Money', 'texte' => "Avec 92 % des abonnés selon l'ARPT, Orange Money est le service qu'il faut accepter en premier. Un contrat direct donne la relation la plus proche de l'opérateur, au prix d'un dossier d'entreprise et d'une interface propre à lui. Il se justifie pour un volume important ou une exigence de relation commerciale suivie."],
                 ['titre' => 'MTN MoMo en complément', 'texte' => "Avec 8 % des abonnés en juin 2025, MTN MoMo représente une minorité, mais elle compte pour un client qui n'a que ce portefeuille. À ajouter après Orange, pas avant : le coût d'une seconde intégration se mesure à la clientèle réellement touchée."],
@@ -90,17 +90,17 @@ return [
         ],
         [
             'type'  => 'etapes',
-            'titre' => 'Comment se déroule l\'intégration d\'un paiement mobile, du cahier des charges à la mise en production ?',
+            'titre' => 'Quelles étapes mènent d\'un projet de paiement mobile à son lancement ?',
             'items' => [
                 ['titre' => 'Fixer les services à accepter', 'texte' => "Richard part de vos clients réels : combien paient par Orange Money, combien par MTN MoMo, combien par virement. Dans la plupart des cas, on commence par Orange Money puis on ajoute MTN MoMo.", 'duree' => '2 à 3 jours'],
-                ['titre' => 'Ouvrir le compte marchand', 'texte' => "L'ouverture dépend de l'opérateur ou de l'agrégateur et de vos pièces d'entreprise ; son délai ne dépend pas de Richard, qui prépare avec vous le dossier pour éviter les allers-retours.", 'duree' => 'selon l\'opérateur'],
-                ['titre' => 'Développer et tester en bac à sable', 'texte' => "Création du paiement, retour de l'opérateur, notification au serveur et page de confirmation. Les échecs sont testés autant que les succès : code mal saisi, délai dépassé, solde insuffisant, coupure réseau en plein paiement, ce qui n'a rien d'exceptionnel en dehors des grandes villes.", 'duree' => '1 à 2 semaines'],
-                ['titre' => 'Rapprocher en franc guinéen et mettre en production', 'texte' => "Chaque paiement est rapproché de sa commande et de sa facture en GNF dans votre logiciel. Des essais réels de faible montant précèdent la bascule, suivie d'un suivi des premiers jours.", 'duree' => '2 à 4 jours'],
+                ['titre' => 'Constituer le dossier marchand', 'texte' => "Orange, MTN ou l'agrégateur retenu instruisent la demande à partir des pièces de votre entreprise. Les délais sont ceux de l'opérateur ; Richard monte le dossier à vos côtés pour limiter les demandes de complément.", 'duree' => 'selon l\'opérateur'],
+                ['titre' => 'Construire et éprouver en environnement de test', 'texte' => "Le parcours complet est bâti : lancement du paiement, réponse de l'opérateur, message reçu par le serveur, page de confirmation. On éprouve les ratés comme les réussites : mauvais code, temps écoulé, solde trop bas, réseau coupé au milieu de l'opération, cas courant hors de Conakry.", 'duree' => '1 à 2 semaines'],
+                ['titre' => 'Rapprocher en franc guinéen et mettre en production', 'texte' => "Chaque paiement est rapproché de sa commande et de sa facture en GNF dans votre logiciel. Des essais réels de faible montant précèdent la bascule, puis les premiers jours en production sont surveillés de près.", 'duree' => '2 à 4 jours'],
             ],
         ],
         [
             'type'        => 'prose',
-            'titre'       => 'Quelles obligations légales changent un projet numérique en Guinée ?',
+            'titre'       => 'Quels textes de loi encadrent un projet numérique guinéen ?',
             'paragraphes' => [
                 "Quatre textes encadrent un projet. La loi L/2016/037/AN de juillet 2016 relative à la cybersécurité et à la protection des données personnelles comprend deux parties : l'une sur la lutte contre la cybercriminalité, l'autre sur les données personnelles. La loi L/2016/035/AN du 9 juin 2016 règle les transactions électroniques en 55 articles : commerce électronique, publicité en ligne, certification et archivage. La loi L/2023/019/CNT, adoptée le 25 octobre 2023, organise l'identification des personnes physiques. Enfin, la Guinée applique l'OHADA depuis le 21 novembre 2000, donc le droit des affaires commun et le plan comptable SYSCOHADA.",
                 "Pour les données, la loi de 2016 exige une déclaration ou une demande d'autorisation avant tout traitement, auprès d'une autorité à créer par voie réglementaire selon son article 47. Les fiches de DLA Piper (décembre 2021) et de Data Protection Africa (mai 2022) indiquent que cette autorité n'est pas installée. Un décret d'avril 2025 fixe des conditions de sécurité pour les données d'identification et s'appuie sur l'organe chargé de l'état civil et de l'identification, sans créer d'autorité générale. L'état actuel reste à confirmer avant de lancer un traitement de grande ampleur : tenez dès maintenant un registre de vos traitements.",
@@ -111,16 +111,16 @@ return [
             'titre'       => 'Que dit la loi sur le transfert et l\'hébergement des données personnelles ?',
             'paragraphes' => [
                 "La loi de 2016 soumet le transfert de données vers un pays tiers à l'autorisation préalable de l'autorité, avec la condition que le pays destinataire offre un niveau de protection équivalent ou supérieur. Selon Data Protection Africa, les transferts hors de la zone de la CEDEAO sont visés. Les synthèses juridiques de DLA Piper et de Data Protection Africa ne mentionnent aucune exigence d'hébergement sur le territoire national : à confirmer avec un conseil juridique pour un projet sensible. L'absence d'autorité en activité ne supprime pas l'obligation, elle rend simplement difficile de savoir à qui la demander.",
-                "En pratique, Richard documente où chaque donnée est stockée, sépare les données personnelles du reste pour pouvoir les déplacer et prévoit des sauvegardes exportables. L'identifiant national mérite une règle à part : l'article 13 de la loi de 2023 interdit aux administrations et organismes visés d'utiliser le numéro personnel d'identification comme clé de recherche dans leurs applications. Un logiciel qui serait relié à une démarche administrative ne doit donc pas bâtir sa base sur ce numéro.",
+                "Côté méthode, Richard dresse la carte des lieux de stockage, isole les données personnelles dans un espace distinct afin de pouvoir les migrer sans toucher au reste, et configure des sauvegardes que l'entreprise peut exporter elle-même. L'identifiant national mérite une règle à part : l'article 13 de la loi de 2023 interdit aux administrations et organismes visés d'utiliser le numéro personnel d'identification comme clé de recherche dans leurs applications. Un logiciel qui serait relié à une démarche administrative ne doit donc pas bâtir sa base sur ce numéro.",
             ],
         ],
         [
             'type'    => 'tableau',
-            'titre'   => 'Facture normalisée, TVA, comptabilité : que doit prévoir une entreprise guinéenne ?',
-            'legende' => 'Points de conformité fiscale à traiter dans un logiciel de gestion ou de vente en Guinée, état au 6 octobre 2026',
-            'entetes' => ['Sujet', 'Ce que disent les sources', 'Ce que cela change dans le logiciel'],
+            'titre'   => 'Quelles règles de facturation, de TVA et de comptabilité intégrer au logiciel ?',
+            'legende' => 'Conformité fiscale à prévoir dès la conception d\'un logiciel guinéen, état au 6 octobre 2026',
+            'entetes' => ['Point fiscal', 'Ce que relèvent les sources', 'Effet sur le logiciel'],
             'lignes'  => [
-                ['Facture électronique normalisée', "Le ministère du Budget a reçu une présentation de la solution le 2 décembre 2021 et indique que la réforme est inscrite au Code général des impôts. Aucune plateforme nationale en service ni aucun calendrier n'est annoncé : à confirmer auprès de la Direction générale des impôts avant de lancer le projet.", "Numérotation continue, mentions complètes et export structuré de chaque facture : le raccordement ultérieur à un système de la Direction nationale des impôts devient un ajout et non une refonte."],
+                ['Facturation électronique', "Le ministère du Budget a reçu une présentation de la solution le 2 décembre 2021 et indique que la réforme est inscrite au Code général des impôts. Aucune plateforme nationale en service ni aucun calendrier n'est annoncé : à confirmer auprès de la Direction générale des impôts avant de lancer le projet.", "Numérotation continue, mentions complètes et export structuré de chaque facture : le raccordement ultérieur à un système de la Direction nationale des impôts devient un ajout et non une refonte."],
                 ['TVA', "Selon un guide fiscal tiers, le taux normal est de 18 %. Une franchise s'applique sous 1 milliard de GNF de chiffre d'affaires de l'année précédente, avec une option possible dès 500 millions. Les déclarations sont mensuelles. Les administrations, les mines, les hydrocarbures et les télécoms retiennent 50 % de la TVA sur leurs paiements aux fournisseurs.", "Le logiciel doit distinguer la TVA facturée, la TVA retenue à la source et la TVA déductible. Richard ne tranche pas votre situation fiscale : elle se valide avec votre expert-comptable."],
                 ['Services numériques de fournisseurs étrangers', "Selon un guide fiscal tiers, il n'existe pas de régime dédié aux non-résidents : un représentant accrédité en Guinée ou l'autoliquidation par le client guinéen.", "Pour un client guinéen d'une société non établie en Guinée, la facture doit prévoir l'autoliquidation. À confirmer avec un conseil fiscal local."],
                 ['Comptabilité SYSCOHADA', "L'OHADA est en vigueur en Guinée depuis le 21 novembre 2000 : les états financiers suivent le SYSCOHADA.", "La localisation comptable choisie dans Odoo ou Dolibarr doit être celle de l'OHADA, avec le franc guinéen comme devise de tenue des comptes."],
@@ -128,30 +128,30 @@ return [
         ],
         [
             'type'    => 'tableau',
-            'titre'   => 'Quels services pour les entreprises guinéennes, selon leur besoin ?',
-            'legende' => 'Besoins fréquents des entreprises de Guinée, et le service qui y répond',
-            'entetes' => ['Besoin typique en Guinée', 'Service', 'Page'],
+            'titre'   => 'Quel service pour quel besoin, côté entreprises guinéennes ?',
+            'legende' => 'Situations rencontrées en Guinée et service correspondant',
+            'entetes' => ['Situation', 'Service', 'Page'],
             'lignes'  => [
-                ['Vendre en ligne et encaisser par Orange Money et MTN MoMo', 'Boutique en ligne', '<a href="/services/site-e-commerce">Site e-commerce</a>'],
-                ['Se présenter à un donneur d\'ordre minier ou à un partenaire étranger', 'Site vitrine bilingue', '<a href="/services/site-vitrine-professionnel">Site vitrine professionnel</a>'],
-                ['Facturer, suivre le stock et tenir une comptabilité SYSCOHADA en GNF', 'ERP complet', '<a href="/services/integration-odoo">Intégration d\'Odoo</a>'],
-                ['Équiper une PME avec un ERP plus léger, installé sur votre serveur', 'ERP modulaire', '<a href="/services/integration-dolibarr">Intégration de Dolibarr</a>'],
-                ['Répondre aux clients qui écrivent sur WhatsApp à toute heure', 'Assistant conversationnel', '<a href="/services/agents-ia-chatbot-whatsapp">Agents IA et chatbot WhatsApp</a>'],
-                ['Confirmer les paiements mobiles et relancer les impayés sans ressaisie', 'Automatisation', '<a href="/services/automatisation-ia">Automatisation et IA</a>'],
-                ['Relier le logiciel de gestion, le site et les services de paiement', 'Interfaces de programmation', '<a href="/services/api-rest-integrations">API REST et intégrations</a>'],
-                ['Apparaître sur Google quand on cherche un prestataire à Conakry', 'Référencement local', '<a href="/services/seo-local-google-business">SEO local et fiche Google</a>'],
+                ['Ouvrir une boutique dont les commandes se règlent en mobile money', 'Boutique en ligne', '<a href="/services/site-e-commerce">Création de site e-commerce</a>'],
+                ['Rassurer un donneur d\'ordre minier ou un acheteur venu de l\'étranger', 'Vitrine en deux langues', '<a href="/services/site-vitrine-professionnel">Vitrine professionnelle</a>'],
+                ['Réunir stock, factures et comptes SYSCOHADA dans un même outil, en GNF', 'ERP déployé par paliers', '<a href="/services/integration-odoo">Mise en service d\'Odoo</a>'],
+                ['Choisir un ERP léger, hébergé sur votre propre serveur', 'ERP libre', '<a href="/services/integration-dolibarr">Mise en service de Dolibarr</a>'],
+                ['Ne plus laisser sans réponse les messages WhatsApp reçus le soir ou le week-end', 'Agent conversationnel', '<a href="/services/agents-ia-chatbot-whatsapp">Chatbot WhatsApp et agents IA</a>'],
+                ['Éviter de ressaisir : paiement mobile reçu, facture mise à jour, relance envoyée', 'Automatisation', '<a href="/services/automatisation-ia">Automatisation par l\'IA</a>'],
+                ['Faire dialoguer le logiciel de gestion, la boutique et les opérateurs de paiement', 'Connexions par API', '<a href="/services/api-rest-integrations">API REST et connexions</a>'],
+                ['Être trouvé à Conakry par un client qui cherche un prestataire', 'Visibilité locale', '<a href="/services/seo-local-google-business">SEO local et fiche Google</a>'],
                 ['Suivre des camions, des cargaisons ou des chantiers sur plusieurs sites', 'Application sur mesure', '<a href="/services/application-web-sur-mesure">Application web sur mesure</a>'],
                 ['Faire fonctionner une application malgré un réseau instable', 'Application mobile', '<a href="/services/application-mobile-android-ios">Application mobile Android et iOS</a>'],
-                ['Choisir par où commencer la digitalisation', 'Cadrage', '<a href="/services/digitalisation-d-entreprise">Digitalisation d\'entreprise</a>'],
-                ['Former les équipes aux nouveaux outils', 'Formation', '<a href="/services/formation-en-entreprise">Formation en entreprise</a>'],
+                ['Savoir par quel chantier commencer', 'Diagnostic', '<a href="/services/digitalisation-d-entreprise">Cadrage de la digitalisation</a>'],
+                ['Mettre les équipes à niveau sur les outils adoptés', 'Formation', '<a href="/services/formation-en-entreprise">Formations pour équipes</a>'],
             ],
         ],
         [
             'type'  => 'cas',
-            'titre' => 'À quoi ressemble un projet numérique dans les secteurs porteurs de la Guinée ?',
+            'titre' => 'Quelles formes prend un projet numérique dans les secteurs moteurs de la Guinée ?',
             'items' => [
                 [
-                    'secteur'  => 'Mines et sous-traitance minière',
+                    'secteur'  => 'Fournisseurs des sites miniers',
                     'probleme' => 'Rio Tinto a commencé en octobre 2025 à charger les premiers minerais de fer de Simandou pour les acheminer par rail vers le port de Moribaya : une PME qui fournit un site minier doit répondre à des exigences de suivi, de facturation et de documents qu\'un tableur ne tient plus.',
                     'solution' => 'Un ERP déployé par paliers : achats et stock, puis ventes, facturation et comptabilité SYSCOHADA avec la retenue de TVA à la source propre aux donneurs d\'ordre miniers. Un espace partagé range les documents par commande, et une vitrine bilingue présente l\'entreprise aux acheteurs étrangers.',
                     'lien'     => ['url' => '/services/integration-odoo', 'texte' => 'Intégration d\'Odoo'],
@@ -159,13 +159,13 @@ return [
                 [
                     'secteur'  => 'Transit et logistique liés aux ports miniers',
                     'probleme' => 'Un transitaire ou un transporteur gère des dossiers dont le statut se demande par téléphone, entre le site, la voie ferrée et le port, avec des documents échangés par photo.',
-                    'solution' => 'Un tableau de suivi des dossiers (déclaration, enlèvement, livraison) avec un message WhatsApp automatique au client à chaque étape, et un mode hors ligne pour les agents sur route. Les documents sont rangés par dossier et horodatés.',
+                    'solution' => 'Chaque dossier avance dans un suivi partagé (déclaration, enlèvement, livraison) ; le client reçoit un message WhatsApp automatique à chaque changement de statut, et les agents sur la route disposent d\'un mode hors ligne. Les pièces sont classées par dossier et horodatées.',
                     'lien'     => ['url' => '/services/automatisation-ia', 'texte' => 'Automatisation et IA'],
                 ],
                 [
                     'secteur'  => 'Commerce de détail et vente en ligne',
-                    'probleme' => 'Un commerçant de Conakry ou de Kankan vend déjà par message, reçoit des captures d\'écran de transferts Orange Money et vérifie chaque paiement à la main avant de livrer.',
-                    'solution' => 'Une boutique avec paiement mobile intégré : la commande n\'est confirmée qu\'après la notification de l\'opérateur, le reçu part seul, et le paiement à la livraison reste possible. Le catalogue se met à jour depuis un tableau de bord simple, et les prix restent en GNF.',
+                    'probleme' => 'Un commerçant de Conakry ou de Kankan vend déjà par message, reçoit des captures d\'écran de transferts Orange Money : chaque paiement est contrôlé à la main avant l\'envoi de la marchandise, ce qui ralentit les ventes.',
+                    'solution' => 'Une boutique qui n\'enregistre la commande qu\'une fois le paiement notifié par l\'opérateur : plus de capture à vérifier, un reçu envoyé automatiquement, le paiement à la livraison conservé en option. Les produits se gèrent depuis un tableau de bord simple, avec des prix affichés en GNF.',
                     'lien'     => ['url' => '/services/site-e-commerce', 'texte' => 'Boutique en ligne'],
                 ],
                 [
@@ -184,19 +184,19 @@ return [
         ],
         [
             'type'        => 'prose',
-            'titre'       => 'Comment former les équipes guinéennes, et comment financer la formation ?',
+            'titre'       => 'Former les équipes en Guinée : quel format, quel financement ?',
             'paragraphes' => [
-                "Les formations se donnent à distance, en visioconférence, avec des exercices sur vos propres données et sur l'outil réel de l'entreprise ; les séances se calent sur le débit disponible, avec des supports qu'on peut télécharger la veille plutôt que de les charger en direct. Aucun déplacement à Conakry n'est prévu : le format à distance évite un voyage et convient à des équipes réparties entre la capitale et les régions minières.",
+                "Les sessions se tiennent en visioconférence, sur les dossiers et les outils réels de l'entreprise, avec des exercices tirés de son quotidien ; les séances se calent sur le débit disponible, avec des supports qu'on peut télécharger la veille plutôt que de les charger en direct. Aucun déplacement à Conakry n'est prévu : le format à distance évite un voyage et convient à des équipes réparties entre la capitale et les régions minières.",
                 "Pour le financement, l'Office national de formation et de perfectionnement professionnels, l'ONFPP, est un établissement public à caractère administratif basé à Conakry, chargé de mettre en œuvre la politique de formation continue, notamment dans les entreprises. Le 25 mars 2026, il a validé avec Enabel et l'Union européenne le manuel de la Facilité de développement des compétences : trois ans, un pilote à Conakry, Kindia et Mamou, 800 bénéficiaires visés, et en priorité les entreprises de moins de 30 salariés. Les conditions précises d'accès pour une entreprise donnée ne figurent pas dans le communiqué de validation : renseignez-vous auprès de l'office avant de budgéter.",
-                "Parcours utiles au contexte guinéen : <a href=\"/formations/odoo-comptabilite-syscohada\">Odoo et la comptabilité SYSCOHADA</a> pour les équipes financières, <a href=\"/formations/whatsapp-business\">WhatsApp Business</a> pour la relation client, <a href=\"/formations/ia-en-entreprise\">l'IA en entreprise</a> pour les dirigeants et <a href=\"/formations/securite-donnees-dirigeants\">la sécurité des données</a>, utile tant que l'autorité de protection n'est pas en place et que la responsabilité repose sur l'entreprise. Le catalogue complet est sur <a href=\"/formations/\">la page des formations</a>.",
+                "Quatre parcours collent à la situation guinéenne. <a href=\"/formations/securite-donnees-dirigeants\">La sécurité des données</a> pèse d'autant plus que l'autorité de protection n'est pas confirmée et que la responsabilité retombe sur l'entreprise. <a href=\"/formations/odoo-comptabilite-syscohada\">Odoo et la comptabilité SYSCOHADA</a> sert les équipes financières, <a href=\"/formations/whatsapp-business\">WhatsApp Business</a> la relation client, et <a href=\"/formations/ia-en-entreprise\">l'IA en entreprise</a> les dirigeants. Tout le catalogue se trouve sur <a href=\"/formations/\">la page des formations</a>.",
             ],
         ],
         [
             'type'        => 'prose',
-            'titre'       => 'Comment se passe une collaboration avec Richard depuis Cotonou ?',
+            'titre'       => 'Comment travaille Richard avec une entreprise de Guinée, depuis Cotonou ?',
             'paragraphes' => [
-                "Conakry est loin de Cotonou, de l'autre côté de plusieurs frontières : la collaboration se fait à distance. La Guinée vit à l'heure de Greenwich toute l'année, alors que le Bénin a une heure d'avance : quand il est 9 h à Conakry, il est 10 h à Cotonou. Les plages de réponse de Richard, de 7 h à 20 h heure de Cotonou, couvrent donc de 6 h à 19 h chez vous. Le français est la langue de tous les échanges et documents.",
-                "La Guinée n'appartient pas à la zone franc : sa monnaie est le franc guinéen. Les devis sont donc établis en euros, sur demande, ce qui évite de les exposer aux variations du change entre le GNF et le FCFA. Le mode de règlement se fixe au devis parmi ceux que Richard accepte, dont le virement. Le suivi passe par WhatsApp et par des points en visioconférence. Toute demande reçoit une réponse sous 24 heures.",
+                "Plusieurs frontières séparent Conakry de Cotonou : tout se fait à distance. Le fuseau guinéen, UTC+0 sans changement d'heure, retarde d'une heure sur le Bénin (UTC+1) : 9 h à Conakry, c'est 10 h à Cotonou. Richard répond de 7 h à 20 h, heure de Cotonou, soit de 6 h à 19 h chez vous, ce qui recouvre la journée de travail. Échanges et documents sont rédigés en français.",
+                "La Guinée n'appartient pas à la zone franc : sa monnaie est le franc guinéen. Les devis sont donc établis en euros, sur demande, ce qui évite de les exposer aux variations du change entre le GNF et le FCFA. Le mode de règlement se fixe au devis parmi ceux que Richard accepte, dont le virement. Le travail avance par messages WhatsApp et par réunions vidéo ; chaque demande obtient une réponse en moins de 24 heures.",
             ],
         ],
         [
@@ -204,7 +204,7 @@ return [
             'titre'       => 'Qu\'est-ce qui fait varier le prix d\'un projet en Guinée ?',
             'paragraphes' => [
                 "Pour la Guinée, les projets sont chiffrés sur devis, en euros, après un cadrage. Plusieurs éléments propres au pays font varier le devis. Le nombre de moyens de paiement intégrés : Orange Money seul coûte moins qu'Orange, MTN, Coris Money et un agrégateur. La conformité de facturation : un logiciel prêt pour une facture électronique future demande plus de travail qu'un simple modèle de document.",
-                "Pèsent aussi la tenue des comptes en GNF avec un export vers votre comptable, la mise en cache pour un réseau instable, le volume de données à reprendre d'anciens fichiers, et la formation. Les frais de l'opérateur ou de l'agrégateur ne font pas partie du devis : ils se règlent avec lui, et il vaut mieux les faire figurer par écrit dans votre contrat avant de bâtir un modèle économique dessus.",
+                "Pèsent aussi la tenue des comptes en GNF avec un export vers votre comptable, la mise en cache pour un réseau instable, le volume de données à reprendre d'anciens fichiers, et la formation. Les commissions prélevées par l'opérateur ou l'agrégateur sont hors devis et se traitent directement avec lui : obtenez-les par écrit avant de construire votre modèle économique.",
             ],
         ],
         [
@@ -214,8 +214,8 @@ return [
         ],
         [
             'type'   => 'points',
-            'titre'  => 'Quelles erreurs voit-on le plus souvent dans les projets numériques en Guinée ?',
-            'intro'  => 'Ces erreurs viennent des particularités guinéennes décrites plus haut ; chacune se prévient dès le cadrage.',
+            'titre'  => 'Quels pièges guettent un projet numérique en Guinée ?',
+            'intro'  => 'Chacun de ces pièges découle d\'un trait du marché guinéen vu plus haut et se désamorce dès le cadrage.',
             'items'  => [
                 ['titre' => 'Penser en FCFA pour un client guinéen', 'texte' => "Le franc guinéen n'est pas le franc CFA. Un site qui affiche des prix en FCFA, ou une facture qui ne précise pas la devise de règlement, crée une confusion avec les clients de Conakry : les prix se tiennent en GNF et les devis du prestataire en euros."],
                 ['titre' => 'Intégrer MTN MoMo avant Orange Money', 'texte' => "Avec 92 % des abonnés au mobile money en juin 2025 selon l'ARPT, Orange Money est le service à intégrer en premier. Commencer par le service minoritaire retarde l'encaissement pour l'essentiel de la clientèle."],
@@ -241,27 +241,27 @@ return [
                 ['Accompagnement', 'Richard peut accompagner à distance les entreprises en Guinée.'],
                 ['Mode de travail', 'À distance depuis Cotonou, en français, avec des points en visioconférence et par WhatsApp.'],
                 ['Devis', 'En euros, sur devis, après un premier échange sur votre besoin.'],
-                ['Pour aller plus loin', '<a href="/realisations/">Les réalisations</a>, <a href="/richard-salanon">le parcours de Richard</a> et <a href="/a-propos/">la page À propos</a>.'],
+                ['Pour aller plus loin', 'Voir aussi <a href="/a-propos/">la page À propos</a>, <a href="/richard-salanon">le parcours de Richard</a> et <a href="/realisations/">ses réalisations</a>.'],
             ],
         ],
         [
             'type'   => 'cta',
             'titre'  => 'Vous dirigez une entreprise en Guinée et avez un projet numérique ?',
-            'texte'  => 'Décrivez votre activité, vos outils actuels et ce que vous voulez encaisser par Orange Money ou MTN MoMo : vous recevez une réponse sous 24 heures et, après un premier échange, un devis en euros.',
+            'texte'  => 'Présentez votre activité, vos outils du moment et les paiements mobiles que vous souhaitez accepter : une réponse vous parvient sous 24 heures, puis un devis en euros suit un premier échange.',
             'bouton' => ['url' => '/contact', 'texte' => 'Demander un devis'],
         ],
     ],
 
     'faq' => [
-        ['q' => 'Richard intervient-il sur place à Conakry ?', 'r' => "Non, pas pour le moment : l'accompagnement est à distance, depuis Cotonou. Les points se font en visioconférence et par message, avec une heure d'écart. Cela convient à presque tous les projets de logiciel, d'automatisation et de formation."],
-        ['q' => 'Quels moyens de paiement mobile fonctionnent en Guinée ?', 'r' => "Orange Money, qui détenait 92 % des 3,2 millions d'abonnés aux services financiers mobiles fin juin 2025 selon l'ARPT, et MTN MoMo, avec 8 %. Coris Money, lancé par Coris Bank International Guinée le 16 février 2026, s'y ajoute."],
+        ['q' => 'Richard se déplace-t-il à Conakry pour un projet ?', 'r' => "Pas pour le moment : le travail se fait à distance, depuis Cotonou, avec une heure de décalage. Réunions vidéo et messages suffisent à la grande majorité des chantiers de logiciel, d'automatisation et de formation."],
+        ['q' => 'Quels portefeuilles mobiles les clients guinéens utilisent-ils ?', 'r' => "Orange Money, qui détenait 92 % des 3,2 millions d'abonnés aux services financiers mobiles fin juin 2025 selon l'ARPT, et MTN MoMo, avec 8 %. Coris Money, lancé par Coris Bank International Guinée le 16 février 2026, s'y ajoute."],
         ['q' => 'En quelle monnaie sont établis les devis pour la Guinée ?', 'r' => "En euros. La Guinée est hors zone franc : sa monnaie est le franc guinéen, émis par la Banque centrale de la République de Guinée. Le devis se prépare après un premier échange sur votre besoin."],
         ['q' => 'La Guinée a-t-elle une autorité de protection des données ?', 'r' => "La loi L/2016/037/AN prévoit son installation par voie réglementaire, mais au 6 octobre 2026, aucune installation n'est confirmée. La déclaration préalable et l'autorisation des transferts restent prévues par la loi : vérifiez l'état actuel avant un grand traitement."],
-        ['q' => 'Les données personnelles doivent-elles rester en Guinée ?', 'r' => "Les synthèses juridiques consultées (DLA Piper, Data Protection Africa) ne mentionnent aucune obligation d'hébergement local. La loi de 2016 soumet en revanche le transfert vers un pays tiers à l'autorisation de l'autorité, sous condition d'un niveau de protection équivalent. Un projet doit donc documenter où sont stockées les données."],
-        ['q' => 'La facture électronique est-elle obligatoire en Guinée ?', 'r' => "Le ministère du Budget indique que la réforme est inscrite au Code général des impôts depuis sa présentation de décembre 2021. Au 6 octobre 2026, aucune plateforme nationale en service ni aucun calendrier n'est annoncé : les règles de numérotation et de mentions restent la référence."],
+        ['q' => 'Les données personnelles doivent-elles rester en Guinée ?', 'r' => "Les synthèses juridiques consultées (DLA Piper, Data Protection Africa) ne mentionnent aucune obligation d'hébergement local. La loi de 2016 soumet en revanche le transfert vers un pays tiers à l'autorisation de l'autorité, sous condition d'un niveau de protection équivalent. Mieux vaut donc consigner par écrit où se trouvent les données."],
+        ['q' => 'Faut-il déjà émettre des factures électroniques en Guinée ?', 'r' => "Le ministère du Budget indique que la réforme est inscrite au Code général des impôts depuis sa présentation de décembre 2021. Au 6 octobre 2026, aucune plateforme nationale en service ni aucun calendrier n'est annoncé : les règles de numérotation et de mentions restent la référence."],
         ['q' => 'Quel est le taux de TVA en Guinée ?', 'r' => "Le taux normal est de 18 %. Selon un guide fiscal tiers, une franchise s'applique sous 1 milliard de GNF de chiffre d'affaires de l'année précédente, et les administrations, mines, hydrocarbures et télécoms retiennent 50 % de la TVA sur leurs paiements. Validez votre cas avec un expert-comptable."],
         ['q' => 'La Guinée applique-t-elle l\'OHADA et le SYSCOHADA ?', 'r' => "Oui. Le traité de l'OHADA a été ratifié par la Guinée le 5 mai 2000 et y est entré en vigueur le 21 novembre 2000. Les entreprises guinéennes tiennent donc leur comptabilité selon le SYSCOHADA, ce qui conditionne la localisation choisie dans Odoo ou Dolibarr."],
-        ['q' => 'Quel est le décalage horaire entre Cotonou et Conakry ?', 'r' => "Une heure : Conakry est à UTC+0 toute l'année, Cotonou à UTC+1. Les plages de réponse de Richard, de 7 h à 20 h heure de Cotonou, correspondent à 6 h à 19 h à Conakry."],
+        ['q' => 'Quel est le décalage horaire entre Cotonou et Conakry ?', 'r' => "Une heure d'écart : Conakry garde l'heure UTC+0 toute l'année et retarde sur Cotonou. Un rendez-vous fixé à 14 h à Cotonou se tient donc à 13 h à Conakry."],
         ['q' => 'Comment financer une formation au numérique en Guinée ?', 'r' => "L'ONFPP met en œuvre la politique de formation continue. Il a validé en mars 2026, avec Enabel et l'Union européenne, une Facilité de développement des compétences destinée en priorité aux entreprises de moins de 30 salariés. Contactez-le pour connaître les conditions d'accès."],
     ],
 
