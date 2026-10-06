@@ -109,7 +109,7 @@ include __DIR__ . '/partials/pv2-header.php';
   ?>
   <section class="vil-hero"><div class="wrap vil-hero-grid">
     <div class="vil-hero-txt">
-      <span class="eyebrow"><span class="pulse"></span><span class="mono"><?= $page['ville_slug'] !== '' ? sanitize($page['ville']) . ', ' . sanitize($page['pays']) : sanitize($page['ville']) ?></span></span>
+      <span class="eyebrow"><span class="pulse"></span><span class="mono"><?= drapeau((string) $page['pays']) ?><?= $page['ville_slug'] !== '' ? sanitize($page['ville']) . ', ' . sanitize($page['pays']) : sanitize($page['ville']) ?></span></span>
       <h1><?= sanitize($page['titre']) ?></h1>
       <p class="lead"><?= sanitize($page['accroche']) ?></p>
       <div class="hero-cta">
