@@ -68,13 +68,30 @@ function test_palette_polices_auto_hebergees(): void
     }
     $polices = (string) file_get_contents(racine('portfolio/partials/polices.php'));
     assert_contains('/assets/css/fonts.css', $polices);
-    assert_contains('/assets/fonts/sora-latin.woff2', $polices);
+    assert_contains('/assets/fonts/montserrat-latin.woff2', $polices);
     assert_contains('/assets/fonts/plus-jakarta-sans-latin.woff2', $polices);
-    foreach (['sora-latin.woff2', 'plus-jakarta-sans-latin.woff2'] as $f) {
+    foreach (['montserrat-latin.woff2', 'montserrat-latin-ext.woff2', 'plus-jakarta-sans-latin.woff2'] as $f) {
         assert_true(is_file(racine('assets/fonts/' . $f)), "police absente : {$f}");
     }
     $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
     assert_contains('Plus Jakarta Sans', $css);
-    assert_contains('Sora', $css);
     assert_not_contains('"Roboto"', $css);
+}
+
+function test_palette_titres_en_montserrat(): void
+{
+    // 06/10/2026, demande de Richard : Montserrat remplace Sora sur les titres.
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    assert_contains('--titres:"Montserrat",', $css);
+    $polices = (string) file_get_contents(racine('assets/css/fonts.css'));
+    assert_same(2, substr_count($polices, 'font-family: "Montserrat";'), 'latin et latin-ext');
+    assert_not_contains('Sora', $polices . (string) file_get_contents(racine('portfolio/partials/polices.php')), 'Sora retirée : un fichier de moins à charger');
+}
+
+function test_palette_titres_des_cartes_lisibles(): void
+{
+    // 06/10/2026 : les titres des cartes de hub (jusqu'à 200 caractères) gardent leur texte complet,
+    // mais en corps plus petit, graisse 600 et interligne serré, pour ne pas écraser la description.
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    assert_contains('.pv2 .carte-hub h2,.pv2 .carte-hub h3{font-family:var(--titres);font-size:1rem;font-weight:600;line-height:1.35;', $css);
 }

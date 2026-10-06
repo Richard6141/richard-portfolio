@@ -243,3 +243,18 @@ function registre_date_fr(string $iso): string
     [$a, $m, $j] = array_map('intval', explode('-', $iso));
     return $j . ($j === 1 ? 'er' : '') . ' ' . $mois[$m - 1] . ' ' . $a;
 }
+
+/**
+ * H1 d'une page de registre, échappé. Coupé au premier « : » : la tête reste en grand, la suite
+ * s'affiche en sous-titre dans le même H1 ; le « : » reste lu par les lecteurs d'écran et le
+ * texte du H1 ne change pas (06/10/2026).
+ */
+function registre_titre_html(string $titre): string
+{
+    $parties = preg_split('/\s:\s/u', $titre, 2);
+    if (count($parties) < 2) {
+        return sanitize($titre);
+    }
+    return '<span class="titre-tete">' . sanitize($parties[0]) . '<span class="visuellement-cache"> :</span></span> '
+        . '<span class="titre-suite">' . sanitize($parties[1]) . '</span>';
+}
