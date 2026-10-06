@@ -116,3 +116,26 @@ function test_gabarit_hub_formations_liste_les_metiers_par_univers(): void
     assert_contains('<h3>Droit et justice</h3>', $html);
     assert_contains('href="/formations/metier/test-metier">Formation IA de test pour les testeurs</a>', $html);
 }
+
+function test_gabarit_titre_long_en_tete_et_suite(): void
+{
+    // 06/10/2026, demande de Richard : garder les titres entiers mais mieux les afficher. Le H1 est
+    // coupé au premier « : » : la tête reste grande, la suite passe en sous-titre, dans le même H1.
+    $titre = "Formation IA, éthique : chaque salarié apprend ce qu'il peut confier : et vérifier";
+    $html  = registre_titre_html($titre);
+    assert_same('<span class="titre-tete">Formation IA, éthique<span class="visuellement-cache"> :</span></span> '
+        . '<span class="titre-suite">' . sanitize("chaque salarié apprend ce qu'il peut confier : et vérifier") . '</span>', $html);
+    assert_same($titre, html_entity_decode(strip_tags($html), ENT_QUOTES, 'UTF-8'), 'texte du H1 inchangé pour Google');
+    assert_same(sanitize("Sans deux-points ni suite"), registre_titre_html("Sans deux-points ni suite"));
+}
+
+function test_gabarit_hero_et_fil_d_ariane_affichent_les_titres_longs(): void
+{
+    // Le filtre typographique de sortie pose une espace insécable avant « : ».
+    $html = str_replace("\u{00A0}", ' ', http_local('/formations/ia-ethique-conformite')['corps']);
+    assert_contains('<h1><span class="titre-tete">Formation IA, éthique et conformité des données<span class="visuellement-cache"> :</span></span> <span class="titre-suite">', $html);
+    assert_contains('title="Formations en intelligence artificielle', $html, 'texte entier au survol du fil d\'Ariane');
+    $css = (string) file_get_contents(racine('assets/css/portfolio-v2.css'));
+    assert_contains('.pv2 .registre-hero h1 .titre-suite{display:block;', $css);
+    assert_contains('.pv2 .crumb a,.pv2 .crumb [aria-current]{display:inline-block;max-width:', $css);
+}

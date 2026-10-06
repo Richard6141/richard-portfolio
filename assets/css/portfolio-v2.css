@@ -28,7 +28,7 @@
   --radius-sm:6px;--radius:10px;--radius-lg:14px;--radius-xl:18px;--pill:50px;
   --ease:cubic-bezier(.22,1,.36,1);--fast:150ms;--base:250ms;--reveal:600ms;
   --container:87.5rem;--gutter:20px;--section-y:56px;--header-h:64px;
-  --titres:"Sora","Plus Jakarta Sans",system-ui,sans-serif;
+  --titres:"Montserrat","Plus Jakarta Sans",system-ui,sans-serif;
   --body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   /* Anciennes variables, remappées : les 13 gabarits existants adoptent la
      nouvelle identité sans changer de balisage. */
@@ -1281,6 +1281,8 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .pv2 .crumb{padding:calc(var(--header-h) + 1.5rem) 26px 0;font-family:var(--body);font-size:.88rem;letter-spacing:0;color:var(--muted)}
 /* Vague 1B : sur mobile, le fil d'Ariane tient sur une ligne (défilement horizontal) : sa hauteur ne dépend plus de la police (CLS). */@media (max-width:640px){.pv2 .crumb{white-space:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.pv2 .crumb::-webkit-scrollbar{display:none}}
 .pv2 .crumb .sep{color:var(--line-strong)}
+/* Fil d'Ariane : chaque titre long est coupé par « … » à l'écran, texte entier au survol (06/10/2026). */
+.pv2 .crumb a,.pv2 .crumb [aria-current]{display:inline-block;max-width:34ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
 
 /* Tiroir ouvert : backdrop-filter sur l'en-tête crée un repère qui enfermait
    le tiroir (position fixed) dans la hauteur de l'en-tête. */
@@ -1503,6 +1505,10 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .pv2 .registre-hero{padding:1.5rem 0 2.5rem}
 .pv2 .registre-hero__grille{display:grid;gap:2rem;align-items:start}
 .pv2 .registre-hero h1{font-family:var(--titres);font-weight:700;font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.12;letter-spacing:-.015em;margin:1rem 0 0;max-width:24ch;color:var(--ink)}
+/* Titres longs (06/10/2026) : tête en grand, suite après le « : » en sous-titre (registre_titre_html). */
+.pv2 .registre-hero h1 .titre-tete{display:block}
+.pv2 .registre-hero h1 .titre-suite{display:block;margin-top:.6rem;max-width:46ch;font-size:clamp(1.05rem,.9rem + .7vw,1.4rem);font-weight:600;line-height:1.4;letter-spacing:0;color:var(--ink-soft)}
+.pv2 .registre-hero h1 .titre-suite::first-letter{text-transform:uppercase}
 .pv2 .registre-hero__bref{margin:1.25rem 0 0;max-width:62ch;padding:1rem 1.2rem;border-left:4px solid var(--link);background:#fff;border-radius:0 var(--radius) var(--radius) 0;font-size:1.08rem;color:var(--ink-soft)}
 .pv2 .registre-hero__mention{margin:.9rem 0 0;font-size:.92rem;font-weight:600;color:var(--brand)}
 .pv2 .registre-hero__maj{margin:.9rem 0 0;font-size:.88rem;color:var(--muted)}
@@ -1533,7 +1539,7 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .pv2 .liens-lies a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
 .pv2 .liste-hub{list-style:none;margin:0 0 3rem;padding:0}
 .pv2 .carte-hub{display:flex;flex-direction:column;gap:.6rem;height:100%;padding:1.4rem;color:var(--ink)}
-.pv2 .carte-hub h2,.pv2 .carte-hub h3{font-family:var(--titres);font-size:1.15rem;margin:0;color:var(--ink)}
+.pv2 .carte-hub h2,.pv2 .carte-hub h3{font-family:var(--titres);font-size:1rem;font-weight:600;line-height:1.35;letter-spacing:0;text-wrap:pretty;margin:0;color:var(--ink)}
 .pv2 .liste-hub__famille{font-family:var(--titres);font-size:1.5rem;margin:0 0 1.25rem}
 /* Vague 1C : pages métier par univers sur le hub des formations. */.pv2 .liste-hub__metiers h3{margin:1.4rem 0 .5rem;font-size:1.05rem}.pv2 .liste-hub__metiers .liste-liens{list-style:none;margin:0;padding:0;columns:2 16rem;column-gap:2rem}.pv2 .liste-hub__metiers .liste-liens li{break-inside:avoid;margin:0 0 .45rem}.pv2 .liste-hub__metiers .liste-liens a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
 .pv2 .liste-hub__famille ~ .liste-hub{margin-bottom:2.5rem}
