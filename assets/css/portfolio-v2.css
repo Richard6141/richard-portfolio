@@ -1067,7 +1067,9 @@ html{scroll-padding-top:5.5rem}
 .pv2 .eyebrow .mono{color:inherit;font-size:inherit;letter-spacing:inherit}
 .pv2 .eyebrow--sombre{background:transparent;box-shadow:none;padding:0;color:var(--accent)}
 .pv2 .tuile-icone{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:var(--radius);background:var(--surface);color:var(--link);flex-shrink:0;transition:background var(--base) var(--ease),color var(--base) var(--ease)}
-.pv2 .pastille-iso{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:var(--radius);background:var(--surface);color:var(--link);font-weight:700;font-size:.78rem;letter-spacing:.04em;flex-shrink:0}
+/* Drapeaux (06/10/2026) : SVG décoratif devant le nom du pays, liseré pour les fonds blancs. */
+.pv2 .drapeau{display:inline-block;flex-shrink:0;margin-right:.45em;vertical-align:-.12em;border-radius:2px;box-shadow:0 0 0 1px rgba(20,22,31,.14);object-fit:cover}
+.pv2 .mega__pays .drapeau{margin-right:0;border-radius:3px}
 
 /* ---------- Cartes à halo (survol signature) ---------- */
 .pv2 .carte-halo{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);transition:transform var(--base) var(--ease),box-shadow var(--base) var(--ease),border-color var(--base) var(--ease)}

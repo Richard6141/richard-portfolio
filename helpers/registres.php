@@ -71,6 +71,23 @@ function pays_liste(): array
     return $liste ??= require __DIR__ . '/../portfolio/data/pays-liste.php';
 }
 
+/**
+ * Drapeau d'un pays (slug ou nom affiché), décoratif : le nom l'accompagne toujours, d'où alt="".
+ * SVG de flag-icons (MIT) dans assets/drapeaux ; chaîne vide pour un pays inconnu (06/10/2026).
+ */
+function drapeau(string $pays, int $largeur = 20): string
+{
+    static $parNom = null;
+    $liste = pays_liste();
+    $parNom ??= array_column(array_map(static fn(string $s, array $p): array => [$p['nom'], $s], array_keys($liste), $liste), 1, 0);
+    $slug = isset($liste[$pays]) ? $pays : ($parNom[$pays] ?? null);
+    if ($slug === null || empty($liste[$slug]['iso'])) {
+        return '';
+    }
+    return '<img class="drapeau" src="/assets/drapeaux/' . $liste[$slug]['iso'] . '.svg" alt="" width="' . $largeur
+        . '" height="' . (int) round($largeur * 3 / 4) . '" loading="lazy" decoding="async">';
+}
+
 function registre_url(string $type, string $slug): string
 {
     return sprintf(REGISTRES_TYPES[$type][2], $slug);

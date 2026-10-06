@@ -162,7 +162,7 @@ $etapes = [
       <h2>Sur place à Cotonou, à distance partout ailleurs</h2>
       <p>Afrique francophone, Europe et Canada : les projets se mènent à distance avec des points réguliers, et sur place quand le cadrage ou la formation le demandent. Devis en franc CFA, en euro, en franc suisse ou en dollar canadien.</p>
       <ul class="liste-pays">
-        <?php foreach (fait('zones') as $pays): ?><li><?= sanitize($pays) ?></li><?php endforeach; ?>
+        <?php foreach (fait('zones') as $pays): ?><li><?= drapeau($pays) ?><?= sanitize($pays) ?></li><?php endforeach; ?>
       </ul>
       <a class="lien-fleche" href="/zones/">Toutes les zones<?= icone('arrow-right', 16) ?></a>
     </div>

@@ -108,7 +108,7 @@ include __DIR__ . '/partials/pv2-header.php';
           <?php foreach ($liste as $slug => $p):
             $fiche = registre_lire('pays', $slug);
             $lien  = ($fiche !== null && registre_publiee($fiche)) ? $fiche['url'] : null; ?>
-          <li><?php if ($lien): ?><a href="<?= sanitize($lien) ?>"><?= sanitize($p['nom']) ?></a><?php else: ?><?= sanitize($p['nom']) ?><?php endif; ?></li>
+          <li><?= drapeau($slug) ?><?php if ($lien): ?><a href="<?= sanitize($lien) ?>"><?= sanitize($p['nom']) ?></a><?php else: ?><?= sanitize($p['nom']) ?><?php endif; ?></li>
           <?php endforeach; ?>
         </ul>
         <?php endforeach; ?>
@@ -123,7 +123,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <section class="section section--surface" aria-labelledby="villes-<?= sanitize(generateSlug($nomPays)) ?>">
     <div class="conteneur">
       <div class="tete-section">
-        <div><span class="eyebrow"><?= sanitize($nomPays) ?></span><h2 id="villes-<?= sanitize(generateSlug($nomPays)) ?>"><?= count($liste) ?> ville<?= count($liste) > 1 ? 's' : '' ?> avec une page dédiée</h2></div>
+        <div><span class="eyebrow"><?= drapeau($nomPays) ?><?= sanitize($nomPays) ?></span><h2 id="villes-<?= sanitize(generateSlug($nomPays)) ?>"><?= count($liste) ?> ville<?= count($liste) > 1 ? 's' : '' ?> avec une page dédiée</h2></div>
       </div>
       <div class="grille-villes">
         <?php foreach ($liste as $v): ?>
