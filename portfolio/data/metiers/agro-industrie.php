@@ -194,7 +194,7 @@ return [
         [
             'type'    => 'tableau',
             'titre'   => "Comment le parcours s'adapte-t-il à chaque poste de la filière ?",
-            'legende' => "Les demi-journées peuvent se suivre séparément ; ces combinaisons sont les plus fréquentes et se fixent au premier échange.",
+            'legende' => "Les demi-journées peuvent se suivre séparément ; les combinaisons proposées ici se fixent au premier échange.",
             'entetes' => ['Poste', 'Demi-journées conseillées', 'Ce que la personne repart en sachant faire'],
             'lignes'  => [
                 ['Délégué de coopérative, pisteur ou acheteur de terrain', 'Jour 1 après-midi, jour 2 après-midi', "Enregistrer un producteur et une parcelle, saisir une pesée et un résultat qualité hors connexion, envoyer un reçu sans erreur de montant"],
