@@ -114,8 +114,15 @@ function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $au
         case 'formation':
         case 'metier':
             $enfant = $p['type'] . '-pays';
-            $ajouter('Cette formation par pays', array_filter(registre_publiees($enfant, $racine, $aujourdhui),
+            $ajouter($p['type'] === 'metier' ? 'Ce métier par pays' : 'Cette formation par pays', array_filter(registre_publiees($enfant, $racine, $aujourdhui),
                 static fn(array $q): bool => dirname($q['slug']) === $p['slug']));
+            // Vague 1C : une fiche formation renvoie vers les pages métier publiées qui la citent.
+            if ($p['type'] === 'formation') {
+                // Libellé court : les H1 des pages métier font deux lignes et se répètent dans la liste.
+                $ajouter('Formations par métier', array_map(static fn(array $q): array => ['titre' => registre_libelle($q)] + $q,
+                    array_filter(registre_publiees('metier', $racine, $aujourdhui),
+                        static fn(array $q): bool => in_array($p['slug'], (array) ($q['liens']['formations'] ?? []), true))));
+            }
             break;
         case 'histoire':
         case 'comparatif':

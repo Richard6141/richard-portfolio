@@ -58,6 +58,9 @@ const REGISTRES_DOMAINES_NOMS = [
     'ia-systemes-existants'     => 'IA dans vos systèmes existants',
 ];
 
+/** Univers des pages métier, dans l'ordre d'affichage (spec 6.3 bis, vague 1C). */
+const REGISTRES_UNIVERS = ['Droit et justice', 'Chiffre et finance', 'Direction et gestion', 'Commerce et communication', 'Santé et social', 'Secteur public et éducation', 'Technique et terrain'];
+
 /** Familles de services (registre de navigation). */
 const REGISTRES_FAMILLES = ['Sites et boutiques', 'Applications et IA', 'Visibilité et conseil', 'ERP et gestion'];
 
@@ -148,6 +151,9 @@ function registre_valider(string $type, string $slug, array $p): array
     if ($type === 'formation' && isset($p['domaine']) && !in_array($p['domaine'], REGISTRES_DOMAINES, true)) {
         $e[] = 'domaine inconnu : ' . $p['domaine'];
     }
+    if ($type === 'metier' && isset($p['univers']) && !in_array($p['univers'], REGISTRES_UNIVERS, true)) {
+        $e[] = 'univers inconnu : ' . $p['univers'];
+    }
     if ($type === 'histoire' && isset($p['relation']) && !in_array($p['relation'], ['direct', 'sous-traitance', 'produit', 'externe'], true)) {
         $e[] = 'relation : direct, sous-traitance, produit ou externe';
     }
@@ -182,6 +188,10 @@ function registre_lire(string $type, string $slug, string $racine = REGISTRES_RA
         error_log("registre {$type}/{$slug} invalide : " . implode(' ; ', $erreurs));
         return null;
     }
+    // Page rédigée avant sa date de publication : « mis à jour » et dateModified jamais antérieurs à la sortie.
+    if (isset($p['maj'], $p['publie']) && is_string($p['publie']) && $p['maj'] < $p['publie']) {
+        $p['maj'] = $p['publie'];
+    }
     return ['type' => $type, 'slug' => $slug, 'url' => registre_url($type, $slug)] + $p + ['robots' => 'index'];
 }
 
@@ -199,6 +209,12 @@ function registre_tous(string $type, string $racine = REGISTRES_RACINE): array
         }
     }
     return $cache[$cle];
+}
+
+/** Libellé court d'une page dans une liste de liens : son title sans la marque, à défaut son H1. */
+function registre_libelle(array $p): string
+{
+    return trim((string) preg_replace('/\s*\|\s*Richard SALANON$/u', '', (string) ($p['title'] ?? $p['titre'])));
 }
 
 function registre_publiee(array $p, ?string $aujourdhui = null): bool

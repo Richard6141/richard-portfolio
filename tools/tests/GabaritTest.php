@@ -107,3 +107,12 @@ function test_gabarit_hub_formations_groupe_par_domaine(): void
     sort($tri);
     assert_same($tri, array_values($pos), 'domaines dans l\'ordre du registre');
 }
+
+function test_gabarit_hub_formations_liste_les_metiers_par_univers(): void
+{
+    // Vague 1C : le hub des formations liste les pages métier publiées, par univers.
+    $html = gabarit_rendre('hub', 'formations-test');
+    assert_contains('id="metiers"', $html);
+    assert_contains('<h3>Droit et justice</h3>', $html);
+    assert_contains('href="/formations/metier/test-metier">Formation IA de test pour les testeurs</a>', $html);
+}

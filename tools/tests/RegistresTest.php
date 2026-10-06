@@ -59,6 +59,13 @@ function test_registres_publication_selon_la_date(): void
     assert_same(['site-test'], array_keys(registre_publiees('service', fixtures(), '2026-10-03')));
 }
 
+function test_registres_maj_jamais_avant_la_publication(): void
+{
+    // Une page rédigée avant sa date de publication ne s'affiche pas « mise à jour » avant d'exister.
+    assert_same('2099-01-01', registre_lire('service', 'site-futur', fixtures())['maj']);
+    assert_same('2026-01-02', registre_lire('service', 'site-test', fixtures())['maj']);
+}
+
 function test_registres_validation_des_champs_de_type(): void
 {
     $base = require fixtures() . '/services/site-test.php';
@@ -104,4 +111,12 @@ function test_registres_famille_de_service_connue(): void
     $base = require fixtures() . '/services/site-test.php';
     assert_same([], registre_valider('service', 'site-test', $base));
     assert_contains('famille inconnue', implode(' ', registre_valider('service', 'x', ['famille' => 'Divers'] + $base)));
+}
+
+function test_registres_univers_de_metier_connu(): void
+{
+    // Vague 1C : univers des pages métier (spec 6.3 bis).
+    $base = require fixtures() . '/metiers/test-metier.php';
+    assert_same([], registre_valider('metier', 'test-metier', $base));
+    assert_contains('univers inconnu', implode(' ', registre_valider('metier', 'x', ['univers' => 'Divers'] + $base)));
 }
