@@ -20,9 +20,9 @@ return [
     'maj'     => '2026-11-12',
 
     'fiche' => [
-        'capitale' => ['v' => 'Kigali', 'source' => 'https://en.wikipedia.org/wiki/Kigali', 'date' => '2026-10-06'],
-        'fuseau' => ['v' => 'Heure d\'Afrique centrale, UTC+2 toute l\'année, sans heure d\'été ; Cotonou est à UTC+1, soit une heure de décalage', 'source' => 'https://en.wikipedia.org/wiki/Time_in_Rwanda', 'date' => '2026-10-06'],
-        'indicatif' => ['v' => '+250', 'source' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2011-PDF-E.pdf', 'date' => '2026-10-06'],
+        'capitale' => ['v' => 'Kigali', 'source' => 'https://www.constituteproject.org/constitution/Rwanda_2015', 'date' => '2026-10-06'],
+        'fuseau' => ['v' => 'Heure d\'Afrique centrale, UTC+2 toute l\'année, sans heure d\'été ; Cotonou est à UTC+1, soit une heure de décalage', 'source' => 'https://data.iana.org/time-zones/tzdb/backward', 'date' => '2026-10-06'],
+        'indicatif' => ['v' => '+250', 'source' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
         'langues' => ['v' => ['Kinyarwanda (langue nationale)', 'anglais', 'français', 'kiswahili (langues officielles)'], 'source' => 'https://en.wikipedia.org/wiki/Language_policy_in_Rwanda', 'date' => '2026-10-06'],
         'population' => ['v' => '13 246 394 habitants au recensement d\'août 2022, dont 1 745 555 dans la ville de Kigali', 'source' => 'https://statistics.gov.rw/node/87', 'date' => '2026-10-06'],
         'internet' => ['v' => '74,5 abonnements internet pour 100 habitants en mars 2026, dont 10 661 122 abonnements internet mobiles actifs', 'source' => 'https://www.rura.rw/fileadmin/user_upload/RURA/Documents/Sectors/ICT/Statistics/Quarterly_publication/ICT_Sector_Statistics_Report_as_of_the_First_Quarter_2026.pdf', 'date' => '2026-10-06'],
@@ -257,7 +257,7 @@ return [
     ],
 
     'faq' => [
-        ['q' => 'Richard peut-il intervenir au Rwanda sans se déplacer ?', 'r' => 'Oui. Le cadrage, le développement, le paramétrage d\'un ERP et les formations se font en visioconférence depuis Cotonou. Le décalage horaire n\'est que d\'une heure : Kigali est à UTC+2 et Cotonou à UTC+1. Les livraisons se valident sur le téléphone de l\'équipe, qui est de toute façon l\'écran principal de ses clients.'],
+        ['q' => 'Richard peut-il intervenir au Rwanda sans se déplacer ?', 'r' => 'Oui. Le cadrage, le développement, le paramétrage d\'un ERP et les formations se font en visioconférence depuis Cotonou. Le décalage horaire n\'est que d\'une heure : Kigali est à UTC+2 et Cotonou à UTC+1. Les livraisons peuvent se valider sur le téléphone de l\'équipe, qui est de toute façon l\'écran principal de ses clients.'],
         ['q' => 'En quelle devise Richard établit-il ses devis pour le Rwanda ?', 'r' => 'En euros, sur devis. Richard accepte le virement bancaire, la carte et PayPal. Les frais de l\'agrégateur de paiement et les éventuelles taxes rwandaises peuvent être indiqués à part, de sorte que l\'entreprise sache ce qu\'elle paie à Richard et ce qu\'elle verse à des tiers.'],
         ['q' => 'Quel mobile money brancher en premier : MTN MoMo ou Airtel Money ?', 'r' => 'MTN MoMo en premier, mais pas seul. D\'après la RURA, MTN détenait 85,7 % des cartes SIM liées à un compte actif en mars 2026 et Airtel 14,3 %. Airtel s\'ajoute par un agrégateur ou par un accès direct, selon l\'accord de l\'entreprise. Les deux marques sont testées avant l\'ouverture au public.'],
         ['q' => 'Que change eKash pour une facture payée par virement ?', 'r' => 'Depuis le 14 juillet 2026, les transferts entre comptes bancaires et portefeuilles mobiles passent par eKash, le système national de paiement instantané. Le coût est de 20 RWF au plus par transfert pour le client, jusqu\'à 10 millions de RWF, chaque établissement pouvant fixer des plafonds plus bas. Une facture peut donc se régler par virement vers un portefeuille d\'entreprise ; il suffit d\'une référence unique par facture pour que le logiciel rapproche le paiement.'],
@@ -283,7 +283,9 @@ return [
         ['titre' => 'RRA, arrêté ministériel n° 004/26/10/TC du 29 avril 2026 sur la TVA des biens et services fournis en ligne', 'url' => 'https://www.rra.gov.rw/fileadmin/Folder_for_2025/Ministerial_Order_VAT_on_Online_Services_April_2026.pdf', 'date' => '2026-10-06'],
         ['titre' => 'RRA, arrêté ministériel n° 006/26/10/TC du 24 septembre 2026 sur le système de facturation électronique', 'url' => 'https://www.rra.gov.rw/fileadmin/user_upload/Ministerial_order_EBM.pdf', 'date' => '2026-10-06'],
         ['titre' => 'Banque nationale du Rwanda, communiqué sur la performance d\'eKash (5 août 2026)', 'url' => 'https://www.bnr.rw/documents/Press_Release-_Update_on_the_Performance_of_eKash_Aug_2026.pdf', 'date' => '2026-10-06'],
-        ['titre' => 'UIT, liste des indicatifs téléphoniques nationaux (E.164)', 'url' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2011-PDF-E.pdf', 'date' => '2026-10-06'],
+        ['titre' => 'UIT, liste des indicatifs téléphoniques nationaux (E.164)', 'url' => 'https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-2016-PDF-E.pdf', 'date' => '2026-10-06'],
+        ['titre' => 'IANA, base des fuseaux horaires, liens de zones (Africa/Kigali)', 'url' => 'https://data.iana.org/time-zones/tzdb/backward', 'date' => '2026-10-06'],
+        ['titre' => 'Constitution du Rwanda de 2003, révisée en 2015, article 7 (capitale)', 'url' => 'https://www.constituteproject.org/constitution/Rwanda_2015', 'date' => '2026-10-06'],
         ['titre' => 'ICT Policy Africa, loi n° 18/2010 sur les messages, signatures et transactions électroniques', 'url' => 'https://ictpolicyafrica.org/en/entity/tdbqoq8ft4', 'date' => '2026-10-06'],
         ['titre' => 'OHADA, histoire et liste des États membres', 'url' => 'https://www.ohada.org/en/history-of-ohada/', 'date' => '2026-10-06'],
         ['titre' => 'Rwanda TVET Board, appel à propositions 2024 du Skills Development Fund', 'url' => 'https://www.rtb.gov.rw/fileadmin/user_upload/RTB/Announcements/ANNOUNCEMENT-_SDF_2024_.pdf', 'date' => '2026-10-06'],
