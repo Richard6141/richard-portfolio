@@ -24,6 +24,8 @@ PLAN TYPE (chaque H2 est une vraie question, écrite pour ce pays) :
 
 VOIX : la page parle de Richard à la troisième personne (« Richard », « il »), jamais « je » hors citation. Aucune trace de ta recherche dans le texte (« je n'ai pas trouvé », « je n'ai pas pu lire », « aucune source consultée ») : un fait non établi se retire, ou se dit comme une limite utile au lecteur (« aucun calendrier n'est publié : à confirmer auprès de l'administration fiscale »).
 
+N'OUVRE AUCUNE AUTRE PAGE de portfolio/data/pays/ : ni leur plan, ni leurs titres, ni leurs phrases. Avant de rendre, lance `php .superpowers/sdd/2026-10-06-vague1d-fiches-pays/doublons.php SLUG 15` et réécris avec des faits de ton pays tout passage de 15 mots ou plus repris d'une autre page, sauf ceux que le script dit communs par construction (phrase d'entité, blocs « Services liés » et « Pour aller plus loin », bande d'appel, tableau des prix de départ).
+
 UNICITÉ : les 33 autres pages pays sont écrites en parallèle et comparées à la tienne (40 % de ressemblance au plus, noms de lieux neutralisés). N'écris aucune phrase passe-partout qu'on pourrait poser dans un autre pays : chaque paragraphe s'appuie sur un fait, une loi, un opérateur, un secteur ou un usage de CE pays.
 
 LIENS AUTORISÉS dans le texte : /contact, /richard-salanon, /a-propos/, /realisations/, /zones/, /services/{27 piliers}, /formations/, /formations/{fiches du catalogue}, /formations/domaine/{8 domaines}, /formations/metier/{34 métiers}, /comparatifs/ et ses 4 pages, /histoires/ et ses 7 histoires, les pages locales de ta ligne. JAMAIS /zones/{un pays} : le maillage s'en charge.
