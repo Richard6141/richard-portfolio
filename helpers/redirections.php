@@ -10,12 +10,15 @@ function redirections_table(): array
     return $t ??= require __DIR__ . '/../portfolio/data/redirections.php';
 }
 
-/** Cible d'une ancienne URL si elle est publiée, sinon null. */
-function redirection_cible(string $chemin, ?array $table = null, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): ?string
+/** Cible d'une ancienne URL si elle est publiée (page de registre ou article en base), sinon null. */
+function redirection_cible(string $chemin, ?array $table = null, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null, ?callable $articleEnLigne = null): ?string
 {
     $cible = ($table ?? redirections_table())[$chemin] ?? null;
     if ($cible === null) {
         return null;
+    }
+    if (preg_match('#^/blog/([a-z0-9-]+)$#', $cible, $m)) {
+        return ($articleEnLigne ?? 'blog_article_en_ligne')($m[1]) ? $cible : null;
     }
     return route_resoudre(ltrim($cible, '/'), $racine, $aujourdhui) !== null ? $cible : null;
 }
@@ -42,6 +45,32 @@ function redirection_appliquer(string $chemin): void
 function blog_sans_rediriges(array $lignes): array
 {
     return array_values(array_filter($lignes, static fn(array $l): bool => redirection_cible('/blog/' . ($l['slug'] ?? '')) === null));
+}
+
+/**
+ * Slugs des articles dont l'URL /blog/... redirige aujourd'hui (cible publiée), pour les exclure dès la requête SQL.
+ * Même règle que blog_sans_rediriges() ; sans base, redirection_cible() ne voit aucun article en ligne : liste vide.
+ */
+function blog_slugs_rediriges(?array $table = null, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null, ?callable $articleEnLigne = null): array
+{
+    $slugs = [];
+    foreach (array_keys($table ?? redirections_table()) as $chemin) {
+        if (preg_match('#^/blog/([a-z0-9-]+)$#', (string) $chemin, $m)
+            && redirection_cible((string) $chemin, $table, $racine, $aujourdhui, $articleEnLigne) !== null) {
+            $slugs[] = $m[1];
+        }
+    }
+    return $slugs;
+}
+
+/** Fragment SQL « AND slug NOT IN (?, …) » et ses paramètres liés ; liste vide : pas de fragment. */
+function blog_exclusion_sql(array $slugs, string $colonne = 'slug'): array
+{
+    $slugs = array_values($slugs);
+    if ($slugs === []) {
+        return ['', []];
+    }
+    return [' AND ' . $colonne . ' NOT IN (' . implode(', ', array_fill(0, count($slugs), '?')) . ')', $slugs];
 }
 
 /** Registre de navigation avec chaque URL ramenée à son URL finale. */

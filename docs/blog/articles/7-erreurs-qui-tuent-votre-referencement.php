@@ -1,0 +1,115 @@
+<?php
+// Source de la reprise de /blog/7-erreurs-qui-tuent-votre-referencement (vague 1F). Après la migration, la base fait foi :
+// ce fichier ne sert qu'à générer migrations/AAAA-MM-JJ-blog-7-erreurs-qui-tuent-votre-referencement.sql.
+return [
+    'slug'       => '7-erreurs-qui-tuent-votre-referencement',
+    'instantane' => '2026-10-07 15:00:51',
+    'titre'      => '7 erreurs de référencement et comment les corriger',
+    'meta'       => 'Site invisible sur Google ? Les 7 erreurs SEO les plus fréquentes, un diagnostic en une heure avec Search Console et l\'ordre dans lequel les corriger.',
+    'resume'     => 'Un site peu visible sur Google souffre presque toujours d\'une de ces sept erreurs : indexation bloquée, pages en double, titres et descriptions négligés, lenteur, contenu mince, liens cassés ou absence de suivi. Une heure dans Google Search Console suffit à repérer la plupart d\'entre elles. Corrigez d\'abord ce qui empêche Google de voir vos pages, ensuite ce qui l\'empêche de les comprendre, enfin ce qui les rend peu utiles.',
+    'categorie'  => 'SEO',
+    'tags'       => ['erreurs SEO', 'référencement Google', 'Search Console', 'indexation', 'SEO technique'],
+    'contenu'    => <<<'HTML'
+<h2>Pourquoi un site bien fait reste-t-il invisible sur Google ?</h2>
+<p>Un beau site n'est pas un site visible. Google doit pouvoir explorer vos pages, les indexer, puis juger qu'elles répondent mieux que les autres à une recherche. Une erreur à l'une de ces trois étapes suffit à vous rendre invisible, quelle que soit la qualité du reste.</p>
+<p>Les sept erreurs ci-dessous sont classées dans l'ordre où elles coupent la chaîne : d'abord celles qui empêchent l'indexation, ensuite celles qui brouillent le message, enfin celles qui dégradent l'expérience. Chacune se vérifie en quelques minutes. Pour l'effet des résumés IA de Google sur vos clics, voir <a href="/blog/google-ai-overviews-impact-trafic">l'impact des AI Overviews sur le trafic</a>.</p>
+
+<h2>Erreur 1 : l'indexation est-elle bloquée sans que vous le sachiez ?</h2>
+<p>C'est l'erreur la plus brutale, et souvent la plus bête : une balise <code>noindex</code> oubliée après la mise en ligne, ou un fichier robots.txt qui interdit l'exploration de tout le site. Elle arrive surtout après une refonte, quand le site de test, volontairement fermé aux moteurs, est copié tel quel en production.</p>
+<p>Deux notions à ne pas confondre, selon la documentation Google Search Central consultée le 7 octobre 2026 :</p>
+<ul>
+<li>le fichier robots.txt contrôle l'accès des robots aux pages, pas leur présence dans l'index ;</li>
+<li>la balise <code>noindex</code> demande de ne pas indexer une page, mais elle ne fonctionne que si la page n'est pas bloquée par robots.txt, car sinon le robot ne la lit jamais.</li>
+</ul>
+<p>Correction : retirez la directive <code>noindex</code> des pages que vous voulez voir apparaître, et ne bloquez dans robots.txt que ce qui n'a aucun intérêt pour un visiteur (espace d'administration, résultats de recherche interne).</p>
+
+<h2>Erreur 2 : vos pages existent-elles en plusieurs versions ?</h2>
+<p>La même page accessible à plusieurs adresses (avec et sans www, en http et en https, avec un paramètre de suivi, avec une barre oblique finale ou non) crée du contenu en double. Google choisit alors une version à sa façon, et ce n'est pas toujours celle que vous voulez.</p>
+<p>D'après la documentation Google Search Central consultée le 7 octobre 2026, une redirection et la balise <code>rel="canonical"</code> sont des signaux forts pour désigner l'adresse préférée, et l'inscription dans le sitemap un signal faible. Cette même documentation précise que ces méthodes ne sont pas obligatoires, mais qu'elles regroupent sur une seule adresse les signaux, comme les liens reçus.</p>
+<p>Correction : redirigez les variantes vers une seule adresse, posez une balise canonique sur chaque page, et ne servez dans le sitemap que les adresses préférées.</p>
+
+<h2>Erreur 3 : vos titres et vos descriptions sont-ils négligés ?</h2>
+<p>Le titre est ce que l'internaute lit en premier dans les résultats. Un titre vague comme « Accueil », identique sur toutes les pages, ou bourré de mots-clés répétés, fait perdre des clics même à une page bien classée.</p>
+<ul>
+<li><strong>Titre :</strong> descriptif, concis, unique sur chaque page, avec le nom de votre marque ajouté sobrement. Google déconseille aussi la répétition de mots-clés (documentation consultée le 7 octobre 2026).</li>
+<li><strong>Description :</strong> Google l'utilise parfois comme extrait quand elle décrit la page mieux que le contenu lui-même, et rappelle que des descriptions identiques d'une page à l'autre n'aident pas. Rédigez-en une par page, en une ou deux phrases qui disent ce que le lecteur y trouvera.</li>
+</ul>
+<p>Précision utile : Google peut réécrire un titre qu'il juge inadapté. Un titre soigné réduit ce risque. Pour les recherches de proximité, le classement suit d'autres critères : voir <a href="/blog/referencement-local-dominer-pack-local-google">le référencement local et le pack local Google</a>.</p>
+
+<h2>Erreur 4 : votre site est-il lent ?</h2>
+<p>Un site lent fait fuir les visiteurs, surtout sur mobile, et dégrade les indicateurs d'expérience que Google suit. Selon web.dev, consulté le 7 octobre 2026, les seuils jugés bons, mesurés pour 75 % des visites, sont un affichage du plus grand élément en 2,5 secondes ou moins (LCP), une réactivité de 200 millisecondes ou moins (INP) et un décalage visuel de 0,1 ou moins (CLS).</p>
+<p>Diagnostic en deux phrases : testez votre page d'accueil et une page de contenu avec PageSpeed Insights, puis regardez d'abord le poids des images et le nombre de scripts tiers. Le détail des corrections se trouve dans l'article <a href="/blog/pourquoi-votre-site-est-lent">pourquoi votre site est lent et comment le corriger</a>.</p>
+
+<h2>Erreur 5 : votre contenu est-il trop mince ou copié ?</h2>
+<p>Une page de trois lignes, un texte recopié du fabricant ou une description identique d'un produit à l'autre n'apporte rien que Google n'ait déjà ailleurs. La documentation Google Search Central sur les contenus utiles, consultée le 7 octobre 2026, invite à se demander si la page offre une description substantielle et complète du sujet, avec une information ou une analyse originale. Elle cite parmi les signaux d'alerte le contenu qui se contente de résumer ce que d'autres ont dit.</p>
+<p>Correction :</p>
+<ol>
+<li>listez les questions que vos clients posent réellement (par téléphone, sur WhatsApp, en rendez-vous) ;</li>
+<li>donnez à chaque question une page ou une section qui y répond complètement, avec vos prix, vos délais, vos exemples ;</li>
+<li>fusionnez ou supprimez les pages qui répètent la même chose.</li>
+</ol>
+<p>Les mots-clés viennent ensuite : ils se déduisent des questions des clients, pas l'inverse. Pour une page qui doit déclencher une demande, voir <a href="/blog/landing-page-haute-conversion-7-elements">les 7 éléments d'une landing page qui convertit</a>.</p>
+
+<h2>Erreur 6 : des liens cassés et des pages introuvables ?</h2>
+<p>Un lien interne vers une page supprimée mène à une erreur 404. Selon la documentation Google Search Central consultée le 7 octobre 2026, une page en 404 est retirée de l'index si elle y figurait, et le robot l'explore de moins en moins. Le vrai danger est donc la page supprimée qui avait des visiteurs et des liens.</p>
+<p>Il existe aussi la fausse erreur, la « soft 404 » : une page qui affiche « introuvable » mais répond avec un code de succès, ce qui trouble Google.</p>
+<ul>
+<li>Page déplacée : redirigez-la vers son équivalent le plus proche.</li>
+<li>Page supprimée sans remplaçant : laissez un vrai code 404 et retirez les liens qui y mènent.</li>
+<li>Après une refonte, comparez l'ancienne liste d'adresses à la nouvelle : c'est ce que couvre un service de <a href="/services/refonte-migration-de-site">refonte et migration de site</a>.</li>
+</ul>
+
+<h2>Erreur 7 : avancez-vous sans aucun suivi ?</h2>
+<p>Sans mesure, vous ignorez si une page est indexée, pour quelles requêtes elle apparaît et ce qui a cassé après une modification. Google Search Console est gratuit et donne ces réponses directement par Google. Ajoutez votre site, vérifiez sa propriété, envoyez votre sitemap et consultez-le au moins une fois par mois.</p>
+
+<h2>Comment faire un diagnostic en une heure avec Search Console ?</h2>
+<p>Suivez cet ordre, chaque étape prend dix minutes environ.</p>
+<ol>
+<li><strong>Rapport « Indexation des pages » :</strong> comparez le nombre de pages indexées au nombre de pages que vous voulez voir dans Google. Une grande différence est votre premier indice.</li>
+<li><strong>Lisez les motifs d'exclusion.</strong> Selon l'aide Google Search Console consultée le 7 octobre 2026, « Exclue par la balise noindex » et « Bloquée par le fichier robots.txt » signalent l'erreur 1 ; « Doublon sans URL canonique sélectionnée par l'utilisateur » l'erreur 2 ; « Introuvable (404) » et « Soft 404 » l'erreur 6.</li>
+<li><strong>Repérez « Explorée, actuellement non indexée ».</strong> Google a vu la page et ne l'a pas retenue : regardez de près son contenu (erreur 5).</li>
+<li><strong>Rapport « Performances » :</strong> triez les pages par impressions et repérez celles qui ont beaucoup d'affichages et peu de clics, souvent un titre à retravailler (erreur 3).</li>
+<li><strong>Rapport « Expérience » :</strong> vérifiez les signaux Web essentiels (erreur 4).</li>
+<li>Notez le tout dans une liste avec le nombre de pages touchées.</li>
+</ol>
+
+<h2>Dans quel ordre corriger ?</h2>
+<ol>
+<li>Indexation bloquée : sans elle, le reste ne sert à rien.</li>
+<li>Pages en double et liens cassés : ce sont des corrections techniques rapides qui regroupent vos signaux.</li>
+<li>Titres et descriptions sur vos dix pages les plus vues : c'est le gain de clics le plus rapide.</li>
+<li>Contenu mince : page par page, en commençant par celles qui visent vos services principaux.</li>
+<li>Lenteur : selon la cause, quelques heures ou une refonte.</li>
+<li>Suivi : à mettre en place dès le premier jour, puis un contrôle mensuel.</li>
+</ol>
+<p>Après chaque lot, attendez que Google réexplore avant de juger : les effets se mesurent en semaines, pas en heures. Si vous préférez déléguer ce travail, je propose un <a href="/services/audit-seo-complet">audit SEO complet</a> qui classe ces problèmes par priorité, puis un accompagnement en <a href="/services/referencement-naturel-seo">référencement naturel</a>, à partir de 75 000 FCFA (114 €). Pour parler de votre site, <a href="/contact">contactez-moi</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<p><strong>Combien de temps faut-il pour voir l'effet des corrections ?</strong></p>
+<p>Cela dépend de la fréquence à laquelle Google explore votre site. Pour une page importante, vous pouvez demander une réinspection dans Search Console, mais comptez plusieurs semaines pour juger de l'effet sur le classement.</p>
+<p><strong>Faut-il envoyer son sitemap à Google ?</strong></p>
+<p>Ce n'est pas obligatoire, mais c'est utile : il aide Google à découvrir vos pages, surtout sur un site récent ou peu relié. Ne listez que les adresses que vous voulez voir indexées.</p>
+<p><strong>Mon site est-il pénalisé par Google ?</strong></p>
+<p>Dans la plupart des cas, non : il s'agit d'un problème d'indexation, de contenu ou de technique. Search Console signale dans une section dédiée les actions manuelles, c'est-à-dire les vraies sanctions.</p>
+<p><strong>Dois-je supprimer les pages qui ne sont pas indexées ?</strong></p>
+<p>Pas systématiquement. Regardez d'abord la cause : une page utile mais mal construite se retravaille, une page sans intérêt se fusionne ou se supprime.</p>
+<p><strong>Un plugin SEO suffit-il à tout corriger ?</strong></p>
+<p>Il facilite les balises, le sitemap et les redirections, mais il ne rédige pas un contenu utile et ne règle ni la lenteur ni un hébergement sous-dimensionné.</p>
+<p><strong>Puis-je faire ce diagnostic moi-même ?</strong></p>
+<p>Oui, les étapes ci-dessus ne demandent aucune compétence technique. L'aide d'un professionnel sert surtout à corriger : redirections, balises canoniques et vitesse touchent au code du site.</p>
+<p><strong>Ces erreurs comptent-elles aussi pour les réponses des moteurs d'IA ?</strong></p>
+<p>Oui, une page non explorable ou non indexée a peu de chances d'être citée. Pour la suite, lisez <a href="/blog/seo-2026-apparaitre-dans-les-reponses-ia">comment apparaître dans les réponses de l'IA</a>.</p>
+
+<h2>Sources</h2>
+<ul>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing">Google Search Central : bloquer l'indexation avec noindex</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls">Google Search Central : regrouper les URL en double</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://developers.google.com/search/docs/appearance/title-link">Google Search Central : les liens de titre</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://developers.google.com/search/docs/appearance/snippet">Google Search Central : les extraits et la méta description</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Google Search Central : créer des contenus utiles</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/http-network-errors">Google Search Central : erreurs HTTP et réseau</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/webmasters/answer/7440203">Aide Google Search Console : rapport d'indexation des pages</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://web.dev/articles/vitals">web.dev : Core Web Vitals</a>, consultée le 7 octobre 2026</li>
+</ul>
+HTML,
+];

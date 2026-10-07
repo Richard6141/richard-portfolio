@@ -109,12 +109,12 @@ function handlePost(PDO $pdo, int $userId, string $userSlug): void
 
     $stmt = $pdo->prepare("
         INSERT INTO blog_posts
-            (user_id, title, slug, summary, content, category, tags, reading_time,
+            (user_id, title, slug, summary, meta, content, category, tags, reading_time,
              external_url, status, published_at, sort_order)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ");
     $stmt->execute([
-        $userId, $v['title'], $v['slug'], $v['summary'], $v['content'],
+        $userId, $v['title'], $v['slug'], $v['summary'], $v['meta'], $v['content'],
         $v['category'], json_encode($v['tags'], JSON_UNESCAPED_UNICODE),
         $v['reading_time'], $v['external_url'], $v['status'], $v['published_at'], $next,
     ]);
@@ -145,12 +145,12 @@ function handlePut(PDO $pdo, int $userId): void
 
     $stmt = $pdo->prepare("
         UPDATE blog_posts SET
-            title=?, slug=?, summary=?, content=?, category=?, tags=?,
+            title=?, slug=?, summary=?, meta=?, content=?, category=?, tags=?,
             reading_time=?, external_url=?, status=?, published_at=?
         WHERE id=? AND user_id=?
     ");
     $stmt->execute([
-        $v['title'], $v['slug'], $v['summary'], $v['content'],
+        $v['title'], $v['slug'], $v['summary'], $v['meta'], $v['content'],
         $v['category'], json_encode($v['tags'], JSON_UNESCAPED_UNICODE),
         $v['reading_time'], $v['external_url'], $v['status'], $v['published_at'],
         $id, $userId,
@@ -211,6 +211,9 @@ function validate(PDO $pdo, int $userId, array $d, ?int $editId = null): array
     $summary = trim($d['summary'] ?? '');
     if (mb_strlen($summary) > 500) jsonError('Resume trop long (max 500)');
 
+    $meta = trim($d['meta'] ?? '');
+    if (mb_strlen($meta) > 160) jsonError('Meta description trop longue (max 160)');
+
     $content = trim($d['content'] ?? '');
 
     // Temps de lecture auto (250 mots/minute)
@@ -239,6 +242,7 @@ function validate(PDO $pdo, int $userId, array $d, ?int $editId = null): array
         'title'        => $title,
         'slug'         => $slug,
         'summary'      => $summary,
+        'meta'         => $meta !== '' ? $meta : null,
         'content'      => $content,
         'category'     => trim($d['category'] ?? '') ?: null,
         'tags'         => $tags,

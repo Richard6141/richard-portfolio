@@ -15,6 +15,7 @@ require_once __DIR__ . '/registres.php';
 require_once __DIR__ . '/maillage.php';
 require_once __DIR__ . '/routes.php';
 require_once __DIR__ . '/redirections.php';
+require_once __DIR__ . '/blog.php';
 
 /**
  * Page qui ne peut pas vivre sans base (services, blog, réalisations) :
@@ -684,7 +685,7 @@ function sitemap_entrees_base(?PDO $pdo, string $baseUrl): array
         $sql = "SELECT slug, published_at, updated_at FROM blog_posts
                  WHERE status = 'published' AND (published_at IS NULL OR published_at <= NOW())
                  ORDER BY published_at DESC";
-        foreach ($pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC) as $b) {
+        foreach (blog_sans_rediriges($pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC)) as $b) {
             // Date de modification jamais antérieure à la publication (articles antidatés).
             $ts = max((int) strtotime((string) ($b['published_at'] ?? '')), (int) strtotime((string) ($b['updated_at'] ?? '')));
             $entrees[] = ['loc' => $baseUrl . '/blog/' . $b['slug'], 'lastmod' => $ts > 0 ? date('Y-m-d', $ts) : null, 'changefreq' => 'monthly', 'priority' => '0.7'];

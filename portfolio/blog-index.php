@@ -12,6 +12,10 @@ $offset = ($page - 1) * $perPage;
 
 $where = "user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW())";
 $params = [$userId];
+// Articles redirigés exclus dans la requête : total, pagination et cartes portent sur les articles visibles.
+[$exclSql, $exclParams] = blog_exclusion_sql(blog_slugs_rediriges());
+$where .= $exclSql;
+$params = array_merge($params, $exclParams);
 if ($cat !== '') { $where .= " AND category = ?"; $params[] = $cat; }
 
 $total = (int) (function() use ($pdo, $where, $params) {

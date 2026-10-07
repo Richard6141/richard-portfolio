@@ -1,0 +1,100 @@
+<?php
+// Source de la reprise de /blog/obtenir-des-avis-google-clients (vague 1F). Après la migration, la base fait foi :
+// ce fichier ne sert qu'à générer migrations/AAAA-MM-JJ-blog-obtenir-des-avis-google-clients.sql.
+return [
+    'slug'       => 'obtenir-des-avis-google-clients',
+    'instantane' => '2026-10-07 15:00:51',
+    'titre'      => 'Avis Google : comment en obtenir dans les règles du jeu',
+    'meta'       => 'Comment demander des avis Google à vos clients sans enfreindre les règles : lien direct, bon moment, réponses aux avis, faux avis et suivi régulier.',
+    'resume'     => 'Pour obtenir des avis Google, demandez-les à chaque client, juste après la prestation, avec le lien direct de votre fiche. Ne proposez jamais de remise ou de cadeau en échange d\'un avis et ne sollicitez pas seulement les clients contents : Google l\'interdit. Répondez ensuite à chaque avis, puis installez un rythme de demandes régulier plutôt qu\'une grande vague.',
+    'categorie'  => 'SEO local',
+    'tags'       => ['avis Google', 'e-réputation', 'obtenir des avis', 'référencement local', 'confiance client'],
+    'contenu'    => <<<'HTML'
+<h2>Pourquoi les avis Google comptent-ils autant ?</h2>
+<p>Avant de contacter une entreprise, le client regarde ce que d'autres en disent. Selon la <em>Local Consumer Review Survey</em> de BrightLocal, réalisée le 11 février 2026 par sondage en ligne auprès d'un panel de 1 002 adultes américains, 97 % des consommateurs lisent les avis sur les entreprises locales et 85 % sont plus enclins à choisir une entreprise après avoir lu des avis positifs, tandis que 77 % sont dissuadés par des avis négatifs.</p>
+<p>Ces chiffres décrivent des déclarations d'un échantillon américain, sans marge d'erreur indiquée : ils montrent un comportement, pas ce qui se passera à Cotonou ou à Abidjan. La même enquête livre pourtant trois enseignements utiles partout :</p>
+<ul>
+<li><strong>La note compte :</strong> 31 % des personnes interrogées n'utilisent que des entreprises notées 4,5 étoiles ou plus (17 % l'année précédente).</li>
+<li><strong>La fraîcheur compte :</strong> 74 % ne tiennent compte que des avis rédigés dans les trois derniers mois.</li>
+<li><strong>La réponse compte :</strong> 80 % préfèrent une entreprise qui répond à tous ses avis, et la moitié est gênée par des réponses toutes faites.</li>
+</ul>
+<p>La conséquence pratique : un avis obtenu il y a deux ans rassure moins qu'un flux régulier d'avis récents.</p>
+
+<h2>Que permettent et qu'interdisent les règles de Google ?</h2>
+<p>Vous pouvez demander des avis, et Google le recommande : sa page d'aide recommande de demander à vos clients de cliquer sur un lien Google ou de scanner un QR code, et propose pour cela l'outil « Créer un lien ou un QR code pour demander des avis ». En revanche, la politique de Google sur les contenus publiés par les utilisateurs de Maps interdit ce qui suit :</p>
+<ul>
+<li><strong>Les avis incités :</strong> la politique interdit de « proposer des avantages (comme un paiement, des remises, des produits et/ou services gratuits) en échange de la publication d'un avis » ; la page d'aide ajoute la modification d'un avis.</li>
+<li><strong>Le filtrage :</strong> la politique vise le fait de « déconseiller ou interdire de publier des avis négatifs, ou solliciter des avis positifs de façon sélective ».</li>
+<li><strong>Les faux avis :</strong> les contributions doivent refléter une expérience réellement vécue. Un conflit d'intérêts peut inclure, selon la politique, un emploi actuel ou ancien, une relation contractuelle ou de conseil, ou d'autres affiliations professionnelles ou personnelles.</li>
+</ul>
+<p>Google écrit que « l'engagement artificiel n'est pas autorisé et sera supprimé », et les sanctions vont de la suspension des droits du compte à sa clôture. Pour une fiche d'entreprise, le risque est de perdre des avis au moment où l'on en avait besoin.</p>
+<p>Le point qui surprend le plus : on n'a pas le droit de n'envoyer le lien qu'aux clients dont on est sûr qu'ils seront satisfaits. La règle sûre est de proposer l'avis à tous vos clients, sans trier selon leur humeur.</p>
+
+<h2>Comment et quand demander un avis ?</h2>
+<h3>Le bon moment</h3>
+<p>Demandez juste après un service réussi : livraison reçue, travaux terminés, rendez-vous honoré. Le client se souvient des détails, ce qui donne des avis plus précis, donc plus utiles aux futurs clients.</p>
+<h3>Le bon canal</h3>
+<ol>
+<li><strong>Le lien direct :</strong> Google propose un outil pour créer un lien de demande d'avis (« Créer un lien ou un QR code pour demander des avis »), que vous pouvez copier. Envoyez-le par WhatsApp ou par e-mail : le client arrive sur la fenêtre de rédaction en un clic. Pour créer et tenir la fiche elle-même, voyez le <a href="/blog/google-business-profile-guide-complet">guide complet de la fiche Google Business Profile</a>.</li>
+<li><strong>Le QR code :</strong> créé avec le même outil, imprimé sur le comptoir, la facture ou le bon de livraison, il convient à une boutique, un restaurant ou un atelier où le client est sur place.</li>
+<li><strong>Le message personnel :</strong> deux lignes sincères valent mieux qu'un texte copié-collé. Remerciez, rappelez la prestation, expliquez que l'avis aide d'autres clients à vous trouver, et laissez le client libre.</li>
+</ol>
+<p>Ce qu'il ne faut pas écrire : « donnez-nous 5 étoiles », ni « un petit geste commercial pour votre avis ». Demandez un avis honnête, pas une note.</p>
+
+<h2>Comment répondre à un avis positif ?</h2>
+<p>Remerciez en citant un détail propre à ce client (le produit, le délai, la personne qui l'a servi). Évitez la même phrase sous tous les avis : dans l'enquête BrightLocal de février 2026, la moitié des consommateurs est gênée par les réponses génériques. Deux ou trois lignes suffisent, sans promotion.</p>
+
+<h2>Comment répondre à un avis négatif ?</h2>
+<ol>
+<li><strong>Attendez d'être calme</strong> avant d'écrire, puis répondez rapidement.</li>
+<li><strong>Remerciez et reconnaissez</strong> le problème s'il est réel, sans vous justifier longuement.</li>
+<li><strong>Proposez une solution hors ligne :</strong> un numéro, une adresse e-mail, un échange direct. Ne débattez pas du dossier en public.</li>
+<li><strong>Ne révélez rien</strong> sur le client ou sa commande.</li>
+</ol>
+<p>Votre réponse s'adresse autant aux futurs clients qui lisent qu'à l'auteur de l'avis. Une réponse posée à une critique rassure souvent davantage qu'une note parfaite sans aucun échange.</p>
+
+<h2>Que faire d'un faux avis ?</h2>
+<p>Ne répondez pas par une insulte et ne proposez jamais un avantage pour qu'il soit retiré : Google range cela dans l'engagement artificiel. Vérifiez d'abord que l'avis est faux : un avis injuste ou désagréable reste valable, alors qu'un avis sans expérience réelle (personne introuvable dans vos commandes, propos hors sujet) peut être signalé. Google précise de ne pas signaler un avis simplement parce qu'on le désapprouve : seuls les contenus qui enfreignent ses règles sont supprimés.</p>
+<ol>
+<li>Signalez l'avis à Google : depuis votre fiche, ouvrez « Voir les avis », cliquez sur l'icône de signalement à côté de l'avis, choisissez la raison du signalement (par exemple « Spam » ou « Langage vulgaire »), puis confirmez, comme le décrit la <a href="https://support.google.com/business/answer/4596773?hl=fr">page d'aide officielle sur le signalement d'un avis</a>.</li>
+<li>Répondez publiquement et calmement : « Nous ne retrouvons pas de trace de cette commande, contactez-nous pour que nous regardions. »</li>
+<li>Si le signalement est rejeté, vous pouvez faire appel une seule fois depuis l'outil de gestion des avis. Gardez une capture d'écran et la date.</li>
+</ol>
+<p>L'examen prend généralement plusieurs jours, et une réponse « Aucune règle enfreinte » est possible. En attendant, de nouveaux avis authentiques diluent l'effet d'un mauvais avis : une raison de plus de demander régulièrement.</p>
+
+<h2>Comment en faire un suivi régulier ?</h2>
+<p>Aucun nombre d'avis par mois n'est garanti : il dépend de votre volume de clients et de votre secteur. Ce que vous maîtrisez, c'est le rythme et le suivi.</p>
+<ul>
+<li><strong>Fixez une habitude :</strong> envoyer le lien à chaque client servi, ou un jour fixe de la semaine pour les clients de la semaine, sans trier.</li>
+<li><strong>Tenez un tableau simple :</strong> date, nombre de demandes envoyées, nombre d'avis reçus, note moyenne. Le rapport entre demandes et avis vous dit si votre message fonctionne.</li>
+<li><strong>Répondez dans la semaine</strong> à chaque nouvel avis, positif ou négatif.</li>
+<li><strong>Relisez chaque mois</strong> les avis : ils révèlent ce que vos clients aiment et ce qui les gêne.</li>
+<li><strong>Intégrez la demande à votre processus :</strong> un modèle de message WhatsApp enregistré, un QR code sur la facture, une ligne dans la checklist de fin de prestation.</li>
+</ul>
+<p>Les avis ne sont qu'un des leviers pour apparaître dans les résultats locaux ; leur place parmi les autres facteurs est détaillée dans l'article sur <a href="/blog/referencement-local-dominer-pack-local-google">comment gagner sa place dans le pack local de Google</a>. Si vous préférez déléguer la mise en place de la fiche et du système de demande, voyez mon <a href="/services/seo-local-google-business">service de SEO local et de fiche Google Business</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<p><strong>Où trouver le lien pour demander un avis Google ?</strong></p>
+<p>Google propose l'outil « Créer un lien ou un QR code pour demander des avis », décrit dans sa page d'aide citée dans les sources. L'emplacement exact dans l'interface peut changer : suivez cette page.</p>
+<p><strong>Peut-on offrir une remise à celui qui laisse un avis ?</strong></p>
+<p>Non. Google interdit les avantages, y compris remises, produits ou services gratuits, en échange d'un avis. Un simple remerciement, sans contrepartie, reste possible.</p>
+<p><strong>Peut-on demander un avis seulement aux clients contents ?</strong></p>
+<p>Non : la politique de Google interdit de solliciter les avis positifs de façon sélective. Proposez le lien à tous les clients.</p>
+<p><strong>Un employé ou un proche peut-il laisser un avis ?</strong></p>
+<p>Il vaut mieux l'éviter. La politique de Google vise les conflits d'intérêts, notamment l'emploi actuel ou passé, le lien contractuel ou familial, et ces avis peuvent être supprimés.</p>
+<p><strong>Peut-on automatiser les demandes d'avis ?</strong></p>
+<p>Oui, par exemple un message WhatsApp ou un e-mail envoyé après chaque prestation, à condition de l'envoyer à tous les clients, de ne rien promettre en échange et de garder un ton personnel. Une automatisation qui ne cible que les clients satisfaits enfreindrait la règle du filtrage.</p>
+<p><strong>Faut-il répondre à tous les avis ?</strong></p>
+<p>C'est ce que préfèrent 80 % des consommateurs interrogés par BrightLocal (1 002 adultes américains, février 2026). Répondre à chaque avis, brièvement et sans formule toute faite, est la règle la plus simple à tenir.</p>
+<p><strong>Que faire si un avis disparaît ?</strong></p>
+<p>Google supprime les contenus contraires à sa politique. Vérifiez que vos pratiques respectent les règles ci-dessus, puis continuez à demander à vos vrais clients : un flux régulier d'avis authentiques vaut mieux qu'un contournement.</p>
+
+<h2>Sources</h2>
+<ul>
+<li><a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr">Google, politique relative aux contenus des utilisateurs de Maps</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/3474122?hl=fr">Aide Google Business Profile : demander des avis à vos clients</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/4596773?hl=fr">Aide Google Business Profile : signaler un avis</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://www.brightlocal.com/research/local-consumer-review-survey/">BrightLocal, Local Consumer Review Survey 2026</a>, consultée le 7 octobre 2026</li>
+</ul>
+HTML,
+];

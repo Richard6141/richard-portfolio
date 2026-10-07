@@ -84,37 +84,7 @@ if ($dryRun) {
     exit(0);
 }
 
-/**
- * Decoupe un fichier SQL en instructions, en ignorant les commentaires "--"
- * et les chaines. Suffisant pour nos migrations : pas de procedure stockee,
- * donc pas de DELIMITER a gerer.
- *
- * @return list<string>
- */
-function decouperSql(string $sql): array
-{
-    $sql = preg_replace('/^\s*--.*$/m', '', $sql) ?? $sql;
-    $instructions = [];
-    $courante = '';
-    $quote = null;
-    $len = strlen($sql);
-
-    for ($i = 0; $i < $len; $i++) {
-        $c = $sql[$i];
-        if ($quote !== null) {
-            $courante .= $c;
-            if ($c === '\\') { if ($i + 1 < $len) { $courante .= $sql[++$i]; } continue; }
-            if ($c === $quote) { $quote = null; }
-            continue;
-        }
-        if ($c === "'" || $c === '"' || $c === '`') { $quote = $c; $courante .= $c; continue; }
-        if ($c === ';') { $instructions[] = $courante; $courante = ''; continue; }
-        $courante .= $c;
-    }
-    $instructions[] = $courante;
-
-    return array_values(array_filter(array_map('trim', $instructions), static fn(string $s): bool => $s !== ''));
-}
+require_once __DIR__ . '/helpers/migrations.php';
 
 $total = 0;
 foreach ($enAttente as $chemin) {
@@ -122,7 +92,7 @@ foreach ($enAttente as $chemin) {
     $sql = file_get_contents($chemin);
     if ($sql === false) { erreur("lecture impossible : {$nom}"); }
 
-    $instructions = decouperSql($sql);
+    $instructions = migration_decouper_sql($sql);
     sortie("\n> {$nom} (" . count($instructions) . " instruction(s))");
 
     $debut = microtime(true);

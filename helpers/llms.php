@@ -110,13 +110,14 @@ function llms_contenu(array $f, string $base, array $sections, bool $complet): s
 }
 
 /** Lignes issues d'une requête SQL, ou [] si la base est absente ou la requête échoue. */
-function llms_requete(?PDO $pdo, string $sql, callable $ligne): array
+function llms_requete(?PDO $pdo, string $sql, callable $ligne, ?callable $filtre = null): array
 {
     if ($pdo === null) {
         return [];
     }
     try {
-        return array_map($ligne, $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC));
+        $lignes = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return array_map($ligne, $filtre === null ? $lignes : $filtre($lignes));
     } catch (\Throwable $e) {
         return [];
     }
@@ -159,7 +160,7 @@ function llms_collecter(?PDO $pdo, string $base, bool $complet): array
         ]),
         'Articles' => llms_requete($pdo, "SELECT slug, title, summary FROM blog_posts WHERE status = 'published' AND (published_at IS NULL OR published_at <= NOW()) ORDER BY published_at DESC", static fn(array $r): array => [
             'titre' => $r['title'], 'url' => $base . '/blog/' . $r['slug'], 'resume' => (string) ($r['summary'] ?? ''),
-        ]),
+        ], 'blog_sans_rediriges'),
     ];
     $locales = [];
 

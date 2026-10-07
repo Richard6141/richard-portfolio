@@ -132,10 +132,14 @@ require_once __DIR__ . '/../includes/dashboard-layout.php';
                 <!-- Resume -->
                 <div class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 p-6">
                     <label class="flex items-center justify-between text-sm font-medium text-gray-700 mb-1">
-                        <span>Resume / Extrait</span>
-                        <span class="text-xs font-normal" :class="(form.summary||'').length > 270 ? 'text-amber-600' : 'text-gray-400'" x-text="(form.summary||'').length + ' / 300'"></span>
+                        <span>En bref (2 à 4 phrases, affiché sous le titre)</span>
+                        <span class="text-xs font-normal" :class="(form.summary||'').length > 500 ? 'text-amber-600' : 'text-gray-400'" x-text="(form.summary||'').length + ' / 500'"></span>
                     </label>
                     <textarea x-model="form.summary" maxlength="500" rows="2" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none resize-none" placeholder="Resume affiche dans la liste des articles..."></textarea>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1 mt-4">Meta description
+                      <span class="text-xs font-normal" :class="(form.meta||'').length < 140 || (form.meta||'').length > 155 ? 'text-amber-600' : 'text-gray-400'" x-text="(form.meta||'').length + ' / 140 à 155'"></span>
+                    </label>
+                    <textarea x-model="form.meta" maxlength="160" rows="2" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none resize-none" placeholder="Phrase complète affichée par Google sous le titre..."></textarea>
                 </div>
 
                 <!-- Contenu -->
@@ -368,14 +372,14 @@ function blogPage() {
         ],
 
         form: {
-            title: '', slug: '', summary: '', content: '', cover_image: '',
+            title: '', slug: '', summary: '', meta: '', content: '', cover_image: '',
             category: '', tags: [], reading_time: null, external_url: '',
             status: 'draft', published_at: '',
         },
 
         emptyForm() {
             return {
-                title: '', slug: '', summary: '', content: '', cover_image: '',
+                title: '', slug: '', summary: '', meta: '', content: '', cover_image: '',
                 category: '', tags: [], reading_time: null, external_url: '',
                 status: 'draft', published_at: '',
             };
@@ -447,6 +451,21 @@ function blogPage() {
             this.htmlSource = '';
         },
 
+        // Deux bogues de Quill 2.0.3 : (1) root.innerHTML en ecriture ne reconnait
+        // pas <ul> et supprime les listes avec leur texte ; clipboard.convert les
+        // lit sans perte. (2) root.innerHTML en lecture rend les listes au format
+        // interne de Quill (data-list), lu comme liste numerotee par le site ;
+        // getSemanticHTML rend <ul>/<ol> propres mais remplace chaque espace par
+        // &nbsp; (d'ou le replace, les sources n'ont aucune espace insecable).
+        chargerQuill(html) {
+            this.quill.setContents(this.quill.clipboard.convert({ html: html || '' }), 'silent');
+        },
+
+        htmlQuill() {
+            if (this.quill.getLength() <= 1) return '';
+            return this.quill.getSemanticHTML().replace(/&nbsp;/g, ' ');
+        },
+
         initQuill() {
             const el = document.getElementById('blog-quill');
             if (!el) return;
@@ -510,7 +529,7 @@ function blogPage() {
             });
 
             if (this.form.content) {
-                this.quill.root.innerHTML = this.form.content;
+                this.chargerQuill(this.form.content);
             }
 
             // Quill normalise le HTML des qu'il le charge : il aplatit les lignes
@@ -531,7 +550,7 @@ function blogPage() {
             // Convertit le HTML en contenu mis en forme dans Quill
             this.quill.clipboard.dangerouslyPasteHTML(html);
             this.quillDirty = true;
-            this.form.content = this.quill.root.innerHTML;
+            this.form.content = this.htmlQuill();
             this.calcReadingTime();
             this.importHtmlText = '';
             this.showImport = false;
@@ -567,9 +586,8 @@ function blogPage() {
                 // Lire quill.root.innerHTML sans cette garde renvoyait la version
                 // deja aplatie par Quill — et detruisait les tableaux.
                 this.htmlSource = (this.quillDirty && this.quill)
-                    ? this.quill.root.innerHTML
+                    ? this.htmlQuill()
                     : (this.form.content || '');
-                if (this.htmlSource === '<p><br></p>') this.htmlSource = '';
                 this.showImport = false;
                 this.htmlMode = true;
                 return;
@@ -577,7 +595,7 @@ function blogPage() {
             // Retour au visuel : Quill re-analyse le HTML et jette ce qu'il ne connait pas.
             if (!confirm("Revenir a l'editeur visuel ?\n\nL'editeur ne gere pas les tableaux : tout <table> present sera supprime.\n\nPour conserver votre HTML, annulez et enregistrez depuis le mode code.")) return;
             this.form.content = this.htmlSource;
-            if (this.quill) this.quill.root.innerHTML = this.htmlSource;
+            if (this.quill) this.chargerQuill(this.htmlSource);
             this.htmlMode = false;
         },
 
@@ -596,7 +614,7 @@ function blogPage() {
 
         getPreviewContent() {
             if (this.htmlMode) return this.htmlSource || '<p class="text-gray-400">Aucun contenu...</p>';
-            if (this.quill) return this.quill.root.innerHTML;
+            if (this.quill) return this.htmlQuill();
             return this.form.content || '<p class="text-gray-400">Aucun contenu...</p>';
         },
 
@@ -608,8 +626,7 @@ function blogPage() {
                 // form.content tel qu'il vient de la base : ouvrir un article
                 // contenant un tableau puis cliquer Enregistrer detruisait le
                 // tableau, sans que rien n'ait ete modifie.
-                this.form.content = this.quill.root.innerHTML;
-                if (this.form.content === '<p><br></p>') this.form.content = '';
+                this.form.content = this.htmlQuill();
             }
             this.calcReadingTime();
 
