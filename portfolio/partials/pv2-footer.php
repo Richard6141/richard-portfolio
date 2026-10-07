@@ -90,13 +90,7 @@ $horaires = fait('horaires');
       </ul>
       <p class="pied__titre">Ressources</p>
       <ul>
-        <li><a href="<?= sanitize(url_finale('/realisations/')) ?>">Réalisations</a></li>
-        <li><a href="/comparatifs/">Comparatifs</a></li>
-        <li><a href="/histoires/">Histoires de transformation</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/richard-salanon">Qui est Richard SALANON ?</a></li>
-        <li><a href="/a-propos/">À propos</a></li>
-        <li><a href="/contact">Contact et devis</a></li>
+        <?php foreach (pied_ressources() as [$piedLibelle, $piedUrl]): ?><li><a href="<?= sanitize($piedUrl) ?>"><?= sanitize($piedLibelle) ?></a></li><?php endforeach; ?>
       </ul>
     </nav>
   </div>

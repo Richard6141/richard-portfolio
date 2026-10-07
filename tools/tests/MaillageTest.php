@@ -82,3 +82,32 @@ function test_maillage_fiche_formation_propose_ses_metiers(): void
     $groupe = array_values(array_filter(maillage_liens($p, $racine, '2026-06-01'), static fn(array $g): bool => $g['titre'] === 'Formations par métier'))[0];
     assert_same([['Formation IA de test pour les testeurs', '/formations/metier/test-metier']], $groupe['liens']);
 }
+
+function test_maillage_secteur_vers_ses_pages_locales(): void
+{
+    // Vague 1E : les pages historiques « digitaliser-{secteur}-{ville} » sont les déclinaisons locales du secteur.
+    $racine = racine('tools/tests/fixtures/registres');
+    $p = registre_lire('secteur', 'test-secteur', $racine);
+    $g = array_values(array_filter(maillage_liens($p, $racine, '2026-06-01'), static fn(array $g): bool => $g['titre'] === 'Près de chez vous'));
+    assert_same([["Digitaliser une activité d'import-export à Cotonou", '/digitaliser-import-export-cotonou']], $g[0]['liens'] ?? null);
+}
+
+function test_maillage_metier_propose_ses_secteurs(): void
+{
+    // Vague 1E : une page métier renvoie vers les secteurs publiés qui la citent (spec 9 : « secteur correspondant »).
+    $racine = racine('tools/tests/fixtures/registres');
+    $p = registre_lire('metier', 'test-metier', $racine);
+    $groupe = static fn(string $jour): ?array => array_values(array_filter(maillage_liens($p, $racine, $jour),
+        static fn(array $g): bool => $g['titre'] === 'Secteurs'))[0] ?? null;
+    assert_same([['Secteur de test pour les tests du registre', '/secteurs/test-secteur']], $groupe('2026-06-01')['liens'] ?? null);
+    assert_same(null, $groupe('2025-12-31'), 'secteur non publié : aucun lien');
+}
+
+function test_maillage_page_locale_vers_son_secteur_publie(): void
+{
+    // Vague 1E : une page historique, servie tous les jours, ne lie son secteur qu'une fois celui-ci publié.
+    $racine = racine('tools/tests/fixtures/registres');
+    assert_same('/secteurs/test-secteur', sujet_secteur('digitaliser-import-export-cotonou', $racine, '2026-06-01')['url'] ?? null);
+    assert_same(null, sujet_secteur('digitaliser-import-export-cotonou', $racine, '2025-12-31'), 'avant sa date');
+    assert_same(null, sujet_secteur('digitaliser-transit-lome', $racine, '2026-06-01'), 'page non revendiquée');
+}

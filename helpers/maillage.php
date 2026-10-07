@@ -128,6 +128,10 @@ function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $au
             }
             $ajouter('Villes', $villes);
             break;
+        case 'secteur':
+            // Vague 1E : les pages historiques « digitaliser-{secteur}-{ville} » deviennent ses déclinaisons locales.
+            $ajouter('Près de chez vous', array_values(array_intersect_key(maillage_sujets(), array_flip(array_map('strval', (array) ($p['locales'] ?? []))))));
+            break;
         case 'formation':
         case 'metier':
             $enfant = $p['type'] . '-pays';
@@ -139,6 +143,12 @@ function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $au
                 $ajouter('Formations par métier', array_map(static fn(array $q): array => ['titre' => registre_libelle($q)] + $q,
                     array_filter(registre_publiees('metier', $racine, $aujourdhui),
                         static fn(array $q): bool => in_array($p['slug'], (array) ($q['liens']['formations'] ?? []), true))));
+            }
+            // Vague 1E : une page métier renvoie vers les secteurs publiés qui la citent (spec 9).
+            if ($p['type'] === 'metier') {
+                $ajouter('Secteurs', array_map(static fn(array $q): array => ['titre' => registre_libelle($q)] + $q,
+                    array_filter(registre_publiees('secteur', $racine, $aujourdhui),
+                        static fn(array $q): bool => in_array($p['slug'], (array) ($q['liens']['metiers'] ?? []), true))));
             }
             break;
         case 'histoire':
@@ -156,6 +166,27 @@ function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $au
         }
     }
     return $groupes;
+}
+
+/** Secteur publié dont une page historique « digitaliser-… » est la déclinaison locale, ou null (vague 1E). */
+function sujet_secteur(string $slugSujet, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): ?array
+{
+    foreach (registre_publiees('secteur', $racine, $aujourdhui) as $q) {
+        if (in_array($slugSujet, array_map('strval', (array) ($q['locales'] ?? [])), true)) {
+            return $q;
+        }
+    }
+    return null;
+}
+
+/** Liens « Ressources » du pied : un hub du registre n'y figure qu'une fois publié (vague 1E). */
+function pied_ressources(string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): array
+{
+    $liens = [['Réalisations', url_finale('/realisations/')], ['Comparatifs', '/comparatifs/'], ['Histoires de transformation', '/histoires/']];
+    if (maillage_page('hub', 'secteurs', $racine, $aujourdhui) !== null) {
+        $liens[] = ['Secteurs', '/secteurs/'];
+    }
+    return array_merge($liens, [['Blog', '/blog/'], ['Qui est Richard SALANON ?', '/richard-salanon'], ['À propos', '/a-propos/'], ['Contact et devis', '/contact']]);
 }
 
 /** Lien de la boîte auteur : la page auteur dès sa publication, l'à-propos avant. */
