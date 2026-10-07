@@ -15,6 +15,7 @@ require_once __DIR__ . '/registres.php';
 require_once __DIR__ . '/maillage.php';
 require_once __DIR__ . '/routes.php';
 require_once __DIR__ . '/redirections.php';
+require_once __DIR__ . '/blog.php';
 
 /**
  * Page qui ne peut pas vivre sans base (services, blog, réalisations) :
