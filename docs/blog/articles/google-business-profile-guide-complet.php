@@ -1,0 +1,116 @@
+<?php
+// Source de la reprise de /blog/google-business-profile-guide-complet (vague 1F). Après la migration, la base fait foi :
+// ce fichier ne sert qu'à générer migrations/AAAA-MM-JJ-blog-google-business-profile-guide-complet.sql.
+return [
+    'slug'       => 'google-business-profile-guide-complet',
+    'instantane' => '2026-10-07 15:00:51',
+    'titre'      => 'Google Business Profile : créer, valider et gérer sa fiche',
+    'meta'       => 'Créer sa fiche Google Business Profile pas à pas : adresse admise, validation, rubriques, photos, suspension et statistiques, selon l\'aide Google.',
+    'resume'     => 'Pour créer une fiche, il faut un compte Google, un établissement réel et une adresse conforme aux règles de Google, puis une validation dont la méthode est choisie par Google, pas par vous. Une fois validée, remplissez le nom exact, la catégorie principale, les horaires, les photos et la zone de couverture, puis suivez les statistiques depuis l\'onglet Performances.',
+    'categorie'  => 'SEO local',
+    'tags'       => ['Google Business Profile', 'fiche Google', 'référencement local', 'Google Maps', 'validation de fiche', 'suspension de fiche'],
+    'contenu'    => <<<'HTML'
+<h2>Qui peut créer une fiche Google Business Profile, et avec quelle adresse ?</h2>
+<p>Selon la page d'aide Google sur la création d'une fiche, consultée le 7 octobre 2026, il suffit d'un compte Google, et ajouter ou revendiquer son établissement est gratuit.</p>
+<p>Le point délicat est l'adresse. D'après les consignes de représentation de l'établissement, consultées le même jour :</p>
+<ul>
+<li>indiquez une adresse physique réelle, pas une boîte postale ;</li>
+<li>une seule fiche par établissement ;</li>
+<li>si vous vous déplacez chez vos clients (plombier, électricien, coiffeur à domicile), créez une fiche avec une zone de couverture, limitée à environ deux heures de trajet, et masquez l'adresse si vous travaillez depuis chez vous.</li>
+</ul>
+<p>Une adresse inventée, ou un local de domiciliation où personne ne vous accueille, est la première cause de problème de validation ou de suspension.</p>
+
+<h2>Comment créer sa fiche pas à pas ?</h2>
+<ol>
+<li>Connectez-vous avec votre compte Google, puis recherchez sur Google Maps le nom de votre entreprise et votre ville.</li>
+<li>Si la fiche existe déjà, revendiquez-la au lieu d'en créer une seconde. Sinon, ajoutez votre établissement.</li>
+<li>Saisissez le nom, la catégorie, l'adresse ou la zone de couverture, le téléphone et le site web.</li>
+<li>Lancez la validation (voir la section suivante).</li>
+</ol>
+<p>Avant de cliquer, relisez le nom : il doit être exactement celui de votre devanture et de vos documents, sans slogan ni mot-clé ajouté.</p>
+
+<h2>Comment valider sa fiche, et combien de temps cela prend-il ?</h2>
+<p>Selon la page d'aide Google sur la validation, consultée le 7 octobre 2026, les options possibles sont le téléphone ou le SMS, l'e-mail, l'appel vidéo en direct et le courrier avec un code. Elles dépendent du type d'établissement, de votre région et des informations publiques vous concernant.</p>
+<ul>
+<li>Vous ne choisissez pas la méthode : Google la détermine automatiquement et elle ne peut pas être modifiée.</li>
+<li>L'appel vidéo n'est possible que pendant les horaires d'ouverture de votre région.</li>
+<li>L'examen de la validation prend jusqu'à cinq jours ouvrés.</li>
+<li>Une carte postale arrive généralement sous 14 jours et son code expire après 30 jours.</li>
+<li>En cas d'échec, le bouton « Valider » réapparaît pour réessayer.</li>
+</ul>
+<p>Ces méthodes changent régulièrement : si votre écran propose autre chose, suivez votre écran. Tant que la fiche n'est pas validée, ni les photos ni les statistiques ne sont visibles.</p>
+
+<h2>Quelles rubriques remplir, et comment ?</h2>
+<p>D'après les consignes de représentation de l'établissement, consultées le 7 octobre 2026 :</p>
+<ul>
+<li><strong>Nom</strong> : celui de la devanture. Sont exclus les slogans, horaires, numéros de téléphone, listes de services et les majuscules excessives.</li>
+<li><strong>Catégorie</strong> : le minimum de catégories qui décrivent votre activité principale. Demandez-vous ce que vous êtes, non ce que vous proposez.</li>
+<li><strong>Horaires</strong> : vos horaires habituels, puis des horaires exceptionnels pour les jours fériés.</li>
+<li><strong>Zone de couverture</strong> : précise et raisonnable, pour les entreprises qui se déplacent.</li>
+<li><strong>Site web et téléphone</strong> : ceux que vous utilisez réellement, identiques à ceux de votre site.</li>
+</ul>
+<p>Évitez les caractères fantaisistes, les promotions excessives et les informations sans rapport avec l'activité : la page d'aide les range parmi les contenus interdits.</p>
+
+<h2>Quelles photos et quelles publications ajouter ?</h2>
+<h3>Les photos et vidéos</h3>
+<p>Selon la page d'aide Google sur les photos et vidéos, consultée le 7 octobre 2026 :</p>
+<ul>
+<li>photos au format JPG ou PNG, de 10 Ko à 5 Mo, avec 720 px par 720 px recommandés et 250 px par 250 px au minimum ;</li>
+<li>vidéos de 30 secondes au plus, jusqu'à 75 Mo, en 720p minimum ;</li>
+<li>un délai de 24 à 48 heures avant l'affichage.</li>
+</ul>
+<p>Les images doivent être nettes, bien éclairées et fidèles à la réalité, sans filtre excessif. Montrez la façade, l'intérieur, l'équipe, vos réalisations.</p>
+<h3>Les publications</h3>
+<p>La page d'aide sur les publications, consultée le 7 octobre 2026, distingue les actualités, les offres et les événements, et indique que les publications de plus de six mois sont archivées, sauf si une période est définie. Elle mentionne aussi une disponibilité limitée à certains pays et secteurs : vérifiez si l'option apparaît dans votre fiche avant d'en faire un rituel.</p>
+
+<h2>Comment gérer les questions et les modifications proposées par d'autres ?</h2>
+<p>Selon la page d'aide Google sur les modifications, consultée le 7 octobre 2026, n'importe quel utilisateur peut suggérer une modification sur la fiche d'un établissement, et Google examine toutes les modifications avant de les appliquer. Contrôlez donc régulièrement votre fiche : un horaire ou un téléphone changé par un tiers doit être corrigé par vous, depuis « Éditer la fiche » dans la recherche Google ou l'application Maps.</p>
+<p>La section Questions et réponses, qui permet de répondre aux clients sur la fiche, n'est disponible que pour certaines catégories d'activité et certaines régions. Si elle apparaît chez vous, répondez en une phrase factuelle, avec le même nom, la même adresse et le même téléphone que partout ailleurs.</p>
+
+<h2>Que faire si la fiche est suspendue ?</h2>
+<p>Selon la page d'aide Google sur les fiches suspendues, consultée le 7 octobre 2026, Google peut suspendre ou désactiver les fiches qui ne respectent pas ses consignes. Avant de contester, vérifiez votre nom, votre adresse et vos catégories par rapport aux règles ci-dessus.</p>
+<ol>
+<li>Ouvrez l'outil de demande de réexamen, sélectionnez la fiche et lisez le motif indiqué.</li>
+<li>Joignez si besoin des justificatifs : immatriculation officielle, licence professionnelle, attestation fiscale, facture d'électricité, de téléphone, d'eau ou d'internet.</li>
+<li>Envoyez-les dans les 60 minutes qui suivent l'ouverture du formulaire.</li>
+<li>Attendez la réponse par e-mail : la page ne précise aucun délai de décision.</li>
+</ol>
+<p>Si la demande est refusée, la page prévoit un nouvel examen avec des preuves supplémentaires.</p>
+
+<h2>Comment lire les statistiques de sa fiche ?</h2>
+<p>D'après la page d'aide Google sur les performances, consultée le 7 octobre 2026, l'onglet « Performances » de la fiche validée affiche, selon votre activité, les vues sur la Recherche et Maps, les appels, les demandes d'itinéraire, les clics vers le site web, les messages, les réservations et les termes de recherche. Choisissez une période en haut de la page, puis appliquez.</p>
+<p>La métrique des termes de recherche est mise à jour au début de chaque mois, avec un délai pouvant atteindre cinq jours. Comparez deux périodes de même durée : l'évolution des appels et des itinéraires compte plus que le nombre de vues.</p>
+
+<h2>Et ensuite : stratégie locale et avis ?</h2>
+<p>Une fiche correcte ne suffit pas à passer devant ses concurrents : l'ordre de travail est expliqué dans <a href="/blog/referencement-local-dominer-pack-local-google">dominer le pack local de Google</a>, et les avis dans <a href="/blog/obtenir-des-avis-google-clients">obtenir des avis Google dans les règles</a>.</p>
+<p>Si vous préférez déléguer, je propose un <a href="/services/seo-local-google-business">service de SEO local et de fiche Google Business</a>, et une <a href="/formations/visibilite-google">formation à la visibilité sur Google</a> pour vos équipes. Pour échanger, <a href="/contact">écrivez-moi</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<p><strong>Une fiche Google Business Profile est-elle payante ?</strong></p>
+<p>Non. Créer et gérer la fiche ne coûte rien ; il faut seulement un compte Google.</p>
+<p><strong>Puis-je choisir ma méthode de validation ?</strong></p>
+<p>Non. Selon l'aide Google consultée le 7 octobre 2026, la méthode est déterminée automatiquement et ne peut pas être modifiée.</p>
+<p><strong>Mon entreprise n'a pas de local, puis-je avoir une fiche ?</strong></p>
+<p>Oui si vous servez vos clients chez eux : créez une fiche avec zone de couverture et masquez votre adresse personnelle.</p>
+<p><strong>Puis-je ajouter le nom de ma ville ou mes services dans le nom de la fiche ?</strong></p>
+<p>Non. Le nom doit être celui de votre devanture ; ajouter des mots-clés fait partie des pratiques que les consignes interdisent.</p>
+<p><strong>Mes photos n'apparaissent pas, pourquoi ?</strong></p>
+<p>Comptez 24 à 48 heures, et vérifiez que la fiche est validée : les photos ne sont visibles qu'ensuite.</p>
+<p><strong>Quelqu'un a modifié mes horaires, que faire ?</strong></p>
+<p>Corrigez-les vous-même depuis « Éditer la fiche ». Google examine les suggestions avant de les appliquer, mais rien n'empêche qu'une erreur passe.</p>
+<p><strong>Combien de temps pour que ma fiche réapparaisse après une suspension ?</strong></p>
+<p>La page d'aide ne donne aucun délai de décision : la réponse arrive par e-mail.</p>
+
+<h2>Sources</h2>
+<ul>
+<li><a href="https://support.google.com/business/answer/2911778?hl=fr">Aide Google Business Profile : créer une fiche</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/7107242?hl=fr">Aide Google Business Profile : valider une fiche</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/3038177?hl=fr">Aide Google Business Profile : consignes de représentation de l'établissement</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/4569145?hl=fr">Aide Google Business Profile : fiches suspendues ou désactivées</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/6103862?hl=fr">Aide Google Business Profile : photos et vidéos</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/7342169?hl=fr">Aide Google Business Profile : publications</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/3039617?hl=fr">Aide Google Business Profile : modifications et questions-réponses</a>, consultée le 7 octobre 2026</li>
+<li><a href="https://support.google.com/business/answer/9918094?hl=fr">Aide Google Business Profile : performances de la fiche</a>, consultée le 7 octobre 2026</li>
+</ul>
+HTML,
+];
