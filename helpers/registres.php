@@ -238,7 +238,7 @@ function registre_valider(string $type, string $slug, array $p): array
     if ($type === 'formation' && isset($p['domaine']) && !in_array($p['domaine'], REGISTRES_DOMAINES, true)) {
         $e[] = 'domaine inconnu : ' . $p['domaine'];
     }
-    if (in_array($type, ['metier', 'secteur'], true) && isset($p['univers']) && !in_array($p['univers'], REGISTRES_UNIVERS, true)) {
+    if (in_array($type, ['metier', 'secteur'], true) && array_key_exists('univers', $p) && !in_array($p['univers'], REGISTRES_UNIVERS, true)) {
         $e[] = 'univers inconnu : ' . $p['univers'];
     }
     // Vague 1E : les pages locales d'un secteur sont des pages historiques existantes (data/sujets.php).

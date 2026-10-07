@@ -107,7 +107,8 @@ function test_maillage_page_locale_vers_son_secteur_publie(): void
 {
     // Vague 1E : une page historique, servie tous les jours, ne lie son secteur qu'une fois celui-ci publié.
     $racine = racine('tools/tests/fixtures/registres');
-    assert_same('/secteurs/test-secteur', sujet_secteur('digitaliser-import-export-cotonou', $racine, '2026-06-01')['url'] ?? null);
-    assert_same(null, sujet_secteur('digitaliser-import-export-cotonou', $racine, '2025-12-31'), 'avant sa date');
-    assert_same(null, sujet_secteur('digitaliser-transit-lome', $racine, '2026-06-01'), 'page non revendiquée');
+    $urls = static fn(string $slug, string $jour): array => array_column(sujet_secteurs($slug, $racine, $jour), 'url');
+    assert_same(['/secteurs/test-secteur'], $urls('digitaliser-import-export-cotonou', '2026-06-01'));
+    assert_same([], $urls('digitaliser-import-export-cotonou', '2025-12-31'), 'avant sa date');
+    assert_same([], $urls('digitaliser-transit-lome', '2026-06-01'), 'page non revendiquée');
 }

@@ -114,6 +114,10 @@ function qa_texte_interdit(string $texte): array
             $problemes[] = $nom;
         }
     }
+    // Revue 1E : une balise autorisée mal échappée s'affichait en clair (le texte principal a déjà perdu les vraies balises).
+    if (preg_match('#</?(?:a|abbr|strong|em|br)\b#i', $texte) === 1) {
+        $problemes[] = 'balise affichée';
+    }
     // Frontières en lettres Unicode : avec \b, « kilomètres » donnait « tres ».
     if (preg_match_all('/(?<!\p{L})(' . implode('|', QA_MOTS_SANS_ACCENT) . ')(?!\p{L})/iu', $texte, $m) > 0) {
         foreach (array_unique(array_map('strtolower', $m[1])) as $mot) {

@@ -167,3 +167,21 @@ function test_bloc_fiche_tableaux_par_groupe_avec_sources(): void
     assert_not_contains('Économie numérique', $html, 'groupe vide masqué');
     assert_same('', trim(bloc_rendre(['type' => 'fiche', 'titre' => 'Rien ?', 'faits' => []])), 'fiche vide : aucun bloc');
 }
+
+function test_bloc_texte_lien_a_apostrophes_rendu_et_url_dangereuse_echappee(): void
+{
+    // Revue 1E : un href entre apostrophes devenait &apos; et le lien s'affichait en clair.
+    assert_same('<a href="/contact">x</a>', bloc_texte("<a href='/contact'>x</a>"));
+    assert_same('<a href="/contact">x</a>', bloc_texte('<a href="/contact">x</a>'));
+    $dangereux = bloc_texte("<a href='javascript:alert(1)'>x</a>");
+    assert_not_contains('<a href', $dangereux, 'javascript: reste échappé');
+}
+
+function test_bloc_texte_abbr_a_titre_avec_apostrophe_rendu(): void
+{
+    // Revue 1E : le titre avec apostrophe (&apos;) ne passait pas la regex.
+    $html = bloc_texte('<abbr title="vérification de l\'identité">KYC</abbr>');
+    assert_not_contains('&lt;abbr', $html);
+    assert_contains('<abbr title="vérification de l&apos;identité">KYC</abbr>', $html);
+    assert_not_contains('<abbr title="x" onclick', bloc_texte('<abbr title="x" onclick="y">K</abbr>'), 'aucune injection d\'attribut');
+}

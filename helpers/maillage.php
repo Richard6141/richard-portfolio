@@ -73,7 +73,8 @@ function maillage_sujets(): array
     static $pages = null;
     if ($pages === null) {
         $pages = [];
-        foreach ((array) require __DIR__ . '/../portfolio/data/sujets.php' as $sujet) {
+        // Revue 1E : réutilise le registre déjà chargé par portfolio/route.php.
+        foreach ((array) ($GLOBALS['sujetsRegistre'] ?? require __DIR__ . '/../portfolio/data/sujets.php') as $sujet) {
             foreach ((array) ($sujet['pages'] ?? []) as $pg) {
                 if (!empty($pg['slug'])) {
                     $pages[(string) $pg['slug']] = ['titre' => (string) $pg['titre'], 'url' => '/' . $pg['slug']];
@@ -168,15 +169,16 @@ function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $au
     return $groupes;
 }
 
-/** Secteur publié dont une page historique « digitaliser-… » est la déclinaison locale, ou null (vague 1E). */
-function sujet_secteur(string $slugSujet, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): ?array
+/** Secteurs publiés dont une page historique « digitaliser-… » est la déclinaison locale, dans l'ordre du registre (vague 1E, revue 1E : plusieurs possibles). */
+function sujet_secteurs(string $slugSujet, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): array
 {
+    $secteurs = [];
     foreach (registre_publiees('secteur', $racine, $aujourdhui) as $q) {
         if (in_array($slugSujet, array_map('strval', (array) ($q['locales'] ?? [])), true)) {
-            return $q;
+            $secteurs[] = $q;
         }
     }
-    return null;
+    return $secteurs;
 }
 
 /** Liens « Ressources » du pied : un hub du registre n'y figure qu'une fois publié (vague 1E). */

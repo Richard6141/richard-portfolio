@@ -132,3 +132,10 @@ function test_qa_cli_registres_echoue_sur_les_fixtures(): void
     assert_same(1, $code);
     assert_contains('formation/ia-test', implode("\n", $sortie));
 }
+
+function test_qa_texte_interdit_detecte_une_balise_affichee(): void
+{
+    // Revue 1E : une balise rendue en clair (&lt;a href) doit être signalée.
+    assert_true(in_array('balise affichée', qa_texte_interdit('Voir <a href="/contact">le devis</a> ici.'), true), 'balise affichée non détectée');
+    assert_true(!in_array('balise affichée', qa_texte_interdit('Un texte normal, avec 3 < 5 et un tag a part.'), true), 'faux positif');
+}

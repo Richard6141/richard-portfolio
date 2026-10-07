@@ -159,6 +159,7 @@ function test_registres_secteur_univers_et_pages_locales(): void
     $erreurs = static fn(array $modif): string => implode(' ', registre_valider('secteur', 'test-secteur', $modif + $base));
     assert_contains('univers inconnu : Divers', $erreurs(['univers' => 'Divers']));
     assert_contains('page locale inconnue : digitaliser-atlantide', $erreurs(['locales' => ['digitaliser-atlantide']]));
+    assert_contains('univers inconnu', $erreurs(['univers' => null]));
     assert_same([], registre_valider('secteur', 'test-secteur', ['locales' => []] + $base), 'un secteur sans page locale reste valide');
 }
 
