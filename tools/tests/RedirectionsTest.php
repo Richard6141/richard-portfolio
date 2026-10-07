@@ -75,3 +75,43 @@ function test_redirections_anciennes_formations_vers_leur_fiche_en_un_saut(): vo
     }
     assert_same(200, http_local('/formation-ia-entreprise-cotonou')['code'], 'page de ville conservée');
 }
+
+function test_redirections_slugs_de_blog_rediriges_et_fragment_sql_lie(): void
+{
+    $r = racine('tools/tests/fixtures/registres');
+    $table = [
+        '/blog/ancien-actif'  => '/services/site-test',
+        '/blog/ancien-futur'  => '/services/site-futur',
+        '/blog/fusionne'      => '/blog/cible-en-ligne',
+        '/blog/fusion-hors'   => '/blog/cible-absente',
+        '/formation-x'        => '/services/site-test',
+    ];
+    $enLigne = static fn(string $slug): bool => $slug === 'cible-en-ligne';
+    $slugs = blog_slugs_rediriges($table, $r, '2026-10-03', $enLigne);
+    assert_same(['ancien-actif', 'fusionne'], $slugs, 'seuls les /blog/ dont la cible est publiée');
+
+    [$sql, $params] = blog_exclusion_sql($slugs);
+    assert_same(' AND slug NOT IN (?, ?)', $sql);
+    assert_same(['ancien-actif', 'fusionne'], $params);
+    [$sql, $params] = blog_exclusion_sql(["x') OR 1=1 --"], 'p.slug');
+    assert_same(' AND p.slug NOT IN (?)', $sql, 'valeur jamais concaténée au SQL');
+    assert_same(["x') OR 1=1 --"], $params);
+    assert_same(['', []], blog_exclusion_sql([]), 'liste vide : pas de fragment');
+}
+
+function test_redirections_exclusion_sql_branchee_dans_les_pages_du_blog(): void
+{
+    foreach (['portfolio/blog-index.php', 'portfolio/partials/pv2-blog-sidebar.php', 'portfolio/article.php'] as $f) {
+        $src = (string) file_get_contents(racine($f));
+        assert_contains('blog_exclusion_sql(blog_slugs_rediriges())', $src, $f);
+    }
+}
+
+function test_redirections_ancien_slug_sans_accent_va_a_l_url_finale_en_un_saut(): void
+{
+    $r = racine('tools/tests/fixtures/registres');
+    // Le slug corrigé redirige lui-même : la 301 de l'ancien slug va droit à sa cible.
+    $table = ['/blog/slug-corrige' => '/services/site-test'];
+    assert_same('/services/site-test', url_finale('/blog/slug-corrige', $table, $r, '2026-10-03'));
+    assert_contains("url_finale('/blog/' . \$target)", (string) file_get_contents(racine('portfolio/article.php')), 'article.php : un seul saut');
+}

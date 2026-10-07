@@ -7,11 +7,12 @@ $sideBio = $profile['bio_short'] ?? "Développeur web, mobile & automatisation. 
 $sideRecent = [];
 $sideCats = [];
 try {
-    $st = $pdo->prepare("SELECT title, slug, cover_image, published_at FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) ORDER BY published_at DESC LIMIT 5");
-    $st->execute([$userId]);
+    [$exclSql, $exclParams] = blog_exclusion_sql(blog_slugs_rediriges());
+    $st = $pdo->prepare("SELECT title, slug, cover_image, published_at FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()){$exclSql} ORDER BY published_at DESC LIMIT 5");
+    $st->execute(array_merge([$userId], $exclParams));
     $sideRecent = blog_sans_rediriges($st->fetchAll());
-    $st = $pdo->prepare("SELECT category, COUNT(*) AS n FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) AND category IS NOT NULL AND category <> '' GROUP BY category ORDER BY n DESC");
-    $st->execute([$userId]);
+    $st = $pdo->prepare("SELECT category, COUNT(*) AS n FROM blog_posts WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()){$exclSql} AND category IS NOT NULL AND category <> '' GROUP BY category ORDER BY n DESC");
+    $st->execute(array_merge([$userId], $exclParams));
     $sideCats = $st->fetchAll();
 } catch (\Throwable $e) {}
 ?>

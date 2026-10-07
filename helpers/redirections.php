@@ -47,6 +47,32 @@ function blog_sans_rediriges(array $lignes): array
     return array_values(array_filter($lignes, static fn(array $l): bool => redirection_cible('/blog/' . ($l['slug'] ?? '')) === null));
 }
 
+/**
+ * Slugs des articles dont l'URL /blog/... redirige aujourd'hui (cible publiée), pour les exclure dès la requête SQL.
+ * Même règle que blog_sans_rediriges() ; sans base, redirection_cible() ne voit aucun article en ligne : liste vide.
+ */
+function blog_slugs_rediriges(?array $table = null, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null, ?callable $articleEnLigne = null): array
+{
+    $slugs = [];
+    foreach (array_keys($table ?? redirections_table()) as $chemin) {
+        if (preg_match('#^/blog/([a-z0-9-]+)$#', (string) $chemin, $m)
+            && redirection_cible((string) $chemin, $table, $racine, $aujourdhui, $articleEnLigne) !== null) {
+            $slugs[] = $m[1];
+        }
+    }
+    return $slugs;
+}
+
+/** Fragment SQL « AND slug NOT IN (?, …) » et ses paramètres liés ; liste vide : pas de fragment. */
+function blog_exclusion_sql(array $slugs, string $colonne = 'slug'): array
+{
+    $slugs = array_values($slugs);
+    if ($slugs === []) {
+        return ['', []];
+    }
+    return [' AND ' . $colonne . ' NOT IN (' . implode(', ', array_fill(0, count($slugs), '?')) . ')', $slugs];
+}
+
 /** Registre de navigation avec chaque URL ramenée à son URL finale. */
 function navigation_chargee(): array
 {

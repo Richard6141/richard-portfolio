@@ -46,7 +46,8 @@ if (!$post) {
         $stmt = $pdo->prepare("SELECT 1 FROM blog_posts WHERE user_id = ? AND slug = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW())");
         $stmt->execute([$userId, $target]);
         if ($stmt->fetchColumn()) {
-            header('Location: /blog/' . $target, true, 301);
+            // Un seul saut : si le slug corrigé redirige lui-même (comparatif, fusion), aller droit à sa cible.
+            header('Location: ' . url_finale('/blog/' . $target), true, 301);
             exit;
         }
     }
@@ -68,14 +69,15 @@ $stmt = $pdo->prepare("SELECT * FROM social_links WHERE user_id = ? ORDER BY sor
 $stmt->execute([$userId]);
 $socialLinks = $stmt->fetchAll();
 
+[$exclSql, $exclParams] = blog_exclusion_sql(blog_slugs_rediriges());
 $stmt = $pdo->prepare("
     SELECT title, slug, summary, cover_image, category, published_at, reading_time
     FROM blog_posts
-    WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) AND id != ?
+    WHERE user_id = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW()) AND id != ?{$exclSql}
     ORDER BY (category IS NOT NULL AND category = ?) DESC, published_at DESC
     LIMIT 3
 ");
-$stmt->execute([$userId, $post['id'], $post['category'] ?? '']);
+$stmt->execute(array_merge([$userId, $post['id']], $exclParams, [$post['category'] ?? '']));
 $related = blog_sans_rediriges($stmt->fetchAll());
 
 // Variables marque (pour header/footer partials)
