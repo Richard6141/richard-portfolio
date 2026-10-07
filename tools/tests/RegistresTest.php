@@ -150,3 +150,14 @@ function test_registres_fiche_pays_groupee_dans_l_ordre(): void
     assert_same(['libelle' => 'Opérateurs de mobile money', 'valeur' => 'MTN MoMo, Moov Money', 'source' => 'https://example.org/p', 'date' => '2026-01-01'], $groupes['Paiement'][0]);
     assert_same([], registre_fiche_groupes([]));
 }
+
+function test_registres_secteur_univers_et_pages_locales(): void
+{
+    // Vague 1E : un secteur porte un univers connu et des pages locales qui existent (data/sujets).
+    $base = require fixtures() . '/secteurs/test-secteur.php';
+    assert_same([], registre_valider('secteur', 'test-secteur', $base));
+    $erreurs = static fn(array $modif): string => implode(' ', registre_valider('secteur', 'test-secteur', $modif + $base));
+    assert_contains('univers inconnu : Divers', $erreurs(['univers' => 'Divers']));
+    assert_contains('page locale inconnue : digitaliser-atlantide', $erreurs(['locales' => ['digitaliser-atlantide']]));
+    assert_same([], registre_valider('secteur', 'test-secteur', ['locales' => []] + $base), 'un secteur sans page locale reste valide');
+}

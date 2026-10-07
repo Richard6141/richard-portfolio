@@ -33,6 +33,16 @@ if ($listeType === 'formation' && $rp['type'] === 'hub') {
         $elements = array_merge(...array_values($hubFamilles));
     }
 }
+// Vague 1E : hub des secteurs rangé par univers, comme les services par famille.
+if ($listeType === 'secteur') {
+    foreach (REGISTRES_UNIVERS as $hubUnivers) {
+        $hubFamilles[$hubUnivers] = array_filter($elements, static fn(array $q): bool => ($q['univers'] ?? '') === $hubUnivers);
+    }
+    $hubFamilles = array_filter($hubFamilles);
+    if ($hubFamilles) {
+        $elements = array_merge(...array_values($hubFamilles));
+    }
+}
 // Vague 1C : les pages métier publiées, par univers, sous les fiches du hub des formations.
 $hubMetiers = [];
 if ($listeType === 'formation' && $rp['type'] === 'hub') {

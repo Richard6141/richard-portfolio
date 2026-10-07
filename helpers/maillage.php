@@ -67,6 +67,23 @@ function maillage_villes(): array
     return $villes ??= (array) require __DIR__ . '/../portfolio/data/villes.php';
 }
 
+/** Pages historiques « sujet × ville » (data/sujets.php), à plat : slug => [titre, url]. Vague 1E. */
+function maillage_sujets(): array
+{
+    static $pages = null;
+    if ($pages === null) {
+        $pages = [];
+        foreach ((array) require __DIR__ . '/../portfolio/data/sujets.php' as $sujet) {
+            foreach ((array) ($sujet['pages'] ?? []) as $pg) {
+                if (!empty($pg['slug'])) {
+                    $pages[(string) $pg['slug']] = ['titre' => (string) $pg['titre'], 'url' => '/' . $pg['slug']];
+                }
+            }
+        }
+    }
+    return $pages;
+}
+
 function maillage_liens(array $p, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): array
 {
     $groupes = [];

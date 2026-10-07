@@ -38,6 +38,7 @@ const REGISTRES_CHAMPS_TYPE = [
     'pays'      => ['fiche'],
     'formation' => ['domaine', 'forte', 'duree', 'formats', 'programme', 'prix'],
     'metier'    => ['univers', 'prioritaire'],
+    'secteur'   => ['univers', 'locales'],
     'histoire'  => ['relation', 'client'],
     'terme'     => ['terme', 'definition'],
     'hub'       => ['liste'],
@@ -237,8 +238,16 @@ function registre_valider(string $type, string $slug, array $p): array
     if ($type === 'formation' && isset($p['domaine']) && !in_array($p['domaine'], REGISTRES_DOMAINES, true)) {
         $e[] = 'domaine inconnu : ' . $p['domaine'];
     }
-    if ($type === 'metier' && isset($p['univers']) && !in_array($p['univers'], REGISTRES_UNIVERS, true)) {
+    if (in_array($type, ['metier', 'secteur'], true) && isset($p['univers']) && !in_array($p['univers'], REGISTRES_UNIVERS, true)) {
         $e[] = 'univers inconnu : ' . $p['univers'];
+    }
+    // Vague 1E : les pages locales d'un secteur sont des pages historiques existantes (data/sujets.php).
+    if ($type === 'secteur' && isset($p['locales'])) {
+        foreach ((array) $p['locales'] as $l) {
+            if (!isset(maillage_sujets()[(string) $l])) {
+                $e[] = 'page locale inconnue : ' . $l;
+            }
+        }
     }
     if ($type === 'histoire' && isset($p['relation']) && !in_array($p['relation'], ['direct', 'sous-traitance', 'produit', 'externe'], true)) {
         $e[] = 'relation : direct, sous-traitance, produit ou externe';
