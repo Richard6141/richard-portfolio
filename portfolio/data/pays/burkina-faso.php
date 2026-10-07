@@ -185,7 +185,7 @@ return [
             'titre'       => 'Pourquoi confier un projet burkinabè à Richard SALANON ?',
             'paragraphes' => [
                 fait('phrase_entite'),
-                'Richard a déjà travaillé avec des entreprises au Burkina Faso, un des quatorze pays où il est intervenu, sur place ou à distance. Il compte plus de six ans d\'expérience, une formation à EPITECH (2022), plus de 50 projets livrés et plus de 200 personnes formées. Ses projets sont présentés sur la page des <a href="/realisations/">réalisations</a>.',
+                'Richard a déjà travaillé avec des entreprises au Burkina Faso, un des quinze pays où il est intervenu, sur place ou à distance. Il compte plus de six ans d\'expérience, une formation à EPITECH (2022), plus de 50 projets livrés et plus de 200 personnes formées. Ses projets sont présentés sur la page des <a href="/realisations/">réalisations</a>.',
                 'Trois d\'entre eux touchent au paiement mobile. OBA TV, web TV de Cotonou, vend un abonnement premium payé par MTN MoMo et Moov Money. KossKoss Select, boutique du Cameroun, accepte Orange Money et MTN MoMo. Afro Joy\'ce, à Abidjan, a fait passer ses commandes de WhatsApp à un site avec paiement Wave, projet réalisé en sous-traitance pour Digital Développement. Ils illustrent le branchement du paiement mobile sur un site ou une application.',
                 'Richard développe aussi <a href="https://wapy.pro">Wapy</a>, un assistant WhatsApp à intelligence artificielle pour les entreprises d\'Afrique francophone, et il est co-fondateur d\'<a href="https://audyxa.com">Audyxa</a>. Pour en savoir plus sur son parcours, voir <a href="/richard-salanon">sa page de présentation</a> et la page <a href="/a-propos/">à propos</a>.',
             ],

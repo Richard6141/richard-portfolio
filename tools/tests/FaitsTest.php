@@ -53,8 +53,9 @@ function test_faits_reponses_du_questionnaire_du_03_10_2026(): void
     assert_same('100+', $f['clients']);
     assert_same('200+', $f['personnes_formees']);
     assert_same(2022, $f['formation']['annee']);
-    assert_same(14, count($f['pays_travailles']));
-    foreach (['Tchad', 'Suisse', 'RD Congo', 'Côte d\'Ivoire'] as $pays) {
+    // Cameroun ajouté par Richard le 07/10/2026 (projet KossKoss Select) : 15 pays.
+    assert_same(15, count($f['pays_travailles']));
+    foreach (['Tchad', 'Suisse', 'RD Congo', 'Côte d\'Ivoire', 'Cameroun'] as $pays) {
         assert_true(in_array($pays, $f['pays_travailles'], true), "pays travaillé absent : {$pays}");
     }
     assert_true(in_array('https://www.instagram.com/richard.salanon', $f['profils'], true), 'Instagram absent');

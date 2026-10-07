@@ -1,7 +1,7 @@
 <?php
 // ============================================================
 // data/pays/cameroun.php · Page pays « Cameroun » (vague 1D).
-// Page rédigée avec « peut accompagner à distance » (Déjà travaillé = non). Seul projet situé dans le pays : KossKoss Select (client direct).
+// Cameroun ajouté à fait('pays_travailles') par Richard le 07/10/2026 (Déjà travaillé = oui) : projet KossKoss Select (client direct).
 // Faits relevés le 2026-10-06 : DataReportal 2026, Banque mondiale, BEAC, DGI,
 // loi n° 2024/017, loi de finances 2026, loi n° 2010/021, OHADA, CamPay.
 // Limite connue : le texte du décret ou de l'arrêté de la facturation électronique
@@ -189,8 +189,8 @@ return [
             'titre'       => 'Pourquoi confier un projet numérique camerounais à Richard SALANON ?',
             'paragraphes' => [
                 'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
-                'Richard peut accompagner à distance les entreprises au Cameroun. Il a plus de six ans d’expérience, il s’est formé à EPITECH en 2022 et il a déjà accompagné des entreprises d’Afrique centrale, au Gabon, au Tchad et en RD Congo. Il est aussi le créateur de Wapy, un assistant WhatsApp à intelligence artificielle, et co-fondateur d’Audyxa.',
-                'Un projet est situé au Cameroun parmi ceux de son portfolio : KossKoss Select, un concept-store cosmétique. C’est une boutique lancée avec un diagnostic beauté en cinq étapes, quatorze routines de soin et le paiement par Orange Money et MTN MoMo. Les autres projets sont à voir sur la page des <a href="/realisations/">réalisations</a>. Pour l’histoire complète du parcours, voir <a href="/richard-salanon">Richard SALANON</a> et la page <a href="/a-propos/">À propos</a>.',
+                'Richard a déjà travaillé avec des entreprises au Cameroun, et il les accompagne à distance, depuis Cotonou. Il a plus de six ans d’expérience, il s’est formé à EPITECH en 2022 et il a déjà accompagné des entreprises d’Afrique centrale, au Gabon, au Tchad et en RD Congo. Il est aussi le créateur de Wapy, un assistant WhatsApp à intelligence artificielle, et co-fondateur d’Audyxa.',
+                'Au Cameroun, il a réalisé pour un client direct KossKoss Select, un concept-store cosmétique. C’est une boutique lancée avec un diagnostic beauté en cinq étapes, quatorze routines de soin et le paiement par Orange Money et MTN MoMo. Les autres projets sont à voir sur la page des <a href="/realisations/">réalisations</a>. Pour l’histoire complète du parcours, voir <a href="/richard-salanon">Richard SALANON</a> et la page <a href="/a-propos/">À propos</a>.',
             ],
         ],
         [
@@ -203,7 +203,7 @@ return [
 
     'faq' => [
         ['q' => 'Richard SALANON intervient-il sur place au Cameroun ?', 'r' => 'Non, l’intervention se fait à distance, en visioconférence, par écrit et par WhatsApp. Il n’y a aucun décalage horaire avec Cotonou, puisque le Cameroun et le Bénin sont tous deux en UTC+1. Un besoin de présence physique, comme un câblage, passe par un partenaire local choisi avec vous.'],
-        ['q' => 'Richard SALANON peut-il accompagner des entreprises camerounaises ?', 'r' => 'Richard peut accompagner à distance les entreprises du Cameroun. Son portfolio compte un projet situé au Cameroun, KossKoss Select, une boutique de cosmétiques avec paiement par Orange Money et MTN MoMo.'],
+        ['q' => 'Richard SALANON peut-il accompagner des entreprises camerounaises ?', 'r' => 'Oui. Richard a déjà travaillé avec des entreprises au Cameroun, à distance depuis Cotonou. Son portfolio compte un projet camerounais, KossKoss Select, une boutique de cosmétiques avec paiement par Orange Money et MTN MoMo.'],
         ['q' => 'Quels moyens de paiement un site camerounais doit-il accepter ?', 'r' => 'MTN MoMo et Orange Money en priorité, par un agrégateur comme CamPay qui annonce 2 % de frais sur la collecte. La carte bancaire complète l’offre pour la diaspora, et le virement convient aux clients professionnels. Les frais se revérifient au cadrage.'],
         ['q' => 'La loi sur les données personnelles s’applique-t-elle déjà au Cameroun ?', 'r' => 'Oui. La loi n° 2024/017 du 23 décembre 2024 est entrée en vigueur le 23 juin 2026, après dix-huit mois de transition. Elle exige un consentement explicite, la limitation des données collectées et des mesures de sécurité, et encadre le transfert de données vers l’étranger.'],
         ['q' => 'Quelle autorité contrôle la protection des données au Cameroun ?', 'r' => 'La loi de 2024 crée l’Autorité de protection des données à caractère personnel, organisme public indépendant. Aucune source publique ne confirme encore sa mise en place complète ; la procédure de dépôt et les formalités préalables se vérifient auprès d’elle.'],
