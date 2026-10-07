@@ -32,8 +32,8 @@ $posts = blog_sans_rediriges($st->fetchAll());
 // sanitize($cat) retire ici le 20/08/2026 : pv2-head.php echappe deja $pageTitle,
 // ce qui produisait un double-echappement ("&amp;amp;" pour une categorie
 // contenant "&", par exemple "Automatisation & Scraping Web").
-$pageTitle     = seoTitle(($cat !== '' ? $cat . ' · ' : '') . 'Blog : conseils web, SEO, automatisation & IA', $fullName);
-$pageDesc      = seoDescription('Articles et conseils pratiques sur la création de sites web, le référencement (SEO), l\'automatisation et l\'intelligence artificielle pour développer votre activité en ligne.');
+$pageTitle     = seoTitle(($cat !== '' ? $cat . ' · ' : '') . 'Blog : sites web, SEO, automatisation et IA en entreprise', $fullName);
+$pageDesc      = seoDescription('Conseils pratiques pour créer un site web, être visible sur Google et dans les réponses de l\'IA, automatiser vos tâches et digitaliser votre entreprise.');
 $pageCanonical = $portfolioUrl . '/blog/' . ($page > 1 ? '?p=' . $page : '');
 $pageSchemas = [
     ['@context' => 'https://schema.org', '@type' => 'Blog', 'url' => $portfolioUrl . '/blog/', 'name' => 'Blog ' . $fullName],
