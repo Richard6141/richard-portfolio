@@ -58,3 +58,22 @@ function blog_date_maj(array $post): string
     $ts = max((int) strtotime((string) ($post['updated_at'] ?? '')), (int) strtotime((string) ($post['published_at'] ?? '')));
     return $ts > 0 ? date('Y-m-d', $ts) : '';
 }
+
+/** Article publié et daté du passé dans la base ; false si la base est injoignable (site local, panne). */
+function blog_article_en_ligne(string $slug): bool
+{
+    static $memo = [];
+    if (array_key_exists($slug, $memo)) {
+        return $memo[$slug];
+    }
+    try {
+        if (!function_exists('getPDO')) {
+            require_once __DIR__ . '/../config/db.php';
+        }
+        $st = getPDO()->prepare("SELECT 1 FROM blog_posts WHERE slug = ? AND status = 'published' AND (published_at IS NULL OR published_at <= NOW())");
+        $st->execute([$slug]);
+        return $memo[$slug] = (bool) $st->fetchColumn();
+    } catch (\Throwable $e) {
+        return $memo[$slug] = false;
+    }
+}

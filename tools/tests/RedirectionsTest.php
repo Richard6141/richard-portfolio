@@ -12,7 +12,7 @@ function test_redirections_table_conforme_a_la_spec(): void
     foreach ($t as $de => $vers) {
         assert_true(str_starts_with($de, '/') && str_starts_with($vers, '/'), $de);
         assert_true(!isset($t[$vers]), "chaîne : {$de} vers {$vers}");
-        $resolue = false;
+        $resolue = (bool) preg_match('#^/blog/[a-z0-9-]+$#', $vers);
         foreach (array_keys(ROUTES_REGISTRES) as $motif) { if (preg_match($motif, ltrim($vers, '/'), $m)) { $resolue = true; break; } }
         assert_true($resolue, "cible hors registres : {$vers}");
     }

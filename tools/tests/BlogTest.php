@@ -83,3 +83,27 @@ function test_blog_tableau_de_bord_edite_la_meta(): void
     assert_contains("'meta'=>", $api);
     assert_contains('form.meta', (string) file_get_contents(racine('dashboard/blog.php')));
 }
+
+function test_blog_redirection_vers_un_article_seulement_s_il_est_en_ligne(): void
+{
+    $table = ['/blog/doublon' => '/blog/garde'];
+    $garde = static fn(string $slug): bool => $slug === 'garde';
+    $aucun = static fn(string $slug): bool => false;
+    assert_same('/blog/garde', redirection_cible('/blog/doublon', $table, REGISTRES_RACINE, null, $garde));
+    assert_same(null, redirection_cible('/blog/doublon', $table, REGISTRES_RACINE, null, $aucun), 'cible absente : l\'ancien article reste servi');
+    assert_same(null, redirection_cible('/blog/inconnu', $table, REGISTRES_RACINE, null, $garde));
+}
+
+function test_blog_article_en_ligne_faux_sans_base(): void
+{
+    // Le site local tourne sans base (AmorcageTest) : aucune redirection d'article ne s'active, aucune exception.
+    assert_same(false, blog_article_en_ligne('un-article-quelconque'));
+}
+
+function test_blog_sitemap_et_llms_sans_articles_rediriges(): void
+{
+    $fonctions = (string) file_get_contents(racine('helpers/functions.php'));
+    $debut = (int) strpos($fonctions, 'function sitemap_entrees_base');
+    assert_contains('blog_sans_rediriges(', substr($fonctions, $debut, 3000), 'sitemap : article redirigé retiré');
+    assert_contains('blog_sans_rediriges', (string) file_get_contents(racine('helpers/llms.php')), 'llms.txt : article redirigé retiré');
+}

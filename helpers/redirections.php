@@ -10,12 +10,15 @@ function redirections_table(): array
     return $t ??= require __DIR__ . '/../portfolio/data/redirections.php';
 }
 
-/** Cible d'une ancienne URL si elle est publiée, sinon null. */
-function redirection_cible(string $chemin, ?array $table = null, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null): ?string
+/** Cible d'une ancienne URL si elle est publiée (page de registre ou article en base), sinon null. */
+function redirection_cible(string $chemin, ?array $table = null, string $racine = REGISTRES_RACINE, ?string $aujourdhui = null, ?callable $articleEnLigne = null): ?string
 {
     $cible = ($table ?? redirections_table())[$chemin] ?? null;
     if ($cible === null) {
         return null;
+    }
+    if (preg_match('#^/blog/([a-z0-9-]+)$#', $cible, $m)) {
+        return ($articleEnLigne ?? 'blog_article_en_ligne')($m[1]) ? $cible : null;
     }
     return route_resoudre(ltrim($cible, '/'), $racine, $aujourdhui) !== null ? $cible : null;
 }
