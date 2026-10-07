@@ -1611,6 +1611,6 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .pv2 .projet__technos li{padding:2px 9px;border-radius:var(--pill);background:var(--surface-2);color:var(--link);font-size:.76rem;font-weight:600}
 .pv2 .projet__relation{margin-top:auto!important;padding-top:.7rem;border-top:1px solid var(--line);font-size:.82rem!important;font-weight:600;color:var(--muted)!important}
 .pv2 .projet__relation--direct,.pv2 .projet__relation--produit{color:var(--link)!important}
-.art-bref{max-width:46rem;margin:1.25rem 0 0;font-size:1.0625rem;line-height:1.65}
+.art-bref{max-width:46rem;text-align:left;margin:1.25rem auto 0;font-size:1.0625rem;line-height:1.65}
 .art-bref strong{color:var(--acc)}
 .art-head .boite-auteur,.blog-main .boite-auteur{margin-top:2.5rem}
