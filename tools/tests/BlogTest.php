@@ -4,6 +4,7 @@ declare(strict_types=1);
 // Vague 1F : reprise du blog (instantané, gabarit, migrations, contrôle hors ligne).
 
 require_once racine('helpers/functions.php');
+require_once racine('helpers/migrations.php');
 require_once racine('helpers/icons.php');
 
 function test_blog_extraire_lit_un_article_en_ligne(): void
@@ -106,4 +107,71 @@ function test_blog_sitemap_et_llms_sans_articles_rediriges(): void
     $debut = (int) strpos($fonctions, 'function sitemap_entrees_base');
     assert_contains('blog_sans_rediriges(', substr($fonctions, $debut, 3000), 'sitemap : article redirigé retiré');
     assert_contains('blog_sans_rediriges', (string) file_get_contents(racine('helpers/llms.php')), 'llms.txt : article redirigé retiré');
+}
+
+function blog_source_de_test(array $modif = []): array
+{
+    $faq = '';
+    for ($i = 1; $i <= 6; $i++) {
+        $faq .= "<p><strong>Question numéro {$i} ?</strong></p><p>Réponse numéro {$i}.</p>";
+    }
+    return $modif + [
+        'slug'       => 'test-article',
+        'instantane' => '2026-10-07 12:00:00',
+        'titre'      => 'Titre ' . str_repeat('x', 49),
+        'meta'       => str_repeat('m', 149) . '.',
+        'resume'     => 'Première phrase du résumé. Deuxième phrase du résumé.',
+        'categorie'  => 'SEO',
+        'tags'       => ['a/b', 'référencement'],
+        'contenu'    => '<h2>Pourquoi tester ?</h2><p>Texte avec <a href="/contact">un lien</a>.</p><h2>Questions fréquentes</h2>' . $faq
+                      . '<h2>Sources</h2><ul><li><a href="https://example.org/">Source</a>, consultée le 7 octobre 2026</li></ul>',
+    ];
+}
+
+function test_blog_source_valide_et_refus(): void
+{
+    assert_same([], blog_article_problemes(blog_source_de_test(), 'test-article'));
+    $base = blog_source_de_test()['contenu'];
+    $p = static fn(array $m): string => implode(' | ', blog_article_problemes(blog_source_de_test($m), 'test-article'));
+    assert_contains('titre', $p(['titre' => 'Trop court']));
+    assert_contains('meta', $p(['meta' => 'Courte.']));
+    assert_contains('résumé', $p(['resume' => 'Une seule phrase.']));
+    assert_contains('balise <table>', $p(['contenu' => $base . '<table><tr><td>x</td></tr></table>']));
+    assert_contains('attribut class', $p(['contenu' => $base . '<p class="x">y</p>']));
+    assert_contains('H2 sans question', $p(['contenu' => '<h2>Un titre plat</h2>' . $base]));
+    assert_contains('FAQ', $p(['contenu' => '<h2>Pourquoi ?</h2><p>x</p><h2>Sources</h2><ul><li><a href="https://example.org/">S</a></li></ul>']));
+    assert_contains('Sources', $p(['contenu' => '<h2>Pourquoi ?</h2><p>x</p>']));
+    assert_contains('emoji', $p(['contenu' => $base . '<p>Bravo 🙂</p>']));
+    assert_contains('paragraphe de 121 mots', $p(['contenu' => $base . '<p>' . trim(str_repeat('mot ', 121)) . '</p>']));
+    assert_contains('instantane', $p(['instantane' => '07/10/2026']));
+    assert_contains('slug', implode(' ', blog_article_problemes(blog_source_de_test(), 'autre-nom')));
+    assert_same([], blog_hors_quill('<p><a href="https://x.org/?a=b&amp;c=d">lien</a> <img src="/uploads/blog/x.webp" alt="x"></p>'), 'un = dans une URL n\'est pas un attribut');
+    assert_contains('image hors /uploads/', implode(' ', blog_hors_quill('<p><img src="https://x.org/i.png" alt="x"></p>')));
+}
+
+function test_blog_migration_une_instruction_et_texte_intact(): void
+{
+    $piege = "<p>L'apostrophe, un \ antislash ; un point-virgule, des \"guillemets\".</p>\n-- <p>ligne qui commence par deux tirets</p>\r\n<p>Fin : é à ç œ.</p>";
+    $sql = blog_sql_mise_a_jour(blog_source_de_test(['contenu' => $piege, 'titre' => "Titre d'essai"]));
+    $instructions = migration_decouper_sql($sql);
+    assert_same(1, count($instructions), $sql);
+    $i = $instructions[0];
+    assert_contains("WHERE slug = 'test-article' AND (updated_at IS NULL OR updated_at <= '2026-10-07 12:00:00')", $i);
+    assert_contains("title = 'Titre d\'essai'", $i);
+    assert_contains('updated_at = NOW()', $i);
+    $debut = strpos($i, "content = '") + strlen("content = '");
+    $fin = strpos($i, "', category = ");
+    assert_same($piege, stripcslashes(substr($i, $debut, $fin - $debut)), 'le littéral décodé comme par MySQL redonne le texte');
+}
+
+function test_blog_qa_hors_ligne_sur_une_source_valide(): void
+{
+    $dossier = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'blog-qa-' . getmypid();
+    if (!is_dir($dossier)) { mkdir($dossier); }
+    file_put_contents($dossier . DIRECTORY_SEPARATOR . 'test-article.php', '<?php return ' . var_export(blog_source_de_test(), true) . ';');
+    exec(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(racine('tools/blog/qa.php')) . ' --dossier=' . escapeshellarg($dossier) . ' 2>&1', $sortie, $code);
+    array_map('unlink', glob($dossier . DIRECTORY_SEPARATOR . '*.php') ?: []);
+    rmdir($dossier);
+    assert_same(0, $code, implode("\n", $sortie));
+    assert_contains('test-article', implode("\n", $sortie));
 }
