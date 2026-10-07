@@ -16,7 +16,7 @@ return [
 <li><strong>Bons candidats :</strong> brouillons d'e-mails et de publications, descriptions de produits, comptes rendus de réunion, résumés de documents, tri et reformulation de retours clients, réponses types à vos questions fréquentes.</li>
 <li><strong>À garder pour plus tard :</strong> tout ce qui engage l'entreprise sans relecture (prix, délais, remboursements), les décisions sur une personne (embauche, crédit) et les calculs comptables non vérifiés.</li>
 </ul>
-<p>Pour trouver votre première tâche, notez pendant une semaine ce qui vous prend le plus de temps et se répète. Gardez celle qui revient le plus souvent et dont vous savez à quoi ressemble une bonne réponse.</p>
+<p>Pour trouver votre première tâche, notez pendant une semaine ce qui vous prend le plus de temps et se répète. Gardez celle qui revient le plus souvent et dont vous savez à quoi ressemble une bonne réponse. Une suite d'étapes identiques entre plusieurs outils, comme la prospection, s'automatise : voir <a href="/blog/automatiser-sa-prospection-n8n-make">automatiser sa prospection avec n8n ou Make</a>.</p>
 
 <h2>Quels outils choisir et à quel prix ?</h2>
 <p>Pour démarrer, un assistant généraliste suffit. Les tarifs ci-dessous sont ceux des pages officielles consultées le 7 octobre 2026 ; ils changent souvent, vérifiez-les avant de payer.</p>
@@ -70,7 +70,7 @@ return [
 <ul>
 <li>la même question revient des dizaines de fois par semaine et la réponse se trouve dans vos documents (tarifs, conditions, fiches produits) ;</li>
 <li>l'information doit venir de votre logiciel de gestion ou de votre ERP, et non d'un copier-coller ;</li>
-<li>vous voulez répondre à vos clients sur WhatsApp à toute heure, avec un relais vers une personne ;</li>
+<li>vous voulez <a href="/blog/chatbot-whatsapp-entreprise-support-client">répondre à vos clients sur WhatsApp à toute heure</a>, avec un relais vers une personne ;</li>
 <li>des règles de confidentialité interdisent d'envoyer vos données dans un outil public.</li>
 </ul>
 <p>Je conçois ces solutions : voyez l'<a href="/services/automatisation-ia">automatisation et l'IA</a>, l'<a href="/services/integration-ia-entreprise">intégration de l'IA dans vos logiciels</a> ou les <a href="/services/agents-ia-chatbot-whatsapp">agents IA et chatbots WhatsApp</a>. Le prix se fixe sur devis après cadrage ; <a href="/contact">décrivez-moi votre tâche</a> et nous voyons si l'outil grand public suffit.</p>

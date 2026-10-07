@@ -79,7 +79,7 @@ return [
 <li>Vos prospects sont-ils des entreprises, avec un lien clair entre votre offre et leur métier ?</li>
 <li>Peut-on les lister à partir de sources publiques sans collecter plus de données que nécessaire ?</li>
 <li>Un message court et personnalisé suffit-il pour un premier contact ?</li>
-<li>Avez-vous quelqu'un pour répondre vite aux retours ?</li>
+<li>Avez-vous quelqu'un pour répondre vite aux retours, par exemple avec un <a href="/blog/chatbot-whatsapp-entreprise-support-client">assistant WhatsApp</a> qui passe la main à une personne ?</li>
 </ol>
 <p>Si les réponses sont positives, regardez d'abord les étapes d'un scénario complet dans <a href="/blog/automatiser-sa-prospection-n8n-make">automatiser sa prospection avec n8n ou Make</a>. Pour un cadrage sur mesure, la page <a href="/services/automatisation-ia">automatisation et IA</a> décrit ce que je propose, et vous pouvez <a href="/contact">me contacter</a> pour en discuter sans engagement.</p>
 <h2>Questions fréquentes</h2>

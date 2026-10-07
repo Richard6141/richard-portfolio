@@ -35,7 +35,7 @@ return [
 <li><strong>Des polices web mal chargées</strong> : trop de graisses et de familles, texte invisible pendant le chargement.</li>
 <li><strong>Du code qui bloque l'affichage</strong> : feuilles de style et JavaScript volumineux chargés avant le contenu.</li>
 </ol>
-<p>Le rapport PageSpeed Insights indique, sous « Opportunités » et « Diagnostics », laquelle de ces causes pèse le plus sur votre page. Commencez par celle qui gagne le plus de temps.</p>
+<p>Le rapport PageSpeed Insights indique, sous « Opportunités » et « Diagnostics », laquelle de ces causes pèse le plus sur votre page. Commencez par celle qui gagne le plus de temps. Si votre trafic baisse pour une autre raison, voir <a href="/blog/google-ai-overviews-impact-trafic">l'impact des AI Overviews de Google sur le trafic</a>.</p>
 <h2>Comment corriger chaque cause ?</h2>
 <h3>Les images</h3>
 <ul>

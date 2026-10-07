@@ -37,10 +37,10 @@ return [
 <li><a href="https://woocommerce.com/">WooCommerce</a> : extension gratuite de WordPress, très flexible, mais vous payez l'hébergement et vous gérez les mises à jour et la sécurité.</li>
 <li><strong>Sur mesure</strong> : performant et adapté à votre métier, avec un investissement de départ plus élevé. Chez Richard SALANON, un site e-commerce se chiffre sur devis, selon le nombre de produits, les moyens de paiement et les connexions avec vos outils.</li>
 </ul>
-<p>Pour les prix d'un site en général, voir <a href="/blog/combien-coute-un-site-web-au-benin">combien coûte un site web au Bénin</a>.</p>
+<p>Pour les prix d'un site en général, voir <a href="/blog/combien-coute-un-site-web-au-benin">combien coûte un site web au Bénin</a>. Pour trancher entre une plateforme comme WooCommerce et un développement sur mesure, voir <a href="/comparatifs/wordpress-vs-sur-mesure">le comparatif WordPress ou sur mesure</a>.</p>
 
 <h2>Comment encaisser : carte, mobile money, paiement à la livraison ?</h2>
-<p>Un client béninois paie surtout par mobile money, un client de la diaspora plutôt par carte. Une boutique qui n'accepte qu'un moyen perd les autres. Le lien entre votre site et les opérateurs passe par une passerelle de paiement, qui prélève une commission sur chaque vente.</p>
+<p>Un client béninois paie surtout par mobile money, un client de la diaspora plutôt par carte. Une boutique qui n'accepte qu'un moyen perd les autres. Le lien entre votre site et les opérateurs passe par une passerelle de paiement, qui prélève une commission sur chaque vente. Le rôle du mobile money dans la région est détaillé dans l'article sur <a href="/blog/digitalisation-dentreprise-en-afrique-francophone-enjeux-et-bonnes-pratiques">la digitalisation des entreprises en Afrique francophone</a>.</p>
 <ul>
 <li><strong>Mobile money</strong> : MTN, Moov ou Celtiis au Bénin, via une passerelle comme FedaPay, KkiaPay ou CinetPay.</li>
 <li><strong>Carte bancaire</strong> : Visa et Mastercard via la même passerelle, ou via la plateforme (Shopify Payments selon les pays).</li>

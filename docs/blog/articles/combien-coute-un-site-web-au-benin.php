@@ -52,7 +52,7 @@ return [
 
 <h2>Freelance, agence ou plateforme : que paie-t-on vraiment ?</h2>
 <h3>Plateforme (Wix, Shopify)</h3>
-<p>Vous payez un abonnement et vous faites le site vous-même. Selon la page des formules de Wix consultée le 7 octobre 2026 (prix en dollars, facturation annuelle), les formules vont de 17,77 $ par mois (Light) à 159,77 $ par mois (Business Elite), avec un domaine offert un an. Selon la page de tarifs de Shopify France consultée le 7 octobre 2026, la boutique démarre à 27 € par mois (Basic, facturation annuelle), puis 79 € (Grow) et 289 € (Advanced). L'abonnement ne comprend ni vos textes, ni vos photos, ni votre temps.</p>
+<p>Vous payez un abonnement et vous faites le site vous-même. Selon la page des formules de Wix consultée le 7 octobre 2026 (prix en dollars, facturation annuelle), les formules vont de 17,77 $ par mois (Light) à 159,77 $ par mois (Business Elite), avec un domaine offert un an. Selon la page de tarifs de Shopify France consultée le 7 octobre 2026, la boutique démarre à 27 € par mois (Basic, facturation annuelle), puis 79 € (Grow) et 289 € (Advanced). L'abonnement ne comprend ni vos textes, ni vos photos, ni votre temps. Pour comparer une plateforme comme WordPress à un développement sur mesure, voir <a href="/comparatifs/wordpress-vs-sur-mesure">le comparatif WordPress ou sur mesure</a>.</p>
 <h3>Freelance</h3>
 <p>Un interlocuteur unique, un prix plus bas qu'en agence, une réactivité directe. Le risque est la dépendance à une seule personne : exigez par écrit l'accès à vos comptes et la cession du code.</p>
 <h3>Agence</h3>

@@ -12,7 +12,7 @@ return [
     'contenu'    => <<<'HTML'
 <h2>Pourquoi un site bien fait reste-t-il invisible sur Google ?</h2>
 <p>Un beau site n'est pas un site visible. Google doit pouvoir explorer vos pages, les indexer, puis juger qu'elles répondent mieux que les autres à une recherche. Une erreur à l'une de ces trois étapes suffit à vous rendre invisible, quelle que soit la qualité du reste.</p>
-<p>Les sept erreurs ci-dessous sont classées dans l'ordre où elles coupent la chaîne : d'abord celles qui empêchent l'indexation, ensuite celles qui brouillent le message, enfin celles qui dégradent l'expérience. Chacune se vérifie en quelques minutes.</p>
+<p>Les sept erreurs ci-dessous sont classées dans l'ordre où elles coupent la chaîne : d'abord celles qui empêchent l'indexation, ensuite celles qui brouillent le message, enfin celles qui dégradent l'expérience. Chacune se vérifie en quelques minutes. Pour l'effet des résumés IA de Google sur vos clics, voir <a href="/blog/google-ai-overviews-impact-trafic">l'impact des AI Overviews sur le trafic</a>.</p>
 
 <h2>Erreur 1 : l'indexation est-elle bloquée sans que vous le sachiez ?</h2>
 <p>C'est l'erreur la plus brutale, et souvent la plus bête : une balise <code>noindex</code> oubliée après la mise en ligne, ou un fichier robots.txt qui interdit l'exploration de tout le site. Elle arrive surtout après une refonte, quand le site de test, volontairement fermé aux moteurs, est copié tel quel en production.</p>
@@ -34,7 +34,7 @@ return [
 <li><strong>Titre :</strong> descriptif, concis, unique sur chaque page, avec le nom de votre marque ajouté sobrement. Google déconseille aussi la répétition de mots-clés (documentation consultée le 7 octobre 2026).</li>
 <li><strong>Description :</strong> Google l'utilise parfois comme extrait quand elle décrit la page mieux que le contenu lui-même, et rappelle que des descriptions identiques d'une page à l'autre n'aident pas. Rédigez-en une par page, en une ou deux phrases qui disent ce que le lecteur y trouvera.</li>
 </ul>
-<p>Précision utile : Google peut réécrire un titre qu'il juge inadapté. Un titre soigné réduit ce risque.</p>
+<p>Précision utile : Google peut réécrire un titre qu'il juge inadapté. Un titre soigné réduit ce risque. Pour les recherches de proximité, le classement suit d'autres critères : voir <a href="/blog/referencement-local-dominer-pack-local-google">le référencement local et le pack local Google</a>.</p>
 
 <h2>Erreur 4 : votre site est-il lent ?</h2>
 <p>Un site lent fait fuir les visiteurs, surtout sur mobile, et dégrade les indicateurs d'expérience que Google suit. Selon web.dev, consulté le 7 octobre 2026, les seuils jugés bons, mesurés pour 75 % des visites, sont un affichage du plus grand élément en 2,5 secondes ou moins (LCP), une réactivité de 200 millisecondes ou moins (INP) et un décalage visuel de 0,1 ou moins (CLS).</p>
@@ -48,7 +48,7 @@ return [
 <li>donnez à chaque question une page ou une section qui y répond complètement, avec vos prix, vos délais, vos exemples ;</li>
 <li>fusionnez ou supprimez les pages qui répètent la même chose.</li>
 </ol>
-<p>Les mots-clés viennent ensuite : ils se déduisent des questions des clients, pas l'inverse.</p>
+<p>Les mots-clés viennent ensuite : ils se déduisent des questions des clients, pas l'inverse. Pour une page qui doit déclencher une demande, voir <a href="/blog/landing-page-haute-conversion-7-elements">les 7 éléments d'une landing page qui convertit</a>.</p>
 
 <h2>Erreur 6 : des liens cassés et des pages introuvables ?</h2>
 <p>Un lien interne vers une page supprimée mène à une erreur 404. Selon la documentation Google Search Central consultée le 7 octobre 2026, une page en 404 est retirée de l'index si elle y figurait, et le robot l'explore de moins en moins. Le vrai danger est donc la page supprimée qui avait des visiteurs et des liens.</p>

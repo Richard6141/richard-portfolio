@@ -36,7 +36,7 @@ return [
 <li>chiffres vérifiables (années d'expérience, nombre de livraisons), jamais arrondis à la hausse ;</li>
 <li>garantie claire : remboursement, délai de réponse, ce qui se passe après le clic.</li>
 </ul>
-<p>Une preuve inventée ou gonflée coûte plus cher qu'une page sans preuve : un client qui vérifie perd toute confiance. Sans avis pour l'instant, mettez en avant une garantie et des réalisations concrètes.</p>
+<p>Une preuve inventée ou gonflée coûte plus cher qu'une page sans preuve : un client qui vérifie perd toute confiance. Sans avis pour l'instant, mettez en avant une garantie et des réalisations concrètes. Les avis visibles sur votre fiche d'établissement comptent aussi : voir <a href="/blog/google-business-profile-guide-complet">le guide complet de Google Business Profile</a>.</p>
 
 <h2>Comment présenter l'offre : bénéfices avant caractéristiques ?</h2>
 <p>Une caractéristique décrit le produit, un bénéfice décrit ce que le client y gagne. « Hébergement inclus » est une caractéristique ; « votre page est en ligne sans que vous gériez le moindre serveur » est un bénéfice.</p>

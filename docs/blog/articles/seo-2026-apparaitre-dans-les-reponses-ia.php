@@ -19,7 +19,7 @@ return [
 <h2>Qu'est-ce que le GEO et en quoi diffère-t-il du SEO ?</h2>
 <p>Le GEO (Generative Engine Optimization) désigne les pratiques qui augmentent vos chances d'être cité dans la réponse rédigée par une IA. Le SEO vise une position dans une liste de liens. Le GEO vise une mention, une reprise de vos informations ou un lien dans une réponse déjà rédigée.</p>
 <ul>
-<li><strong>Ce qui est commun :</strong> indexation, vitesse, pages utiles, réputation. Sans cela, aucune des deux ne fonctionne.</li>
+<li><strong>Ce qui est commun :</strong> indexation, vitesse, pages utiles, réputation (les <a href="/blog/7-erreurs-qui-tuent-votre-referencement">7 erreurs qui tuent votre référencement</a> en listent les pièges). Sans cela, aucune des deux ne fonctionne.</li>
 <li><strong>Ce que le GEO renforce :</strong> la réponse directe en tête de page, des faits précis et vérifiables, l'identité claire de l'entreprise et de l'auteur, la cohérence des informations d'un site à l'autre.</li>
 <li><strong>Ce qui change dans la mesure :</strong> on regarde les citations et le trafic venant des assistants, pas seulement les positions.</li>
 </ul>

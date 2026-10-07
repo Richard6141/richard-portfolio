@@ -43,7 +43,7 @@ return [
 <p>Pour aller plus loin avec les formules et les filtres, la <a href="/formations/excel-google-sheets">formation Excel et Google Sheets</a> couvre ces bases.</p>
 
 <h2>Comment utiliser les étiquettes et les réponses rapides de WhatsApp Business ?</h2>
-<p>Les étiquettes jouent le rôle des statuts du tableau, côté téléphone. Créez-en une par statut, avec les mêmes noms que dans la feuille : « Nouveau », « En discussion », « Devis envoyé », « Client », « Perdu ». En filtrant par étiquette, vous retrouvez les conversations à traiter sans ouvrir le tableur.</p>
+<p>Les étiquettes jouent le rôle des statuts du tableau, côté téléphone. Créez-en une par statut, avec les mêmes noms que dans la feuille : « Nouveau », « En discussion », « Devis envoyé », « Client », « Perdu ». En filtrant par étiquette, vous retrouvez les conversations à traiter sans ouvrir le tableur. L'étiquette « Client » repère aussi les personnes à qui demander un avis : voir <a href="/blog/obtenir-des-avis-google-clients">comment obtenir des avis Google</a>.</p>
 <p>Les réponses rapides évitent de retaper les messages répétitifs. Trois suffisent pour commencer :</p>
 <ul>
 <li>l'accueil, avec votre nom d'entreprise et vos horaires ;</li>

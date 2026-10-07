@@ -69,7 +69,7 @@ return [
 <ul>
 <li>Commencer petit : un chantier, un résultat visible, puis le suivant.</li>
 <li>Penser mobile d'abord, hors connexion ensuite.</li>
-<li>Encaisser en mobile money et par carte.</li>
+<li>Encaisser en mobile money et par carte (voir <a href="/blog/creer-site-e-commerce-vendre-en-ligne-2026">créer un site e-commerce pour vendre en ligne</a>).</li>
 <li>Vérifier le SYSCOHADA et la facture normalisée avant d'acheter un logiciel.</li>
 <li>Savoir où sont hébergées vos données.</li>
 <li>Former un référent interne.</li>

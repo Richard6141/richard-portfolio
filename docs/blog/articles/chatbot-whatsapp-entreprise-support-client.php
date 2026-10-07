@@ -54,7 +54,7 @@ return [
 <p>Une conversation WhatsApp contient des données personnelles : numéro, nom, adresse, parfois une commande ou un état de santé. Trois règles de base :</p>
 <ul>
 <li>ne collecter que ce qui sert la demande, et ne jamais demander un mot de passe, un code de carte ou une pièce d'identité par message ;</li>
-<li>prévenir le client de l'usage de ses données et du traitement par un assistant, et ne pas écrire à quelqu'un qui n'a pas accepté d'être contacté ;</li>
+<li>prévenir le client de l'usage de ses données et du traitement par un assistant, et ne pas écrire à quelqu'un qui n'a pas accepté d'être contacté (les règles de la prospection automatisée sont détaillées dans <a href="/blog/jai-construit-un-robot-qui-prospecte-500-artisans-par-mois-voici-ce-que-jai-appris">le retour d'expérience sur un robot de prospection</a>) ;</li>
 <li>savoir où partent les données : un assistant IA envoie le texte des échanges au fournisseur du modèle.</li>
 </ul>
 <p>Au Bénin, l'article 391 de la loi n° 2017-20 portant code du numérique exige, pour un transfert de données vers un État tiers, que l'Autorité de protection des données constate un niveau de protection équivalent et l'autorise au préalable. Pour une entreprise béninoise dont le fournisseur d'IA est à l'étranger, cette question se règle avant le lancement, pas après. Pour vos clients européens, le RGPD s'applique en plus.</p>

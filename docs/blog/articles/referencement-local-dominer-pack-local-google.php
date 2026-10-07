@@ -62,7 +62,7 @@ return [
 <li>Relevez chaque mois votre rang dans le pack, ainsi que les appels, demandes d'itinéraire et visites du site que la fiche affiche dans ses statistiques.</li>
 <li>Comparez les mêmes requêtes d'un mois à l'autre et notez ce que vous avez changé entre les deux : nouvel avis, nouvelles photos, correction d'une catégorie.</li>
 </ul>
-<p>Le but n'est pas la première place pour tous les mots, mais plus d'appels et de demandes venant de clients proches.</p>
+<p>Le but n'est pas la première place pour tous les mots, mais plus d'appels et de demandes venant de clients proches. Pour être aussi cité dans les réponses des assistants IA, voir <a href="/blog/seo-2026-apparaitre-dans-les-reponses-ia">comment apparaître dans les réponses IA</a>.</p>
 
 <h2>Quelles erreurs font perdre sa place ?</h2>
 <ul>
