@@ -12,14 +12,14 @@ return [
     'liste'   => 'comparatif',
     'title'   => 'Comparatifs d\'outils numériques pour PME | Richard SALANON',
     'meta'    => 'ERP, automatisation, paiement mobile money, IA : la méthode des comparatifs, une grille pondérée réutilisable et les pièges du choix d\'outil pour PME.',
-    'en_bref' => 'Ces comparatifs aident les dirigeants de PME d\'Afrique francophone et d\'Europe à choisir un outil numérique sans se fier à un classement générique. Chacun publie ses critères, le poids de chacun et des sources officielles datées. Cette page présente la méthode, une grille de décision à réutiliser, les pièges les plus coûteux et les quatre comparatifs disponibles. Aucun ne remplace le cadrage de votre besoin, un essai et un devis.',
+    'en_bref' => 'Ces comparatifs aident les dirigeants de PME d\'Afrique francophone et d\'Europe à choisir un outil numérique sans se fier à un classement générique. Chacun publie ses critères, le poids de chacun et des sources officielles datées. Cette page présente la méthode, une grille de décision à réutiliser, les pièges les plus coûteux et les comparatifs disponibles. Aucun ne remplace le cadrage de votre besoin, un essai et un devis.',
     'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'maj'     => '2026-10-07',
     'faits_hero' => [
         ['l' => 'Pour qui', 'v' => 'Dirigeants de PME, Afrique francophone et Europe'],
-        ['l' => 'Comparatifs', 'v' => 'ERP, automatisation, paiement, IA'],
-        ['l' => 'Approches comparées', 'v' => 'Abonnement, libre auto-hébergé, sur mesure'],
-        ['l' => 'Sources consultées', 'v' => '19 pages officielles, le 3 octobre 2026'],
+        ['l' => 'Comparatifs', 'v' => 'ERP, automatisation, paiement, IA, site web, application mobile'],
+        ['l' => 'Approches comparées', 'v' => 'Abonnement, libre auto-hébergé, sur mesure, site web, PWA, application'],
+        ['l' => 'Sources consultées', 'v' => 'Pages officielles citées dans chaque comparatif, relevées les 3 et 7 octobre 2026'],
     ],
     'sections' => [
         [
@@ -34,7 +34,7 @@ return [
         [
             'type'  => 'points',
             'titre' => 'Quels comparatifs trouver ici, et à quelle décision répond chacun ?',
-            'intro' => 'Le premier lot compte quatre comparatifs. Chacun traite une décision que les PME posent souvent dès qu\'elles se digitalisent : gérer, automatiser, encaisser, produire avec l\'IA. Les faits cités ci-dessous ont été vérifiés le 3 octobre 2026 sur les pages officielles liées ; le détail, les prix et la pondération se trouvent dans chaque comparatif.',
+            'intro' => 'Chaque comparatif traite une décision que les PME posent souvent dès qu\'elles se digitalisent : gérer, automatiser, encaisser, produire avec l\'IA, construire un site ou une application. Les faits cités ci-dessous ont été vérifiés les 3 et 7 octobre 2026 sur les pages officielles liées ; le détail, les prix et la pondération se trouvent dans chaque comparatif.',
             'items' => [
                 [
                     'titre' => 'Odoo ou Dolibarr : quel ERP pour gérer ventes, stocks et comptabilité ?',
@@ -53,8 +53,16 @@ return [
                     'texte' => 'Trois assistants d\'intelligence artificielle générative, édités respectivement par OpenAI, Anthropic et Google, que les équipes utilisent pour rédiger, résumer, traduire ou analyser des documents. Le comparatif ne cherche pas le plus brillant en démonstration ; il regarde la qualité du français, le traitement des données saisies par vos salariés, les offres destinées aux équipes, le coût par utilisateur et ce qu\'une PME peut raisonnablement confier à chacun. <a href="/comparatifs/chatgpt-vs-claude-vs-gemini">Lire le comparatif ChatGPT, Claude ou Gemini</a>.',
                 ],
                 [
-                    'titre' => 'Et pour un site web ou un hébergement ?',
-                    'texte' => 'Le choix d\'une solution de site (outil en ligne clé en main, système de gestion de contenu libre ou développement sur mesure) et celui d\'un hébergement ne font pas encore l\'objet d\'un comparatif dédié. La grille de décision et la comparaison des trois grandes approches présentées plus bas s\'y appliquent telles quelles : mêmes questions sur le coût total, la maîtrise des données, la réversibilité, les compétences disponibles et le comportement avec une connexion instable.',
+                    'titre' => 'WordPress ou site sur mesure : lequel choisir pour votre entreprise ?',
+                    'texte' => 'Trois façons de construire un site : WordPress avec un thème du marché, WordPress personnalisé par un développeur, ou un site sur mesure écrit avec un framework. Le comparatif publie huit critères pondérés et deux profils d\'entreprise, détaille le coût sur trois ans, puis traite la vitesse, le référencement, la sécurité, l\'autonomie, la dépendance au prestataire et le paiement par mobile money. Il déclare que Richard développe des sites sur mesure et justifie chaque note de la grille. <a href="/comparatifs/wordpress-vs-sur-mesure">Lire le comparatif WordPress ou sur mesure</a>.',
+                ],
+                [
+                    'titre' => 'Application mobile, PWA ou site web : que développer en premier ?',
+                    'texte' => 'Un site web responsive, une application web progressive (PWA) ou une application installée depuis un magasin : trois options qui ne résolvent pas le même problème. Le comparatif pèse huit critères selon trois profils d\'entreprise, détaille le coût sur trois ans, les frais et règles des magasins, la découverte sur Google, la connexion, la data mobile et le mobile money. Flutter et React Native y sont traités comme des options techniques de l\'application, pas comme des concurrents. <a href="/comparatifs/application-mobile-vs-site-web">Lire le comparatif application mobile, PWA ou site web</a>.',
+                ],
+                [
+                    'titre' => 'Et pour un hébergement ?',
+                    'texte' => 'Le choix d\'un hébergement ne fait pas encore l\'objet d\'un comparatif dédié. La grille de décision et la comparaison des trois grandes approches présentées plus bas s\'y appliquent telles quelles : mêmes questions sur le coût total, la maîtrise des données, la réversibilité, les compétences disponibles et le comportement avec une connexion instable.',
                 ],
             ],
         ],
@@ -205,7 +213,8 @@ return [
                 ['Supprimer les ressaisies entre logiciels', 'Outil d\'automatisation', '<a href="/comparatifs/n8n-vs-make-vs-zapier">n8n, Make ou Zapier</a>', 'Combien d\'exécutions par mois, et où les données doivent-elles rester ?'],
                 ['Encaisser en ligne en Afrique de l\'Ouest', 'Agrégateur de paiement', '<a href="/comparatifs/fedapay-vs-kkiapay-vs-cinetpay">FedaPay, Kkiapay ou CinetPay</a>', 'Quels pays, quels opérateurs et quelles cartes vos clients utilisent-ils ?'],
                 ['Rédiger, résumer, analyser des documents', 'Assistant d\'IA générative', '<a href="/comparatifs/chatgpt-vs-claude-vs-gemini">ChatGPT, Claude ou Gemini</a>', 'Quelles données l\'équipe aura-t-elle le droit d\'y saisir ?'],
-                ['Être trouvé et vendre en ligne', 'Site web', 'Pas encore de comparatif dédié', 'Vitrine, catalogue ou boutique : quel rôle exact pour le site ?'],
+                ['Être trouvé et vendre en ligne', 'Site web', '<a href="/comparatifs/wordpress-vs-sur-mesure">WordPress ou sur mesure</a>', 'Vitrine, catalogue ou boutique : quel rôle exact pour le site ?'],
+                ['Toucher ses clients sur leur téléphone', 'Site responsive, PWA ou application mobile', '<a href="/comparatifs/application-mobile-vs-site-web">Application mobile, PWA ou site web</a>', 'Vos clients reviennent-ils chaque semaine, et quelle part utilise un iPhone ?'],
                 ['Héberger un site, un ERP ou une automatisation', 'Hébergement', 'Pas encore de comparatif dédié', 'Qui administre le serveur, et où sont gardées les sauvegardes ?'],
             ],
         ],
