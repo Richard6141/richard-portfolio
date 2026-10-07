@@ -1,0 +1,276 @@
+<?php
+// ============================================================
+// data/secteurs/btp.php · Page secteur « BTP et bureaux d'études » (vague 1E).
+// Sources externes consultées le 07/10/2026 (voir 'sources'). Aucun projet du
+// portfolio n'est rattaché à ce secteur ; pas de page locale.
+// ============================================================
+declare(strict_types=1);
+
+return [
+    'titre'   => 'Du métré au décompte final : des chantiers suivis depuis le terrain, des situations de travaux à jour et une IA tenue en laisse, pour le BTP et les bureaux d\'études',
+    'title'   => 'BTP et bureaux d\'études : outils et IA | Richard SALANON',
+    'meta'    => 'Suivi de chantier sur mobile, devis et métrés, situations de travaux, appels d\'offres, plans et IA pour entreprises du BTP et bureaux d\'études. Sur devis.',
+    'en_bref' => 'Cette page s\'adresse aux entreprises du bâtiment et des travaux publics, aux bureaux d\'études et aux cabinets d\'architectes d\'Afrique francophone et d\'Europe. Richard SALANON y propose un ERP Odoo ou Dolibarr pour les devis, les achats et la facturation à l\'avancement, une application mobile de suivi de chantier, des automatisations et des usages de l\'IA encadrés. Les échanges ont lieu à distance, et sur place au Bénin. Chaque projet est chiffré sur devis, après un premier échange gratuit.',
+    'publie'  => '2026-11-19',
+    'maj'     => '2026-11-19',
+    'univers' => 'Technique et terrain',
+    'locales' => [],
+
+    'faits_hero' => [
+        ['l' => 'Pour qui', 'v' => 'Entreprises du BTP, bureaux d\'études, cabinets d\'architectes et d\'ingénieurs'],
+        ['l' => 'Intervention', 'v' => 'À distance ; sur place au Bénin'],
+        ['l' => 'Devis', 'v' => 'Sur devis'],
+        ['l' => 'Réponse', 'v' => 'sous 24 heures'],
+    ],
+
+    'sections' => [
+        [
+            'type'        => 'prose',
+            'titre'       => 'Où en est la digitalisation du BTP en Afrique francophone et en Europe ?',
+            'paragraphes' => [
+                'Le bâtiment reste l\'un des métiers les moins outillés. Dans son étude « Imagining construction\'s digital future », publiée en juin 2016, le cabinet McKinsey relève que les grands projets de construction finissent en moyenne avec 20 % de retard et jusqu\'à 80 % de dépassement de budget, et que la numérisation est un levier majeur pour inverser cette tendance. Le chiffre est ancien et mondial, mais le mécanisme se retrouve sur un petit chantier de Cotonou comme sur un lot de gros œuvre à Lyon : des informations qui circulent par téléphone, des plans qui changent sans que tous le sachent, des quantités ressaisies à chaque étape.',
+                'En Afrique francophone, la pression vient d\'abord de l\'administration. Au Bénin, la plateforme permisdeconstruire.gouv.bj a dématérialisé la demande de permis : selon le portail officiel du gouvernement, article du 12 mars 2020, le délai est de 14 jours à Cotonou et de 25 jours au plus ailleurs, contre 45 auparavant. La loi n° 2020-26 du 29 septembre 2020 a posé un nouveau code des marchés publics qui tient compte des moyens électroniques de passation. En Côte d\'Ivoire, le système SYGOMAP, lancé en juillet 2023, permet de consulter les plans de passation et les appels d\'offres et de déposer son offre en ligne.',
+                'En Europe, c\'est la commande publique et la fiscalité qui poussent. En France, depuis le 1er avril 2026 et le décret n° 2025-1386, les échanges d\'une procédure de passation se font par voie dématérialisée dès que le besoin estimé atteint 60 000 euros hors taxes (contre 40 000 auparavant), avec les documents de la consultation mis en ligne sur un profil d\'acheteur, et le calendrier de la facturation électronique est lancé : dès le 1er septembre 2026, chaque entreprise de travaux doit être en mesure de recevoir les factures électroniques de ses fournisseurs, et les PME devront en émettre à partir du 1er septembre 2027, selon impots.gouv.fr. Pour une entreprise de travaux, cela touche chaque situation de travaux et chaque facture de sous-traitant.',
+                'Entre ces deux rives, l\'écart n\'est pas tant dans les outils que dans leur usage. Beaucoup d\'entreprises possèdent déjà un tableur de métrés, un logiciel de dessin et un groupe WhatsApp de chantier. Ce qui manque est le lien : que la quantité mesurée alimente le devis, que le devis devienne un budget de chantier, que le budget serve de référence à la situation de travaux. C\'est ce lien que Richard SALANON propose de construire, outil par outil, sans tout remplacer d\'un coup.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Quels processus d\'une entreprise de travaux ou d\'un bureau d\'études gagnent à être digitalisés ?',
+            'intro' => 'Tous les processus ne se valent pas. Ceux qui reviennent à chaque chantier, qui engagent de l\'argent et qui impliquent plusieurs personnes sont les premiers à outiller. Les signes ci-dessous indiquent que le moment est venu ; trois d\'entre eux suffisent à justifier un cadrage.',
+            'items' => [
+                ['titre' => 'Le devis repart d\'une page blanche', 'texte' => 'Chaque chiffrage est refait à partir d\'un ancien fichier copié, avec des prix de matériaux qui datent de plusieurs mois. Une bibliothèque d\'ouvrages et de prix, mise à jour par un responsable, fait gagner des heures et évite les devis sous-évalués.'],
+                ['titre' => 'Les métrés se ressaisissent trois fois', 'texte' => 'Le métreur relève sur plan, le conducteur de travaux retape dans le devis, le comptable recopie dans la facture. À chaque copie, une quantité se perd ou se déforme, et la discussion avec le client porte sur le chiffre plutôt que sur l\'ouvrage.'],
+                ['titre' => 'Le rapport journalier arrive tard, ou jamais', 'texte' => 'Le chef de chantier note sur un cahier, photographie avec son téléphone, envoie un message le soir. Quand un litige survient trois mois plus tard, la photo est introuvable et personne ne sait quel jour le coulage a eu lieu.'],
+                ['titre' => 'Le matériel et les approvisionnements se découvrent en rupture', 'texte' => 'Une toupie de béton attend, un échafaudage manque, un sac de ciment est sorti sans bon. Sans registre des sorties par chantier, la perte est invisible jusqu\'à l\'inventaire.'],
+                ['titre' => 'Les sous-traitants se paient sans vue d\'ensemble', 'texte' => 'Chaque sous-traitant a son marché, ses acomptes et ses avenants. Faute de tableau unique, on ignore combien reste à payer sur un lot et si l\'on dépasse le marché signé.'],
+                ['titre' => 'La situation de travaux se prépare à la main en fin de mois', 'texte' => 'La facturation à l\'avancement exige de comparer ce qui est exécuté à ce qui est prévu, poste par poste. Faite dans l\'urgence, elle retarde l\'encaissement, alors que la trésorerie d\'un chantier dépend de ce délai.'],
+                ['titre' => 'Les appels d\'offres se préparent dans la précipitation', 'texte' => 'Pièces administratives dispersées, attestations périmées, références de chantiers à reconstituer : chaque dossier de candidature repart de zéro, et la date limite arrive avant la complétude.'],
+                ['titre' => 'Les plans circulent sous plusieurs versions', 'texte' => 'Le bureau d\'études modifie un plan, l\'entreprise exécute l\'ancien. Un seul espace de dépôt, avec numéro d\'indice et accusé de lecture, évite l\'erreur la plus coûteuse du métier.'],
+                ['titre' => 'Les contre-signaux', 'texte' => 'Une entreprise qui ne mène qu\'un chantier à la fois peut se contenter d\'un tableur bien tenu. Si personne ne veut renseigner l\'outil depuis le terrain, mieux vaut commencer par la formation et le rapport journalier plutôt que par un ERP.'],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quels services de Richard SALANON répondent aux besoins du BTP et des bureaux d\'études ?',
+            'legende' => 'Chaque service est chiffré sur devis ; le périmètre exact est fixé au cadrage.',
+            'entetes' => ['Besoin typique du secteur', 'Ce que Richard propose', 'Service'],
+            'lignes'  => [
+                ['Chiffrer des devis à partir de métrés et d\'une bibliothèque de prix', 'Paramétrage des devis, des articles et des listes de prix dans un ERP, avec import des métrés', '<a href="/services/integration-odoo">Intégration Odoo</a>'],
+                ['Suivre un chantier au jour le jour depuis le téléphone, même hors connexion', 'Application mobile de rapport journalier : photos datées et localisées, effectifs, météo, réserves, synchronisation au retour du réseau', '<a href="/services/application-mobile-android-ios">Application mobile Android et iOS</a>'],
+                ['Relier devis, budget de chantier, achats et facturation', 'Processus sur mesure quand l\'ERP standard ne suffit pas : budget par lot, avenants, ordres de service', '<a href="/services/application-web-sur-mesure">Application web sur mesure</a>'],
+                ['Montrer ses réalisations et recevoir des demandes de devis', 'Site vitrine avec références de chantiers, formulaire de demande et fiche Google à jour', '<a href="/services/site-vitrine-professionnel">Site vitrine professionnel</a>'],
+                ['Relancer les pièces manquantes et alimenter les tableaux sans ressaisie', 'Automatisations n8n ou Make : rappel de documents, copie des photos vers le bon dossier, alerte de dépassement', '<a href="/services/automatisation-ia">Automatisation et IA</a>'],
+                ['Gérer les situations de travaux et la retenue de garantie', 'Modèle de situation par poste, cumul des retenues et restitution suivie dans l\'ERP ou l\'application', '<a href="/services/integration-odoo">Intégration Odoo</a>'],
+                ['Lire des cahiers des charges et préparer un dossier d\'appel d\'offres', 'Assistant d\'IA sur les pièces du marché, avec relecture humaine obligatoire', '<a href="/services/integration-ia-entreprise">Intégration de l\'IA en entreprise</a>'],
+                ['Brancher l\'ERP sur le logiciel de plans ou de planning existant', 'Interfaces entre systèmes par API, fichiers d\'échange et clés dédiées', '<a href="/services/api-rest-integrations">API REST et intégrations</a>'],
+                ['Suivre le matériel, les engins et les sorties de stock par chantier', 'Registre des sorties, inventaire par dépôt et affectation des engins, avec scan sur mobile', '<a href="/services/application-mobile-android-ios">Application mobile Android et iOS</a>'],
+                ['Garder l\'outil à jour après la livraison', 'Correctifs, montées de version, sauvegardes et assistance aux conducteurs de travaux', '<a href="/services/maintenance-support">Maintenance et support</a>'],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => 'Quels logiciels existent déjà dans le BTP, et faut-il les garder ou les remplacer ?',
+            'legende' => 'Repères établis sur la documentation Odoo 20.0 et sur l\'usage courant des logiciels de dessin ; les fonctions exactes se valident au cadrage.',
+            'entetes' => ['Famille d\'outils', 'Ce qu\'elle couvre', 'Garder et relier', 'Remplacer'],
+            'lignes'  => [
+                ['Logiciels de dessin et de maquette numérique (AutoCAD, ArchiCAD, Revit)', 'Plans, coupes, maquette en trois dimensions, quantités extraites', 'Presque toujours : le bureau d\'études y a ses habitudes et ses fichiers. On relie les quantités exportées à l\'ERP.', 'Rarement. Seulement si la licence n\'est plus tenable.'],
+                ['Tableur de métrés et de devis', 'Quantités, prix unitaires, totaux par lot', 'Tant qu\'une seule personne l\'alimente et que le catalogue de prix reste petit.', 'Quand plusieurs personnes le modifient ou que les prix doivent se propager aux devis.'],
+                ['Odoo, applications Projet, Achats, Inventaire et Facturation', 'Projets avec jalons et rentabilité, commandes fournisseurs, stocks par entrepôt, factures et encaissements', 'Si l\'entreprise l\'utilise déjà pour son négoce ou ses ventes : on y ajoute le suivi de chantier.', 'Pour remplacer un tableur de gestion devenu ingérable, par paliers.'],
+                ['Dolibarr', 'Devis, factures, projets, tiers, stocks, en PHP', 'Si l\'outil est en place et convient à une petite structure.', 'Si les chantiers se multiplient et que la gestion d\'équipes devient lourde.'],
+                ['Logiciel de planning (diagramme de Gantt)', 'Séquence des tâches, chemin critique, jalons', 'Oui : on échange les dates avec l\'ERP par fichier ou par API.', 'Jamais sans demande explicite de l\'entreprise.'],
+                ['Logiciel de paie et de comptabilité du cabinet', 'Bulletins, déclarations, états financiers', 'Oui : la comptabilité reste chez l\'expert-comptable, les écritures sont importées.', 'Non, hors périmètre.'],
+                ['Groupes WhatsApp de chantier', 'Messages, photos, appels vocaux', 'Oui : ils restent le canal d\'urgence ; une automatisation range les photos au bon endroit.', 'Non : on les complète par un rapport structuré.'],
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Que peut faire l\'IA dans une entreprise de travaux ou un bureau d\'études, et que ne doit-elle jamais faire ?',
+            'intro' => 'L\'IA est utile quand elle prépare, résume ou rapproche. Elle devient dangereuse quand on lui laisse engager l\'entreprise : un chiffre faux dans une soumission ou une note de calcul reprise sans contrôle a des conséquences financières et, sur un ouvrage, de sécurité.',
+            'items' => [
+                ['titre' => 'Lire un cahier des charges et en extraire la liste des pièces', 'texte' => 'Un assistant d\'IA relève les exigences, les dates et les pièces à fournir dans un dossier de consultation, puis produit une liste de contrôle. Le conducteur de travaux ou le chargé d\'affaires vérifie chaque ligne dans le document original.'],
+                ['titre' => 'Résumer un rapport journalier ou une série de photos', 'texte' => 'Des notes vocales et des photos deviennent un compte rendu lisible. Le chef de chantier relit et valide avant diffusion ; l\'IA ne remplace pas la constatation sur place.'],
+                ['titre' => 'Rapprocher une facture de sous-traitant de son marché', 'texte' => 'L\'IA signale un écart entre le montant facturé, le marché signé et les avenants enregistrés. La décision de payer, de contester ou de retenir reste humaine.'],
+                ['titre' => 'Aider à rédiger une réponse ou un mémoire technique', 'texte' => 'Elle propose une trame et reformule des paragraphes à partir des références réelles de l\'entreprise. Aucune référence, aucun chiffre, aucune certification ne s\'invente.'],
+                ['titre' => 'Ne jamais valider un calcul de structure ni une note de calcul', 'texte' => 'Le dimensionnement relève d\'un ingénieur qui engage sa responsabilité. L\'IA peut aider à relire une note ou à repérer une incohérence, jamais à la signer.'],
+                ['titre' => 'Ne jamais décider seule de la sécurité d\'un chantier', 'texte' => 'Elle peut rappeler une procédure ou préparer un plan de prévention, mais l\'autorisation de travaux en hauteur, de fouille ou de levage reste donnée par la personne compétente sur place.'],
+                ['titre' => 'Ne pas exposer les plans et les données des clients', 'texte' => 'Plans d\'un site sensible, informations sur des occupants, prix négociés : ces données ne se versent pas dans un assistant public. On choisit un service avec contrat adapté, ou un modèle hébergé à part.'],
+            ],
+        ],
+        [
+            'type'  => 'vigilance',
+            'titre' => 'Qui répond d\'une erreur produite par un assistant d\'IA dans un dossier de chantier ?',
+            'texte' => 'Celui qui signe. Un devis, une situation de travaux ou une note de calcul engage l\'entreprise ou l\'homme de l\'art, quel que soit l\'outil qui a servi à le préparer. Une charte courte, qui liste les usages permis, les données interdites et le nom du relecteur, protège l\'entreprise bien mieux qu\'une interdiction générale que personne ne respectera. Voir la <a href="/formations/ia-ethique-conformite">formation IA, éthique et conformité des données</a> pour construire cette charte avec les équipes.',
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Quelles règles de paiement, de facturation et de protection des données s\'appliquent à une entreprise de travaux ?',
+            'paragraphes' => [
+                'Le paiement d\'abord. Sur un chantier, l\'argent arrive par situations de travaux, par acomptes et par retenues. Les clients particuliers et les petits promoteurs paient souvent par mobile money (MTN, Moov) ou par virement, les maîtres d\'ouvrage publics par virement après visa. Richard accepte lui-même Mobile Money, carte bancaire, PayPal, virement et espèces ; dans l\'outil de l\'entreprise, chaque encaissement s\'impute à la situation correspondante, quel que soit le canal.',
+                'La retenue de garantie ensuite. En France, l\'article 1er de la loi n° 71-584 du 16 juillet 1971 la plafonne à 5 % des sommes versées pour les marchés de travaux de droit privé ; le maître d\'ouvrage la dépose chez un tiers convenu, et elle se restitue à l\'expiration d\'un an après la réception, avec ou sans réserves, sauf opposition motivée du maître d\'ouvrage, d\'après la Caisse des Dépôts. Hors de France, le taux et la durée dépendent du marché signé et de la réglementation locale : à confirmer dans le cahier des clauses administratives de chaque marché.',
+                'La facture normalisée est la règle fiscale la plus visible. Au Bénin, les assujettis à la TVA émettent des factures normalisées par les machines et le système e-MECeF de la Direction générale des impôts, dont la généralisation s\'est achevée le 29 février 2020 selon le portail du gouvernement ; la facture porte un numéro unique et un code QR, selon EDICOM. En Côte d\'Ivoire, la facture normalisée électronique (FNE) est la seule admise : dans son communiqué du 27 janvier 2026, la Direction générale des impôts indique que l\'usage de la facture normalisée physique a pris fin le 1er décembre 2025 pour les régimes réels (réel normal et réel simplifié), le 11 décembre 2025 pour les microentreprises et le 13 février 2026 pour les assujettis à la taxe d\'État de l\'entreprenant, et que seules les factures électroniques servent à justifier les charges et à déduire la TVA. Un outil de chantier doit donc pouvoir se brancher sur ces plateformes, ou laisser la facture légale à un module dédié.',
+                'En France, le calendrier de la facturation électronique, rappelé plus haut, vise aussi les entreprises du BTP. S\'y ajoute un cas particulier du métier, la sous-traitance : la facture du sous-traitant doit être rattachée à son marché et à la situation correspondante. Une fiche d\'avancement bien tenue dans l\'ERP évite de la reconstituer au moment du contrôle.',
+                'Les données personnelles enfin. Un chantier manipule des noms d\'ouvriers, des pièces d\'identité, des photos où des personnes sont reconnaissables. Au Bénin, la loi n° 2017-20 portant code du numérique encadre ces traitements. En Côte d\'Ivoire, la loi n° 2013-450 du 19 juin 2013 place l\'ARTCI en gardienne du dossier : fichier du personnel d\'une entreprise de travaux ou photos de chantier, la déclaration ou l\'autorisation préalable passe par elle. Au Sénégal, c\'est la Commission de protection des données personnelles qui veille à l\'application de la loi n° 2008-12 du 25 janvier 2008, y compris pour les fiches du personnel d\'un chantier. En Europe, le RGPD impose un contrat avec tout prestataire qui traite des données pour votre compte, ce que couvre l\'article 28, présenté par la CNIL.',
+                'Reste la réglementation propre aux professions. Les architectes et les ingénieurs relèvent d\'ordres ou de règles de profession qui varient d\'un pays à l\'autre, notamment sur la signature des plans et l\'assurance de responsabilité. Avant de lancer un projet qui touche à ces actes, par exemple un tampon numérique ou un archivage des plans, il est prudent de confirmer auprès de l\'ordre concerné ce qui est accepté dans votre pays.',
+            ],
+        ],
+        [
+            'type'  => 'cas',
+            'titre' => 'À quoi ressemble un projet numérique pour le BTP, selon le pays et le métier ?',
+            'items' => [
+                ['secteur' => 'Promoteur et entreprise générale, Cotonou, Bénin', 'probleme' => 'Les dossiers de permis de construire se préparent à la main, avec des pièces dispersées dans plusieurs dossiers, et le suivi du budget par villa se fait sur un tableur par chantier.', 'solution' => 'Une liste de pièces par catégorie de permis, tenue à jour dans un tableau partagé, prête pour le dépôt sur le portail officiel. Côté chantier, un budget par lot repris dans l\'ERP, et des situations de travaux préparées automatiquement à partir de l\'avancement saisi sur mobile.'],
+                ['secteur' => 'Entreprise de voirie et réseaux divers, Abidjan, Côte d\'Ivoire', 'probleme' => 'Plusieurs équipes sur plusieurs rues, un parc d\'engins partagé, et une facturation qui doit passer par la facture normalisée électronique de la DGI.', 'solution' => 'Affectation des engins par chantier avec relevé d\'heures sur téléphone, sorties de carburant et de matériaux rattachées au lot, et une facture légale émise sur la plateforme FNE à partir de la situation validée, avec un contrôle humain avant envoi.'],
+                ['secteur' => 'Bureau d\'études techniques, Dakar, Sénégal', 'probleme' => 'Les notes de calcul et les plans circulent par messagerie, l\'indice de version se perd, et le suivi des heures par mission est approximatif.', 'solution' => 'Un espace de dépôt avec numéro d\'indice et diffusion tracée, des feuilles de temps par mission reliées à la facturation, et une trame de note de calcul relue par l\'ingénieur ; l\'assistant d\'IA ne sert qu\'à contrôler la cohérence des pièces.'],
+                ['secteur' => 'Entreprise de second œuvre, région lyonnaise, France', 'probleme' => 'Une dizaine de chantiers simultanés, des sous-traitants à payer sur situation, une retenue de garantie à suivre et l\'obligation prochaine d\'émettre des factures électroniques.', 'solution' => 'Un suivi des marchés de sous-traitance avec reste à payer par lot, un échéancier des retenues de garantie et de leur restitution, et un branchement sur une plateforme de facturation électronique choisie avec le cabinet comptable avant la bascule de septembre 2027.'],
+                ['secteur' => 'Cabinet d\'architecture, Bruxelles, Belgique', 'probleme' => 'Plans, visas, comptes rendus de réunion de chantier et photos sont rangés différemment par chaque architecte du cabinet.', 'solution' => 'Une arborescence unique par dossier, nommée selon une convention inspirée des principes de la série ISO 19650, des comptes rendus générés à partir de notes vocales puis validés, et une liste des remarques ouvertes par entreprise, relancée automatiquement.'],
+                ['secteur' => 'Constructeur de logements, Douala, Cameroun', 'probleme' => 'Les ventes sur plan se suivent dans un cahier : échéancier par acquéreur, relances par téléphone, travaux qui avancent plus vite ou moins vite que les appels de fonds.', 'solution' => 'Un échéancier par lot et par acquéreur, des relances par message à date fixe, et un tableau qui compare l\'avancement des travaux à l\'encaissement pour que la trésorerie du programme reste visible.'],
+            ],
+        ],
+        [
+            'type'  => 'etapes',
+            'titre' => 'Comment se déroule un projet numérique pour une entreprise du BTP, du diagnostic au suivi ?',
+            'items' => [
+                ['titre' => 'Premier échange', 'duree' => 'Réponse sous 24 heures', 'texte' => 'Vous décrivez votre activité, le nombre de chantiers menés en parallèle, vos outils et ce qui coûte le plus cher en temps ou en erreurs. Ce premier échange est gratuit ; Richard dit franchement si un outil léger suffit.'],
+                ['titre' => 'Diagnostic sur un chantier réel', 'duree' => 'Selon le projet', 'texte' => 'La méthode proposée consiste à suivre un chantier de bout en bout : métré, devis, commande, réception, rapport journalier, situation, encaissement. Le diagnostic classe les points de friction et propose un ordre de traitement.'],
+                ['titre' => 'Maquette et choix des outils', 'duree' => 'Selon le projet', 'texte' => 'On choisit entre ERP, application mobile, application sur mesure ou simple automatisation. Les écrans de la saisie terrain sont dessinés d\'abord avec les chefs de chantier, car un formulaire trop long ne sera jamais rempli.'],
+                ['titre' => 'Premier palier sur un chantier pilote', 'duree' => 'Selon le projet', 'texte' => 'Un seul chantier, une seule équipe, un seul périmètre : rapport journalier, ou devis relié au budget. Les retours du terrain servent à corriger avant d\'étendre à d\'autres chantiers.'],
+                ['titre' => 'Reprise des données', 'duree' => 'En parallèle du palier', 'texte' => 'Bibliothèque de prix, fichiers de fournisseurs, sous-traitants, engins : on nettoie puis on importe sur une base d\'essai, et l\'on compare les totaux avec les fichiers d\'origine.'],
+                ['titre' => 'Formation par métier', 'duree' => 'Selon le projet', 'texte' => 'Chef de chantier, conducteur de travaux, métreur et comptable n\'utilisent pas les mêmes écrans. Chaque rôle se forme sur ses propres données, avec un guide court et un référent désigné.'],
+                ['titre' => 'Extension aux autres chantiers', 'duree' => 'Selon le projet', 'texte' => 'Une fois le pilote stabilisé, l\'outil s\'ouvre aux chantiers suivants, puis aux autres fonctions : achats, matériel, situations, appels d\'offres.'],
+                ['titre' => 'Suivi et maintenance', 'duree' => 'Dans la durée', 'texte' => 'Sauvegardes, correctifs, assistance aux conducteurs de travaux et préparation des montées de version, voir la <a href="/services/maintenance-support">maintenance et le support</a>.'],
+            ],
+        ],
+        [
+            'type'       => 'prix',
+            'titre'      => 'Combien coûte un projet numérique pour une entreprise du BTP ou un bureau d\'études ?',
+            'intro'      => 'Le prix dépend du nombre de chantiers, d\'utilisateurs et de fonctions. Seuls trois tarifs de départ sont publiés sur ce site : landing page à partir de 150 000 FCFA (environ 229 euros), site vitrine à partir de 300 000 FCFA (environ 457 euros) et référencement naturel à partir de 75 000 FCFA (environ 114 euros), au taux de 655,957 FCFA pour 1 euro. Tout le reste, ERP, application mobile ou sur mesure, se chiffre sur devis, après le diagnostic.',
+            'items'      => [
+                ['offre' => 'Landing page de demande de devis', 'prix' => 'À partir de 150 000 FCFA (environ 229 euros)', 'inclus' => ['Une page qui présente un type de travaux', 'Formulaire de demande de devis', 'Lien vers le contact WhatsApp de l\'entreprise']],
+                ['offre' => 'Site vitrine avec références de chantiers', 'prix' => 'À partir de 300 000 FCFA (environ 457 euros)', 'inclus' => ['Présentation des métiers et des chantiers réalisés', 'Formulaire de contact et de demande de devis', 'Pages pensées pour le référencement local']],
+                ['offre' => 'ERP pour devis, achats et facturation', 'prix' => 'Sur devis', 'inclus' => ['Paramétrage par paliers', 'Reprise de la bibliothèque de prix', 'Formation par rôle']],
+                ['offre' => 'Application mobile de suivi de chantier', 'prix' => 'Sur devis', 'inclus' => ['Rapport journalier et photos localisées', 'Fonctionnement hors connexion', 'Synchronisation avec l\'ERP ou l\'application web']],
+                ['offre' => 'Automatisations et usages de l\'IA', 'prix' => 'Sur devis', 'inclus' => ['Relances de pièces, rangement de photos, alertes', 'Assistant sur documents avec relecture humaine', 'Charte d\'usage de l\'IA']],
+            ],
+            'variations' => [
+                'Le nombre de chantiers menés en parallèle et le nombre de personnes qui saisissent depuis le terrain.',
+                'La part d\'un ERP standard et la part de développement sur mesure, par exemple les situations de travaux ou les avenants.',
+                'La qualité de la bibliothèque de prix et des fichiers à reprendre.',
+                'Le besoin de fonctionnement hors connexion et la taille des photos à synchroniser.',
+                'Les liens à établir avec les plateformes fiscales (facture normalisée au Bénin, en Côte d\'Ivoire ou en France) et avec le logiciel de plans.',
+                'Le nombre de pays, de sociétés ou d\'établissements concernés.',
+                'La formation : nombre de rôles, de sites et de séances.',
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => 'Quelles erreurs reviennent le plus souvent dans la numérisation d\'une entreprise de travaux ?',
+            'intro' => 'Les causes d\'échec sont rarement techniques. Elles tiennent au terrain, à l\'ordre des travaux et au partage des responsabilités.',
+            'items' => [
+                ['titre' => 'Concevoir pour le bureau et non pour le terrain', 'texte' => 'Un écran de saisie de vingt champs ne sera pas rempli par un chef de chantier sous la pluie, avec des gants et un réseau faible. Trois champs, une photo et un bouton d\'envoi valent mieux qu\'un formulaire exhaustif jamais utilisé.'],
+                ['titre' => 'Supposer que le réseau est toujours là', 'texte' => 'Une application qui exige une connexion permanente cesse de servir au moment précis où l\'on en a besoin : dans une fouille, en sous-sol, en brousse. La saisie hors connexion et la synchronisation au retour du réseau se décident dès la conception.'],
+                ['titre' => 'Tout numériser le même mois', 'texte' => 'Devis, planning, matériel, paie, plans et appels d\'offres en même temps : l\'équipe décroche et revient au cahier. Un palier stable vaut mieux que six outils à moitié utilisés, comme le montre la <a href="/histoires/tsb-migration">migration ratée de TSB</a>, une bascule menée trop vite.'],
+                ['titre' => 'Laisser les prix vivre en plusieurs exemplaires', 'texte' => 'Si chaque conducteur garde sa propre version de la bibliothèque, les devis divergent. Un seul responsable met à jour les prix, avec une date de validité visible.'],
+                ['titre' => 'Oublier la retenue de garantie dans le suivi de trésorerie', 'texte' => 'La retenue est de l\'argent gagné mais non encaissé. Sans échéancier de restitution, elle s\'oublie, parfois pour des années.'],
+                ['titre' => 'Confier la facture légale à un outil non branché', 'texte' => 'Une facture qui doit passer par e-MECeF ou par la FNE ne se refait pas à la main après coup. Il faut décider dès le départ quel outil l\'émet et comment l\'information circule.'],
+                ['titre' => 'Donner des plans à un assistant d\'IA public', 'texte' => 'Les plans, les prix négociés et les informations sur les occupants sont des données du client. Un service sans contrat adapté expose l\'entreprise à une plainte, voire à la perte du marché.'],
+                ['titre' => 'Négliger la formation des chefs de chantier', 'texte' => 'L\'outil le mieux réglé échoue si ceux qui saisissent ne comprennent pas à quoi servent leurs données. Une demi-journée sur chantier, avec leurs propres photos, vaut dix pages de mode d\'emploi.'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'À partir de quelle taille la maquette numérique (BIM) vaut-elle l\'effort ?',
+            'paragraphes' => [
+                'La maquette numérique, ou BIM pour building information modelling, représente un ouvrage en trois dimensions dont chaque élément porte des informations : matériau, quantité, fournisseur, date de pose. La norme ISO 19650-1, publiée en décembre 2018 selon l\'ISO, pose les concepts et les principes de la gestion de l\'information pour tout le cycle de vie d\'un ouvrage, de la planification et de la conception à l\'exploitation et à la fin de vie ; l\'AFNOR la reprend en norme française. Elle ne prescrit pas un logiciel : elle porte sur l\'organisation des échanges, des versions et du classement de l\'information.',
+                'Pour une entreprise de taille moyenne, la question n\'est pas « faut-il passer au BIM ? » mais « quel usage en retire-t-on ? ». Extraire des quantités pour un devis, détecter une collision entre une gaine et une poutre avant le chantier, ou fournir au maître d\'ouvrage un dossier des ouvrages exécutés sont trois usages distincts, qui n\'exigent ni le même effort ni le même outil. Sur un petit chantier, un plan en deux dimensions bien tenu, avec une convention de nommage stricte et des indices de version, apporte déjà l\'essentiel.',
+                'Richard propose d\'évaluer cet intérêt au diagnostic, selon la taille des opérations, les exigences du maître d\'ouvrage et les logiciels déjà en place. Son rôle n\'est pas de remplacer ArchiCAD ou Revit : il consiste à relier les quantités et les fichiers exportés à l\'ERP, à organiser les dépôts de plans et à former les équipes à la convention de nommage. Quand un projet exige un coordinateur BIM, c\'est un autre métier, que l\'on ne remplace pas par un développeur.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment Richard aide-t-il à préparer les appels d\'offres, et quelles sont les limites ?',
+            'paragraphes' => [
+                'Les marchés publics se jouent sur la complétude du dossier autant que sur le prix. Au Bénin, le code issu de la loi n° 2020-26 du 29 septembre 2020 prévoit des procédures qui s\'appuient sur des moyens électroniques ; en Côte d\'Ivoire, SYGOMAP permet de consulter les avis et de déposer l\'offre en ligne ; en France, les consultations à partir de 60 000 euros hors taxes passent par un profil d\'acheteur dématérialisé. Dans les trois cas, une entreprise gagne à tenir une bibliothèque de pièces à jour.',
+                'Richard intervient comme prestataire sur cette organisation : un coffre numérique des pièces administratives avec leurs dates de validité, des alertes avant expiration, un catalogue de références de chantiers réutilisables, des trames de mémoire technique et, si l\'entreprise le souhaite, un assistant qui lit un dossier de consultation et sort une liste de contrôle. L\'entreprise relit, chiffre et signe.',
+                'Il ne promet rien sur l\'issue d\'une consultation. L\'attribution dépend du prix, de la valeur technique, de l\'adéquation des références et des critères du maître d\'ouvrage, sur lesquels un outil n\'a pas de prise. Aucune astuce ne contourne les règles de transparence : un dossier mieux préparé réduit les rejets pour pièce manquante, rien de plus.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Sécurité des chantiers, permis de construire en ligne : que peut-on numériser sans risque ?',
+            'paragraphes' => [
+                'Sur la sécurité, le numérique remplace le classeur, pas le jugement. Une application peut proposer au chef de chantier une liste de vérifications du matin, enregistrer les causeries sécurité avec les signatures des présents, garder une trace datée des écarts relevés et des actions de correction, et envoyer l\'alerte au conducteur de travaux. Elle ne doit jamais autoriser un travail en hauteur, une fouille ou un levage : cette décision appartient à la personne compétente, présente sur place.',
+                'Pour le permis de construire, l\'outil le plus utile est le dossier préparé à l\'avance. Au Bénin, la demande se fait sur la plateforme officielle, selon des catégories A, B et C qui correspondent à des constructions à risque faible, moyen et fort, d\'après CIO Mag ; une liste de pièces par catégorie, avec les plans aux bons formats, évite les allers-retours. Là où le service n\'existe pas encore en ligne, le même dossier numérique sert pour le dépôt papier et accélère l\'instruction.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Comment former les équipes du BTP et des bureaux d\'études ?',
+            'paragraphes' => [
+                'Un outil de chantier n\'a de valeur que s\'il est utilisé tous les jours, et cela passe par la formation de chaque métier. Richard a déjà formé des équipes du BTP, ainsi que des architectes et des ingénieurs, et peut animer des séances en visioconférence ou, au Bénin, sur place, en entreprise ou sur chantier.',
+                'Le programme dépend du public. Pour les conducteurs de travaux, chefs de chantier et métreurs, voir la <a href="/formations/metier/btp">formation numérique et IA pour le BTP</a>. Pour les architectes, ingénieurs et bureaux d\'études, la <a href="/formations/metier/architectes-ingenieurs">formation pour architectes et ingénieurs</a> couvre les plans, les notes de calcul et le suivi de projet. Les séances partent des vrais documents de l\'entreprise, jamais d\'exemples génériques.',
+                'Plusieurs fiches complètent ces parcours : <a href="/formations/odoo-utilisateurs">Odoo pour vos équipes</a> pour la prise en main par poste, <a href="/formations/ia-processus-metier">l\'IA dans les processus métier</a> pour choisir ce que l\'on confie à l\'assistant, <a href="/formations/excel-google-sheets">Excel et Google Sheets pour la gestion</a> pour fiabiliser les tableurs de métrés, et <a href="/formations/ia-ethique-conformite">IA, éthique et conformité des données</a> pour la charte d\'usage. L\'ensemble figure sur la page <a href="/formations/">formations</a>.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Pourquoi confier la digitalisation d\'une entreprise de travaux à Richard SALANON ?',
+            'paragraphes' => [
+                fait('phrase_entite'),
+                'Avec plus de 6 ans d\'expérience dans le numérique, une formation à EPITECH (2022) et plus de 50 projets livrés, il relie des métiers de terrain à des outils logiciels : un ERP comme Odoo ou Dolibarr, une application mobile, une application web sur mesure, une automatisation n8n ou Make. Ce mélange compte dans le BTP, où le besoin se situe souvent entre le tableur et l\'ERP.',
+                'Il développe aussi ses propres produits, comme <a href="https://wapy.pro">Wapy</a>, un assistant WhatsApp à intelligence artificielle, et il est co-fondateur d\'<a href="https://audyxa.com">Audyxa</a>. Ses réalisations pour d\'autres secteurs sont présentées sur la page <a href="/realisations/">réalisations</a>, avec les technologies utilisées et la manière de travailler ; son parcours figure sur la page <a href="/richard-salanon">Richard SALANON</a>.',
+                'Sa méthode se résume ainsi : un diagnostic sur un chantier réel, un palier à la fois, des accès et un code à votre nom, une documentation remise à chaque étape, et une réponse sous 24 heures. Le premier échange est gratuit.',
+            ],
+        ],
+        [
+            'type'   => 'cta',
+            'titre'  => 'Votre entreprise de travaux ou votre bureau d\'études veut-il savoir par où commencer ?',
+            'texte'  => 'Décrivez vos chantiers en cours, vos outils actuels et ce qui vous coûte le plus de temps : vous recevez une réponse sous 24 heures et, après un premier échange gratuit, un plan par paliers avec un devis détaillé.',
+            'bouton' => ['url' => '/contact', 'texte' => 'Présenter mon projet BTP'],
+        ],
+    ],
+
+    'faq' => [
+        ['q' => 'Un logiciel de suivi de chantier peut-il fonctionner sans connexion Internet ?', 'r' => 'Oui, si l\'application mobile est conçue pour cela. Elle enregistre les rapports, les photos et les relevés sur le téléphone, puis les envoie quand le réseau revient. Ce comportement se décide dès la conception, car il change la manière de stocker les données et de gérer les conflits quand deux personnes modifient la même fiche.'],
+        ['q' => 'Odoo convient-il à une entreprise de bâtiment ?', 'r' => 'Il convient pour les devis, les achats, le stock par dépôt, les projets avec jalons et la facturation. Les situations de travaux, la retenue de garantie et les avenants demandent un paramétrage soigné, parfois un développement. Ce point se valide au cadrage, sur un chantier réel, avant de promettre quoi que ce soit.'],
+        ['q' => 'Comment suivre la retenue de garantie dans un outil de gestion ?', 'r' => 'On enregistre, pour chaque situation, la retenue prélevée, le taux et la date prévue de restitution, puis on obtient un échéancier des sommes à récupérer. En France, la loi du 16 juillet 1971 plafonne la retenue à 5 % pour les marchés de travaux privés ; ailleurs, le taux dépend du marché signé.'],
+        ['q' => 'Faut-il une facture normalisée pour un chantier au Bénin ou en Côte d\'Ivoire ?', 'r' => 'Les assujettis à la TVA émettent des factures normalisées au Bénin depuis 2020 par e-MECeF, et la Côte d\'Ivoire a instauré la FNE avec des échéances échelonnées selon le régime fiscal. Le calendrier précis évolue : confirmez-le auprès de l\'administration fiscale avant de configurer votre outil.'],
+        ['q' => 'L\'IA peut-elle chiffrer un devis ou valider un calcul de structure ?', 'r' => 'Elle peut aider à relire un devis ou à repérer une incohérence, mais elle ne doit ni fixer un prix à votre place ni valider un dimensionnement. Le devis engage l\'entreprise, la note de calcul engage l\'ingénieur qui la signe. Toute sortie de l\'IA se contrôle contre les documents d\'origine.'],
+        ['q' => 'Peut-on préparer un dossier d\'appel d\'offres avec l\'aide d\'un assistant d\'IA ?', 'r' => 'Oui pour la lecture du dossier de consultation, la liste des pièces et la trame du mémoire technique. Non pour les références, les chiffres et les attestations, qui viennent de l\'entreprise. Richard aide à organiser ces pièces ; il ne garantit pas l\'attribution d\'un marché, qui dépend des critères du maître d\'ouvrage.'],
+        ['q' => 'Faut-il passer au BIM quand on est une petite entreprise ?', 'r' => 'Pas forcément. Le BIM sert à extraire des quantités, à détecter des collisions et à remettre un dossier des ouvrages exécutés. Pour un petit chantier, un plan bien tenu avec une convention de nommage et des indices de version apporte souvent l\'essentiel. L\'intérêt s\'évalue au diagnostic.'],
+        ['q' => 'Comment éviter que les plans circulent en plusieurs versions ?', 'r' => 'Avec un espace de dépôt unique où chaque plan porte un indice, une date et la liste des destinataires, et où l\'ancienne version est archivée à la publication de la nouvelle. Une alerte prévient l\'entreprise quand un plan qu\'elle exécute est remplacé.'],
+        ['q' => 'Combien coûte un projet numérique pour une entreprise du BTP ?', 'r' => 'Les seuls tarifs de départ publiés sont ceux d\'une landing page (150 000 FCFA), d\'un site vitrine (300 000 FCFA) et du référencement naturel (75 000 FCFA). Un ERP, une application mobile ou un développement sur mesure se chiffre sur devis, après le diagnostic, selon le nombre de chantiers et de fonctions.'],
+        ['q' => 'Peut-on suivre les photos de chantier avec la position GPS ?', 'r' => 'Oui, une application mobile peut enregistrer la position et l\'heure au moment de la prise de vue, avec l\'accord de l\'utilisateur. Ces données sont personnelles : prévenez les équipes, limitez la conservation et vérifiez les règles de votre pays, comme la loi n° 2017-20 au Bénin ou le RGPD en Europe.'],
+        ['q' => 'Un cabinet d\'architecture peut-il tamponner ses plans par voie numérique ?', 'r' => 'Cela dépend des règles de l\'ordre ou de la profession dans votre pays. Avant tout projet de signature ou d\'archivage électronique de plans, confirmez auprès de l\'ordre ce qui est accepté. L\'outil peut préparer la circulation des documents, pas remplacer la règle professionnelle.'],
+        ['q' => 'Intervenez-vous hors du Bénin ?', 'r' => 'Oui. Le travail se fait à distance pour la plupart des projets, et sur place au Bénin. Les clients d\'Europe règlent par carte bancaire, PayPal ou virement, ceux du Bénin aussi par Mobile Money (MTN, Moov).'],
+    ],
+
+    'sources' => [
+        ['titre' => 'McKinsey, « Imagining construction\'s digital future » (juin 2016)', 'url' => 'https://mckinsey.com/~/media/mckinsey/business%20functions/operations/our%20insights/imagining%20constructions%20digital%20future/imagining-constructions-digital-future.pdf', 'date' => '2026-10-07'],
+        ['titre' => 'Gouvernement du Bénin, dématérialisation du permis de construire (12 mars 2020)', 'url' => 'https://www.gouv.bj/article/547/amelioration-du-climat-des-affaires-au-benin-la-dematerialisation-du-processus-dobtention-du-permis-de-construire-desormais-une-realite/', 'date' => '2026-10-07'],
+        ['titre' => 'Bénin, loi n° 2020-26 du 29 septembre 2020 portant code des marchés publics', 'url' => 'https://leap.unep.org/en/countries/bj/national-legislation/loi-no-2020-26-du-29-septembre-2020-portant-code-des-marches', 'date' => '2026-10-07'],
+        ['titre' => 'Côte d\'Ivoire, lancement de SYGOMAP, système intégré de gestion des marchés publics (juillet 2023)', 'url' => 'https://fr.allafrica.com/stories/202307260248.html', 'date' => '2026-10-07'],
+        ['titre' => 'impots.gouv.fr, calendrier de la réforme de la facturation électronique', 'url' => 'https://www.impots.gouv.fr/professionnel/questions/partir-de-quand-suis-je-concerne-par-la-reforme-de-la-facturation', 'date' => '2026-10-07'],
+        ['titre' => 'Caisse des Dépôts, retenue de garantie des marchés de travaux privés (loi n° 71-584 du 16 juillet 1971, plafond de 5 %, restitution après un an)', 'url' => 'https://consignations.caissedesdepots.fr/sites/default/files/2025-12/Marche_travaux_%20prives_retenue_garantie.pdf', 'date' => '2026-10-07'],
+        ['titre' => 'EDICOM, facturation électronique au Bénin, système « Facture Normalisée » et e-MECeF', 'url' => 'https://edicomgroup.com/blog/electronic-invoicing-benin-facture-normalisee', 'date' => '2026-10-07'],
+        ['titre' => 'Direction générale des impôts de Côte d\'Ivoire, communiqué du 27 janvier 2026 : fin de l\'usage de la facture normalisée physique', 'url' => 'https://www.fne.dgi.gouv.ci/uploads/communiques/pdf_69793fb80d317_FIN_DE_L_USAGE_DE_LA_FACT_NOR_PHYSIQUE.pdf', 'date' => '2026-10-07'],
+        ['titre' => 'ISO, norme ISO 19650-1:2018 sur la gestion de l\'information avec la maquette numérique', 'url' => 'https://www.iso.org/standard/68078.html', 'date' => '2026-10-07'],
+        ['titre' => 'Direction générale des collectivités locales, dématérialisation de la commande publique (seuil de 60 000 euros HT depuis le 1er avril 2026)', 'url' => 'https://www.collectivites-locales.gouv.fr/commande-publique/dematerialisation-de-la-commande-publique', 'date' => '2026-10-07'],
+        ['titre' => 'Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 portant code du numérique', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-07'],
+        ['titre' => 'CIO Mag, Côte d\'Ivoire, traitement des données personnelles et autorisation préalable de l\'ARTCI (loi n° 2013-450)', 'url' => 'https://cio-mag.com/cote-divoire-artci-le-traitement-des-donnees-personnelles-desormais-soumis-a-une-autorisation-prealable', 'date' => '2026-10-07'],
+        ['titre' => 'Commission de protection des données personnelles du Sénégal, loi n° 2008-12 du 25 janvier 2008', 'url' => 'https://www.cdp.sn/content/loi-n%C2%B0-2008-12-du-25-janvier-2008-portant-sur-la-protection-des-donn%C3%A9es-%C3%A0-caract%C3%A8re-personnel', 'date' => '2026-10-07'],
+        ['titre' => 'CNIL, RGPD chapitre IV (article 28, sous-traitant)', 'url' => 'https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4', 'date' => '2026-10-07'],
+        ['titre' => 'Documentation Odoo 20.0, application Projet', 'url' => 'https://www.odoo.com/documentation/20.0/applications/services/project.html', 'date' => '2026-10-07'],
+        ['titre' => 'Gouvernement du Bénin, tout savoir sur les factures normalisées (MECeF, échéance du 29 février 2020)', 'url' => 'https://www.gouv.bj/article/522/tout-savoir-sur-les-factures-normalisees-au-benin', 'date' => '2026-10-07'],
+        ['titre' => 'CIO Mag, permis de construire en ligne au Bénin (catégories A, B et C selon le risque, 15 avril 2020)', 'url' => 'https://cio-mag.com/au-benin-le-permis-de-construire-sobtient-desormais-en-ligne', 'date' => '2026-10-07'],
+        ['titre' => 'AFNOR, NF EN ISO 19650-1 (décembre 2018)', 'url' => 'https://www.boutique.afnor.org/en-gb/standard/nf-en-iso-196501/organization-and-digitization-of-information-about-buildings-and-civil-engi/fa187410/1785', 'date' => '2026-10-07'],
+    ],
+
+    'liens' => [
+        'services'    => ['integration-odoo', 'application-mobile-android-ios', 'application-web-sur-mesure', 'site-vitrine-professionnel', 'automatisation-ia', 'integration-ia-entreprise', 'api-rest-integrations', 'maintenance-support'],
+        'metiers'     => ['btp', 'architectes-ingenieurs'],
+        'formations'  => ['odoo-utilisateurs', 'ia-processus-metier', 'excel-google-sheets', 'ia-ethique-conformite', 'ia-en-entreprise'],
+        'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
+        'histoires'   => ['tsb-migration'],
+    ],
+
+];
