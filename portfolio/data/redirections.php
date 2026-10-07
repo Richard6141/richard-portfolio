@@ -40,4 +40,8 @@ return $r + [
     '/consultant-digitalisation'            => '/services/consultant-digitalisation',
     '/expert-digitalisation-entreprise'     => '/services/digitalisation-d-entreprise',
     '/blog/n8n-vs-zapier-vs-make-2026'       => '/comparatifs/n8n-vs-make-vs-zapier',
+    '/blog/wordpress-ou-sur-mesure-comment-choisir'                 => '/comparatifs/wordpress-vs-sur-mesure',
+    '/blog/application-mobile-ou-site-web-que-developper-en-premier' => '/comparatifs/application-mobile-vs-site-web',
+    '/blog/combien-coute-un-site-web-professionnel-en-2026-guide-complet' => '/blog/combien-coute-un-site-web-au-benin',
+    '/blog/etre-visible-chatgpt-gemini-2026'                         => '/blog/seo-2026-apparaitre-dans-les-reponses-ia',
 ];
