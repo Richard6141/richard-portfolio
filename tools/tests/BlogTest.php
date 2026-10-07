@@ -85,6 +85,30 @@ function test_blog_tableau_de_bord_edite_la_meta(): void
     assert_contains('form.meta', (string) file_get_contents(racine('dashboard/blog.php')));
 }
 
+function test_blog_tableau_de_bord_charge_les_listes_par_le_presse_papiers_de_quill(): void
+{
+    $src = (string) file_get_contents(racine('dashboard/blog.php'));
+    assert_contains('clipboard.convert(', $src, 'chargement : root.innerHTML perd les <ul> (Quill 2.0.3)');
+}
+
+function test_blog_tableau_de_bord_enregistre_le_html_semantique_de_quill(): void
+{
+    $src = (string) file_get_contents(racine('dashboard/blog.php'));
+    assert_contains('getSemanticHTML()', $src, 'enregistrement : root.innerHTML rend les listes au format interne de Quill');
+}
+
+function test_blog_tableau_de_bord_n_ecrit_plus_root_innerhtml(): void
+{
+    $src = (string) file_get_contents(racine('dashboard/blog.php'));
+    assert_not_contains('root.innerHTML =', $src, 'plus d\'affectation de root.innerHTML');
+}
+
+function test_blog_tableau_de_bord_ne_lit_plus_root_innerhtml(): void
+{
+    $src = (string) file_get_contents(racine('dashboard/blog.php'));
+    assert_not_contains('root.innerHTML;', $src, 'plus de lecture de root.innerHTML');
+}
+
 function test_blog_redirection_vers_un_article_seulement_s_il_est_en_ligne(): void
 {
     $table = ['/blog/doublon' => '/blog/garde'];

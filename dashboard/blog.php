@@ -451,6 +451,21 @@ function blogPage() {
             this.htmlSource = '';
         },
 
+        // Deux bogues de Quill 2.0.3 : (1) root.innerHTML en ecriture ne reconnait
+        // pas <ul> et supprime les listes avec leur texte ; clipboard.convert les
+        // lit sans perte. (2) root.innerHTML en lecture rend les listes au format
+        // interne de Quill (data-list), lu comme liste numerotee par le site ;
+        // getSemanticHTML rend <ul>/<ol> propres mais remplace chaque espace par
+        // &nbsp; (d'ou le replace, les sources n'ont aucune espace insecable).
+        chargerQuill(html) {
+            this.quill.setContents(this.quill.clipboard.convert({ html: html || '' }), 'silent');
+        },
+
+        htmlQuill() {
+            if (this.quill.getLength() <= 1) return '';
+            return this.quill.getSemanticHTML().replace(/&nbsp;/g, ' ');
+        },
+
         initQuill() {
             const el = document.getElementById('blog-quill');
             if (!el) return;
@@ -514,7 +529,7 @@ function blogPage() {
             });
 
             if (this.form.content) {
-                this.quill.root.innerHTML = this.form.content;
+                this.chargerQuill(this.form.content);
             }
 
             // Quill normalise le HTML des qu'il le charge : il aplatit les lignes
@@ -535,7 +550,7 @@ function blogPage() {
             // Convertit le HTML en contenu mis en forme dans Quill
             this.quill.clipboard.dangerouslyPasteHTML(html);
             this.quillDirty = true;
-            this.form.content = this.quill.root.innerHTML;
+            this.form.content = this.htmlQuill();
             this.calcReadingTime();
             this.importHtmlText = '';
             this.showImport = false;
@@ -571,9 +586,8 @@ function blogPage() {
                 // Lire quill.root.innerHTML sans cette garde renvoyait la version
                 // deja aplatie par Quill — et detruisait les tableaux.
                 this.htmlSource = (this.quillDirty && this.quill)
-                    ? this.quill.root.innerHTML
+                    ? this.htmlQuill()
                     : (this.form.content || '');
-                if (this.htmlSource === '<p><br></p>') this.htmlSource = '';
                 this.showImport = false;
                 this.htmlMode = true;
                 return;
@@ -581,7 +595,7 @@ function blogPage() {
             // Retour au visuel : Quill re-analyse le HTML et jette ce qu'il ne connait pas.
             if (!confirm("Revenir a l'editeur visuel ?\n\nL'editeur ne gere pas les tableaux : tout <table> present sera supprime.\n\nPour conserver votre HTML, annulez et enregistrez depuis le mode code.")) return;
             this.form.content = this.htmlSource;
-            if (this.quill) this.quill.root.innerHTML = this.htmlSource;
+            if (this.quill) this.chargerQuill(this.htmlSource);
             this.htmlMode = false;
         },
 
@@ -600,7 +614,7 @@ function blogPage() {
 
         getPreviewContent() {
             if (this.htmlMode) return this.htmlSource || '<p class="text-gray-400">Aucun contenu...</p>';
-            if (this.quill) return this.quill.root.innerHTML;
+            if (this.quill) return this.htmlQuill();
             return this.form.content || '<p class="text-gray-400">Aucun contenu...</p>';
         },
 
@@ -612,8 +626,7 @@ function blogPage() {
                 // form.content tel qu'il vient de la base : ouvrir un article
                 // contenant un tableau puis cliquer Enregistrer detruisait le
                 // tableau, sans que rien n'ait ete modifie.
-                this.form.content = this.quill.root.innerHTML;
-                if (this.form.content === '<p><br></p>') this.form.content = '';
+                this.form.content = this.htmlQuill();
             }
             this.calcReadingTime();
 
