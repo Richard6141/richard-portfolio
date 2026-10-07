@@ -159,3 +159,11 @@ function test_gabarit_pays_drapeau_dans_le_hero(): void
 {
     assert_contains('<span class="eyebrow"><img class="drapeau" src="/assets/drapeaux/bj.svg"', gabarit_rendre('pays', 'benin'));
 }
+
+function test_gabarit_hub_secteurs_groupe_par_univers(): void
+{
+    // Vague 1E : le hub des secteurs range les pages par univers, comme les services par famille.
+    $html = gabarit_rendre('hub', 'secteurs');
+    assert_contains('<h2 class="liste-hub__famille">Droit et justice</h2>', $html);
+    assert_contains('href="/secteurs/test-secteur"', $html);
+}

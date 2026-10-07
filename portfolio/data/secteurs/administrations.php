@@ -1,0 +1,256 @@
+<?php
+// ============================================================
+// data/secteurs/administrations.php · Page secteur « Administrations et collectivités »
+// (vague 1E). Sources relevées le 07/10/2026 : UN DESA, ANIP et gouvernement du Bénin,
+// e-Justice de Côte d'Ivoire et du Sénégal, SGG du Bénin, ARTCI, CDP, e-Estonia, RGAA,
+// Direction générale des collectivités locales, Banque des Territoires, GSMA.
+// Aucun projet client rattaché, aucune page locale.
+// ============================================================
+declare(strict_types=1);
+
+return [
+    'titre'   => "Des démarches en ligne, des registres fiables et une IA qui aide l'agent sans décider à sa place : ce que Richard apporte aux administrations, aux mairies et aux juridictions",
+    'title'   => "Digitaliser mairies et administrations | Richard SALANON",
+    'meta'    => "Démarches en ligne, état civil, recettes locales, courrier, marchés publics et IA à décision humaine pour administrations, mairies et juridictions.",
+    'en_bref' => "Richard SALANON équipe les administrations centrales, les établissements publics, les collectivités locales et les juridictions : portails de démarches et guichets uniques, état civil et registres, recettes locales payées par mobile money, courrier et parapheur électronique, archivage, liaisons entre les systèmes de l'État, assistants d'IA où la décision reste à l'agent. Il travaille à distance, et sur place au Bénin, avec des applications sur mesure, des automatisations et des API. Le prix se fixe sur devis ; le premier échange est gratuit.",
+    'publie'  => '2026-11-19',
+    'maj'     => '2026-11-19',
+    'univers' => 'Secteur public et éducation',
+    'locales' => [],
+
+    'faits_hero' => [
+        ['l' => 'Pour qui', 'v' => 'Administrations centrales, établissements publics, mairies, collectivités et juridictions'],
+        ['l' => 'Intervention', 'v' => 'À distance ; sur place au Bénin'],
+        ['l' => 'Devis', 'v' => 'Sur devis'],
+        ['l' => 'Réponse', 'v' => 'sous 24 heures'],
+    ],
+
+    'sections' => [
+        [
+            'type'        => 'prose',
+            'titre'       => "Où en est la digitalisation des administrations en Afrique francophone et en Europe ?",
+            'paragraphes' => [
+                "Le baromètre de référence est l'indice de développement du gouvernement en ligne des Nations unies, qui combine l'offre de services en ligne, les télécommunications et le capital humain. Dans l'enquête 2024 publiée par le <a href=\"https://publicadministration.un.org/egovkb/en-us/Data/Region-Information\">département des affaires économiques et sociales de l'ONU</a>, la moyenne de l'Afrique atteint 0,4247, contre 0,8493 pour l'Europe et 0,6382 pour le monde. L'écart reste large, et il tient aussi à la part des services que l'usager peut réellement terminer en ligne, sans repasser par un guichet.",
+                "Sur le terrain, les situations sont très inégales d'un pays à l'autre. Au Bénin, la demande d'acte de naissance et du certificat d'identification personnelle se fait en ligne depuis le 26 mai 2021 sur le <a href=\"https://service-public.bj/\">portail national des services publics</a>, et l'<a href=\"https://www.gouv.bj/article/3209/declaration-enregistrement-obtention-acte-naissance-nouveau-jour-etat-civil-beninois-anip-lance-phase-pilote-guichet-unique-dans-plusieurs-formations-sanitaires-/\">ANIP</a> a lancé un guichet unique pilote dans dix formations sanitaires, où la naissance est déclarée à l'hôpital et le numéro personnel d'identification envoyé par SMS. Au Rwanda, la plateforme <a href=\"https://www.irembo.gov.rw/home/citizen/all_services\">Irembo</a> regroupe passeports, actes de naissance, titres fonciers et licences commerciales, payés par mobile money ou par carte.",
+                "Côté justice, la Côte d'Ivoire a annoncé le 29 juin 2026 la connexion de ses 39 juridictions de première instance à la plateforme <a href=\"https://fr.allafrica.com/stories/202606300410.html\">e-Justice</a>, avec la délivrance entièrement dématérialisée des certificats de nationalité et des extraits de casier judiciaire. Le Sénégal a lancé le 10 septembre 2026 deux plateformes, e-Justice, qui dématérialise le traitement des affaires, et Jokkoo ak Yoon, un canal d'échange pour les citoyens, selon un <a href=\"https://www.capmad.com/article/senegal-moussa-sarr-lance-ejustice-et-jokko-ak-yoon-nouveaux-bras-numeriques-de-la-justice\">compte rendu publié par Capmad</a>.",
+                "En Europe, la question n'est plus d'ouvrir un portail mais de faire parler les systèmes entre eux. L'Estonie a bâti son administration sur <a href=\"https://e-estonia.com/solutions/interoperability-services/x-road/\">X-Road</a>, une couche d'échange sécurisé qui relie des centaines de bases publiques et privées et applique le principe du « une seule fois » : l'usager ne fournit une donnée qu'une fois. En France, la plateforme <a href=\"https://www.banquedesterritoires.fr/letat-va-participer-financierement-au-deploiement-des-echanges-electroniques-de-donnees-comedec\">COMEDEC</a>, ouverte aux communes depuis le 1er janvier 2014, organise l'échange dématérialisé des données d'état civil entre les mairies et les administrations ou notaires destinataires, ce qui évite à l'usager de réclamer un extrait d'acte de naissance à sa commune.",
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => "Quels processus d'une administration gagnent à être digitalisés, et à quels signes le moment est-il venu ?",
+            'intro' => "Dans le secteur public, le bon point de départ est rarement le plus visible. On le trouve en suivant une démarche d'usager de bout en bout, du guichet à l'archive, et en notant où l'information est recopiée à la main.",
+            'items' => [
+                ['titre' => "Un usager doit se déplacer pour une pièce qu'un autre service possède déjà", 'texte' => "Extrait d'acte, attestation, certificat : quand l'agent réclame à l'usager un papier délivré par une autre administration, la liaison entre systèmes manque. C'est le signe le plus net, et le premier chantier d'une démarche en ligne."],
+                ['titre' => "Les registres d'état civil vivent sur des cahiers et des tableurs", 'texte' => "Un acte retrouvé en vingt minutes, une copie illisible, un registre abîmé : la numérisation des registres et leur saisie contrôlée sécurisent la mémoire de la commune et accélèrent chaque délivrance."],
+                ['titre' => "Les recettes locales se collectent en espèces, avec des écarts de caisse", 'texte' => "Marchés, taxes de voirie, patentes, location d'étals : un régisseur qui passe avec un carnet à souches ne peut ni rapprocher ni prévoir. Le paiement mobile et un reçu numérique rendent la recette traçable."],
+                ['titre' => "Le courrier se perd entre le secrétariat, la direction et le service", 'texte' => "Un courrier arrivé sans numéro d'enregistrement ni circuit de visa se retrouve par hasard. Un registre électronique de courrier, avec parapheur, donne à chaque pièce un état et un responsable."],
+                ['titre' => "Les dossiers de marchés se constituent à la chemise", 'texte' => "Les pièces d'un dossier d'appel d'offres, les registres de dépôt et les procès-verbaux demandent une traçabilité qu'un classeur garantit mal, surtout quand un recours arrive."],
+                ['titre' => "Les systèmes de l'État ne se parlent pas", 'texte' => "Fichier des agents, budget, paie, état civil, foncier : chaque direction a son logiciel. Tant qu'aucune interface ne les relie, les mêmes données se ressaisissent à chaque étape."],
+                ['titre' => "Un greffe ou un secrétariat de juridiction qui croule sous les saisies", 'texte' => "Enregistrement des affaires, convocations, tenue du rôle, délivrance de copies : plus la juridiction est chargée, plus chaque ressaisie coûte en délai pour le justiciable."],
+                ['titre' => "Les contre-signaux", 'texte' => "Si la procédure est contestée ou change à chaque réforme, numériser trop tôt fige un flou. Mieux vaut stabiliser d'abord la règle, avec la direction juridique, puis l'outiller."],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => "Quels services de Richard répondent aux besoins d'une administration, d'une mairie ou d'une juridiction ?",
+            'legende' => "Chaque ligne associe un besoin courant du secteur public à un service ; le périmètre exact de chaque mission figure dans le devis.",
+            'entetes' => ['Besoin typique du secteur', 'Service', 'Lien'],
+            'lignes'  => [
+                ['Portail de démarches et guichet unique : dépôt de demande, suivi du dossier, notification par SMS', 'Développement sur mesure d\'une application web accessible par téléphone', "<a href=\"/services/application-web-sur-mesure\">Application web sur mesure</a>"],
+                ['Registre d\'état civil : saisie contrôlée, recherche d\'actes, délivrance de copies avec traçabilité', 'Application métier avec droits par agent et journal des actions', "<a href=\"/services/application-web-sur-mesure\">Application web sur mesure</a>"],
+                ['Recettes locales : taxes, patentes, droits de marché payés par mobile money et rapprochés en caisse', 'Application de recouvrement, paiement mobile et rapprochement automatisé', "<a href=\"/services/automatisation-ia\">Automatisation et IA</a>"],
+                ['Courrier arrivé et départ, parapheur, circuit de visa, relances des délais', 'Registre électronique et flux de validation automatisés', "<a href=\"/services/automatisation-ia\">Automatisation et IA</a>"],
+                ['Accueil des usagers : réponses aux questions courantes sur WhatsApp, orientation vers le bon guichet', 'Assistant conversationnel qui oriente et ne tranche pas', "<a href=\"/services/agents-ia-chatbot-whatsapp\">Agents IA et chatbot WhatsApp</a>"],
+                ['Aide à la lecture de dossiers, résumés de pièces, classement du courrier, avec relecture par l\'agent', 'Intégration de l\'IA dans les logiciels déjà en place', "<a href=\"/services/integration-ia-entreprise\">Intégration de l'IA en entreprise</a>"],
+                ['Échanges entre l\'état civil, le foncier, le budget et la paie : un système interroge l\'autre', 'API REST sécurisées et connecteurs entre logiciels', "<a href=\"/services/api-rest-integrations\">API REST et intégrations</a>"],
+                ['Choisir quoi numériser d\'abord, chiffrer le projet, préparer un dossier de consultation', 'Étude préalable : cartographie, cahier des charges, scénarios et budget', "<a href=\"/services/audit-etude-de-projet\">Audit et étude de projet</a>"],
+                ['Stratégie numérique d\'une commune ou d\'un ministère, arbitrage des priorités, conduite du changement', 'Conseil en digitalisation auprès de la direction', "<a href=\"/services/consultant-digitalisation\">Consultant en digitalisation</a>"],
+                ['Maintenance, correctifs, sauvegardes et montées de version après la mise en service', 'Support sur la durée', "<a href=\"/services/maintenance-support\">Maintenance et support</a>"],
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => "Logiciels métier et interconnexions : que garder, que relier, que remplacer dans une administration ?",
+            'legende' => "Les administrations disposent presque toutes de logiciels d'État ou de progiciels achetés ; le choix se fait système par système, après un inventaire.",
+            'entetes' => ['Situation', 'Quand garder et relier', 'Quand remplacer'],
+            'lignes'  => [
+                ['Logiciel national d\'état civil ou d\'identification', 'Il est imposé par l\'agence nationale : on le garde, et on construit à côté un portail ou un outil d\'enregistrement local qui l\'alimente par son interface.', 'Seulement si l\'agence en propose un successeur ; une commune ne remplace pas seule un registre national.'],
+                ['Comptabilité publique et budget de l\'État ou de la commune', 'Le logiciel est réglementaire et audité : on y exporte et on en importe par interface, sans toucher aux écritures.', 'Un programme de réforme de la gestion publique décide, pas un prestataire.'],
+                ['Courrier et archivage sur tableurs ou dossiers partagés', 'Rarement : un tableur ne donne ni numéro opposable ni circuit de visa.', 'Un registre électronique du courrier remplace le cahier ; l\'archivage papier se numérise par lots, avec un plan de classement.'],
+                ['Régie des recettes en carnets à souches', 'Les carnets restent un temps pour les usagers sans téléphone, en parallèle.', 'Un outil de recouvrement avec reçus numériques remplace progressivement les carnets, avec une clôture de caisse journalière.'],
+                ['Progiciel de gestion des marchés acheté à un éditeur', 'On garde s\'il respecte la procédure du pays et exporte ses données ; on le relie au portail des marchés.', 'Si l\'éditeur a disparu, si les exports sont impossibles ou si la réglementation a changé.'],
+                ['Plusieurs bases qui ne se parlent pas (agents, foncier, état civil)', 'On les garde, et on ajoute une couche d\'échange avec des API et des clés par système, sur le modèle de ce qu\'a fait l\'Estonie.', 'Jamais d\'un coup : on remplace une base à la fois, quand son logiciel est en fin de vie.'],
+                ['Système de greffe ou de gestion des affaires d\'une juridiction', 'On le garde si le ministère de la Justice en est propriétaire ; on y relie l\'outil de rôle et de convocations.', 'Si la juridiction pilote seule un projet, après accord de la chancellerie sur le périmètre et l\'hébergement.'],
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => "Que peut faire l'IA dans l'administration et que ne doit-elle jamais faire ?",
+            'intro' => "Dans le service public, l'IA sert à préparer, rechercher et classer ; elle ne rend ni une décision individuelle ni un acte opposable. La frontière se règle dans l'outil, pas seulement dans une circulaire.",
+            'items' => [
+                ['titre' => "Ce qu'elle peut faire : orienter l'usager", 'texte' => "Répondre aux questions courantes sur les pièces à fournir, les horaires et les délais, en citant la page officielle, puis passer la main à un agent dès que le dossier est personnel."],
+                ['titre' => "Ce qu'elle peut faire : préparer le travail de l'agent", 'texte' => "Résumer un courrier long, proposer un classement, repérer une pièce manquante dans un dossier, rédiger un premier jet de réponse que l'agent relit, corrige et signe."],
+                ['titre' => "Ce qu'elle peut faire : aider la juridiction", 'texte' => "Chercher dans la jurisprudence, résumer des écritures, vérifier la cohérence d'un rôle. Le magistrat garde l'appréciation des faits, l'application de la loi et la motivation."],
+                ['titre' => "Ce qu'elle ne doit jamais faire : décider", 'texte' => "Accorder ou refuser une prestation, une autorisation ou un recours sans qu'un agent identifiable examine le dossier et assume la décision. Chaque sortie de l'IA est une proposition, tracée, jamais un acte."],
+                ['titre' => "Ce qu'elle ne doit jamais faire : voir les dossiers sensibles hors cadre", 'texte' => "Envoyer à un outil public en ligne un acte d'état civil, un dossier social, un secret de l'instruction ou un délibéré. Les données restent dans un environnement maîtrisé, avec un journal des consultations."],
+                ['titre' => "Ce que le droit européen en dit pour la justice", 'texte' => "Le <a href=\"https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32024R1689\">règlement européen sur l'intelligence artificielle</a> classe à haut risque les systèmes destinés à aider une autorité judiciaire à rechercher et à interpréter les faits et la loi (considérant 61), tout en écartant les tâches purement accessoires comme l'anonymisation de décisions."],
+                ['titre' => "Un usage à garder à l'esprit : l'assistant qui s'engage", 'texte' => "L'histoire d'<a href=\"/histoires/air-canada-chatbot\">Air Canada et de son chatbot</a> rappelle qu'une organisation répond de ce que dit son assistant. Une mairie qui laisse un chatbot promettre un délai en reste responsable."],
+            ],
+        ],
+        [
+            'type'  => 'vigilance',
+            'titre' => "Qui répond d'une erreur de l'IA dans un dossier d'usager ?",
+            'texte' => "L'administration, et l'agent qui a signé. C'est pourquoi Richard propose que chaque assistant garde la trace de la question, de la réponse proposée et de la personne qui l'a validée, et qu'il ne produise aucun document officiel sans validation. Une charte d'usage, rédigée avec la direction des affaires juridiques, précise les cas où l'outil est interdit. Les <a href=\"/formations/ia-ethique-conformite\">formations sur l'éthique de l'IA</a> et sur la <a href=\"/formations/gouvernance-ia\">gouvernance de l'IA</a> servent à la faire vivre.",
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => "Quelles règles encadrent les paiements, les données des usagers et les marchés d'une administration ?",
+            'legende' => "Règles relevées sur les sites officiels le 07/10/2026 ; la réglementation évolue, et le texte en vigueur au jour de la signature fait foi. Ce tableau n'est pas un avis juridique.",
+            'entetes' => ['Domaine', 'Ce que dit la règle', 'Conséquence pour le projet'],
+            'lignes'  => [
+                ['Recettes locales par mobile money', "Au Sénégal, la solution TownPay, créée en 2017 par SudPay, équipe les agents communaux de terminaux mobiles et les commerçants de cartes ou de badges pour collecter les taxes locales, selon la <a href=\"https://www.gsma.com/mobilefordevelopment/blog/senegal-a-tech-ecosystem-on-the-move/\">GSMA</a>. Au Bénin, la DGI, MTN et Moov ont ouvert le paiement de la taxe sur les véhicules à moteur par téléphone en janvier 2020, d'après <a href=\"https://osiris.sn/Benin-La-DGI-lance-Mobile-Tax-une.html\">Osiris</a>.", "Le paiement mobile existe pour les taxes ; chaque commune doit faire valider par son comptable public le circuit d'encaissement et le rapprochement avant de l'ouvrir."],
+                ['Données personnelles au Bénin', "Le code du numérique (loi n° 2017-20) pose à son <a href=\"https://sgg.gouv.bj/doc/loi-2017-20/\">article 391</a> deux conditions au transfert de données vers un État tiers : l'Autorité de protection des données doit constater que cet État assure un niveau de protection équivalent, et le responsable du traitement doit obtenir son autorisation préalable avant tout transfert. L'article 392 prévoit des exceptions encadrées.", "L'hébergement des dossiers d'usagers se décide avant le développement : serveur national ou garanties écrites."],
+                ["Données personnelles en Côte d'Ivoire", "La loi n° 2013-450 soumet les traitements de données personnelles à une déclaration préalable ou, selon leur nature, à une autorisation préalable, d'après <a href=\"https://cio-mag.com/cote-divoire-artci-le-traitement-des-donnees-personnelles-desormais-soumis-a-une-autorisation-prealable\">CIO Mag</a>.", "Le régime applicable (déclaration ou autorisation) est à confirmer auprès de l'ARTCI avant la mise en service, avec le service juridique."],
+                ['Données personnelles au Sénégal', "La loi n° 2008-12 a créé la Commission de protection des données personnelles, et l'actualité de sa révision se suit sur le site d'<a href=\"https://www.osiris.sn/senegal-vers-une-revision-de-la-loi-sur-la-protection-des-donnees-personnelles.html\">Osiris</a>.", "Une clause de mise à jour réglementaire est prévue au contrat, et le texte en vigueur est vérifié à la signature."],
+                ['Données personnelles en Europe', "Le RGPD s'applique à toute collectivité européenne ; un prestataire situé hors de l'Union intervient comme sous-traitant, avec contrat et garanties de transfert.", "Contrat de sous-traitance, registre des traitements et analyse d'impact pour les fichiers sensibles."],
+                ['Accessibilité des services en ligne', "En France, le <a href=\"https://accessibilite.numerique.gouv.fr/obligations/\">RGAA</a> en version 4.1.2 fixe les critères d'accessibilité des services publics numériques ; la version 5 est annoncée pour fin 2026.", "Les écrans sont conçus avec ces critères dès le départ, et une déclaration d'accessibilité est préparée."],
+                ['Marchés publics au Bénin', "La loi n° 2020-26 du 29 septembre 2020 porte code des marchés publics, selon la <a href=\"https://leap.unep.org/en/countries/bj/national-legislation/loi-no-2020-26-du-29-septembre-2020-portant-code-des-marches\">base législative du PNUE</a>.", "Richard répond aux appels d'offres comme prestataire, selon les règles du dossier, sans procédure dérogatoire."],
+                ['Marchés publics en France', "Selon la <a href=\"https://www.collectivites-locales.gouv.fr/commande-publique/dematerialisation-de-la-commande-publique\">Direction générale des collectivités locales</a>, un décret du 29 décembre 2025 a porté de 40 000 à 60 000 euros HT, depuis le 1er avril 2026, le seuil à partir duquel la dématérialisation est obligatoire pour les marchés passés avec un avis d'appel à la concurrence.", "Le portail de l'acheteur est le canal de la consultation ; l'offre se dépose selon ses règles."],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Faut-il un traitement particulier pour les marchés publics, les juridictions et la tutelle ?",
+            'paragraphes' => [
+                "Pour les marchés, Richard intervient comme prestataire. Quand une administration publie un appel d'offres, il lit le dossier, pose ses questions dans le délai prévu et dépose son offre comme tout candidat. Il ne promet aucune procédure dérogatoire, aucune attribution directe ni aucun accès privilégié : seuls un appel à la concurrence, une consultation restreinte ou un marché dont le seuil le permet ouvrent la voie à une commande. Côté acheteur, il aide à rédiger le besoin, sans participer à la sélection quand il candidate.",
+                "Pour les juridictions, la tutelle est le ministère de la Justice, comme le montrent e-Justice en Côte d'Ivoire et au Sénégal : l'hébergement, le périmètre des données et les droits d'accès se décident avec lui avant tout développement. Les outils de saisie du rôle, de convocation ou de délivrance de copies s'appuient sur l'existant, et aucun outil ne reçoit les pièces d'une instruction ou un délibéré en dehors du cadre fixé par la chancellerie.",
+                "Pour les communes, la tutelle varie selon le pays : préfet ou ministère de l'Intérieur, comptable public, agence nationale d'identification. À confirmer auprès de la tutelle avant de lancer le projet, quand l'outil touche à l'état civil, aux régies ou à la comptabilité de la commune.",
+            ],
+        ],
+        [
+            'type'  => 'cas',
+            'titre' => "À quoi ressemble un projet numérique dans une mairie, une administration ou une juridiction ?",
+            'items' => [
+                ['secteur' => "Commune du Bénin : état civil et recettes", 'probleme' => "Les demandes d'extraits arrivent au guichet, les actes se cherchent à la main dans des registres anciens, et les droits de marché sont encaissés en espèces avec un carnet.", 'solution' => "Saisie contrôlée des registres, recherche d'acte par nom et date, délivrance d'une copie avec journal, et un outil d'encaissement par mobile money rapproché chaque soir avec la caisse. Le portail national et l'ANIP restent la référence pour l'identification."],
+                ['secteur' => "Ministère ou agence en Côte d'Ivoire : courrier et parapheur", 'probleme' => "Les courriers entrent par plusieurs secrétariats, circulent sous chemise et se perdent entre la direction et les services techniques.", 'solution' => "Registre électronique unique avec numéro d'enregistrement, circuit de visa et relances automatiques sur les délais de réponse. Les pièces sont numérisées à l'arrivée, classées selon un plan, et la signature suit un circuit tracé."],
+                ['secteur' => "Mairie ou communauté au Sénégal : accueil des usagers par WhatsApp", 'probleme' => "Le standard et le guichet reçoivent les mêmes questions sur les pièces à fournir, les horaires des services et le suivi d'une demande.", 'solution' => "Un assistant WhatsApp répond aux questions courantes avec des textes validés par la commune, oriente vers le bon service et passe la main à un agent pour tout dossier personnel. Les réponses sont tracées et relues chaque semaine."],
+                ['secteur' => "Collectivité en France : portail des démarches et accessibilité", 'probleme' => "Les formulaires en ligne sont des documents à télécharger, ressaisis par les agents, et le site ne respecte pas les critères d'accessibilité.", 'solution' => "Formulaires numériques avec pièces jointes et suivi du dossier, conçus selon le RGAA, interfacés avec le logiciel métier existant par une API, et déclaration d'accessibilité préparée avec le service communication."],
+                ['secteur' => "Juridiction en Belgique ou en Suisse : rôle et convocations", 'probleme' => "Le greffe ressaisit les informations d'une affaire à chaque étape, et les convocations partent à la main.", 'solution' => "Un outil qui lit les données du logiciel de gestion des affaires par son interface, propose le calendrier du rôle et prépare les convocations pour validation du greffier. Aucune pièce n'est confiée à un service d'IA extérieur."],
+            ],
+        ],
+        [
+            'type'  => 'etapes',
+            'titre' => "Comment avance un projet numérique public, du diagnostic au suivi ?",
+            'items' => [
+                ['titre' => "Premier échange", 'duree' => 'Réponse sous 24 heures', 'texte' => "Vous présentez la structure, les services touchés, les logiciels déjà là et la démarche la plus coûteuse en temps. Après ce premier échange gratuit, Richard dit s'il est la bonne personne, et ce qui relève de l'État ou de la tutelle plutôt que de lui."],
+                ['titre' => "Diagnostic d'une démarche réelle", 'duree' => 'Selon le projet', 'texte' => "On suit un dossier de bout en bout, du guichet à l'archive, avec les agents qui le traitent. Le diagnostic liste les ressaisies, les pièces demandées en double, les délais et les données concernées, et pose la question de l'hébergement."],
+                ['titre' => "Cadrage, règles et validation", 'duree' => 'Selon le projet', 'texte' => "Périmètre, rôles, circuits de validation, droits par agent, règles de conservation et déclaration à l'autorité de protection des données. La tutelle valide ce qui touche à l'état civil, aux recettes ou à la justice avant tout développement."],
+                ['titre' => "Prototype et essai avec les agents", 'duree' => 'Selon le projet', 'texte' => "Un premier écran ou un premier flux, testé avec ceux qui vont s'en servir, y compris les agents les moins à l'aise avec l'outil. Les corrections se font avant l'ouverture au public."],
+                ['titre' => "Développement par paliers", 'duree' => 'Selon le projet', 'texte' => "Un service à la fois : le portail, puis les paiements, puis les liaisons avec les autres systèmes. Chaque palier est mis en service seul, avec sauvegardes, journal des actions et procédure de reprise."],
+                ['titre' => "Formation et démarrage", 'duree' => 'Selon le projet', 'texte' => "Séances par métier (agents d'accueil, état civil, régie, secrétariat), guide court et référent désigné. Les premiers jours se passent en parallèle de l'ancienne méthode."],
+                ['titre' => "Suivi et évolution", 'duree' => 'Sur la durée', 'texte' => "Correctifs, indicateurs de délais, mise à jour quand la réglementation change, et sauvegardes vérifiées. La <a href=\"/services/maintenance-support\">maintenance</a> couvre ces points sur la durée."],
+            ],
+        ],
+        [
+            'type'  => 'prix',
+            'titre' => "Combien coûte un projet pour une administration ou une collectivité ?",
+            'intro' => "Les tarifs de départ publiés sur ce site concernent les sites : 150 000 FCFA pour une landing page (environ 228,67 euros), 300 000 FCFA pour un site vitrine (environ 457,35 euros) et 75 000 FCFA pour le référencement naturel (environ 114,34 euros), à 655,957 FCFA pour 1 euro. Un site d'information pour une commune relève de ces ordres de grandeur ; un portail de démarches, un registre ou un outil de recouvrement se chiffre sur devis. Pour régler, Richard accepte Mobile Money (MTN, Moov), carte, PayPal, virement ou espèces.",
+            'items' => [
+                ['offre' => "Étude préalable", 'prix' => 'Sur devis', 'inclus' => ["Suivi d'une démarche réelle avec les agents", "Cartographie des systèmes en place", "Scénarios chiffrés et calendrier", "Pistes de financement et de procédure d'achat à étudier avec vous"]],
+                ['offre' => "Site d'information ou portail simple", 'prix' => 'À partir de 300 000 FCFA (environ 457,35 euros) pour un site vitrine ; le reste sur devis', 'inclus' => ["Pages accessibles et lisibles sur téléphone", "Formulaire de contact ou de demande", "Hébergement et sauvegardes à définir", "Formation du référent de publication"]],
+                ['offre' => "Application métier : registre, recettes, courrier", 'prix' => 'Sur devis', 'inclus' => ["Droits par agent et journal des actions", "Paiement mobile et rapprochement pour les recettes", "Reprise des données existantes", "Formation par métier"]],
+                ['offre' => "Interconnexions et assistant d'IA", 'prix' => 'Sur devis', 'inclus' => ["API sécurisées entre systèmes", "Assistant d'accueil avec textes validés", "Traçabilité des échanges et des validations", "Maintenance et suivi"]],
+            ],
+            'variations' => [
+                "Le nombre de démarches ouvertes et de services concernés dans la structure.",
+                "L'état des données à reprendre : registres papier à saisir, ou bases déjà numériques à nettoyer.",
+                "Le nombre de systèmes à relier, et la qualité de leurs interfaces.",
+                "L'hébergement : serveur national, cloud européen ou infrastructure de la tutelle.",
+                "Les règles de sécurité et de conservation imposées par l'autorité de protection des données.",
+                "Le nombre d'agents à former et de sites concernés.",
+                "Le mode de passation du marché, qui conditionne le calendrier et les pièces à fournir.",
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => "Quelles erreurs reviennent dans la digitalisation d'une administration ?",
+            'intro' => "Les échecs viennent rarement de la technique. Ils tiennent à l'ordre des chantiers, à la tutelle, aux données et à la confiance des agents.",
+            'items' => [
+                ['titre' => "Numériser une procédure encore floue", 'texte' => "Une démarche dont les pièces ou les délais changent selon l'agent ne devient pas simple par l'écran. On clarifie la règle, avec le juriste du service, avant l'outil."],
+                ['titre' => "Ouvrir un portail sans changer le travail derrière", 'texte' => "Si les demandes en ligne sont imprimées puis ressaisies, l'usager gagne un déplacement et l'agent perd du temps. La démarche s'organise de bout en bout."],
+                ['titre' => "Oublier les usagers sans téléphone ni connexion", 'texte' => "Le guichet reste ouvert, et il se sert du même outil que le portail. Une démarche accessible aux deux publics évite une inégalité d'accès."],
+                ['titre' => "Héberger les données sans avoir demandé", 'texte' => "L'emplacement des dossiers d'usagers dépend de la loi du pays et de la tutelle. Le découvrir après le développement oblige à tout reprendre."],
+                ['titre' => "Laisser le prestataire seul détenteur des accès", 'texte' => "Comptes administrateur, code, hébergement, sauvegardes : tout est ouvert au nom de l'administration. Un changement de prestataire reste possible, et un marché peut être relancé."],
+                ['titre' => "Confier à l'IA une décision individuelle", 'texte' => "Une réponse produite sans agent qui la valide est une erreur d'organisation avant d'être une erreur d'outil. L'assistant propose, l'agent décide et signe."],
+                ['titre' => "Négliger l'accessibilité", 'texte' => "Un portail illisible au lecteur d'écran ou à bas débit écarte une partie des usagers. Les critères comme le RGAA se prévoient à la conception, pas en fin de projet."],
+                ['titre' => "Former seulement la direction", 'texte' => "Les agents d'accueil, de la régie et du courrier utilisent l'outil tous les jours. Sans formation par métier et sans référent, le cahier revient."],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Comment former les agents, les cadres et les magistrats ?",
+            'paragraphes' => [
+                "La formation est un service distinct de la digitalisation, et elle a ses pages. Richard a déjà formé des agents d'administrations et de collectivités, sur l'accueil des usagers, le courrier, l'état civil, les marchés publics et les données publiques, avec la décision qui reste à l'agent. Le détail du programme figure sur la page <a href=\"/formations/metier/administrations-collectivites\">formation pour les administrations et collectivités</a>.",
+                "Richard a aussi déjà formé des magistrats et des juges, sur la recherche, la préparation des décisions et la tenue du rôle, sans rien céder sur l'indépendance, le secret du délibéré et la motivation humaine. Le programme se trouve sur la page <a href=\"/formations/metier/magistrats-juges\">formation pour les magistrats et juges</a>.",
+                "Autour de ces deux parcours, les fiches de la formation <a href=\"/formations/ia-ethique-conformite\">IA, éthique et conformité des données</a>, <a href=\"/formations/gouvernance-ia\">gouverner l'IA</a> et <a href=\"/formations/cybersecurite-employes\">cybersécurité pour les employés</a> couvrent les réflexes communs à tous les agents. Elles se commandent seules, ou avec le projet numérique d'une structure.",
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Pourquoi confier votre projet numérique public à Richard SALANON ?",
+            'paragraphes' => [
+                fait('phrase_entite'),
+                "Plus de six ans de métier, EPITECH en 2022 et plus de 50 projets livrés : Richard code lui-même ce qu'il propose à une administration, qu'il intervienne depuis Cotonou ou chez vous. Il développe lui-même les portails, les registres, les flux de validation, les API et les assistants qu'il propose, et il suggère de remettre les accès et le code à l'administration.",
+                "Côté produits, il a créé <a href=\"https://wapy.pro\">Wapy</a>, un assistant WhatsApp doté d'IA, et il co-fonde <a href=\"https://audyxa.com\">Audyxa</a> ; cette pratique des messageries et des API nourrit ses projets publics. Les réalisations de Richard sont présentées sur la page <a href=\"/realisations/\">réalisations</a> ; son parcours complet est sur la page <a href=\"/richard-salanon\">Richard SALANON</a>.",
+                "Sa méthode, proposée comme telle : partir d'une démarche réelle, valider les règles avec la tutelle, livrer par paliers, tracer chaque action, former par métier et répondre sous 24 heures.",
+            ],
+        ],
+        [
+            'type'   => 'cta',
+            'titre'  => "Quelle démarche de votre administration voulez-vous alléger en premier ?",
+            'texte'  => "Décrivez votre structure, la démarche concernée, les logiciels en place et vos contraintes de tutelle ou d'hébergement : Richard vous répond sous 24 heures et, après un premier échange gratuit, prépare un devis.",
+            'bouton' => ['url' => '/contact', 'texte' => 'Présenter mon projet'],
+        ],
+    ],
+
+    'faq' => [
+        ['q' => "Une mairie peut-elle encaisser ses taxes locales par mobile money ?", 'r' => "Oui, des exemples existent : des communes du Sénégal collectent leurs taxes locales avec des terminaux mobiles, et le Bénin a ouvert le paiement de la taxe sur les véhicules à moteur par téléphone. Il faut que le comptable public valide le circuit d'encaissement, le reçu et le rapprochement avec la caisse. Richard construit l'outil de collecte et de rapprochement ; la décision d'ouvrir ce canal revient à la commune et à sa tutelle."],
+        ['q' => "Peut-on numériser les registres d'état civil d'une commune ?", 'r' => "Oui, en deux temps : numériser les pages des registres, puis saisir les actes avec contrôle de chaque champ et journal des modifications. Pour l'identification, l'agence nationale reste la référence ; l'outil de la commune la complète sans la remplacer. L'hébergement et les droits d'accès se décident avec la tutelle avant de commencer."],
+        ['q' => "Richard peut-il répondre à un appel d'offres public ?", 'r' => "Oui, comme prestataire, en suivant les règles du dossier : lecture du cahier des charges, questions dans le délai, offre technique et financière. Il ne promet aucune procédure dérogatoire ni attribution directe. Une administration qui prépare un marché peut aussi lui demander d'aider à écrire le besoin ; il ne participe alors pas à l'analyse des offres s'il candidate."],
+        ['q' => "L'IA peut-elle répondre aux usagers d'une administration ?", 'r' => "Elle peut orienter : pièces à fournir, horaires, délais, avec des textes validés par l'administration et un renvoi vers l'agent pour tout dossier personnel. Elle ne doit pas accorder ni refuser une demande. L'administration répond de ce que dit son assistant, ce que rappelle l'histoire d'Air Canada et de son chatbot."],
+        ['q' => "Les données des usagers peuvent-elles être hébergées hors du pays ?", 'r' => "Cela dépend de la loi du pays et de la tutelle. Au Bénin, l'article 391 du code du numérique exige que l'Autorité constate un niveau de protection équivalent et que le responsable du traitement obtienne son autorisation préalable avant tout transfert. En Côte d'Ivoire, la loi de 2013 prévoit une déclaration ou une autorisation préalable, à confirmer auprès de l'ARTCI. En Europe, le RGPD s'applique. Le choix de l'hébergement se fait avant le développement."],
+        ['q' => "Comment relier des logiciels de l'État qui ne se parlent pas ?", 'r' => "Par des API, une interface par système avec une clé propre, sur le modèle de la couche d'échange X-Road de l'Estonie. On ne remplace pas tout d'un coup : on relie d'abord, puis on remplace une base à la fois quand son logiciel est en fin de vie. Chaque échange est tracé, et l'accord du propriétaire de la base est écrit."],
+        ['q' => "Un outil numérique peut-il aider une juridiction sans toucher à l'indépendance du juge ?", 'r' => "Oui, si l'outil se limite à ce que le juge contrôle : tenue du rôle, convocations, recherche, résumés. Le règlement européen sur l'IA classe à haut risque les systèmes qui aident l'autorité judiciaire à interpréter les faits et la loi. L'appréciation et la motivation restent au magistrat, et aucune pièce d'instruction ne part vers un service extérieur."],
+        ['q' => "Les services en ligne doivent-ils être accessibles aux personnes handicapées ?", 'r' => "En France, le RGAA fixe les critères pour les services publics numériques, et une déclaration d'accessibilité est exigée. Ailleurs, l'accessibilité reste une bonne pratique : lecteur d'écran, contrastes, bas débit et usage au téléphone. Richard conçoit les écrans avec ces critères dès le départ."],
+        ['q' => "Combien coûte un projet pour une administration ou une collectivité ?", 'r' => "Les tarifs de départ publiés concernent les sites : 300 000 FCFA (environ 457,35 euros) pour un site vitrine. Un portail de démarches, un registre ou un outil de recouvrement se chiffre sur devis, après un premier échange gratuit."],
+        ['q' => "Intervenez-vous hors du Bénin ?", 'r' => "Oui, à distance, en Afrique francophone, en Europe et au Canada, et sur place au Bénin. Les réunions se tiennent en visioconférence, et sur site au Bénin ; le paiement se fait par Mobile Money, carte bancaire, PayPal, virement ou espèces."],
+    ],
+
+    'sources' => [
+        ['titre' => "Capmad, Sénégal : lancement des plateformes e-Justice et Jokkoo ak Yoon", 'url' => 'https://www.capmad.com/article/senegal-moussa-sarr-lance-ejustice-et-jokko-ak-yoon-nouveaux-bras-numeriques-de-la-justice', 'date' => '2026-10-07'],
+        ['titre' => "GSMA, Sénégal : paiement des taxes locales par mobile money", 'url' => 'https://www.gsma.com/mobilefordevelopment/blog/senegal-a-tech-ecosystem-on-the-move/', 'date' => '2026-10-07'],
+        ['titre' => "Osiris, Bénin : la DGI lance Mobile Tax", 'url' => 'https://osiris.sn/Benin-La-DGI-lance-Mobile-Tax-une.html', 'date' => '2026-10-07'],
+        ['titre' => "CIO Mag, Côte d'Ivoire : ARTCI et autorisation préalable des traitements", 'url' => 'https://cio-mag.com/cote-divoire-artci-le-traitement-des-donnees-personnelles-desormais-soumis-a-une-autorisation-prealable', 'date' => '2026-10-07'],
+        ['titre' => "RGAA, obligations légales d'accessibilité numérique", 'url' => 'https://accessibilite.numerique.gouv.fr/obligations/', 'date' => '2026-10-07'],
+        ['titre' => "ONU DESA, enquête sur le gouvernement en ligne 2024 : moyennes régionales de l'indice", 'url' => 'https://publicadministration.un.org/egovkb/en-us/Data/Region-Information', 'date' => '2026-10-07'],
+        ['titre' => "Gouvernement du Bénin, ANIP : guichet unique de déclaration de naissance en formations sanitaires", 'url' => 'https://www.gouv.bj/article/3209/declaration-enregistrement-obtention-acte-naissance-nouveau-jour-etat-civil-beninois-anip-lance-phase-pilote-guichet-unique-dans-plusieurs-formations-sanitaires-/', 'date' => '2026-10-07'],
+        ['titre' => "Portail national des services publics du Bénin", 'url' => 'https://service-public.bj/', 'date' => '2026-10-07'],
+        ['titre' => "IremboGov, services publics en ligne du Rwanda", 'url' => 'https://www.irembo.gov.rw/home/citizen/all_services', 'date' => '2026-10-07'],
+        ['titre' => "AllAfrica, Côte d'Ivoire : les tribunaux de première instance connectés à e-Justice", 'url' => 'https://fr.allafrica.com/stories/202606300410.html', 'date' => '2026-10-07'],
+        ['titre' => "e-Estonia, X-Road : échange de données entre administrations", 'url' => 'https://e-estonia.com/solutions/interoperability-services/x-road/', 'date' => '2026-10-07'],
+        ['titre' => "EUR-Lex, règlement (UE) 2024/1689 sur l'intelligence artificielle (considérant 61)", 'url' => 'https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32024R1689', 'date' => '2026-10-07'],
+        ['titre' => "Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 portant code du numérique", 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-07'],
+        ['titre' => "Base législative du PNUE, Bénin : loi n° 2020-26 portant code des marchés publics", 'url' => 'https://leap.unep.org/en/countries/bj/national-legislation/loi-no-2020-26-du-29-septembre-2020-portant-code-des-marches', 'date' => '2026-10-07'],
+        ['titre' => "Direction générale des collectivités locales, dématérialisation de la commande publique", 'url' => 'https://www.collectivites-locales.gouv.fr/commande-publique/dematerialisation-de-la-commande-publique', 'date' => '2026-10-07'],
+    ],
+
+    'liens' => [
+        'services'    => ['application-web-sur-mesure', 'automatisation-ia', 'integration-ia-entreprise', 'api-rest-integrations', 'audit-etude-de-projet', 'consultant-digitalisation', 'agents-ia-chatbot-whatsapp', 'maintenance-support'],
+        'metiers'     => ['administrations-collectivites', 'magistrats-juges'],
+        'formations'  => ['ia-ethique-conformite', 'gouvernance-ia', 'digitalisation-processus', 'conduite-du-changement', 'cybersecurite-employes', 'ia-droit-ohada'],
+        'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'chatgpt-vs-claude-vs-gemini'],
+        'histoires'   => ['air-canada-chatbot', 'tsb-migration'],
+    ],
+
+];

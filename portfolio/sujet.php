@@ -97,6 +97,8 @@ $memeSujetAilleurs = [];
 foreach ($sujet['pages'] as $vSlug => $pg) {
     if (($pg['slug'] ?? '') !== $page['slug']) $memeSujetAilleurs[] = $pg;
 }
+// Vague 1E : le secteur publié dont cette page est la déclinaison locale (jamais de lien avant sa date).
+$secteursParents = sujet_secteurs((string) $page['slug']);
 
 include __DIR__ . '/partials/pv2-head.php';
 include __DIR__ . '/partials/pv2-header.php';
@@ -235,6 +237,15 @@ include __DIR__ . '/partials/pv2-header.php';
       <details><summary><?= sanitize($qa['q']) ?></summary><p><?= sanitize($qa['r']) ?></p></details>
       <?php endforeach; ?>
     </div>
+  </div></section>
+  <?php endif; ?>
+
+  <?php if ($secteursParents): ?>
+  <section class="sect"><div class="wrap" style="max-width:1000px">
+    <div class="sect-head rv"><h2>Le secteur en détail.</h2></div>
+    <?php foreach ($secteursParents as $secteurParent): ?>
+    <p class="rv"><a href="<?= sanitize($secteurParent['url']) ?>"><?= sanitize(registre_libelle($secteurParent)) ?></a> : <?= sanitize($secteurParent['meta']) ?></p>
+    <?php endforeach; ?>
   </div></section>
   <?php endif; ?>
 

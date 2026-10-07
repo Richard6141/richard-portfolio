@@ -14,7 +14,7 @@ if (!defined('SITE_URL')) {
     define('SITE_URL', site_base(getenv('SITE_URL') ?: ($_SERVER['SITE_URL'] ?? null)));
 }
 if (!defined('GA4_ID')) {
-    define('GA4_ID', 'G-61RJ9EFRR9');
+    define('GA4_ID', 'G-6K3TFTGZ76');
 }
 if (!defined('CLARITY_ID')) {
     define('CLARITY_ID', 'xty0gc725v');

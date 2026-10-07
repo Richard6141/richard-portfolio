@@ -68,3 +68,12 @@ function test_pied_lien_cookies_rouvre_le_bandeau(): void
     $html = pied_rendre();
     assert_contains('<button type="button" class="pied__cookies" data-cookies>Cookies</button>', $html);
 }
+
+function test_pied_secteurs_seulement_hub_publie(): void
+{
+    // Vague 1E : le pied ne lie /secteurs/ qu'une fois le hub publié (jamais de 404).
+    $fx = racine('tools/tests/fixtures/registres');
+    assert_true(in_array(['Secteurs', '/secteurs/'], pied_ressources($fx, '2026-06-01'), true), 'hub publié : lien présent');
+    assert_true(!in_array(['Secteurs', '/secteurs/'], pied_ressources($fx, '2025-12-31'), true), 'hub futur : pas de lien');
+    assert_true(in_array(['Histoires de transformation', '/histoires/'], pied_ressources($fx, '2025-12-31'), true), 'liens existants gardés');
+}

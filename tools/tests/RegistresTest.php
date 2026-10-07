@@ -150,3 +150,27 @@ function test_registres_fiche_pays_groupee_dans_l_ordre(): void
     assert_same(['libelle' => 'Opérateurs de mobile money', 'valeur' => 'MTN MoMo, Moov Money', 'source' => 'https://example.org/p', 'date' => '2026-01-01'], $groupes['Paiement'][0]);
     assert_same([], registre_fiche_groupes([]));
 }
+
+function test_registres_secteur_univers_et_pages_locales(): void
+{
+    // Vague 1E : un secteur porte un univers connu et des pages locales qui existent (data/sujets).
+    $base = require fixtures() . '/secteurs/test-secteur.php';
+    assert_same([], registre_valider('secteur', 'test-secteur', $base));
+    $erreurs = static fn(array $modif): string => implode(' ', registre_valider('secteur', 'test-secteur', $modif + $base));
+    assert_contains('univers inconnu : Divers', $erreurs(['univers' => 'Divers']));
+    assert_contains('page locale inconnue : digitaliser-atlantide', $erreurs(['locales' => ['digitaliser-atlantide']]));
+    assert_contains('univers inconnu', $erreurs(['univers' => null]));
+    assert_same([], registre_valider('secteur', 'test-secteur', ['locales' => []] + $base), 'un secteur sans page locale reste valide');
+}
+
+function test_registres_secteurs_reels_publies_par_lots(): void
+{
+    // Vague 1E, sur les vraies pages : 10 secteurs et le hub le 05/11, les 20 le 19/11 (une page invalide ferait baisser le compte).
+    $n = static fn(string $jour): int => count(registre_publiees('secteur', REGISTRES_RACINE, $jour));
+    assert_same(0, $n('2026-11-04'));
+    assert_same(10, $n('2026-11-05'));
+    assert_same(10, $n('2026-11-18'));
+    assert_same(20, $n('2026-11-19'));
+    assert_same(null, maillage_page('hub', 'secteurs', REGISTRES_RACINE, '2026-11-04'));
+    assert_true(maillage_page('hub', 'secteurs', REGISTRES_RACINE, '2026-11-05') !== null, 'hub publié avec le lot 1');
+}
