@@ -43,7 +43,7 @@ return [
     // Pays où Richard a réellement travaillé, sur place ou à distance
     // (questionnaire du 03/10/2026). Distinct de « zones », la zone servie.
     'pays_travailles' => [
-        'Bénin', 'Côte d\'Ivoire', 'Togo', 'Sénégal', 'Burkina Faso', 'Mali', 'Niger', 'Tchad',
+        'Bénin', 'Côte d\'Ivoire', 'Togo', 'Sénégal', 'Burkina Faso', 'Mali', 'Niger', 'Cameroun', 'Tchad',
         'Gabon', 'RD Congo', 'France', 'Belgique', 'Suisse', 'Canada',
     ],
 

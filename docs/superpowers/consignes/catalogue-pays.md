@@ -8,7 +8,7 @@
 | cote-d-ivoire | Côte d'Ivoire | en Côte d'Ivoire | T1 | XOF | FCFA | oui | burkina-faso, mali, guinee | /developpeur-web-abidjan /digitalisation-entreprise-abidjan /integration-dolibarr-abidjan /formation-ia-entreprise-abidjan /digitaliser-commerce-abidjan /integration-odoo-abidjan | 2026-10-29 |
 | senegal | Sénégal | au Sénégal | T1 | XOF | FCFA | oui | mauritanie, mali, guinee | /developpeur-web-dakar /digitalisation-entreprise-dakar /integration-dolibarr-dakar /formation-ia-entreprise-dakar /digitaliser-ecommerce-dakar /integration-odoo-dakar | 2026-10-29 |
 | togo | Togo | au Togo | T1 | XOF | FCFA | oui | benin, burkina-faso, cote-d-ivoire | /developpeur-web-lome /digitalisation-entreprise-lome /integration-dolibarr-lome /formation-ia-entreprise-lome /digitaliser-transit-lome /integration-odoo-lome | 2026-10-29 |
-| cameroun | Cameroun | au Cameroun | T1 | XAF | FCFA | non | gabon, tchad, centrafrique | aucune | 2026-10-29 |
+| cameroun | Cameroun | au Cameroun | T1 | XAF | FCFA | oui | gabon, tchad, centrafrique | aucune | 2026-10-29 |
 | burkina-faso | Burkina Faso | au Burkina Faso | T2 | XOF | FCFA | oui | mali, niger, cote-d-ivoire | aucune | 2026-10-29 |
 | mali | Mali | au Mali | T2 | XOF | FCFA | oui | senegal, burkina-faso, niger | aucune | 2026-10-29 |
 | niger | Niger | au Niger | T2 | XOF | FCFA | oui | benin, burkina-faso, tchad | aucune | 2026-10-29 |
