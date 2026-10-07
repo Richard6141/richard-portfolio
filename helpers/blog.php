@@ -44,3 +44,17 @@ function blog_mots(string $html): int
     $texte = html_entity_decode((string) preg_replace('/<[^>]+>/', ' ', $html), ENT_QUOTES | ENT_HTML5, 'UTF-8');
     return count(preg_split('/[\s\x{00A0}]+/u', trim($texte), -1, PREG_SPLIT_NO_EMPTY) ?: []);
 }
+
+/** Meta description : la colonne `meta` quand elle est saisie, sinon le résumé (ou le début du texte) tronqué. */
+function blog_meta(array $post): string
+{
+    $meta = trim((string) ($post['meta'] ?? ''));
+    return $meta !== '' ? $meta : seoDescription((string) (($post['summary'] ?? '') ?: ($post['content'] ?? '')));
+}
+
+/** Date de mise à jour affichée et déclarée, jamais antérieure à la publication (articles antidatés). */
+function blog_date_maj(array $post): string
+{
+    $ts = max((int) strtotime((string) ($post['updated_at'] ?? '')), (int) strtotime((string) ($post['published_at'] ?? '')));
+    return $ts > 0 ? date('Y-m-d', $ts) : '';
+}

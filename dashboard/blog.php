@@ -132,10 +132,14 @@ require_once __DIR__ . '/../includes/dashboard-layout.php';
                 <!-- Resume -->
                 <div class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 p-6">
                     <label class="flex items-center justify-between text-sm font-medium text-gray-700 mb-1">
-                        <span>Resume / Extrait</span>
+                        <span>En bref (2 à 4 phrases, affiché sous le titre)</span>
                         <span class="text-xs font-normal" :class="(form.summary||'').length > 270 ? 'text-amber-600' : 'text-gray-400'" x-text="(form.summary||'').length + ' / 300'"></span>
                     </label>
                     <textarea x-model="form.summary" maxlength="500" rows="2" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none resize-none" placeholder="Resume affiche dans la liste des articles..."></textarea>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1 mt-4">Meta description
+                      <span class="text-xs font-normal" :class="(form.meta||'').length < 140 || (form.meta||'').length > 155 ? 'text-amber-600' : 'text-gray-400'" x-text="(form.meta||'').length + ' / 140 à 155'"></span>
+                    </label>
+                    <textarea x-model="form.meta" maxlength="160" rows="2" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none resize-none" placeholder="Phrase complète affichée par Google sous le titre..."></textarea>
                 </div>
 
                 <!-- Contenu -->
@@ -368,14 +372,14 @@ function blogPage() {
         ],
 
         form: {
-            title: '', slug: '', summary: '', content: '', cover_image: '',
+            title: '', slug: '', summary: '', meta: '', content: '', cover_image: '',
             category: '', tags: [], reading_time: null, external_url: '',
             status: 'draft', published_at: '',
         },
 
         emptyForm() {
             return {
-                title: '', slug: '', summary: '', content: '', cover_image: '',
+                title: '', slug: '', summary: '', meta: '', content: '', cover_image: '',
                 category: '', tags: [], reading_time: null, external_url: '',
                 status: 'draft', published_at: '',
             };

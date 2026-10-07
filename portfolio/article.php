@@ -95,7 +95,6 @@ if ($post['cover_image']) {
     $coverUrl = $portfolioUrl . '/uploads/' . $profile['avatar_url'];
 }
 $publishedIso = $post['published_at'] ? date('c', strtotime($post['published_at'])) : '';
-$publishedFr  = $post['published_at'] ? date('d/m/Y', strtotime($post['published_at'])) : '';
 
 // dateModified, corrige le 20/08/2026.
 // updated_at est la date reelle d'ecriture en base. Sur un article dont
@@ -110,7 +109,7 @@ $readingTime  = (int) ($post['reading_time'] ?? 0);
 
 // SEO + schémas
 $pageTitle     = seoTitle($post['title'], $fullName);
-$pageDesc      = seoDescription($post['summary'] ?: ($post['content'] ?? ''));
+$pageDesc      = blog_meta($post);
 $pageCanonical = $pageUrl;
 $ogImage       = $coverUrl;
 $ogType        = 'article';
@@ -162,8 +161,6 @@ $articleHtml = enhanceContentImages($post['content'] ?: '<p>Contenu à venir.</p
 $shareUrl = rawurlencode($pageUrl);
 $shareTxt = rawurlencode($post['title']);
 
-// Page editoriale : charge en plus Fraunces et Lora (.art-head, .art-prose).
-$pv2EditorialFonts = true;
 include __DIR__ . '/partials/pv2-head.php';
 include __DIR__ . '/partials/pv2-header.php';
 ?>
@@ -171,15 +168,7 @@ include __DIR__ . '/partials/pv2-header.php';
   <div class="wrap crumb"><a href="/">Accueil</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span><?= sanitize(mb_strimwidth($post['title'], 0, 50, '…')) ?></div>
 
   <article>
-    <div class="wrap art-head">
-      <?php if ($post['category']): ?><span class="art-cat"><?= sanitize($post['category']) ?></span><?php endif; ?>
-      <h1><?= sanitize($post['title']) ?></h1>
-      <div class="art-meta">
-        <span>Par <?= sanitize($fullName) ?></span>
-        <?php if ($publishedFr): ?><span class="d"></span><span><?= $publishedFr ?></span><?php endif; ?>
-        <?php if ($readingTime): ?><span class="d"></span><span><?= $readingTime ?> min de lecture</span><?php endif; ?>
-      </div>
-    </div>
+    <?php include __DIR__ . '/partials/article-tete.php'; ?>
 
     <?php if ($coverUrl): ?>
     <div class="wrap"><div class="art-cover"><img src="<?= sanitize($coverUrl) ?>" alt="<?= sanitize($post['title']) ?><?= $post['category'] ? ' - ' . sanitize($post['category']) : '' ?>" width="1200" height="630" fetchpriority="high" decoding="async"></div></div>
@@ -187,7 +176,7 @@ include __DIR__ . '/partials/pv2-header.php';
 
     <div class="art-layout">
       <div class="blog-main">
-        <div class="art-prose"><?= $articleHtml ?></div>
+        <?php include __DIR__ . '/partials/article-corps.php'; ?>
 
         <?php if (!empty($post['tags'])): ?>
         <div class="art-tags"><?php foreach ($post['tags'] as $tg): ?><span>#<?= sanitize($tg) ?></span><?php endforeach; ?></div>
