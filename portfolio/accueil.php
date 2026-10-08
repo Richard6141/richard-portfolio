@@ -53,9 +53,9 @@ $pageSchemas   = [
     ],
     schema_faq($faq),
 ];
-$portraitSrcset = '/assets/img/richard-salanon-400.webp 400w, ' . fait('photo') . ' 800w';
+$portraitSrcset = imgV('/assets/img/richard-salanon-400.webp') . ' 400w, ' . imgV(fait('photo')) . ' 800w';
 $portraitSizes  = '(min-width: 1024px) 34vw, 90vw';
-$pagePrecharge  = [[fait('photo'), $portraitSrcset, $portraitSizes, '(min-width: 1024px)']];
+$pagePrecharge  = [[imgV(fait('photo')), $portraitSrcset, $portraitSizes, '(min-width: 1024px)']];
 
 include __DIR__ . '/partials/pv2-head.php';
 include __DIR__ . '/partials/pv2-header.php';

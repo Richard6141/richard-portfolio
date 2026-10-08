@@ -4,7 +4,7 @@ $linkedin = '';
 foreach ((array) fait('profils') as $u) { if (str_contains($u, 'linkedin.com')) { $linkedin = $u; } }
 ?>
 <aside class="boite-auteur" aria-label="L'auteur">
-  <img src="/assets/img/richard-salanon-auteur-400.webp" alt="<?= sanitize(fait('nom')) ?>" width="96" height="128" loading="lazy" decoding="async">
+  <img src="<?= sanitize(imgV('/assets/img/richard-salanon-auteur-400.webp')) ?>" alt="<?= sanitize(fait('nom')) ?>" width="96" height="128" loading="lazy" decoding="async">
   <div>
     <p class="boite-auteur__nom"><a href="<?= sanitize($lienAuteur) ?>"><?= sanitize(fait('nom')) ?></a></p>
     <p class="boite-auteur__titre"><?= sanitize(fait('intitule')) ?></p>

@@ -31,7 +31,7 @@ $cssV = @filemtime(__DIR__ . '/../../assets/css/portfolio-v2.css') ?: '1';
 <link rel="canonical" href="<?= sanitize($pageCanonical) ?>">
 <link rel="alternate" hreflang="fr" href="<?= sanitize($pageCanonical) ?>">
 <link rel="alternate" hreflang="x-default" href="<?= sanitize($pageCanonical) ?>">
-<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="<?= sanitize(imgV('/assets/img/favicon.svg')) ?>">
 
 <meta property="og:type" content="<?= sanitize($ogType) ?>">
 <meta property="og:title" content="<?= sanitize($pageTitle) ?>">

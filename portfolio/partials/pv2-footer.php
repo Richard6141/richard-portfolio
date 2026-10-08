@@ -48,7 +48,7 @@ $horaires = fait('horaires');
 <footer class="pied" id="pied">
   <div class="pied__grille">
     <div class="pied__marque">
-      <a href="/" class="pied__logo" aria-label="Richard SALANON, accueil"><img src="/assets/img/logo-rs-clair.svg" alt="Richard SALANON" width="232" height="48" loading="lazy" decoding="async"></a>
+      <a href="/" class="pied__logo" aria-label="Richard SALANON, accueil"><img src="<?= sanitize(imgV('/assets/img/logo-rs-clair.svg')) ?>" alt="Richard SALANON" width="232" height="48" loading="lazy" decoding="async"></a>
       <p><?= sanitize(fait('description_courte')) ?></p>
       <ul class="pied__coordonnees">
         <li><?= icone('map-pin', 18) ?><span><?= sanitize(fait('ville')) ?>, <?= sanitize(fait('pays')) ?>. Interventions dans <?= count(fait('zones')) ?> pays, sur place ou à distance.</span></li>

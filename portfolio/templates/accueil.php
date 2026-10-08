@@ -52,7 +52,7 @@ $etapes = [
     </div>
     <div class="hero-accueil__visuel">
       <figure class="portrait">
-        <img src="<?= sanitize(fait('photo')) ?>" srcset="<?= sanitize($portraitSrcset) ?>" sizes="<?= sanitize($portraitSizes) ?>" width="800" height="1067" alt="Portrait de <?= sanitize(fait('nom')) ?>, <?= sanitize(mb_strtolower(fait('intitule'))) ?> à <?= sanitize(fait('ville')) ?>" fetchpriority="high">
+        <img src="<?= sanitize(imgV(fait('photo'))) ?>" srcset="<?= sanitize($portraitSrcset) ?>" sizes="<?= sanitize($portraitSizes) ?>" width="800" height="1067" alt="Portrait de <?= sanitize(fait('nom')) ?>, <?= sanitize(mb_strtolower(fait('intitule'))) ?> à <?= sanitize(fait('ville')) ?>" fetchpriority="high">
       </figure>
       <div class="plan-projet" aria-hidden="true">
         <div class="plan-projet__barre"><span></span><span></span><span></span><b>Votre projet</b></div>

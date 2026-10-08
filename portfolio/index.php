@@ -183,7 +183,7 @@ if (($profile['template'] ?? 'starter') === 'horizon') {
     */ ?>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="<?= sanitize(imgV('/assets/img/favicon.svg')) ?>">
 
     <!-- Open Graph -->
     <?php

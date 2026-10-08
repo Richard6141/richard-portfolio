@@ -293,6 +293,23 @@ function siteLogoUrl(): string
 }
 
 /**
+ * Ajoute ?v=<date de modification> a une URL d'image locale.
+ *
+ * Les images sont servies avec « Expires : 1 an » : sans changement d'URL, un
+ * logo ou une photo remplace sur le serveur n'apparait pas chez les visiteurs
+ * ni dans le CDN avant un an. Meme principe que le ?v= du CSS et du JS.
+ */
+function imgV(string $url): string
+{
+    $chemin = parse_url($url, PHP_URL_PATH);
+    if (!is_string($chemin) || $chemin === '' || strpos($url, '?') !== false) {
+        return $url;
+    }
+    $fichier = dirname(__DIR__) . $chemin;
+    return is_file($fichier) ? $url . '?v=' . filemtime($fichier) : $url;
+}
+
+/**
  * Genere un token hexadecimal aleatoire cryptographiquement sur.
  */
 function generateToken(int $length = 64): string

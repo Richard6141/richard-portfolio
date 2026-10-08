@@ -22,7 +22,7 @@ $eCta = $nav['carte_cta'];
 <header class="entete" id="entete">
   <div class="entete__barre">
     <a href="<?= sanitize($navHome) ?>" class="entete__logo" aria-label="Richard SALANON, accueil">
-      <img src="<?= sanitize(siteLogoUrl()) ?>" alt="Richard SALANON" width="232" height="48">
+      <img src="<?= sanitize(imgV(siteLogoUrl())) ?>" alt="Richard SALANON" width="232" height="48">
     </a>
 
     <nav class="entete__nav" aria-label="Navigation principale">
