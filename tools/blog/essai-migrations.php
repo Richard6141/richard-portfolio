@@ -37,9 +37,10 @@ try {
     }
     foreach ($sources as $slug => $a) {
         $l = $pdo->query('SELECT title, summary, meta, content FROM blog_posts WHERE slug = ' . $pdo->quote($slug))->fetch(PDO::FETCH_ASSOC);
+        // Windows (autocrlf) : sources et migrations portent parfois des fins de ligne CRLF, sans effet sur le HTML.
         $attendu = $slug === $premier ? ['title' => 'modifié au tableau de bord'] : ['title' => $a['titre'], 'summary' => $a['resume'], 'meta' => $a['meta'], 'content' => $a['contenu']];
         foreach ($attendu as $col => $valeur) {
-            if ($l[$col] !== $valeur) { $echecs++; echo "ECHEC {$slug} : {$col} différent\n"; }
+            if (str_replace("", '', $l[$col]) !== str_replace("", '', $valeur)) { $echecs++; echo "ECHEC {$slug} : {$col} différent\n"; }
         }
     }
 } finally {
