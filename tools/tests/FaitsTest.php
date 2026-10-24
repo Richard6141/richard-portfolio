@@ -60,6 +60,7 @@ function test_faits_reponses_du_questionnaire_du_03_10_2026(): void
     }
     assert_true(in_array('https://www.instagram.com/richard.salanon', $f['profils'], true), 'Instagram absent');
     assert_true(in_array('https://www.google.com/search?kgmid=/g/11njzjmv6s', $f['profils'], true), 'fiche Google absente');
+    assert_true(in_array('https://www.wikidata.org/wiki/Q141830104', $f['profils'], true), 'élément Wikidata absent');
 }
 
 function test_faits_les_gabarits_ne_lisent_plus_la_ville_en_base(): void
