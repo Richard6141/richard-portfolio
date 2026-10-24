@@ -71,6 +71,9 @@ function llms_contenu(array $f, string $base, array $sections, bool $complet): s
     foreach ($f['affiliations'] ?? [] as $a) {
         $reperes[] = $a['role'] . ' d\'[' . $a['nom'] . '](' . $a['url'] . ').';
     }
+    if (!empty($f['profils'])) {
+        $reperes[] = 'Profils officiels : ' . implode(', ', $f['profils']) . '.';
+    }
     if ($reperes) {
         $txt .= "## Repères\n\n- " . implode("\n- ", $reperes) . "\n\n";
     }
