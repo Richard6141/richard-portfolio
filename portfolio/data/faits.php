@@ -76,6 +76,8 @@ return [
         'https://www.instagram.com/richard.salanon',
         // Fiche Google Business Profile (identifiant du Knowledge Graph).
         'https://www.google.com/search?kgmid=/g/11njzjmv6s',
+        // Élément Wikidata créé le 24/10/2026.
+        'https://www.wikidata.org/wiki/Q141830104',
     ],
 
     'produits' => [
