@@ -3,15 +3,16 @@
 // ce fichier ne sert qu'à générer migrations/AAAA-MM-JJ-blog-referencement-local-dominer-pack-local-google.sql.
 return [
     'slug'       => 'referencement-local-dominer-pack-local-google',
-    'instantane' => '2026-10-07 15:00:51',
+    'instantane'  => '2026-10-24 12:00:00',
     'titre'      => 'Pack local Google : la stratégie pour gagner sa place',
     'meta'       => 'Pack local de Google : les trois facteurs cités par Google (pertinence, distance, notoriété), l\'ordre de travail, le multi-villes et les erreurs à éviter.',
     'resume'     => 'Google classe les résultats locaux selon trois facteurs : la pertinence, la distance et la notoriété (nommée « popularité » par Google). Vous ne pouvez pas acheter une meilleure place : Google le précise. Travaillez dans cet ordre : une fiche exacte et complète, des avis réguliers, un site cohérent, puis des mentions externes.',
     'categorie'  => 'SEO local',
-    'tags'       => ['référencement local', 'pack local Google', 'SEO local', 'Google Maps', 'fiche Google'],
+    'tags'       => ['référencement local', 'pack local Google', 'SEO local', 'Google Maps', 'fiche Google', 'local pack'],
     'contenu'    => <<<'HTML'
 <h2>Qu'est-ce que le pack local et quand s'affiche-t-il ?</h2>
 <p>Le pack local est le bloc de résultats de proximité que Google place au-dessus ou à côté des résultats classiques : quelques établissements, une carte, des coordonnées et des avis. Il apparaît quand la recherche suggère un besoin près de chez soi, par exemple « plombier Cotonou » ou « restaurant près de moi ». Les mêmes établissements se retrouvent sur Google Maps.</p>
+<p>Selon les sources, on l'appelle aussi « local pack », « map pack » ou « 3-pack » (parce qu'il affiche souvent trois établissements) : ce sont des noms anglais pour le même bloc. Cet article dit « pack local » dans tous les cas.</p>
 <p>Deux conséquences pratiques :</p>
 <ul>
 <li>Le résultat change selon l'endroit où se trouve la personne qui cherche : deux clients voisins ne voient pas forcément la même liste.</li>
@@ -77,6 +78,8 @@ return [
 </ul>
 
 <h2>Questions fréquentes</h2>
+<p><strong>Local pack, map pack, 3-pack : quelle différence avec le pack local ?</strong></p>
+<p>Aucune : ce sont des appellations anglaises du même bloc de résultats locaux. « SEO local » (local SEO) désigne le travail à mener pour y apparaître.</p>
 <p><strong>Faut-il un site web pour apparaître dans le pack local ?</strong></p>
 <p>Non, une fiche peut exister sans site. Mais un site cohérent avec la fiche renforce la confiance et donne au client un endroit où en savoir plus ; Google cite d'ailleurs le nombre de sites qui renvoient vers un établissement parmi les éléments de notoriété. Pour aller plus loin, la <a href="/formations/visibilite-google">formation Visibilité Google</a> couvre ce travail.</p>
 <p><strong>Peut-on payer Google pour être premier dans le pack local ?</strong></p>
