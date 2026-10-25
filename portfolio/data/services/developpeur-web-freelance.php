@@ -24,7 +24,7 @@ $euros    = static fn(string $fcfa): string => 'environ ' . number_format((int) 
 
 return [
     'titre'   => 'Développeur web freelance full stack à Cotonou : un seul interlocuteur, du cadrage au code remis à votre nom',
-    'title'   => 'Développeur web freelance full stack | Richard SALANON',
+    'title'   => 'Développeur web freelance au Bénin | Richard SALANON',
     'meta'    => 'Développeur web freelance full stack à Cotonou : Laravel, Node.js, Vue, React, WordPress. Devis gratuit, réponse sous 24 heures, code remis à votre nom.',
     'en_bref' => 'Richard SALANON est développeur web freelance full stack à Cotonou : il conçoit, code et met en ligne sites, applications web et API, en PHP et Laravel, Node.js, Vue, React ou WordPress, et reste votre seul interlocuteur du cadrage à la passation. Il travaille au forfait ou au temps passé pour des PME, startups, agences et associations d\'Afrique francophone, d\'Europe et du Canada. Un site vitrine demande ' . $delais['Site vitrine'] . ' à partir de ' . $tarifs['Site vitrine'] . ', une application sur mesure ' . $delais['Application sur mesure'] . ' sur devis ; le devis est gratuit et la réponse arrive ' . $reponse . '.',
     'publie'  => '2026-10-04',
