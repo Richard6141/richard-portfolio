@@ -8,7 +8,7 @@ require_once racine('helpers/functions.php');
 function test_redirections_table_conforme_a_la_spec(): void
 {
     $t = redirections_table();
-    assert_true(count($t) >= 60, count($t) . ' entrées');
+    assert_true(count($t) >= 40, count($t) . ' entrées');
     foreach ($t as $de => $vers) {
         assert_true(str_starts_with($de, '/') && str_starts_with($vers, '/'), $de);
         assert_true(!isset($t[$vers]), "chaîne : {$de} vers {$vers}");
@@ -16,7 +16,7 @@ function test_redirections_table_conforme_a_la_spec(): void
         foreach (array_keys(ROUTES_REGISTRES) as $motif) { if (preg_match($motif, ltrim($vers, '/'), $m)) { $resolue = true; break; } }
         assert_true($resolue, "cible hors registres : {$vers}");
     }
-    assert_same('/formations/ia-en-entreprise/benin', $t['/formation-ia-entreprise-natitingou']);
+    assert_true(!isset($t['/formation-ia-entreprise-natitingou']), 'pages de ville Formation IA conservées (25/10/2026)');
     assert_same('/services/externalisation-developpement/canada', $t['/externaliser-developpement-web-quebec']);
     assert_same('/services/integration-odoo/cote-d-ivoire', $t['/integration-odoo-abidjan']);
     // Richard a demandé le 03/10/2026 une page Réalisations refaite : elle reste, sans redirection vers /histoires/.

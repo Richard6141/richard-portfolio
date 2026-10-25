@@ -15,9 +15,8 @@ $paysDesVilles = [
 ];
 
 $r = [];
-foreach ($paysDesVilles as $ville => $pays) {
-    $r['/formation-ia-entreprise-' . $ville] = '/formations/ia-en-entreprise/' . $pays;
-}
+// Décision du 25/10/2026 : les pages « Formation IA en entreprise » de chaque ville restent en ligne
+// (les recherches contiennent la ville) ; elles ne sont plus redirigées vers la page du pays.
 foreach (['abidjan', 'abomey-calavi', 'bohicon', 'cotonou', 'dakar', 'lome', 'ouidah', 'parakou', 'porto-novo'] as $ville) {
     $r['/integration-odoo-' . $ville]     = '/services/integration-odoo/' . $paysDesVilles[$ville];
     $r['/integration-dolibarr-' . $ville] = '/services/integration-dolibarr/' . $paysDesVilles[$ville];
