@@ -13,7 +13,7 @@ $ans = (int) fait('experience_ans');
 
 return [
     'titre'   => 'Formation IA en entreprise à Yaoundé : vos équipes d’administration, de projet et de direction rédigent, synthétisent et vérifient avec ChatGPT, Claude ou Gemini, selon des règles de données écrites',
-    'title'   => 'Formation IA en entreprise à Yaoundé | Richard SALANON',
+    'title'   => 'Former vos équipes à l’IA à Yaoundé | Richard SALANON',
     'meta'    => 'Formation IA à Yaoundé pour les équipes d’administration, de projet et de direction : tâches par métier, règles de données, coûts d’éditeur, devis en FCFA.',
     'en_bref' => 'Richard SALANON, consultant basé à Cotonou, forme à distance les équipes de Yaoundé à l’IA : ministères, organismes publics, ONG, bureaux de projet, écoles et PME apprennent à rédiger, synthétiser et vérifier avec ChatGPT, Claude ou Gemini, sur leurs propres documents. Yaoundé et Cotonou partagent le même fuseau, UTC+1, donc aucune séance ne se décale. Le devis est établi en FCFA, après un échange de cadrage. Cette page traite ce qui est propre à Yaoundé, le cadre national étant sur la page du Cameroun.',
     'publie'  => '2026-11-30',
@@ -188,6 +188,8 @@ return [
     ],
 
     'faq' => [
+        ['q' => "Quelle différence entre un formateur IA, un consultant IA et un expert IA à Yaoundé ?", 'r' => "Ces trois titres décrivent des rôles voisins et aucun n’est réglementé. Un formateur IA apprend aux équipes à se servir d’outils comme ChatGPT, Claude, Gemini, Copilot, DeepSeek, NotebookLM, Perplexity ou Mistral sur leurs propres documents ; un consultant IA aide la direction à choisir les usages, les outils et les règles de données ; un expert ou spécialiste de l’IA est plutôt un profil technique ou de recherche. Richard SALANON intervient comme formateur et comme consultant à Yaoundé : il forme les équipes et les accompagne dans le choix des outils, sans être certifié par un éditeur. Ce qui compte pour une entreprise, c’est ce que l’équipe sait faire seule après la session."],
+        ['q' => "Comment digitaliser une entreprise avec l’IA à Yaoundé ?", 'r' => "Commencez par une tâche répétitive et mesurable, par exemple la rédaction de courriers, le résumé de comptes rendus ou le classement de documents, et par la règle sur les données qui peuvent quitter l’entreprise. Ensuite, formez l’équipe qui fera cette tâche sur ses propres documents, puis étendez à d’autres usages. Pour une entreprise à Yaoundé, la digitalisation par l’IA avance par petites étapes, avec un devis fixé après un échange de cadrage et sans promesse de gain chiffré."],
         ['q' => 'Qui peut former les équipes d’un ministère ou d’un organisme public de Yaoundé à l’IA ?', 'r' => 'Des écoles, des instituts et des formateurs indépendants. Richard SALANON forme à distance, depuis Cotonou, des équipes d’administration et d’organisation, sur leurs propres documents, avec une grille écrite de ce qu’on peut confier à un assistant. Aucun agrément public n’est revendiqué.'],
         ['q' => 'Faut-il se déplacer à Yaoundé pour la formation ?', 'r' => 'Non. Les séances se donnent en visioconférence, sans décalage horaire puisque Yaoundé et Cotonou sont en UTC+1. Une séance en salle reste possible : le déplacement est alors détaillé au devis, en FCFA.'],
         ['q' => 'Quels créneaux sont possibles pour une équipe de bureau de Yaoundé ?', 'r' => 'Le matin, de 8 h à 12 h, ou l’après-midi, de 14 h à 17 h, selon les heures de présence de vos agents. Les séances à distance durent 2 h 30 et se fixent avec vous au cadrage.'],

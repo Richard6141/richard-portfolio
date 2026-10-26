@@ -17,7 +17,7 @@ $ans = (int) fait('experience_ans');
 
 return [
     'titre'   => 'Formation IA en entreprise à Kigali : vos équipes utilisent ChatGPT, Claude et Gemini sur leurs propres documents, en anglais ou en français, avec une règle claire sur les données',
-    'title'   => 'Formation IA en entreprise à Kigali | Richard SALANON',
+    'title'   => 'Formateur IA en entreprise à Kigali | Richard SALANON',
     'meta'    => 'Formation IA en entreprise à Kigali : ChatGPT, Claude et Gemini sur vos documents, en anglais ou en français, à distance depuis Cotonou. Devis en euros.',
     'en_bref' => 'Richard SALANON, basé à Cotonou, forme à distance les équipes de Kigali à utiliser ChatGPT, Claude et Gemini sur leurs propres documents, en anglais ou en français, avec une heure d\'écart seulement et des séances courtes qui supportent une coupure de courant ou un réseau mobile capricieux. Les programmes publics visent surtout les agents de l\'État et les universités proposent des cursus longs. Chaque participant termine par une tâche réelle exécutée seul. Le prix est fixé sur devis, en euros.',
     'publie'  => '2026-11-21',
@@ -185,6 +185,8 @@ return [
     ],
 
     'faq' => [
+        ['q' => "Quelle différence entre un formateur IA, un consultant IA et un expert IA à Kigali ?", 'r' => "Ces trois titres décrivent des rôles voisins et aucun n’est réglementé. Un formateur IA apprend aux équipes à se servir d’outils comme ChatGPT, Claude, Gemini, Copilot, DeepSeek, NotebookLM, Perplexity ou Mistral sur leurs propres documents ; un consultant IA aide la direction à choisir les usages, les outils et les règles de données ; un expert ou spécialiste de l’IA est plutôt un profil technique ou de recherche. Richard SALANON intervient comme formateur et comme consultant à Kigali : il forme les équipes et les accompagne dans le choix des outils, sans être certifié par un éditeur. Ce qui compte pour une entreprise, c’est ce que l’équipe sait faire seule après la session."],
+        ['q' => "Comment digitaliser une entreprise avec l’IA à Kigali ?", 'r' => "Commencez par une tâche répétitive et mesurable, par exemple la rédaction de courriers, le résumé de comptes rendus ou le classement de documents, et par la règle sur les données qui peuvent quitter l’entreprise. Ensuite, formez l’équipe qui fera cette tâche sur ses propres documents, puis étendez à d’autres usages. Pour une entreprise à Kigali, la digitalisation par l’IA avance par petites étapes, avec un devis fixé après un échange de cadrage et sans promesse de gain chiffré."],
         ['q' => 'Qui peut former mes équipes à l\'IA à Kigali ?', 'r' => 'Richard SALANON, consultant basé à Cotonou, forme à distance les équipes de Kigali sur leurs propres documents, en anglais ou en français. Les universités de la capitale proposent des cursus longs, et les programmes publics visent les agents de l\'État ; une entreprise privée en poste trouve dans la formation courte une réponse adaptée à son calendrier.'],
         ['q' => 'Quel est le décalage horaire entre Kigali et Cotonou ?', 'r' => 'Une heure : Kigali est à UTC+2 et Cotonou à UTC+1 toute l\'année, sans heure d\'été. Une séance de 09 h 00 à 11 h 30 à Kigali se tient de 08 h 00 à 10 h 30 à Cotonou, dans la plage d\'ouverture de Richard.'],
         ['q' => 'La formation se fait-elle en anglais ou en français ?', 'r' => 'Dans la langue de la majorité du groupe, et chacun fait ses exercices dans celle de son métier. Richard parle et écrit le français et l\'anglais. Un texte en kinyarwanda est relu par un locuteur avant tout usage.'],

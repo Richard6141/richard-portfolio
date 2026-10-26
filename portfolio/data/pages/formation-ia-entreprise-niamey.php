@@ -13,7 +13,7 @@ $ans = (int) fait('experience_ans');
 
 return [
     'titre'   => "Formation IA en entreprise à Niamey : vos équipes utilisent ChatGPT, Claude et Gemini sur leurs propres documents, avec des séances qui résistent aux coupures de courant et de réseau",
-    'title'   => "Formation IA en entreprise à Niamey | Richard SALANON",
+    'title'   => "Consultant et formateur IA à Niamey | Richard SALANON",
     'meta'    => "Formation IA en entreprise à Niamey : ChatGPT, Claude et Gemini sur vos documents, séances à distance depuis Cotonou à la même heure, devis en FCFA.",
     'en_bref' => "À Niamey, une équipe peut être formée à l'IA par Richard SALANON, consultant basé à Cotonou, qui anime en français et à distance, à la même heure légale qu'à Niamey, des ateliers et des formations sur ChatGPT, Claude et Gemini, à partir des documents réels de l'entreprise plutôt que d'une démonstration générale. Chaque séance est conçue pour une journée où le courant ou le réseau peuvent faiblir. Les exemples viennent des métiers de la ville : commerce, finance, projets, transport, enseignement. Le devis est établi en FCFA, sur demande.",
     'publie'  => '2026-11-04',
@@ -179,6 +179,8 @@ return [
     ],
 
     'faq' => [
+        ['q' => "Quelle différence entre un formateur IA, un consultant IA et un expert IA à Niamey ?", 'r' => "Ces trois titres décrivent des rôles voisins et aucun n’est réglementé. Un formateur IA apprend aux équipes à se servir d’outils comme ChatGPT, Claude, Gemini, Copilot, DeepSeek, NotebookLM, Perplexity ou Mistral sur leurs propres documents ; un consultant IA aide la direction à choisir les usages, les outils et les règles de données ; un expert ou spécialiste de l’IA est plutôt un profil technique ou de recherche. Richard SALANON intervient comme formateur et comme consultant à Niamey : il forme les équipes et les accompagne dans le choix des outils, sans être certifié par un éditeur. Ce qui compte pour une entreprise, c’est ce que l’équipe sait faire seule après la session."],
+        ['q' => "Comment digitaliser une entreprise avec l’IA à Niamey ?", 'r' => "Commencez par une tâche répétitive et mesurable, par exemple la rédaction de courriers, le résumé de comptes rendus ou le classement de documents, et par la règle sur les données qui peuvent quitter l’entreprise. Ensuite, formez l’équipe qui fera cette tâche sur ses propres documents, puis étendez à d’autres usages. Pour une entreprise à Niamey, la digitalisation par l’IA avance par petites étapes, avec un devis fixé après un échange de cadrage et sans promesse de gain chiffré."],
         ['q' => "Qui peut former mon équipe à l'IA à Niamey ?", 'r' => "Richard SALANON, consultant basé à Cotonou, anime en français et à distance, à la même heure qu'à Niamey, des ateliers et des formations sur ChatGPT, Claude et Gemini, avec les documents de l'entreprise. Le devis est établi en FCFA."],
         ['q' => "Y a-t-il un décalage horaire entre Niamey et Cotonou ?", 'r' => "Non. Les deux villes sont à UTC+1 sans heure d'été. Richard est joignable de 7 h à 20 h, ce qui permet de placer les séances le matin, avant la chaleur, ou en fin d'après-midi."],
         ['q' => "Que se passe-t-il si le courant coupe pendant la séance à Niamey ?", 'r' => "Les séances durent au plus deux heures et demie, les documents sont envoyés la veille, les ordinateurs sont chargés à l'avance et le travail est enregistré au fur et à mesure. Un téléphone en partage de connexion sert de secours."],
