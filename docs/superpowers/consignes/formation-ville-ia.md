@@ -44,6 +44,18 @@ RÈGLES D'INTÉGRITÉ (apprises des lots précédents) :
 - Français accentué ; aucun tiret cadratin (U+2014), aucune flèche (U+2192), aucun emoji ; voix à la troisième personne ; aucune trace de ta recherche dans le texte.
 - Unicité : 40 % au plus avec les autres pages « page », et aucun passage de 15 mots ou plus repris de la page pays ou d'une autre ville.
 
+PRATIQUES DE SÉANCE INTERDITES (les rédacteurs précédents les ont inventées ; aucune n'est dans portfolio/data/faits.php ni dans la fiche parente ia-en-entreprise.php ; leur présence fait échouer la vérification) :
+- enregistrement des séances, des démonstrations ou des échanges (« l'enregistrement permet de rattraper le passage manqué ») ; seul le support écrit remis à la session est dans la fiche ;
+- durée ou gratuité de l'échange de cadrage (« trente minutes », « une heure », « gratuit ») ; la fiche dit seulement « un ou deux entretiens » et une réponse sous 24 heures au contact ;
+- blocs d'« une heure trente », « avec une pause », demi-journées « cassées en deux », séances « reprises sur le créneau suivant », rappel de la consigne de la veille, envoi « par messagerie », test de visioconférence avec un référent ;
+- répartition des équipes en groupes selon des rotations, planning « déplaçable de quelques jours », aide du formateur « par message », « modèle maison » ; effectifs autres que ceux de la fiche (atelier 12, formation complète 10, séances à distance 8, hybride 10 ; session de direction : voir la fiche ia-generative-dirigeants) ;
+- « il utilise lui-même » tel outil, « il a travaillé sur » tel outil, délais de mission, commissions, revente de licences.
+Pour la reprise après une coupure, écris seulement : « une solution de repli est prévue en cas de coupure » (formule de la fiche parente).
+
+ENTREPRISES ET FAITS LOCAUX : ne cite une entreprise comme « installée » ou « active » que si une source datée de 2025 ou 2026 le confirme ; sinon, ne la cite pas. Une donnée de région n'est pas une donnée de ville ; un chiffre de projet annoncé (investissement, centrale, fibre) se dit au conditionnel ou avec « annoncé en ».
+
+PART DE TEXTE PROPRE À LA VILLE : au moins la moitié de la page doit reposer sur des faits de la ville (économie, quartiers, connexion et électricité, ressources locales, cas par métier ancrés sur les employeurs et secteurs de la ville). Si tu n'y arrives pas avec des sources lues, ARRÊTE-TOI et dis-le dans ton compte rendu : une page plus courte vaut mieux qu'une page complétée par de la méthode générique.
+
 VÉRIFICATIONS : php -l FICHIER ; php tools/qa/registres.php --type=page (ta ligne « ok » ; les autres lignes ne te concernent pas). Compte rendu de 10 lignes : mots, title, meta, résultat du contrôle, sources, points à faire vérifier par Richard.
 
 Règles de travail : écris le fichier en plusieurs opérations de 5 000 mots au plus ; n'arrête aucun processus par son nom ; hors outils du dépôt nommés ici, n'exécute aucun script que tu n'as pas écrit ; n'ouvre pas les pages ville écrites en parallèle (portfolio/data/pages/formation-ia-entreprise-*.php autres que la tienne).
