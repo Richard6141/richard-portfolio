@@ -1,0 +1,111 @@
+<?php
+// Source de /blog/ia-pour-formateurs-et-enseignants (nouvel article). Après la migration, la base fait foi :
+// ce fichier ne sert qu'à générer migrations/AAAA-MM-JJ-blog-ia-pour-formateurs-et-enseignants.sql.
+return [
+    'slug'       => 'ia-pour-formateurs-et-enseignants',
+    'instantane' => '2026-10-26 18:00:00',
+    'titre'      => 'IA pour formateurs et enseignants : déléguer ou garder',
+    'meta'       => 'Quelle IA pour un formateur ou un enseignant : tâches à déléguer, outils, vérification des contenus, copies d\'élèves, tricherie et connexion limitée.',
+    'resume'     => 'L\'IA aide un formateur à préparer, à décliner et à reformuler : plan de séance, exercices et corrigés, adaptation à un public. Elle ne remplace ni l\'évaluation, ni la relation avec les apprenants, ni le jugement du formateur. Tout contenu produit se vérifie avant d\'être distribué, et les copies d\'élèves ne se déposent jamais telles quelles dans un outil en ligne.',
+    'categorie'  => 'IA',
+    'tags'       => ['IA pour formateurs', 'IA pour enseignants', 'ChatGPT formateur', 'NotebookLM', 'vérifier un contenu IA', 'données d\'élèves'],
+    'contenu'    => <<<'HTML'
+<h2>Quelles tâches d'un formateur l'IA peut-elle alléger ?</h2>
+<p>L'IA est utile là où le formateur part d'une page blanche ou répète un travail qu'il sait déjà évaluer. Elle propose un premier jet ; le formateur garde la main sur le fond.</p>
+<ul>
+<li><strong>Préparer un plan de séance.</strong> Donnez le public, la durée, l'objectif et le niveau de départ : l'assistant propose un déroulé minuté, que vous réordonnez et allégez.</li>
+<li><strong>Écrire des exercices et leurs corrigés.</strong> Demandez trois niveaux de difficulté sur la même notion, avec le corrigé détaillé. Refaites vous-même les calculs et les cas avant de distribuer.</li>
+<li><strong>Adapter à un public.</strong> Le même contenu pour des salariés débutants, pour des étudiants ou pour des responsables pressés : vocabulaire, exemples, longueur.</li>
+<li><strong>Reformuler un support.</strong> Un paragraphe trop dense devient une fiche de rappel, un glossaire ou une liste de questions de révision.</li>
+<li><strong>Synthétiser des retours.</strong> Collez les commentaires anonymisés d'une session : l'assistant les regroupe par thème, vous décidez de ce qu'il faut changer.</li>
+</ul>
+<h3>Que ne remplace-t-elle pas ?</h3>
+<ul>
+<li><strong>L'évaluation.</strong> Noter, c'est juger un travail au regard d'un objectif que vous connaissez. L'assistant peut proposer une grille ; la décision et la note restent les vôtres.</li>
+<li><strong>La relation.</strong> Repérer un apprenant découragé, adapter le rythme à la salle, répondre à une objection du moment : cela ne se délègue pas.</li>
+<li><strong>Le jugement sur le contenu.</strong> Un assistant écrit avec la même assurance le juste et le faux. Le formateur reste responsable de ce qu'il enseigne.</li>
+</ul>
+<p>Une consigne claire donne de meilleurs résultats qu'une demande vague : qui écrit, pour qui, dans quel but, sous quelle forme. La page sur <a href="/formations/prompt-engineering">la formation à l'écriture de consignes</a> détaille cette méthode.</p>
+<h2>Quel outil d'IA choisir pour quel usage ?</h2>
+<p>Il n'existe pas de meilleur outil en général, mais des outils qui conviennent à des usages différents. Les offres, les limites d'utilisation et les prix changent souvent : consultez toujours la page officielle de l'éditeur avant de choisir ou de payer, et commencez par la version gratuite.</p>
+<ul>
+<li><strong>ChatGPT, Claude, Gemini, Mistral.</strong> Assistants de conversation : rédiger, reformuler, proposer un plan, générer des exercices, expliquer une notion autrement. Testez la même consigne sur deux d'entre eux avec un de vos vrais sujets, puis gardez celui dont vous corrigez le moins.</li>
+<li><strong>NotebookLM.</strong> Selon l'aide de Google, consultée le 26 octobre 2026, il répond à partir des sources que vous importez et intègre des citations dans ses réponses. Utile pour interroger votre propre support de cours, un référentiel ou un manuel, et retrouver d'où vient une affirmation. Si l'information n'est pas dans vos sources, il peut ne pas pouvoir répondre.</li>
+<li><strong>Perplexity.</strong> Selon son centre d'aide, consulté le 26 octobre 2026, il cherche sur le web, repère des sources et en fait une synthèse. Pratique pour une veille ou un état des lieux sur un sujet récent ; ouvrez ensuite les sources, car une synthèse n'est pas la source.</li>
+</ul>
+<p>Un repère simple : pour créer, un assistant généraliste ; pour questionner vos propres documents, NotebookLM ; pour chercher de l'information récente, Perplexity. Les trois se combinent dans une même préparation.</p>
+<h2>Comment vérifier un contenu produit par l'IA avant de le donner à des apprenants ?</h2>
+<p>Un assistant produit un texte plausible, pas un texte vérifié. Les erreurs les plus dangereuses sont celles qui ont l'air justes : une date légèrement fausse, une définition approximative, une référence qui n'existe pas. Avant toute distribution :</p>
+<ol>
+<li><strong>Relire en expert.</strong> Si vous ne seriez pas capable de corriger le passage, ne le distribuez pas.</li>
+<li><strong>Retrouver chaque source.</strong> Une loi, une étude, un auteur, un chiffre : ouvrez le document d'origine. Une référence introuvable est retirée.</li>
+<li><strong>Refaire les calculs et les cas.</strong> Un corrigé d'exercice se résout vous-même, étape par étape.</li>
+<li><strong>Dater.</strong> Règlements, outils et chiffres changent : vérifiez que le texte correspond à la version en vigueur.</li>
+<li><strong>Tester sur un collègue ou un petit groupe.</strong> Une consigne ambiguë se découvre vite à la première lecture par quelqu'un d'autre.</li>
+</ol>
+<p>Pour un support fondé sur vos propres documents, un outil qui cite ses sources, comme NotebookLM, facilite le contrôle, sans le dispenser : ouvrez les citations pour voir si elles appuient vraiment la réponse.</p>
+<h2>Que faire des copies et des données d'élèves ?</h2>
+<p>Une copie contient un nom, parfois une note, une situation personnelle. La déposer telle quelle dans un assistant en ligne revient à transmettre des données personnelles à un tiers, souvent à l'étranger.</p>
+<ul>
+<li><strong>Anonymisez avant de déposer.</strong> Retirez noms, numéros, établissements et tout détail qui identifie, ou remplacez-les par un code que vous seul savez relier.</li>
+<li><strong>Ne soumettez rien de sensible.</strong> Notes disciplinaires, situations de santé ou de famille, dossiers sociaux : ils restent hors de l'outil.</li>
+<li><strong>Utilisez un compte contrôlé par votre structure</strong> pour les documents de travail, plutôt que le compte personnel d'un formateur.</li>
+<li><strong>Parcourez les réglages de l'outil</strong> et lisez l'aide de l'éditeur pour savoir ce qui est conservé ou partagé avant d'y déposer un document.</li>
+</ul>
+<p>Au Bénin, le code du numérique est la loi n° 2017-20 du 20 avril 2018 ; en Europe, le règlement général sur la protection des données (RGPD) est présenté par la CNIL. Cet article ne détaille pas leur contenu : lisez les textes ou demandez conseil à la personne chargée de la protection des données de votre structure. Pour une équipe pédagogique, la <a href="/formations/ia-ethique-conformite">formation IA, éthique et conformité des données</a> traite ce cadre.</p>
+<h2>Comment gérer la tricherie et l'évaluation à l'ère de l'IA ?</h2>
+<p>Les apprenants utilisent déjà ces outils. Interdire sans expliquer déplace l'usage hors de votre vue ; il vaut mieux fixer des règles.</p>
+<ul>
+<li><strong>Dire ce qui est permis.</strong> Pour chaque devoir : IA autorisée pour reformuler ou chercher des idées, interdite pour la rédaction finale, ou libre à condition d'être citée.</li>
+<li><strong>Demander la trace.</strong> Faire joindre la consigne employée et les corrections faites montre ce que l'apprenant a réellement travaillé.</li>
+<li><strong>Évaluer le raisonnement.</strong> Questions orales, mises en situation, travail en classe ou en séance, justification d'un choix : ce qui se prépare mal avec un assistant.</li>
+<li><strong>Partir de cas locaux et récents</strong>, que l'assistant connaît mal, plutôt que de questions de cours génériques.</li>
+</ul>
+<h3>Faut-il un détecteur de texte généré par IA ?</h3>
+<p>Aucune source citée ici n'établit la fiabilité d'un détecteur, et aucun n'est donc recommandé. Accuser un apprenant sur la seule foi d'un score est risqué : une erreur nuit à une personne réelle. Si votre structure en utilise un, lisez la documentation de l'éditeur sur ses limites et traitez le résultat comme un indice qui appelle une discussion, jamais comme une preuve.</p>
+<h2>Que faire quand la connexion est limitée ?</h2>
+<p>Les assistants en ligne demandent une connexion stable, et les données mobiles coûtent cher. Quelques habitudes aident :</p>
+<ul>
+<li><strong>Préparer chez vous, hors séance.</strong> Générez et vérifiez vos supports avant la session, puis enregistrez-les sur votre poste. Vous n'avez pas besoin de l'assistant devant les apprenants.</li>
+<li><strong>Grouper les demandes.</strong> Rédigez votre consigne complète dans un document, puis collez-la en une fois.</li>
+<li><strong>Travailler par petits fichiers</strong> : un chapitre à la fois plutôt qu'un manuel entier.</li>
+<li><strong>Prévoir une version papier ou locale</strong> de chaque exercice, au cas où la connexion coupe.</li>
+</ul>
+<p>Richard SALANON forme des équipes d'entreprise à l'usage quotidien des assistants. Sa fiche <a href="/formations/ia-en-entreprise">formation IA en entreprise</a> décrit une préparation avec documents téléchargés à l'avance et solution de repli en cas de coupure, des pratiques qui valent aussi pour un formateur. Il ne donne pas de cours en école et cet article ne repose pas sur une expérience de formation d'enseignants.</p>
+<h2>Quelles erreurs reviennent le plus souvent ?</h2>
+<ul>
+<li><strong>Distribuer sans relire</strong> : le support devient crédible parce qu'il est bien écrit, pas parce qu'il est exact.</li>
+<li><strong>Croire une référence parce qu'elle est précise</strong> : un titre, un auteur et une page peuvent être inventés.</li>
+<li><strong>Déposer des copies nominatives</strong> dans un compte personnel gratuit.</li>
+<li><strong>Demander trop vague</strong> (« fais-moi un cours sur ») et corriger ensuite pendant des heures. Précisez public, durée, niveau et forme.</li>
+<li><strong>Interdire sans règle ni alternative</strong> : l'usage continue, hors de votre contrôle.</li>
+<li><strong>Changer d'outil à chaque nouveauté</strong> : choisissez-en un, apprenez à bien l'utiliser, réévaluez de temps en temps.</li>
+<li><strong>Confier la note à l'assistant</strong> : il peut aider à construire la grille, pas à noter à votre place.</li>
+</ul>
+<p>Besoin d'accompagner une équipe de formateurs ? <a href="/contact">Contactez-moi</a> : le tarif est fixé sur devis, après échange sur votre situation.</p>
+<h2>Questions fréquentes</h2>
+<p><strong>Quelle IA pour un formateur qui débute ?</strong></p>
+<p>Un assistant généraliste gratuit (ChatGPT, Claude, Gemini ou Mistral) suffit pour commencer. Choisissez un vrai sujet de votre prochaine séance, essayez-en deux, et gardez celui qui demande le moins de corrections.</p>
+<p><strong>L'IA peut-elle corriger les copies à ma place ?</strong></p>
+<p>Elle peut aider à construire une grille de critères ou à repérer des fautes récurrentes sur des extraits anonymisés. La note reste une décision du formateur, et les copies nominatives ne se déposent pas telles quelles.</p>
+<p><strong>Faut-il payer pour utiliser ces outils ?</strong></p>
+<p>Pas pour commencer : les versions gratuites suffisent pour apprendre. Offres et prix changent ; consultez la page officielle de l'éditeur avant tout abonnement.</p>
+<p><strong>Comment dire à mes apprenants ce qu'ils ont le droit de faire ?</strong></p>
+<p>Écrivez la règle dans la consigne de chaque devoir : IA permise ou non, pour quelles étapes, et comment la citer. Une règle claire et expliquée est mieux suivie qu'une interdiction générale.</p>
+<p><strong>Un détecteur d'IA prouve-t-il qu'un apprenant a triché ?</strong></p>
+<p>Non. Un score n'est pas une preuve. Parlez à l'apprenant, demandez-lui d'expliquer son travail, et évaluez le raisonnement à l'oral ou en séance.</p>
+<p><strong>Puis-je utiliser l'IA si mon établissement a des règles ?</strong></p>
+<p>Suivez-les d'abord. Si elles n'existent pas, proposez un cadre simple : quels outils, quelles données interdites, qui vérifie les supports.</p>
+<p><strong>L'IA fonctionne-t-elle bien en français ?</strong></p>
+<p>Les grands assistants écrivent bien en français, mais avec des usages de France par défaut. Donnez-leur un modèle et le vocabulaire de votre public. Pour un texte en langue locale, faites relire par un locuteur.</p>
+<p><strong>Où trouver une formation pour mon équipe de formateurs ?</strong></p>
+<p>Richard SALANON anime des formations à l'IA pour des équipes, détaillées sur la page <a href="/formations/ia-en-entreprise">formation IA en entreprise</a>. Le prix est fixé sur devis.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://support.google.com/notebooklm/answer/16164461?hl=fr">Google, aide NotebookLM : réponses à partir des sources importées, avec citations</a>, consultée le 26 octobre 2026</li>
+<li><a href="https://www.perplexity.ai/help-center/en/articles/10354917-what-is-an-answer-engine-and-how-does-perplexity-work-as-one">Perplexity, centre d'aide : fonctionnement d'un moteur de réponses</a>, consulté le 26 octobre 2026</li>
+<li><a href="https://sgg.gouv.bj/doc/loi-2017-20/">Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 du 20 avril 2018 portant code du numérique (titre et date)</a>, consultée le 26 octobre 2026</li>
+<li><a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees">CNIL, le règlement général sur la protection des données</a>, consultée le 26 octobre 2026</li>
+</ul>
+HTML,
+];
