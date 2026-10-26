@@ -143,7 +143,7 @@ return [
         [
             'type'       => 'prix',
             'titre'      => "Combien coûte une formation IA pour une équipe au Niger ?",
-            'intro'      => "Aucune somme n'est affichée ici : le prix est fixé sur devis, en FCFA, après un échange de cadrage de trente minutes. Le devis détaille la préparation, l'animation, les supports et le suivi. Les abonnements aux assistants ne sont pas inclus dans le prix de la formation.",
+            'intro'      => "Aucune somme n'est affichée ici : le prix est fixé sur devis, en FCFA, après un échange de cadrage. Le devis détaille la préparation, l'animation, les supports et le suivi. Les abonnements aux assistants ne sont pas inclus dans le prix de la formation.",
             'items'      => [
                 ['offre' => "Atelier découverte", 'prix' => "Sur devis, en FCFA", 'inclus' => ["Une demi-journée à distance", "Deux tâches travaillées sur vos documents", "Règle de classement des données", "Recommandation pour la suite"]],
                 ['offre' => "Formation complète", 'prix' => "Sur devis, en FCFA", 'inclus' => ["Quatre demi-journées à distance", "Exercices préparés avec vos documents anonymisés", "Bibliothèque de consignes et modes opératoires", "Évaluation sur la tâche cible et attestation", "Suivi par message le mois suivant"]],

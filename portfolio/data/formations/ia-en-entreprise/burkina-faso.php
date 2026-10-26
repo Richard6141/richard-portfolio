@@ -149,7 +149,7 @@ return [
         [
             'type'       => 'prix',
             'titre'      => 'Combien coûte une formation IA au Burkina Faso, et qu\'est-ce qui fait varier le prix ?',
-            'intro'      => 'Le prix est fixé sur devis, en FCFA, après un échange de cadrage gratuit ; aucune somme n\'est publiée ici parce qu\'elle dépend du groupe et du travail de préparation. Le règlement se fait par un des modes de la fiche de paiement de Richard (Mobile Money, carte bancaire, PayPal, virement ou espèces), choisi au devis. Les abonnements aux assistants restent au nom de l\'entreprise.',
+            'intro'      => 'Le prix est fixé sur devis, en FCFA, après un échange de cadrage ; aucune somme n\'est publiée ici parce qu\'elle dépend du groupe et du travail de préparation. Le règlement se fait par un des modes de la fiche de paiement de Richard (Mobile Money, carte bancaire, PayPal, virement ou espèces), choisi au devis. Les abonnements aux assistants restent au nom de l\'entreprise.',
             'items'      => [
                 ['offre' => 'Atelier découverte', 'prix' => 'Sur devis, en FCFA', 'inclus' => ['Une demi-journée en visioconférence', 'Deux tâches travaillées sur vos documents', 'La règle de données de l\'équipe', 'Une recommandation pour la suite']],
                 ['offre' => 'Formation complète', 'prix' => 'Sur devis, en FCFA', 'inclus' => ['Quatre demi-journées', 'Exercices construits sur vos documents', 'Bibliothèque de consignes et modes opératoires', 'Évaluation sur la tâche cible et attestation']],
