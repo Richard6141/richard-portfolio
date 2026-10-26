@@ -1,0 +1,227 @@
+<?php
+// ============================================================
+// data/pages/formation-ia-entreprise-toamasina.php · Page ville « Formation IA en
+// entreprise à Toamasina » (Madagascar). Pays hors de la liste des pays travaillés :
+// « peut accompagner à distance ». Devis en euros, aucun montant pour la formation.
+// Faits de ville consultés le 26/10/2026 : L'Express de Madagascar, Newsmada,
+// AllAfrica, Ambatovy, Kuehne+Nagel, Wikipédia (câble LION), Agence Adocc.
+// Aucune certification ni aucun agrément attribué à Richard.
+// ============================================================
+declare(strict_types=1);
+
+$ans = (int) fait('experience_ans');
+
+return [
+    'titre'   => "Formation IA en entreprise à Toamasina : vos équipes du port, de l'export, de l'hôtellerie et des cabinets utilisent ChatGPT, Claude et Gemini sur leurs documents, malgré les coupures de courant",
+    'title'   => "Formation IA en entreprise à Toamasina | Richard SALANON",
+    'meta'    => "Formation IA pour les équipes de Toamasina : ChatGPT, Claude et Gemini sur vos documents, séances prévues pour les coupures de courant. Sur devis.",
+    'en_bref' => "À Toamasina, Richard SALANON peut former à distance, depuis Cotonou, les équipes des transitaires, exportateurs, hôtels, cabinets et services administratifs du premier port de Madagascar à utiliser ChatGPT, Claude ou Gemini sur leurs propres documents, en français, avec un devis en euros et des séances conçues pour résister aux coupures de courant. Les exercices partent de dossiers de douane, de lots de litchis, de réservations ou de courriers réels, anonymisés au besoin. Le prix est fixé sur devis.",
+    'publie'  => '2026-11-25',
+    'maj'     => '2026-11-25',
+    'schema'  => 'WebPage',
+
+    'sections' => [
+        [
+            'type'        => 'prose',
+            'titre'       => "Qui peut former les équipes à l'IA à Toamasina, et comment choisir ?",
+            'paragraphes' => [
+                "À Toamasina, les équipes d'entreprise peuvent se former à l'IA avec Richard SALANON, qui intervient à distance depuis Cotonou, en français, sur les documents réels de l'entreprise. Pour choisir un formateur, vérifiez trois points : le matériau utilisé (vos fichiers ou des exemples génériques), l'évaluation de chaque participant sur une tâche de son poste, et le suivi après la session.",
+                "Toamasina, que beaucoup appellent encore Tamatave, compte environ 326 000 habitants selon la fiche pays de l'agence <a href=\"https://export.agence-adocc.com/fr/fiches-pays/madagascar/introduction\">Adocc</a> consultée le 26 octobre 2026, ce qui en fait la deuxième ville de l'île après Antananarivo. Un dirigeant qui y cherche une formation à l'IA rencontre des cursus universitaires, des salons, des cours en ligne et des ateliers d'initiation. Chacun répond à un besoin réel, mais aucun de ces formats n'est taillé pour une équipe de dix personnes qui doit changer sa manière de traiter des dossiers confidentiels.",
+                "Ce qui distingue une démonstration d'outil d'une formation qui change le travail tient en trois choses. Le matériau d'abord : une démonstration emploie des exemples fournis par l'animateur, une formation emploie vos factures, vos courriers, vos tableaux de lots ou vos messages de réservation, anonymisés quand il le faut. L'évaluation ensuite : chaque participant réalise seul, du début à la fin, une tâche de son poste, de la consigne à la vérification du résultat. Le suivi enfin : sans possibilité de poser une question dans les semaines qui suivent, l'équipe revient à ses anciennes habitudes.",
+                "Un trait de Toamasina pèse sur l'organisation. Selon <a href=\"https://www.lexpress.mg/2025/12/port-de-toamasina-31-millions-de-tonnes.html\">L'Express de Madagascar</a> (décembre 2025), le port fonctionne 24 heures sur 24, sept jours sur sept, et la société de manutention des marchandises conventionnelles y travaille en trois équipes de huit heures. Beaucoup de salariés de la place portuaire, de la manutention au transit, travaillent donc par rotations. La fiche de la formation prévoit des groupes de dix personnes au plus par métier, ou de huit au plus en séances à distance, ce qui permet de ne pas retirer toute une équipe en même temps.",
+                "Le format à distance présente un second avantage ici. Certaines entreprises ont leur direction à Antananarivo et leur exploitation à Toamasina : une séance en visioconférence réunit les deux sites sans déplacement. Les équipes basées dans la capitale peuvent aussi consulter la page de la <a href=\"/formation-ia-entreprise-antananarivo\">formation IA à Antananarivo</a>, qui traite ce que leur ville change.",
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Que fait vivre l'économie de Toamasina, et que change-t-elle pour une équipe qui veut utiliser l'IA ?",
+            'paragraphes' => [
+                "Toamasina vit d'abord de son port. Environ 3,1 millions de tonnes de marchandises y transitent chaque année, selon L'Express de Madagascar (décembre 2025), et autour de ce flux s'organisent le dédouanement, l'exportation de litchis, le complexe nickel et cobalt d'Ambatovy, les dépôts d'hydrocarbures et l'hôtellerie. Ce sont des métiers de documents, de dates et de chiffres : l'IA y fait gagner du temps si chaque nombre est recontrôlé à la source.",
+                "Le port est en chantier depuis avril 2018. Selon <a href=\"https://www.lexpress.mg/2025/12/infrastructure-portuaire-toamasina-veut.html\">L'Express de Madagascar</a> (décembre 2025), le quai C3 reçoit des navires de 3 000 conteneurs au plus, alors que le futur quai C4, profond de 16 mètres, doit en accueillir de 14 000 ; le port traite aujourd'hui environ 245 000 conteneurs et vise un million par an. Le terre-plein Hastie, de dix hectares, est déjà en service et reçoit 4 500 conteneurs à la fois, ajoute <a href=\"https://www.lexpress.mg/2025/10/toamasina-lextension-du-port-tourne.html\">le même journal</a> en octobre 2025, qui relève que les cadences de chargement et de déchargement ont augmenté de 40 % entre 2018 et 2024. L'ensemble des travaux doit s'étendre jusqu'en 2028.",
+                "Pour une équipe de transit ou une entreprise qui importe, le chiffre qui compte est le délai. D'après L'Express (décembre 2025), la sortie des marchandises pouvait prendre jusqu'à quinze jours ; la douane vise désormais 48 heures pour les cargaisons prêtes au dédouanement, la durée réelle dépendant des documents, du type de marchandise, de la congestion et du paiement des taxes. Deux de ces facteurs, la qualité du dossier et le règlement des taxes, dépendent de l'entreprise elle-même. C'est exactement là qu'un assistant sert : il relit la cohérence entre une facture, un document de transport et une déclaration avant le dépôt, il rédige la relance au client qui n'a pas fourni une pièce, il met en tableau les dossiers en attente. Il ne remplace jamais le contrôle d'un agent.",
+                "Le coût du transit est un second sujet. Le directeur général de la société du port, cité par <a href=\"https://www.lexpress.mg/2026/06/commerce-le-port-de-toamasina-face-un.html\">L'Express</a> (juin 2026), explique que certaines marchandises destinées à Madagascar passent par des ports intermédiaires, La Réunion ou Maurice, avant d'arriver : « Si une marchandise devait coûter 10 ariary, elle en coûte 12 après ces multiples transits. » Un troisième terminal à sec est prévu à Tsarakofafa, à l'entrée sud de la ville, sur la route nationale 2. Les équipes qui comparent des offres de transporteurs, des escales et des surcoûts ont donc des tableaux à construire et à relire, tâche que la formation traite avec des cotations anonymisées.",
+                "La campagne de litchis rythme la fin de l'année. Selon <a href=\"https://fr.allafrica.com/stories/202512150370.html\">L'Express de Madagascar, repris par AllAfrica</a> (15 décembre 2025), la campagne a ouvert à Toamasina le 20 novembre 2025 ; 16 830 palettes avaient été expédiées à la mi-décembre, soit 89 % d'un quota annuel estimé entre 18 000 et 20 000 palettes, par 29 exportateurs agréés et environ 1 000 collecteurs des régions Atsinanana et Analanjirofo. La plupart des envois partaient vers l'Europe et la Russie. Pour un exportateur, la campagne dure quelques semaines et chaque jour compte : les listes de collecteurs, les bordereaux de palettes et les courriers aux acheteurs étrangers se multiplient en même temps.",
+                "Le nickel pèse lourd sur la côte est. Selon le site d'<a href=\"https://ambatovy.com/en/?p=16388\">Ambatovy</a>, le minerai extrait près de Moramanga voyage par un pipeline de 220 kilomètres jusqu'à l'usine et à la raffinerie situées près de Toamasina, d'où les briquettes de nickel et de cobalt partent par le port. Le cyclone Gezani a arrêté les installations en février 2026 ; <a href=\"https://www.lexpress.mg/2026/06/mines-ambatovy-reprend-ses-activites.html\">L'Express</a> rapporte en juin 2026 la reprise, après une production d'environ 30 000 tonnes en 2025. Les entreprises de maintenance, de transport et de fournitures qui travaillent autour de ce site produisent des rapports techniques, des bons de travail et des dossiers fournisseurs volumineux, un terrain naturel pour la synthèse de documents longs.",
+                "Les hydrocarbures arrivent aussi par le port. L'Express (mai 2026) relate que le pétrolier Torm Elise a déchargé à Toamasina, à partir du 5 mai 2026, 64 500 tonnes de pétrole lampant, de supercarburant et de gazole, de quoi couvrir environ quatre semaines de consommation selon une source de l'Office malgache des hydrocarbures, les livraisons se faisant désormais toutes les trois semaines. Les services qui suivent les arrivées, les stocks et les tournées de livraison vivent dans des tableaux et des messages : ils profitent d'un assistant qui transforme un fil de messages en tableau daté, à condition de vérifier chaque quantité.",
+                "Le tourisme, enfin, a payé le prix du cyclone. <a href=\"https://newsmada.com/?p=169863\">Newsmada</a> rapporte le 21 février 2026 que le ministère du Tourisme estime à 90 % les dégâts matériels du secteur, pour 1,94 milliard d'ariary, que le bureau national de gestion des risques compte environ 122 hôtels et restaurants détériorés à Toamasina et que 341 guides touristiques sont touchés. Des escales de navires de croisière étaient annoncées pour les 8 et 9 mars. Dans ce contexte, un hôtel qui rouvre doit répondre vite, en plusieurs langues, aux demandes de clients et d'agences : c'est un cas d'usage direct pour la rédaction assistée.",
+            ],
+        ],
+        [
+            'type'  => 'chiffres',
+            'titre' => "Quels chiffres retenir sur Toamasina avant de bâtir une formation ?",
+            'items' => [
+                ['valeur' => '3,1 millions de tonnes', 'libelle' => 'Marchandises qui transitent chaque année par le port de Toamasina, qui fonctionne 24 heures sur 24 (décembre 2025)', 'source' => "L'Express de Madagascar", 'url' => 'https://www.lexpress.mg/2025/12/port-de-toamasina-31-millions-de-tonnes.html'],
+                ['valeur' => '245 000', 'libelle' => 'Conteneurs traités aujourd\'hui par le port, avec un objectif d\'un million par an (décembre 2025)', 'source' => "L'Express de Madagascar", 'url' => 'https://www.lexpress.mg/2025/12/infrastructure-portuaire-toamasina-veut.html'],
+                ['valeur' => '89 %', 'libelle' => 'Part du quota de litchis déjà expédiée à la mi-décembre 2025 : 16 830 palettes depuis l\'ouverture de la campagne le 20 novembre', 'source' => "L'Express de Madagascar, repris par AllAfrica", 'url' => 'https://fr.allafrica.com/stories/202512150370.html'],
+                ['valeur' => '4 MW pour 25 MW', 'libelle' => 'Production disponible face à une demande d\'environ 25 MW à Toamasina dix jours après le cyclone Gezani (février 2026)', 'source' => "L'Express de Madagascar", 'url' => 'https://www.lexpress.mg/2026/02/toamasina-electricite-le-retour-la.html'],
+                ['valeur' => '122', 'libelle' => 'Hôtels et restaurants détériorés à Toamasina selon le bureau national de gestion des risques (février 2026)', 'source' => 'Newsmada', 'url' => 'https://newsmada.com/?p=169863'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Quelle électricité, quelle connexion et quel équipement les équipes ont-elles à Toamasina, et comment la formation s'y adapte-t-elle ?",
+            'paragraphes' => [
+                "À Toamasina, l'électricité est le premier risque d'une séance de formation, avant même le réseau. Le cyclone Gezani de février 2026 a laissé la ville sans courant pendant des jours, et plusieurs sources de l'été et de l'automne 2026 décrivent des coupures répétées. La formation est donc construite pour continuer à avancer quand le courant ou la connexion s'interrompent : séances courtes, documents déjà sur les postes, consignes écrites hors ligne.",
+                "Le cyclone a frappé la ville dans la soirée du 10 février 2026, d'après <a href=\"https://www.lexpress.mg/2026/02/cyclone-gezani-balaie-toamasina.html\">L'Express de Madagascar</a>, qui décrit une ville plongée dans l'obscurité, des toitures arrachées et des quartiers entiers de tôle détruits. Dix jours plus tard, selon <a href=\"https://www.lexpress.mg/2026/02/toamasina-electricite-le-retour-la.html\">le même journal</a>, la Jirama annonçait que 90 % de ses infrastructures avaient été détruites, que la production disponible était d'environ 4 mégawatts face à une demande de 25, que cinq des douze lignes de moyenne tension seulement étaient rétablies et que le réseau basse tension demanderait des mois, pour 50 000 abonnés. Les entreprises ont acheté des groupes électrogènes, une dépense que l'article qualifie de coûteuse.",
+                "La situation ne s'est pas normalisée d'un coup. Selon <a href=\"https://fr.allafrica.com/stories/202607230395.html\">L'Express de Madagascar, repris par AllAfrica</a> (23 juillet 2026), des habitants d'Ankirihiry, d'Antanandava et de Valipson signalaient plusieurs coupures par jour : un poissonnier ne pouvait plus conserver sa marchandise et un médecin d'Ankirihiry devait recourir à un groupe électrogène pour opérer, tandis que l'association de consommateurs RNDC jugeait que l'approvisionnement ne s'améliorait pas et que la Jirama annonçait une amélioration très nette, tout en admettant que les délestages continuaient. Début octobre, d'après <a href=\"https://www.lexpress.mg/2026/10/toamasina-cinq-groupes-thermiques-en.html\">L'Express</a>, cinq groupes thermiques étaient en panne, des habitants rapportaient jusqu'à cinq interruptions par jour, et une réquisition avait été effectuée pour accélérer les réparations.",
+                "Côté réseau, les informations disponibles sont moins complètes mais utiles. Airtel Madagascar a indiqué à <a href=\"https://newsmada.com/?p=172360\">Newsmada</a> (12 mars 2026) que 96 % de ses infrastructures étaient de nouveau en service lors du passage de sa direction à Toamasina le 6 mars. La ville abrite par ailleurs la station d'atterrissement du câble sous-marin LION, qui relie Madagascar, La Réunion et Maurice (premier usage en 2009, inauguration en mars 2010), d'après <a href=\"https://en.wikipedia.org/wiki/LION_(cable_system)\">Wikipédia</a> et le communiqué d'Orange relayé par les revues spécialisées. À l'université, Orange a ouvert un point d'accès Wi-Fi gratuit à la bibliothèque le 25 mars 2026, qui peut accueillir plus de mille connexions simultanées dans un rayon de cent mètres, selon <a href=\"https://newsmada.com/?p=176005\">Newsmada</a> (11 avril 2026).",
+                "Ces faits dictent des règles simples. Un assistant d'IA ne fonctionne qu'en ligne et le courant n'est pas garanti : on ne bâtit donc aucun exercice sur trois heures de connexion continue. Chaque participant arrive avec un ordinateur portable chargé, les documents d'exercice sont placés sur le poste la veille, les consignes sont rédigées dans un traitement de texte puis collées en une fois, et un téléphone avec un forfait de données d'un autre opérateur sert de connexion de secours.",
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => "Comment une séance est-elle organisée pour tenir malgré les coupures de Toamasina ?",
+            'intro' => "Ces dispositions sont fixées avec l'entreprise avant la première séance, à partir de ses propres coupures : le quartier, l'heure et le groupe électrogène existant comptent plus qu'une règle générale.",
+            'items' => [
+                ['titre' => 'Des séances de deux heures et demie', 'texte' => "Cinq à six séances à distance remplacent deux longues journées. Les séances courtes sont plus faciles à suivre en visioconférence, comme le prévoit la fiche, et les participants gardent leur poste de travail le reste de la journée."],
+                ['titre' => 'Le choix de l\'heure', 'texte' => "L'entreprise connaît les heures où son quartier est le plus souvent alimenté. Les séances se placent sur ces plages, entre 9 h et 17 h à Toamasina, et le groupe électrogène du bureau, quand il existe, alimente l'ordinateur et la box avant le début."],
+                ['titre' => 'Des documents prêts la veille', 'texte' => "Les trois à cinq documents d'exercice de chaque participant sont envoyés quelques jours avant et copiés sur le poste. Une coupure du réseau n'empêche alors pas de relire un document ou de préparer une consigne."],
+                ['titre' => 'Des consignes écrites hors ligne', 'texte' => "La demande à l'assistant se rédige dans un traitement de texte, relue, puis collée en une fois. Une connexion qui dure une minute suffit à obtenir la réponse, qui est enregistrée sur le poste."],
+                ['titre' => 'Une connexion de secours', 'texte' => "Chaque participant vérifie avant la session qu'il peut partager la connexion de son téléphone, avec un forfait de données d'un opérateur différent de celui du bureau quand c'est possible."],
+                ['titre' => 'Des exercices à terminer', 'texte' => "Une solution de repli est prévue en cas de coupure."],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Quelles ressources locales existent à Toamasina pour s'initier au numérique et à l'IA ?",
+            'paragraphes' => [
+                "Trois repères permettent à une équipe de Toamasina de compléter une formation d'entreprise : l'université publique, le salon du numérique qui s'est tenu dans la ville et les organisations patronales. Aucun n'est une recommandation commerciale ; ce sont des lieux où l'on se renseigne, se rencontre et prolonge l'apprentissage une fois la formation terminée.",
+                "Selon Orange, le Wi-Fi gratuit de la bibliothèque universitaire bénéficie à plus de 20 000 étudiants, d'après <a href=\"https://newsmada.com/?p=176005\">Newsmada</a> (11 avril 2026). Le même article indique qu'un projet financé par la Banque mondiale, le projet DECIM, doit distribuer 3 315 smartphones à des étudiants et à des enseignants, dont 625 aux meilleurs étudiants de l'université de Toamasina, afin de réduire la fracture numérique. Pour une entreprise, ce vivier est utile : un stagiaire ou un jeune diplômé qui connaît déjà les assistants peut relayer les bonnes pratiques de l'équipe, à condition de suivre la même règle de classement des données que les autres.",
+                "Le Grand Salon du Numérique s'est tenu à Toamasina du 21 au 24 novembre 2024, d'après l'annonce de <a href=\"https://www.lexpress.mg/2024/10/toamasina-le-grand-salon-du-numerique.html\">L'Express de Madagascar</a> : conférences sur le numérique, l'intelligence artificielle, la connectivité et l'entrepreneuriat numérique, hackathon ouvert à tous, cours d'informatique sur Excel, Canva et Photoshop, avec plus de douze mille visiteurs et quatre-vingt-dix exposants attendus selon l'organisateur, Elite Communication. La ministre du Développement numérique d'alors y exprimait le souhait de reconduire le salon dans d'autres villes. Le calendrier d'une prochaine édition à Toamasina se vérifie auprès de l'organisateur.",
+                "Du côté des entreprises, la Chambre de commerce et d'industrie de Tamatave et le Groupement des entreprises de Tamatave (GEPAT) ont reçu en octobre 2023 une délégation de dix-huit chefs d'entreprise réunionnais, conduite par le Club Export Réunion, pour des rencontres entre entreprises dans l'agroalimentaire, l'industrie, la construction, le numérique, l'agriculture, la pêche et les services, rapporte <a href=\"https://lexpress.mg/03/10/2023/toamasina-une-delegation-doperateurs-reunionnais-en-prospection/\">L'Express de Madagascar</a>. Ces organisations sont le bon point de contact pour savoir si d'autres entreprises de la ville cherchent une session commune, par exemple un groupe réunissant plusieurs transitaires ou plusieurs hôtels.",
+            ],
+        ],
+        [
+            'type'    => 'tableau',
+            'titre'   => "Quel format choisir à Toamasina : atelier, formation de deux jours, séances à distance ou accompagnement ?",
+            'legende' => "Séances en visioconférence depuis Cotonou. Toamasina est en UTC+3 et Cotonou en UTC+1 : deux heures d'écart toute l'année. Les durées et les effectifs sont ceux de la fiche générale de la formation ; le prix de chaque format est fixé sur devis, en euros.",
+            'entetes' => ['Format', 'Durée', 'Groupe', 'Quand le choisir à Toamasina'],
+            'lignes'  => [
+                ['Atelier découverte', 'Une demi-journée', '12 personnes au plus', 'Une direction de transitaire, d\'hôtel ou de cabinet qui n\'a jamais utilisé d\'assistant et veut voir deux tâches réelles avant de décider'],
+                ['Formation de deux jours', 'Quatre demi-journées de 3 h 30', '10 personnes au plus, par métier', 'Un service dont une tâche volumineuse (dossiers de dédouanement, bordereaux de campagne, rapports de maintenance) justifie l\'effort'],
+                ['Séances à distance', '5 à 6 séances de 2 h 30', '8 personnes au plus', 'Le format par défaut à Toamasina : séances courtes, faciles à reprendre après une coupure, sites reliés sans déplacement'],
+                ['Hybride', 'Une journée en salle, puis séances à distance', '10 personnes au plus', 'Une entreprise qui souhaite une prise en main en salle dans ses locaux, puis une mise en pratique suivie à distance'],
+                ['Accompagnement mensuel', 'Une demi-journée par mois pendant trois mois', 'Le groupe déjà formé', 'Étendre l\'usage à d\'autres tâches après la campagne de litchis ou la haute saison, quand l\'équipe a retrouvé du temps'],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Comment se déroule la formation à distance depuis Cotonou, avec quel fuseau et quelles plages horaires ?",
+            'paragraphes' => [
+                "La formation se déroule en visioconférence, avec partage d'écran, depuis Cotonou. Toamasina est en UTC+3 et Cotonou en UTC+1 : l'écart est de deux heures toute l'année, sans changement d'heure. Richard est joignable de 7 h à 20 h, heure de Cotonou, soit de 9 h à 22 h à Toamasina. Les séances se placent entre 9 h et 17 h à Toamasina, soit entre 7 h et 15 h à Cotonou.",
+                "Les créneaux se placent entre 9 h et 17 h à Toamasina, selon le calendrier de l'entreprise. La campagne de litchis ou l'arrivée d'un navire modifient le calendrier d'un exportateur ou d'un transitaire du jour au lendemain ; c'est pourquoi le planning se fixe avec le dirigeant en dehors des pics d'activité.",
+                "Une séance sur place n'est pas le mode par défaut. Si l'entreprise y tient, la fiche générale de la formation prévoit les formats en intra et hybride : le déplacement fait alors partie de ce qui fait varier le prix, et il se discute au devis. Le lieu, le nombre de groupes et la durée sont fixés ensemble. Dans tous les cas, les supports et les exercices corrigés restent à l'entreprise.",
+            ],
+        ],
+        [
+            'type'  => 'cas',
+            'titre' => "À quoi ressemble le programme selon les métiers de Toamasina ?",
+            'items' => [
+                ['secteur' => 'Transit, dédouanement et logistique portuaire', 'probleme' => "Les dossiers mêlent factures, documents de transport, listes de colisage et courriers, avec des pièces manquantes à réclamer et une sortie qui dépend de la qualité du dossier.", 'solution' => "Tâche : comparer une facture, un document de transport et une déclaration, et lister les écarts avant dépôt ; rédiger la relance au client pour la pièce manquante. Outil : Claude ou ChatGPT sur des dossiers anonymisés. Résultat attendu : un tableau d'écarts et un courrier prêts à relire, chaque quantité et chaque valeur recontrôlées sur le document source par l'agent."],
+                ['secteur' => 'Exportation de litchis et de produits de la côte est', 'probleme' => "La campagne ouvre fin novembre et dure peu de semaines : listes de collecteurs, bordereaux de palettes et courriers à des acheteurs étrangers s'accumulent en même temps.", 'solution' => "Tâche : tableau des lots à partir de messages et de notes, courriers de confirmation en français et en anglais, résumé quotidien des expéditions. Outil : ChatGPT ou Gemini. Résultat attendu : un tableau de palettes dont chaque total est recalculé dans le tableur, et des courriers que le responsable relit avant envoi."],
+                ['secteur' => 'Sous-traitance industrielle et minière autour d\'Ambatovy', 'probleme' => "Rapports de maintenance, bons de travail et dossiers fournisseurs sont volumineux, rédigés dans des formats différents, et les arrêts de production pressent les équipes.", 'solution' => "Tâche : synthèse d'un rapport avec renvoi aux pages, comparaison de deux versions d'un cahier des charges, tableau des pièces à commander. Outil : Claude ou NotebookLM sur un dossier choisi. Résultat attendu : une synthèse dont chaque chiffre est retrouvé dans la source, sans document confidentiel du donneur d'ordre envoyé sans son accord."],
+                ['secteur' => 'Hôtellerie, restauration et guides touristiques', 'probleme' => "Après le cyclone, les établissements qui rouvrent reçoivent des demandes de particuliers et d'agences, en français et en anglais, par téléphone, messagerie et courriel.", 'solution' => "Tâche : répondre aux demandes, classer les messages par motif, rédiger les descriptions de chambres, d'excursions et de menus. Outil : Gemini ou ChatGPT. Résultat attendu : des réponses cohérentes avec les tarifs publiés, relues avant envoi, et une bibliothèque de réponses types partagée."],
+                ['secteur' => 'Approvisionnement en hydrocarbures et distribution', 'probleme' => "Les arrivées de navires, les stocks et les tournées de livraison circulent dans des fils de messages et des tableaux que personne ne consolide.", 'solution' => "Tâche : transformer des messages en tableau daté des arrivées et des stocks, rédiger la note de situation du jour. Outil : ChatGPT ou Claude. Résultat attendu : un tableau dont chaque quantité est reprise dans le document d'origine, et une note que le responsable valide."],
+                ['secteur' => 'Cabinets comptables, juridiques et services administratifs', 'probleme' => "Les cabinets préparent courriers, notes et tableaux de suivi pour des clients dont les données sont confidentielles, avec des échéances fiscales qui se bousculent.", 'solution' => "Tâche : notes de synthèse, courriers aux clients, tableaux de suivi des échéances. Outil : Copilot ou ChatGPT sur comptes professionnels. Résultat attendu : un premier jet gagné sur le courrier, tandis que les calculs et les références de texte sont refaits dans le tableur et dans le texte officiel."],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Quelles règles de données la ville de Toamasina change-t-elle avant de confier un document à un assistant d'IA ?",
+            'paragraphes' => [
+                "À Toamasina, les documents sensibles sont ceux de la place portuaire et des clients : déclarations en douane, factures, noms et coordonnées d'acheteurs étrangers, listes de collecteurs, rapports de maintenance d'un site minier, coordonnées et pièces d'identité des clients d'un hôtel. Les règles nationales sont détaillées dans le <a href=\"/formations/ia-en-entreprise/madagascar\">cadre légal de la formation IA à Madagascar</a> ; ce paragraphe ne retient que ce que la ville change dans la pratique d'une équipe.",
+                "La formation classe donc les documents en trois couleurs avant le premier exercice : ce qui peut être confié à l'assistant, ce qu'on anonymise d'abord, ce qui ne sort jamais de l'entreprise. Les transitaires et les exportateurs travaillent pour des donneurs d'ordre dont les contrats peuvent interdire tout envoi à un service tiers : le contrat se relit avant de coller un dossier dans un assistant. Un hôtel ou une clinique qui reprend l'activité après le cyclone applique la même règle à ses fiches de clients et de patients. Une administration locale ou un cabinet qui traite des dossiers d'usagers définit avec sa direction ce qui reste interne.",
+            ],
+        ],
+        [
+            'type'  => 'prix',
+            'titre' => "Combien coûte une formation IA pour une équipe à Toamasina ?",
+            'intro' => "Le prix est fixé sur devis, en euros, après un échange de cadrage et une réponse sous 24 heures, sans aucun montant affiché d'avance. Le règlement se fait par carte bancaire, PayPal ou virement. Les abonnements aux assistants restent au nom de l'entreprise et ne sont pas compris dans le prix de la formation.",
+            'items' => [
+                ['offre' => 'Atelier découverte', 'prix' => 'Sur devis, en euros', 'inclus' => ['Une demi-journée sur vos documents', 'Premiers gestes sur deux tâches', 'Règle de classement des données', 'Recommandation pour la suite']],
+                ['offre' => 'Formation complète', 'prix' => 'Sur devis, en euros', 'inclus' => ['Quatre demi-journées, ou cinq à six séances à distance', 'Exercices construits sur vos documents', 'Bibliothèque de consignes et modes opératoires', 'Évaluation sur la tâche cible et attestation', 'Canal direct le mois suivant']],
+                ['offre' => 'Accompagnement mensuel', 'prix' => 'Sur devis, en euros', 'inclus' => ['Une demi-journée par mois pendant trois mois', 'Mesure de ce qui sert', 'Corrections et nouvelles tâches', 'Bilan écrit à trois mois']],
+            ],
+            'variations' => [
+                "Le nombre de participants et de groupes.",
+                "Le format retenu : tout à distance, séances réparties sur plusieurs semaines ou formule hybride.",
+                "Le nombre de sites à relier, par exemple un siège à Antananarivo et une exploitation à Toamasina.",
+                "Le temps de préparation et d'anonymisation des dossiers d'exercice, très variable d'un transitaire à un hôtel.",
+                "Un éventuel déplacement hors de Cotonou, qui dépend du lieu et de la durée.",
+                "L'accompagnement après la session et la langue des supports, en français ou en anglais.",
+            ],
+        ],
+        [
+            'type'  => 'points',
+            'titre' => "Quelles erreurs font les équipes qui démarrent l'IA à Toamasina ?",
+            'intro' => "Ces écarts viennent de la ville elle-même : le port, la saison des exportations, le réseau électrique et les suites du cyclone. Ils se préviennent dès la préparation de la session.",
+            'items' => [
+                ['titre' => 'Programmer la formation un jour de navire ou en pleine campagne de litchis', 'texte' => "Un exportateur ou un transitaire dont les palettes partent ne peut pas se détacher de son poste. La campagne ouvre fin novembre : la formation se place avant ou après, et le planning se fixe avec l'entreprise en dehors des pics d'activité."],
+                ['titre' => 'Bâtir un exercice sur une connexion et un courant supposés continus', 'texte' => "Avec cinq groupes thermiques en panne début octobre 2026 et des habitants qui rapportent jusqu'à cinq coupures par jour, un exercice qui exige trois heures de ligne échoue. Les documents se préparent la veille et les consignes s'écrivent hors ligne."],
+                ['titre' => 'Faire confiance à un chiffre de douane parce qu\'il est précis', 'texte' => "Un assistant peut citer un taux, un délai ou un article de loi qui n'existe pas. Un délai annoncé de 48 heures par la douane ne vaut que pour une cargaison prête au dédouanement : tout chiffre se retrouve dans le texte officiel ou le document source avant d'être repris."],
+                ['titre' => 'Coller le dossier d\'un donneur d\'ordre dans un compte personnel', 'texte' => "Un compte gratuit de salarié n'appartient pas à l'entreprise et part avec lui. Le dossier d'un client étranger, d'un sous-traitant minier ou d'un patient reste dans les documents classés « jamais »."],
+                ['titre' => 'Répondre en plusieurs langues sans relecture', 'texte' => "Un hôtel qui répond à une agence ou à un client étranger en anglais, ou à un client local en malagasy, envoie un texte relu par un locuteur : l'assistant écrit en malagasy avec une qualité inégale."],
+                ['titre' => 'Payer trois abonnements sans règle commune', 'texte' => "Les éditeurs facturent en devises, alors que l'entreprise compte en ariary. Trois assistants payés par trois personnes, sans règle, coûtent plus cher et se contrôlent moins : l'entreprise retient un outil principal après la formation."],
+                ['titre' => 'Attendre la fin des réparations pour commencer', 'texte' => "Le retour à la normale du réseau électrique prend des mois, selon la Jirama. Une équipe qui attend un réseau parfait ne démarre jamais ; elle démarre avec une organisation qui absorbe les coupures."],
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => "Pourquoi choisir Richard SALANON pour former vos équipes à Toamasina ?",
+            'paragraphes' => [
+                fait('phrase_entite'),
+                "Richard peut accompagner à distance les entreprises de Madagascar, en français, avec un devis en euros. Il a créé <a href=\"https://wapy.pro\">Wapy</a>, un assistant WhatsApp à intelligence artificielle pour les entreprises d'Afrique francophone, ce qui l'aide à penser les échanges avec des clients qui écrivent sur mobile, et il est co-fondateur d'<a href=\"https://audyxa.com\">Audyxa</a>. Il intègre aussi l'IA dans des logiciels pour ses clients.",
+                "Avec " . $ans . " ans d'expérience dans le numérique, une formation à " . fait('formation')['nom'] . " (" . fait('formation')['annee'] . ") et plus de " . rtrim((string) fait('personnes_formees'), '+') . " personnes formées selon lui, il construit les exercices sur vos documents, évalue chaque participant sur une tâche réelle de son poste et laisse à l'entreprise ses supports, sa bibliothèque de consignes et son mode opératoire par tâche. Il n'est certifié par aucun éditeur d'IA et ne se présente comme partenaire d'aucun.",
+                "Les projets qu'il a livrés à des entreprises d'Afrique de l'Ouest et du Centre, d'Europe et du Canada sont présentés sur la page des <a href=\"/realisations/\">réalisations</a>, et son parcours sur la page <a href=\"/richard-salanon\">Richard SALANON</a>. Quand le besoin dépasse l'usage quotidien des assistants, par exemple pour brancher l'IA sur les logiciels ou les archives de l'entreprise, la mission relève de l'<a href=\"/services/integration-ia-entreprise\">intégration de l'IA en entreprise</a>. La <a href=\"/formations/ia-en-entreprise\">fiche générale de la formation</a> détaille le programme jour par jour.",
+            ],
+        ],
+        [
+            'type'   => 'cta',
+            'titre'  => "Voulez-vous former votre équipe à l'IA à Toamasina ?",
+            'texte'  => "Indiquez le nombre de personnes, leurs postes, les tâches qui leur prennent le plus de temps, vos outils et vos contraintes d'électricité et de connexion : vous recevez une réponse sous 24 heures, puis une proposition et un devis en euros.",
+            'bouton' => ['url' => '/contact', 'texte' => 'Demander une formation IA'],
+        ],
+    ],
+
+    'faq' => [
+        ['q' => "Qui peut former mes équipes à l'IA à Toamasina ?", 'r' => "Richard SALANON intervient à distance depuis Cotonou, en français, sur les documents et les comptes de votre entreprise, avec un devis en euros. Les groupes comptent huit à dix personnes par métier au plus, et la formation se termine par une évaluation : chaque participant réalise seul une tâche réelle de son poste."],
+        ['q' => "La formation tient-elle compte des coupures de courant de Toamasina ?", 'r' => "Oui, elle est conçue pour cela : séances de deux heures et demie, documents copiés sur les postes la veille, consignes rédigées hors ligne, connexion de secours par téléphone et. Une connexion reste nécessaire pour interroger l'assistant, mais quelques minutes suffisent pour une demande."],
+        ['q' => "Peut-on former des équipes en rotation, comme celles du port ?", 'r' => "Oui. Le port de Toamasina fonctionne jour et nuit, avec des équipes en trois fois huit heures pour la manutention des marchandises conventionnelles. Les séances à distance de deux heures et demie se prêtent à des groupes de huit personnes au plus, ce qui évite de retirer toute l'équipe en même temps ; les créneaux se discutent lors du cadrage."],
+        ['q' => "L'IA peut-elle aider à préparer un dossier de dédouanement ?", 'r' => "Elle aide à relire, à comparer et à rédiger : écarts entre une facture, un document de transport et une déclaration, relance du client pour une pièce manquante, tableau des dossiers en attente. Elle ne remplace pas le contrôle de l'agent, qui retrouve chaque quantité et chaque valeur dans le document source avant le dépôt."],
+        ['q' => "Peut-on organiser la formation en dehors de la campagne de litchis ?", 'r' => "C'est même conseillé. La campagne 2025 a ouvert le 20 novembre et près de neuf dixièmes du quota étaient expédiés à la mi-décembre. Les exportateurs placent la formation avant l'ouverture ou après la clôture, et le planning se fixe avec l'entreprise en dehors des pics d'activité."],
+        ['q' => "Une équipe d'Antananarivo et une équipe de Toamasina peuvent-elles suivre la même session ?", 'r' => "Oui, en visioconférence, à huit personnes au plus par session à distance. Les deux villes sont dans le même fuseau, UTC+3, soit deux heures de plus que Cotonou toute l'année. Les séances se placent entre 9 h et 17 h à Toamasina."],
+        ['q' => "Mes équipes peuvent-elles envoyer les données d'un donneur d'ordre étranger à ChatGPT ou à Claude ?", 'r' => "Pas sans précaution. Le contrat du donneur d'ordre peut interdire tout envoi à un service tiers, et la loi malgache encadre les données personnelles. La formation apprend à classer les documents en trois couleurs, à anonymiser les noms, numéros et montants, et à garder en interne ce qui ne doit pas sortir."],
+        ['q' => "Un hôtel qui a été touché par le cyclone peut-il utiliser l'IA pour répondre aux clients ?", 'r' => "Oui, pour rédiger des réponses en français et en anglais, classer les messages et décrire chambres, excursions et menus. Les tarifs et les disponibilités restent ceux que l'établissement a publiés, et rien ne part sans relecture par une personne qui connaît la situation réelle de l'hôtel."],
+        ['q' => "Reste-t-il quelque chose de la formation dans l'équipe après la session ?", 'r' => "Oui : la bibliothèque de consignes qui appartient à l'entreprise, un mode opératoire par tâche, les supports et les exercices corrigés, une attestation nominative et un canal direct pour les questions d'application le mois suivant. Ce n'est ni un diplôme ni une certification d'éditeur."],
+        ['q' => "Le devis est-il en ariary ou en euros ?", 'r' => "En euros, sans montant affiché d'avance. Les éditeurs d'assistants facturent eux-mêmes en devises, et l'entreprise convertit en ariary au moment de payer. Le règlement se fait par carte bancaire, PayPal ou virement."],
+        ['q' => "Faut-il acheter des abonnements avant la formation ?", 'r' => "Non. Les versions gratuites suffisent pour apprendre la méthode. L'abonnement se décide ensuite, sur ce qui a réellement servi, en tenant compte de la facturation en devises et d'un outil principal plutôt que de trois."],
+    ],
+
+    'sources' => [
+        ['titre' => "L'Express de Madagascar, port de Toamasina : 3,1 millions de tonnes de cargaisons par an (décembre 2025)", 'url' => 'https://www.lexpress.mg/2025/12/port-de-toamasina-31-millions-de-tonnes.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, Toamasina veut devenir un hub régional (décembre 2025)", 'url' => 'https://www.lexpress.mg/2025/12/infrastructure-portuaire-toamasina-veut.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, l'extension du port tourne à plein régime (octobre 2025)", 'url' => 'https://www.lexpress.mg/2025/10/toamasina-lextension-du-port-tourne.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, le port de Toamasina face à un défi logistique (juin 2026)", 'url' => 'https://www.lexpress.mg/2026/06/commerce-le-port-de-toamasina-face-un.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, exportation de litchis : 89 % du quota annuel atteint (15 décembre 2025)", 'url' => 'https://fr.allafrica.com/stories/202512150370.html', 'date' => '2026-10-26'],
+        ['titre' => "Ambatovy, opérations et installations (mine près de Moramanga, usine près de Toamasina)", 'url' => 'https://ambatovy.com/en/?p=16388', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, mines : Ambatovy reprend ses activités (juin 2026)", 'url' => 'https://www.lexpress.mg/2026/06/mines-ambatovy-reprend-ses-activites.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, du carburant en cours de déchargement à Toamasina (mai 2026)", 'url' => 'https://www.lexpress.mg/2026/05/carburant-du-carburant-en-cours-de.html', 'date' => '2026-10-26'],
+        ['titre' => "Newsmada, Gezani a plombé le secteur du tourisme (21 février 2026)", 'url' => 'https://newsmada.com/?p=169863', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, Gezani balaie Toamasina (février 2026)", 'url' => 'https://www.lexpress.mg/2026/02/cyclone-gezani-balaie-toamasina.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, Toamasina : le retour à la normale de l'électricité prend du temps (février 2026)", 'url' => 'https://www.lexpress.mg/2026/02/toamasina-electricite-le-retour-la.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, l'approvisionnement en électricité demeure instable (23 juillet 2026)", 'url' => 'https://fr.allafrica.com/stories/202607230395.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, Toamasina : cinq groupes thermiques en panne (2 octobre 2026)", 'url' => 'https://www.lexpress.mg/2026/10/toamasina-cinq-groupes-thermiques-en.html', 'date' => '2026-10-26'],
+        ['titre' => "Newsmada, Airtel Madagascar mobilisé auprès des foyers sinistrés (12 mars 2026)", 'url' => 'https://newsmada.com/?p=172360', 'date' => '2026-10-26'],
+        ['titre' => "Wikipédia, LION (câble sous-marin entre Madagascar, La Réunion et Maurice)", 'url' => 'https://en.wikipedia.org/wiki/LION_(cable_system)', 'date' => '2026-10-26'],
+        ['titre' => "Newsmada, Orange Madagascar et l'inclusion numérique à l'université de Toamasina (11 avril 2026)", 'url' => 'https://newsmada.com/?p=176005', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, le Grand Salon du Numérique à Toamasina (octobre 2024)", 'url' => 'https://www.lexpress.mg/2024/10/toamasina-le-grand-salon-du-numerique.html', 'date' => '2026-10-26'],
+        ['titre' => "L'Express de Madagascar, une délégation d'opérateurs réunionnais à Toamasina (3 octobre 2023)", 'url' => 'https://lexpress.mg/03/10/2023/toamasina-une-delegation-doperateurs-reunionnais-en-prospection/', 'date' => '2026-10-26'],
+        ['titre' => "Agence Adocc, fiche pays Madagascar (villes)", 'url' => 'https://export.agence-adocc.com/fr/fiches-pays/madagascar/introduction', 'date' => '2026-10-26'],
+    ],
+
+    'liens' => [
+        'formations'  => ['ia-generative-dirigeants', 'prompt-engineering', 'agents-ia-assistants', 'n8n', 'ia-en-entreprise'],
+        'services'    => ['integration-ia-entreprise', 'formation-en-entreprise'],
+        'comparatifs' => ['chatgpt-vs-claude-vs-gemini'],
+    ],
+];
