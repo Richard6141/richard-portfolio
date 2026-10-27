@@ -5,8 +5,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'FedaPay, KkiaPay ou CinetPay : quelle passerelle de paiement mobile money et carte choisir en 2026 ?',
-    'title'   => 'FedaPay, KkiaPay ou CinetPay : frais, pays et API en 2026',
-    'meta'    => 'Frais publiés, pays et opérateurs, délais de versement, documents d\'ouverture, SDK et webhooks : FedaPay, KkiaPay et CinetPay comparés le 3 octobre 2026.',
+    'title'   => 'FedaPay, KkiaPay ou CinetPay : comparatif des frais 2026',
+    'meta'    => 'Quelle passerelle choisir ? Frais publiés, pays, opérateurs mobile money, délais de versement, SDK et webhooks de FedaPay, KkiaPay et CinetPay.',
     'en_bref' => 'Au 3 octobre 2026, FedaPay publie pour le mobile money au Bénin une commission de 1,8 % prélevée au marchand, sans abonnement. KkiaPay facture 9 900 FCFA HT par mois son offre Intégration et fait payer au client 1,3 % à 1,9 % selon le pays. CinetPay liste dans ses SDK officiels des opérateurs dans dix pays, Cameroun et RD Congo compris, mais sa page tarifs n\'était pas consultable ce jour-là. Choisissez d\'abord selon les pays et opérateurs de vos clients, puis selon le coût total et la qualité de la documentation.',
     'publie'  => '2026-10-03',
     'maj'     => '2026-10-03',
