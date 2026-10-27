@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Automatisation des processus avec n8n et Make : vos tâches répétitives exécutées sans ressaisie, l\'IA en renfort',
-    'title'   => 'Automatisation n8n et Make pour PME | Richard SALANON',
+    'title'   => 'Consultant automatisation n8n et Make PME | Richard SALANON',
     'meta'    => 'Relances de factures, stocks synchronisés, commandes WhatsApp, rapports : automatisation n8n et Make reliée à Sheets, Odoo, Dolibarr et à votre CRM.',
     'en_bref' => 'Conception et mise en service d\'automatisations avec n8n et Make : relances de factures, synchronisation des stocks, traitement des commandes reçues sur WhatsApp, rapports envoyés à heure fixe, liaison entre Google Sheets, Odoo, Dolibarr et votre CRM, avec l\'intelligence artificielle pour lire, classer et rédiger. Pour les PME, commerces, cabinets, écoles et ONG d\'Afrique francophone, d\'Europe et du Canada qui perdent des heures en copier-coller. Un premier workflow tourne en 1 à 2 semaines, un lot de plusieurs automatisations en 3 à 6 semaines ; le prix est fixé sur devis après l\'inventaire de vos tâches.',
     'publie'  => '2026-10-04',
@@ -290,6 +290,15 @@ return [
         ],
         [
             'type'        => 'prose',
+            'titre'       => 'Où Richard SALANON intervient-il pour automatiser les processus des entreprises ?',
+            'paragraphes' => [
+                'Richard SALANON est installé à Cotonou et mène la plupart des projets d\'automatisation à distance : entretiens en visioconférence, workflows construits sur des comptes de test, documentation partagée. Le cadrage est le même à Cotonou, à Abidjan, à Dakar ou en Europe, puisque l\'inventaire, la construction et la mise en production ne demandent pas de déplacement systématique.',
+                'Chaque ville a sa page, avec son tissu économique et ses habitudes de paiement. Au Bénin : <a href="/digitalisation-entreprise-cotonou">Cotonou</a>, <a href="/digitalisation-entreprise-abomey-calavi">Abomey-Calavi</a>, <a href="/digitalisation-entreprise-porto-novo">Porto-Novo</a> et <a href="/digitalisation-entreprise-parakou">Parakou</a>. Ailleurs en Afrique de l\'Ouest : <a href="/digitalisation-entreprise-abidjan">Abidjan</a>, <a href="/digitalisation-entreprise-lome">Lomé</a> et <a href="/digitalisation-entreprise-dakar">Dakar</a>. Ces pages traitent de la digitalisation d\'entreprise, dont l\'automatisation est souvent l\'étape suivante.',
+                'Vous êtes ailleurs, en Afrique francophone, en Europe ou au Canada ? Le projet se déroule de la même façon, et la <a href="/zones/">liste des zones desservies</a> indique les pays couverts.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
             'titre'       => 'Pourquoi confier vos automatisations à Richard SALANON ?',
             'paragraphes' => [
                 fait('phrase_entite'),
@@ -324,6 +333,9 @@ return [
         ['q' => 'Qui possède les workflows et les accès ?', 'r' => 'Vous. Le compte n8n ou Make, les clés d\'API, le serveur éventuel et le moyen de paiement des abonnements sont au nom de l\'entreprise, et les exports des workflows vous sont remis avec leur documentation. Vous pouvez ainsi changer de prestataire, ou confier la maintenance à une personne formée en interne, sans rien reconstruire.'],
         ['q' => 'Que se passe-t-il si un workflow tombe en panne ?', 'r' => 'Une alerte part vers une personne nommée dès le premier échec : workflow d\'erreur chez n8n, gestionnaires d\'erreurs et exécutions incomplètes chez Make, qui retente automatiquement jusqu\'à 8 fois après une erreur de connexion selon son centre d\'aide consulté le 3 octobre 2026. La procédure de reprise écrite permet de rejouer le passage manqué sans envoyer deux fois le même message. Le contrat de maintenance fixe le délai d\'intervention.'],
         ['q' => 'Travaillez-vous avec des entreprises en Europe et au Canada ?', 'r' => 'Oui. Richard SALANON a travaillé avec des organisations en France, en Belgique, en Suisse et au Canada, comme dans onze pays d\'Afrique francophone. Le projet se mène à distance : entretiens en visioconférence, démonstrations sur les outils de test, documentation partagée. Pour une entreprise soumise au RGPD, l\'hébergement des workflows est choisi en Union européenne.'],
+        ['q' => 'De quoi dépend le prix d\'une automatisation n8n ou Make ?', 'r' => 'Il se chiffre sur devis, après l\'inventaire de vos tâches, et aucune somme n\'est annoncée avant. Il varie surtout avec le nombre de workflows, le nombre d\'outils à relier, la qualité de leurs API, l\'état de vos données, la part d\'IA et de validation humaine, l\'hébergement choisi et le suivi souhaité. Les tarifs de départ publiés sur ce site ne concernent pas ce service.'],
+        ['q' => 'Faut-il choisir une agence ou un consultant indépendant pour automatiser ?', 'r' => 'Cela dépend de la taille du projet. Une agence réunit plusieurs profils et peut absorber un gros chantier. Un consultant indépendant vous donne un interlocuteur unique qui construit lui-même, avec une disponibilité plus limitée. Pour compenser, exigez comptes à votre nom, exports et documentation, quel que soit le prestataire.'],
+        ['q' => 'Peut-on automatiser une comptabilité SYSCOHADA ?', 'r' => 'On automatise autour de la comptabilité, pas à la place du comptable. Un workflow peut collecter et classer les pièces, extraire leurs montants, rapprocher les paiements mobile money des factures, relancer les clients et produire les rapports de fin de mois. Les écritures selon le SYSCOHADA restent saisies et validées dans le logiciel comptable, par une personne responsable.'],
     ],
 
     'sources' => [

@@ -79,6 +79,24 @@ return [
         ],
         [
             'type'        => 'prose',
+            'titre'       => 'Qu’est-ce qu’un audit IA pour une PME, et que contient-il ?',
+            'paragraphes' => [
+                'Un audit IA est l’état des lieux qui ouvre la mission : il relève ce que les équipes font déjà avec l’intelligence artificielle, classe les données selon leur sensibilité et mesure l’écart entre les pratiques réelles et les règles que la direction croit appliquées. Il se termine par une liste de décisions, pas par l’achat d’un logiciel.',
+                'Dans une PME, l’audit tient en peu de pages parce que le périmètre est limité : quelques services, une poignée d’abonnements, des fichiers répartis entre un serveur, une messagerie et des téléphones. Il s’appuie sur des entretiens avec les personnes qui font le travail, plus que sur des questionnaires, car l’usage non déclaré ne figure dans aucun tableau.',
+                'Le rapport d’audit se lit en une séance. Il distingue ce qui est urgent (une règle de données à poser, un abonnement inutile à résilier), ce qui est à tester (un ou deux cas d’usage) et ce qui peut attendre. Si vous souhaitez ensuite le faire exécuter par une autre équipe, il est écrit pour cela.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Faut-il choisir une agence IA ou un consultant indépendant pour une PME ?',
+            'paragraphes' => [
+                'Cela dépend de ce que vous achetez. Une agence IA vend souvent une réalisation : un chatbot, un flux, une intégration. Un consultant indépendant vend d’abord une décision : quoi lancer, avec quoi, et dans quel ordre. Pour une PME qui n’a pas encore choisi son premier cas d’usage, commencer par le conseil évite de payer une réalisation mal ciblée.',
+                'L’agence a pour elle la taille : plusieurs profils disponibles en même temps, une capacité à absorber un grand chantier. Le consultant indépendant a pour lui la proximité : vous parlez à la personne qui mène le diagnostic et signe les livrables, sans intermédiaire. Posez dans les deux cas les mêmes questions : qui possède les comptes à la fin, quels documents sont remis, et l’outil recommandé est-il revendu par le prestataire.',
+                'Richard SALANON travaille en indépendant, depuis Cotonou. Si votre projet exige ensuite une équipe plus large, la mission de conseil reste utile : son dossier se confie à l’agence de votre choix.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
             'titre'       => 'Comment choisit-on les cas d’usage qui valent l’effort ?',
             'paragraphes' => [
                 'La moitié du travail d’un consultant IA consiste à dire non. Dans une organisation de vingt personnes, on trouve facilement trente idées : résumer les réunions, répondre aux clients, trier les courriels, rédiger les appels d’offres, lire les factures, analyser les ventes. Toutes sont possibles. Peu méritent d’être lancées cette année.',
@@ -230,6 +248,8 @@ return [
         ['q' => 'Qu’est-ce qu’un consultant IA, et en quoi diffère-t-il d’une agence d’automatisation ?', 'r' => 'Une agence d’automatisation construit des flux ou des chatbots que vous avez déjà décidé de commander. Un consultant IA intervient avant : il observe vos usages et vos données, choisit les cas d’usage qui valent l’effort, compare les outils, fixe les règles et prépare la formation. Son livrable est une décision documentée, que vous pouvez faire exécuter par qui vous voulez.'],
         ['q' => 'Existe-t-il un consultant IA au Bénin ?', 'r' => 'Oui. Richard SALANON est basé à Cotonou et conseille des organisations au Bénin, dans le reste de l’Afrique francophone, en Europe et au Canada. Les missions se mènent à distance ou sur place, selon le devis, avec des entretiens individuels en visioconférence ou par téléphone.'],
         ['q' => 'Êtes-vous consultant IA freelance ?', 'r' => 'Oui. Richard SALANON exerce en indépendant depuis Cotonou : le devis, le diagnostic et les livrables passent par lui, que la mission se mène au Bénin, ailleurs en Afrique francophone, en Europe ou au Canada. Le tarif se fixe sur devis, selon le périmètre de la mission.'],
+        ['q' => 'IA pour PME : par où commencer ?', 'r' => 'Par un inventaire, pas par un achat. Notez ce que vos équipes font déjà avec l’IA, classez vos données selon leur sensibilité, puis choisissez un seul cas d’usage fréquent, vérifiable en moins d’une minute et confié à un responsable. Relevez le temps passé avant et après. C’est le cœur d’un audit IA, que vous pouvez mener seul ou avec un consultant.'],
+        ['q' => 'Quelle différence entre un audit IA et une mission de conseil complète ?', 'r' => 'L’audit est la première étape : état des lieux des usages, des outils et des données, avec une liste de décisions. La mission complète y ajoute la feuille de route, la comparaison des outils sur vos documents, la charte d’usage, la formation et le suivi. Le périmètre exact, audit seul ou mission complète, se fixe sur le devis, après l’échange de cadrage.'],
         ['q' => 'Combien coûte un consultant IA ?', 'r' => 'Les honoraires sont fixés sur devis. Le prix dépend du nombre de personnes à rencontrer, de la sensibilité des données, du nombre de pays et de cadres légaux, du nombre d’outils à essayer et de la présence d’ateliers de formation. Aucun montant n’est annoncé avant d’avoir compris votre situation.'],
         ['q' => 'Combien de temps dure une mission ?', 'r' => 'La durée dépend du nombre de personnes à rencontrer, du nombre de sites et de pays, de la sensibilité des données et du nombre d’outils à essayer. Elle est annoncée sur le devis, avant le début de la mission.'],
         ['q' => 'Promettez-vous un gain de temps ou d’argent chiffré ?', 'r' => 'Non. Un pourcentage annoncé avant d’avoir observé vos processus ne repose sur rien. Le consultant définit avec vous ce qu’il faut mesurer, vous aide à relever la situation de départ et suit le résultat réel au bout de quelques semaines. La décision de généraliser se prend sur ces relevés.'],
