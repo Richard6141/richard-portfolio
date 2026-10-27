@@ -307,6 +307,7 @@ return [
         ['q' => 'La formation couvre-t-elle Claude Code ?', 'r' => 'Non. Claude Code est l’outil d’Anthropic pour développer des logiciels. Cette formation s’adresse à des équipes non techniques ; pour coder avec un assistant, voyez la formation vibecoding.'],
         ['q' => 'Faut-il acheter des abonnements avant la session ?', 'r' => 'Non. La formule gratuite suffit pour apprendre, avec ses limites d’utilisation. Les abonnements se décident après la formation, sur ce qui a réellement servi, et restent au nom de l’entreprise.'],
         ['q' => 'Combien coûte Claude pour une équipe ?', 'r' => 'Au 25 octobre 2026, la page des offres d’Anthropic affiche 20 $ par siège et par mois en paiement annuel (25 $ en mensuel) pour le siège Standard de la formule Team, de 2 à 150 personnes. Les prix peuvent changer : vérifiez-les sur la page de l’éditeur.'],
+        ['q' => 'Quel abonnement Claude choisir pour une équipe ?', 'r' => 'Anthropic propose des formules individuelles (Free, Pro, Max), une formule Team pour les équipes et une formule Enterprise pour les grandes organisations, les deux dernières ajoutant administration centralisée et authentification unique. Le choix suit l’effectif et les contrôles requis. Formules et limites évoluent : la page officielle des tarifs fait foi. Les prix affichés, les taxes et les moyens de paiement peuvent varier selon le pays de facturation (Bénin, Côte d’Ivoire, Sénégal, France, Belgique, Suisse, Canada ou autre) : vérifiez-les à l’étape de commande, depuis le pays qui paiera.'],
         ['q' => 'Nos documents sont confidentiels : est-ce compatible ?', 'r' => 'Oui, avec des règles. Avant la session, les documents sont classés : ceux qu’on peut confier à Claude, ceux qu’on anonymise, ceux qui ne sortent jamais. Les exercices utilisent des copies préparées avec votre référent.'],
         ['q' => 'Claude utilise-t-il nos conversations pour entraîner ses modèles ?', 'r' => 'Cela dépend de la formule et des réglages. La page des offres indique que la formule Team n’utilise pas votre contenu pour l’entraînement des modèles par défaut, et que les comptes individuels offrent une possibilité de désactivation. La formation vérifie ces réglages compte par compte.'],
         ['q' => 'Combien de personnes par session ?', 'r' => 'Dix au plus pour la formation de deux jours, douze pour l’atelier découverte, huit pour une séance à distance.'],
@@ -328,6 +329,7 @@ return [
         ['titre' => 'Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 du 20 avril 2018 portant code du numérique', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-25'],
         ['titre' => 'FDFP, plan de formation des entreprises', 'url' => 'https://fdfp.ci/plan-de-formation/', 'date' => '2026-10-25'],
         ['titre' => '3FPT, guichets de financement', 'url' => 'https://www.3fpt.sn/', 'date' => '2026-10-25'],
+        ['titre' => 'Anthropic, page des tarifs de Claude (formules individuelles, Team, Enterprise)', 'url' => 'https://claude.com/pricing', 'date' => '2026-10-27'],
     ],
 
     'liens' => [

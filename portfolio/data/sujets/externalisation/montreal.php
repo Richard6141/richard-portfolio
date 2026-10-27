@@ -169,5 +169,10 @@ return array (
       'q' => 'Pourquoi le Bénin plutôt qu\'un autre pays africain ?',
       'r' => 'Je ne prétendrai pas que le Bénin est objectivement supérieur au Sénégal, au Maroc ou à la Côte d\'Ivoire : chacun a ses écosystèmes et ses bons profils. Ce qui compte pour vous n\'est pas le pays mais la personne, ses réalisations vérifiables et sa façon de travailler. Regardez mes réalisations, appelez-moi, et jugez sur cette base plutôt que sur une carte.',
     ),
+    7 => 
+    array (
+      'q' => 'Faites-vous de l\'automatisation n8n et des agents IA pour des entreprises à Montréal et au Québec ?',
+      'r' => 'Oui : workflows n8n ou Make, agents IA et chatbots WhatsApp. Le Canada figure parmi les pays où je travaille, entièrement à distance depuis Cotonou, sans présence sur place. Le fuseau varie avec l\'heure d\'été : Montréal est en UTC-5 l\'hiver et UTC-4 l\'été, Cotonou en UTC+1, soit six heures d\'écart l\'hiver et cinq l\'été.',
+    ),
   ),
 );

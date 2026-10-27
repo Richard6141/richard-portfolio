@@ -125,6 +125,14 @@ return [
         ],
         [
             'type'        => 'prose',
+            'titre'       => 'Quels frais sur un paiement Mobile Money ?',
+            'paragraphes' => [
+                'Sur la page tarifs de FedaPay, lue le 27 octobre 2026, un paiement MTN, Moov ou Celtiis au Bénin coûte 1,8 %, et un paiement par carte Visa ou Mastercard 3,6 %. BMO et Coris Money sont affichés à 4 %. Les autres passerelles publient leur propre grille, qui varie selon l\'offre choisie et le pays d\'encaissement.',
+                'Ces pourcentages se prélèvent sur chaque commande : à 1,8 %, une vente de 25 000 FCFA laisse 450 FCFA à la passerelle. Vérifiez aussi qui supporte la commission, le marchand ou l\'acheteur, car cela change le prix affiché sur la boutique. Pour confronter les passerelles sur les frais, les pays couverts et les délais de versement, le <a href="/comparatifs/fedapay-vs-kkiapay-vs-cinetpay">comparatif FedaPay, KkiaPay et CinetPay</a> les met côte à côte. Relisez la page de l\'éditeur le jour de votre choix : ces taux peuvent changer.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
             'titre'       => 'Comment un paiement mobile money se passe-t-il, techniquement, sur une boutique ?',
             'paragraphes' => [
                 'Le client choisit son opérateur, saisit son numéro, puis valide le paiement sur son téléphone, par code secret ou notification de l\'opérateur. Entre la demande et la validation, il peut s\'écouler une minute ou deux. La boutique doit donc afficher un écran « paiement en attente », sans conclure trop vite à un échec, et proposer de réessayer si le délai est dépassé. C\'est une différence majeure avec la carte bancaire, que beaucoup de thèmes achetés en ligne ignorent.',
@@ -336,6 +344,7 @@ return [
         ['q' => 'Peut-on accepter MTN MoMo, Moov Money et la carte bancaire sur la même boutique ?', 'r' => 'Oui, par une passerelle qui regroupe ces moyens de paiement. Au Bénin, FedaPay publiait le 3 octobre 2026 une commission de 1,8 % par paiement MTN, Moov ou Celtiis et de 3,6 % par carte Visa ou Mastercard, à la charge du marchand. KkiaPay, dans son offre Intégration, fait payer au client 1,5 % pour le mobile money et facture au marchand 9 900 FCFA HT par mois.'],
         ['q' => 'Faut-il une entreprise immatriculée pour encaisser en ligne ?', 'r' => 'Pas toujours pour démarrer. Selon sa documentation consultée le 3 octobre 2026, FedaPay propose un compte Travailleur indépendant, ouvert avec une pièce d\'identité et un numéro IFU, limité à 10 transactions par semaine et à 300 000 XOF par transaction. Au-delà, le compte Business demande notamment le registre de commerce et n\'a pas de plafond de montant.'],
         ['q' => 'Peut-on recevoir les commandes sur WhatsApp ?', 'r' => 'Oui. Le plus simple est un bouton qui ouvre une conversation avec le récapitulatif de la commande déjà rédigé. On peut aussi envoyer automatiquement confirmations, liens de paiement et avis d\'expédition par la plateforme WhatsApp Business de Meta, qui facture depuis le 1er juillet 2025 chaque message modèle délivré selon sa catégorie, les conversations de service restant gratuites.'],
+        ['q' => 'Dans quels pays une boutique peut-elle encaisser en mobile money ?', 'r' => 'Cela dépend de la passerelle, pas de la boutique. D\'après sa FAQ, KkiaPay est disponible au Bénin, en Côte d\'Ivoire, au Togo et au Sénégal ; CinetPay couvre quinze pays, avec un compte par pays. Pour une clientèle au Canada, en France, en Belgique ou en Suisse, on prévoit en général le paiement par carte bancaire. Le mélange de clientèles se règle au cadrage.'],
         ['q' => 'Le paiement à la livraison est-il possible ?', 'r' => 'Oui, en espèces ou en mobile money remis au livreur. Il rassure les nouveaux clients mais expose aux refus et aux trajets perdus. Les garde-fous habituels : confirmer chaque commande par appel ou message avant l\'expédition, fixer un montant maximal, et demander un acompte en mobile money pour les commandes importantes.'],
         ['q' => 'Pourrai-je gérer moi-même les produits, le stock et les commandes ?', 'r' => 'Oui. La boutique est livrée avec un espace d\'administration, un guide écrit et une formation sur vos propres données : ajout de produits et de variantes, suivi des commandes, remboursements, codes promotionnels, alertes de stock. Les comptes administrateur et le nom de domaine sont à votre nom.'],
         ['q' => 'Ma boutique sera-t-elle visible sur Google ?', 'r' => 'Elle est construite pour l\'être : titres et descriptions par produit, adresses lisibles, données structurées Product, plan du site déclaré dans Search Console, pages rapides sur mobile. Aucune position ne peut toutefois être garantie à une date donnée ; la visibilité se gagne sur plusieurs mois avec des fiches originales et régulièrement enrichies.'],
@@ -347,6 +356,7 @@ return [
     'sources' => [
         ['titre' => 'FedaPay, page tarifs (commissions par opérateur, retraits)', 'url' => 'https://www.fedapay.com/pricing', 'date' => '2026-10-03'],
         ['titre' => 'FedaPay, documentation : types de comptes', 'url' => 'https://docs.fedapay.com/fr/introduction/compte', 'date' => '2026-10-03'],
+        ['titre' => 'FedaPay, page tarifs, relue pour les frais par opérateur au Bénin', 'url' => 'https://www.fedapay.com/pricing', 'date' => '2026-10-27'],
         ['titre' => 'KkiaPay, page tarifs (offres et frais au Bénin)', 'url' => 'https://kkiapay.me/tarifs/', 'date' => '2026-10-03'],
         ['titre' => 'KkiaPay, foire aux questions (pays, moyens de paiement, plugins)', 'url' => 'https://kkiapay.me/faq/', 'date' => '2026-10-03'],
         ['titre' => 'CinetPay, SDK PHP officiel (pays, devises, un compte par pays)', 'url' => 'https://github.com/cinetpay/cinetpay-php-sdk', 'date' => '2026-10-03'],

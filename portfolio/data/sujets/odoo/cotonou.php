@@ -8,7 +8,7 @@ return array (
   'ville' => 'Cotonou',
   'ville_slug' => 'cotonou',
   'pays' => 'Bénin',
-  'titre' => 'Intégration Odoo à Cotonou',
+  'titre' => 'Consultant intégration Odoo à Cotonou',
   'accroche' => 'Odoo déployé par paliers pour l\'import-export et la distribution, avec ce que Cotonou impose réellement.',
   'intro' => 'Cotonou concentre le port, Dantokpa et l\'essentiel des importateurs du pays. Les entreprises y traitent de gros volumes avec des marges serrées : la moindre erreur de stock ou de créance se paie comptant. Odoo, c\'est un ERP complet et modulaire, avec une version open source auto-hébergeable. Sa force est de couvrir plusieurs métiers dans un seul système : ventes, achats, stock, comptabilité, RH, point de vente ; sa limite est qu\'il devient coûteux dès qu\'on veut tordre ses processus standards, et son interface exige une connexion confortable. Le rôle d\'un intégrateur n\'est pas de vous vendre tous les modules : c\'est de déterminer lesquels servent votre activité à Cotonou, dans quel ordre les mettre en service, et ce qu\'il vaut mieux laisser en dehors.',
   'sections' => 
@@ -167,6 +167,18 @@ return array (
         3 => 'Confier les mêmes droits à tout le monde pour aller plus vite. Dans une entreprise où plusieurs personnes encaissent, la traçabilité par utilisateur n\'est pas un luxe.',
       ),
     ),
+    7 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Partenaire',
+      'titre' => 'Faut-il passer par un partenaire officiel Odoo à Cotonou ?',
+      'paragraphes' => 
+      array (
+        0 => 'Pas forcément. Je ne suis pas partenaire officiel d\'Odoo et je ne m\'en prévaux pas : je suis consultant indépendant, basé à Cotonou. Odoo Community se déploie sous licence libre, l\'abonnement Enterprise reste un contrat distinct de ma prestation, et ce qui compte au quotidien, ce sont mes livrables et les accès laissés à votre nom.',
+        1 => 'Concrètement, deux choses changent pour vous. Si un bailleur ou un appel d\'offres exige un partenaire officiel, dites-le dès le premier échange : je vous le confirme franchement avant tout cadrage. Sinon, vous jugez sur pièces : cadrage écrit, paramétrage documenté, code et comptes ouverts au nom de votre entreprise.',
+        2 => 'Ce que je mets en avant à Cotonou : la comptabilité SYSCOHADA et OHADA réglée avec votre comptable avant la première écriture, et l\'intégration de l\'IA dans Odoo, avec des automatisations n8n qui relient vos factures, WhatsApp et le Mobile Money.',
+      ),
+    ),
   ),
   'faq' => 
   array (
@@ -204,6 +216,11 @@ return array (
     array (
       'q' => 'Et si mon équipe n\'est pas à l\'aise avec l\'informatique ?',
       'r' => 'C\'est la situation la plus fréquente, et c\'est un critère de conception plutôt qu\'un obstacle. On réduit les écrans à ce qui sert, on forme sur les vraies données pendant le déploiement, et on garde le papier en parallèle le temps que la confiance s\'installe.',
+    ),
+    7 => 
+    array (
+      'q' => 'Mon groupe a une entité à Cotonou et une autre dans un pays voisin : un seul Odoo suffit-il ?',
+      'r' => 'Oui, dans une même base, à condition de créer une société par pays. Selon la documentation d\'Odoo 20.0, relue le 27 octobre 2026, une succursale suit toujours la localisation de sa société mère : une entité située dans un autre pays se paramètre donc comme société distincte, avec son propre plan de comptes et ses taxes. J\'ai travaillé dans quinze pays, dont le Togo, le Niger et le Burkina Faso, où le cadrage se fait à distance.',
     ),
   ),
 );

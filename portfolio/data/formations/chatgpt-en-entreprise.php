@@ -367,6 +367,7 @@ return [
         ['q' => 'À quoi sert la recherche approfondie, et est-elle fiable ?', 'r' => 'Elle rassemble plusieurs sources dans un rapport plus long qu’une réponse de chat. Elle ne dispense pas de contrôle : citations et résultats peuvent être inexacts, on ouvre les sources avant de reprendre un fait.'],
         ['q' => 'Que deviennent les GPTs personnalisés ?', 'r' => 'Leur disponibilité et leurs conditions ont évolué et peuvent encore changer. La formation montre comment obtenir un résultat voisin avec un projet. Vérifiez la page officielle de l’éditeur pour votre espace avant d’investir du temps.'],
         ['q' => 'Faut-il acheter un abonnement avant la session ?', 'r' => 'Non. Un simple compte permet d’apprendre la méthode, avec ses restrictions. Les offres d’OpenAI changent ; sa page officielle fait foi, et l’abonnement de la société se tranche une fois la formation terminée.'],
+        ['q' => 'Quel abonnement ChatGPT choisir pour une équipe ?', 'r' => 'OpenAI distingue des forfaits individuels, une offre Business pour les équipes, avec administration centralisée et plusieurs types de postes, et une offre Enterprise sur devis. Le choix dépend de l’effectif, de l’administration voulue et des règles de données. Formules et limites évoluent : la page officielle de tarification d’OpenAI fait foi. Les prix affichés, les taxes et les moyens de paiement peuvent varier selon le pays de facturation (Bénin, Côte d’Ivoire, Sénégal, France, Belgique, Suisse, Canada ou autre) : vérifiez-les à l’étape de commande, depuis le pays qui paiera.'],
         ['q' => 'La formation couvre-t-elle aussi Claude, Gemini ou Copilot ?', 'r' => 'Non, elle se limite à ChatGPT. Pour manier plusieurs assistants, voir la formation IA en entreprise ; pour arbitrer entre eux, le comparatif du site.'],
         ['q' => 'Quelle taille de groupe ?', 'r' => 'Pour les deux jours, le groupe compte dix personnes au plus ; l’atelier de découverte en accueille douze, la distance huit, l’hybride dix.'],
         ['q' => 'La formation peut-elle se donner entièrement à distance ?', 'r' => 'Oui : cinq ou six rendez-vous de 2 h 30 par appel vidéo, écran partagé. Une bonne connexion est nécessaire pour chacun, et une solution de repli existe si le réseau tombe.'],
@@ -378,6 +379,7 @@ return [
     'sources' => [
         ['titre' => 'Commission européenne, la protection des données expliquée (RGPD)', 'url' => 'https://commission.europa.eu/law/law-topic/data-protection/data-protection-explained_en', 'date' => '2026-10-26'],
         ['titre' => 'Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 du 20 avril 2018 portant code du numérique', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-26'],
+        ['titre' => 'OpenAI, tarification de ChatGPT (forfaits individuels, Business, Enterprise)', 'url' => 'https://chatgpt.com/pricing', 'date' => '2026-10-27'],
     ],
 
     'liens' => [
