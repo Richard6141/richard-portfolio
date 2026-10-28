@@ -10,7 +10,7 @@ return array (
   'pays' => 'Bénin',
   'titre' => 'Intégration Dolibarr à Porto-Novo',
   'accroche' => 'Dolibarr déployé par paliers pour l\'enseignement privé et les structures para-publiques, avec ce que Porto-Novo impose réellement.',
-  'intro' => 'Porto-Novo est une ville administrative. Les structures y fonctionnent avec des procédures écrites et des validations en cascade : ce qu\'on attend d\'un ERP ici, c\'est d\'abord de retrouver un dossier et de prouver qui a validé quoi. Dolibarr, c\'est un ERP-CRM open source léger, écrit en PHP et MySQL, qui tourne sur un hébergement mutualisé ordinaire. Sa force est de sa légèreté : il s\'installe sur l\'hébergement que vous avez déjà, s\'affiche vite même sur une connexion moyenne, et se prend en main en quelques jours ; sa limite est qu\'il couvre moins de terrain qu\'Odoo sur les processus industriels complexes et son interface est plus austère. Le rôle d\'un intégrateur n\'est pas de vous vendre tous les modules : c\'est de déterminer lesquels servent votre activité à Porto-Novo, dans quel ordre les mettre en service, et ce qu\'il vaut mieux laisser en dehors.',
+  'intro' => 'À Porto-Novo, on ne demande pas à un ERP d\'aller vite, on lui demande de prouver. Les structures y travaillent avec des procédures écrites et des validations en cascade, et la question revient toujours : où est le dossier, et qui a validé quoi ? Dolibarr, un ERP-CRM open source léger, se loge sur l\'hébergement mutualisé que vous avez déjà. Il garde la trace des documents et de leurs statuts, mais ses circuits de validation restent plus simples que ceux d\'Odoo : si votre tutelle exige des approbations à plusieurs niveaux, nous le vérifions ensemble avant tout choix. Je vous dis aussi ce qu\'il vaut mieux laisser en dehors.',
   'sections' => 
   array (
     0 => 
@@ -44,89 +44,16 @@ return array (
     ),
     1 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Modules',
-      'titre' => 'Les modules Dolibarr qui servent vraiment à Porto-Novo.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Porto-Novo.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Tiers et clients',
-          'texte' => 'Un fichier unique clients, fournisseurs et prospects, avec tout l\'historique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Devis, commandes, factures',
-          'texte' => 'Le circuit commercial complet et les relances d\'impayés. Le module qui rentabilise le plus vite.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Stock et entrepôts',
-          'texte' => 'Mouvements, entrepôts multiples, seuils. Suffisant pour la plupart des commerces.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Projets et temps passé',
-          'texte' => 'Pour les cabinets et prestataires : suivi par mission, facturation à l\'avancement.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Comptabilité et banques',
-          'texte' => 'Rapprochement bancaire et export vers votre expert-comptable.',
-        ),
-        5 => 
-        array (
-          'titre' => 'Automatisation n8n',
-          'texte' => 'API REST propre : relier WhatsApp, Mobile Money ou un site e-commerce reste simple.',
-        ),
+        0 => 'Je commence par le dossier entrant et son circuit de validation, pas par les ventes ni par le stock. Chaque étape reçoit un statut et une date : on sait qui a validé quoi sans rouvrir un classeur. Les pièces justificatives se rattachent ensuite à ce dossier, puis la décision est archivée au même endroit. Cet ordre répond à la contrainte de la ville, conserver les pièces sur plusieurs exercices. L\'état statistique annuel arrive en dernier, parce qu\'il se nourrit de ce qui a été tracé avant. Le paramétrage suit la procédure imposée par la tutelle, il ne la réforme pas.',
+        1 => 'La licence de Dolibarr ne coûte rien et un hébergement mutualisé standard suffit, donc aucun serveur dédié à payer. Pour une mise en service complète à Porto-Novo, avec reprise des données et formation, comptez à partir de 400 000 FCFA. J\'avance par chantiers successifs : le circuit des dossiers d\'abord, un autre module seulement quand le premier a prouvé son utilité. Une fois le cadrage fait, vous recevez un devis détaillé poste par poste, gratuit et sans engagement.',
       ),
     ),
     2 => 
-    array (
-      'type' => 'etapes',
-      'etiquette' => 'Méthode',
-      'titre' => 'Comment se déroule une intégration à Porto-Novo.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Un module en production, pas une démonstration',
-          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Formation d\'un référent interne',
-          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
-        ),
-      ),
-    ),
-    3 => 
-    array (
-      'type' => 'prose',
-      'etiquette' => 'Budget',
-      'titre' => 'Ce que coûte une intégration Dolibarr à Porto-Novo.',
-      'paragraphes' => 
-      array (
-        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation, c\'est l\'option la plus accessible quand le budget est le premier critère.',
-        1 => 'Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Cas concret',
@@ -140,7 +67,7 @@ return array (
         ),
       ),
     ),
-    5 => 
+    3 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Réalité locale',
@@ -151,17 +78,17 @@ return array (
         1 => 'Un ERP y réussit s\'il répond à deux questions : où est le dossier, et qui a validé quoi. Tout le reste, tableaux de bord, automatisations sophistiquées, vient après, et souvent ne vient jamais parce que le besoin réel était celui-là.',
         2 => 'Le paramétrage doit donc épouser le circuit obligatoire plutôt que de proposer un circuit idéal. Quand une procédure est imposée par une tutelle, l\'ERP la trace ; il ne la réforme pas.',
         3 => 'La production des états annuels est le second gain attendu. Les statistiques que vous reconstituez chaque fin d\'exercice deviennent consultables en continu, sans travail supplémentaire, c\'est souvent ce qui justifie le projet à lui seul.',
-        4 => 'Dolibarr trace les documents et leurs statuts, mais ses circuits de validation restent plus rudimentaires que ceux d\'Odoo. Si votre tutelle impose des approbations en plusieurs niveaux, c\'est le point a verifier avant de choisir.',
+        4 => 'Dolibarr trace les documents et leurs statuts, mais ses circuits de validation restent plus rudimentaires que ceux d\'Odoo. Si votre tutelle impose des approbations en plusieurs niveaux, c\'est le point à vérifier avant de choisir.',
       ),
     ),
-    6 => 
+    4 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Pièges',
       'titre' => 'Erreurs fréquentes que je corrige à Porto-Novo',
       'items' => 
       array (
-        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas, et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans vérifier qu\'il couvre vos processus. La licence est nulle, le paramétrage ne l\'est pas, et un outil inadapté coûte plus cher qu\'un outil payant adapté.',
         1 => 'Choisir un outil dont on ne peut pas exporter les données. Dans une structure qui doit justifier sur plusieurs années, c\'est disqualifiant.',
         2 => 'Vouloir dématérialiser la signature avant d\'avoir tracé le circuit. On commence par savoir qui valide, ensuite seulement comment.',
         3 => 'Sous-estimer le temps de validation interne : dans ce type de structure, il pèse plus lourd que le développement.',
@@ -172,38 +99,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Nos procédures sont imposées par la tutelle. L\'ERP va-t-il nous obliger à les changer ?',
-      'r' => 'Non, l\'inverse : le paramétrage épouse le circuit obligatoire et le rend traçable. Si un ERP vous demande de modifier une procédure imposée, c\'est qu\'il est mal paramétré.',
+      'q' => 'Notre tutelle impose sa procédure. Faudra-t-il la modifier pour entrer dans l\'outil ?',
+      'r' => 'Non. Je pars du circuit obligatoire et je le rends traçable. Un outil qui vous pousse à toucher une procédure imposée est mal réglé.',
     ),
     1 => 
     array (
-      'q' => 'Dolibarr convient-il à une entreprise de Porto-Novo ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
+      'q' => 'Dolibarr gère-t-il des approbations à plusieurs niveaux ?',
+      'r' => 'Il trace les documents et leurs statuts, mais ses circuits de validation sont plus rudimentaires que ceux d\'Odoo. Si votre tutelle impose plusieurs niveaux d\'approbation, c\'est le point à vérifier avant de choisir.',
     ),
     2 => 
     array (
-      'q' => 'Combien de temps avant une mise en production ?',
-      'r' => 'Comptez 4 à 8 semaines pour un premier module réellement en service, formation comprise. Un déploiement couvrant plusieurs métiers s\'étale sur quelques mois, par paliers, sans jamais interrompre votre activité.',
+      'q' => 'Pourra-t-on retrouver un dossier d\'il y a trois exercices ?',
+      'r' => 'C\'est le but. Chaque validation est horodatée, et le dossier se consulte en quelques secondes avec sa trace complète, là où il faut aujourd\'hui une demi-heure pour le retrouver sans savoir quelle version fait foi.',
     ),
     3 => 
     array (
-      'q' => 'Peut-on connecter Dolibarr à WhatsApp et au Mobile Money ?',
-      'r' => 'Oui, par automatisation n8n. Les demandes reçues sur WhatsApp alimentent Dolibarr, et les règlements Mobile Money se rapprochent des factures. Ce n\'est pas natif : c\'est un travail d\'intégration à budgéter explicitement.',
+      'q' => 'Quand le premier circuit sera-t-il réellement utilisé ?',
+      'r' => 'Comptez 4 à 8 semaines pour un premier module en service, formation comprise. Si plusieurs métiers sont concernés, le déploiement s\'étale ensuite sur quelques mois, par paliers.',
     ),
     4 => 
     array (
-      'q' => 'Intervenez-vous sur place à Porto-Novo ?',
-      'r' => 'Je suis basé à Cotonou, à une trentaine de kilomètres : un déplacement à Porto-Novo pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
-    ),
-    5 => 
-    array (
-      'q' => 'Que se passe-t-il si je change de prestataire ?',
-      'r' => 'Dolibarr étant open source et auto-hébergé, vous gardez le serveur, la base et les modules. N\'importe quel intégrateur peut reprendre le dossier. C\'est un argument réel face à un logiciel propriétaire fermé, et une clause que je pose sans qu\'on me la demande.',
-    ),
-    6 => 
-    array (
-      'q' => 'Et si mon équipe n\'est pas à l\'aise avec l\'informatique ?',
-      'r' => 'C\'est la situation la plus fréquente, et c\'est un critère de conception plutôt qu\'un obstacle. On réduit les écrans à ce qui sert, on forme sur les vraies données pendant le déploiement, et on garde le papier en parallèle le temps que la confiance s\'installe.',
+      'q' => 'Que deviennent nos archives si nous changeons de prestataire ?',
+      'r' => 'Elles restent chez vous : Dolibarr est open source et auto-hébergé, vous gardez le serveur, la base et les modules, et n\'importe quel intégrateur peut reprendre le dossier. Pour une structure qui doit justifier sur plusieurs années, pouvoir exporter ses données est une exigence.',
     ),
   ),
 );
