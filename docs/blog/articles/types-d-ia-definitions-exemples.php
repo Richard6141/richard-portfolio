@@ -1,0 +1,99 @@
+<?php
+// Source du nouvel article /blog/types-d-ia-definitions-exemples. Après la migration, la base fait foi :
+// ce fichier ne sert qu'à générer migrations/AAAA-MM-JJ-blog-types-d-ia-definitions-exemples.sql.
+return [
+    'slug'       => 'types-d-ia-definitions-exemples',
+    'instantane' => '2026-10-27 09:00:00',
+    'titre'      => 'Les types d\'IA expliqués : définitions et exemples',
+    'meta'       => 'IA faible et forte, machine learning, deep learning, IA générative : les types d\'intelligence artificielle définis simplement, avec exemples.',
+    'resume'     => 'On classe l\'intelligence artificielle de deux façons. Par capacité : l\'IA faible (spécialisée), la seule qui existe aujourd\'hui, et l\'IA forte (générale), encore théorique. Par technique : le machine learning, le deep learning et l\'IA générative s\'emboîtent comme des poupées russes. Chacune sert des usages précis en entreprise.',
+    'categorie'  => 'IA',
+    'tags'       => ['types d\'intelligence artificielle', 'IA générative', 'IA faible et IA forte', 'machine learning', 'deep learning', 'exemples d\'IA'],
+    'contenu'    => <<<'HTML'
+<h2>Qu'est-ce que l'intelligence artificielle, au juste ?</h2>
+<p>C'est un système informatique qui, à partir des données qu'il reçoit, produit des résultats (prédictions, contenus, recommandations, décisions) sans que chaque réponse ait été écrite à l'avance par un programmeur. L'OCDE le formule ainsi dans sa définition révisée en novembre 2023 : un système fondé sur une machine qui, pour des objectifs fixés par des humains, déduit des données reçues comment produire des sorties susceptibles d'influencer un environnement physique ou virtuel.</p>
+<p>Deux points à retenir : l'IA est un domaine large, pas un produit, et elle ne « comprend » pas comme une personne. Elle repère des régularités dans de très grandes quantités de données. Tout ce qui suit découpe ce domaine selon deux axes, la capacité et la technique.</p>
+<h2>Quels sont les 3 ou 4 types d'IA ?</h2>
+<p>Cela dépend de la classification que l'on prend, et les deux circulent sous le même nom de « types d'IA ».</p>
+<h3>Selon la capacité : 3 types</h3>
+<p>Cette répartition est celle qu'IBM présente dans son article sur les types d'intelligence artificielle.</p>
+<ul>
+<li><strong>L'IA faible ou étroite</strong> : conçue pour une tâche ou un petit nombre de tâches. C'est toute l'IA existante.</li>
+<li><strong>L'IA forte ou générale</strong> : un système capable d'apprendre et d'appliquer ses connaissances à n'importe quelle tâche, au niveau d'un humain ou au-delà. Elle est théorique.</li>
+<li><strong>La superintelligence</strong> : une IA qui dépasserait largement les humains dans presque tous les domaines. C'est une hypothèse, pas un produit.</li>
+</ul>
+<h3>Selon le fonctionnement : 4 types</h3>
+<p>IBM les décrit comme les quatre catégories fonctionnelles, rangées sous l'IA faible et l'IA forte.</p>
+<ul>
+<li><strong>Les machines réactives</strong> : elles répondent à ce qu'elles voient, sans mémoire (un programme d'échecs de base).</li>
+<li><strong>Les IA à mémoire limitée</strong> : elles s'appuient sur des données passées pour décider. IBM y range les assistants virtuels comme Siri ou Alexa et les outils d'IA générative comme ChatGPT, qui prédisent le mot suivant à partir de ce qu'ils ont appris.</li>
+<li><strong>La théorie de l'esprit</strong> : une IA qui comprendrait les émotions et intentions des personnes. Elle reste au stade de la recherche.</li>
+<li><strong>La conscience de soi</strong> : une IA consciente d'elle-même. Elle relève de la fiction pour l'instant.</li>
+</ul>
+<p>En pratique, seuls les deux premiers de cette seconde liste existent. Quand un fournisseur parle de « notre IA », il s'agit donc toujours d'IA faible.</p>
+<h2>Quelle est la différence entre IA faible et IA forte ?</h2>
+<p>L'IA faible fait très bien une chose précise ; l'IA forte saurait tout faire. IBM décrit l'IA forte, ou intelligence artificielle générale, comme « théorique » : aucun système connu ne l'a atteinte. Les assistants vocaux comme Siri ou Alexa, cités par IBM, sont des IA faibles.</p>
+<p>Le mot « faible » trompe : une IA faible peut battre un humain aux échecs ou lire des milliers de factures par heure. Elle est faible par son champ, pas par sa performance. Un modèle qui lit des factures ne saura pas répondre à un client, et inversement. Même les assistants de conversation, bien que polyvalents en apparence, restent des IA faibles : selon IBM, ils prédisent le mot suivant dans le contenu qu'ils génèrent.</p>
+<h2>Quelle différence entre IA, machine learning et deep learning ?</h2>
+<p>Ce sont des ensembles emboîtés, du plus large au plus étroit, selon la présentation d'IBM :</p>
+<ol>
+<li><strong>L'intelligence artificielle</strong> : le domaine général, celui des machines qui simulent des capacités humaines comme apprendre, raisonner ou décider.</li>
+<li><strong>Le machine learning (apprentissage automatique)</strong> : une partie de l'IA où l'algorithme apprend à partir d'exemples, sans règles écrites pour chaque cas. On lui montre 10 000 clients qui ont quitté l'entreprise, il apprend à repérer les suivants.</li>
+<li><strong>Le deep learning (apprentissage profond)</strong> : une partie du machine learning qui utilise des réseaux de neurones à nombreuses couches. Il excelle sur les images, le son et le texte.</li>
+</ol>
+<p>Pour choisir, une règle simple : si vos données sont des tableaux (ventes, stocks, clients), le machine learning classique suffit souvent. Si ce sont des photos, des enregistrements ou des textes libres, le deep learning devient utile.</p>
+<h2>Quelle est la définition de l'IA générative, avec des exemples ?</h2>
+<p>L'IA générative est une IA qui crée un contenu nouveau (texte, image, son, code) à partir d'une consigne. IBM la présente comme bâtie sur le machine learning et le deep learning. Les assistants de conversation, les générateurs d'images et les outils d'aide au code en font partie.</p>
+<p>Elle diffère de l'IA dite « prédictive » : celle-ci classe ou note (cette transaction est-elle suspecte ?), l'IA générative produit (rédige la réponse au client). Sa limite principale : elle écrit du plausible, pas forcément du vrai. Il faut donc relire. Pour voir comment les principaux assistants se positionnent, lisez la <a href="/comparatifs/chatgpt-vs-claude-vs-gemini">comparaison ChatGPT, Claude et Gemini</a>.</p>
+<h2>Quels exemples concrets d'IA en entreprise ?</h2>
+<p>Voici des situations types, rangées par technique. Ce sont des scénarios d'usage, pas des résultats mesurés.</p>
+<ul>
+<li><strong>Machine learning</strong> : une boutique de Dakar ou d'Abidjan qui prévoit ses ventes de la semaine d'après l'historique, ou un organisme de microfinance qui estime le risque de retard de paiement d'un dossier.</li>
+<li><strong>Deep learning, image</strong> : lire automatiquement une facture ou une pièce d'identité photographiée au téléphone, pour la saisir dans le logiciel de gestion.</li>
+<li><strong>Deep learning, voix</strong> : transcrire un message vocal WhatsApp pour le classer ou y répondre. La qualité varie selon la langue et l'accent, donc à tester sur vos propres messages.</li>
+<li><strong>IA générative</strong> : rédiger un premier jet de devis, résumer un compte rendu de réunion, ou répondre aux questions fréquentes d'un client à partir de votre documentation. Un assistant WhatsApp à IA, comme <strong>Wapy</strong> (produit de Richard SALANON pour les entreprises d'Afrique francophone), relève de cette famille.</li>
+</ul>
+<p>Pour passer de ces exemples à votre cas, la <a href="/formations/ia-en-entreprise">formation IA en entreprise</a> travaille sur les tâches réelles de votre équipe.</p>
+<h2>Comment choisir le bon type d'IA pour un besoin ?</h2>
+<ol>
+<li><strong>Décrivez la tâche en une phrase.</strong> « Classer », « prévoir », « lire », « rédiger » ? Le verbe oriente la technique.</li>
+<li><strong>Regardez la forme des données.</strong> Tableaux : machine learning. Images ou sons : deep learning. Texte libre à produire : IA générative.</li>
+<li><strong>Mesurez le coût d'une erreur.</strong> Une note interne fausse se corrige ; un prix faux envoyé à un client, non. Plus le risque est grand, plus la relecture humaine est indispensable.</li>
+<li><strong>Vérifiez si une règle simple suffit.</strong> Une formule de tableur ou un menu automatique règle parfois le problème sans IA.</li>
+<li><strong>Testez sur vos propres données</strong> avant d'acheter.</li>
+</ol>
+<p>Pour décider à l'échelle de l'entreprise, la formation <a href="/formations/ia-generative-dirigeants">IA générative pour dirigeants</a> est faite pour cela.</p>
+<h2>Quelles erreurs fréquentes éviter ?</h2>
+<ul>
+<li><strong>Croire que « IA » désigne ChatGPT.</strong> Un assistant de conversation n'est qu'une IA générative parmi d'autres types.</li>
+<li><strong>Attendre une IA forte.</strong> Elle n'existe pas ; on achète toujours une IA faible spécialisée, et il faut la juger sur sa tâche.</li>
+<li><strong>Prendre une réponse bien écrite pour une réponse vraie.</strong> L'affaire du chatbot d'Air Canada montre qu'une entreprise répond de ce que dit son assistant : voir <a href="/histoires/air-canada-chatbot">l'histoire du chatbot d'Air Canada</a>.</li>
+<li><strong>Confondre automatisation et IA.</strong> Un enchaînement de règles n'apprend rien ; c'est utile, souvent moins cher, mais ce n'est pas du machine learning.</li>
+<li><strong>Ignorer la réglementation.</strong> Selon la Commission européenne, le règlement européen sur l'IA définit quatre niveaux de risque, du risque inacceptable au risque minimal ou nul ; si vous servez des clients en Europe, vérifiez dans lequel tombe votre usage.</li>
+</ul>
+<h2>Questions fréquentes</h2>
+<p><strong>Combien y a-t-il de types d'intelligence artificielle ?</strong></p>
+<p>Trois selon la capacité (faible, forte, superintelligence) ou quatre selon le fonctionnement (réactive, à mémoire limitée, théorie de l'esprit, conscience de soi). Seules l'IA faible, réactive ou à mémoire limitée, existe réellement aujourd'hui.</p>
+<p><strong>Quel est un exemple simple d'intelligence artificielle ?</strong></p>
+<p>Un assistant vocal comme Siri ou Alexa, que IBM cite comme IA faible. Le moteur de recommandation de Netflix, cité par IBM comme machine réactive, en est un autre.</p>
+<p><strong>L'IA générative est-elle la même chose que l'IA ?</strong></p>
+<p>Non. C'est une sous-famille de l'IA, bâtie sur le machine learning et le deep learning, qui crée du contenu. Beaucoup d'IA ne génèrent rien : elles classent, prédisent ou détectent.</p>
+<p><strong>ChatGPT est-il une IA forte ?</strong></p>
+<p>Non. Malgré sa polyvalence apparente, c'est une IA faible : un modèle de langage entraîné à produire du texte. Il n'a ni compréhension générale du monde ni conscience.</p>
+<p><strong>Le machine learning est-il obligatoire pour parler d'IA ?</strong></p>
+<p>Non, c'est l'inverse : le machine learning est une partie de l'IA, au même titre que le deep learning, qui est lui-même une partie du machine learning.</p>
+<p><strong>Faut-il savoir programmer pour utiliser ces IA ?</strong></p>
+<p>Pas pour un assistant génératif, qui se pilote en français. Brancher une IA sur vos logiciels ou entraîner un modèle sur vos données demande en revanche un appui technique.</p>
+<p><strong>Une PME africaine peut-elle utiliser ces technologies ?</strong></p>
+<p>Oui, dès lors qu'elle a des tâches répétitives de rédaction, de tri ou de saisie. Commencez par un seul cas, avec des règles sur les données de vos clients, puis mesurez le temps gagné.</p>
+<p><strong>Comment être accompagné pour votre cas ?</strong></p>
+<p>Richard SALANON, consultant en digitalisation basé à Cotonou, intervient auprès d'entreprises d'Afrique francophone et d'Europe. Décrivez votre situation via la page <a href="/contact">contact</a> ; la réponse arrive sous 24 heures.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://oecd.ai/en/wonk/ai-system-definition-update">OCDE, mise à jour de la définition d'un système d'IA (29 novembre 2023)</a>, consultée le 27 octobre 2026</li>
+<li><a href="https://www.ibm.com/think/topics/artificial-intelligence-types">IBM, Types of artificial intelligence</a>, consulté le 27 octobre 2026</li>
+<li><a href="https://www.ibm.com/think/topics/artificial-intelligence">IBM, What is artificial intelligence?</a>, consulté le 27 octobre 2026</li>
+<li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">Commission européenne, cadre réglementaire sur l'IA</a>, consulté le 27 octobre 2026</li>
+</ul>
+HTML,
+];
