@@ -1,0 +1,3 @@
+-- Passe 28/10/2026 : meta de /blog/combien-coute-un-site-web-au-benin avec les tarifs de départ (54 impressions, position 8,8, aucun clic).
+-- Sans effet si la meta a été modifiée au tableau de bord (condition sur l'ancienne valeur exacte).
+UPDATE blog_posts SET meta = 'Landing page dès 150 000 FCFA, site vitrine dès 300 000 FCFA au Bénin. Prix en Europe, freelance ou agence, hébergement, domaine et lecture d\'un devis.', updated_at = NOW() WHERE slug = 'combien-coute-un-site-web-au-benin' AND meta = 'Prix d\'un site web au Bénin et en Europe : tarifs de départ de Richard SALANON, plateformes, freelance ou agence, domaine, hébergement, devis.';
