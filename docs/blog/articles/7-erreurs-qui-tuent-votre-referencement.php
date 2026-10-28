@@ -4,7 +4,7 @@
 return [
     'slug'       => '7-erreurs-qui-tuent-votre-referencement',
     'instantane' => '2026-10-07 15:00:51',
-    'titre'      => '7 erreurs de référencement et comment les corriger',
+    'titre'      => '7 erreurs de référencement en 2026 et comment les corriger',
     'meta'       => 'Site invisible sur Google ? Les 7 erreurs SEO les plus fréquentes, un diagnostic en une heure avec Search Console et l\'ordre dans lequel les corriger.',
     'resume'     => 'Un site peu visible sur Google souffre presque toujours d\'une de ces sept erreurs : indexation bloquée, pages en double, titres et descriptions négligés, lenteur, contenu mince, liens cassés ou absence de suivi. Une heure dans Google Search Console suffit à repérer la plupart d\'entre elles. Corrigez d\'abord ce qui empêche Google de voir vos pages, ensuite ce qui l\'empêche de les comprendre, enfin ce qui les rend peu utiles.',
     'categorie'  => 'SEO',
@@ -61,6 +61,14 @@ return [
 
 <h2>Erreur 7 : avancez-vous sans aucun suivi ?</h2>
 <p>Sans mesure, vous ignorez si une page est indexée, pour quelles requêtes elle apparaît et ce qui a cassé après une modification. Google Search Console est gratuit et donne ces réponses directement par Google. Ajoutez votre site, vérifiez sa propriété, envoyez votre sitemap et consultez-le au moins une fois par mois.</p>
+
+<h2>Que veulent dire « détectée » et « explorée, non indexée » dans Search Console ?</h2>
+<p>Ces deux états se ressemblent et ne demandent pas la même réaction. Selon l'aide de Search Console (page consultée le 28 octobre 2026) :</p>
+<ul>
+<li><strong>« Détectée, actuellement non indexée »</strong> : Google connaît l'adresse mais ne l'a pas encore explorée. L'aide explique que l'exploration a été reportée parce que le site risquait d'être surchargé. Sur un site récent, des pages peuvent rester un moment dans cet état. Ce qui aide : des liens internes qui mènent à la page, sa présence dans le sitemap, et surtout ne pas multiplier les pages avant que les premières soient explorées.</li>
+<li><strong>« Explorée, actuellement non indexée »</strong> : Google a lu la page sans la garder. L'aide précise qu'elle sera peut-être indexée plus tard et qu'il n'est pas nécessaire de renvoyer l'URL pour l'exploration. Ce qui aide : relire la page avec l'œil du lecteur (apporte-t-elle quelque chose de précis que les pages déjà classées n'apportent pas ?), la relier à d'autres pages utiles du site, puis attendre.</li>
+</ul>
+<p>Dans les deux cas, demander l'indexation en boucle n'accélère rien : l'outil de demande a un quota quotidien et ne garantit pas que la page sera retenue.</p>
 
 <h2>Comment faire un diagnostic en une heure avec Search Console ?</h2>
 <p>Suivez cet ordre, chaque étape prend dix minutes environ.</p>
