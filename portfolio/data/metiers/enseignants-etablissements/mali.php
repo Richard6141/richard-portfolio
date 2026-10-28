@@ -165,6 +165,7 @@ return [
                 fait('phrase_entite'),
                 'Richard a déjà travaillé avec des entreprises au Mali, parmi les pays où il a exercé. Installé à Cotonou, une heure en avance sur Bamako, il peut conduire cette formation à distance, en français. Il a étudié à ' . fait('formation')['nom'] . ' en ' . fait('formation')['annee'] . ', propose l’assistant WhatsApp à IA <a href="https://wapy.pro">Wapy</a> et co-fonde <a href="https://audyxa.com">Audyxa</a>.',
                 'Ses engagements : répondre sous ' . fait('delai_reponse') . ', mener un ou deux entretiens de cadrage, envoyer un questionnaire avant la session, mettre des documents à télécharger à l’avance, remettre des supports et une attestation nominative. Il n’enseigne pas et n’exerce pas ce métier. Voir aussi ses <a href="/realisations/">réalisations</a>, la page <a href="/richard-salanon">Richard SALANON</a>, la fiche <a href="/formations/ia-en-entreprise">IA en entreprise</a> pour la formule de base et les <a href="/zones/">zones d’intervention</a>.',
+                'Richard a déjà formé des enseignants et des personnels d\'établissements scolaires : ce public ne lui est pas nouveau, et chaque séance part des documents que l\'enseignant utilise vraiment.',
             ],
         ],
         [

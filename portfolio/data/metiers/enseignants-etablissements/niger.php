@@ -163,6 +163,7 @@ return [
                 fait('phrase_entite'),
                 'Le Niger figure parmi les pays où Richard a travaillé. Basé à Cotonou, sur la même heure légale que Niamey, il peut mener cette formation à distance, en français. Il a étudié à ' . fait('formation')['nom'] . ' en ' . fait('formation')['annee'] . ', propose l’assistant WhatsApp à IA <a href="https://wapy.pro">Wapy</a> et co-fonde <a href="https://audyxa.com">Audyxa</a>.',
                 'Sa façon de faire : répondre sous ' . fait('delai_reponse') . ', cadrer en un ou deux entretiens, interroger les participants par questionnaire en amont, leur faire télécharger les documents avant la séance, puis leur remettre supports et attestation nominative. Il n’enseigne pas et ne pratique pas ce métier. Voir ses <a href="/realisations/">réalisations</a>, la page <a href="/richard-salanon">Richard SALANON</a>, la fiche <a href="/formations/ia-en-entreprise">IA en entreprise</a> et les <a href="/zones/">zones d’intervention</a>.',
+                'Richard a déjà formé des enseignants et des personnels d\'établissements scolaires : ce public ne lui est pas nouveau, et chaque séance part des documents que l\'enseignant utilise vraiment.',
             ],
         ],
         [

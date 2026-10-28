@@ -162,6 +162,7 @@ return [
                 fait('phrase_entite'),
                 'Le Cameroun compte parmi les pays où Richard a déjà travaillé. Depuis Cotonou, à la même heure que Douala, il peut former à distance le personnel éducatif camerounais, en français comme en anglais. Il a étudié à ' . fait('formation')['nom'] . ' en ' . fait('formation')['annee'] . ', propose l’assistant WhatsApp à IA <a href="https://wapy.pro">Wapy</a> et co-fonde <a href="https://audyxa.com">Audyxa</a>.',
                 'Il s’engage sur une réponse sous ' . fait('delai_reponse') . ', un ou deux entretiens de cadrage, un questionnaire envoyé avant la session, des documents à télécharger à l’avance, des supports et une attestation nominative. Il n’est pas enseignant et n’exerce pas ce métier. Ses projets figurent sur la page des <a href="/realisations/">réalisations</a>, son parcours sur la page <a href="/richard-salanon">Richard SALANON</a>, la formule de base sur la fiche <a href="/formations/ia-en-entreprise">IA en entreprise</a> et les pays servis sur la page des <a href="/zones/">zones d’intervention</a>.',
+                'Richard a déjà formé des enseignants et des personnels d\'établissements scolaires : ce public ne lui est pas nouveau, et chaque séance part des documents que l\'enseignant utilise vraiment.',
             ],
         ],
         [

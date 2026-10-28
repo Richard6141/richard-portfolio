@@ -176,6 +176,7 @@ return [
                 fait('phrase_entite'),
                 "Il a déjà travaillé avec des entreprises au Bénin, le pays où il est basé, à Cotonou. Avec " . $ans . " ans d'expérience et une formation à " . fait('formation')['nom'] . " (" . fait('formation')['annee'] . "), il déclare avoir formé plus de " . rtrim((string) fait('personnes_formees'), '+') . " personnes au numérique, à l'IA, à l'automatisation et aux ERP. Il est le créateur de <a href=\"https://wapy.pro\">Wapy</a>, assistant WhatsApp à intelligence artificielle, et co-fondateur d'<a href=\"https://audyxa.com\">Audyxa</a>.",
                 "Il n'est ni banquier, ni responsable de la conformité, ni certifié par un éditeur d'IA : il enseigne l'usage des outils et leurs garde-fous, pendant que l'établissement garde l'octroi des crédits, la vigilance et la lecture des textes. Aucun gain n'est promis à l'avance ; l'épreuve finale mesure, chronomètre en main, ce que chaque agent sait faire seul. Les demandes reçoivent une réponse sous 24 heures. Son parcours est détaillé sur la page <a href=\"/richard-salanon\">Richard SALANON</a>, et le catalogue complet sur la page des <a href=\"/formations/\">formations</a>.",
+                "Richard a déjà formé des équipes de banques et d'institutions de microfinance : ce public ne lui est pas nouveau, et chaque séance part des dossiers et des procédures de l'établissement.",
             ],
         ],
         [
