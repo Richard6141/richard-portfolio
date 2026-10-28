@@ -8,8 +8,8 @@
 declare(strict_types=1);
 
 return [
-    'titre'   => 'n8n, Make ou Zapier : quel outil d\'automatisation choisir pour votre entreprise ?',
-    'title'   => 'n8n, Make ou Zapier : coût réel et choix | Richard SALANON',
+    'titre'   => 'n8n, Make ou Zapier en 2026 : quel outil d\'automatisation choisir pour votre entreprise ?',
+    'title'   => 'n8n, Make ou Zapier en 2026 : coût réel et comment choisir',
     'meta'    => 'n8n, Make ou Zapier : exécutions, crédits ou tâches, coût réel à 5 000 et 50 000 passages par mois, données, licence n8n, WhatsApp et mobile money.',
     'en_bref' => 'Les trois outils relient vos applications sans développement lourd, mais ils ne facturent pas la même chose : n8n compte des exécutions complètes, Make des crédits par module, Zapier des tâches par action réussie. Pour un même workflow de cinq étapes, l\'écart de prix grandit avec le volume, et n8n peut aussi s\'installer sur votre propre serveur sous une licence qui limite certains usages commerciaux. Zapier reste le plus simple à prendre en main, Make offre le meilleur compromis visuel, n8n donne le plus de contrôle à ceux qui peuvent l\'administrer.',
     'publie'  => '2026-10-03',

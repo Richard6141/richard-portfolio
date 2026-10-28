@@ -8,8 +8,8 @@
 declare(strict_types=1);
 
 return [
-    'titre'   => 'Odoo ou Dolibarr : quel ERP choisir pour une PME d\'Afrique francophone ?',
-    'title'   => 'Odoo ou Dolibarr pour une PME africaine | Richard SALANON',
+    'titre'   => 'Odoo ou Dolibarr en 2026 : quel ERP choisir pour une PME d\'Afrique francophone ?',
+    'title'   => 'Odoo ou Dolibarr en 2026 : quel ERP pour une PME africaine',
     'meta'    => 'Odoo Community, Enterprise ou Dolibarr : SYSCOHADA, coût sur trois ans, hébergement, WhatsApp, mobile money et migration, comparés pour les PME africaines.',
     'en_bref' => 'Dolibarr coûte moins cher à posséder et tourne sur un hébergement PHP ordinaire ; Odoo Enterprise couvre plus de métiers et apporte la comptabilité complète, l\'application mobile et WhatsApp, mais se paie par utilisateur : 19,90 euros par mois la première année sur le plan Standard annuel, puis 24,90 euros, selon la page tarifs consultée le 3 octobre 2026. Les deux livrent un plan de comptes SYSCOHADA, mais aucune documentation officielle ne décrit d\'états financiers SYSCOHADA prêts à l\'emploi. Choisissez selon vos processus, les compétences disponibles près de chez vous et le coût sur trois ans, pas selon le prix de la licence.',
     'publie'  => '2026-10-03',

@@ -9,8 +9,8 @@
 declare(strict_types=1);
 
 return [
-    'titre'   => 'WordPress ou site sur mesure : lequel choisir pour votre entreprise ?',
-    'title'   => 'WordPress ou sur mesure : comparatif | Richard SALANON',
+    'titre'   => 'WordPress ou site sur mesure en 2026 : lequel choisir pour votre entreprise ?',
+    'title'   => 'WordPress ou site sur mesure en 2026 : le comparatif',
     'meta'    => 'WordPress avec thème, WordPress personnalisé ou site sur mesure : coût sur trois ans, vitesse, sécurité, SEO et mobile money, avec chiffres datés.',
     'en_bref' => 'WordPress avec un thème du marché est le choix le plus rapide et le moins cher pour une vitrine ou un blog que votre équipe met à jour elle-même ; le sur mesure se justifie quand le site porte un processus propre à votre métier (réservation, espace client, paiement mobile money, intégrations). WordPress fait tourner 40,1 % des sites du web selon W3Techs le 7 octobre 2026, mais 91 % des failles recensées en 2025 viennent de ses extensions, selon Patchstack. Décidez selon votre budget sur trois ans, la fréquence de vos modifications et votre ambition, pas selon la mode.',
     'publie'  => '2026-10-07',
