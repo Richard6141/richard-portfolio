@@ -75,6 +75,16 @@ return [
 </ul>
 <p>Je conçois ces solutions : voyez l'<a href="/services/automatisation-ia">automatisation et l'IA</a>, l'<a href="/services/integration-ia-entreprise">intégration de l'IA dans vos logiciels</a> ou les <a href="/services/agents-ia-chatbot-whatsapp">agents IA et chatbots WhatsApp</a>. Le prix se fixe sur devis après cadrage ; <a href="/contact">décrivez-moi votre tâche</a> et nous voyons si l'outil grand public suffit.</p>
 
+<h2>À quoi ressemble un premier mois avec l'IA dans une PME ?</h2>
+<p>Un démarrage simple tient en quatre semaines, avec une seule tâche et une seule personne responsable.</p>
+<ol>
+<li><strong>Semaine 1 : choisir la tâche.</strong> Prenez une tâche écrite, répétitive et sans enjeu juridique (une réponse type, un compte rendu). Chronométrez-la telle qu'elle se fait aujourd'hui.</li>
+<li><strong>Semaine 2 : poser les règles.</strong> Listez ce qui peut être confié à l'assistant, ce qui doit d'abord être anonymisé et ce qui ne sort jamais de l'entreprise. La formation <a href="/formations/ia-ethique-conformite">IA, éthique et conformité des données</a> détaille ce tri.</li>
+<li><strong>Semaine 3 : essayer à deux.</strong> Une personne utilise l'assistant, une autre relit chaque résultat. Notez les erreurs et les consignes qui fonctionnent.</li>
+<li><strong>Semaine 4 : mesurer et décider.</strong> Comparez le temps avant et après, le nombre de corrections et l'avis de l'équipe. Si le gain est réel, passez à une deuxième tâche ; sinon, changez de tâche ou d'outil.</li>
+</ol>
+<p>Pour cadrer plusieurs usages à la fois, voir la formation <a href="/formations/ia-processus-metier">IA et processus métier</a> et la page <a href="/formations/agents-ia-assistants">agents IA et assistants</a>. La <a href="/formations/gouvernance-ia">gouvernance de l'IA</a> fixe les règles à l'échelle de l'entreprise, et la <a href="/formation-ia-entreprise-cotonou">formation IA pour les entreprises de Cotonou</a> montre comment elles se déroulent sur place.</p>
+
 <h2>Questions fréquentes</h2>
 <p><strong>Mon entreprise est-elle trop petite pour utiliser l'IA ?</strong></p>
 <p>Non. Un abonnement individuel suffit pour commencer et la mise en place tient en une tâche. Le critère est le temps perdu sur des tâches répétitives, pas la taille de l'entreprise.</p>
