@@ -8,8 +8,21 @@ $aboutUrl = $portfolioUrl . '/a-propos/';
 $bioLong  = trim((string)($profile['bio_long'] ?? ''));
 $profession = $profile['profession'] ?? 'Développeur web full stack';
 
-$pageTitle     = seoTitle('Développeur web au Bénin : qui suis-je ?', $fullName);
-$pageDesc      = seoDescription($fullName . ', développeur web, mobile & automatisation basé à ' . $h_city . ' (Bénin). Parcours, expertise et méthode pour des solutions numériques sur-mesure.');
+// Refonte du 28/10/2026 : Google avait lu la page sans l'indexer (« explorée, non
+// indexée »). Elle se limitait à « développeur web » et doublait /richard-salanon.
+// Elle porte maintenant le récit, la méthode et les chiffres déclarés ; le profil
+// vérifiable (parcours, dépôts, Wapy, Audyxa) reste sur /richard-salanon.
+$aboutFaq = [
+    ['q' => 'Qui est Richard SALANON ?', 'r' => 'Consultant en digitalisation, développeur et formateur en IA, basé à ' . $h_city . ', au Bénin. Il crée des sites et des applications, automatise les tâches répétitives, intègre l\'IA dans les outils des entreprises et forme les équipes. Son parcours détaillé et vérifiable se lit sur la page « Qui est Richard SALANON ? ».'],
+    ['q' => 'Dans quels pays travaille-t-il ?', 'r' => 'Depuis ' . $h_city . ', il a travaillé, sur place ou à distance, dans ' . count(fait('pays_travailles')) . ' pays dont le Bénin, la Côte d\'Ivoire, le Sénégal, le Togo, le Cameroun, la France, la Belgique, la Suisse et le Canada. Les échanges se font en français ou en anglais.'],
+    ['q' => 'Le devis est-il gratuit ?', 'r' => 'Oui, le devis est gratuit et sans engagement. Décrivez votre besoin : la réponse arrive sous ' . fait('delai_reponse') . '.'],
+    ['q' => 'Comment se déroule un projet ?', 'r' => 'En quatre étapes : cadrage du besoin et du budget, design validé avant le code, développement avec des points d\'avancement réguliers, puis mise en ligne, formation et suivi.'],
+    ['q' => 'Quels moyens de paiement acceptez-vous ?', 'r' => 'Mobile Money (MTN, Moov), carte bancaire, PayPal, virement ou espèces.'],
+    ['q' => 'Faites-vous aussi de la formation ?', 'r' => 'Oui. Richard forme des équipes à l\'IA en entreprise, à l\'automatisation (n8n, Make) et aux outils numériques, en présentiel ou à distance. Il déclare avoir formé plus de ' . rtrim((string) fait('personnes_formees'), '+') . ' personnes au numérique, à l\'IA, à l\'automatisation et aux ERP.'],
+];
+
+$pageTitle     = seoTitle('Consultant en digitalisation et formateur IA à Cotonou', $fullName);
+$pageDesc      = seoDescription($fullName . ', consultant en digitalisation, développeur et formateur IA basé à ' . $h_city . ' (Bénin) : parcours, méthode, chiffres et façon de travailler.');
 $pageCanonical = $aboutUrl;
 $ogImage = ($profile['avatar_url'] ?? '') ? $portfolioUrl . '/uploads/' . preg_replace('/\.\.[\\/]/', '', $profile['avatar_url']) : '';
 
@@ -20,6 +33,7 @@ $pageSchemas = [
         'mainEntity' => ['@id' => SITE_URL . '/#person'],
     ],
     schema_personne(faits(), SITE_URL, true),
+    schema_faq($aboutFaq),
     [
         '@context' => 'https://schema.org', '@type' => 'BreadcrumbList',
         'itemListElement' => [
@@ -42,8 +56,8 @@ include __DIR__ . '/partials/pv2-header.php';
   <section><div class="wrap about-hero">
     <div>
       <span class="eyebrow"><span class="pulse"></span><span class="mono">À propos de moi</span></span>
-      <h1>Votre partenaire numérique au Bénin, de l'idée à la mise en ligne</h1>
-      <p class="lead">Je suis <strong><?= sanitize($fullName) ?></strong>, <?= sanitize(mb_strtolower($profession)) ?> basé à <?= sanitize($h_city) ?>. J'accompagne les entreprises, PME et entrepreneurs du Bénin (et à distance partout) pour transformer leurs idées en sites, applications et automatisations qui rapportent.</p>
+      <h1>Consultant en digitalisation, développeur et formateur IA à <?= sanitize($h_city) ?></h1>
+      <p class="lead">Je suis <strong><?= sanitize($fullName) ?></strong>, consultant en digitalisation, développeur et formateur en IA, basé à <?= sanitize($h_city) ?>. J'accompagne les entreprises, PME et entrepreneurs du Bénin et d'ailleurs, à distance ou sur place : sites, applications, automatisations, IA et formation des équipes.</p>
       <div class="hero-cta">
         <a href="<?= sanitize($h_mailto) ?>" class="btn">Démarrer un projet</a>
         <a href="/services/" class="btn btn-ghost">Voir mes services</a>
@@ -62,8 +76,27 @@ include __DIR__ . '/partials/pv2-header.php';
         <h2 id="qui-suis-je">Qui suis-je ?</h2>
         <p>Je suis <strong><?= sanitize($fullName) ?></strong>, développeur web et consultant en digitalisation d'entreprise, basé à <?= sanitize($h_city) ?>, au Bénin. Depuis plus de six ans, j'aide les entreprises, les PME et les entrepreneurs à passer au numérique : je crée leurs sites et applications, je les rends visibles sur Google, et j'automatise leurs tâches répétitives. En un mot, je les digitalise, de l'idée jusqu'aux résultats.</p>
 
+        <h2 id="chiffres">Mon activité en quelques chiffres</h2>
+        <p>Ces repères sont ceux que je déclare, et je les tiens à jour sur cette page.</p>
+        <ul class="inc-list">
+          <li>Plus de <?= (int) fait('experience_ans') ?> ans d'expérience dans le numérique.</li>
+          <li><?= sanitize((string) fait('projets_livres')) ?> projets livrés, pour <?= sanitize((string) fait('clients')) ?> clients accompagnés.</li>
+          <li><?= sanitize((string) fait('personnes_formees')) ?> personnes formées au numérique, à l'IA, à l'automatisation et aux ERP.</li>
+          <li><?= count(fait('pays_travailles')) ?> pays où j'ai travaillé, sur place ou à distance.</li>
+        </ul>
+
         <h2 id="parcours">Mon parcours</h2>
         <p>Formé au développement informatique à EPITECH Bénin, j'ai construit mon expertise sur des projets variés, du site vitrine à l'application métier sur mesure, en passant par l'automatisation et le référencement. J'ai notamment conçu des projets comme <strong>wapy.pro</strong> et <strong>alloartisan.app</strong>. Cette diversité m'a appris une chose essentielle : un projet numérique réussi n'est pas seulement une question de code, c'est une question de résultat concret pour l'entreprise.</p>
+
+        <h2 id="aujourdhui">Ce que je fais aujourd'hui</h2>
+        <ul class="inc-list">
+          <li><a href="/services/consultant-digitalisation">Consultant en digitalisation</a> : fixer les priorités, choisir les outils et suivre la mise en place.</li>
+          <li><a href="/services/site-vitrine-professionnel">Sites web</a> et <a href="/services/application-mobile-android-ios">applications mobiles</a> sur mesure.</li>
+          <li><a href="/services/automatisation-ia">Automatisation et IA</a>, avec des <a href="/services/agents-ia-chatbot-whatsapp">agents IA et chatbots WhatsApp</a>.</li>
+          <li><a href="/services/referencement-naturel-seo">Référencement naturel</a> pour être trouvé sur Google.</li>
+          <li><a href="/formations/ia-en-entreprise">Formation à l'IA en entreprise</a> et <a href="/services/consultant-ia">conseil en IA</a>, pour des équipes de PME, de banques et de microfinance, d'établissements scolaires.</li>
+        </ul>
+        <p>Je suis aussi le créateur de <a href="https://wapy.pro">Wapy</a>, un assistant WhatsApp à intelligence artificielle, et co-fondateur d'<a href="https://audyxa.com">Audyxa</a>. Mon parcours détaillé, ma formation et mes projets vérifiables se lisent sur la page <a href="/richard-salanon">Qui est Richard SALANON ?</a>.</p>
 
         <h2 id="specialite">Ma spécialité : la digitalisation d'entreprise</h2>
         <p>Au fil de mes projets, une conviction s'est imposée : la vraie valeur pour une entreprise ne vient pas d'un outil isolé, mais d'une digitalisation cohérente. C'est pourquoi je me spécialise comme consultant en digitalisation d'entreprise, en approfondissant continuellement cette expertise. Mon rôle est de réunir trois compétences que l'on trouve rarement chez une seule personne :</p>
@@ -102,6 +135,10 @@ include __DIR__ . '/partials/pv2-header.php';
       <div class="step"><div class="sn">03</div><h3>Développement</h3><p>Code propre, testé, avec des points d'avancement réguliers.</p></div>
       <div class="step"><div class="sn">04</div><h3>Lancement &amp; suivi</h3><p>Mise en ligne, formation, maintenance et optimisation continue.</p></div>
     </div>
+  </div></section>
+
+  <section class="sect"><div class="wrap" style="max-width:820px">
+    <?= bloc_rendre(['type' => 'faq', 'etiquette' => 'Questions fréquentes', 'titre' => 'Vos questions sur mon travail', 'items' => $aboutFaq]) ?>
   </div></section>
 
   <div class="cta-band"><div class="wrap"><div class="cta-inner rv" id="contact">
