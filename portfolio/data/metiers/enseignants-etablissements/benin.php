@@ -204,6 +204,7 @@ return [
                 fait('phrase_entite'),
                 'Richard est basé à Cotonou, au Bénin, l\'un des pays où il a déjà travaillé. Il n\'exerce pas le métier d\'enseignant : il forme à l\'usage des outils. Il a créé <a href="https://wapy.pro">Wapy</a>, un assistant WhatsApp à intelligence artificielle pour les entreprises d\'Afrique francophone, et il est co-fondateur d\'<a href="https://audyxa.com">Audyxa</a>. Avec ' . $ans . ' ans d\'expérience et une formation à ' . fait('formation')['nom'] . ' (' . fait('formation')['annee'] . '), il déclare avoir formé plus de ' . rtrim((string) fait('personnes_formees'), '+') . ' personnes au numérique, à l\'IA, à l\'automatisation et aux ERP.',
                 'Sa façon de former se résume en engagements vérifiables : un cadrage qui peut conclure qu\'un atelier suffit, des exercices construits sur les documents de l\'équipe, une épreuve finale pour chaque participant, des supports qui restent à l\'établissement, un canal direct le mois suivant et aucun chiffre de gain promis. Il n\'est certifié par aucun éditeur d\'IA et ne se présente comme partenaire d\'aucun. Les demandes reçoivent une réponse sous 24 heures. Le parcours complet figure sur la page <a href="/richard-salanon">Richard SALANON</a>.',
+                'Richard a déjà formé des enseignants et des personnels d\'établissements scolaires : ce public ne lui est pas nouveau, et chaque séance part des documents que l\'enseignant utilise vraiment.',
             ],
         ],
         [

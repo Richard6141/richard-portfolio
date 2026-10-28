@@ -172,6 +172,7 @@ return [
                 fait('phrase_entite'),
                 'Richard a déjà travaillé avec des entreprises au Sénégal, comme dans plusieurs autres pays d\'Afrique francophone, et travaille à distance avec des équipes d\'Afrique francophone. Il peut former les enseignants, les directeurs d\'établissements et les formateurs sénégalais à distance, depuis Cotonou, avec une heure d\'écart seulement. Il a étudié à ' . fait('formation')['nom'] . ' en ' . fait('formation')['annee'] . ', a créé l\'assistant WhatsApp à IA <a href="https://wapy.pro">Wapy</a> et co-fonde <a href="https://audyxa.com">Audyxa</a>.',
                 'Sa manière de former tient en quelques engagements : une réponse sous ' . fait('delai_reponse') . ', un ou deux entretiens de cadrage, un questionnaire avant la session, des documents téléchargés à l\'avance, des supports remis et une attestation nominative. Il n\'est pas enseignant et n\'exerce pas ce métier. Ses projets figurent sur la page des <a href="/realisations/">réalisations</a>, son parcours sur la page <a href="/richard-salanon">Richard SALANON</a>, la formule de base sur la fiche <a href="/formations/ia-en-entreprise">IA en entreprise</a> et les pays servis sur la page des <a href="/zones/">zones d\'intervention</a>.',
+                'Richard a déjà formé des enseignants et des personnels d\'établissements scolaires : ce public ne lui est pas nouveau, et chaque séance part des documents que l\'enseignant utilise vraiment.',
             ],
         ],
         [
