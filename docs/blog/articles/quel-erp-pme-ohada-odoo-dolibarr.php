@@ -4,7 +4,7 @@
 return [
     'slug'       => 'quel-erp-pme-ohada-odoo-dolibarr',
     'instantane' => '2026-10-27 18:00:00',
-    'titre'      => 'Quel ERP pour une PME en zone OHADA : Odoo, Dolibarr ?',
+    'titre'      => 'Quel ERP pour une PME OHADA en 2026 : Odoo ou Dolibarr ?',
     'meta'       => 'Comment choisir un ERP pour une PME en zone OHADA : comptabilité SYSCOHADA, stock, coûts, hébergement, support local et adoption par les équipes.',
     'resume'     => 'Aucun ERP n\'est le bon pour toutes les PME de la zone OHADA. Le choix se joue sur six critères : la comptabilité SYSCOHADA testée sur vos propres écritures, la gestion du stock, le coût total sur plusieurs années, l\'hébergement, le support disponible près de vous et la capacité de vos équipes à s\'en servir. Odoo et Dolibarr sont deux candidats sérieux, mais vous devez les mettre à l\'épreuve avant de décider.',
     'categorie'  => 'Digitalisation',

@@ -4,7 +4,7 @@
 return [
     'slug'       => 'cout-automatisation-n8n-pme-benin',
     'instantane' => '2026-10-27 18:00:00',
-    'titre'      => 'Coût d\'une automatisation n8n ou Make pour une PME',
+    'titre'      => 'Coût d\'une automatisation n8n ou Make pour PME en 2026',
     'meta'       => 'Combien coûte l\'automatisation d\'un processus avec n8n ou Make au Bénin ? Les postes de coût, l\'outil, la maintenance et comment comparer deux devis.',
     'resume'     => 'Le coût d\'une automatisation tient en quatre postes : le cadrage, la construction, l\'outil (abonnement ou serveur) et la maintenance. Aucun prix moyen n\'est fiable, car un flux de relance et une synchronisation entre deux logiciels n\'ont rien de comparable. Pour comparer deux devis, demandez ce que chaque ligne contient, qui paie l\'outil et qui répare quand ça casse.',
     'categorie'  => 'Automatisation',

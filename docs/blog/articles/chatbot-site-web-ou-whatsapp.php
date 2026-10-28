@@ -4,7 +4,7 @@
 return [
     'slug'       => 'chatbot-site-web-ou-whatsapp',
     'instantane' => '2026-10-27 12:00:00',
-    'titre'      => 'Chatbot site web ou WhatsApp : lequel choisir en PME ?',
+    'titre'      => 'Chatbot site web ou WhatsApp en 2026 : que choisir en PME ?',
     'meta'       => 'Chatbot sur votre site ou sur WhatsApp ? Public, cas d\'usage, coût et maintenance, données, relais vers un humain et mesure : comment choisir pour une PME.',
     'resume'     => 'Choisissez le canal où vos clients vous écrivent déjà. Un chatbot de site web convient aux visiteurs qui cherchent une information ou une réservation ; un chatbot WhatsApp convient aux clients qui ont l\'habitude de vous écrire sur leur téléphone. Les deux demandent un relais vers une personne, des règles sur les données et un suivi régulier. Les postes de coût sont les mêmes ; seul le devis dit combien.',
     'categorie'  => 'IA',

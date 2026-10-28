@@ -4,7 +4,7 @@
 return [
     'slug'       => 'prix-application-mobile-cotonou',
     'instantane' => '2026-10-27 18:00:00',
-    'titre'      => 'Prix d\'une application mobile à Cotonou : ce qui change',
+    'titre'      => 'Prix d\'une application mobile à Cotonou en 2026 : critères',
     'meta'       => 'Combien coûte une application mobile au Bénin ? Web app, native ou hybride, fonctions, comptes des magasins, hébergement, maintenance : les critères.',
     'resume'     => 'Il n\'existe pas de prix moyen fiable pour une application mobile à Cotonou : le devis suit le type d\'application (site installable, hybride ou native), les fonctions, le nombre d\'écrans, les comptes des magasins, l\'hébergement et la maintenance. Les seuls frais publics et fixes sont ceux des magasins, qui évoluent : la page officielle fait foi. Pour comparer deux devis, demandez ce que chaque ligne contient.',
     'categorie'  => 'Développement',

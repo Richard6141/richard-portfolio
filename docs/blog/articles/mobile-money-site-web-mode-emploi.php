@@ -4,7 +4,7 @@
 return [
     'slug'       => 'mobile-money-site-web-mode-emploi',
     'instantane' => '2026-10-27 12:00:00',
-    'titre'      => 'Accepter le mobile money sur un site web : mode d\'emploi',
+    'titre'      => 'Accepter le mobile money sur un site web en 2026 : guide',
     'meta'       => 'Passerelle, compte, intégration, tests, rapprochement : les étapes pour accepter le paiement mobile money sur un site web en Afrique de l\'Ouest.',
     'resume'     => 'Pour accepter le mobile money sur un site web, on passe par une passerelle de paiement : choisir la passerelle, ouvrir et faire valider le compte, intégrer le paiement et la confirmation automatique, tester en mode test, puis rapprocher chaque semaine les paiements reçus et les commandes. La confirmation côté serveur et le test des paiements échoués évitent la plupart des erreurs.',
     'categorie'  => 'Digitalisation',
