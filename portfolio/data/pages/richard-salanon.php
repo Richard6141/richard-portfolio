@@ -38,12 +38,12 @@ $profils = array_map(static function (string $url): array {
 }, fait('profils'));
 
 return [
-    'titre'   => 'Qui est Richard SALANON, consultant en digitalisation et développeur logiciel à Cotonou ?',
-    'title'   => 'Qui est Richard SALANON ? Parcours, projets et méthode',
-    'meta'    => 'Richard SALANON, consultant en digitalisation et développeur à Cotonou : parcours, formation EPITECH, compétences prouvées, projets, Wapy et Audyxa.',
+    'titre'   => 'Qui est Richard SALANON, consultant en digitalisation, développeur logiciel et formateur IA à Cotonou ?',
+    'title'   => 'Richard SALANON : consultant digitalisation et formateur IA',
+    'meta'    => 'Richard SALANON, consultant en digitalisation, développeur et formateur IA à Cotonou : parcours, formation EPITECH, projets vérifiables, Wapy et Audyxa.',
     'en_bref' => 'Richard SALANON est consultant en digitalisation et développeur logiciel à ' . $ville . ', au ' . fait('pays') . ', avec plus de ' . $ans . ' ans d\'expérience, ' . $plus(fait('projets_livres')) . ' projets livrés et ' . $plus(fait('personnes_formees')) . ' personnes formées. Formé à la Coding Academy d\'EPITECH, il conçoit sites, applications, automatisations et intégrations d\'IA, déploie Odoo et Dolibarr, forme les équipes, édite l\'assistant WhatsApp Wapy et a co-fondé le cabinet Audyxa. Il répond ' . $reponse . ' ; le devis est gratuit après cadrage et se règle en plusieurs tranches.',
     'publie'  => '2026-10-03',
-    'maj'     => '2026-10-03',
+    'maj'     => '2026-10-28',
     'schema'  => 'ProfilePage',
 
     'faits_hero' => [
