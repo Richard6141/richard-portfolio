@@ -13,12 +13,12 @@ $profession = $profile['profession'] ?? 'Développeur web full stack';
 // Elle porte maintenant le récit, la méthode et les chiffres déclarés ; le profil
 // vérifiable (parcours, dépôts, Wapy, Audyxa) reste sur /richard-salanon.
 $aboutFaq = [
-    ['q' => 'Qui est Richard SALANON ?', 'r' => 'Consultant en digitalisation, développeur et formateur en IA, basé à ' . $h_city . ', au Bénin. Il crée des sites et des applications, automatise les tâches répétitives, intègre l\'IA dans les outils des entreprises et forme les équipes. Son parcours détaillé et vérifiable se lit sur la page « Qui est Richard SALANON ? ».'],
-    ['q' => 'Dans quels pays travaille-t-il ?', 'r' => 'Depuis ' . $h_city . ', il a travaillé, sur place ou à distance, dans ' . count(fait('pays_travailles')) . ' pays dont le Bénin, la Côte d\'Ivoire, le Sénégal, le Togo, le Cameroun, la France, la Belgique, la Suisse et le Canada. Les échanges se font en français ou en anglais.'],
-    ['q' => 'Le devis est-il gratuit ?', 'r' => 'Oui, le devis est gratuit et sans engagement. Décrivez votre besoin : la réponse arrive sous ' . fait('delai_reponse') . '.'],
+    ['q' => 'Qui est Richard SALANON ?', 'r' => 'Je suis consultant en digitalisation, développeur et formateur en IA, basé à ' . $h_city . ', au Bénin. Je crée des sites et des applications, j\'automatise les tâches répétitives, j\'intègre l\'IA dans les outils des entreprises et je forme les équipes. Mon parcours détaillé et vérifiable se lit sur la page « Qui est Richard SALANON ? ».'],
+    ['q' => 'Dans quels pays travaillez-vous ?', 'r' => 'Depuis ' . $h_city . ', j\'ai travaillé, sur place ou à distance, dans ' . count(fait('pays_travailles')) . ' pays dont le Bénin, la Côte d\'Ivoire, le Sénégal, le Togo, le Cameroun, la France, la Belgique, la Suisse et le Canada. Les échanges se font en français ou en anglais.'],
+    ['q' => 'Le devis est-il gratuit ?', 'r' => 'Oui, le devis est gratuit et sans engagement. Décrivez votre besoin : je réponds sous ' . fait('delai_reponse') . '.'],
     ['q' => 'Comment se déroule un projet ?', 'r' => 'En quatre étapes : cadrage du besoin et du budget, design validé avant le code, développement avec des points d\'avancement réguliers, puis mise en ligne, formation et suivi.'],
     ['q' => 'Quels moyens de paiement acceptez-vous ?', 'r' => 'Mobile Money (MTN, Moov), carte bancaire, PayPal, virement ou espèces.'],
-    ['q' => 'Faites-vous aussi de la formation ?', 'r' => 'Oui. Richard forme des équipes à l\'IA en entreprise, à l\'automatisation (n8n, Make) et aux outils numériques, en présentiel ou à distance. Il déclare avoir formé plus de ' . rtrim((string) fait('personnes_formees'), '+') . ' personnes au numérique, à l\'IA, à l\'automatisation et aux ERP.'],
+    ['q' => 'Faites-vous aussi de la formation ?', 'r' => 'Oui. Je forme des équipes à l\'IA en entreprise, à l\'automatisation (n8n, Make) et aux outils numériques, en présentiel ou à distance. J\'ai formé plus de ' . rtrim((string) fait('personnes_formees'), '+') . ' personnes au numérique, à l\'IA, à l\'automatisation et aux ERP.'],
 ];
 
 $pageTitle     = seoTitle('Consultant en digitalisation et formateur IA à Cotonou', $fullName);
