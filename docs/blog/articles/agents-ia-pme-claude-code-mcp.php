@@ -4,7 +4,7 @@
 return [
     'slug'       => 'agents-ia-pme-claude-code-mcp',
     'instantane' => '2026-10-27 10:00:00',
-    'titre'      => 'Agents IA pour une PME : définition, usages et risques',
+    'titre'      => 'Agents IA pour une PME en 2026 : usages, limites, risques',
     'meta'       => 'Assistant, automatisation n8n ou agent IA ? Définitions, rôle de MCP et de Claude Code, cas d\'usage prudents, règles de données et contrôle humain en PME.',
     'resume'     => 'Un agent IA est un programme où le modèle décide lui-même des étapes et des outils à utiliser pour atteindre un objectif, alors qu\'une automatisation suit un chemin écrit d\'avance et qu\'un assistant répond à vos demandes. Pour une PME, il vaut mieux commencer par un assistant ou une automatisation, et réserver l\'agent aux tâches ouvertes, avec des droits limités et une validation humaine avant toute action irréversible.',
     'categorie'  => 'IA',

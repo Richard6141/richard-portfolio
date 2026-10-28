@@ -4,7 +4,7 @@
 return [
     'slug'       => 'par-ou-commencer-avec-ia-debutant',
     'instantane' => '2026-10-27 09:00:00',
-    'titre'      => 'IA pour débutant : par où commencer, étape par étape',
+    'titre'      => 'IA pour débutant en 2026 : par où commencer, étape par étape',
     'meta'       => 'Vous n\'avez jamais utilisé d\'assistant IA ? Cinq étapes, des exemples concrets, les erreurs à éviter et un atelier d\'une demi-journée pour démarrer.',
     'resume'     => 'Pour débuter avec l\'intelligence artificielle, ouvrez un assistant gratuit et donnez-lui une vraie tâche de votre semaine : une réponse à écrire, un texte long à résumer, des notes à mettre en ordre. Écrivez une demande complète, relisez tout ce qui revient, et ne collez aucune donnée sensible. Quelques essais de ce type valent mieux qu\'un cours théorique.',
     'categorie'  => 'IA',
