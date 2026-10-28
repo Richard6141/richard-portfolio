@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Intégration et déploiement d\'Odoo : un ERP mis en service par paliers, réglé pour vos règles et adopté par vos équipes',
-    'title'   => 'Intégration et déploiement d\'Odoo | Richard SALANON',
-    'meta'    => 'Intégration Odoo Community ou Enterprise : cadrage, ventes, stock, comptabilité SYSCOHADA, reprise des données, WhatsApp, formation et montées de version.',
+    'title'   => 'Consultant Odoo à Cotonou : intégration | Richard SALANON',
+    'meta'    => 'Consultant Odoo à Cotonou et en Afrique francophone : intégration Community ou Enterprise, comptabilité SYSCOHADA, IA, WhatsApp et formation.',
     'en_bref' => 'Déploiement d\'Odoo Community ou Enterprise, sur Odoo Online, Odoo.sh ou votre propre serveur : choix de l\'édition, paramétrage des ventes, des achats, du stock, de la comptabilité SYSCOHADA, du point de vente et du CRM, reprise des données, raccordement à WhatsApp et au mobile money, formation des équipes, support et montées de version. Pour les PME, distributeurs, commerces, ateliers et ONG d\'Afrique francophone, d\'Europe et du Canada qui ont dépassé le tableur. Comptez 4 à 8 semaines pour un premier module en production, formation comprise, puis quelques mois par paliers pour les suivants. Le prix est fixé sur devis après le cadrage.',
     'publie'  => '2026-10-04',
     'maj'     => '2026-10-04',
@@ -251,6 +251,15 @@ return [
         ],
         [
             'type'        => 'prose',
+            'titre'       => 'Faut-il passer par un partenaire officiel Odoo ?',
+            'paragraphes' => [
+                'Pas nécessairement. Richard SALANON n\'est pas partenaire officiel d\'Odoo et ne s\'en prévaut pas : il intervient comme consultant indépendant. L\'édition Community est sous licence LGPL version 3, l\'abonnement Enterprise reste distinct de la prestation, et le choix se juge sur les livrables, la méthode et les accès remis à votre nom.',
+                'Ce que cela change pour vous tient en deux points. D\'abord, si un bailleur, un appel d\'offres ou un grand compte exige un partenaire officiel, le dire dès le premier échange permet de l\'établir franchement avant tout cadrage, plutôt que de le découvrir à la signature. Ensuite, vous comparez des éléments vérifiables : note de cadrage, paramétrage documenté, dépôt de code et comptes ouverts à votre nom, comme le détaillent les livrables ci-dessus.',
+                'Ce que Richard SALANON met en avant à la place : la comptabilité SYSCOHADA révisé, réglée avec votre comptable avant la première écriture (la <a href="/formations/odoo-comptabilite-syscohada">formation Odoo comptabilité SYSCOHADA</a> prépare ensuite les équipes qui la tiennent), et l\'intégration de l\'IA dans Odoo, par l\'API et les <a href="/services/automatisation-ia">automatisations n8n ou Make</a>. Basé à Cotonou, il déploie Odoo pour des entreprises du Bénin comme d\'ailleurs.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
             'titre'       => 'Pourquoi confier votre déploiement Odoo à Richard SALANON ?',
             'paragraphes' => [
                 fait('phrase_entite'),
@@ -285,6 +294,7 @@ return [
         ['q' => 'Odoo fonctionne-t-il avec une connexion Internet instable ?', 'r' => 'Le point de vente est conçu pour continuer à fonctionner pendant les coupures temporaires du réseau, selon sa documentation. Pour le reste, Odoo Online exige une connexion : choisissez la région d\'hébergement la plus proche de vos utilisateurs. Si les coupures durent des heures, un serveur au bureau, sur onduleur et sauvegardé hors du site chaque nuit, reste la solution la plus sûre.'],
         ['q' => 'Quelle différence avec une intégration Dolibarr ?', 'r' => 'Les deux démarches se ressemblent : cadrage, paramétrage, reprise, formation. Odoo couvre plus de métiers dans un seul outil, mais demande un serveur plus exigeant ou un abonnement, et un écosystème Python ; Dolibarr est plus léger, en PHP. Le comparatif Odoo ou Dolibarr aide à trancher, et la page intégration Dolibarr décrit le déploiement de ce second logiciel.'],
         ['q' => 'Intervenez-vous hors du Bénin ?', 'r' => 'Oui. Richard SALANON a travaillé dans onze pays d\'Afrique francophone ainsi qu\'en France, en Belgique, en Suisse et au Canada. Le cadrage et la formation se font sur place à Cotonou, ou en visioconférence ailleurs, et le paramétrage à distance. Les clients hors d\'Afrique règlent par carte bancaire, PayPal ou virement.'],
+        ['q' => 'Dans quels pays de la zone Odoo prévoit-il une comptabilité adaptée ?', 'r' => 'D\'après la page des localisations fiscales d\'Odoo 20.0, relue le 27 octobre 2026, la liste comprend le Bénin, le Burkina Faso, le Cameroun, le Tchad, le Gabon, la Côte d\'Ivoire, le Mali, le Niger, le Sénégal et la RD Congo, ainsi que la Belgique, le Canada, la France et la Suisse. Le Togo n\'y figure pas : une société togolaise se traite au cadrage avec votre comptable. Richard SALANON a travaillé dans quinze pays, Togo compris. Une entité située dans un autre pays que sa société mère se crée comme société distincte, jamais comme succursale.'],
     ],
 
     'sources' => [
@@ -299,7 +309,7 @@ return [
         ['titre' => 'Odoo, comparaison des éditions Community et Enterprise', 'url' => 'https://www.odoo.com/fr_FR/page/editions', 'date' => '2026-10-03'],
         ['titre' => 'Odoo, accord de niveau de service de l\'hébergement cloud', 'url' => 'https://www.odoo.com/fr_FR/cloud-sla', 'date' => '2026-10-03'],
         ['titre' => 'Odoo, politique de confidentialité (emplacements d\'hébergement et transferts)', 'url' => 'https://www.odoo.com/fr_FR/privacy', 'date' => '2026-10-03'],
-        ['titre' => 'Documentation Odoo 20.0, localisations fiscales', 'url' => 'https://www.odoo.com/documentation/20.0/applications/finance/fiscal_localizations.html', 'date' => '2026-10-03'],
+        ['titre' => 'Documentation Odoo 20.0, localisations fiscales', 'url' => 'https://www.odoo.com/documentation/20.0/applications/finance/fiscal_localizations.html', 'date' => '2026-10-27'],
         ['titre' => 'Documentation Odoo 20.0, localisations de paie', 'url' => 'https://www.odoo.com/documentation/20.0/applications/hr/payroll/payroll_localizations.html', 'date' => '2026-10-03'],
         ['titre' => 'Documentation Odoo 20.0, localisation française et facturation électronique', 'url' => 'https://www.odoo.com/documentation/20.0/applications/finance/fiscal_localizations/france.html', 'date' => '2026-10-03'],
         ['titre' => 'Documentation Odoo 20.0, export et import de données', 'url' => 'https://www.odoo.com/documentation/20.0/applications/essentials/export_import_data.html', 'date' => '2026-10-03'],

@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Création de site vitrine professionnel : être trouvé, inspirer confiance, recevoir des demandes',
-    'title'   => 'Création de site vitrine professionnel | Richard SALANON',
+    'title'   => 'Site vitrine professionnel dès 300 000 FCFA | Richard',
     'meta'    => 'Votre site vitrine professionnel est livré en 1 à 3 semaines : pages, textes, SEO de base, domaine, hébergement, formulaire et WhatsApp, dès 300 000 FCFA.',
     'en_bref' => 'Un site vitrine professionnel présente votre activité en quatre à six pages le plus souvent : design sur mesure lisible sur téléphone, textes rédigés ou réécrits, bases du référencement, nom de domaine, hébergement, formulaire de contact et bouton WhatsApp, avec une formation pour le mettre à jour vous-même. Il s\'adresse aux PME, artisans, cabinets, écoles, ONG et indépendants d\'Afrique francophone, d\'Europe et du Canada. Comptez 1 à 3 semaines selon le nombre de pages et la disponibilité de vos contenus, à partir de 300 000 FCFA, le montant exact étant fixé sur devis.',
     'publie'  => '2026-10-04',
@@ -270,7 +270,7 @@ return [
     ],
 
     'faq' => [
-        ['q' => 'Combien coûte un site vitrine professionnel ?', 'r' => 'Le tarif de départ est de 300 000 FCFA pour un site vitrine comprenant design sur mesure, textes, bases du référencement, nom de domaine, hébergement, formulaire, liens WhatsApp et formation. Le montant exact dépend du nombre de pages, de la rédaction, des langues et des fonctions ajoutées ; il figure sur un devis détaillé. Hors zone franc CFA, le prix est fixé sur devis.'],
+        ['q' => 'Combien coûte un site vitrine professionnel ?', 'r' => 'Le tarif de départ est de 300 000 FCFA pour un site vitrine comprenant design sur mesure, textes, bases du référencement, nom de domaine, hébergement, formulaire, liens WhatsApp et formation. Le montant exact dépend du nombre de pages, de la rédaction, des langues et des fonctions ajoutées ; il figure sur un devis détaillé. Hors zone franc CFA, le prix est fixé sur devis. Pour comparer les prix du marché et comprendre ce qui les fait varier, lisez l\'article <a href="/blog/combien-coute-un-site-web-au-benin">Combien coûte un site web au Bénin en 2026 ?</a>'],
         ['q' => 'Combien de temps faut-il pour créer un site vitrine ?', 'r' => 'Comptez 1 à 3 semaines selon le nombre de pages et la rapidité avec laquelle les contenus (logo, photos, informations, validations) sont fournis. La rédaction des textes et la validation de la maquette sont les deux étapes qui font le plus souvent varier le délai.'],
         ['q' => 'Combien de pages faut-il pour un site vitrine ?', 'r' => 'Le plus souvent quatre à six : accueil, services, à propos, contact, et parfois réalisations ou actualités. Une entreprise qui propose plusieurs services très différents gagne à leur donner une page chacun, parce que chaque page peut alors se positionner sur Google pour la recherche qui lui correspond.'],
         ['q' => 'Pourrai-je modifier mon site moi-même ?', 'r' => 'Oui. Le site est livré avec un espace d\'administration et une séance de prise en main, pour que vous changiez textes, photos et actualités sans dépendre d\'un prestataire. Les évolutions plus lourdes (nouvelle fonction, refonte d\'une page) relèvent de la maintenance, sur devis.'],

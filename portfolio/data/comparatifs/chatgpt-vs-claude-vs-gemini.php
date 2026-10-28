@@ -7,8 +7,8 @@
 declare(strict_types=1);
 
 return [
-    'titre'   => 'ChatGPT, Claude ou Gemini en entreprise : quelle offre d\'équipe choisir pour votre PME ?',
-    'title'   => 'ChatGPT, Claude ou Gemini en entreprise | Richard SALANON',
+    'titre'   => 'ChatGPT, Claude ou Gemini en entreprise en 2026 : quelle offre d\'équipe choisir pour votre PME ?',
+    'title'   => 'ChatGPT, Claude ou Gemini en 2026 : offres équipe, prix',
     'meta'    => 'ChatGPT Business, Claude Team ou Gemini dans Workspace : prix par poste, usage des données, paiement depuis l\'Afrique, coût pour 10 personnes, critères.',
     'en_bref' => 'Les trois éditeurs vendent une offre d\'équipe autour de 20 dollars par poste et par mois (ChatGPT Business, Claude Team) ou intègrent l\'IA dans un abonnement bureautique (Gemini dans Google Workspace). Tous trois annoncent, dans leurs conditions professionnelles, ne pas entraîner leurs modèles sur vos contenus par défaut. Aucun n\'est meilleur dans l\'absolu : le bon choix dépend de votre suite bureautique, de vos données sensibles, de votre budget en devises et de la qualité obtenue sur vos propres documents en français.',
     'publie'  => '2026-10-03',

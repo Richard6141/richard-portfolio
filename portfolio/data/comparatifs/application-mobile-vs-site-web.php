@@ -10,8 +10,8 @@
 declare(strict_types=1);
 
 return [
-    'titre'   => 'Application mobile, PWA ou site web : que développer en premier ?',
-    'title'   => 'App mobile ou site web : que choisir | Richard SALANON',
+    'titre'   => 'Application mobile, PWA ou site web en 2026 : que développer en premier ?',
+    'title'   => 'Application mobile ou site web en 2026 : que choisir',
     'meta'    => 'Site web, PWA ou application mobile : coût sur trois ans, frais Apple et Google, data mobile en Afrique, mobile money et profils d\'entreprise comparés.',
     'en_bref' => 'Pour la plupart des entreprises d\'Afrique francophone, le site web responsive se construit en premier : il se fait trouver sur Google, se publie sans magasin et reste le moins cher sur trois ans. La PWA ajoute l\'installation, un mode hors connexion et des notifications sans passer par les magasins. L\'application mobile se justifie quand l\'usage est quotidien, que le matériel du téléphone compte ou que les notifications font le chiffre d\'affaires. Android pèse 83,38 % des mobiles africains en septembre 2026 selon Statcounter, et le compte de développeur Apple coûte 99 dollars par an.',
     'publie'  => '2026-10-07',

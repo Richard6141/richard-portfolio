@@ -128,6 +128,24 @@ return [
             ],
         ],
         [
+            'type'        => 'prose',
+            'titre'       => 'Transformation digitale d\'une PME : par où commencer ?',
+            'paragraphes' => [
+                'Commencez par un diagnostic de ce qui se passe réellement dans l\'entreprise, pas par le choix d\'un logiciel. Listez les tâches qui coûtent du temps ou de l\'argent, classez-les par gain attendu et par effort, retenez un seul chantier, puis choisissez l\'outil et préparez l\'équipe à l\'utiliser. Un premier résultat visible vaut mieux qu\'un grand plan jamais lancé.',
+                'Cette méthode vaut pour une boutique de Cotonou comme pour une PME de services de Lyon ou de Montréal ; seuls changent les contraintes locales, détaillées plus bas. Elle ne demande pas de consultant pour démarrer : les étapes ci-dessous peuvent être menées en interne, et le conseil extérieur sert surtout à arbitrer quand les priorités se contredisent.',
+            ],
+        ],
+        [
+            'type'  => 'etapes',
+            'titre' => 'Quelles étapes suivre pour digitaliser une PME, du diagnostic à l\'adoption ?',
+            'items' => [
+                ['titre' => 'Diagnostic : observer avant de décider', 'duree' => 'Une à deux semaines', 'texte' => 'Suivez une commande, une facture et un encaissement du début à la fin, avec la personne qui les traite. Notez chaque ressaisie, chaque fichier tableur, chaque message WhatsApp qui sert de procédure, et estimez le temps perdu par semaine. Le résultat est une liste de points de friction réels, pas une liste d\'envies.'],
+                ['titre' => 'Priorités : un chantier à la fois', 'duree' => 'Quelques jours', 'texte' => 'Pour chaque point de friction, estimez le gain (heures, erreurs, argent qui rentre plus vite) et l\'effort (budget, changement d\'habitudes, données à reprendre). Retenez d\'abord ce qui rapporte vite et ne dépend de rien d\'autre, souvent la facturation ou la prise de commande, et écartez explicitement le reste pour l\'année.'],
+                ['titre' => 'Outils : choisir sur vos cas réels', 'duree' => 'Quelques jours à deux semaines', 'texte' => 'Écrivez le besoin, pondérez vos critères, puis testez deux ou trois solutions avec vos propres articles, clients et factures. Vérifiez dès ce stade la facturation locale, le paiement mobile, l\'export des données et qui détient les accès. Le choix de la méthode précède celui de la marque.'],
+                ['titre' => 'Adoption : former, mesurer, ajuster', 'duree' => 'Un à trois mois de suivi', 'texte' => 'Nommez un responsable interne, formez ceux qui utilisent l\'outil au quotidien, gardez l\'ancienne méthode en parallèle le temps d\'une période courte, puis comparez le temps passé avant et après. Si l\'équipe contourne le nouvel outil, c\'est un signal sur le processus, à corriger avant d\'ouvrir le chantier suivant.'],
+            ],
+        ],
+        [
             'type'  => 'points',
             'titre' => 'Comment choisir un outil ou un prestataire sans se tromper ?',
             'intro' => 'La méthode compte plus que le nom du logiciel. Voici les règles appliquées pendant une mission de choix, que vous pouvez aussi suivre seul.',
@@ -309,6 +327,7 @@ return [
         ['q' => 'Travaillez-vous avec des ONG et des structures publiques ?', 'r' => 'Oui. Les contraintes y sont différentes : procédures de validation plus longues, exigences de traçabilité, règles de mise en concurrence du bailleur ou des marchés publics. Elles sont prises en compte dans le devis, le calendrier et le format des livrables, dès l\'entretien de cadrage, plutôt que découvertes en cours de mission.'],
         ['q' => 'Que faut-il préparer avant le premier entretien ?', 'r' => 'Rien d\'obligatoire, mais tout aide : les devis reçus, la liste des logiciels et abonnements utilisés, l\'organigramme, les tableaux du quotidien et une phrase sur ce qui vous empêche de dormir. Plus la situation est décrite précisément, plus vite on sait si une mission se justifie.'],
         ['q' => 'Pouvez-vous former les dirigeants plutôt que décider à leur place ?', 'r' => 'Oui, et c\'est souvent le meilleur investissement. Des séances courtes apprennent à lire un devis technique, à poser les bonnes questions à un prestataire, à suivre un projet et à évaluer l\'intérêt de l\'intelligence artificielle ou de l\'automatisation. Pour les équipes, la <a href="/formation-ia-entreprise">formation à l\'IA en entreprise</a> et la <a href="/formation-automatisation">formation à l\'automatisation</a> prennent le relais.'],
+        ['q' => 'Une transformation digitale se prépare-t-elle de la même façon d\'un pays à l\'autre ?', 'r' => 'La méthode est la même, les contraintes changent. Le Bénin, la Côte d\'Ivoire, le Togo, le Sénégal, le Burkina Faso, le Mali et le Niger font partie de l\'UEMOA, dont les États partagent le franc CFA. Au Cameroun, au Tchad, au Gabon, en RD Congo, en France, en Belgique, en Suisse et au Canada, le cadre monnaie, facturation et données personnelles se vérifie à l\'entretien. Le RGPD concerne les clients européens et la Loi 25 le Québec. Les entretiens se tiennent entre 7 h et 20 h, heure du Bénin.'],
         ['q' => 'Quels moyens de paiement acceptez-vous ?', 'r' => 'Le Mobile Money (MTN et Moov), la carte bancaire, PayPal, le virement et les espèces. L\'échéancier est indiqué sur le devis, avant signature. Dans la zone franc CFA, le devis est établi en francs CFA ; ailleurs, dans la devise convenue.'],
     ],
 
@@ -317,6 +336,7 @@ return [
         ['titre' => 'Bpifrance, offre Diag Data IA (conditions, durée, montant)', 'url' => 'https://www.bpifrance.fr/catalogue-offres/diag-data-ia', 'date' => '2026-10-03'],
         ['titre' => 'Chèques-entreprises Wallonie, suspension du chèque maturité numérique', 'url' => 'https://www.cheques-entreprises.be/actualites/evolution-du-soutien-numerique-suspension-du-cheque-maturite-numerique/', 'date' => '2026-10-03'],
         ['titre' => 'BCEAO, rapport annuel sur les services financiers numériques dans l\'UEMOA, 2024', 'url' => 'https://www.bceao.int/fr/publications/rapport-annuel-sur-les-services-financiers-numeriques-dans-luemoa-2024', 'date' => '2026-10-03'],
+        ['titre' => 'BCEAO, États membres de l\'UEMOA et unité monétaire commune (page du rapport 2024)', 'url' => 'https://www.bceao.int/fr/publications/rapport-annuel-sur-les-services-financiers-numeriques-dans-luemoa-2024', 'date' => '2026-10-27'],
         ['titre' => 'BCEAO, communiqué sur la parité fixe entre l\'euro et le franc CFA', 'url' => 'https://www.bceao.int/fr/communique-presse/fausse-information-faisant-etat-dune-devaluation-du-franc-cfa', 'date' => '2026-10-03'],
         ['titre' => 'DataReportal, rapport Digital 2026 consacré au Bénin', 'url' => 'https://datareportal.com/reports/digital-2026-benin', 'date' => '2026-10-03'],
         ['titre' => 'Secrétariat général du Gouvernement du Bénin, loi n° 2017-20 du 20 avril 2018 portant code du numérique', 'url' => 'https://sgg.gouv.bj/doc/loi-2017-20/', 'date' => '2026-10-03'],

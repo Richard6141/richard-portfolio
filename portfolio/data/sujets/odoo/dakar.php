@@ -167,6 +167,49 @@ return array (
         3 => 'Déployer un ERP sans prévoir le suivi de livraison, ce qui reporte toute la charge sur le service client.',
       ),
     ),
+    7 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Partenaire',
+      'titre' => 'Faut-il passer par un partenaire officiel Odoo à Dakar ?',
+      'paragraphes' => 
+      array (
+        0 => 'Pas forcément. Je n\'ai pas le statut de partenaire officiel d\'Odoo : j\'interviens comme consultant indépendant, à distance pour Dakar. Odoo Community est sous licence libre et l\'abonnement Enterprise est un contrat distinct de ma prestation.',
+        1 => 'Si un bailleur ou un appel d\'offres l\'exige, dites-le dès le départ et je vous le confirmerai avant de commencer. Sinon, comparez du vérifiable : livrables écrits, paramétrage documenté, accès ouverts au nom de votre entreprise.',
+        2 => 'Mon apport à Dakar : la comptabilité SYSCOHADA, réglée avec votre comptable avant la première écriture, et l\'intégration de l\'IA dans Odoo, avec des automatisations n8n qui relient boutique, paiements mobiles et stock.',
+      ),
+    ),
+    8 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Formation',
+      'titre' => 'Peut-on se former à Odoo à Dakar ?',
+      'paragraphes' => 
+      array (
+        0 => 'Oui. La formation Odoo par poste se donne à distance ou en formule mixte pour vos équipes de Dakar : pour une PME d\'une dizaine d\'utilisateurs, 2 à 3 jours en demi-journées, répartis sur 5 à 6 semaines, sur une copie de votre base, en groupes de 3 à 6 personnes du même métier. Une autre formation s\'adresse aux comptables qui tiennent le SYSCOHADA dans Odoo. Le prix est fixé sur devis.',
+      ),
+    ),
+    9 => 
+    array (
+      'type' => 'liens',
+      'etiquette' => 'Formations',
+      'titre' => 'Quelles formations Odoo pour vos équipes ?',
+      'items' => 
+      array (
+        0 => 
+        array (
+          'titre' => 'Formation Odoo par poste',
+          'url' => '/formations/odoo-utilisateurs',
+          'texte' => 'Ventes, achats, stock, facturation et caisse, chaque utilisateur sur ses propres écrans.',
+        ),
+        1 => 
+        array (
+          'titre' => 'Formation Odoo comptabilité SYSCOHADA',
+          'url' => '/formations/odoo-comptabilite-syscohada',
+          'texte' => 'Plan comptable, journaux, taxes et états pour les comptables qui travaillent sous Odoo.',
+        ),
+      ),
+    ),
   ),
   'faq' => 
   array (
@@ -204,6 +247,11 @@ return array (
     array (
       'q' => 'Et si mon équipe n\'est pas à l\'aise avec l\'informatique ?',
       'r' => 'C\'est la situation la plus fréquente, et c\'est un critère de conception plutôt qu\'un obstacle. On réduit les écrans à ce qui sert, on forme sur les vraies données pendant le déploiement, et on garde le papier en parallèle le temps que la confiance s\'installe.',
+    ),
+    7 => 
+    array (
+      'q' => 'Odoo peut-il tenir la comptabilité d\'une filiale sénégalaise et celle d\'une société d\'un autre pays ?',
+      'r' => 'Oui, en créant une société par pays dans la même base. La page des localisations fiscales d\'Odoo 20.0, relue le 27 octobre 2026, liste le Sénégal, le Mali, le Burkina Faso, le Niger et la Côte d\'Ivoire, mais pas le Togo, qui se règle avec votre comptable. Comme une succursale reprend la localisation de sa société mère, une entité étrangère ne s\'y rattache pas.',
     ),
   ),
 );

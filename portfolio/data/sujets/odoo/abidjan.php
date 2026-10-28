@@ -167,6 +167,18 @@ return array (
         3 => 'Choisir un prestataire sur le seul critère du prix, sans clause de propriété du code et des données.',
       ),
     ),
+    7 => 
+    array (
+      'type' => 'prose',
+      'etiquette' => 'Partenaire',
+      'titre' => 'Faut-il passer par un partenaire officiel Odoo à Abidjan ?',
+      'paragraphes' => 
+      array (
+        0 => 'Pas forcément. Mon statut : consultant indépendant, sans label de partenaire officiel d\'Odoo, et je travaille à distance pour Abidjan. Odoo Community est sous licence libre, l\'abonnement Enterprise est un contrat à part, et vous choisissez sur mes livrables.',
+        1 => 'Si une maison mère, un bailleur ou un appel d\'offres impose un partenaire officiel, annoncez-le tôt : je vous réponds honnêtement avant tout cadrage. Sinon, jugez sur pièces, avec un cadrage écrit, un paramétrage documenté et des accès à votre nom.',
+        2 => 'Mon apport à Abidjan : la comptabilité SYSCOHADA, réglée avec votre comptable avant la première écriture, la facturation en FCFA, et l\'intégration de l\'IA dans Odoo par des automatisations n8n.',
+      ),
+    ),
   ),
   'faq' => 
   array (
@@ -204,6 +216,11 @@ return array (
     array (
       'q' => 'Et si mon équipe n\'est pas à l\'aise avec l\'informatique ?',
       'r' => 'C\'est la situation la plus fréquente, et c\'est un critère de conception plutôt qu\'un obstacle. On réduit les écrans à ce qui sert, on forme sur les vraies données pendant le déploiement, et on garde le papier en parallèle le temps que la confiance s\'installe.',
+    ),
+    7 => 
+    array (
+      'q' => 'Odoo gère-t-il la comptabilité de plusieurs pays de la zone FCFA dans une même base ?',
+      'r' => 'Oui, en créant une société par pays. La page des localisations fiscales d\'Odoo 20.0, relue le 27 octobre 2026, liste la Côte d\'Ivoire, le Bénin, le Sénégal, le Mali, le Niger et le Burkina Faso, mais pas le Togo, qui se traite au cadrage avec votre comptable. Une succursale suivant la localisation de sa société mère, une filiale d\'un autre pays ne peut pas en être une.',
     ),
   ),
 );
