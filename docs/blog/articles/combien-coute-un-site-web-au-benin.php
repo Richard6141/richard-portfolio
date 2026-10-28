@@ -5,7 +5,7 @@ return [
     'slug'       => 'combien-coute-un-site-web-au-benin',
     'instantane' => '2026-10-07 15:00:51',
     'titre'      => 'Combien coûte un site web au Bénin en 2026 ? Prix et devis',
-    'meta'       => 'Prix d\'un site web au Bénin et en Europe : tarifs de départ de Richard SALANON, plateformes, freelance ou agence, domaine, hébergement, devis.',
+    'meta'       => 'Landing page dès 150 000 FCFA, site vitrine dès 300 000 FCFA au Bénin. Prix en Europe, freelance ou agence, hébergement, domaine et lecture d\'un devis.',
     'resume'     => 'Au Bénin, les tarifs de départ de Richard SALANON sont de 150 000 FCFA (229 €) pour une landing page et de 300 000 FCFA (457 €) pour un site vitrine ; e-commerce, application web et mobile se chiffrent sur devis. Pour un client européen, l\'agence Kolonell situe un site vitrine simple de 3 000 à 8 000 € HT chez un freelance. Le prix initial compte moins que les coûts annuels et que le contenu du devis.',
     'categorie'  => 'Conseils',
     'tags'       => ['prix site web Bénin', 'création site web Cotonou', 'développeur web Bénin', 'coût site internet', 'devis site web', 'tarif site vitrine'],
