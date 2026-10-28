@@ -4,7 +4,7 @@
 return [
     'slug'       => 'ia-pour-les-pme-par-ou-commencer',
     'instantane' => '2026-10-07 15:00:51',
-    'titre'      => 'IA pour les PME : par où commencer, avec quels outils ?',
+    'titre'      => 'IA pour les PME en 2026 : par où commencer, quels outils ?',
     'meta'       => 'Premières tâches à confier à l\'IA dans une PME, outils et tarifs officiels du 7 octobre 2026, données, relecture, formation et mesure du temps gagné.',
     'resume'     => 'Commencez par une seule tâche écrite, répétitive et sans enjeu juridique : réponses types, comptes rendus, brouillons de textes. Un abonnement individuel coûte de 0 à environ 23 € par mois (tarifs officiels du 7 octobre 2026), donc l\'outil pèse peu. Le vrai travail est de protéger les données, de relire chaque sortie et de mesurer le temps gagné avant d\'aller plus loin.',
     'categorie'  => 'IA',

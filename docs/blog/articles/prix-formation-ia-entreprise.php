@@ -4,7 +4,7 @@
 return [
     'slug'       => 'prix-formation-ia-entreprise',
     'instantane' => '2026-10-26 18:00:00',
-    'titre'      => 'Prix d\'une formation IA en entreprise : ce qui change',
+    'titre'      => 'Prix d\'une formation IA en entreprise en 2026 : critères',
     'meta'       => 'Combien coûte une formation IA en entreprise ? Les critères qui font varier le prix, les pièges, le financement et les questions pour comparer deux devis.',
     'resume'     => 'Il n\'existe pas de prix moyen fiable pour une formation IA en entreprise, parce que le prix suit le nombre de participants, la durée, le lieu, la préparation sur vos documents et l\'accompagnement après la session. Pour comparer deux devis, demandez ce que chaque ligne contient et ce que les participants sauront faire seuls à la fin. Les abonnements aux outils se paient à part, auprès des éditeurs.',
     'categorie'  => 'IA',

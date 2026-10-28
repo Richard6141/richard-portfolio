@@ -4,7 +4,7 @@
 return [
     'slug'       => 'digitalisation-des-pme-par-o-commencer-et-quel-cot',
     'instantane' => '2026-10-07 15:00:51',
-    'titre'      => 'Digitalisation des PME : premiers chantiers et budget',
+    'titre'      => 'Digitaliser une PME en 2026 : premiers chantiers et budget',
     'meta'       => 'Quels chantiers digitaliser en premier selon la taille de votre PME, combien prévoir pour chaque poste, comment étaler la dépense et mesurer le retour.',
     'resume'     => 'Une PME digitalise d\'abord ce qui lui fait perdre le plus de temps : clients et ventes, devis et factures, présence en ligne. Le budget se pilote chantier par chantier, avec des logiciels gratuits ou à quelques euros par utilisateur et par mois, plus la formation et le temps de mise en place, que l\'on oublie souvent. Chaque étape doit se rembourser avant la suivante.',
     'categorie'  => 'Digitalisation d\'entreprise',
