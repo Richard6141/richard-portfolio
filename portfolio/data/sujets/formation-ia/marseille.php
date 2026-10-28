@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'formation-ia-entreprise-marseille',
+  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
   'ville' => 'Marseille',
   'ville_slug' => 'marseille',
   'pays' => 'France',

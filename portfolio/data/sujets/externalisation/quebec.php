@@ -5,6 +5,7 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'externaliser-developpement-web-quebec',
+  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
   'ville' => 'Québec',
   'ville_slug' => 'quebec',
   'pays' => 'Canada',

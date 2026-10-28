@@ -668,7 +668,7 @@ function sitemap_entrees_fichiers(string $baseUrl): array
     $sujets = is_file(__DIR__ . '/../portfolio/data/sujets.php') ? (require __DIR__ . '/../portfolio/data/sujets.php') : [];
     foreach ((array) $sujets as $sujet) {
         foreach (($sujet['pages'] ?? []) as $page) {
-            if (!empty($page['slug'])) {
+            if (!empty($page['slug']) && ($page['robots'] ?? 'index') !== 'noindex') {
                 $entrees[] = ['loc' => $baseUrl . '/' . $page['slug'], 'lastmod' => sitemap_lastmod($page['maj'] ?? null, $page['_maj'] ?? null), 'changefreq' => 'monthly', 'priority' => '0.8'];
             }
         }
