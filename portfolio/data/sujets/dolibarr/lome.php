@@ -10,7 +10,7 @@ return array (
   'pays' => 'Togo',
   'titre' => 'Intégration Dolibarr à Lomé',
   'accroche' => 'Dolibarr déployé par paliers pour le transit et la logistique portuaire, avec ce que Lomé impose réellement.',
-  'intro' => 'Lomé est à deux heures de route de Cotonou, sur le même fuseau, avec les mêmes moyens de paiement mobile. C\'est le marché étranger où la distance compte le moins, et un déplacement reste possible pour un cadrage important. Dolibarr, c\'est un ERP-CRM open source léger, écrit en PHP et MySQL, qui tourne sur un hébergement mutualisé ordinaire. Sa force est de sa légèreté : il s\'installe sur l\'hébergement que vous avez déjà, s\'affiche vite même sur une connexion moyenne, et se prend en main en quelques jours ; sa limite est qu\'il couvre moins de terrain qu\'Odoo sur les processus industriels complexes et son interface est plus austère. Le rôle d\'un intégrateur n\'est pas de vous vendre tous les modules : c\'est de déterminer lesquels servent votre activité à Lomé, dans quel ordre les mettre en service, et ce qu\'il vaut mieux laisser en dehors.',
+  'intro' => 'Au port de Lomé, les dossiers durent des semaines, passent entre plusieurs intervenants, et les frais s\'accumulent pendant ce temps. Premier port en eau profonde de la sous-région, il ouvre le corridor vers le Burkina, le Mali et le Niger. Dolibarr, ERP léger, suit ces dossiers avec leurs coûts et le temps passé, pour un investissement bien inférieur à celui d\'un ERP lourd. Lomé n\'est qu\'à deux heures de route de Cotonou, sur le même fuseau horaire : je me déplace volontiers pour un cadrage important.',
   'sections' => 
   array (
     0 => 
@@ -44,89 +44,16 @@ return array (
     ),
     1 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Modules',
-      'titre' => 'Les modules Dolibarr qui servent vraiment à Lomé.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Lomé.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Tiers et clients',
-          'texte' => 'Un fichier unique clients, fournisseurs et prospects, avec tout l\'historique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Devis, commandes, factures',
-          'texte' => 'Le circuit commercial complet et les relances d\'impayés. Le module qui rentabilise le plus vite.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Stock et entrepôts',
-          'texte' => 'Mouvements, entrepôts multiples, seuils. Suffisant pour la plupart des commerces.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Projets et temps passé',
-          'texte' => 'Pour les cabinets et prestataires : suivi par mission, facturation à l\'avancement.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Comptabilité et banques',
-          'texte' => 'Rapprochement bancaire et export vers votre expert-comptable.',
-        ),
-        5 => 
-        array (
-          'titre' => 'Automatisation n8n',
-          'texte' => 'API REST propre : relier WhatsApp, Mobile Money ou un site e-commerce reste simple.',
-        ),
+        0 => 'Je commencerais par le dossier unique, doté d\'alertes d\'échéance. Fin de franchise de magasinage, validité d\'un document, délai de règlement : ces dépassements coûtent sans contrepartie et se répètent, et un transitaire qui a quinze dossiers ouverts les surveille de mémoire. Le dossier partagé permet aussi de reprendre le suivi quand son responsable est absent, sans reconstituer l\'historique depuis les e-mails. La marge par dossier vient ensuite, avec le transport terrestre du corridor intégré au coût de revient. Les alertes se construisent par l\'API plutôt qu\'en simple paramétrage.',
+        1 => 'Dolibarr ne coûte rien en licence et se loge sur un hébergement mutualisé standard. Pour une mise en service complète, reprise des données et formation incluses, prévoyez au minimum 400 000 FCFA. J\'avance par chantiers consécutifs : les alertes d\'abord, la marge ensuite, chacun mesuré avant de passer au suivant, afin que vous voyiez ce qu\'il rapporte avant de dépenser davantage. Le devis détaillé et décomposé arrive après le cadrage, gratuit et sans engagement.',
       ),
     ),
     2 => 
-    array (
-      'type' => 'etapes',
-      'etiquette' => 'Méthode',
-      'titre' => 'Comment se déroule une intégration à Lomé.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Un module en production, pas une démonstration',
-          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Formation d\'un référent interne',
-          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
-        ),
-      ),
-    ),
-    3 => 
-    array (
-      'type' => 'prose',
-      'etiquette' => 'Budget',
-      'titre' => 'Ce que coûte une intégration Dolibarr à Lomé.',
-      'paragraphes' => 
-      array (
-        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation, c\'est l\'option la plus accessible quand le budget est le premier critère.',
-        1 => 'Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Cas concret',
@@ -140,7 +67,7 @@ return array (
         ),
       ),
     ),
-    5 => 
+    3 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Réalité locale',
@@ -151,17 +78,17 @@ return array (
         1 => 'Le premier apport d\'un ERP y est la reprenabilité du dossier. Quand celui qui le suit est absent, il faut aujourd\'hui le reconstituer depuis les e-mails pendant que le client attend. Un dossier unique règle cela immédiatement.',
         2 => 'Le second est l\'alerte d\'échéance. Fin de franchise de magasinage, validité de document, délai de règlement : ces dépassements coûtent sans contrepartie et se répètent. C\'est la fonction qui se rentabilise le plus vite sur ce métier.',
         3 => 'Le troisième est la marge par dossier, aujourd\'hui connue au mieux une fois tout soldé. La calculer en continu change les décisions commerciales pendant l\'opération, pas après.',
-        4 => 'Le module Projets de Dolibarr permet de suivre un dossier de transit avec ses couts et son temps passe, pour un investissement bien inferieur. La limite se situe sur les automatisations d\'echeances, qu\'il faut construire via son API plutot que parametrer.',
+        4 => 'Le module Projets de Dolibarr permet de suivre un dossier de transit avec ses coûts et son temps passé, pour un investissement bien inférieur. La limite se situe sur les automatisations d\'échéances, qu\'il faut construire via son API plutôt que paramétrer.',
       ),
     ),
-    6 => 
+    4 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Pièges',
       'titre' => 'Erreurs fréquentes que je corrige à Lomé',
       'items' => 
       array (
-        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas, et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans vérifier qu\'il couvre vos processus. La licence est nulle, le paramétrage ne l\'est pas, et un outil inadapté coûte plus cher qu\'un outil payant adapté.',
         1 => 'Vouloir dupliquer dans l\'ERP ce que fait déjà le système douanier. L\'outil sert votre suivi commercial et financier, que celui-ci ne couvre pas.',
         2 => 'Oublier d\'intégrer le transport terrestre du corridor dans le coût de revient, ce qui fausse toutes les marges.',
         3 => 'Négliger le suivi partageable avec le client, qui est pourtant un argument commercial direct face aux confrères.',
@@ -172,38 +99,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Pouvez-vous venir à Lomé pour le cadrage ?',
-      'r' => 'Oui, c\'est à deux heures de route de Cotonou, sans décalage horaire et avec la même monnaie. Un déplacement pour le cadrage initial ou la formation des équipes ne pose aucune difficulté.',
+      'q' => 'Un cadrage en face à face est-il possible à Lomé ?',
+      'r' => 'Oui. Je suis basé à Cotonou, à deux heures de route, sans décalage horaire et avec la même monnaie. Je me déplace pour le cadrage initial comme pour la formation des équipes.',
     ),
     1 => 
     array (
-      'q' => 'Dolibarr convient-il à une entreprise de Lomé ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
+      'q' => 'Le système douanier fait déjà une partie du travail : Dolibarr ferait-il doublon ?',
+      'r' => 'Pas s\'il reste à sa place. Il serait absurde de recopier dans l\'ERP ce que couvre le système douanier. Dolibarr prend en charge le suivi commercial et financier, que ce système ne traite pas.',
     ),
     2 => 
     array (
-      'q' => 'Combien de temps avant une mise en production ?',
-      'r' => 'Comptez 4 à 8 semaines pour un premier module réellement en service, formation comprise. Un déploiement couvrant plusieurs métiers s\'étale sur quelques mois, par paliers, sans jamais interrompre votre activité.',
+      'q' => 'Peut-on être prévenu avant la fin d\'une franchise de magasinage ?',
+      'r' => 'Oui, ce sont les alertes d\'échéance, la fonction qui se rentabilise le plus vite pour un transitaire. Elles ne relèvent pas d\'un simple réglage : je les construis via l\'API de Dolibarr.',
     ),
     3 => 
     array (
-      'q' => 'Peut-on connecter Dolibarr à WhatsApp et au Mobile Money ?',
-      'r' => 'Oui, par automatisation n8n. Les demandes reçues sur WhatsApp alimentent Dolibarr, et les règlements Mobile Money se rapprochent des factures. Ce n\'est pas natif : c\'est un travail d\'intégration à budgéter explicitement.',
+      'q' => 'Combien de temps faut-il avant de s\'en servir au quotidien ?',
+      'r' => 'De 4 à 8 semaines pour un premier module réellement en service, formation comprise. Au-delà, plusieurs métiers s\'ajoutent sur quelques mois, par paliers, sans interrompre l\'activité.',
     ),
     4 => 
     array (
-      'q' => 'Intervenez-vous sur place à Lomé ?',
-      'r' => 'Je suis basé à Cotonou : un déplacement à Lomé pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
-    ),
-    5 => 
-    array (
-      'q' => 'Que se passe-t-il si je change de prestataire ?',
-      'r' => 'Dolibarr étant open source et auto-hébergé, vous gardez le serveur, la base et les modules. N\'importe quel intégrateur peut reprendre le dossier. C\'est un argument réel face à un logiciel propriétaire fermé, et une clause que je pose sans qu\'on me la demande.',
-    ),
-    6 => 
-    array (
-      'q' => 'Et si mon équipe n\'est pas à l\'aise avec l\'informatique ?',
-      'r' => 'C\'est la situation la plus fréquente, et c\'est un critère de conception plutôt qu\'un obstacle. On réduit les écrans à ce qui sert, on forme sur les vraies données pendant le déploiement, et on garde le papier en parallèle le temps que la confiance s\'installe.',
+      'q' => 'Mon équipe ne sera-t-elle pas dépendante de vous ?',
+      'r' => 'Non. Dolibarr étant open source et auto-hébergé, vous gardez le serveur, la base et les modules, et n\'importe quel intégrateur peut reprendre le dossier. Je pose cette clause sans qu\'on me la demande.',
     ),
   ),
 );

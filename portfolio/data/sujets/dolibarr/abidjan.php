@@ -10,7 +10,7 @@ return array (
   'pays' => 'Côte d\'Ivoire',
   'titre' => 'Intégration Dolibarr à Abidjan',
   'accroche' => 'Dolibarr déployé par paliers pour le commerce et la distribution, avec ce que Abidjan impose réellement.',
-  'intro' => 'Abidjan est le marché le plus structuré d\'Afrique de l\'Ouest francophone. Vos concurrents y sont déjà équipés, et un outil approximatif se remarque immédiatement. Les projets ivoiriens se mènent entièrement à distance, sans décalage horaire avec Cotonou. Dolibarr, c\'est un ERP-CRM open source léger, écrit en PHP et MySQL, qui tourne sur un hébergement mutualisé ordinaire. Sa force est de sa légèreté : il s\'installe sur l\'hébergement que vous avez déjà, s\'affiche vite même sur une connexion moyenne, et se prend en main en quelques jours ; sa limite est qu\'il couvre moins de terrain qu\'Odoo sur les processus industriels complexes et son interface est plus austère. Le rôle d\'un intégrateur n\'est pas de vous vendre tous les modules : c\'est de déterminer lesquels servent votre activité à Abidjan, dans quel ordre les mettre en service, et ce qu\'il vaut mieux laisser en dehors.',
+  'intro' => 'À Abidjan, vos concurrents sont déjà équipés, et un outil approximatif se remarque immédiatement, chez vos clients comme dans vos équipes. Les attentes y sont plus élevées que dans le reste de la sous-région : le projet consiste à tenir un niveau, pas à combler un manque. Dolibarr, ERP léger, défend bien le commercial et la facturation ; il est moins à l\'aise sur la logistique multi-sites complexe. Je mène ces projets entièrement à distance, sans décalage horaire avec Cotonou, et je vous dis franchement si votre activité demande autre chose.',
   'sections' => 
   array (
     0 => 
@@ -44,89 +44,16 @@ return array (
     ),
     1 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Modules',
-      'titre' => 'Les modules Dolibarr qui servent vraiment à Abidjan.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Abidjan.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Tiers et clients',
-          'texte' => 'Un fichier unique clients, fournisseurs et prospects, avec tout l\'historique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Devis, commandes, factures',
-          'texte' => 'Le circuit commercial complet et les relances d\'impayés. Le module qui rentabilise le plus vite.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Stock et entrepôts',
-          'texte' => 'Mouvements, entrepôts multiples, seuils. Suffisant pour la plupart des commerces.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Projets et temps passé',
-          'texte' => 'Pour les cabinets et prestataires : suivi par mission, facturation à l\'avancement.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Comptabilité et banques',
-          'texte' => 'Rapprochement bancaire et export vers votre expert-comptable.',
-        ),
-        5 => 
-        array (
-          'titre' => 'Automatisation n8n',
-          'texte' => 'API REST propre : relier WhatsApp, Mobile Money ou un site e-commerce reste simple.',
-        ),
+        0 => 'Je commencerais par le stock consolidé entre les points de vente. C\'est la difficulté dominante à Abidjan : un article présent dans une boutique reste invisible pour les autres, et le stock global existe sans que personne puisse l\'exploiter. Avec des chiffres communs, les transferts entre Cocody et Yopougon se décident sur des données. Les paiements Wave et Orange Money viennent juste après, car un parcours qui ne les propose pas perd le client au dernier écran. Ouvrir la boutique en ligne avant ce stock unique, c\'est vendre des articles déjà écoulés.',
+        1 => 'Dolibarr est gratuit et tient sur un hébergement mutualisé standard : aucun serveur dédié à payer. Une mise en service complète, reprise des données et formation comprises, démarre à 400 000 FCFA. Je découpe le projet en chantiers qui se suivent, si bien que vous constatez ce que rapporte le stock unique avant de financer la suite. Une fois le cadrage terminé, vous recevez un devis détaillé et décomposé, gratuit et sans engagement.',
       ),
     ),
     2 => 
-    array (
-      'type' => 'etapes',
-      'etiquette' => 'Méthode',
-      'titre' => 'Comment se déroule une intégration à Abidjan.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Un module en production, pas une démonstration',
-          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Formation d\'un référent interne',
-          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
-        ),
-      ),
-    ),
-    3 => 
-    array (
-      'type' => 'prose',
-      'etiquette' => 'Budget',
-      'titre' => 'Ce que coûte une intégration Dolibarr à Abidjan.',
-      'paragraphes' => 
-      array (
-        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation, c\'est l\'option la plus accessible quand le budget est le premier critère.',
-        1 => 'Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Cas concret',
@@ -140,7 +67,7 @@ return array (
         ),
       ),
     ),
-    5 => 
+    3 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Réalité locale',
@@ -151,17 +78,17 @@ return array (
         1 => 'Cela change la nature du projet : il ne s\'agit plus de combler un manque mais de tenir un niveau. Un ERP approximatif se remarque immédiatement, en interne comme chez les clients.',
         2 => 'La difficulté dominante à Abidjan est la consolidation multi-points. Un article disponible dans une boutique reste invisible pour les autres : le stock global existe mais personne ne peut l\'exploiter. C\'est le premier chantier dans la plupart des cas.',
         3 => 'Le second est l\'intégration des paiements. Wave et Orange Money ne sont pas des options sur ce marché : un parcours qui ne les propose pas perd le client au dernier écran, après tout le coût d\'acquisition.',
-        4 => 'Sur un marche ou vos concurrents sont déjà équipés, Dolibarr tient la comparaison sur le commercial et la facturation, moins sur la logistique multi-sites complexe. C\'est le bon choix si vous avez un ou deux points de vente, pas cinq.',
+        4 => 'Sur un marché où vos concurrents sont déjà équipés, Dolibarr tient la comparaison sur le commercial et la facturation, moins sur la logistique multi-sites complexe. C\'est le bon choix si vous avez un ou deux points de vente, pas cinq.',
       ),
     ),
-    6 => 
+    4 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Pièges',
       'titre' => 'Erreurs fréquentes que je corrige à Abidjan',
       'items' => 
       array (
-        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas, et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans vérifier qu\'il couvre vos processus. La licence est nulle, le paramétrage ne l\'est pas, et un outil inadapté coûte plus cher qu\'un outil payant adapté.',
         1 => 'Empiler des outils sans jamais les relier. Beaucoup d\'entreprises abidjanaises ont déjà investi : les faire communiquer coûte souvent dix fois moins qu\'une refonte.',
         2 => 'Lancer une boutique en ligne sans stock consolidé, ce qui produit des ventes d\'articles déjà écoulés.',
         3 => 'Choisir un prestataire sur le seul critère du prix, sans clause de propriété du code et des données.',
@@ -172,38 +99,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Nos concurrents abidjanais sont déjà équipés. Qu\'est-ce qui change avec vous ?',
-      'r' => 'Le rapport qualité-prix, essentiellement. Un intégrateur basé au Bénin travaille structurellement sous le marché ivoirien à qualité comparable. Si la présence physique est déterminante pour votre projet, je vous le dirai plutôt que de forcer.',
+      'q' => 'Mes concurrents ont déjà un ERP : pourquoi passer par vous plutôt que par un prestataire installé ici ?',
+      'r' => 'Parce que je suis basé au Bénin et que je travaille structurellement sous le marché ivoirien, à qualité comparable. C\'est le vrai différenciateur. Si la présence physique pèse lourd dans votre projet, je vous l\'écris franchement plutôt que de forcer.',
     ),
     1 => 
     array (
-      'q' => 'Dolibarr convient-il à une entreprise de Abidjan ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
+      'q' => 'Mon volume d\'activité justifie-t-il Dolibarr ?',
+      'r' => 'La réponse dépend de vos processus, pas de la ville. L\'outil se justifie quand vous voulez structurer commercial, stock et facturation sans le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin se résume à une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (
-      'q' => 'Combien de temps avant une mise en production ?',
-      'r' => 'Comptez 4 à 8 semaines pour un premier module réellement en service, formation comprise. Un déploiement couvrant plusieurs métiers s\'étale sur quelques mois, par paliers, sans jamais interrompre votre activité.',
+      'q' => 'Au bout de combien de temps verrai-je un premier résultat ?',
+      'r' => 'Un premier module réellement en service demande 4 à 8 semaines, formation comprise. Si plusieurs métiers sont concernés, le déploiement s\'étale sur quelques mois, palier par palier, sans jamais interrompre votre activité.',
     ),
     3 => 
     array (
-      'q' => 'Peut-on connecter Dolibarr à WhatsApp et au Mobile Money ?',
-      'r' => 'Oui, par automatisation n8n. Les demandes reçues sur WhatsApp alimentent Dolibarr, et les règlements Mobile Money se rapprochent des factures. Ce n\'est pas natif : c\'est un travail d\'intégration à budgéter explicitement.',
+      'q' => 'Mes clients paient par Wave et Orange Money : comment cela rejoint-il Dolibarr ?',
+      'r' => 'Par une automatisation n8n. Les demandes arrivées sur WhatsApp alimentent Dolibarr, et les règlements Mobile Money se rapprochent des factures. Rien de natif là-dedans : c\'est un travail d\'intégration, à inscrire clairement dans le budget.',
     ),
     4 => 
     array (
-      'q' => 'Intervenez-vous sur place à Abidjan ?',
-      'r' => 'Les projets à Abidjan se mènent entièrement à distance, par visioconférence et messagerie, avec des comptes rendus écrits à chaque étape.',
-    ),
-    5 => 
-    array (
-      'q' => 'Que se passe-t-il si je change de prestataire ?',
-      'r' => 'Dolibarr étant open source et auto-hébergé, vous gardez le serveur, la base et les modules. N\'importe quel intégrateur peut reprendre le dossier. C\'est un argument réel face à un logiciel propriétaire fermé, et une clause que je pose sans qu\'on me la demande.',
-    ),
-    6 => 
-    array (
-      'q' => 'Et si mon équipe n\'est pas à l\'aise avec l\'informatique ?',
-      'r' => 'C\'est la situation la plus fréquente, et c\'est un critère de conception plutôt qu\'un obstacle. On réduit les écrans à ce qui sert, on forme sur les vraies données pendant le déploiement, et on garde le papier en parallèle le temps que la confiance s\'installe.',
+      'q' => 'Mes équipes de boutique vont-elles abandonner leur cahier ?',
+      'r' => 'C\'est justement le risque que je cherche à éviter. Je réduis les écrans à l\'utile, je forme sur vos vraies données pendant le déploiement, et le papier continue en parallèle tant que la confiance n\'est pas établie.',
     ),
   ),
 );

@@ -10,7 +10,7 @@ return array (
   'pays' => 'Bénin',
   'titre' => 'Intégration Dolibarr à Abomey-Calavi',
   'accroche' => 'Dolibarr déployé par paliers pour les structures de santé et d\'enseignement privé, avec ce que Abomey-Calavi impose réellement.',
-  'intro' => 'Abomey-Calavi est la commune qui grandit le plus vite du pays. Beaucoup de structures y ont démarré petit et gèrent aujourd\'hui dix fois plus de dossiers avec les mêmes outils qu\'au premier jour. Dolibarr, c\'est un ERP-CRM open source léger, écrit en PHP et MySQL, qui tourne sur un hébergement mutualisé ordinaire. Sa force est de sa légèreté : il s\'installe sur l\'hébergement que vous avez déjà, s\'affiche vite même sur une connexion moyenne, et se prend en main en quelques jours ; sa limite est qu\'il couvre moins de terrain qu\'Odoo sur les processus industriels complexes et son interface est plus austère. Le rôle d\'un intégrateur n\'est pas de vous vendre tous les modules : c\'est de déterminer lesquels servent votre activité à Abomey-Calavi, dans quel ordre les mettre en service, et ce qu\'il vaut mieux laisser en dehors.',
+  'intro' => 'Une école ou une clinique d\'Abomey-Calavi qui gérait cinquante dossiers à ses débuts en traite aujourd\'hui dix fois plus avec les mêmes outils : c\'est ce que produit la commune qui grandit le plus vite du pays. Dolibarr, un ERP léger sur hébergement mutualisé, couvre l\'essentiel pour une école ou une clinique de taille moyenne : fichier unique, échéanciers, relances, facturation. Il demande moins de formation qu\'Odoo et se prend en main en quelques jours. Mon rôle est de dire quels modules vous servent, dans quel ordre, et lesquels laisser de côté.',
   'sections' => 
   array (
     0 => 
@@ -44,89 +44,16 @@ return array (
     ),
     1 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Modules',
-      'titre' => 'Les modules Dolibarr qui servent vraiment à Abomey-Calavi.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Abomey-Calavi.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Tiers et clients',
-          'texte' => 'Un fichier unique clients, fournisseurs et prospects, avec tout l\'historique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Devis, commandes, factures',
-          'texte' => 'Le circuit commercial complet et les relances d\'impayés. Le module qui rentabilise le plus vite.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Stock et entrepôts',
-          'texte' => 'Mouvements, entrepôts multiples, seuils. Suffisant pour la plupart des commerces.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Projets et temps passé',
-          'texte' => 'Pour les cabinets et prestataires : suivi par mission, facturation à l\'avancement.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Comptabilité et banques',
-          'texte' => 'Rapprochement bancaire et export vers votre expert-comptable.',
-        ),
-        5 => 
-        array (
-          'titre' => 'Automatisation n8n',
-          'texte' => 'API REST propre : relier WhatsApp, Mobile Money ou un site e-commerce reste simple.',
-        ),
+        0 => 'Je commence par le fichier unique, car élèves, patients ou clients existent aujourd\'hui en trois versions qui divergent. Ce socle posé, je monte l\'échéancier : scolarités payées en tranches, actes réglés partiellement, c\'est la question « qui doit quoi à cette date » qui demande aujourd\'hui des heures de reconstitution. Les droits par rôle et le journal des consultations se fixent avant le premier paramétrage, jamais après. L\'espace en ligne pour les parents ou les patients vient en dernier, quand l\'interne est stable. On démarre à une date de bascule, le papier restant consultable en archive.',
+        1 => 'Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation. Dolibarr tient sur un hébergement mutualisé standard, donc pas de serveur dédié à financer, et la licence est gratuite : ce qui se paie, c\'est le paramétrage. Un devis détaillé suit le cadrage, gratuitement et sans engagement. Je procède par chantiers successifs : vous voyez ce que rapporte le premier avant de lancer le suivant.',
       ),
     ),
     2 => 
-    array (
-      'type' => 'etapes',
-      'etiquette' => 'Méthode',
-      'titre' => 'Comment se déroule une intégration à Abomey-Calavi.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'Cadrage sur le flux réel',
-          'texte' => 'On suit une opération complète telle qu\'elle se passe aujourd\'hui. C\'est là qu\'apparaissent les points qui coûtent, jamais ceux qu\'on avait listés.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Un module en production, pas une démonstration',
-          'texte' => 'Mise en service sur les vraies données, gain mesuré, puis on ouvre le suivant. Un ERP déployé d\'un bloc est un ERP abandonné.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Reprise de l\'existant, à dose choisie',
-          'texte' => 'Clients, catalogue et soldes en cours : oui. L\'historique complet : rarement, il coûte cher et importe d\'anciennes erreurs.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Connexion à ce que vous utilisez déjà',
-          'texte' => 'WhatsApp et Mobile Money reliés par automatisation, plutôt que de demander à vos clients de changer d\'habitudes.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Formation d\'un référent interne',
-          'texte' => 'Sans référent formé sur place, aucun ERP ne survit à deux ans.',
-        ),
-      ),
-    ),
-    3 => 
-    array (
-      'type' => 'prose',
-      'etiquette' => 'Budget',
-      'titre' => 'Ce que coûte une intégration Dolibarr à Abomey-Calavi.',
-      'paragraphes' => 
-      array (
-        0 => 'Dolibarr est gratuit et s\'installe sur un hébergement mutualisé standard, ce qui supprime le coût d\'un serveur dédié. Comptez à partir de 400 000 FCFA pour une mise en service complète avec reprise des données et formation, c\'est l\'option la plus accessible quand le budget est le premier critère.',
-        1 => 'Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Je découpe systématiquement en chantiers successifs : vous mesurez le retour d\'un module avant d\'engager le suivant. Un devis détaillé et décomposé suit le cadrage, gratuitement et sans engagement.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'definitions',
       'etiquette' => 'Cas concret',
@@ -140,7 +67,7 @@ return array (
         ),
       ),
     ),
-    5 => 
+    3 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Réalité locale',
@@ -151,17 +78,17 @@ return array (
         1 => 'Le besoin n\'est donc pas d\'ajouter des fonctions mais de reprendre le contrôle d\'un volume qui a débordé. La priorité est presque toujours la même : un fichier unique, élèves, patients, clients, qui remplace les trois versions divergentes qui circulent aujourd\'hui.',
         2 => 'Vient ensuite l\'échéancier. Scolarités payées en tranches, actes réglés partiellement, prises en charge : savoir qui doit quoi à une date donnée est la question à laquelle personne ne sait répondre sans plusieurs heures de reconstitution. C\'est ce que l\'ERP règle en premier.',
         3 => 'La confidentialité structure enfin tout le projet. Dossiers d\'élèves, dossiers patients : les droits par rôle et le journal des consultations se définissent avant le premier paramétrage, jamais après.',
-        4 => 'Pour une ecole ou une clinique de taille moyenne, Dolibarr couvre l\'essentiel : fichier unique, echeanciers, relances, facturation. Il demande moins de formation qu\'Odoo et se prend en main en quelques jours, ce qui compte quand l\'équipe n\'est pas a l\'aise avec l\'informatique.',
+        4 => 'Pour une école ou une clinique de taille moyenne, Dolibarr couvre l\'essentiel : fichier unique, échéanciers, relances, facturation. Il demande moins de formation qu\'Odoo et se prend en main en quelques jours, ce qui compte quand l\'équipe n\'est pas à l\'aise avec l\'informatique.',
       ),
     ),
-    6 => 
+    4 => 
     array (
       'type' => 'liste',
       'etiquette' => 'Pièges',
       'titre' => 'Erreurs fréquentes que je corrige à Abomey-Calavi',
       'items' => 
       array (
-        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans verifier qu\'il couvre vos processus. La licence est nulle, le parametrage ne l\'est pas, et un outil inadapte coute plus cher qu\'un outil payant adapte.',
+        0 => 'Choisir Dolibarr uniquement parce qu\'il est gratuit, sans vérifier qu\'il couvre vos processus. La licence est nulle, le paramétrage ne l\'est pas, et un outil inadapté coûte plus cher qu\'un outil payant adapté.',
         1 => 'Vouloir numériser rétroactivement des années de registres. C\'est long, cher, et cela n\'aide personne : on démarre à une date de bascule et le papier reste consultable en archive.',
         2 => 'Ouvrir un espace en ligne pour les parents ou les patients avant d\'avoir stabilisé l\'interne. L\'ordre inverse produit des données publiques fausses.',
         3 => 'Partager un compte unique entre plusieurs personnes du secrétariat, ce qui annule toute traçabilité sur des données sensibles.',
@@ -172,38 +99,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Nos données sont sensibles : dossiers d\'élèves, parfois de patients. Comment sont-elles protégées ?',
-      'r' => 'Par des droits stricts par rôle, un journal des consultations et des sauvegardes chiffrées. On définit ensemble qui voit quoi avant d\'écrire la première ligne de paramétrage, c\'est une contrainte de conception, pas une option ajoutée après.',
+      'q' => 'Les dossiers d\'élèves, parfois de patients, sont confidentiels. Qu\'est-ce qui les protège ?',
+      'r' => 'Des droits stricts selon le rôle de chacun, un journal des consultations et des sauvegardes chiffrées. Nous décidons ensemble qui voit quoi avant la première ligne de paramétrage : c\'est une contrainte posée dès la conception, pas un complément ajouté plus tard.',
     ),
     1 => 
     array (
-      'q' => 'Dolibarr convient-il à une entreprise de Abomey-Calavi ?',
-      'r' => 'Cela dépend de votre volume et de vos processus, pas de votre ville. Dolibarr se justifie quand vous voulez structurer commercial, stock et facturation sans engager le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
+      'q' => 'Une petite école ou une clinique a-t-elle vraiment besoin d\'un ERP ?',
+      'r' => 'Cela dépend de votre volume, pas de la commune. Dolibarr vaut le coup quand il faut structurer facturation et suivi sans le budget ni l\'infrastructure d\'un ERP lourd. Si votre besoin tient en une seule fonction, un outil sur mesure sera plus léger et moins cher, et je vous le dirai.',
     ),
     2 => 
     array (
-      'q' => 'Combien de temps avant une mise en production ?',
-      'r' => 'Comptez 4 à 8 semaines pour un premier module réellement en service, formation comprise. Un déploiement couvrant plusieurs métiers s\'étale sur quelques mois, par paliers, sans jamais interrompre votre activité.',
+      'q' => 'Dans combien de temps peut-on s\'en servir au quotidien ?',
+      'r' => 'Un premier module réellement en service demande 4 à 8 semaines, formation comprise. Un déploiement qui touche plusieurs métiers se fait sur quelques mois, par paliers, sans interrompre votre activité.',
     ),
     3 => 
     array (
-      'q' => 'Peut-on connecter Dolibarr à WhatsApp et au Mobile Money ?',
-      'r' => 'Oui, par automatisation n8n. Les demandes reçues sur WhatsApp alimentent Dolibarr, et les règlements Mobile Money se rapprochent des factures. Ce n\'est pas natif : c\'est un travail d\'intégration à budgéter explicitement.',
+      'q' => 'Peut-on faire arriver les messages WhatsApp et les paiements Mobile Money dans Dolibarr ?',
+      'r' => 'Oui, avec une automatisation n8n : les demandes reçues sur WhatsApp alimentent Dolibarr et les règlements Mobile Money se rapprochent des factures. Ce n\'est pas natif, c\'est un travail d\'intégration à prévoir dans le budget.',
     ),
     4 => 
     array (
-      'q' => 'Intervenez-vous sur place à Abomey-Calavi ?',
-      'r' => 'Je suis basé à Cotonou, à une vingtaine de kilomètres : un déplacement à Abomey-Calavi pour le cadrage ou la formation des équipes ne pose aucune difficulté.',
-    ),
-    5 => 
-    array (
-      'q' => 'Que se passe-t-il si je change de prestataire ?',
-      'r' => 'Dolibarr étant open source et auto-hébergé, vous gardez le serveur, la base et les modules. N\'importe quel intégrateur peut reprendre le dossier. C\'est un argument réel face à un logiciel propriétaire fermé, et une clause que je pose sans qu\'on me la demande.',
-    ),
-    6 => 
-    array (
-      'q' => 'Et si mon équipe n\'est pas à l\'aise avec l\'informatique ?',
-      'r' => 'C\'est la situation la plus fréquente, et c\'est un critère de conception plutôt qu\'un obstacle. On réduit les écrans à ce qui sert, on forme sur les vraies données pendant le déploiement, et on garde le papier en parallèle le temps que la confiance s\'installe.',
+      'q' => 'Mon secrétariat est peu à l\'aise avec l\'informatique et partage un seul accès. Que changez-vous ?',
+      'r' => 'Chacun reçoit son propre compte : un accès partagé annule toute traçabilité sur des données sensibles. Je réduis les écrans à l\'utile et je forme sur les vraies données. Basé à Cotonou, à une vingtaine de kilomètres, je me déplace à Abomey-Calavi pour le cadrage comme pour la formation.',
     ),
   ),
 );
