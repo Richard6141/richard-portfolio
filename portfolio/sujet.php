@@ -37,6 +37,8 @@ $aPageVille = $page['ville_slug'] !== '' && isset($villesAvecPage[$page['ville_s
 $pageTitle     = seoTitle($page['titre'], $fullName);
 $pageDesc      = seoDescription($page['accroche'] . ' ' . ($page['intro'] ?? ''));
 $pageCanonical = $url;
+// 28/10/2026 : une page jumelle peut porter 'robots' => 'noindex' (voir docs/gsc-indexation-2026-10-28.md).
+$pageRobots    = ($page['robots'] ?? 'index') === 'noindex' ? 'noindex' : 'index';
 $ogImage = ($profile['avatar_url'] ?? '') ? $portfolioUrl . '/uploads/' . preg_replace('/\.\.[\\/]/', '', $profile['avatar_url']) : '';
 
 $pageSchemas = [

@@ -170,6 +170,9 @@ function llms_collecter(?PDO $pdo, string $base, bool $complet): array
     $sujets = require __DIR__ . '/../portfolio/data/sujets.php';
     foreach ($sujets as $slugSujet => $sujet) {
         foreach ($sujet['pages'] as $page) {
+            if (($page['robots'] ?? 'index') === 'noindex') {
+                continue;
+            }
             $item = ['titre' => $page['titre'], 'url' => $base . '/' . $page['slug'], 'resume' => (string) ($page['accroche'] ?? '')];
             if ($slugSujet === 'expertise') {
                 $sections['Expertise'][] = $item;

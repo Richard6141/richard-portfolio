@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'formation-ia-entreprise-lausanne',
+  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
   'ville' => 'Lausanne',
   'ville_slug' => 'lausanne',
   'pays' => 'Suisse',

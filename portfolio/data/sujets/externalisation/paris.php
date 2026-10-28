@@ -5,6 +5,7 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'externaliser-developpement-web-paris',
+  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
   'ville' => 'Paris',
   'ville_slug' => 'paris',
   'pays' => 'France',
