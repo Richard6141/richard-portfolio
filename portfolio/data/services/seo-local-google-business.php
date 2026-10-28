@@ -92,6 +92,15 @@ return [
             'verdict'  => 'Le bon type découle d\'une question : un client peut-il entrer chez vous aux horaires affichés ? Si oui, l\'adresse s\'affiche ; sinon, la fiche se définit par sa zone. Ces règles viennent de la page d\'aide de Google sur les zones desservies, qui précise aussi qu\'un rayon autour de l\'établissement ne peut plus être utilisé et qu\'un changement de zone peut mettre 48 heures à s\'afficher.',
         ],
         [
+            'type'        => 'prose',
+            'titre'       => 'Fiche Google à Cotonou, Porto-Novo, Parakou : que faire en premier ?',
+            'paragraphes' => [
+                'Commencez par savoir si une fiche existe déjà à votre nom, puis revendiquez-la et validez-la depuis un compte Google de votre entreprise. Corrigez ensuite le repère, les horaires et le téléphone, avant de demander des avis. Cotonou, Porto-Novo ou Parakou, l\'ordre reste le même, et aucun classement n\'est garanti.',
+                'Première étape : chercher le nom de l\'entreprise sur Google Maps, depuis un téléphone, en notant chaque fiche trouvée. Une fiche peut avoir été créée par un ancien employé, une agence disparue ou à partir de contributions du public, et deux fiches pour un même lieu divisent les avis. Deuxième étape : revendiquer la bonne fiche et choisir la méthode de validation proposée. Un code envoyé par courrier arrive en général sous 14 jours, donc on lance cette démarche sans attendre et sans modifier le nom ni l\'adresse pendant ce temps.',
+                'Troisième étape, une fois la fiche validée : le point sur la carte, placé au portail et non sur la voie principale, car une adresse sans numéro de rue ne suffit pas à situer l\'entrée. Viennent ensuite la catégorie principale, les horaires, dont ceux des jours de fête, et un numéro de l\'entreprise à dix chiffres, écrit de la même façon partout. Quatrième étape : demander un avis à chaque client, sans contrepartie. Pour une PME, ces quatre gestes forment le socle à poser avant les photos et les posts.',
+            ],
+        ],
+        [
             'type'  => 'etapes',
             'titre' => 'Comment se déroule la mission, de l\'état des lieux au suivi mensuel ?',
             'items' => [
@@ -350,6 +359,7 @@ return [
 
     'faq' => [
         ['q' => 'Combien de temps faut-il pour apparaître dans le pack local ?', 'r' => 'Une fiche neuve, validée et bien remplie peut commencer à bouger en quelques semaines ; des places solides se construisent en quelques mois, à mesure que les avis s\'accumulent et que les coordonnées deviennent cohérentes. La validation elle-même va de quelques minutes à environ trois semaines selon la méthode proposée par Google. Le délai précis dépend de la concurrence dans votre zone et se confirme au cadrage.'],
+        ['q' => 'Une fiche existe déjà pour mon commerce à Cotonou, Porto-Novo ou Parakou sans que je l\'aie créée : que faire ?', 'r' => 'C\'est fréquent : Google peut créer ou compléter une fiche à partir de contributions du public. Cherchez votre nom sur Google Maps, puis demandez à en devenir propriétaire et validez-la. S\'il existe deux fiches pour le même lieu, gardez celle que vous contrôlez et signalez le doublon, car les consignes de Google demandent une seule fiche par établissement.'],
         ['q' => 'Puis-je avoir une fiche sans local ouvert au public ?', 'r' => 'Oui, si vous vous déplacez chez vos clients ou livrez : c\'est un établissement de services de proximité. Google demande alors de masquer l\'adresse et de déclarer jusqu\'à 20 zones desservies, en recommandant de ne pas dépasser deux heures de trajet. Une activité exercée uniquement en ligne, sans zone d\'intervention, n\'a pas droit à une fiche.'],
         ['q' => 'Mon adresse n\'a pas de numéro de rue : comment faire ?', 'r' => 'Les consignes de Google permettent, dans ce cas, de placer vous-même le repère à l\'emplacement exact sur la carte, et autorisent les points de repère quand l\'adresse officielle ne suffit pas. Ajoutez le Plus Code de l\'établissement sur votre site et dans WhatsApp, avec un repère écrit et une photo de la façade.'],
         ['q' => 'Puis-je offrir une remise ou un cadeau en échange d\'un avis ?', 'r' => 'Non. Le règlement de Google Maps interdit de proposer un paiement, une remise ou un produit offert en échange d\'un avis, ou de la suppression d\'un avis négatif. Il interdit aussi de solliciter seulement les clients satisfaits. Vous pouvez en revanche demander un avis à tous vos clients, sans contrepartie.'],

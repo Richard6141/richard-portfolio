@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'n8n, Make ou Zapier : quel outil d\'automatisation choisir pour votre entreprise ?',
-    'title'   => 'n8n, Make ou Zapier : coût réel et choix | Richard SALANON',
+    'title'   => 'Alternative à Zapier : n8n ou Make, coût | Richard SALANON',
     'meta'    => 'n8n, Make ou Zapier : exécutions, crédits ou tâches, coût réel à 5 000 et 50 000 passages par mois, données, licence n8n, WhatsApp et mobile money.',
     'en_bref' => 'Les trois outils relient vos applications sans développement lourd, mais ils ne facturent pas la même chose : n8n compte des exécutions complètes, Make des crédits par module, Zapier des tâches par action réussie. Pour un même workflow de cinq étapes, l\'écart de prix grandit avec le volume, et n8n peut aussi s\'installer sur votre propre serveur sous une licence qui limite certains usages commerciaux. Zapier reste le plus simple à prendre en main, Make offre le meilleur compromis visuel, n8n donne le plus de contrôle à ceux qui peuvent l\'administrer.',
     'publie'  => '2026-10-03',
@@ -106,6 +106,17 @@ return [
                 'Pour Make et Zapier, affichés en dollars, le montant en FCFA dépend du cours du jour et des frais de change de votre banque. Zapier propose aussi un affichage et une facturation dans d\'autres devises, dont l\'euro, ce qui supprime une partie du risque de change pour une entreprise de la zone franc. Dans tous les cas, comptez les frais bancaires sur les paiements internationaux par carte : ils s\'ajoutent au prix publié.',
                 'Le tableau montre surtout des ordres de grandeur. À 5 000 passages par mois, les trois outils restent abordables et l\'écart se compte en dizaines de dollars ou d\'euros. À 50 000 passages, il se compte en centaines : environ 121 € par mois chez n8n Cloud en annuel, 182 $ chez Make Core, 769 $ chez Zapier Professional. C\'est à ce stade que la question de l\'outil devient une question budgétaire, et que l\'auto-hébergement de n8n mérite d\'être étudié.',
                 'Ces simulations supposent un élément par passage. Si chaque passage traite plusieurs lignes, plusieurs articles ou plusieurs destinataires, la consommation de Make et de Zapier se multiplie, pas celle de n8n. À l\'inverse, si vos workflows n\'ont qu\'une ou deux actions, l\'écart se réduit fortement. Refaites toujours le calcul avec vos propres workflows avant de signer.',
+            ],
+        ],
+        [
+            'type'        => 'prose',
+            'titre'       => 'Quelle alternative à Zapier pour une PME qui paie en francs CFA ?',
+            'paragraphes' => [
+                'Make et n8n sont les deux alternatives à Zapier de ce comparatif. Make convient à une équipe sans technicien qui veut un canevas visuel ; n8n convient dès que le volume monte ou que les données doivent rester chez vous. Aucun des trois ne se règle en francs CFA ni par mobile money : c\'est la carte internationale qui sert au paiement, sauf virement sur les offres hautes.',
+                'La première contrainte est le moyen de paiement. Une carte bancaire locale n\'est pas toujours autorisée pour les achats en ligne à l\'étranger, et la banque peut refuser ces débits récurrents. Avant de choisir l\'outil, faites vérifier par votre banque que la carte accepte un prélèvement mensuel en devise étrangère, ou ouvrez une carte virtuelle prévue pour cet usage. Un abonnement refusé au renouvellement arrête vos automatisations, et avec elles la relance des clients ou la prise de commandes.',
+                'La deuxième contrainte est le change. Le contrat en euros de n8n a l\'avantage de la parité fixe avec le franc CFA, expliquée plus haut ; Make, en dollars, suit le cours du jour. Si vous quittez Zapier surtout pour sortir du dollar, vérifiez dans votre espace de facturation la devise réellement proposée avant de vous engager, puis ajoutez les frais de votre banque au prix affiché.',
+                'La troisième piste est l\'auto-hébergement. L\'édition Community de n8n, installée sur un serveur que vous louez, supprime l\'abonnement à l\'éditeur : vous payez l\'hébergeur et le temps d\'administration, voir la section sur l\'auto-hébergement plus bas. Elle suppose quelqu\'un pour surveiller les sauvegardes et les mises à jour ; sans cette personne, restez sur l\'offre hébergée.',
+                'Enfin, ne confondez pas le prix de l\'outil et le paiement que vos clients vous font. Encaisser en mobile money relève de FedaPay, KkiaPay ou CinetPay, que l\'on relie aux trois outils par webhook, comme le détaille le <a href="/comparatifs/fedapay-vs-kkiapay-vs-cinetpay">comparatif des passerelles de paiement</a>. Pour cadrer vos workflows et ce raccordement, la page <a href="/services/automatisation-ia">automatisation et intelligence artificielle</a> décrit l\'accompagnement, et la <a href="/formations/n8n">formation n8n</a> prépare une équipe à les maintenir.',
             ],
         ],
         [
@@ -348,6 +359,10 @@ return [
         [
             'q' => 'Peut-on payer ces outils depuis le Bénin, la Côte d\'Ivoire ou le Sénégal ?',
             'r' => 'Oui, mais pas en francs CFA ni par mobile money. Les trois éditeurs prennent la carte bancaire internationale ; Make accepte aussi le prélèvement ACH et Google Pay sur ses offres Core, Pro et Teams. Le virement sur facture est réservé à n8n Business annuel et Enterprise, à Zapier Team annuel et Enterprise, et à l\'offre Enterprise de Make. n8n facture en euros, ce qui donne un coût stable en FCFA grâce à la parité fixe ; Zapier propose plusieurs devises, dont l\'euro.',
+        ],
+        [
+            'q' => 'Quelle alternative à Zapier choisir si ma carte bancaire locale est refusée ?',
+            'r' => 'Le problème vient de la carte, pas de l\'outil : les trois éditeurs prennent la carte internationale, et le virement est réservé aux offres hautes. Demandez à votre banque d\'autoriser les paiements récurrents en devise étrangère, ou utilisez une carte virtuelle. Si le blocage persiste, n8n Community auto-hébergé évite l\'abonnement à l\'éditeur : vous ne payez plus que le serveur, chez un hébergeur dont le mode de paiement vous convient, à vérifier auprès de lui.',
         ],
         [
             'q' => 'Les trois outils peuvent-ils envoyer et recevoir des messages WhatsApp ?',
