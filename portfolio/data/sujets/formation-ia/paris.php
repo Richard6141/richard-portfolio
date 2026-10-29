@@ -6,13 +6,13 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'formation-ia-entreprise-paris',
-  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
+  'robots' => 'noindex',
   'ville' => 'Paris',
   'ville_slug' => 'paris',
   'pays' => 'France',
   'titre' => 'Formation IA en entreprise à Paris',
   'accroche' => 'Former vos équipes sur vos vrais documents, pas sur des exercices de démonstration.',
-  'intro' => 'La majorité des formations à l\'intelligence artificielle échouent pour la même raison: elles montrent des outils au lieu de résoudre un problème. Une équipe qui a vu une démonstration impressionnante retourne à ses habitudes la semaine suivante. Je travaille l\'inverse: on part de deux ou trois tâches que vos équipes de Paris répètent chaque semaine, et on les traite pendant la formation, sur vos vrais documents. Ce qui est produit ce jour-là est utilisable dès le lendemain.',
+  'intro' => 'À Paris, le frein n\'est pas l\'outil mais le cadre réglementaire : sous RGPD, la vraie question est ce qu\'on a le droit de lui confier. Beaucoup d\'équipes ont de plus entendu tant de promesses sur l\'IA qu\'elles s\'en méfient par principe. Je pars donc de peu : production de contenus et de propositions commerciales, tri des demandes entrantes, sur vos propres tâches et avec des résultats mesurables, sous relecture humaine systématique. Pas de panorama ni de prospective. Chacun sait ensuite ce qui peut sortir de l\'entreprise et ce qui n\'en sortira jamais.',
   'sections' => 
   array (
     0 => 
@@ -41,85 +41,25 @@ return array (
     ),
     2 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Programmes',
-      'titre' => 'Quatre formats, selon votre point de départ.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Paris.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Prise en main des assistants',
-          'texte' => 'ChatGPT, Claude et Gemini: ce qu\'ils savent faire, ce qu\'ils inventent, et comment vérifier. Une demi-journée, sans prérequis technique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Rédiger de bonnes consignes',
-          'texte' => 'La compétence qui sépare un usage décevant d\'un usage utile. On travaille sur vos propres documents, pas sur des exercices.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Automatiser avec l\'IA',
-          'texte' => 'Relier un assistant à vos outils via n8n: tri de messages, extraction de données, rédaction de réponses. Le niveau ou l\'IA cesse d\'être un gadget.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Cadrer les usages pour les dirigeants',
-          'texte' => 'Ce qu\'on autorise, ce qu\'on interdit, quelles données ne sortent jamais. Une demi-journée qui évite des incidents coûteux.',
-        ),
+        0 => 'Je commencerais par fixer ce qu\'on peut confier à l\'outil. Tant que ce point reste flou, une partie de l\'équipe l\'utilise en cachette, dans une zone grise inconfortable. Une fois la règle posée, la première tâche serait les propositions commerciales, puis les contenus : le gain se mesure sur un document que chacun connaît, et la relecture humaine y est facile à tenir. Le tri et la qualification des demandes entrantes viennent après. Sur l\'emploi, je le dis sans détour : l\'IA supprime du temps passé sur des tâches répétitives, et ce que l\'entreprise fait de ce temps relève du management.',
+        1 => 'Vous pouvez entrer par un atelier d\'une demi-journée, ou par la formation de deux jours qui s\'accompagne d\'un point de suivi un mois plus tard. Tout se fait en visioconférence, en petit groupe, sur vos documents ; si le projet est important, je me déplace. Le tarif dépend d\'un cadrage préalable et s\'établit sur devis, gratuit et sans engagement.',
       ),
     ),
     3 => 
-    array (
-      'type' => 'liste',
-      'etiquette' => 'Tarifs',
-      'titre' => 'Formats et tarifs indicatifs.',
-      'items' => 
-      array (
-        0 => 'Atelier découverte, une demi-journée, jusqu\'à 12 personnes: à partir de 150 000 FCFA.',
-        1 => 'Formation complète, deux jours, jusqu\'à 10 personnes: à partir de 450 000 FCFA.',
-        2 => 'Accompagnement mensuel, une demi-journée par mois pendant trois mois: à partir de 350 000 FCFA.',
-        3 => 'Session dirigeants, deux heures: à partir de 100 000 FCFA. Les tarifs hors Afrique sont établis après cadrage.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
       'titre' => 'Avec quelles structures de Paris je travaille.',
       'paragraphes' => 
       array (
-        0 => 'A Paris, les organisations qui tirent le meilleur parti d\'une formation IA sont les agences, startups et PME de services. Le critère n\'est pas la taille ni le niveau technique: c\'est d\'avoir des tâches répétitives identifiables et quelqu\'un pour porter le sujet après mon départ.',
-        1 => 'Les formations à Paris se donnent en visioconférence, en groupe réduit, sur vos propres documents. Le présentiel reste possible pour un projet important.',
-        2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systématiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les équipes ont essaye seules.',
-      ),
-    ),
-    5 => 
-    array (
-      'type' => 'definitions',
-      'etiquette' => 'Prudence',
-      'titre' => 'Ce que je dis toujours en formation.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'L\'IA se trompe avec aplomb',
-          'texte' => 'Elle produit des réponses fausses avec la même assurance que les bonnes. Toute sortie destinée à un client, un partenaire ou une administration doit être relue par quelqu\'un qui connaît le sujet. Une formation qui ne dit pas cela est une formation dangereuse.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Vos données sortent de chez vous',
-          'texte' => 'Ce que vous collez dans un assistant grand public part sur des serveurs étrangers. On définit ensemble ce qui peut sortir et ce qui ne sortira jamais: données clients nominatives, informations financières, documents contractuels.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Ce n\'est pas un remplacement',
-          'texte' => 'L\'IA fait gagner du temps sur des tâches répétitives. Elle ne remplace ni le jugement métier ni la relation client. Une équipe qui croit l\'inverse produit vite du travail médiocre en grande quantité.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Tout ne mérite pas d\'être automatisé',
-          'texte' => 'Une tâche faite deux fois par an ne justifie pas qu\'on y passe une journée. On cible ce qui revient chaque semaine, rien d\'autre.',
-        ),
+        0 => 'Dans la capitale, les structures qui profitent le mieux d\'une formation IA sont les agences, les startups et les PME de services. On ne regarde ni leur taille ni leur niveau technique. On cherche des tâches répétitives identifiables et un référent qui reprendra le sujet une fois ma mission terminée.',
+        1 => 'La formation se déroule à distance, en groupe réduit, sur vos propres documents. Sur un projet important, une venue sur place est envisageable.',
+        2 => 'Sans prolongement, l\'élan retombe en quelques semaines. Les formats de deux jours comprennent donc un rendez-vous de suivi un mois plus tard : les difficultés réelles s\'y révèlent, après des essais menés par vos équipes sans moi.',
       ),
     ),
   ),
@@ -127,38 +67,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Faut-il des connaissances techniques ?',
-      'r' => 'Aucune. Les formations s\'adressent à des équipes métier: commerciaux, secrétariat, comptabilité, direction. Si quelqu\'un sait écrire un message, il peut suivre.',
+      'q' => 'Mon équipe doit-elle déjà s\'y connaître en IA ?',
+      'r' => 'Pas du tout. Aucune connaissance technique n\'est attendue. Les sessions s\'adressent aux équipes métier : commerciaux, secrétariat, comptabilité, direction. Écrire un message suffit pour suivre.',
     ),
     1 => 
     array (
-      'q' => 'Combien de personnes par session ?',
-      'r' => 'Jusqu\'à douze pour un atelier découverte, dix pour une formation complète. Au-delà, on ne peut plus travailler sur les documents de chacun, et c\'est justement ce qui fait la valeur de la session.',
+      'q' => 'Combien de collaborateurs par session ?',
+      'r' => 'Jusqu\'à douze en atelier d\'une demi-journée, dix en formation de deux jours. Plus nombreux, chacun ne pourrait plus travailler sur ses propres documents, ce qui est le cœur de la méthode.',
     ),
     2 => 
     array (
-      'q' => 'Intervenez-vous sur place à Paris ?',
-      'r' => 'Les formations à Paris se donnent en visioconférence, en groupe réduit, sur vos propres documents. Le présentiel reste possible pour un projet important.',
+      'q' => 'Vous déplacez-vous dans nos bureaux parisiens ?',
+      'r' => 'La session est conçue pour la visioconférence, en groupe réduit, sur vos documents. Pour un projet important, je peux venir chez vous.',
     ),
     3 => 
     array (
-      'q' => 'Que produit-on pendant la formation ?',
-      'r' => 'Des consignes réutilisables sur vos propres cas, et une ou deux automatisations simples si le format le permet. Vous repartez avec quelque chose qui fonctionne, pas seulement avec des notes.',
+      'q' => 'Que sort-il de la formation, et sous quelles garanties ?',
+      'r' => 'Des consignes réutilisables adaptées à vos cas et, selon le format, une ou deux automatisations simples. Vous repartez avec un outil en état de marche. Garde-fous : on relit toute production de l\'IA avant de l\'adresser à un client, et on ne colle pas de données sensibles dans un assistant grand public.',
     ),
     4 => 
     array (
-      'q' => 'Et après la formation ?',
-      'r' => 'Un point de suivi un mois plus tard est inclus dans les formats de deux jours. C\'est la que remontent les vrais blocages, une fois que les équipes ont essaye seules. Sans ce point, une formation retombe presque toujours.',
-    ),
-    5 => 
-    array (
-      'q' => 'Nos données sont sensibles. Est-ce compatible ?',
-      'r' => 'C\'est un sujet à part entière de la formation. On définit ce qui peut sortir et ce qui ne sortira jamais, et on regarde les solutions qui gardent les données chez vous quand la sensibilité l\'exige.',
-    ),
-    6 => 
-    array (
-      'q' => 'L\'IA va-t-elle remplacer nos employés ?',
-      'r' => 'Non, et une formation qui vend cette promesse ment. Elle supprime du temps passe sur des tâches répétitives. Ce que vos équipes font de ce temps libère est une décision de management, pas une conséquence de l\'outil.',
+      'q' => 'Et quand la formation est finie ?',
+      'r' => 'Les formats de deux jours prévoient un point de suivi au bout d\'un mois. Les vrais blocages sortent quand les équipes ont essayé sans accompagnement ; privée de ce point, une formation retombe presque toujours.',
     ),
   ),
 );

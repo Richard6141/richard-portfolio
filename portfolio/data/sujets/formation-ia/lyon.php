@@ -6,13 +6,13 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'formation-ia-entreprise-lyon',
-  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
+  'robots' => 'noindex',
   'ville' => 'Lyon',
   'ville_slug' => 'lyon',
   'pays' => 'France',
   'titre' => 'Formation IA en entreprise à Lyon',
   'accroche' => 'Former vos équipes sur vos vrais documents, pas sur des exercices de démonstration.',
-  'intro' => 'La majorité des formations à l\'intelligence artificielle échouent pour la même raison: elles montrent des outils au lieu de résoudre un problème. Une équipe qui a vu une démonstration impressionnante retourne à ses habitudes la semaine suivante. Je travaille l\'inverse: on part de deux ou trois tâches que vos équipes de Lyon répètent chaque semaine, et on les traite pendant la formation, sur vos vrais documents. Ce qui est produit ce jour-là est utilisable dès le lendemain.',
+  'intro' => 'Dans l\'industrie et la santé, un résumé approximatif est pire que pas de résumé du tout. À Lyon, je pars donc de ce que vos équipes traitent déjà à la main : données à extraire de documents techniques ou de bons de commande reçus en PDF, rapports longs à condenser pour un comité, réponses techniques qui reviennent sans cesse. On les travaille ensemble sur vos pièces réelles, avec une vérification à chaque étape. La frontière de ce qui peut sortir de l\'entreprise est posée avant de commencer. À la fin de la session, vous avez des productions utilisables dès le lendemain.',
   'sections' => 
   array (
     0 => 
@@ -41,85 +41,25 @@ return array (
     ),
     2 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Programmes',
-      'titre' => 'Quatre formats, selon votre point de départ.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Lyon.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Prise en main des assistants',
-          'texte' => 'ChatGPT, Claude et Gemini: ce qu\'ils savent faire, ce qu\'ils inventent, et comment vérifier. Une demi-journée, sans prérequis technique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Rédiger de bonnes consignes',
-          'texte' => 'La compétence qui sépare un usage décevant d\'un usage utile. On travaille sur vos propres documents, pas sur des exercices.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Automatiser avec l\'IA',
-          'texte' => 'Relier un assistant à vos outils via n8n: tri de messages, extraction de données, rédaction de réponses. Le niveau ou l\'IA cesse d\'être un gadget.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Cadrer les usages pour les dirigeants',
-          'texte' => 'Ce qu\'on autorise, ce qu\'on interdit, quelles données ne sortent jamais. Une demi-journée qui évite des incidents coûteux.',
-        ),
+        0 => 'Je commencerais par l\'extraction de données depuis vos PDF techniques et vos bons de commande. Le choix tient à la précision que réclame votre secteur : le document source reste à côté du résultat, donc chaque écart se voit immédiatement et la vérification s\'apprend dans de bonnes conditions. Viennent les résumés de rapports pour les comités de décision, puis, en dernier, les réponses techniques standardisées, qui demandent le plus de rigueur et l\'avis de la direction technique. Avant tout cela, on trace la limite de confidentialité pour les spécifications et les données de production, et l\'on regarde comment l\'assistant s\'insère dans vos outils existants.',
+        1 => 'Pour démarrer, un atelier d\'une demi-journée suffit à tester cette première tâche sur vos documents. La formation de deux jours va plus loin et comprend un point de suivi un mois plus tard. Tout se déroule en visioconférence et en petit groupe, avec un déplacement possible pour un projet important. Le tarif est fixé sur devis après un cadrage ; le devis est gratuit et sans engagement.',
       ),
     ),
     3 => 
-    array (
-      'type' => 'liste',
-      'etiquette' => 'Tarifs',
-      'titre' => 'Formats et tarifs indicatifs.',
-      'items' => 
-      array (
-        0 => 'Atelier découverte, une demi-journée, jusqu\'à 12 personnes: à partir de 150 000 FCFA.',
-        1 => 'Formation complète, deux jours, jusqu\'à 10 personnes: à partir de 450 000 FCFA.',
-        2 => 'Accompagnement mensuel, une demi-journée par mois pendant trois mois: à partir de 350 000 FCFA.',
-        3 => 'Session dirigeants, deux heures: à partir de 100 000 FCFA. Les tarifs hors Afrique sont établis après cadrage.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
       'titre' => 'Avec quelles structures de Lyon je travaille.',
       'paragraphes' => 
       array (
-        0 => 'A Lyon, les organisations qui tirent le meilleur parti d\'une formation IA sont les industrie, santé, logistique et éditeurs. Le critère n\'est pas la taille ni le niveau technique: c\'est d\'avoir des tâches répétitives identifiables et quelqu\'un pour porter le sujet après mon départ.',
-        1 => 'Les formations à Lyon se donnent en visioconférence, en groupe réduit, sur vos propres documents. Le présentiel reste possible pour un projet important.',
-        2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systématiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les équipes ont essaye seules.',
-      ),
-    ),
-    5 => 
-    array (
-      'type' => 'definitions',
-      'etiquette' => 'Prudence',
-      'titre' => 'Ce que je dis toujours en formation.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'L\'IA se trompe avec aplomb',
-          'texte' => 'Elle produit des réponses fausses avec la même assurance que les bonnes. Toute sortie destinée à un client, un partenaire ou une administration doit être relue par quelqu\'un qui connaît le sujet. Une formation qui ne dit pas cela est une formation dangereuse.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Vos données sortent de chez vous',
-          'texte' => 'Ce que vous collez dans un assistant grand public part sur des serveurs étrangers. On définit ensemble ce qui peut sortir et ce qui ne sortira jamais: données clients nominatives, informations financières, documents contractuels.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Ce n\'est pas un remplacement',
-          'texte' => 'L\'IA fait gagner du temps sur des tâches répétitives. Elle ne remplace ni le jugement métier ni la relation client. Une équipe qui croit l\'inverse produit vite du travail médiocre en grande quantité.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Tout ne mérite pas d\'être automatisé',
-          'texte' => 'Une tâche faite deux fois par an ne justifie pas qu\'on y passe une journée. On cible ce qui revient chaque semaine, rien d\'autre.',
-        ),
+        0 => 'Les structures lyonnaises qui profitent le plus d\'une formation IA relèvent de l\'industrie, de la santé, de la logistique et des éditeurs. Ni la taille ni le niveau technique ne comptent vraiment. Il faut des tâches répétitives que l\'on sait nommer, et une personne qui garde le sujet vivant une fois que j\'ai quitté la salle ou l\'écran.',
+        1 => 'La session se fait à distance, en petit groupe, à partir de vos propres documents ; sur un projet important, je peux venir sur place.',
+        2 => 'Sans suite, une formation s\'éteint en quelques semaines. Je prévois donc toujours un rendez-vous un mois après, compris dans les formats de deux jours. C\'est là que les vraies difficultés se montrent, quand les équipes ont essayé sans moi.',
       ),
     ),
   ),
@@ -127,38 +67,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Faut-il des connaissances techniques ?',
-      'r' => 'Aucune. Les formations s\'adressent à des équipes métier: commerciaux, secrétariat, comptabilité, direction. Si quelqu\'un sait écrire un message, il peut suivre.',
+      'q' => 'Mes équipes ne sont pas techniciennes. Est-ce un obstacle ?',
+      'r' => 'Non. Le public visé, ce sont des équipes métier : commerciaux, secrétariat, comptabilité, direction. Savoir rédiger un message suffit pour suivre.',
     ),
     1 => 
     array (
-      'q' => 'Combien de personnes par session ?',
-      'r' => 'Jusqu\'à douze pour un atelier découverte, dix pour une formation complète. Au-delà, on ne peut plus travailler sur les documents de chacun, et c\'est justement ce qui fait la valeur de la session.',
+      'q' => 'Quelle taille de groupe à Lyon ?',
+      'r' => 'Douze personnes au plus pour l\'atelier d\'une demi-journée, dix pour la formation de deux jours. Au-delà, on ne pourrait plus travailler sur le matériel de chaque participant, et c\'est ce qui donne sa valeur à la session.',
     ),
     2 => 
     array (
-      'q' => 'Intervenez-vous sur place à Lyon ?',
-      'r' => 'Les formations à Lyon se donnent en visioconférence, en groupe réduit, sur vos propres documents. Le présentiel reste possible pour un projet important.',
+      'q' => 'Venez-vous dans nos locaux lyonnais ?',
+      'r' => 'Par défaut, la formation a lieu à distance, en petit groupe, sur vos documents. Pour un projet important, un déplacement est possible.',
     ),
     3 => 
     array (
-      'q' => 'Que produit-on pendant la formation ?',
-      'r' => 'Des consignes réutilisables sur vos propres cas, et une ou deux automatisations simples si le format le permet. Vous repartez avec quelque chose qui fonctionne, pas seulement avec des notes.',
+      'q' => 'Qu\'emporte l\'équipe à la fin, et que doit-elle vérifier ?',
+      'r' => 'Des consignes réutilisables écrites sur vos cas, et une ou deux automatisations simples selon le format. Sur des documents techniques, une réserve s\'impose : toute sortie de l\'assistant se relit avant d\'arriver chez un client, et l\'on ne colle aucune donnée sensible dans un assistant grand public.',
     ),
     4 => 
     array (
-      'q' => 'Et après la formation ?',
-      'r' => 'Un point de suivi un mois plus tard est inclus dans les formats de deux jours. C\'est la que remontent les vrais blocages, une fois que les équipes ont essaye seules. Sans ce point, une formation retombe presque toujours.',
-    ),
-    5 => 
-    array (
-      'q' => 'Nos données sont sensibles. Est-ce compatible ?',
-      'r' => 'C\'est un sujet à part entière de la formation. On définit ce qui peut sortir et ce qui ne sortira jamais, et on regarde les solutions qui gardent les données chez vous quand la sensibilité l\'exige.',
-    ),
-    6 => 
-    array (
-      'q' => 'L\'IA va-t-elle remplacer nos employés ?',
-      'r' => 'Non, et une formation qui vend cette promesse ment. Elle supprime du temps passe sur des tâches répétitives. Ce que vos équipes font de ce temps libère est une décision de management, pas une conséquence de l\'outil.',
+      'q' => 'Que se passe-t-il une fois la formation terminée ?',
+      'r' => 'Les formats de deux jours incluent un point de suivi un mois plus tard. Les blocages réels n\'apparaissent qu\'après les premiers essais en autonomie ; sans ce rendez-vous, l\'élan retombe vite.',
     ),
   ),
 );

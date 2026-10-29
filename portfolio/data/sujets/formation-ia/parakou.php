@@ -6,13 +6,13 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'formation-ia-entreprise-parakou',
-  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
+  'robots' => 'noindex',
   'ville' => 'Parakou',
   'ville_slug' => 'parakou',
   'pays' => 'Bénin',
   'titre' => 'Formation IA en entreprise à Parakou',
   'accroche' => 'Former vos équipes sur vos vrais documents, pas sur des exercices de démonstration.',
-  'intro' => 'La majorité des formations à l\'intelligence artificielle échouent pour la même raison: elles montrent des outils au lieu de résoudre un problème. Une équipe qui a vu une démonstration impressionnante retourne à ses habitudes la semaine suivante. Je travaille l\'inverse: on part de deux ou trois tâches que vos équipes de Parakou répètent chaque semaine, et on les traite pendant la formation, sur vos vrais documents. Ce qui est produit ce jour-là est utilisable dès le lendemain.',
+  'intro' => 'À Parakou, la matière première du travail, ce sont des bordereaux de collecte remplis sur le terrain, des messages aux producteurs sur leurs avances et leurs livraisons, des chiffres de campagne. Je pars de ces tâches qui reviennent et on les traite pendant la formation, avec vos propres documents. Le but : ne plus ressaisir à la main le soir au bureau, et appuyer la décision de vendre ou d\'attendre sur des chiffres. Ce qui est produit en séance est exploitable le lendemain.',
   'sections' => 
   array (
     0 => 
@@ -41,85 +41,24 @@ return array (
     ),
     2 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Programmes',
-      'titre' => 'Quatre formats, selon votre point de départ.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Parakou.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Prise en main des assistants',
-          'texte' => 'ChatGPT, Claude et Gemini: ce qu\'ils savent faire, ce qu\'ils inventent, et comment vérifier. Une demi-journée, sans prérequis technique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Rédiger de bonnes consignes',
-          'texte' => 'La compétence qui sépare un usage décevant d\'un usage utile. On travaille sur vos propres documents, pas sur des exercices.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Automatiser avec l\'IA',
-          'texte' => 'Relier un assistant à vos outils via n8n: tri de messages, extraction de données, rédaction de réponses. Le niveau ou l\'IA cesse d\'être un gadget.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Cadrer les usages pour les dirigeants',
-          'texte' => 'Ce qu\'on autorise, ce qu\'on interdit, quelles données ne sortent jamais. Une demi-journée qui évite des incidents coûteux.',
-        ),
+        0 => 'La première tâche : dicter une note et obtenir un texte structuré. Une partie des équipes de terrain travaille plus à l\'oral qu\'à l\'écrit, et c\'est souvent cet usage qui convainc, avant toute fonction plus poussée. Il marche au bureau, là où le réseau est stable ; je n\'impose pas l\'outil sur les points de collecte où la connexion ne suit pas. Viennent ensuite la transcription des bordereaux photographiés, au lieu de les ressaisir le soir, puis les messages de rappel aux producteurs, enfin le résumé de campagne.',
+        1 => 'La formation se cale hors campagne, car en pleine saison personne n\'a le temps d\'apprendre, et le suivi arrive quand l\'activité reprend et que les besoins deviennent concrets. Le format peut être un atelier d\'une demi-journée, une formation de deux jours ou un accompagnement mensuel sur trois mois, toujours en présentiel, dans vos locaux. Le tarif est fixé sur devis après un cadrage ; le devis est gratuit et sans engagement.',
       ),
     ),
     3 => 
-    array (
-      'type' => 'liste',
-      'etiquette' => 'Tarifs',
-      'titre' => 'Formats et tarifs indicatifs.',
-      'items' => 
-      array (
-        0 => 'Atelier découverte, une demi-journée, jusqu\'à 12 personnes: à partir de 150 000 FCFA.',
-        1 => 'Formation complète, deux jours, jusqu\'à 10 personnes: à partir de 450 000 FCFA.',
-        2 => 'Accompagnement mensuel, une demi-journée par mois pendant trois mois: à partir de 350 000 FCFA.',
-        3 => 'Session dirigeants, deux heures: à partir de 100 000 FCFA. Les tarifs hors Afrique sont établis après cadrage.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
       'titre' => 'Avec quelles structures de Parakou je travaille.',
       'paragraphes' => 
       array (
-        0 => 'A Parakou, les organisations qui tirent le meilleur parti d\'une formation IA sont les négoce agricole, coton et transport du corridor nord. Le critère n\'est pas la taille ni le niveau technique: c\'est d\'avoir des tâches répétitives identifiables et quelqu\'un pour porter le sujet après mon départ.',
-        1 => 'Les formations à Parakou se donnent en présentiel, dans vos locaux, avec vos propres documents de travail.',
-        2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systématiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les équipes ont essaye seules.',
-      ),
-    ),
-    5 => 
-    array (
-      'type' => 'definitions',
-      'etiquette' => 'Prudence',
-      'titre' => 'Ce que je dis toujours en formation.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'L\'IA se trompe avec aplomb',
-          'texte' => 'Elle produit des réponses fausses avec la même assurance que les bonnes. Toute sortie destinée à un client, un partenaire ou une administration doit être relue par quelqu\'un qui connaît le sujet. Une formation qui ne dit pas cela est une formation dangereuse.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Vos données sortent de chez vous',
-          'texte' => 'Ce que vous collez dans un assistant grand public part sur des serveurs étrangers. On définit ensemble ce qui peut sortir et ce qui ne sortira jamais: données clients nominatives, informations financières, documents contractuels.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Ce n\'est pas un remplacement',
-          'texte' => 'L\'IA fait gagner du temps sur des tâches répétitives. Elle ne remplace ni le jugement métier ni la relation client. Une équipe qui croit l\'inverse produit vite du travail médiocre en grande quantité.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Tout ne mérite pas d\'être automatisé',
-          'texte' => 'Une tâche faite deux fois par an ne justifie pas qu\'on y passe une journée. On cible ce qui revient chaque semaine, rien d\'autre.',
-        ),
+        0 => 'À Parakou, le négoce agricole, le coton et le transport du corridor nord sont les activités qui gagnent le plus. Ni la taille ni le niveau technique ne tranchent : il faut des tâches répétitives bien repérées, et une personne qui garde le sujet vivant quand je serai reparti.',
+        1 => 'Les séances se tiennent chez vous, en présentiel, avec vos documents de travail. Dans la formation de deux jours, un point de suivi un mois plus tard est inclus : les blocages réels n\'apparaissent qu\'une fois les équipes laissées seules. Sans ce rendez-vous, tout retombe en quelques semaines.',
       ),
     ),
   ),
@@ -127,38 +66,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Faut-il des connaissances techniques ?',
-      'r' => 'Aucune. Les formations s\'adressent à des équipes métier: commerciaux, secrétariat, comptabilité, direction. Si quelqu\'un sait écrire un message, il peut suivre.',
+      'q' => 'Mes équipes de terrain doivent-elles être à l\'aise à l\'écrit ?',
+      'r' => 'Aucune compétence technique n\'est demandée. La formation vise les équipes de métier : commerciaux, secrétariat, comptabilité, direction. Dicter une note à l\'oral est justement un premier usage qui convainc.',
     ),
     1 => 
     array (
-      'q' => 'Combien de personnes par session ?',
-      'r' => 'Jusqu\'à douze pour un atelier découverte, dix pour une formation complète. Au-delà, on ne peut plus travailler sur les documents de chacun, et c\'est justement ce qui fait la valeur de la session.',
+      'q' => 'Combien de personnes dans une session ?',
+      'r' => 'Douze au maximum pour l\'atelier découverte, dix pour la formation complète, afin que chacun travaille sur ses propres documents.',
     ),
     2 => 
     array (
-      'q' => 'Intervenez-vous sur place à Parakou ?',
-      'r' => 'Les formations à Parakou se donnent en présentiel, dans vos locaux, avec vos propres documents de travail.',
+      'q' => 'Vous intervenez à Parakou même ?',
+      'r' => 'Oui, en présentiel, dans vos locaux, sur vos documents de travail. Je ne cherche pas à imposer l\'outil sur les points de collecte où le réseau ne tient pas.',
     ),
     3 => 
     array (
-      'q' => 'Que produit-on pendant la formation ?',
-      'r' => 'Des consignes réutilisables sur vos propres cas, et une ou deux automatisations simples si le format le permet. Vous repartez avec quelque chose qui fonctionne, pas seulement avec des notes.',
+      'q' => 'Qu\'est-ce qu\'on fabrique pendant ces journées ?',
+      'r' => 'Des consignes réutilisables sur vos cas, et une ou deux automatisations simples si le format le permet. Une sortie de l\'IA se relit avant d\'être transmise à un client, et on ne colle pas de données sensibles dans un assistant grand public.',
     ),
     4 => 
     array (
-      'q' => 'Et après la formation ?',
-      'r' => 'Un point de suivi un mois plus tard est inclus dans les formats de deux jours. C\'est la que remontent les vrais blocages, une fois que les équipes ont essaye seules. Sans ce point, une formation retombe presque toujours.',
-    ),
-    5 => 
-    array (
-      'q' => 'Nos données sont sensibles. Est-ce compatible ?',
-      'r' => 'C\'est un sujet à part entière de la formation. On définit ce qui peut sortir et ce qui ne sortira jamais, et on regarde les solutions qui gardent les données chez vous quand la sensibilité l\'exige.',
-    ),
-    6 => 
-    array (
-      'q' => 'L\'IA va-t-elle remplacer nos employés ?',
-      'r' => 'Non, et une formation qui vend cette promesse ment. Elle supprime du temps passe sur des tâches répétitives. Ce que vos équipes font de ce temps libère est une décision de management, pas une conséquence de l\'outil.',
+      'q' => 'Que devient la formation après mon départ ?',
+      'r' => 'Un point de suivi, un mois plus tard, est inclus dans les formats de deux jours. Les vrais blocages y apparaissent quand les équipes ont essayé seules ; sans lui, l\'élan retombe presque toujours.',
     ),
   ),
 );

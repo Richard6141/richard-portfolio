@@ -6,13 +6,13 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'formation-ia-entreprise-bruxelles',
-  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
+  'robots' => 'noindex',
   'ville' => 'Bruxelles',
   'ville_slug' => 'bruxelles',
   'pays' => 'Belgique',
   'titre' => 'Formation IA en entreprise à Bruxelles',
   'accroche' => 'Former vos équipes sur vos vrais documents, pas sur des exercices de démonstration.',
-  'intro' => 'La majorité des formations à l\'intelligence artificielle échouent pour la même raison: elles montrent des outils au lieu de résoudre un problème. Une équipe qui a vu une démonstration impressionnante retourne à ses habitudes la semaine suivante. Je travaille l\'inverse: on part de deux ou trois tâches que vos équipes de Bruxelles répètent chaque semaine, et on les traite pendant la formation, sur vos vrais documents. Ce qui est produit ce jour-là est utilisable dès le lendemain.',
+  'intro' => 'À Bruxelles, beaucoup d\'organisations doivent pouvoir expliquer précisément ce qu\'un outil traite, où et par qui, avant de l\'autoriser. Ma formation part de cette réalité: vos équipes choisissent deux ou trois tâches récurrentes, comme une note de synthèse tirée d\'un document volumineux, et les réalisent en séance sur leurs propres documents. En même temps, nous rédigeons la description des usages que votre conformité réclame. Vous repartez avec des livrables déjà utiles et avec une trace écrite de ce qui est autorisé.',
   'sections' => 
   array (
     0 => 
@@ -34,92 +34,31 @@ return array (
       'titre' => 'Ce qui freine l\'adoption à Bruxelles',
       'paragraphes' => 
       array (
-        0 => 'Dans l\'environnement institutionnel, la conformité documentaire prime. Avant d\'autoriser un outil, beaucoup d\'organisations doivent pouvoir décrire précisément ce qui est traite, ou et par qui. La formation produit donc cette documentation en même temps qu\'elle enseigne l\'usage.',
+        0 => 'Dans l\'environnement institutionnel, la conformité documentaire prime. Avant d\'autoriser un outil, beaucoup d\'organisations doivent pouvoir décrire précisément ce qui est traité, où et par qui. La formation produit donc cette documentation en même temps qu\'elle enseigne l\'usage.',
         1 => 'Le deuxième frein est le multilinguisme institutionnel. Je travaille en français et en anglais, pas en néerlandais, et je le dis avant plutôt que de laisser une attente non satisfaite.',
-        2 => 'Le troisième est la lenteur des validations internes, propre à ce type de structure. Il vaut mieux l\'intégrer au calendrier des le départ que de s\'en étonner en cours de projet.',
+        2 => 'Le troisième est la lenteur des validations internes, propre à ce type de structure. Il vaut mieux l\'intégrer au calendrier dès le départ que de s\'en étonner en cours de projet.',
       ),
     ),
     2 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Programmes',
-      'titre' => 'Quatre formats, selon votre point de départ.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Bruxelles.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Prise en main des assistants',
-          'texte' => 'ChatGPT, Claude et Gemini: ce qu\'ils savent faire, ce qu\'ils inventent, et comment vérifier. Une demi-journée, sans prérequis technique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Rédiger de bonnes consignes',
-          'texte' => 'La compétence qui sépare un usage décevant d\'un usage utile. On travaille sur vos propres documents, pas sur des exercices.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Automatiser avec l\'IA',
-          'texte' => 'Relier un assistant à vos outils via n8n: tri de messages, extraction de données, rédaction de réponses. Le niveau ou l\'IA cesse d\'être un gadget.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Cadrer les usages pour les dirigeants',
-          'texte' => 'Ce qu\'on autorise, ce qu\'on interdit, quelles données ne sortent jamais. Une demi-journée qui évite des incidents coûteux.',
-        ),
+        0 => 'Je commence par la note de synthèse, parce que c\'est l\'usage dominant dans l\'environnement institutionnel: un document volumineux entre, une note ressort, quelqu\'un la relit. Pendant cet exercice, nous consignons ce qui a été traité, où et par qui. C\'est la matière du questionnaire de conformité, qui devient la deuxième étape et se remplit sans improviser. La traduction et l\'adaptation de contenus entre français et anglais viennent en troisième. Ce calendrier tient compte de la lenteur des validations internes, que je préfère intégrer dès le départ plutôt que de la découvrir en cours de route.',
+        1 => 'La formation se donne en visioconférence, en groupe réduit, sur vos propres documents; le présentiel reste possible pour un projet important. Elle prend la forme d\'un atelier d\'une demi-journée, d\'une formation de deux jours ou d\'un accompagnement mensuel sur trois mois. Je travaille en français et en anglais, pas en néerlandais. Le tarif est fixé sur devis après un cadrage, et ce devis est gratuit et sans engagement.',
       ),
     ),
     3 => 
-    array (
-      'type' => 'liste',
-      'etiquette' => 'Tarifs',
-      'titre' => 'Formats et tarifs indicatifs.',
-      'items' => 
-      array (
-        0 => 'Atelier découverte, une demi-journée, jusqu\'à 12 personnes: à partir de 150 000 FCFA.',
-        1 => 'Formation complète, deux jours, jusqu\'à 10 personnes: à partir de 450 000 FCFA.',
-        2 => 'Accompagnement mensuel, une demi-journée par mois pendant trois mois: à partir de 350 000 FCFA.',
-        3 => 'Session dirigeants, deux heures: à partir de 100 000 FCFA. Les tarifs hors Afrique sont établis après cadrage.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
       'titre' => 'Avec quelles structures de Bruxelles je travaille.',
       'paragraphes' => 
       array (
-        0 => 'A Bruxelles, les organisations qui tirent le meilleur parti d\'une formation IA sont les institutions, cabinets de conseil et PME. Le critère n\'est pas la taille ni le niveau technique: c\'est d\'avoir des tâches répétitives identifiables et quelqu\'un pour porter le sujet après mon départ.',
-        1 => 'Les formations à Bruxelles se donnent en visioconférence, en groupe réduit, sur vos propres documents. Le présentiel reste possible pour un projet important.',
-        2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systématiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les équipes ont essaye seules.',
-      ),
-    ),
-    5 => 
-    array (
-      'type' => 'definitions',
-      'etiquette' => 'Prudence',
-      'titre' => 'Ce que je dis toujours en formation.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'L\'IA se trompe avec aplomb',
-          'texte' => 'Elle produit des réponses fausses avec la même assurance que les bonnes. Toute sortie destinée à un client, un partenaire ou une administration doit être relue par quelqu\'un qui connaît le sujet. Une formation qui ne dit pas cela est une formation dangereuse.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Vos données sortent de chez vous',
-          'texte' => 'Ce que vous collez dans un assistant grand public part sur des serveurs étrangers. On définit ensemble ce qui peut sortir et ce qui ne sortira jamais: données clients nominatives, informations financières, documents contractuels.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Ce n\'est pas un remplacement',
-          'texte' => 'L\'IA fait gagner du temps sur des tâches répétitives. Elle ne remplace ni le jugement métier ni la relation client. Une équipe qui croit l\'inverse produit vite du travail médiocre en grande quantité.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Tout ne mérite pas d\'être automatisé',
-          'texte' => 'Une tâche faite deux fois par an ne justifie pas qu\'on y passe une journée. On cible ce qui revient chaque semaine, rien d\'autre.',
-        ),
+        0 => 'Les institutions, les cabinets de conseil et les PME de Bruxelles sont ceux qui retirent le plus d\'une formation à l\'IA. La taille compte peu, le niveau technique aussi: ce qui compte, ce sont des tâches répétitives bien identifiées et une personne chargée de faire vivre le sujet après mon passage.',
+        1 => 'Les sessions se tiennent en visioconférence, en petit groupe, sur vos documents; un projet d\'envergure peut justifier le présentiel. Un point de suivi un mois plus tard est inclus dans les formations de deux jours, parce que les difficultés réelles ressortent quand les équipes ont pratiqué seules, et que sans cela une formation retombe en quelques semaines.',
       ),
     ),
   ),
@@ -127,38 +66,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Faut-il des connaissances techniques ?',
-      'r' => 'Aucune. Les formations s\'adressent à des équipes métier: commerciaux, secrétariat, comptabilité, direction. Si quelqu\'un sait écrire un message, il peut suivre.',
+      'q' => 'Mes collaborateurs ne sont pas techniciens: peuvent-ils suivre ?',
+      'r' => 'Oui. Le public visé, ce sont des équipes métier: commerciaux, secrétariat, comptabilité, direction. Savoir écrire un message est suffisant.',
     ),
     1 => 
     array (
-      'q' => 'Combien de personnes par session ?',
-      'r' => 'Jusqu\'à douze pour un atelier découverte, dix pour une formation complète. Au-delà, on ne peut plus travailler sur les documents de chacun, et c\'est justement ce qui fait la valeur de la session.',
+      'q' => 'Quelle est la taille d\'un groupe ?',
+      'r' => 'Douze personnes au maximum en atelier découverte, dix en formation complète. Plus nombreux, on ne regarderait plus le travail de chacun, alors que toute la session repose là-dessus.',
     ),
     2 => 
     array (
-      'q' => 'Intervenez-vous sur place à Bruxelles ?',
-      'r' => 'Les formations à Bruxelles se donnent en visioconférence, en groupe réduit, sur vos propres documents. Le présentiel reste possible pour un projet important.',
+      'q' => 'La formation se fait-elle à distance ou chez nous ?',
+      'r' => 'Par défaut en visioconférence, en groupe réduit, sur vos documents. Pour un projet important, le présentiel est possible. Les langues de travail sont le français et l\'anglais, pas le néerlandais.',
     ),
     3 => 
     array (
-      'q' => 'Que produit-on pendant la formation ?',
-      'r' => 'Des consignes réutilisables sur vos propres cas, et une ou deux automatisations simples si le format le permet. Vous repartez avec quelque chose qui fonctionne, pas seulement avec des notes.',
+      'q' => 'Qu\'aurons-nous produit à la fin, et comment se passe la suite ?',
+      'r' => 'Vous aurez des consignes réutilisables sur vos propres cas et, si le format le permet, une ou deux automatisations simples. Un point de suivi un mois plus tard est prévu dans les formats de deux jours.',
     ),
     4 => 
     array (
-      'q' => 'Et après la formation ?',
-      'r' => 'Un point de suivi un mois plus tard est inclus dans les formats de deux jours. C\'est la que remontent les vrais blocages, une fois que les équipes ont essaye seules. Sans ce point, une formation retombe presque toujours.',
-    ),
-    5 => 
-    array (
-      'q' => 'Nos données sont sensibles. Est-ce compatible ?',
-      'r' => 'C\'est un sujet à part entière de la formation. On définit ce qui peut sortir et ce qui ne sortira jamais, et on regarde les solutions qui gardent les données chez vous quand la sensibilité l\'exige.',
-    ),
-    6 => 
-    array (
-      'q' => 'L\'IA va-t-elle remplacer nos employés ?',
-      'r' => 'Non, et une formation qui vend cette promesse ment. Elle supprime du temps passe sur des tâches répétitives. Ce que vos équipes font de ce temps libère est une décision de management, pas une conséquence de l\'outil.',
+      'q' => 'Peut-on faire entrer des données sensibles dans un assistant ?',
+      'r' => 'Pas dans un assistant grand public: ce qu\'on y colle part sur des serveurs étrangers. On fixe ensemble ce qui peut sortir ou non, et on regarde les solutions qui gardent les données chez vous si la sensibilité l\'exige. Tout texte destiné à un client ou à un partenaire se relit avant envoi.',
     ),
   ),
 );
