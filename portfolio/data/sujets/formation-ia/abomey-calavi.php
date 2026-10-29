@@ -6,13 +6,13 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'formation-ia-entreprise-abomey-calavi',
-  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
+  'robots' => 'noindex',
   'ville' => 'Abomey-Calavi',
   'ville_slug' => 'abomey-calavi',
   'pays' => 'Bénin',
   'titre' => 'Formation IA en entreprise à Abomey-Calavi',
   'accroche' => 'Former vos équipes sur vos vrais documents, pas sur des exercices de démonstration.',
-  'intro' => 'La majorité des formations à l\'intelligence artificielle échouent pour la même raison: elles montrent des outils au lieu de résoudre un problème. Une équipe qui a vu une démonstration impressionnante retourne à ses habitudes la semaine suivante. Je travaille l\'inverse: on part de deux ou trois tâches que vos équipes de Abomey-Calavi répètent chaque semaine, et on les traite pendant la formation, sur vos vrais documents. Ce qui est produit ce jour-là est utilisable dès le lendemain.',
+  'intro' => 'À Abomey-Calavi, rédiger les appréciations de bulletins immobilise plusieurs enseignants trois fois par an. Voilà le type de travail sur lequel je préfère démarrer une formation, plutôt que par une présentation d\'outils. Nous retenons quelques tâches qui reviennent régulièrement dans votre école, votre clinique ou votre pharmacie, et nous les menons à bien sur vos vrais documents pendant la session. Le résultat est prêt à servir le lendemain, et la consigne sur les données nominatives est posée avant la moindre manipulation.',
   'sections' => 
   array (
     0 => 
@@ -36,90 +36,29 @@ return array (
       array (
         0 => 'Dans les écoles et les structures de santé, la sensibilité des données domine tout le reste. Un dossier d\'élève, un dossier patient: ce sont des informations qu\'aucune consigne ne doit faire sortir vers un service externe. La formation commence donc par cette limite, avant même de montrer le moindre outil.',
         1 => 'Le deuxième frein est la disponibilité. Une équipe pédagogique ou soignante ne se libère pas facilement, et sûrement pas deux jours consécutifs en période scolaire ou en forte affluence. Les sessions se calent hors période de pointe, quitte à fractionner en demi-journées.',
-        2 => 'Le troisième tient à la croissance rapide de la commune: beaucoup de structures ont double de volume sans changer de méthode, et l\'IA arrive parfois comme une solution miracle à un problème d\'organisation. Je le dis clairement en formation: si votre fichier élèves existe en trois versions divergentes, aucun assistant ne réglera cela. C\'est un chantier de structuration, pas d\'IA.',
+        2 => 'Le troisième tient à la croissance rapide de la commune: beaucoup de structures ont doublé de volume sans changer de méthode, et l\'IA arrive parfois comme une solution miracle à un problème d\'organisation. Je le dis clairement en formation: si votre fichier élèves existe en trois versions divergentes, aucun assistant ne réglera cela. C\'est un chantier de structuration, pas d\'IA.',
       ),
     ),
     2 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Programmes',
-      'titre' => 'Quatre formats, selon votre point de départ.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Abomey-Calavi.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Prise en main des assistants',
-          'texte' => 'ChatGPT, Claude et Gemini: ce qu\'ils savent faire, ce qu\'ils inventent, et comment vérifier. Une demi-journée, sans prérequis technique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Rédiger de bonnes consignes',
-          'texte' => 'La compétence qui sépare un usage décevant d\'un usage utile. On travaille sur vos propres documents, pas sur des exercices.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Automatiser avec l\'IA',
-          'texte' => 'Relier un assistant à vos outils via n8n: tri de messages, extraction de données, rédaction de réponses. Le niveau ou l\'IA cesse d\'être un gadget.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Cadrer les usages pour les dirigeants',
-          'texte' => 'Ce qu\'on autorise, ce qu\'on interdit, quelles données ne sortent jamais. Une demi-journée qui évite des incidents coûteux.',
-        ),
+        0 => 'Je commence par les appréciations de bulletins, parce que le point de départ est simple, des notes et quelques mots-clés, et que le gain se mesure tout de suite chez plusieurs enseignants. Viennent ensuite les réponses aux questions récurrentes des parents ou des patients, où l\'on cherche un ton constant et une information juste. Le résumé d\'un dossier long avant une consultation ou un conseil de classe arrive en dernier, car il touche aux dossiers élèves et patients, les plus chargés en données sensibles, et demande que la limite sur ces données soit déjà bien comprise.',
+        1 => 'Pour tenir compte de la disponibilité des équipes, je cale les séances hors période de pointe, quitte à les fractionner en demi-journées, plutôt que d\'imposer deux jours consécutifs en pleine période scolaire ou à forte affluence. Je viens dans vos locaux, et un point de suivi un mois plus tard accompagne la formation de deux jours. Le tarif est fixé sur devis après un cadrage, et le devis est gratuit et sans engagement.',
       ),
     ),
     3 => 
-    array (
-      'type' => 'liste',
-      'etiquette' => 'Tarifs',
-      'titre' => 'Formats et tarifs indicatifs.',
-      'items' => 
-      array (
-        0 => 'Atelier découverte, une demi-journée, jusqu\'à 12 personnes: à partir de 150 000 FCFA.',
-        1 => 'Formation complète, deux jours, jusqu\'à 10 personnes: à partir de 450 000 FCFA.',
-        2 => 'Accompagnement mensuel, une demi-journée par mois pendant trois mois: à partir de 350 000 FCFA.',
-        3 => 'Session dirigeants, deux heures: à partir de 100 000 FCFA. Les tarifs hors Afrique sont établis après cadrage.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
       'titre' => 'Avec quelles structures de Abomey-Calavi je travaille.',
       'paragraphes' => 
       array (
-        0 => 'A Abomey-Calavi, les organisations qui tirent le meilleur parti d\'une formation IA sont les écoles privées, cliniques et pharmacies de quartier. Le critère n\'est pas la taille ni le niveau technique: c\'est d\'avoir des tâches répétitives identifiables et quelqu\'un pour porter le sujet après mon départ.',
-        1 => 'Les formations à Abomey-Calavi se donnent en présentiel, dans vos locaux, avec vos propres documents de travail.',
-        2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systématiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les équipes ont essaye seules.',
-      ),
-    ),
-    5 => 
-    array (
-      'type' => 'definitions',
-      'etiquette' => 'Prudence',
-      'titre' => 'Ce que je dis toujours en formation.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'L\'IA se trompe avec aplomb',
-          'texte' => 'Elle produit des réponses fausses avec la même assurance que les bonnes. Toute sortie destinée à un client, un partenaire ou une administration doit être relue par quelqu\'un qui connaît le sujet. Une formation qui ne dit pas cela est une formation dangereuse.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Vos données sortent de chez vous',
-          'texte' => 'Ce que vous collez dans un assistant grand public part sur des serveurs étrangers. On définit ensemble ce qui peut sortir et ce qui ne sortira jamais: données clients nominatives, informations financières, documents contractuels.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Ce n\'est pas un remplacement',
-          'texte' => 'L\'IA fait gagner du temps sur des tâches répétitives. Elle ne remplace ni le jugement métier ni la relation client. Une équipe qui croit l\'inverse produit vite du travail médiocre en grande quantité.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Tout ne mérite pas d\'être automatisé',
-          'texte' => 'Une tâche faite deux fois par an ne justifie pas qu\'on y passe une journée. On cible ce qui revient chaque semaine, rien d\'autre.',
-        ),
+        0 => 'À Abomey-Calavi, ce sont les écoles privées, les cliniques et les pharmacies de quartier qui retirent le plus d\'une formation IA. Peu importe leur taille ou leur aisance technique. Il faut des tâches répétitives que l\'on sait nommer, et une personne prête à faire vivre le sujet quand je serai reparti.',
+        1 => 'Mon intervention a lieu en présentiel, chez vous, sur vos documents de travail. Pour éviter que tout retombe en quelques semaines, je fixe un rendez-vous de suivi un mois après, compris dans les formations de deux jours. Les difficultés réelles n\'apparaissent qu\'une fois vos équipes livrées à elles-mêmes.',
       ),
     ),
   ),
@@ -127,38 +66,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Faut-il des connaissances techniques ?',
-      'r' => 'Aucune. Les formations s\'adressent à des équipes métier: commerciaux, secrétariat, comptabilité, direction. Si quelqu\'un sait écrire un message, il peut suivre.',
+      'q' => 'Mon personnel enseignant ou soignant doit-il être à l\'aise avec la technique ?',
+      'r' => 'Non. Il suffit de savoir rédiger un message. Les séances parlent le langage du métier, pas celui de l\'informatique.',
     ),
     1 => 
     array (
-      'q' => 'Combien de personnes par session ?',
-      'r' => 'Jusqu\'à douze pour un atelier découverte, dix pour une formation complète. Au-delà, on ne peut plus travailler sur les documents de chacun, et c\'est justement ce qui fait la valeur de la session.',
+      'q' => 'Quel est le nombre maximal de participants ?',
+      'r' => 'Douze pour un atelier découverte, dix pour une formation complète. Plus nombreux, on ne pourrait plus traiter les documents de chaque participant, ce qui ferait perdre tout l\'intérêt de la séance.',
     ),
     2 => 
     array (
-      'q' => 'Intervenez-vous sur place à Abomey-Calavi ?',
-      'r' => 'Les formations à Abomey-Calavi se donnent en présentiel, dans vos locaux, avec vos propres documents de travail.',
+      'q' => 'Qu\'aura-t-on fabriqué à la sortie ?',
+      'r' => 'Des consignes que vous pourrez réutiliser sur vos propres cas, plus une ou deux automatisations simples si le format s\'y prête. Deux réflexes sont posés au passage: relire toute production de l\'IA avant qu\'elle parte vers un parent, un patient ou un partenaire, et ne jamais coller de données nominatives dans un assistant grand public.',
     ),
     3 => 
     array (
-      'q' => 'Que produit-on pendant la formation ?',
-      'r' => 'Des consignes réutilisables sur vos propres cas, et une ou deux automatisations simples si le format le permet. Vous repartez avec quelque chose qui fonctionne, pas seulement avec des notes.',
+      'q' => 'Y a-t-il un accompagnement après les séances ?',
+      'r' => 'Un rendez-vous de suivi est prévu un mois plus tard dans les formations de deux jours. Il permet de lever les blocages qui n\'apparaissent qu\'à l\'usage, quand je ne suis plus à vos côtés.',
     ),
     4 => 
     array (
-      'q' => 'Et après la formation ?',
-      'r' => 'Un point de suivi un mois plus tard est inclus dans les formats de deux jours. C\'est la que remontent les vrais blocages, une fois que les équipes ont essaye seules. Sans ce point, une formation retombe presque toujours.',
-    ),
-    5 => 
-    array (
-      'q' => 'Nos données sont sensibles. Est-ce compatible ?',
-      'r' => 'C\'est un sujet à part entière de la formation. On définit ce qui peut sortir et ce qui ne sortira jamais, et on regarde les solutions qui gardent les données chez vous quand la sensibilité l\'exige.',
-    ),
-    6 => 
-    array (
-      'q' => 'L\'IA va-t-elle remplacer nos employés ?',
-      'r' => 'Non, et une formation qui vend cette promesse ment. Elle supprime du temps passe sur des tâches répétitives. Ce que vos équipes font de ce temps libère est une décision de management, pas une conséquence de l\'outil.',
+      'q' => 'Les séances ont-elles lieu à Abomey-Calavi même ?',
+      'r' => 'Oui, en présentiel, dans vos locaux, avec vos documents. Je les cale hors période de pointe, en demi-journées si besoin.',
     ),
   ),
 );

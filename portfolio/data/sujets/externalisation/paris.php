@@ -5,13 +5,13 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'externaliser-developpement-web-paris',
-  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
+  'robots' => 'noindex',
   'ville' => 'Paris',
   'ville_slug' => 'paris',
   'pays' => 'France',
   'titre' => 'Externaliser son développement web depuis Paris',
-  'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Paris concentre la plus forte densité d\'agences et de studios de France, et aussi les tarifs journaliers les plus élevés du pays. Beaucoup d\'entreprises parisiennes ne cherchent pas moins cher par principe : elles cherchent à absorber un pic de charge sans recruter, ou à financer un projet secondaire que leur budget ne couvre plus. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je travaille avec des entreprises françaises à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'accroche' => 'Côté équipe : un développeur francophone, un fuseau compatible, et un cadre contractuel et RGPD qui tient.',
+  'intro' => 'Paris compte la plus forte densité d\'agences et de studios du pays, et les tarifs journaliers les plus élevés. Beaucoup d\'entreprises parisiennes n\'y cherchent pas moins cher par principe : elles veulent absorber un pic de charge sans recruter, ou financer un projet secondaire que leur budget ne couvre plus. Depuis Cotonou, au Bénin, je travaille à distance avec des entreprises françaises, en développement comme en automatisation. Cette page traite ce qu\'un décideur parisien vérifie avant de signer avec un prestataire hors de France : le sort des données, la TVA de la facture, le recours si le projet dérape.',
   'sections' => 
   array (
     0 => 
@@ -23,113 +23,46 @@ return array (
       array (
         0 => 
         array (
-          'titre' => 'La protection des données',
-          'texte' => 'Le RGPD s\'applique dès que des données personnelles de résidents européens sont traitées, quel que soit le lieu du prestataire. C\'est l\'objection la plus légitime que l\'on m\'oppose, et elle se traite par trois moyens : hébergement des données dans l\'UE, je déploie chez OVH, Scaleway ou Hetzner -, clauses contractuelles types annexées au contrat, et accès nominatifs tracés. Le prestataire est hors UE ; les données, elles, n\'en sortent pas.',
+          'titre' => 'Le sort des données',
+          'texte' => 'C\'est l\'objection la plus légitime que l\'on m\'oppose. Le RGPD s\'applique dès que des données personnelles de résidents européens sont traitées, quel que soit le lieu du prestataire. Trois moyens y répondent : l\'hébergement des données dans l\'UE (je déploie chez OVH, Scaleway ou Hetzner), les clauses contractuelles types annexées au contrat et les accès nominatifs tracés. Le prestataire que je suis se trouve hors UE ; les données, elles, restent à l\'intérieur.',
         ),
         1 => 
         array (
-          'titre' => 'Le traitement de la facture',
-          'texte' => 'Une entreprise française qui achète une prestation de services à un prestataire établi hors de l\'Union européenne applique l\'autoliquidation : je facture hors taxes, vous déclarez et déduisez la TVA dans la même opération. L\'effet de trésorerie est nul, et la facture reste parfaitement déductible.',
+          'titre' => 'La facturation',
+          'texte' => 'Pour une entreprise française, acheter une prestation de services à un prestataire établi hors de l\'Union européenne relève de l\'autoliquidation. J\'émets une facture hors taxes ; dans la même opération, vous déclarez la TVA et vous la déduisez. La trésorerie n\'en subit aucun effet, et la facture reste parfaitement déductible.',
         ),
         2 => 
         array (
-          'titre' => 'Le recours en cas de litige',
-          'texte' => 'Le contrat peut être soumis au droit français et désigner une juridiction française. Je ne m\'y oppose jamais : c\'est la contrepartie normale d\'une relation à distance, et le refuser serait un signal d\'alerte.',
+          'titre' => 'En cas de litige',
+          'texte' => 'Droit français, juridiction française : le contrat peut prévoir les deux. Je ne m\'y oppose jamais, car il s\'agit de la contrepartie normale d\'une relation menée à distance. Refuser cette clause serait un signal d\'alerte.',
         ),
         3 => 
         array (
-          'titre' => 'Le point qu\'on ne vous dira pas ailleurs',
-          'texte' => 'Attention en revanche au Crédit d\'Impôt Recherche et au CII : les dépenses sous-traitées hors UE n\'y ouvrent pas droit. Si votre projet repose sur ces dispositifs, un prestataire européen sera plus pertinent, je vous le dis avant que vous ne le découvriez au bilan.',
+          'titre' => 'Ce qu\'on omet souvent de dire',
+          'texte' => 'Le Crédit d\'Impôt Recherche et le CII appellent à la prudence : ils excluent les dépenses sous-traitées hors UE. Si votre projet repose sur ces dispositifs, un prestataire européen sera plus pertinent. Je vous le dis avant que vous ne le découvriez au bilan.',
         ),
       ),
     ),
     1 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Comparaison',
-      'titre' => 'Face aux autres options que vous étudiez.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Collaborer depuis Cotonou',
+      'titre' => 'Comment s\'organise la collaboration avec une entreprise de Paris.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Face à un freelance ou une agence locale',
-          'texte' => 'L\'écart de tarif est réel et il est le premier argument. Mais la proximité physique a une valeur : si votre projet exige des ateliers en présentiel réguliers ou une intégration dans une équipe existante, un prestataire local reste le bon choix. Je vous le dirai plutôt que de forcer.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Face à l\'Europe de l\'Est',
-          'texte' => 'Les tarifs sont comparables, souvent légèrement inférieurs chez moi. La différence tient à la langue : je travaille en français natif, ce qui supprime la couche de traduction sur les spécifications, les comptes rendus et la documentation. Sur un projet métier, c\'est là que se perdent la plupart des malentendus coûteux.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Face à l\'Asie du Sud',
-          'texte' => 'Les tarifs y sont parfois inférieurs. Le fuseau horaire, lui, ne l\'est pas : entre Paris et l\'Inde, une question posée en fin de journée trouve sa réponse le lendemain. Avec Cotonou, l\'écart va de zéro à deux heures pour l\'Europe, ce qui permet de travailler dans la même journée.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Face à une plateforme de mise en relation',
-          'texte' => 'Vous y trouverez moins cher, et beaucoup de projets y échouent pour la même raison : personne ne cadre le besoin avant de coder. Mon travail commence par le cadrage, et je facture ce temps parce qu\'il détermine tout le reste.',
-        ),
+        0 => 'Pour un pic de charge ou un projet secondaire, la question parisienne est moins le prix que la sécurité juridique. Le RGPD s\'applique même avec un prestataire hors UE ; mes déploiements restent donc chez OVH, Scaleway ou Hetzner, avec clauses contractuelles types et accès nominatifs tracés. Je facture hors taxes, vous pratiquez l\'autoliquidation. Le contrat peut relever du droit français, avec juridiction française. Avant tout devis, un cadrage écrit en deux à trois visioconférences, chacune suivie d\'un compte rendu que vous validez, puis un contrat à jalons : vous ne payez jamais tout d\'avance.',
+        1 => 'Je peux renforcer votre équipe sur l\'automatisation de processus avec n8n ou Make, sur des applications métier sur mesure en PHP/Laravel, Node.js ou Python, ou sur un ERP open source comme Odoo ou Dolibarr. Mon décalage avec Paris va de zéro à deux heures : nous travaillons dans la même journée. Si votre projet exige des ateliers en présentiel réguliers ou une intégration dans une équipe en place, une agence ou un freelance parisien reste préférable. Si vous comptez sur le CIR ou le CII, prenez un prestataire européen.',
       ),
     ),
     2 => 
-    array (
-      'type' => 'etapes',
-      'etiquette' => 'Fonctionnement',
-      'titre' => 'Comment se déroule une collaboration à distance.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'Cadrage écrit avant tout devis',
-          'texte' => 'Deux à trois séances de visioconférence, chacune suivie d\'un compte rendu que vous validez. À distance, ce qui n\'est pas écrit n\'existe pas, c\'est la règle qui évite l\'essentiel des litiges.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Contrat, jalons et paiements fractionnés',
-          'texte' => 'Un contrat avec livrables datés, paiement par jalons, et le droit applicable de votre choix. Vous ne payez jamais l\'intégralité d\'avance.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Livraisons testables toutes les deux semaines',
-          'texte' => 'Une mise en ligne régulière que vos équipes testent réellement. C\'est ainsi que la confiance se construit sans se voir, et que les écarts se corrigent tant qu\'ils sont petits.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Un point hebdomadaire fixe',
-          'texte' => 'Même quand tout va bien. Le rendez-vous qu\'on annule parce qu\'il n\'y a rien à dire est le premier signe d\'un projet qui dérive.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Transfert complet en fin de mission',
-          'texte' => 'Code source, accès, documentation et formation. Vous devez pouvoir changer de prestataire sans repartir de zéro, c\'est une clause que je pose sans qu\'on me la demande.',
-        ),
-      ),
-    ),
-    3 => 
-    array (
-      'type' => 'liste',
-      'etiquette' => 'Périmètre',
-      'titre' => 'Ce sur quoi j\'interviens pour les entreprises de Paris.',
-      'items' => 
-      array (
-        0 => 'Automatisation de processus avec n8n ou Make : c\'est mon terrain principal et celui où l\'écart de coût se transforme le plus vite en retour sur investissement.',
-        1 => 'Développement d\'applications métier sur mesure en PHP/Laravel, Node.js ou Python.',
-        2 => 'Intégration et déploiement d\'ERP open source, Odoo, Dolibarr, y compris la reprise de données.',
-        3 => 'API REST et passerelles entre outils existants, pour faire communiquer ce que vous avez déjà.',
-        4 => 'Renfort ponctuel sur un pic de charge, en complément de votre équipe interne.',
-        5 => 'Ce que je ne fais pas : le design graphique pur, le natif iOS avancé, et tout projet exigeant une présence physique régulière. Vous perdriez du temps et moi aussi.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
       'titre' => 'Avec quelles entreprises de Paris je travaille.',
       'paragraphes' => 
       array (
-        0 => 'Les structures qui tirent le meilleur parti de ce type de collaboration à Paris sont les agences web saturées, startups en phase de traction, PME de services et e-commerçants. Le point commun n\'est pas la taille : c\'est d\'avoir un besoin défini, un interlocuteur disponible et l\'acceptation d\'un fonctionnement écrit.',
-        1 => 'À l\'inverse, si votre organisation exige des validations en réunion physique ou si personne n\'est disponible pour un point hebdomadaire, la distance jouera contre vous quel que soit le prestataire. C\'est un critère d\'organisation avant d\'être un critère géographique, et il vaut mieux le regarder en face au départ.',
+        0 => 'À Paris, ce fonctionnement sert surtout les agences web saturées, les startups en phase de traction, les PME de services et les e-commerçants. Ce n\'est pas une affaire de taille : il faut un besoin défini, un interlocuteur joignable et une préférence pour l\'écrit.',
+        1 => 'Une structure qui ne valide qu\'en réunion physique, ou qui ne peut pas dégager un point par semaine, souffrira de la distance avec n\'importe quel prestataire. Le critère est organisationnel, pas géographique : mieux vaut s\'en rendre compte avant de lancer le projet.',
       ),
     ),
   ),
@@ -137,38 +70,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Où seront hébergées nos données ?',
-      'r' => 'Le RGPD s\'applique dès que des données personnelles de résidents européens sont traitées, quel que soit le lieu du prestataire. C\'est l\'objection la plus légitime que l\'on m\'oppose, et elle se traite par trois moyens : hébergement des données dans l\'UE, je déploie chez OVH, Scaleway ou Hetzner -, clauses contractuelles types annexées au contrat, et accès nominatifs tracés. Le prestataire est hors UE ; les données, elles, n\'en sortent pas.',
+      'q' => 'Mes données quittent-elles l\'Union européenne ?',
+      'r' => 'Non. Je déploie chez OVH, Scaleway ou Hetzner, ce qui garde les données en UE, même si je suis établi hors de l\'Union. Le RGPD reste applicable, des clauses contractuelles types sont annexées au contrat et les accès sont nominatifs et tracés.',
     ),
     1 => 
     array (
-      'q' => 'Comment se passe la facturation et la TVA ?',
-      'r' => 'Une entreprise française qui achète une prestation de services à un prestataire établi hors de l\'Union européenne applique l\'autoliquidation : je facture hors taxes, vous déclarez et déduisez la TVA dans la même opération. L\'effet de trésorerie est nul, et la facture reste parfaitement déductible.',
+      'q' => 'Dois-je payer de la TVA sur vos factures ?',
+      'r' => 'Je facture hors taxes. Votre entreprise applique l\'autoliquidation, puisque le prestataire est hors de l\'Union : vous déclarez et déduisez la TVA dans une même opération, sans effet sur la trésorerie.',
     ),
     2 => 
     array (
-      'q' => 'Quel droit s\'applique au contrat ?',
-      'r' => 'Le contrat peut être soumis au droit français et désigner une juridiction française. Je ne m\'y oppose jamais : c\'est la contrepartie normale d\'une relation à distance, et le refuser serait un signal d\'alerte.',
+      'q' => 'Puis-je imposer le droit français ?',
+      'r' => 'Oui, avec une juridiction française si vous le souhaitez. Je ne le refuse jamais.',
     ),
     3 => 
     array (
-      'q' => 'Quel est le décalage horaire avec Cotonou ?',
-      'r' => 'De zéro à deux heures selon la saison. Concrètement, nos journées de travail se recouvrent presque entièrement et une question posée le matin trouve sa réponse dans la journée.',
+      'q' => 'Le CIR ou le CII couvrent-ils votre prestation ?',
+      'r' => 'Non, les dépenses sous-traitées hors UE n\'y ouvrent pas droit. Si votre projet en dépend, il vaut mieux un prestataire européen.',
     ),
     4 => 
     array (
-      'q' => 'Comment vous payer depuis Paris ?',
-      'r' => 'Par virement bancaire international classique, ou via un service de transfert type Wise qui réduit les frais et les délais. Facture en bonne et due forme à chaque jalon, en euros, en francs suisses ou en dollars canadiens selon votre pays.',
-    ),
-    5 => 
-    array (
-      'q' => 'Que se passe-t-il si le projet dérape ?',
-      'r' => 'Le paiement par jalons limite mécaniquement votre exposition : vous ne payez que ce qui est livré et validé. Le contrat prévoit les conditions de rupture et la remise des travaux en cours. Et je préfère refuser un projet que je ne peux pas mener plutôt que de l\'accepter et l\'échouer, cela m\'est déjà arrivé.',
-    ),
-    6 => 
-    array (
-      'q' => 'Pourquoi le Bénin plutôt qu\'un autre pays africain ?',
-      'r' => 'Je ne prétendrai pas que le Bénin est objectivement supérieur au Sénégal, au Maroc ou à la Côte d\'Ivoire : chacun a ses écosystèmes et ses bons profils. Ce qui compte pour vous n\'est pas le pays mais la personne, ses réalisations vérifiables et sa façon de travailler. Regardez mes réalisations, appelez-moi, et jugez sur cette base plutôt que sur une carte.',
+      'q' => 'Intervenez-vous en renfort ponctuel ?',
+      'r' => 'Oui, en complément de votre équipe interne sur un pic de charge. Le décalage de zéro à deux heures avec Cotonou permet de travailler dans la même journée, et le paiement par jalons limite votre exposition.',
     ),
   ),
 );

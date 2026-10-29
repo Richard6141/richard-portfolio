@@ -5,13 +5,13 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'externaliser-developpement-web-geneve',
-  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
+  'robots' => 'noindex',
   'ville' => 'Genève',
   'ville_slug' => 'geneve',
   'pays' => 'Suisse',
   'titre' => 'Externaliser son développement web depuis Genève',
-  'accroche' => 'Un développeur francophone, dans un fuseau compatible, avec un cadre contractuel et RGPD qui tient.',
-  'intro' => 'Genève est l\'un des marchés les plus chers d\'Europe pour le développement logiciel. L\'écart tarifaire avec un prestataire basé en Afrique de l\'Ouest y est le plus marqué que je connaisse, ce qui rend d\'autant plus important de ne pas décider sur ce seul critère. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je travaille avec des entreprises suisses à distance. Cette page ne cherche pas à vous convaincre que l\'Afrique est un bon choix : elle répond aux trois questions que vous vous posez réellement avant de signer avec un prestataire hors de votre pays, la conformité de vos données, le traitement fiscal de la facture, et ce qui se passe si le projet dérape.',
+  'accroche' => 'Un développeur francophone, un fuseau compatible, un cadre contractuel clair et un volet RGPD qui tient.',
+  'intro' => 'Genève figure parmi les marchés les plus chers d\'Europe pour le développement logiciel, et l\'écart avec un prestataire d\'Afrique de l\'Ouest y est le plus net que je connaisse. Raison de plus pour ne pas trancher sur le seul prix. Je suis développeur et consultant en automatisation, basé à Cotonou, au Bénin, et je collabore à distance avec des entreprises suisses. Avant de confier un projet à quelqu\'un hors du pays, vous voulez savoir trois choses : où seront vos données, comment le fisc traitera la facture, et quel recours vous aurez si le projet dérape. Voici mes réponses.',
   'sections' => 
   array (
     0 => 
@@ -24,112 +24,45 @@ return array (
         0 => 
         array (
           'titre' => 'La protection des données',
-          'texte' => 'La nLPD révisée impose des garanties pour tout transfert de données vers un pays sans décision d\'adéquation. En pratique : hébergement en Suisse ou dans l\'UE, clauses contractuelles, journalisation des accès. Le prestataire est hors du pays ; les données restent où votre conformité l\'exige.',
+          'texte' => 'Tout transfert de données vers un pays sans décision d\'adéquation exige, selon la nLPD révisée, des garanties. Concrètement, vos données sont hébergées en Suisse ou dans l\'UE, avec des clauses contractuelles et une journalisation des accès. Je travaille depuis l\'étranger, mais ce que je traite reste là où votre conformité l\'exige.',
         ),
         1 => 
         array (
           'titre' => 'Le traitement de la facture',
-          'texte' => 'La Suisse étant hors Union européenne, l\'acquisition de prestations de services étrangères relève de l\'impôt sur les acquisitions : vous l\'autoliquidez si vous êtes assujetti. Ma facture est établie hors taxes, en francs suisses ou en euros selon votre préférence.',
+          'texte' => 'Ma facture est établie hors taxes, en francs suisses ou en euros selon votre préférence. Côté fiscalité, la Suisse étant hors Union européenne, les prestations de services étrangères acquises relèvent de l\'impôt sur les acquisitions, et vous l\'autoliquidez si vous êtes assujetti.',
         ),
         2 => 
         array (
           'titre' => 'Le recours en cas de litige',
-          'texte' => 'Contrat de droit suisse et for au siège de votre entreprise, sur simple demande. C\'est un point que les entreprises romandes soulèvent presque systématiquement, et à juste titre.',
+          'texte' => 'Le contrat est de droit suisse, avec un for au siège de votre entreprise, sur simple demande. Les entreprises romandes posent presque toujours la question, et elles ont raison.',
         ),
         3 => 
         array (
           'titre' => 'Le point qu\'on ne vous dira pas ailleurs',
-          'texte' => 'Un mot sur les tarifs : l\'écart avec le marché suisse est le plus important de tous les pays où j\'interviens. C\'est un avantage réel, mais il ne doit pas être le seul critère, un prestataire mal choisi coûte toujours plus cher que l\'économie réalisée, à Genève comme ailleurs.',
+          'texte' => 'Parlons tarifs : de tous les pays où j\'interviens, c\'est avec le marché suisse que l\'écart est le plus grand. L\'avantage est réel, sans être le seul critère à retenir, car à Genève comme ailleurs, un prestataire mal choisi coûte toujours plus cher que l\'économie réalisée.',
         ),
       ),
     ),
     1 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Comparaison',
-      'titre' => 'Face aux autres options que vous étudiez.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Collaborer depuis Cotonou',
+      'titre' => 'Ce que change une collaboration à distance pour une entreprise de Genève.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Face à un freelance ou une agence locale',
-          'texte' => 'L\'écart de tarif est réel et il est le premier argument. Mais la proximité physique a une valeur : si votre projet exige des ateliers en présentiel réguliers ou une intégration dans une équipe existante, un prestataire local reste le bon choix. Je vous le dirai plutôt que de forcer.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Face à l\'Europe de l\'Est',
-          'texte' => 'Les tarifs sont comparables, souvent légèrement inférieurs chez moi. La différence tient à la langue : je travaille en français natif, ce qui supprime la couche de traduction sur les spécifications, les comptes rendus et la documentation. Sur un projet métier, c\'est là que se perdent la plupart des malentendus coûteux.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Face à l\'Asie du Sud',
-          'texte' => 'Les tarifs y sont parfois inférieurs. Le fuseau horaire, lui, ne l\'est pas : entre Genève et l\'Inde, une question posée en fin de journée trouve sa réponse le lendemain. Avec Cotonou, l\'écart va de zéro à deux heures pour l\'Europe, ce qui permet de travailler dans la même journée.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Face à une plateforme de mise en relation',
-          'texte' => 'Vous y trouverez moins cher, et beaucoup de projets y échouent pour la même raison : personne ne cadre le besoin avant de coder. Mon travail commence par le cadrage, et je facture ce temps parce qu\'il détermine tout le reste.',
-        ),
+        0 => 'Pour une entreprise genevoise, le point de départ est la nLPD révisée : les données restent en Suisse ou dans l\'UE, avec clauses contractuelles et journalisation des accès, même si le prestataire est hors du pays. Le cadrage écrit en fixe ensuite les limites : deux à trois visioconférences, chacune suivie d\'un compte rendu à valider. Le contrat de droit suisse, avec for au siège de votre entreprise sur simple demande, traduit ce cadrage en livrables datés et en paiements par jalons, sans règlement intégral d\'avance. Ma facture est hors taxes, en francs suisses ou en euros, et vous autoliquidez l\'impôt sur les acquisitions si vous êtes assujetti.',
+        1 => 'Je peux prendre en charge l\'automatisation de processus avec n8n ou Make, des applications métier sur mesure et le déploiement d\'ERP open source tels qu\'Odoo ou Dolibarr. Le prix reste un argument, mais pas le seul : un prestataire mal choisi coûte toujours plus cher que l\'économie réalisée. Si votre projet réclame des ateliers fréquents sur place ou une intégration dans une équipe déjà constituée, un freelance ou une agence de la région sera le bon choix, et je vous le dirai franchement.',
       ),
     ),
     2 => 
-    array (
-      'type' => 'etapes',
-      'etiquette' => 'Fonctionnement',
-      'titre' => 'Comment se déroule une collaboration à distance.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'Cadrage écrit avant tout devis',
-          'texte' => 'Deux à trois séances de visioconférence, chacune suivie d\'un compte rendu que vous validez. À distance, ce qui n\'est pas écrit n\'existe pas, c\'est la règle qui évite l\'essentiel des litiges.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Contrat, jalons et paiements fractionnés',
-          'texte' => 'Un contrat avec livrables datés, paiement par jalons, et le droit applicable de votre choix. Vous ne payez jamais l\'intégralité d\'avance.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Livraisons testables toutes les deux semaines',
-          'texte' => 'Une mise en ligne régulière que vos équipes testent réellement. C\'est ainsi que la confiance se construit sans se voir, et que les écarts se corrigent tant qu\'ils sont petits.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Un point hebdomadaire fixe',
-          'texte' => 'Même quand tout va bien. Le rendez-vous qu\'on annule parce qu\'il n\'y a rien à dire est le premier signe d\'un projet qui dérive.',
-        ),
-        4 => 
-        array (
-          'titre' => 'Transfert complet en fin de mission',
-          'texte' => 'Code source, accès, documentation et formation. Vous devez pouvoir changer de prestataire sans repartir de zéro, c\'est une clause que je pose sans qu\'on me la demande.',
-        ),
-      ),
-    ),
-    3 => 
-    array (
-      'type' => 'liste',
-      'etiquette' => 'Périmètre',
-      'titre' => 'Ce sur quoi j\'interviens pour les entreprises de Genève.',
-      'items' => 
-      array (
-        0 => 'Automatisation de processus avec n8n ou Make : c\'est mon terrain principal et celui où l\'écart de coût se transforme le plus vite en retour sur investissement.',
-        1 => 'Développement d\'applications métier sur mesure en PHP/Laravel, Node.js ou Python.',
-        2 => 'Intégration et déploiement d\'ERP open source, Odoo, Dolibarr, y compris la reprise de données.',
-        3 => 'API REST et passerelles entre outils existants, pour faire communiquer ce que vous avez déjà.',
-        4 => 'Renfort ponctuel sur un pic de charge, en complément de votre équipe interne.',
-        5 => 'Ce que je ne fais pas : le design graphique pur, le natif iOS avancé, et tout projet exigeant une présence physique régulière. Vous perdriez du temps et moi aussi.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
       'titre' => 'Avec quelles entreprises de Genève je travaille.',
       'paragraphes' => 
       array (
-        0 => 'Les structures qui tirent le meilleur parti de ce type de collaboration à Genève sont les organisations internationales, cabinets, négoce, horlogerie et services financiers. Le point commun n\'est pas la taille : c\'est d\'avoir un besoin défini, un interlocuteur disponible et l\'acceptation d\'un fonctionnement écrit.',
-        1 => 'À l\'inverse, si votre organisation exige des validations en réunion physique ou si personne n\'est disponible pour un point hebdomadaire, la distance jouera contre vous quel que soit le prestataire. C\'est un critère d\'organisation avant d\'être un critère géographique, et il vaut mieux le regarder en face au départ.',
+        0 => 'À Genève, la collaboration fonctionne bien avec les organisations internationales, les cabinets, le négoce, l\'horlogerie et les services financiers. Leur point commun tient moins à la taille qu\'à trois choses : un besoin précis, un référent disponible et l\'acceptation d\'un mode de travail écrit.',
+        1 => 'Si vos décisions ne se prennent qu\'en réunion physique, ou si personne n\'a le temps d\'un rendez-vous hebdomadaire, la distance posera problème, quel que soit le prestataire retenu. C\'est une question d\'organisation interne plus que de lieu, à examiner avant de s\'engager.',
       ),
     ),
   ),
@@ -137,38 +70,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Où seront hébergées nos données ?',
-      'r' => 'La nLPD révisée impose des garanties pour tout transfert de données vers un pays sans décision d\'adéquation. En pratique : hébergement en Suisse ou dans l\'UE, clauses contractuelles, journalisation des accès. Le prestataire est hors du pays ; les données restent où votre conformité l\'exige.',
+      'q' => 'Mes données quitteront-elles la Suisse ?',
+      'r' => 'Pas si votre conformité l\'interdit. La nLPD révisée encadre les transferts vers un pays sans décision d\'adéquation : j\'héberge donc en Suisse ou dans l\'UE, avec des clauses contractuelles et la journalisation des accès.',
     ),
     1 => 
     array (
-      'q' => 'Comment se passe la facturation et la TVA ?',
-      'r' => 'La Suisse étant hors Union européenne, l\'acquisition de prestations de services étrangères relève de l\'impôt sur les acquisitions : vous l\'autoliquidez si vous êtes assujetti. Ma facture est établie hors taxes, en francs suisses ou en euros selon votre préférence.',
+      'q' => 'Comment ma facture sera-t-elle traitée ?',
+      'r' => 'Elle est établie hors taxes, en francs suisses ou en euros à votre convenance. La Suisse étant hors UE, c\'est l\'impôt sur les acquisitions qui s\'applique, que vous autoliquidez si vous êtes assujetti.',
     ),
     2 => 
     array (
-      'q' => 'Quel droit s\'applique au contrat ?',
-      'r' => 'Contrat de droit suisse et for au siège de votre entreprise, sur simple demande. C\'est un point que les entreprises romandes soulèvent presque systématiquement, et à juste titre.',
+      'q' => 'Quel droit et quel for pour le contrat ?',
+      'r' => 'Le droit suisse, avec for au siège de votre entreprise, sur simple demande. Les sociétés romandes me posent presque toujours cette question, à juste titre.',
     ),
     3 => 
     array (
-      'q' => 'Quel est le décalage horaire avec Cotonou ?',
-      'r' => 'De zéro à deux heures selon la saison. Concrètement, nos journées de travail se recouvrent presque entièrement et une question posée le matin trouve sa réponse dans la journée.',
+      'q' => 'Le tarif suffit-il à justifier le choix ?',
+      'r' => 'Non. L\'écart avec le marché suisse est le plus important de tous les pays où j\'interviens, mais un prestataire mal choisi coûte plus que l\'économie réalisée.',
     ),
     4 => 
     array (
-      'q' => 'Comment vous payer depuis Genève ?',
-      'r' => 'Par virement bancaire international classique, ou via un service de transfert type Wise qui réduit les frais et les délais. Facture en bonne et due forme à chaque jalon, en euros, en francs suisses ou en dollars canadiens selon votre pays.',
-    ),
-    5 => 
-    array (
-      'q' => 'Que se passe-t-il si le projet dérape ?',
-      'r' => 'Le paiement par jalons limite mécaniquement votre exposition : vous ne payez que ce qui est livré et validé. Le contrat prévoit les conditions de rupture et la remise des travaux en cours. Et je préfère refuser un projet que je ne peux pas mener plutôt que de l\'accepter et l\'échouer, cela m\'est déjà arrivé.',
-    ),
-    6 => 
-    array (
-      'q' => 'Pourquoi le Bénin plutôt qu\'un autre pays africain ?',
-      'r' => 'Je ne prétendrai pas que le Bénin est objectivement supérieur au Sénégal, au Maroc ou à la Côte d\'Ivoire : chacun a ses écosystèmes et ses bons profils. Ce qui compte pour vous n\'est pas le pays mais la personne, ses réalisations vérifiables et sa façon de travailler. Regardez mes réalisations, appelez-moi, et jugez sur cette base plutôt que sur une carte.',
+      'q' => 'Comment se règle une mission ?',
+      'r' => 'Par virement international classique ou par un service de transfert comme Wise, qui réduit frais et délais. Une facture est émise à chaque jalon, en euros ou en francs suisses.',
     ),
   ),
 );

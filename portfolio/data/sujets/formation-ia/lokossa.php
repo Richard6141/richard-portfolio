@@ -6,13 +6,13 @@ declare(strict_types=1);
 
 return array (
   'slug' => 'formation-ia-entreprise-lokossa',
-  'robots' => 'noindex',  // 28/10/2026 : page quasi jumelle des autres villes (ressemblance de 68 à 91 %), hors sitemap jusqu'à sa réécriture.
+  'robots' => 'noindex',
   'ville' => 'Lokossa',
   'ville_slug' => 'lokossa',
   'pays' => 'Bénin',
   'titre' => 'Formation IA en entreprise à Lokossa',
   'accroche' => 'Former vos équipes sur vos vrais documents, pas sur des exercices de démonstration.',
-  'intro' => 'La majorité des formations à l\'intelligence artificielle échouent pour la même raison: elles montrent des outils au lieu de résoudre un problème. Une équipe qui a vu une démonstration impressionnante retourne à ses habitudes la semaine suivante. Je travaille l\'inverse: on part de deux ou trois tâches que vos équipes de Lokossa répètent chaque semaine, et on les traite pendant la formation, sur vos vrais documents. Ce qui est produit ce jour-là est utilisable dès le lendemain.',
+  'intro' => 'À Lokossa, une bonne part du travail passe par des courriers, des notes et des dossiers à préparer dans la forme attendue avant qu\'un responsable valide. C\'est par là que je commence : on prend quelques tâches de rédaction ou de synthèse que vos équipes refont chaque semaine, et on les traite en séance, avec vos propres documents. Les échanges avec des partenaires togolais et le réflexe de faire valider chaque pièce donnent le cadre. Vous repartez avec des textes prêts à servir, pas avec des notes de démonstration.',
   'sections' => 
   array (
     0 => 
@@ -41,85 +41,24 @@ return array (
     ),
     2 => 
     array (
-      'type' => 'definitions',
-      'etiquette' => 'Programmes',
-      'titre' => 'Quatre formats, selon votre point de départ.',
-      'items' => 
+      'type' => 'prose',
+      'etiquette' => 'Par où commencer',
+      'titre' => 'Par où commencer à Lokossa.',
+      'paragraphes' => 
       array (
-        0 => 
-        array (
-          'titre' => 'Prise en main des assistants',
-          'texte' => 'ChatGPT, Claude et Gemini: ce qu\'ils savent faire, ce qu\'ils inventent, et comment vérifier. Une demi-journée, sans prérequis technique.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Rédiger de bonnes consignes',
-          'texte' => 'La compétence qui sépare un usage décevant d\'un usage utile. On travaille sur vos propres documents, pas sur des exercices.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Automatiser avec l\'IA',
-          'texte' => 'Relier un assistant à vos outils via n8n: tri de messages, extraction de données, rédaction de réponses. Le niveau ou l\'IA cesse d\'être un gadget.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Cadrer les usages pour les dirigeants',
-          'texte' => 'Ce qu\'on autorise, ce qu\'on interdit, quelles données ne sortent jamais. Une demi-journée qui évite des incidents coûteux.',
-        ),
+        0 => 'Je commencerais par le résumé des dossiers volumineux avant une réunion de validation. C\'est la tâche la plus simple à contrôler : le responsable connaît le dossier, il voit tout de suite si le résumé est fidèle, et personne n\'a l\'impression de céder une décision à l\'outil. Cela répond aussi à la crainte des suppressions de postes, puisque le volume de dossiers grandit à effectif constant. Viennent ensuite les courriers et les notes rédigés à partir de quelques points clés, puis les documents échangés avec les partenaires togolais, où chaque chiffre se vérifie à la main.',
+        1 => 'Le format se choisit selon votre équipe : un atelier d\'une demi-journée pour découvrir, une formation de deux jours pour traiter vos dossiers en profondeur, ou un accompagnement mensuel sur trois mois pour installer les habitudes. Une session de deux heures est prévue pour les dirigeants. Tout se passe en présentiel, dans vos locaux. Le tarif est fixé sur devis, après un cadrage de vos besoins. Le devis est gratuit et sans engagement.',
       ),
     ),
     3 => 
-    array (
-      'type' => 'liste',
-      'etiquette' => 'Tarifs',
-      'titre' => 'Formats et tarifs indicatifs.',
-      'items' => 
-      array (
-        0 => 'Atelier découverte, une demi-journée, jusqu\'à 12 personnes: à partir de 150 000 FCFA.',
-        1 => 'Formation complète, deux jours, jusqu\'à 10 personnes: à partir de 450 000 FCFA.',
-        2 => 'Accompagnement mensuel, une demi-journée par mois pendant trois mois: à partir de 350 000 FCFA.',
-        3 => 'Session dirigeants, deux heures: à partir de 100 000 FCFA. Les tarifs hors Afrique sont établis après cadrage.',
-      ),
-    ),
-    4 => 
     array (
       'type' => 'prose',
       'etiquette' => 'Le tissu local',
       'titre' => 'Avec quelles structures de Lokossa je travaille.',
       'paragraphes' => 
       array (
-        0 => 'A Lokossa, les organisations qui tirent le meilleur parti d\'une formation IA sont les administration du Mono, commerces et coopératives. Le critère n\'est pas la taille ni le niveau technique: c\'est d\'avoir des tâches répétitives identifiables et quelqu\'un pour porter le sujet après mon départ.',
-        1 => 'Les formations à Lokossa se donnent en présentiel, dans vos locaux, avec vos propres documents de travail.',
-        2 => 'Une formation sans suite retombe en quelques semaines. C\'est pourquoi je propose systématiquement un point de suivi un mois plus tard, inclus dans les formats de deux jours: c\'est la que les vrais blocages apparaissent, une fois que les équipes ont essaye seules.',
-      ),
-    ),
-    5 => 
-    array (
-      'type' => 'definitions',
-      'etiquette' => 'Prudence',
-      'titre' => 'Ce que je dis toujours en formation.',
-      'items' => 
-      array (
-        0 => 
-        array (
-          'titre' => 'L\'IA se trompe avec aplomb',
-          'texte' => 'Elle produit des réponses fausses avec la même assurance que les bonnes. Toute sortie destinée à un client, un partenaire ou une administration doit être relue par quelqu\'un qui connaît le sujet. Une formation qui ne dit pas cela est une formation dangereuse.',
-        ),
-        1 => 
-        array (
-          'titre' => 'Vos données sortent de chez vous',
-          'texte' => 'Ce que vous collez dans un assistant grand public part sur des serveurs étrangers. On définit ensemble ce qui peut sortir et ce qui ne sortira jamais: données clients nominatives, informations financières, documents contractuels.',
-        ),
-        2 => 
-        array (
-          'titre' => 'Ce n\'est pas un remplacement',
-          'texte' => 'L\'IA fait gagner du temps sur des tâches répétitives. Elle ne remplace ni le jugement métier ni la relation client. Une équipe qui croit l\'inverse produit vite du travail médiocre en grande quantité.',
-        ),
-        3 => 
-        array (
-          'titre' => 'Tout ne mérite pas d\'être automatisé',
-          'texte' => 'Une tâche faite deux fois par an ne justifie pas qu\'on y passe une journée. On cible ce qui revient chaque semaine, rien d\'autre.',
-        ),
+        0 => 'Ce sont les administrations du Mono, les commerces et les coopératives de Lokossa qui profitent le plus de ce travail. Ni la taille de la structure ni son niveau technique ne décident : il faut des tâches qui reviennent et que l\'on sait nommer, et une personne qui reprendra le sujet une fois que je serai reparti.',
+        1 => 'Je viens chez vous, dans vos locaux, et nous travaillons sur les pièces que vos équipes manipulent déjà. Un point de suivi un mois plus tard est inclus dans la formation de deux jours : les difficultés réelles n\'apparaissent que lorsque les équipes s\'y essaient sans moi. Sans ce rendez-vous, l\'élan retombe en quelques semaines.',
       ),
     ),
   ),
@@ -127,38 +66,28 @@ return array (
   array (
     0 => 
     array (
-      'q' => 'Faut-il des connaissances techniques ?',
-      'r' => 'Aucune. Les formations s\'adressent à des équipes métier: commerciaux, secrétariat, comptabilité, direction. Si quelqu\'un sait écrire un message, il peut suivre.',
+      'q' => 'Faut-il être à l\'aise avec l\'informatique ?',
+      'r' => 'Pas du tout. Je m\'adresse à des équipes métier : commerciaux, secrétariat, comptabilité, direction. Quiconque sait rédiger un message peut suivre.',
     ),
     1 => 
     array (
-      'q' => 'Combien de personnes par session ?',
-      'r' => 'Jusqu\'à douze pour un atelier découverte, dix pour une formation complète. Au-delà, on ne peut plus travailler sur les documents de chacun, et c\'est justement ce qui fait la valeur de la session.',
+      'q' => 'Quelle taille de groupe pour une session ?',
+      'r' => 'Douze personnes au plus pour un atelier découverte, dix pour la formation complète. À plus nombreux, je ne pourrais plus travailler sur les pièces de chaque participant, et c\'est ce qui fait l\'intérêt de la séance.',
     ),
     2 => 
     array (
-      'q' => 'Intervenez-vous sur place à Lokossa ?',
-      'r' => 'Les formations à Lokossa se donnent en présentiel, dans vos locaux, avec vos propres documents de travail.',
+      'q' => 'Vous déplacez-vous à Lokossa ?',
+      'r' => 'Oui. La formation a lieu en présentiel, dans vos locaux, à partir des documents que vos équipes utilisent déjà.',
     ),
     3 => 
     array (
-      'q' => 'Que produit-on pendant la formation ?',
-      'r' => 'Des consignes réutilisables sur vos propres cas, et une ou deux automatisations simples si le format le permet. Vous repartez avec quelque chose qui fonctionne, pas seulement avec des notes.',
+      'q' => 'Que ressort-il de la séance ?',
+      'r' => 'Des consignes que vous pourrez réutiliser sur vos propres cas et, si le format le permet, une ou deux automatisations simples. Je rappelle aussi deux règles : tout texte destiné à un client, un partenaire ou une administration se relit avant l\'envoi, et on ne colle pas de données sensibles dans un assistant grand public.',
     ),
     4 => 
     array (
-      'q' => 'Et après la formation ?',
-      'r' => 'Un point de suivi un mois plus tard est inclus dans les formats de deux jours. C\'est la que remontent les vrais blocages, une fois que les équipes ont essaye seules. Sans ce point, une formation retombe presque toujours.',
-    ),
-    5 => 
-    array (
-      'q' => 'Nos données sont sensibles. Est-ce compatible ?',
-      'r' => 'C\'est un sujet à part entière de la formation. On définit ce qui peut sortir et ce qui ne sortira jamais, et on regarde les solutions qui gardent les données chez vous quand la sensibilité l\'exige.',
-    ),
-    6 => 
-    array (
-      'q' => 'L\'IA va-t-elle remplacer nos employés ?',
-      'r' => 'Non, et une formation qui vend cette promesse ment. Elle supprime du temps passe sur des tâches répétitives. Ce que vos équipes font de ce temps libère est une décision de management, pas une conséquence de l\'outil.',
+      'q' => 'Que se passe-t-il une fois la formation terminée ?',
+      'r' => 'Un point de suivi un mois plus tard fait partie des formations de deux jours. Les blocages réels y remontent, quand les équipes ont essayé seules. Sans lui, l\'élan retombe presque toujours.',
     ),
   ),
 );
