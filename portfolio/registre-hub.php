@@ -108,6 +108,7 @@ include __DIR__ . '/partials/pv2-header.php';
     <?php endif; ?>
     <div class="registre__article registre__article--hub">
       <?= blocs_rendre($rp['sections']) ?>
+      <?php if (str_starts_with((string) $rp['url'], '/formations')) { include __DIR__ . '/partials/bandeau-audyxa.php'; } ?>
       <?php if (!empty($rp['faq'])): ?><?= bloc_rendre(['type' => 'faq', 'titre' => 'Questions fréquentes', 'items' => $rp['faq']]) ?><?php endif; ?>
       <?php if (!empty($rp['sources'])): ?><?= bloc_rendre(['type' => 'sources', 'titre' => 'Sources', 'items' => $rp['sources']]) ?><?php endif; ?>
     </div>

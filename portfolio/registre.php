@@ -12,6 +12,10 @@ $rp         = $page;
 $miettes   = maillage_ariane($rp, $racineReg);
 $groupes   = maillage_liens($rp, $racineReg);
 $editorial = !in_array($rp['type'], ['page', 'hub'], true);
+// Pages de formation : la mention Audyxa s'affiche sur toutes (30/10/2026).
+$pageFormation = in_array($rp['type'], ['formation', 'formation-pays', 'domaine', 'metier', 'metier-pays'], true)
+    || str_starts_with((string) $rp['url'], '/formations/')
+    || str_starts_with((string) $rp['url'], '/formation-');
 
 $pageTitle     = $rp['title'];
 $pageDesc      = $rp['meta'];
@@ -47,6 +51,7 @@ include __DIR__ . '/partials/pv2-header.php';
       <?= blocs_rendre($sectionsRendues) ?>
       <?php if (!$programmePlace && !empty($rp['programme'])): ?><?= bloc_rendre(['type' => 'programme', 'titre' => 'Programme détaillé', 'jours' => $rp['programme']]) ?><?php endif; ?>
       <?php if (!$fichePlacee && !empty($rp['fiche'])): ?><?= bloc_rendre(['type' => 'fiche', 'titre' => 'Quels repères retenir ' . pays_liste()[$rp['slug']]['dans'] . ' ?', 'faits' => $rp['fiche']]) ?><?php endif; ?>
+      <?php if ($pageFormation) { include __DIR__ . '/partials/bandeau-audyxa.php'; } ?>
       <?php if (!empty($rp['faq'])): ?><?= bloc_rendre(['type' => 'faq', 'titre' => 'Questions fréquentes', 'items' => $rp['faq']]) ?><?php endif; ?>
       <?php if (!empty($rp['sources'])): ?><?= bloc_rendre(['type' => 'sources', 'titre' => 'Sources', 'items' => $rp['sources']]) ?><?php endif; ?>
       <?php if ($editorial) { include __DIR__ . '/partials/boite-auteur.php'; } ?>

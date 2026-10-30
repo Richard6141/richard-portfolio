@@ -202,7 +202,7 @@ return [
             'titre'       => 'Pourquoi confier un projet numérique gabonais à Richard SALANON ?',
             'paragraphes' => [
                 'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
-                'Richard a déjà travaillé avec des entreprises au Gabon. Il compte plus de six ans d’expérience, s’est formé à EPITECH en 2022 et a aussi travaillé avec des entreprises du Bénin, de Côte d’Ivoire, du Togo, du Sénégal, du Tchad et de RD Congo. Il est le créateur de Wapy, un assistant WhatsApp à intelligence artificielle pour les entreprises d’Afrique francophone, et le co-fondateur d’Audyxa.',
+                'Richard a déjà travaillé avec des entreprises au Gabon. Il compte plus de six ans d’expérience, s’est formé à EPITECH en 2022 et a aussi travaillé avec des entreprises du Bénin, de Côte d’Ivoire, du Togo, du Sénégal, du Tchad et de RD Congo. Il est le créateur de Wapy, un assistant WhatsApp à intelligence artificielle pour les entreprises d’Afrique francophone, et le co-fondateur d’<a href="https://audyxa.com">Audyxa</a>.',
                 'Les projets réalisés pour d’autres clients d’Afrique et d’Europe, avec leur description, sont présentés sur la page des <a href="/realisations/">réalisations</a>. Pour l’histoire du parcours, voir <a href="/richard-salanon">la page de Richard SALANON</a> et la page <a href="/a-propos/">à propos</a>.',
             ],
         ],

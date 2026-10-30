@@ -242,7 +242,7 @@ return [
             'titre'       => 'Qui est Richard SALANON, et pourquoi le choisir pour la RD Congo ?',
             'paragraphes' => [
                 "Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d'Afrique francophone, d'Europe et du Canada.",
-                "Il compte plus de six ans d'expérience, a suivi la formation d'EPITECH en 2022, a conçu l'assistant WhatsApp à intelligence artificielle Wapy et co-fonde Audyxa. Richard a déjà travaillé avec des entreprises en RD Congo, et l'heure de Cotonou est celle de Kinshasa. Le tableau ci-dessous résume cette pratique.",
+                "Il compte plus de six ans d'expérience, a suivi la formation d'EPITECH en 2022, a conçu l'assistant WhatsApp à intelligence artificielle Wapy et co-fonde <a href=\"https://audyxa.com\">Audyxa</a>. Richard a déjà travaillé avec des entreprises en RD Congo, et l'heure de Cotonou est celle de Kinshasa. Le tableau ci-dessous résume cette pratique.",
             ],
         ],
         [

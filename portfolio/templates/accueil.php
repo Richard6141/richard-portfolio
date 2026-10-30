@@ -104,7 +104,7 @@ $etapes = [
       <a class="lien-fleche lien-fleche--clair" href="<?= sanitize($p['url']) ?>" rel="noopener" target="_blank">Découvrir <?= sanitize($p['nom']) ?><?= icone('arrow-up-right', 16) ?></a>
       <?php endforeach; ?>
       <?php foreach (fait('affiliations') as $a): ?>
-      <p class="duo__affiliation"><?= sanitize($a['role']) ?> d'<a href="<?= sanitize($a['url']) ?>" rel="noopener" target="_blank"><?= sanitize($a['nom']) ?></a>, cabinet de formation et de transformation digitale.</p>
+      <p class="duo__affiliation"><?= sanitize($a['role']) ?> d'<a href="<?= sanitize($a['url']) ?>" rel="noopener" target="_blank"><?= sanitize($a['nom']) ?></a>, <?= sanitize($a['description'] ?? 'cabinet de formation et de transformation digitale') ?>.</p>
       <?php endforeach; ?>
     </article>
   </div>

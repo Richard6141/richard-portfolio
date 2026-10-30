@@ -174,7 +174,7 @@ return [
             'titre'       => 'Pourquoi confier un projet monégasque à Richard SALANON ?',
             'paragraphes' => [
                 'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
-                'Richard peut accompagner à distance les entreprises à Monaco. Formé à EPITECH en 2022, il cumule plus de six ans d’expérience et a mené des missions à distance en France, en Belgique et en Suisse, des pays dont les règles de TVA et de facturation sont proches de celles de la Principauté. Il est aussi l’auteur de Wapy, assistant WhatsApp doté d’intelligence artificielle, et l’un des fondateurs d’Audyxa.',
+                'Richard peut accompagner à distance les entreprises à Monaco. Formé à EPITECH en 2022, il cumule plus de six ans d’expérience et a mené des missions à distance en France, en Belgique et en Suisse, des pays dont les règles de TVA et de facturation sont proches de celles de la Principauté. Il est aussi l’auteur de Wapy, assistant WhatsApp doté d’intelligence artificielle, et l’un des fondateurs d’<a href="https://audyxa.com">Audyxa</a>.',
                 'Pour juger de la méthode sur des cas concrets, les <a href="/realisations/">réalisations</a> décrivent des projets menés pour des clients d’Afrique et d’Europe ; son parcours se retrouve dans <a href="/richard-salanon">sa présentation</a> et dans <a href="/a-propos/">l’à-propos</a> du site.',
             ],
         ],

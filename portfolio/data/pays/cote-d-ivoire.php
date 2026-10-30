@@ -257,7 +257,7 @@ return [
             'titre'       => 'Pourquoi confier un projet ivoirien à Richard SALANON ?',
             'paragraphes' => [
                 fait('phrase_entite'),
-                'Richard a déjà travaillé avec des entreprises en Côte d\'Ivoire. Il compte plus de six ans d\'expérience, a suivi sa formation à EPITECH en 2022 et co-fonde Audyxa. Il édite Wapy, un assistant WhatsApp à intelligence artificielle destiné aux entreprises d\'Afrique francophone, ce qui lui donne une pratique directe de l\'API WhatsApp, du paiement mobile et des contraintes de connexion. Les projets ci-dessous, liés à Abidjan, ont été livrés.',
+                'Richard a déjà travaillé avec des entreprises en Côte d\'Ivoire. Il compte plus de six ans d\'expérience, a suivi sa formation à EPITECH en 2022 et co-fonde <a href="https://audyxa.com">Audyxa</a>. Il édite Wapy, un assistant WhatsApp à intelligence artificielle destiné aux entreprises d\'Afrique francophone, ce qui lui donne une pratique directe de l\'API WhatsApp, du paiement mobile et des contraintes de connexion. Les projets ci-dessous, liés à Abidjan, ont été livrés.',
             ],
         ],
         [

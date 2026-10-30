@@ -163,7 +163,7 @@ return [
             'titre'       => 'Pourquoi Richard pour un projet à Bujumbura, Gitega ou Ngozi ?',
             'paragraphes' => [
                 'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
-                'Richard peut accompagner à distance les entreprises au Burundi : il compte plus de six ans d’expérience, diplômé d’EPITECH en 2022, il est le créateur de Wapy, assistant WhatsApp à intelligence artificielle, et le co-fondateur d’Audyxa. Il conduit ses projets à distance, par visioconférence et WhatsApp, avec un devis rédigé en euros.',
+                'Richard peut accompagner à distance les entreprises au Burundi : il compte plus de six ans d’expérience, diplômé d’EPITECH en 2022, il est le créateur de Wapy, assistant WhatsApp à intelligence artificielle, et le co-fondateur d’<a href="https://audyxa.com">Audyxa</a>. Il conduit ses projets à distance, par visioconférence et WhatsApp, avec un devis rédigé en euros.',
                 'Les réalisations de son portfolio montrent la façon dont il conduit un projet, du site vitrine à l’application sur mesure : elles sont rassemblées sur <a href="/realisations/">la page des réalisations</a>. Les sites et les applications montrés y sont ceux de ses clients directs, ou réalisés en sous-traitance pour Digital Développement lorsque la page le précise. Pour comprendre sa démarche, la page <a href="/richard-salanon">Richard SALANON</a> la détaille.',
             ],
         ],

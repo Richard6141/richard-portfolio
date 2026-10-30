@@ -50,6 +50,7 @@ $horaires = fait('horaires');
     <div class="pied__marque">
       <a href="/" class="pied__logo" aria-label="Richard SALANON, accueil"><img src="<?= sanitize(imgV('/assets/img/logo-rs-clair.svg')) ?>" alt="Richard SALANON" width="232" height="48" loading="lazy" decoding="async"></a>
       <p><?= sanitize(fait('description_courte')) ?></p>
+      <p>Formations pilotées par <a href="https://audyxa.com" rel="noopener" target="_blank">Audyxa</a>, fondé par Richard SALANON avec <a href="https://paulmaximedossou.com" rel="noopener" target="_blank">Paul Maxime Dossou</a> : <a href="https://formation.audyxa.com" rel="noopener" target="_blank">formation.audyxa.com</a>.</p>
       <ul class="pied__coordonnees">
         <li><?= icone('map-pin', 18) ?><span><?= sanitize(fait('ville')) ?>, <?= sanitize(fait('pays')) ?>. Interventions dans <?= count(fait('zones')) ?> pays, sur place ou à distance.</span></li>
         <li><?= icone('phone', 18) ?><a href="tel:<?= sanitize(fait('telephone')) ?>"><?= sanitize(fait('telephone')) ?></a></li>
@@ -79,6 +80,7 @@ $horaires = fait('horaires');
                   ['Odoo pour vos équipes', '/formations/odoo-utilisateurs'], ['Visibilité Google', '/formations/visibilite-google'],
                   ['WhatsApp Business', '/formations/whatsapp-business']] as [$libelle, $url]): ?><li><a href="<?= sanitize(url_finale($url)) ?>"><?= sanitize($libelle) ?></a></li><?php endforeach; ?>
         <li><a href="/formations/">Toutes les formations</a></li>
+        <li><a href="https://formation.audyxa.com" rel="noopener" target="_blank">Audyxa Formation</a></li>
       </ul>
     </nav>
 

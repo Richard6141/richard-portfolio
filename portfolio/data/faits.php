@@ -85,7 +85,9 @@ return [
     ],
     // Co-fondation déclarée par Richard le 03/10/2026.
     'affiliations' => [
-        ['nom' => 'Audyxa', 'url' => 'https://audyxa.com', 'role' => 'Co-fondateur'],
+        ['nom' => 'Audyxa', 'url' => 'https://audyxa.com', 'role' => 'Co-fondateur', 'description' => 'cabinet de formation et de transformation digitale'],
+        // Plateforme de formation d'Audyxa, ajoutée à la demande de Richard le 30/10/2026.
+        ['nom' => 'Audyxa Formation', 'url' => 'https://formation.audyxa.com', 'role' => 'Co-fondateur', 'description' => 'plateforme de formation d\'Audyxa'],
     ],
 
     'paiements'     => ['Mobile Money (MTN, Moov)', 'carte bancaire', 'PayPal', 'virement', 'espèces'],

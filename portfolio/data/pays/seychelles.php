@@ -220,7 +220,7 @@ return [
             'titre'       => 'Pourquoi confier son projet à Richard SALANON aux Seychelles ?',
             'paragraphes' => [
                 fait('phrase_entite'),
-                'Richard peut accompagner à distance les entreprises aux Seychelles : il parle français et anglais, deux des trois langues nationales de l’archipel. Son parcours compte plus de six ans de métier et une formation à EPITECH en 2022. Il est aussi l’auteur de Wapy, son propre assistant WhatsApp à IA, et co-fondateur d’Audyxa.',
+                'Richard peut accompagner à distance les entreprises aux Seychelles : il parle français et anglais, deux des trois langues nationales de l’archipel. Son parcours compte plus de six ans de métier et une formation à EPITECH en 2022. Il est aussi l’auteur de Wapy, son propre assistant WhatsApp à IA, et co-fondateur d’<a href="https://audyxa.com">Audyxa</a>.',
                 'Les réalisations suivantes, issues de son portfolio, montrent le type de projet qu’il mène à Cotonou, à Paris et à Abidjan : boutique en deux devises, site bilingue, paiement mobile. Ces enjeux de langues et de devises sont ceux d’une entreprise de l’archipel. Le détail de chaque projet figure sur la page des <a href="/realisations/">réalisations</a>.',
             ],
         ],

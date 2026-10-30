@@ -239,7 +239,7 @@ return [
             'titre'       => 'Pourquoi confier son projet numérique congolais à Richard SALANON ?',
             'paragraphes' => [
                 "Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d'Afrique francophone, d'Europe et du Canada.",
-                "Avec plus de six ans d'expérience, une formation à EPITECH suivie en 2022 et la co-fondation d'Audyxa, Richard a aussi conçu Wapy, assistant WhatsApp à IA pour les sociétés d'Afrique francophone. Des entreprises du Gabon, de la RD Congo et du Tchad, voisins du Congo en Afrique centrale, font partie des pays où il intervient. Le tableau suivant résume son offre pour le Congo-Brazzaville.",
+                "Avec plus de six ans d'expérience, une formation à EPITECH suivie en 2022 et la co-fondation d'<a href=\"https://audyxa.com\">Audyxa</a>, Richard a aussi conçu Wapy, assistant WhatsApp à IA pour les sociétés d'Afrique francophone. Des entreprises du Gabon, de la RD Congo et du Tchad, voisins du Congo en Afrique centrale, font partie des pays où il intervient. Le tableau suivant résume son offre pour le Congo-Brazzaville.",
             ],
         ],
         [

@@ -231,6 +231,10 @@ include __DIR__ . '/partials/pv2-header.php';
   </div></section>
   <?php endif; ?>
 
+  <?php if (str_starts_with($sujet['slug'] ?? '', 'formation')): ?>
+  <section class="sect"><div class="wrap" style="max-width:1000px"><?php include __DIR__ . '/partials/bandeau-audyxa.php'; ?></div></section>
+  <?php endif; ?>
+
   <?php if (!empty($page['faq'])): ?>
   <section class="sect"><div class="wrap" style="max-width:1000px">
     <div class="sect-head rv"><h2><?= $page['ville_slug'] !== '' ? "Ce qu'on me demande à " . sanitize($page['ville']) . "." : 'Questions fréquentes.' ?></h2></div>

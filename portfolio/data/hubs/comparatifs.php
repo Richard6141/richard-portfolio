@@ -309,7 +309,7 @@ return [
         ],
         [
             'q' => 'Pourquoi Wapy et Audyxa n\'apparaissent-ils pas dans les comparatifs ?',
-            'r' => 'Parce que Richard a créé Wapy et qu\'il est co-fondateur d\'Audyxa. Les faire figurer dans un classement qu\'il rédige créerait un conflit d\'intérêts évident. Les comparatifs portent sur des outils tiers ; quand une aide de Richard est proposée, elle apparaît séparément, en fin de page, sans influencer la notation.',
+            'r' => 'Parce que Richard a créé Wapy et qu\'il est co-fondateur d\'<a href="https://audyxa.com">Audyxa</a>. Les faire figurer dans un classement qu\'il rédige créerait un conflit d\'intérêts évident. Les comparatifs portent sur des outils tiers ; quand une aide de Richard est proposée, elle apparaît séparément, en fin de page, sans influencer la notation.',
         ],
         [
             'q' => 'Un comparatif suffit-il pour décider ?',

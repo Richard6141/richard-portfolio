@@ -217,7 +217,7 @@ return [
             'paragraphes' => [
                 'Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d\'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d\'Afrique francophone, d\'Europe et du Canada.',
                 'Richard a déjà travaillé avec des entreprises en Suisse, comme dans treize autres pays dont la France et la Belgique. Parmi ses projets réalisés en sous-traitance pour Digital Développement : une boutique à deux devises et deux zones de livraison dont le back-office suit stocks, coupons et ventes, pour Laura Cosmetics (Paris et Abidjan), et une refonte avec suivi des demandes et simulateurs fiscaux pour Impulse Finance, à Argenteuil, livrée en trois jours. Ces projets figurent sur la page des <a href="/realisations/">réalisations</a>.',
-                'Formé à EPITECH en 2022, il a créé Wapy, un assistant WhatsApp à IA, et co-fonde Audyxa. Le détail de son parcours est sur <a href="/richard-salanon">sa page personnelle</a> et dans <a href="/a-propos/">À propos</a>.',
+                'Formé à EPITECH en 2022, il a créé Wapy, un assistant WhatsApp à IA, et co-fonde <a href="https://audyxa.com">Audyxa</a>. Le détail de son parcours est sur <a href="/richard-salanon">sa page personnelle</a> et dans <a href="/a-propos/">À propos</a>.',
             ],
         ],
         [

@@ -1240,6 +1240,9 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .pv2 .frise__point{display:grid;grid-template-columns:56px 1fr;gap:1rem;position:relative}
 .pv2 .frise__date{justify-self:center;align-self:start;padding:3px 8px;border-radius:var(--pill);background:var(--ink);color:#fff;font-size:.78rem;font-weight:700;white-space:nowrap}
 .pv2 .bloc--vigilance{padding:1.2rem 1.4rem;border:1px solid #EBC98A;background:#FDF6E8;border-radius:var(--radius-lg)}
+.pv2 .bloc--audyxa{padding:1.4rem 1.6rem;border:1px solid var(--border,#D9DEE7);background:var(--surface,#F5F7FA);border-radius:var(--radius-lg)}
+.pv2 .bloc--audyxa .bloc__titre{margin-top:0}
+.pv2 .bloc--audyxa p:last-child{margin-bottom:0}
 .pv2 .bloc--lecon{position:relative;overflow:hidden;padding:2rem;border-radius:var(--radius-xl);background:var(--ink);color:#fff}
 .pv2 .bloc--lecon .bloc__titre,.pv2 .bloc--lecon p{color:#fff}
 .pv2 .bloc--lecon::after{content:"\201C";position:absolute;right:1rem;top:-1.5rem;font-family:var(--titres);font-size:12rem;line-height:1;color:rgba(255,255,255,.05)}

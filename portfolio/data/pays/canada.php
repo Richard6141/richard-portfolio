@@ -260,7 +260,7 @@ return [
             'titre'       => 'Pourquoi confier son projet numérique canadien à Richard SALANON ?',
             'paragraphes' => [
                 "Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d'Afrique francophone, d'Europe et du Canada.",
-                "Richard a déjà travaillé avec des entreprises au Canada. Après plus de six ans de métier, une formation à EPITECH en 2022, la conception de Wapy, assistant WhatsApp à IA pour les entreprises d'Afrique francophone, et la co-fondation d'Audyxa, il travaille en français, et des devis en dollars canadiens. Pour un client québécois, chaque projet est cadré selon la Loi 25 dès le départ.",
+                "Richard a déjà travaillé avec des entreprises au Canada. Après plus de six ans de métier, une formation à EPITECH en 2022, la conception de Wapy, assistant WhatsApp à IA pour les entreprises d'Afrique francophone, et la co-fondation d'<a href=\"https://audyxa.com\">Audyxa</a>, il travaille en français, et des devis en dollars canadiens. Pour un client québécois, chaque projet est cadré selon la Loi 25 dès le départ.",
             ],
         ],
         [

@@ -236,7 +236,7 @@ $page = [
             'paragraphes' => [
                 fait('phrase_entite'),
                 "Son parcours : plus de 6 ans d'expérience, une formation à EPITECH en 2022, plus de 50 projets livrés, plus de 100 clients et plus de 200 personnes formées. Richard est intervenu, sur place ou à distance, dans quinze pays, dont le Burkina Faso, le Sénégal, la RD Congo, la France et la Belgique, cités dans les cas ci-dessus, ainsi qu'au Bénin, en Côte d'Ivoire, au Togo, au Mali, au Niger, au Cameroun, au Tchad, au Gabon, en Suisse et au Canada.",
-                "Côté produits, il a créé [[https://wapy.pro|Wapy]], un assistant WhatsApp à IA pour les entreprises d'Afrique francophone, et co-fonde Audyxa. Pour une ONG, ce métier de développeur compte : relier un outil de collecte à une base, à un tableur et à un rapport relève de l'ingénierie, pas seulement de la configuration.",
+                "Côté produits, il a créé [[https://wapy.pro|Wapy]], un assistant WhatsApp à IA pour les entreprises d'Afrique francophone, et co-fonde <a href=\"https://audyxa.com\">Audyxa</a>. Pour une ONG, ce métier de développeur compte : relier un outil de collecte à une base, à un tableur et à un rapport relève de l'ingénierie, pas seulement de la configuration.",
                 "Sa méthode, proposée comme cadre de travail, tient en quelques engagements vérifiables : un diagnostic de la chaîne de données avant tout achat d'outil, des outils libres et existants gardés quand ils suffisent, des accès et un code au nom de l'organisation, une documentation remise à chaque étape. Pour voir ses travaux, consultez la page [[/realisations/|réalisations]] ; le détail de son parcours se trouve sur [[/richard-salanon|sa page personnelle]].",
             ],
         ],

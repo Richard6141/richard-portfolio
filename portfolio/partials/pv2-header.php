@@ -78,6 +78,7 @@ $eCta = $nav['carte_cta'];
         <li class="entete__item"><a class="entete__lien" href="/realisations/">Réalisations</a></li>
         <li class="entete__item"><a class="entete__lien" href="/blog/">Blog</a></li>
         <li class="entete__item"><a class="entete__lien" href="/a-propos/">À propos</a></li>
+        <li class="entete__item"><a class="entete__lien" href="https://formation.audyxa.com" rel="noopener" target="_blank">Audyxa Formation</a></li>
       </ul>
     </nav>
 
@@ -113,6 +114,7 @@ $eCta = $nav['carte_cta'];
       <a class="tiroir__lien" href="/realisations/">Réalisations</a>
       <a class="tiroir__lien" href="/blog/">Blog</a>
       <a class="tiroir__lien" href="/a-propos/">À propos</a>
+      <a class="tiroir__lien" href="https://formation.audyxa.com" rel="noopener" target="_blank">Audyxa Formation</a>
       <div class="tiroir__actions">
         <a class="btn btn--action" href="/contact">Demander un devis</a>
         <a class="btn btn--contour" href="<?= sanitize($waLien) ?>" rel="noopener" target="_blank"><?= icone('whatsapp-logo', 18) ?>WhatsApp</a>

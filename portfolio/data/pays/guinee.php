@@ -229,7 +229,7 @@ return [
             'titre'       => 'Pourquoi confier son projet numérique guinéen à Richard SALANON ?',
             'paragraphes' => [
                 "Richard SALANON est consultant en digitalisation et développeur logiciel, basé à Cotonou, au Bénin. Il crée des sites, des applications web et mobiles, des automatisations et des intégrations d'intelligence artificielle, déploie Odoo et Dolibarr, et forme les équipes à ces outils, pour des entreprises d'Afrique francophone, d'Europe et du Canada.",
-                "Son expérience dépasse six ans, il s'est formé à EPITECH en 2022, il a conçu Wapy, un assistant WhatsApp à intelligence artificielle destiné aux entreprises d'Afrique francophone, et il a co-fondé Audyxa. Richard peut accompagner à distance les entreprises en Guinée : mêmes langues de travail, un décalage d'une heure, des échanges par WhatsApp et visioconférence, et un devis en euros qui évite toute conversion entre francs.",
+                "Son expérience dépasse six ans, il s'est formé à EPITECH en 2022, il a conçu Wapy, un assistant WhatsApp à intelligence artificielle destiné aux entreprises d'Afrique francophone, et il a co-fondé <a href=\"https://audyxa.com\">Audyxa</a>. Richard peut accompagner à distance les entreprises en Guinée : mêmes langues de travail, un décalage d'une heure, des échanges par WhatsApp et visioconférence, et un devis en euros qui évite toute conversion entre francs.",
             ],
         ],
         [
