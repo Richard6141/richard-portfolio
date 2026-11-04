@@ -11,7 +11,7 @@ declare(strict_types=1);
 return [
     'titre'   => 'Lumicash, EcoCash, BurundiPay et OBR : le consultant en digitalisation de Cotonou qui relie vos ventes, vos factures et votre IA à Bujumbura et à Gitega',
     'title'   => 'Consultant en digitalisation au Burundi | Richard SALANON',
-    'meta'    => 'Consultant en digitalisation pour le Burundi : création de site web, applications, Odoo, IA, formations d’équipe ou individuelles. Devis en euros.',
+    'meta'    => 'Consultant en digitalisation au Burundi : création de site internet, boutique en ligne, application mobile, SEO, IA, formations d’équipe ou individuelles.',
     'en_bref' => 'Depuis Cotonou, Richard conçoit à distance des sites, des applications web et mobiles, des automatisations, des intégrations d’IA et des déploiements Odoo pour les entreprises, les ONG et les institutions financières du Burundi. Les paiements passent par Lumicash et EcoCash, la facture suit le système eBMS de l’Office burundais des recettes, et les données personnelles relèvent de la loi du 10 mars 2026. Les échanges se font en français, par visioconférence et WhatsApp, avec un décalage d’une heure. Le devis est gratuit et rédigé en euros ; une première réponse part sous 24 heures.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',
