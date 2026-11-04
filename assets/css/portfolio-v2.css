@@ -1617,3 +1617,5 @@ body.pv2:not(.portfolio-body) #main-content:not(.accueil)::before{content:"";pos
 .art-bref{max-width:46rem;text-align:left;margin:1.25rem auto 0;font-size:1.0625rem;line-height:1.65}
 .art-bref strong{color:var(--acc)}
 .art-head .boite-auteur,.blog-main .boite-auteur{margin-top:2.5rem}
+
+.pv2 .maj-page{margin-top:1.5rem;text-align:center;font-size:.85rem;color:var(--muted)}

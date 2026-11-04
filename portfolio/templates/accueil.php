@@ -274,6 +274,7 @@ $etapes = [
 <section class="section" id="faq">
   <div class="conteneur conteneur--etroit">
     <?= bloc_rendre(['type' => 'faq', 'etiquette' => 'Questions fréquentes', 'titre' => 'Ce qu\'on me demande souvent', 'items' => $faq]) ?>
+    <p class="maj-page">Page mise à jour le <time datetime="2026-11-04">4 novembre 2026</time>.</p>
   </div>
 </section>
 

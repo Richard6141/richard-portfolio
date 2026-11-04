@@ -4,6 +4,8 @@
 declare(strict_types=1);
 
 return [
+    ['q' => 'Que fait un consultant en digitalisation concrètement ?', 'r' => 'Il part de votre activité : il repère ce qui fait perdre du temps ou des clients, choisit les bons outils (site, Odoo, Dolibarr, automatisation, IA), les met en place avec vous, puis forme vos équipes pour qu\'elles s\'en servent seules.'],
+    ['q' => 'Où intervenez-vous ?', 'r' => 'Sur place à Cotonou et au Bénin, à distance partout ailleurs : Afrique francophone, Europe et Canada. Un projet long combine souvent un lancement sur place et un suivi à distance.'],
     ['q' => 'Combien coûte un site web au Bénin ?', 'r' => 'Une vitrine démarre autour de 300 000 FCFA ; un e-commerce ou une application sur-mesure davantage. Je vous remets un devis clair après le cadrage, gratuit et sans engagement.'],
     ['q' => 'Quels sont les délais de réalisation ?', 'r' => 'Un site vitrine : 1 à 3 semaines. Une application sur-mesure : 1 à 3 mois selon la complexité. Le planning précis est fixé ensemble dès le cadrage.'],
     ['q' => 'Comment se passe le paiement ?', 'r' => 'Par Mobile Money (MTN / Moov), carte bancaire, PayPal, virement ou espèces, en plusieurs tranches liées aux étapes du projet.'],

@@ -36,7 +36,7 @@ $clients = array_values(array_filter($clients, static fn (array $c): bool => emp
 $faq     = require __DIR__ . '/templates/horizon-faq.php';
 
 $homeUrl       = SITE_URL . '/';
-$pageTitle     = 'Développeur web et IA à Cotonou, Bénin | Richard SALANON';
+$pageTitle     = 'Expert en digitalisation à Cotonou, Bénin | Richard SALANON';
 $pageDesc      = fait('description_courte');
 $pageCanonical = $homeUrl;
 $ogImage       = SITE_URL . fait('photo_og');
