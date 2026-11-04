@@ -97,7 +97,7 @@ function test_schema_faq_reprend_les_questions_visibles(): void
 function test_schema_faq_du_template_horizon_est_lisible(): void
 {
     $questions = require racine('portfolio/templates/horizon-faq.php');
-    assert_same(4, count($questions));
+    assert_same(6, count($questions));
     foreach ($questions as $qr) {
         assert_true($qr['q'] !== '' && $qr['r'] !== '', 'question ou réponse vide');
     }
