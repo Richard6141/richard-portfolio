@@ -52,6 +52,10 @@ return [
 
     'competences' => [
         'Création de sites web',
+        'Création de sites WordPress et de boutiques en ligne',
+        'Publicité en ligne : Google Ads et Facebook Ads',
+        'Tunnels de vente en ligne',
+        'Marketplaces et plateformes e-learning',
         'Développement d\'applications web sur mesure',
         'Développement d\'applications mobiles Android et iOS',
         'Référencement naturel (SEO)',
