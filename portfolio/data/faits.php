@@ -101,7 +101,15 @@ return [
     // Confirmé par Richard le 28/10/2026 : le devis est gratuit. Seul le devis l'est :
     // ne pas en déduire la gratuité du cadrage, d'une séance d'essai ni d'une visite.
     'devis_gratuit' => true,
+    // Confirmé par Richard le 04/11/2026 : ces tarifs de départ valent aussi pour un site ou une landing page sous WordPress.
     'tarifs_depart' => ['Landing page' => '150 000 FCFA', 'Site vitrine' => '300 000 FCFA', 'Référencement naturel' => '75 000 FCFA'],
+    // Confirmé par Richard le 04/11/2026 : méthode de travail pouvant figurer dans les fiches services.
+    // Le contenu exact (fréquence, lieu, formation) se fixe sur le devis ; ne pas inventer de durée ni de tarif.
+    'methode' => [
+        'compte rendu des campagnes publicitaires selon la fréquence convenue sur le devis',
+        'intervention à Cotonou ou à distance, selon le devis',
+        'séance de prise en main si elle est prévue au devis',
+    ],
 
     // Horaires publiés depuis le 20/08/2026 (à aligner sur la fiche Google Business).
     'horaires' => ['jours' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'ouverture' => '07:00', 'fermeture' => '20:00'],
