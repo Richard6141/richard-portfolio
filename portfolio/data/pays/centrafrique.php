@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Bangui, Bambari, Berbérati : des sites sobres et des commandes par WhatsApp pour des clients qui paient avec Orange, Telecel ou Moov',
-    'title'   => 'Développeur web et IA pour la Centrafrique | Richard SALANON',
-    'meta'    => 'Richard SALANON accompagne à distance les entreprises de Centrafrique : sites, applications, WhatsApp, Odoo et formations, devis en FCFA, réponse en 24 h.',
+    'title'   => 'Expert en digitalisation en Centrafrique | Richard SALANON',
+    'meta'    => 'Consultant en digitalisation en Centrafrique : création de site web, applications, WhatsApp, Odoo, formations d’équipe ou individuelles. Devis en FCFA.',
     'en_bref' => 'Richard SALANON conçoit des sites, des applications, des automatisations et des assistants WhatsApp pour les entreprises de Centrafrique, et forme leurs équipes. Tout se fait à distance depuis Cotonou, sans décalage horaire avec Bangui, en français. Les devis sont établis en FCFA, après un échange sur le contexte local : réseau mobile, mobile money, données personnelles, TVA et comptabilité OHADA.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',

@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Guesthouses de Praslin, conserveries de Mahé, prestataires financiers de Victoria : des sites et des outils de gestion conçus par Richard SALANON, sans quitter Cotonou',
-    'title'   => 'Développeur web et IA pour les Seychelles | Richard SALANON',
-    'meta'    => 'Richard SALANON accompagne à distance les entreprises des Seychelles : sites, réservation, Odoo, automatisation et IA, devis en euros, réponse sous 24 h.',
+    'title'   => 'Expert en digitalisation aux Seychelles | Richard SALANON',
+    'meta'    => 'Consultant en digitalisation pour les Seychelles : création de site web et réservation, Odoo, IA, formations d’équipe ou individuelles. Devis en euros.',
     'en_bref' => 'Richard SALANON réalise pour les sociétés de l’archipel des sites, des systèmes de réservation, des boutiques en ligne, des déploiements Odoo, des automatisations et des assistants d’IA, entièrement à distance depuis Cotonou. Les échanges se font en français ou en anglais, avec trois heures de décalage horaire. Chaque projet est cadré gratuitement puis chiffré sur devis, en euros.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',
