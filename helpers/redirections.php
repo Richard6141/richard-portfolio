@@ -77,6 +77,20 @@ function blog_exclusion_sql(array $slugs, string $colonne = 'slug'): array
 function navigation_chargee(): array
 {
     $nav = require __DIR__ . '/../portfolio/data/navigation.php';
+    // Un service à publication datée n'apparaît dans le menu qu'à sa date de mise en ligne.
+    require_once __DIR__ . '/registres.php';
+    foreach ($nav['services'] ?? [] as $famille => $g) {
+        $nav['services'][$famille]['liens'] = array_values(array_filter(
+            $g['liens'],
+            static function (array $l): bool {
+                if (!preg_match('#^/services/([a-z0-9-]+)$#', $l[1], $m)) {
+                    return true;
+                }
+                $page = registre_lire('service', $m[1]);
+                return $page === null || registre_publiee($page);
+            }
+        ));
+    }
     array_walk_recursive($nav, static function (&$v, $k): void {
         if (is_string($v) && str_starts_with($v, '/')) {
             $v = url_finale($v);

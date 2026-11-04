@@ -14,11 +14,11 @@ return [
     'services' => [
         'Sites et boutiques' => ['icone' => 'browser', 'liens' => [
             ['Site vitrine professionnel', '/services/site-vitrine-professionnel'],
+            ['Création de site WordPress', '/services/creation-site-wordpress'],
             ['Site e-commerce', '/services/site-e-commerce'],
             ['Landing page', '/services/landing-page-haute-conversion'],
-            ['Refonte et migration', '/services/refonte-migration-de-site'],
-            ['Développeur web freelance', '/services/developpeur-web-freelance'],
-            ['Maintenance et support', '/services/maintenance-support'],
+            ['Tunnel de vente', '/services/tunnel-de-vente'],
+            ['Marketplace et e-learning', '/services/marketplace-et-plateforme-e-learning'],
         ]],
         'Applications et IA' => ['icone' => 'robot', 'liens' => [
             ['Application web sur mesure', '/services/application-web-sur-mesure'],
@@ -31,7 +31,7 @@ return [
         'Visibilité et conseil' => ['icone' => 'trend-up', 'liens' => [
             ['Référencement naturel SEO', '/services/referencement-naturel-seo'],
             ['Référencement IA (GEO)', '/services/referencement-ia-geo'],
-            ['SEO local et Google Business', '/services/seo-local-google-business'],
+            ['Publicité Google et Facebook Ads', '/services/publicite-en-ligne-google-facebook-ads'],
             ['Audit SEO complet', '/services/audit-seo-complet'],
             ['Digitalisation d\'entreprise', '/services/digitalisation-d-entreprise'],
             ['Consultant en digitalisation', '/services/consultant-digitalisation'],
