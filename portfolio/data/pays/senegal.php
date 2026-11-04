@@ -10,8 +10,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Richard SALANON, un développeur et consultant à distance pour les entreprises sénégalaises, de Dakar à Touba, avec Wave et Orange Money',
-    'title'   => 'Développeur et consultant pour le Sénégal | Richard SALANON',
-    'meta'    => 'Sites, applications, automatisation, IA, Odoo et Dolibarr pour les entreprises du Sénégal : Wave, Orange Money, facture électronique et devis en FCFA.',
+    'title'   => 'Consultant en digitalisation au Sénégal | Richard SALANON',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Sénégal : Wave, Orange Money, devis en FCFA.',
     'en_bref' => 'Richard SALANON travaille à distance depuis Cotonou pour les entreprises sénégalaises : boutiques et sites qui encaissent par Wave et Orange Money, applications web, automatisations, assistants WhatsApp, déploiement d\'Odoo et de Dolibarr paramétrés pour le SYSCOHADA, et formation des équipes. Les échanges se font en français, avec une heure d\'écart entre Cotonou et Dakar, et les devis sont établis en FCFA. Il a déjà travaillé avec des entreprises au Sénégal.',
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',

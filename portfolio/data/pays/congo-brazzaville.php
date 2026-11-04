@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => "Richard SALANON, consultant à Cotonou : sites, ERP, IA et paiements MTN MoMo ou Airtel Money pour les sociétés de Brazzaville et de Pointe-Noire",
-    'title'   => "Développeur et consultant digital au Congo | Richard SALANON",
-    'meta'    => "Sites, applications, automatisation, IA, Odoo et Dolibarr pour les entreprises du Congo-Brazzaville : MTN MoMo, Airtel Money, facture SFEC, devis en FCFA.",
+    'title'   => "Expert en digitalisation au Congo | Richard SALANON",
+    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Congo-Brazzaville : MTN MoMo, devis en FCFA.",
     'en_bref' => "Richard SALANON accompagne à distance les sociétés congolaises, de Brazzaville à Pointe-Noire, sur leurs sites, applications, automatisations, intégrations d'IA, déploiements d'Odoo ou de Dolibarr et formations. Basé à Cotonou, il partage l'heure de Brazzaville, échange en français et chiffre ses devis en FCFA d'Afrique centrale. Les paiements s'appuient sur MTN MoMo et Airtel Money, la facturation sur le système de facture électronique certifiée de la DGID et la protection des données sur la loi de 2019.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',

@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Sites, applications, ERP et IA pour les entreprises de Monaco : devis en euros, TVA au taux français et données traitées selon la loi n° 1.565',
-    'title'   => 'Développeur web à Monaco, devis en euros | Richard SALANON',
-    'meta'    => 'Sites, boutiques, Odoo, Dolibarr, automatisation et IA pour les entreprises de Monaco : loi n° 1.565, APDP, TVA française, devis en euros sur demande.',
+    'title'   => 'Consultant en digitalisation à Monaco | Richard SALANON',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations à Monaco : APDP, devis en euros.',
     'en_bref' => 'Richard SALANON peut accompagner à distance les entreprises de la Principauté : site et boutique en ligne, application sur mesure, Odoo ou Dolibarr, automatisation, WhatsApp et IA. Les projets tiennent compte de la loi n° 1.565 sur les données personnelles, de l’APDP et de la TVA perçue aux taux français. Les échanges se font en français depuis Cotonou, et le devis, établi après cadrage, est exprimé en euros. Le premier retour suit dans la journée ouvrée.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',

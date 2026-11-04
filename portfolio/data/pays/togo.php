@@ -11,8 +11,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => "Des logiciels, des automatisations et des paiements Mixx by Yas et Flooz pour les entreprises togolaises, pilotés à distance depuis Cotonou",
-    'title'   => "Développeur et consultant digital au Togo | Richard SALANON",
-    'meta'    => "Sites, applications, automatisation, IA, Odoo et Dolibarr pour les entreprises du Togo : paiement Mixx by Yas et Flooz, loi sur les données, devis en FCFA.",
+    'title'   => "Expert en digitalisation au Togo | Richard SALANON",
+    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Togo : Flooz, devis en FCFA.",
     'en_bref' => "Richard SALANON conçoit pour les entreprises du Togo des sites, des applications, des automatisations et des intégrations d'IA, déploie Odoo ou Dolibarr et forme les équipes. Il travaille à distance depuis Cotonou, avec une heure d'écart sur Lomé, en français et avec des devis en FCFA. Les paiements s'appuient sur Mixx by Yas et Flooz, la facturation sur les règles de l'OTR et la protection des données sur la loi de 2019 contrôlée par l'IPDCP.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',

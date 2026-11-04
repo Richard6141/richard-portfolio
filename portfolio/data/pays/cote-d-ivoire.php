@@ -15,8 +15,8 @@ $tarifs = (array) fait('tarifs_depart');
 
 return [
     'titre'   => 'Digitaliser son entreprise en Côte d\'Ivoire : sites, ERP, WhatsApp et facture normalisée, menés à distance depuis Cotonou',
-    'title'   => 'Développeur et consultant en Côte d\'Ivoire | Richard SALANON',
-    'meta'    => 'Sites, ERP Odoo et Dolibarr, WhatsApp, IA et facture normalisée électronique pour les entreprises ivoiriennes, à distance, devis en FCFA sous 24 heures.',
+    'title'   => 'Expert en digitalisation en Côte d’Ivoire | Richard SALANON',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Côte d’Ivoire : devis en FCFA.',
     'en_bref' => 'Richard SALANON accompagne à distance, depuis Cotonou, les entreprises d\'Abidjan et de l\'intérieur du pays : sites et boutiques en ligne, ERP Odoo et Dolibarr, automatisations, assistants WhatsApp et formation des équipes. Les projets tiennent compte de la facture normalisée électronique de la DGI, de la loi de 2013 sur les données personnelles et des quatre portefeuilles de mobile money du pays. Les échanges se font en français, avec un seul décalage horaire d\'une heure, et les devis sont établis en francs CFA.',
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
@@ -201,7 +201,7 @@ return [
             'paragraphes' => [
                 'Richard travaille depuis Cotonou. D\'après la base de données des fuseaux horaires de l\'IANA, Abidjan est à l\'heure GMT, sans changement saisonnier, et Cotonou à l\'heure d\'Afrique de l\'Ouest, une heure en avance, également toute l\'année. Quand il est 9 heures à Abidjan, il est donc 10 heures à Cotonou. Cet écart d\'une heure laisse presque toute la journée de travail en commun, du début de matinée à la fin d\'après-midi, et ne se modifie jamais en cours d\'année, ce qui simplifie la planification des réunions.',
                 'Le français est la langue de travail, comme langue officielle du pays selon France Diplomatie. Les documents sont rédigés en français, y compris les spécifications et les manuels, ce qui répond aussi à l\'exigence de traduction française des pièces remises à l\'administration fiscale. Le suivi peut se faire par WhatsApp pour les questions rapides, par courriel pour les décisions écrites, et par visioconférence pour les démonstrations. Prenez garde aux numéros : depuis le 31 janvier 2021, ils comptent dix chiffres avec les préfixes 01, 05 et 07, et un champ de formulaire qui attend huit chiffres rejette vos clients.',
-                'Les devis sont établis en francs CFA, la monnaie du pays. Aucun déplacement n\'est prévu en Côte d\'Ivoire : les ateliers de cadrage, les recettes et les formations se tiennent à distance. Le premier échange sert à décrire l\'activité, à lister les outils existants et à identifier les obligations qui pèsent sur le projet. Une réponse arrive sous 24 heures. Le devis peut s\'accompagner d\'un plan par étapes, avec des livrables datés, des points d\'étape et la remise des accès à votre nom : domaine, hébergement, comptes de paiement.',
+                'Les devis sont établis en francs CFA, la monnaie du pays. Aucun déplacement n\'est prévu en Côte d\'Ivoire : les ateliers de cadrage, les recettes et les formations se tiennent à distance. Le premier échange sert à décrire l\'activité, à lister les outils existants et à identifier les obligations qui pèsent sur le projet. Une réponse arrive. Le devis peut s\'accompagner d\'un plan par étapes, avec des livrables datés, des points d\'étape et la remise des accès à votre nom : domaine, hébergement, comptes de paiement.',
             ],
         ],
         [

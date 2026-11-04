@@ -11,8 +11,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Cadrer TWINT, QR-facture et conformité nLPD avant de coder : la méthode de Richard pour les PME romandes',
-    'title'   => 'Développeur et consultant IA en Suisse | Richard SALANON',
-    'meta'    => 'Externalisez développement, automatisation et IA depuis Cotonou : devis en francs suisses, nLPD, TWINT, QR-facture, impôt sur les acquisitions.',
+    'title'   => 'Consultant digitalisation et IA en Suisse | Richard SALANON',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Suisse : TWINT, devis en francs suisses.',
     'en_bref' => 'Depuis Cotonou, Richard SALANON prend en charge pour des entreprises suisses, surtout romandes : applications web et mobiles, boutiques qui encaissent par TWINT et par carte, automatisations, intégrations d\'IA, Odoo et Dolibarr avec QR-facture, et formation des équipes. Chaque projet est cadré selon la nouvelle loi sur la protection des données (nLPD), avec un contrat adapté au droit suisse des obligations. Les échanges se font en français, avec zéro ou une heure d\'écart selon la saison, et les devis sont établis en francs suisses. Des entreprises suisses lui ont déjà confié des projets.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',

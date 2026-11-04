@@ -11,8 +11,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => "Des logiciels, des automatisations et des paiements Orange Money et MTN MoMo pour les entreprises guinéennes, pilotés à distance depuis Cotonou",
-    'title'   => "Développeur et consultant en Guinée | Richard SALANON",
-    'meta'    => "Sites, applications, automatisation, IA, Odoo et Dolibarr pour les entreprises de Guinée : Orange Money, MTN MoMo, loi de 2016, devis en euros.",
+    'title'   => "Consultant en digitalisation en Guinée | Richard SALANON",
+    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Guinée : Orange Money, devis en euros.",
     'en_bref' => "Pour une entreprise guinéenne, Richard SALANON bâtit des sites, des applications et des automatisations, branche l'IA sur les outils existants, installe Odoo ou Dolibarr et initie les équipes. Il travaille depuis Cotonou, par visioconférence et WhatsApp, en français, Conakry étant une heure en arrière. Le franc guinéen n'étant pas le franc CFA, ses devis sont libellés en euros, à la demande. L'encaissement passe par Orange Money et MTN MoMo ; la loi de 2016 fixe la règle pour les données personnelles.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',

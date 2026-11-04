@@ -10,8 +10,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Cotonou et Tunis vivent à la même heure : Richard SALANON livre sites, paiements Konnect ou Flouci, Odoo et IA aux entreprises tunisiennes, devis en euros',
-    'title'   => 'Développeur web à distance pour la Tunisie | Richard SALANON',
-    'meta'    => 'Richard SALANON, consultant et développeur basé à Cotonou, accompagne à distance les entreprises en Tunisie : site, e-commerce, Odoo, IA, devis en euros.',
+    'title'   => 'Expert en digitalisation pour la Tunisie | Richard SALANON',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Tunisie : devis en euros.',
     'en_bref' => 'Richard SALANON peut accompagner à distance les entreprises en Tunisie : sites et boutiques en ligne branchés sur les paiements locaux, ERP Odoo, automatisations, assistants IA et formation des équipes. Il travaille depuis Cotonou, à la même heure que Tunis toute l’année, en français ou en anglais. Chaque projet est chiffré sur devis, en euros, après un échange gratuit. La réponse arrive sous 24 heures.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',

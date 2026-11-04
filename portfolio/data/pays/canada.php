@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => "Des logiciels, des automatisations et de l'IA conformes à la Loi 25 pour les entreprises québécoises et canadiennes, réalisés à distance depuis Cotonou",
-    'title'   => "Développeur et consultant IA au Canada | Richard SALANON",
-    'meta'    => "Sites, applications, automatisation, IA et formations pour les entreprises du Québec et du Canada : Loi 25, français, taxes et devis en dollars canadiens.",
+    'title'   => "Consultant digitalisation et IA au Canada | Richard SALANON",
+    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Québec et au Canada : Loi 25, devis en CAD.",
     'en_bref' => "Richard SALANON réalise pour les entreprises du Canada, surtout francophones et québécoises, des sites, des applications, des automatisations et des intégrations d'IA, et forme les équipes. Il travaille à distance depuis Cotonou, avec cinq ou six heures d'écart selon la saison, en français et sur devis en dollars canadiens. Chaque projet est cadré pour la Loi 25, la Charte de la langue française et le régime de la TPS et de la TVQ.",
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',

@@ -10,8 +10,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => 'Développeur web pour le Burkina Faso : sites, ERP, WhatsApp et IA réglés sur Orange Money, la facture certifiée et la CIL',
-    'title'   => 'Développeur web pour le Burkina Faso | Richard SALANON',
-    'meta'    => 'Sites, applications, Odoo, Dolibarr, WhatsApp et IA pour les entreprises du Burkina Faso : Orange Money, facture certifiée, CIL, devis en FCFA.',
+    'title'   => 'Expert en digitalisation au Burkina Faso | Richard SALANON',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Burkina Faso : Orange Money, devis en FCFA.',
     'en_bref' => 'Richard SALANON conçoit à distance, depuis Cotonou, des sites, des applications, des automatisations, des intégrations d\'intelligence artificielle et des déploiements Odoo ou Dolibarr pour les entreprises du Burkina Faso, avec paiement par Orange Money ou Moov Money, facturation conforme à la facture électronique certifiée et traitement des données déclaré à la CIL. Les échanges se font en français, par visioconférence et par WhatsApp, avec une heure de décalage. Les devis sont établis en FCFA, après un cadrage gratuit, et la réponse arrive sous 24 heures.',
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',

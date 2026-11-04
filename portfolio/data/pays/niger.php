@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 return [
     'titre'   => "Des logiciels, des automatisations et des paiements Airtel Money pour les entreprises nigériennes, pilotés à distance depuis Cotonou, sans décalage horaire",
-    'title'   => "Développeur et consultant digital au Niger | Richard SALANON",
-    'meta'    => "Sites, applications, automatisation, IA, Odoo et Dolibarr pour les entreprises du Niger : Airtel Money, facture certifiée SECeF, HAPDP, devis en FCFA.",
+    'title'   => "Consultant en digitalisation au Niger | Richard SALANON",
+    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Niger : Airtel Money, devis en FCFA.",
     'en_bref' => "Richard SALANON accompagne les sociétés nigériennes, de Niamey à Zinder, pour leurs sites web, leurs logiciels sur mesure, l'automatisation, l'intelligence artificielle, la mise en service d'Odoo ou de Dolibarr et la formation de leurs équipes. Le travail se fait par visioconférence depuis Cotonou, sans écart d'horloge avec Niamey, en français, et chaque devis est établi en FCFA. Les paiements s'appuient sur Airtel Money et les autres monnaies électroniques agréées par la BCEAO, la facturation sur le système certifié SECeF de la DGI et la protection des données sur la loi de 2022 contrôlée par la HAPDP.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
