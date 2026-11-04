@@ -12,7 +12,7 @@ declare(strict_types=1);
 return [
     'titre'   => 'Site, facture et paiement pour une société mauricienne : anglais et français, MCB Juice, e-facture de la MRA, registre du Data Protection Office',
     'title'   => 'Consultant en digitalisation pour Maurice | Richard SALANON',
-    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations à Maurice : MCB Juice, devis en euros.',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations à Maurice : MCB Juice, devis en euros. Réponse sous 24 h.',
     'en_bref' => 'Richard SALANON accompagne à distance les entreprises de Maurice : hôtels et agences de voyage, sociétés de services financiers, exportateurs, centres d\'appels et pêcheries. Il construit sites, applications, automatisations, assistants WhatsApp et déploiements Odoo, les raccorde à MCB Juice, aux cartes et aux portefeuilles mobiles, et forme les équipes. Richard travaille en français comme en anglais, et l\'île a trois heures d\'avance sur Cotonou. Le devis se calcule en euros, après un premier échange.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',
@@ -222,7 +222,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'systeme-de-reservation-en-ligne', 'saas-espace-client', 'agents-ia-chatbot-whatsapp', 'integration-odoo', 'application-web-sur-mesure', 'automatisation-ia', 'api-rest-integrations'],
+        'services'    => ['site-e-commerce', 'systeme-de-reservation-en-ligne', 'saas-espace-client', 'agents-ia-chatbot-whatsapp', 'integration-odoo', 'application-web-sur-mesure', 'automatisation-ia', 'api-rest-integrations', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'ia-ethique-conformite', 'n8n', 'whatsapp-business', 'odoo-utilisateurs'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay'],
         'metiers'     => ['hotellerie-restauration', 'experts-comptables', 'commercants-e-commercants'],

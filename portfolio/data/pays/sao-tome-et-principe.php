@@ -304,7 +304,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['systeme-de-reservation-en-ligne', 'application-web-sur-mesure', 'integration-odoo', 'integration-dolibarr', 'site-e-commerce', 'agents-ia-chatbot-whatsapp', 'site-vitrine-professionnel', 'application-mobile-android-ios'],
+        'services'    => ['systeme-de-reservation-en-ligne', 'application-web-sur-mesure', 'integration-odoo', 'integration-dolibarr', 'site-e-commerce', 'agents-ia-chatbot-whatsapp', 'site-vitrine-professionnel', 'application-mobile-android-ios', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['digitaliser-son-entreprise', 'ia-en-entreprise', 'whatsapp-business', 'visibilite-google', 'odoo-utilisateurs'],
         'comparatifs' => ['odoo-vs-dolibarr'],
         'metiers'     => ['hotellerie-restauration', 'agro-industrie', 'banques-microfinance'],

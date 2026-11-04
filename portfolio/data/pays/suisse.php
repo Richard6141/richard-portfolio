@@ -12,7 +12,7 @@ declare(strict_types=1);
 return [
     'titre'   => 'Cadrer TWINT, QR-facture et conformité nLPD avant de coder : la méthode de Richard pour les PME romandes',
     'title'   => 'Consultant digitalisation et IA en Suisse | Richard SALANON',
-    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Suisse : TWINT, devis en francs suisses.',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Suisse : TWINT, devis en francs suisses. Devis gratuit.',
     'en_bref' => 'Depuis Cotonou, Richard SALANON prend en charge pour des entreprises suisses, surtout romandes : applications web et mobiles, boutiques qui encaissent par TWINT et par carte, automatisations, intégrations d\'IA, Odoo et Dolibarr avec QR-facture, et formation des équipes. Chaque projet est cadré selon la nouvelle loi sur la protection des données (nLPD), avec un contrat adapté au droit suisse des obligations. Les échanges se font en français, avec zéro ou une heure d\'écart selon la saison, et les devis sont établis en francs suisses. Des entreprises suisses lui ont déjà confié des projets.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',
@@ -274,7 +274,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['externalisation-developpement', 'application-web-sur-mesure', 'integration-odoo', 'integration-dolibarr', 'site-e-commerce', 'automatisation-ia', 'integration-ia-entreprise', 'api-rest-integrations', 'maintenance-support', 'formation-en-entreprise'],
+        'services'    => ['externalisation-developpement', 'application-web-sur-mesure', 'integration-odoo', 'integration-dolibarr', 'site-e-commerce', 'automatisation-ia', 'integration-ia-entreprise', 'api-rest-integrations', 'maintenance-support', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'ia-ethique-conformite', 'n8n', 'odoo-utilisateurs', 'securite-donnees-dirigeants'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['experts-comptables', 'chefs-entreprise-dirigeants', 'directeurs-financiers'],

@@ -347,7 +347,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['digitalisation-d-entreprise', 'audit-etude-de-projet', 'integration-odoo', 'automatisation-ia', 'formation-en-entreprise', 'integration-ia-entreprise'],
+        'services'    => ['digitalisation-d-entreprise', 'audit-etude-de-projet', 'integration-odoo', 'automatisation-ia', 'formation-en-entreprise', 'integration-ia-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier', 'fedapay-vs-kkiapay-vs-cinetpay', 'chatgpt-vs-claude-vs-gemini'],
     ],
 ];

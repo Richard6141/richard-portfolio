@@ -244,7 +244,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'agents-ia-chatbot-whatsapp', 'integration-whatsapp', 'integration-odoo', 'integration-dolibarr', 'automatisation-ia', 'application-mobile-android-ios', 'api-rest-integrations', 'audit-etude-de-projet'],
+        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'agents-ia-chatbot-whatsapp', 'integration-whatsapp', 'integration-odoo', 'integration-dolibarr', 'automatisation-ia', 'application-mobile-android-ios', 'api-rest-integrations', 'audit-etude-de-projet', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['whatsapp-business', 'ia-en-entreprise', 'n8n', 'odoo-utilisateurs', 'cybersecurite-employes', 'ia-ethique-conformite'],
         'comparatifs' => ['n8n-vs-make-vs-zapier'],
         'metiers'     => ['commercants-e-commercants', 'chefs-entreprise-dirigeants'],

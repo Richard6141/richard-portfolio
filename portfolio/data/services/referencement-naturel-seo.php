@@ -350,7 +350,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['audit-seo-complet', 'seo-local-google-business', 'referencement-ia-geo', 'refonte-migration-de-site', 'site-vitrine-professionnel', 'site-e-commerce'],
+        'services'    => ['audit-seo-complet', 'seo-local-google-business', 'referencement-ia-geo', 'refonte-migration-de-site', 'site-vitrine-professionnel', 'site-e-commerce', 'publicite-en-ligne-google-facebook-ads'],
         'comparatifs' => ['chatgpt-vs-claude-vs-gemini', 'n8n-vs-make-vs-zapier'],
     ],
 ];

@@ -330,7 +330,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['externalisation-developpement', 'integration-ia-entreprise', 'automatisation-ia', 'agents-ia-chatbot-whatsapp', 'api-rest-integrations', 'integration-odoo', 'integration-dolibarr', 'site-vitrine-professionnel', 'site-e-commerce', 'saas-espace-client'],
+        'services'    => ['externalisation-developpement', 'integration-ia-entreprise', 'automatisation-ia', 'agents-ia-chatbot-whatsapp', 'api-rest-integrations', 'integration-odoo', 'integration-dolibarr', 'site-vitrine-professionnel', 'site-e-commerce', 'saas-espace-client', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-ethique-conformite', 'gouvernance-ia', 'ia-en-entreprise', 'integrer-ia-logiciels-existants', 'n8n', 'ia-generative-dirigeants'],
         'comparatifs' => ['chatgpt-vs-claude-vs-gemini', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['juristes-entreprise', 'chefs-entreprise-dirigeants', 'ressources-humaines'],

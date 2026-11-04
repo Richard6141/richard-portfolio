@@ -213,7 +213,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'integration-odoo', 'integration-whatsapp', 'application-mobile-android-ios', 'application-web-sur-mesure', 'api-rest-integrations', 'automatisation-ia', 'audit-etude-de-projet', 'formation-en-entreprise', 'maintenance-support'],
+        'services'    => ['site-e-commerce', 'integration-odoo', 'integration-whatsapp', 'application-mobile-android-ios', 'application-web-sur-mesure', 'api-rest-integrations', 'automatisation-ia', 'audit-etude-de-projet', 'formation-en-entreprise', 'maintenance-support', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'whatsapp-business', 'odoo-utilisateurs', 'n8n', 'digitaliser-son-entreprise'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['ong-projets-developpement', 'banques-microfinance', 'agro-industrie'],

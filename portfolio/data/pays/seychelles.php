@@ -285,7 +285,7 @@ return [
     ],
 
     'liens' => [
-        'services'     => ['systeme-de-reservation-en-ligne', 'site-e-commerce', 'integration-odoo', 'automatisation-ia', 'seo-local-google-business', 'agents-ia-chatbot-whatsapp', 'saas-espace-client', 'formation-en-entreprise'],
+        'services'     => ['systeme-de-reservation-en-ligne', 'site-e-commerce', 'integration-odoo', 'automatisation-ia', 'seo-local-google-business', 'agents-ia-chatbot-whatsapp', 'saas-espace-client', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'   => ['ia-en-entreprise', 'whatsapp-business', 'n8n', 'developpement-web', 'ia-ethique-conformite'],
         'comparatifs'  => ['n8n-vs-make-vs-zapier', 'odoo-vs-dolibarr'],
         'metiers'      => ['hotellerie-restauration', 'commercants-e-commercants', 'chefs-entreprise-dirigeants'],

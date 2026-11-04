@@ -211,7 +211,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'systeme-de-reservation-en-ligne', 'integration-odoo', 'integration-whatsapp', 'automatisation-ia', 'application-web-sur-mesure', 'referencement-naturel-seo', 'formation-en-entreprise'],
+        'services'    => ['site-e-commerce', 'systeme-de-reservation-en-ligne', 'integration-odoo', 'integration-whatsapp', 'automatisation-ia', 'application-web-sur-mesure', 'referencement-naturel-seo', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'whatsapp-business', 'odoo-utilisateurs', 'e-commerce'],
         'comparatifs' => ['n8n-vs-make-vs-zapier'],
         'metiers'     => ['commercants-e-commercants', 'hotellerie-restauration'],

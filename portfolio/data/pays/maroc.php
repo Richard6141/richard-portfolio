@@ -336,7 +336,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'application-web-sur-mesure', 'integration-odoo', 'integration-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'referencement-naturel-seo', 'formation-en-entreprise', 'systeme-de-reservation-en-ligne', 'consultant-digitalisation'],
+        'services'    => ['site-e-commerce', 'application-web-sur-mesure', 'integration-odoo', 'integration-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'referencement-naturel-seo', 'formation-en-entreprise', 'systeme-de-reservation-en-ligne', 'consultant-digitalisation', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'n8n', 'whatsapp-business', 'odoo-utilisateurs', 'e-commerce', 'ia-ethique-conformite'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['commercants-e-commercants', 'hotellerie-restauration', 'experts-comptables'],

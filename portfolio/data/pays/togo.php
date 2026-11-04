@@ -12,7 +12,7 @@ declare(strict_types=1);
 return [
     'titre'   => "Des logiciels, des automatisations et des paiements Mixx by Yas et Flooz pour les entreprises togolaises, pilotés à distance depuis Cotonou",
     'title'   => "Expert en digitalisation au Togo | Richard SALANON",
-    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Togo : Flooz, devis en FCFA.",
+    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Togo : Flooz, devis en FCFA. Réponse sous 24 h.",
     'en_bref' => "Richard SALANON conçoit pour les entreprises du Togo des sites, des applications, des automatisations et des intégrations d'IA, déploie Odoo ou Dolibarr et forme les équipes. Il travaille à distance depuis Cotonou, avec une heure d'écart sur Lomé, en français et avec des devis en FCFA. Les paiements s'appuient sur Mixx by Yas et Flooz, la facturation sur les règles de l'OTR et la protection des données sur la loi de 2019 contrôlée par l'IPDCP.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
@@ -299,7 +299,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'seo-local-google-business', 'application-web-sur-mesure', 'formation-en-entreprise'],
+        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'seo-local-google-business', 'application-web-sur-mesure', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['odoo-comptabilite-syscohada', 'whatsapp-business', 'ia-en-entreprise', 'securite-donnees-dirigeants'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'odoo-vs-dolibarr'],
         'metiers'     => ['logisticiens-transitaires', 'commercants-e-commercants', 'banques-microfinance'],

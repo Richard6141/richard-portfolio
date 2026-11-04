@@ -12,7 +12,7 @@ declare(strict_types=1);
 return [
     'titre'   => 'Richard SALANON, un développeur et consultant à distance pour les entreprises maliennes, de Bamako à Sikasso, avec Orange Money et Moov Money',
     'title'   => 'Consultant en digitalisation au Mali | Richard SALANON',
-    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Mali : Orange Money, devis en FCFA.',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Mali : Orange Money, devis en FCFA. Réponse sous 24 h.',
     'en_bref' => 'Richard SALANON travaille à distance depuis Cotonou pour les entreprises maliennes : sites et boutiques qui encaissent par Orange Money et Moov Money, applications web et mobiles légères, automatisations, assistants WhatsApp, déploiement d\'Odoo et de Dolibarr paramétrés pour le SYSCOHADA, et formation des équipes. Les échanges se font en français, avec une heure d\'écart entre Cotonou et Bamako, et les devis sont établis en FCFA. Il a déjà travaillé avec des entreprises au Mali.',
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
@@ -233,7 +233,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'application-mobile-android-ios', 'application-web-sur-mesure', 'digitalisation-d-entreprise', 'formation-en-entreprise'],
+        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'application-mobile-android-ios', 'application-web-sur-mesure', 'digitalisation-d-entreprise', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['whatsapp-business', 'odoo-comptabilite-syscohada', 'ia-en-entreprise', 'digitalisation-processus', 'e-commerce'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'odoo-vs-dolibarr'],
         'metiers'     => ['agro-industrie', 'commercants-e-commercants', 'ong-projets-developpement'],

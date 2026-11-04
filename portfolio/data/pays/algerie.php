@@ -202,7 +202,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'application-web-sur-mesure', 'formation-en-entreprise'],
+        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'application-web-sur-mesure', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'ia-ethique-conformite', 'excel-google-sheets', 'e-commerce', 'whatsapp-business'],
         'comparatifs' => ['odoo-vs-dolibarr'],
         'metiers'     => ['commercants-e-commercants', 'chefs-entreprise-dirigeants'],

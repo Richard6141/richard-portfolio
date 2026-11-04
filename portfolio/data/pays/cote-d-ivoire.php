@@ -16,7 +16,7 @@ $tarifs = (array) fait('tarifs_depart');
 return [
     'titre'   => 'Digitaliser son entreprise en Côte d\'Ivoire : sites, ERP, WhatsApp et facture normalisée, menés à distance depuis Cotonou',
     'title'   => 'Expert en digitalisation en Côte d’Ivoire | Richard SALANON',
-    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Côte d’Ivoire : devis en FCFA.',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Côte d’Ivoire : devis en FCFA. Réponse sous 24 h.',
     'en_bref' => 'Richard SALANON accompagne à distance, depuis Cotonou, les entreprises d\'Abidjan et de l\'intérieur du pays : sites et boutiques en ligne, ERP Odoo et Dolibarr, automatisations, assistants WhatsApp et formation des équipes. Les projets tiennent compte de la facture normalisée électronique de la DGI, de la loi de 2013 sur les données personnelles et des quatre portefeuilles de mobile money du pays. Les échanges se font en français, avec un seul décalage horaire d\'une heure, et les devis sont établis en francs CFA.',
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
@@ -334,7 +334,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['integration-odoo', 'integration-dolibarr', 'site-e-commerce', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'site-vitrine-professionnel', 'digitalisation-d-entreprise', 'formation-en-entreprise'],
+        'services'    => ['integration-odoo', 'integration-dolibarr', 'site-e-commerce', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'site-vitrine-professionnel', 'digitalisation-d-entreprise', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'odoo-comptabilite-syscohada', 'whatsapp-business', 'n8n', 'adoption-erp'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'odoo-vs-dolibarr'],
         'metiers'     => ['experts-comptables', 'commercants-e-commercants', 'logisticiens-transitaires'],

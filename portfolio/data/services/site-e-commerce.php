@@ -382,7 +382,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-vitrine-professionnel', 'landing-page-haute-conversion', 'referencement-naturel-seo', 'integration-whatsapp', 'maintenance-support', 'integration-odoo'],
+        'services'    => ['site-vitrine-professionnel', 'landing-page-haute-conversion', 'referencement-naturel-seo', 'integration-whatsapp', 'maintenance-support', 'integration-odoo', 'creation-site-wordpress', 'marketplace-et-plateforme-e-learning'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
     ],
 ];

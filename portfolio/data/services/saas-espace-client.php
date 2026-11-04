@@ -371,7 +371,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['application-web-sur-mesure', 'api-rest-integrations', 'application-mobile-android-ios', 'integration-whatsapp', 'maintenance-support', 'audit-etude-de-projet'],
+        'services'    => ['application-web-sur-mesure', 'api-rest-integrations', 'application-mobile-android-ios', 'integration-whatsapp', 'maintenance-support', 'audit-etude-de-projet', 'marketplace-et-plateforme-e-learning'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay'],
     ],
 ];

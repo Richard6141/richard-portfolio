@@ -11,7 +11,7 @@ declare(strict_types=1);
 return [
     'titre'   => 'Cotonou et Tunis vivent à la même heure : Richard SALANON livre sites, paiements Konnect ou Flouci, Odoo et IA aux entreprises tunisiennes, devis en euros',
     'title'   => 'Expert en digitalisation pour la Tunisie | Richard SALANON',
-    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Tunisie : devis en euros.',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Tunisie : devis en euros. Réponse sous 24 h.',
     'en_bref' => 'Richard SALANON peut accompagner à distance les entreprises en Tunisie : sites et boutiques en ligne branchés sur les paiements locaux, ERP Odoo, automatisations, assistants IA et formation des équipes. Il travaille depuis Cotonou, à la même heure que Tunis toute l’année, en français ou en anglais. Chaque projet est chiffré sur devis, en euros, après un échange gratuit. La réponse arrive sous 24 heures.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',
@@ -330,7 +330,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['externalisation-developpement', 'site-e-commerce', 'application-web-sur-mesure', 'integration-odoo', 'automatisation-ia', 'integration-whatsapp', 'referencement-naturel-seo', 'integration-ia-entreprise', 'maintenance-support'],
+        'services'    => ['externalisation-developpement', 'site-e-commerce', 'application-web-sur-mesure', 'integration-odoo', 'automatisation-ia', 'integration-whatsapp', 'referencement-naturel-seo', 'integration-ia-entreprise', 'maintenance-support', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'n8n', 'odoo-utilisateurs', 'e-commerce', 'cybersecurite-employes'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['experts-comptables', 'commercants-e-commercants', 'hotellerie-restauration'],

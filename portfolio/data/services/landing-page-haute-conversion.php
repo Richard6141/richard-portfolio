@@ -382,7 +382,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'referencement-naturel-seo'],
+        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'referencement-naturel-seo', 'tunnel-de-vente', 'publicite-en-ligne-google-facebook-ads'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'n8n-vs-make-vs-zapier'],
     ],
 ];

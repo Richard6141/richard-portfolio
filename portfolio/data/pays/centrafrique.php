@@ -10,7 +10,7 @@ declare(strict_types=1);
 return [
     'titre'   => 'Bangui, Bambari, Berbérati : des sites sobres et des commandes par WhatsApp pour des clients qui paient avec Orange, Telecel ou Moov',
     'title'   => 'Expert en digitalisation en Centrafrique | Richard SALANON',
-    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Centrafrique : devis en FCFA.',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Centrafrique : devis en FCFA. Réponse sous 24 h.',
     'en_bref' => 'Richard SALANON conçoit des sites, des applications, des automatisations et des assistants WhatsApp pour les entreprises de Centrafrique, et forme leurs équipes. Tout se fait à distance depuis Cotonou, sans décalage horaire avec Bangui, en français. Les devis sont établis en FCFA, après un échange sur le contexte local : réseau mobile, mobile money, données personnelles, TVA et comptabilité OHADA.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',
@@ -256,7 +256,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'agents-ia-chatbot-whatsapp', 'integration-whatsapp', 'integration-odoo', 'integration-dolibarr', 'application-mobile-android-ios', 'automatisation-ia', 'maintenance-support'],
+        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'agents-ia-chatbot-whatsapp', 'integration-whatsapp', 'integration-odoo', 'integration-dolibarr', 'application-mobile-android-ios', 'automatisation-ia', 'maintenance-support', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'whatsapp-business', 'odoo-utilisateurs', 'excel-google-sheets', 'cybersecurite-employes'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['ong-projets-developpement', 'commercants-e-commercants', 'agro-industrie'],

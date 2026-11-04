@@ -14,7 +14,7 @@ declare(strict_types=1);
 return [
     'titre'   => 'Entreprises du Rwanda : sites, paiements MTN MoMo et Airtel Money, ERP et automatisations, pilotés à distance depuis Cotonou',
     'title'   => 'Expert en digitalisation au Rwanda | Richard SALANON',
-    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Rwanda : MTN MoMo, devis en euros.',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Rwanda : MTN MoMo, devis en euros. Réponse sous 24 h.',
     'en_bref' => 'Richard SALANON conçoit pour les entreprises rwandaises des sites, des applications, des automatisations, des intégrations d\'IA et des déploiements Odoo ou Dolibarr, entièrement à distance depuis Cotonou. Les paiements se branchent sur MTN MoMo et Airtel Money, les factures suivent les règles de la Rwanda Revenue Authority, les données respectent la loi n° 058/2021. Le cadrage se fait en français ou en anglais, avec une heure de décalage. Chaque projet est chiffré sur devis, en euros.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',
@@ -294,7 +294,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'api-rest-integrations', 'integration-odoo', 'integration-dolibarr', 'automatisation-ia', 'systeme-de-reservation-en-ligne'],
+        'services'    => ['site-e-commerce', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'api-rest-integrations', 'integration-odoo', 'integration-dolibarr', 'automatisation-ia', 'systeme-de-reservation-en-ligne', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'odoo-utilisateurs', 'n8n', 'whatsapp-business', 'ia-ethique-conformite'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['commercants-e-commercants', 'chefs-entreprise-dirigeants', 'ong-projets-developpement'],

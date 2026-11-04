@@ -204,7 +204,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'agents-ia-chatbot-whatsapp', 'integration-whatsapp', 'integration-odoo', 'integration-dolibarr', 'application-web-sur-mesure', 'systeme-de-reservation-en-ligne', 'api-rest-integrations', 'consultant-digitalisation'],
+        'services'    => ['site-e-commerce', 'agents-ia-chatbot-whatsapp', 'integration-whatsapp', 'integration-odoo', 'integration-dolibarr', 'application-web-sur-mesure', 'systeme-de-reservation-en-ligne', 'api-rest-integrations', 'consultant-digitalisation', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'n8n', 'whatsapp-business', 'ia-ethique-conformite', 'ia-comptables-syscohada'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['commercants-e-commercants', 'hotellerie-restauration', 'experts-comptables'],

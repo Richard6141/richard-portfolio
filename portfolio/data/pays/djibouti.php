@@ -224,7 +224,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'application-web-sur-mesure', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'integration-odoo', 'integration-ia-entreprise', 'maintenance-support'],
+        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'application-web-sur-mesure', 'integration-whatsapp', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'integration-odoo', 'integration-ia-entreprise', 'maintenance-support', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'whatsapp-business', 'n8n', 'cybersecurite-employes', 'strategie-transformation-digitale', 'e-commerce'],
         'comparatifs' => ['n8n-vs-make-vs-zapier'],
         'metiers'     => ['logisticiens-transitaires', 'banques-microfinance', 'commercants-e-commercants'],

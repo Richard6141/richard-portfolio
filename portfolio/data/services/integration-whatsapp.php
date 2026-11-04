@@ -365,7 +365,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['agents-ia-chatbot-whatsapp', 'automatisation-ia', 'integration-odoo', 'integration-dolibarr', 'api-rest-integrations', 'systeme-de-reservation-en-ligne'],
+        'services'    => ['agents-ia-chatbot-whatsapp', 'automatisation-ia', 'integration-odoo', 'integration-dolibarr', 'api-rest-integrations', 'systeme-de-reservation-en-ligne', 'tunnel-de-vente', 'publicite-en-ligne-google-facebook-ads'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier', 'fedapay-vs-kkiapay-vs-cinetpay'],
     ],
 ];

@@ -14,7 +14,7 @@ declare(strict_types=1);
 return [
     'titre'   => 'Sites, applications, ERP et IA pour les entreprises de Monaco : devis en euros, TVA au taux français et données traitées selon la loi n° 1.565',
     'title'   => 'Consultant en digitalisation à Monaco | Richard SALANON',
-    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations à Monaco : APDP, devis en euros.',
+    'meta'    => 'Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations à Monaco : APDP, devis en euros. Réponse sous 24 h.',
     'en_bref' => 'Richard SALANON peut accompagner à distance les entreprises de la Principauté : site et boutique en ligne, application sur mesure, Odoo ou Dolibarr, automatisation, WhatsApp et IA. Les projets tiennent compte de la loi n° 1.565 sur les données personnelles, de l’APDP et de la TVA perçue aux taux français. Les échanges se font en français depuis Cotonou, et le devis, établi après cadrage, est exprimé en euros. Le premier retour suit dans la journée ouvrée.',
     'publie'  => '2026-11-12',
     'maj'     => '2026-11-12',
@@ -226,7 +226,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'systeme-de-reservation-en-ligne', 'integration-odoo', 'integration-dolibarr', 'api-rest-integrations', 'agents-ia-chatbot-whatsapp', 'saas-espace-client', 'referencement-naturel-seo'],
+        'services'    => ['site-vitrine-professionnel', 'site-e-commerce', 'systeme-de-reservation-en-ligne', 'integration-odoo', 'integration-dolibarr', 'api-rest-integrations', 'agents-ia-chatbot-whatsapp', 'saas-espace-client', 'referencement-naturel-seo', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'ia-generative-dirigeants', 'ia-ethique-conformite', 'odoo-utilisateurs', 'cybersecurite-employes', 'excel-google-sheets'],
         'comparatifs' => ['odoo-vs-dolibarr'],
         'metiers'     => ['banques-microfinance', 'hotellerie-restauration', 'immobilier'],

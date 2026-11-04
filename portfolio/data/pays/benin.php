@@ -411,7 +411,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'integration-odoo', 'integration-dolibarr', 'api-rest-integrations', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'digitalisation-d-entreprise', 'formation-en-entreprise'],
+        'services'    => ['site-e-commerce', 'integration-odoo', 'integration-dolibarr', 'api-rest-integrations', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'digitalisation-d-entreprise', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'whatsapp-business', 'odoo-comptabilite-syscohada', 'digitaliser-son-entreprise', 'e-commerce'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'odoo-vs-dolibarr'],
         'metiers'     => ['commercants-e-commercants', 'logisticiens-transitaires', 'ong-projets-developpement'],

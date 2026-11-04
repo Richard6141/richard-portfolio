@@ -308,7 +308,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'landing-page-haute-conversion', 'refonte-migration-de-site', 'referencement-naturel-seo', 'seo-local-google-business', 'maintenance-support'],
+        'services'    => ['site-e-commerce', 'landing-page-haute-conversion', 'refonte-migration-de-site', 'referencement-naturel-seo', 'seo-local-google-business', 'maintenance-support', 'creation-site-wordpress'],
         'comparatifs' => ['n8n-vs-make-vs-zapier', 'chatgpt-vs-claude-vs-gemini'],
     ],
 ];

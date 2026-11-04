@@ -268,7 +268,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['externalisation-developpement', 'application-web-sur-mesure', 'automatisation-ia', 'integration-ia-entreprise', 'api-rest-integrations', 'site-e-commerce', 'integration-odoo', 'agents-ia-chatbot-whatsapp', 'maintenance-support', 'formation-en-entreprise'],
+        'services'    => ['externalisation-developpement', 'application-web-sur-mesure', 'automatisation-ia', 'integration-ia-entreprise', 'api-rest-integrations', 'site-e-commerce', 'integration-odoo', 'agents-ia-chatbot-whatsapp', 'maintenance-support', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'gouvernance-ia', 'ia-ethique-conformite', 'n8n', 'securite-donnees-dirigeants', 'integrer-ia-logiciels-existants'],
         'comparatifs' => ['n8n-vs-make-vs-zapier', 'chatgpt-vs-claude-vs-gemini'],
         'metiers'     => ['directeurs-financiers', 'juristes-entreprise', 'chefs-entreprise-dirigeants'],

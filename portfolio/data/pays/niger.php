@@ -13,7 +13,7 @@ declare(strict_types=1);
 return [
     'titre'   => "Des logiciels, des automatisations et des paiements Airtel Money pour les entreprises nigériennes, pilotés à distance depuis Cotonou, sans décalage horaire",
     'title'   => "Consultant en digitalisation au Niger | Richard SALANON",
-    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Niger : Airtel Money, devis en FCFA.",
+    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations au Niger : Airtel Money, devis en FCFA. Réponse sous 24 h.",
     'en_bref' => "Richard SALANON accompagne les sociétés nigériennes, de Niamey à Zinder, pour leurs sites web, leurs logiciels sur mesure, l'automatisation, l'intelligence artificielle, la mise en service d'Odoo ou de Dolibarr et la formation de leurs équipes. Le travail se fait par visioconférence depuis Cotonou, sans écart d'horloge avec Niamey, en français, et chaque devis est établi en FCFA. Les paiements s'appuient sur Airtel Money et les autres monnaies électroniques agréées par la BCEAO, la facturation sur le système certifié SECeF de la DGI et la protection des données sur la loi de 2022 contrôlée par la HAPDP.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
@@ -302,7 +302,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'seo-local-google-business', 'application-web-sur-mesure', 'formation-en-entreprise'],
+        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'seo-local-google-business', 'application-web-sur-mesure', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['odoo-comptabilite-syscohada', 'whatsapp-business', 'ia-en-entreprise', 'securite-donnees-dirigeants'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['commercants-e-commercants', 'agro-industrie', 'banques-microfinance'],

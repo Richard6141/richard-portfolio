@@ -12,7 +12,7 @@ declare(strict_types=1);
 return [
     'titre'   => "Des logiciels, des automatisations et des paiements Orange Money et MTN MoMo pour les entreprises guinéennes, pilotés à distance depuis Cotonou",
     'title'   => "Consultant en digitalisation en Guinée | Richard SALANON",
-    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Guinée : Orange Money, devis en euros.",
+    'meta'    => "Création de site WordPress et e-commerce, application mobile, SEO, Google Ads, IA et formations en Guinée : Orange Money, devis en euros. Devis gratuit.",
     'en_bref' => "Pour une entreprise guinéenne, Richard SALANON bâtit des sites, des applications et des automatisations, branche l'IA sur les outils existants, installe Odoo ou Dolibarr et initie les équipes. Il travaille depuis Cotonou, par visioconférence et WhatsApp, en français, Conakry étant une heure en arrière. Le franc guinéen n'étant pas le franc CFA, ses devis sont libellés en euros, à la demande. L'encaissement passe par Orange Money et MTN MoMo ; la loi de 2016 fixe la règle pour les données personnelles.",
     'publie'  => '2026-10-29',
     'maj'     => '2026-10-29',
@@ -293,7 +293,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'seo-local-google-business', 'application-web-sur-mesure', 'formation-en-entreprise'],
+        'services'    => ['site-e-commerce', 'site-vitrine-professionnel', 'integration-odoo', 'integration-dolibarr', 'agents-ia-chatbot-whatsapp', 'automatisation-ia', 'api-rest-integrations', 'seo-local-google-business', 'application-web-sur-mesure', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['odoo-comptabilite-syscohada', 'whatsapp-business', 'ia-en-entreprise', 'securite-donnees-dirigeants'],
         'comparatifs' => ['fedapay-vs-kkiapay-vs-cinetpay', 'odoo-vs-dolibarr'],
         'metiers'     => ['logisticiens-transitaires', 'commercants-e-commercants', 'banques-microfinance'],

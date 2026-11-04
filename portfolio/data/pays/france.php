@@ -331,7 +331,7 @@ return [
     ],
 
     'liens' => [
-        'services'    => ['externalisation-developpement', 'application-web-sur-mesure', 'site-e-commerce', 'automatisation-ia', 'agents-ia-chatbot-whatsapp', 'integration-ia-entreprise', 'integration-odoo', 'integration-dolibarr', 'api-rest-integrations', 'formation-en-entreprise'],
+        'services'    => ['externalisation-developpement', 'application-web-sur-mesure', 'site-e-commerce', 'automatisation-ia', 'agents-ia-chatbot-whatsapp', 'integration-ia-entreprise', 'integration-odoo', 'integration-dolibarr', 'api-rest-integrations', 'formation-en-entreprise', 'creation-site-wordpress', 'publicite-en-ligne-google-facebook-ads', 'tunnel-de-vente', 'marketplace-et-plateforme-e-learning'],
         'formations'  => ['ia-en-entreprise', 'ia-ethique-conformite', 'gouvernance-ia', 'n8n', 'odoo-utilisateurs'],
         'comparatifs' => ['odoo-vs-dolibarr', 'n8n-vs-make-vs-zapier'],
         'metiers'     => ['experts-comptables', 'chefs-entreprise-dirigeants', 'commercants-e-commercants'],
